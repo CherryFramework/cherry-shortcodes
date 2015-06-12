@@ -1,0 +1,27 @@
+/*--------------------------
+## [title_box]
+--------------------------*/
+.title-box {
+	&:after {
+		clear: both;
+		content: "";
+		width: 100%;
+		display: block;
+	}
+	&_title {
+		margin: 0;
+	}
+	&_subtitle {
+		margin: 0;
+	}
+	&_icon {
+		float: left;
+		margin: 0 20px 0 0;
+		line-height: 1.2em;
+		cursor: default;
+		display: block;
+	}
+	&_content {
+		overflow: hidden;
+	}
+}

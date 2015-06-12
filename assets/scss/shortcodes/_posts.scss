@@ -1,0 +1,38 @@
+/*--------------------------
+## [posts]
+--------------------------*/
+@import "variables";
+
+.cherry-posts {
+	&-list {
+		.cherry-xs-clear {
+			@media (max-width: $screen-sm-min - 1) {
+				clear: both;
+			}
+			@media (min-width: $screen-sm-min) {
+				clear: none;
+			}
+		}
+		.cherry-sm-clear {
+			@media (min-width: $screen-sm-min) {
+				clear: both;
+			}
+			@media (min-width: $screen-md-min) {
+				clear: none;
+			}
+		}
+		.cherry-md-clear {
+			@media (min-width: $screen-md-min) {
+				clear: both;
+			}
+			@media (min-width: $screen-lg-min) {
+				clear: none;
+			}
+		}
+		.cherry-lg-clear {
+			@media (min-width: $screen-lg-min) {
+				clear: both;
+			}
+		}
+	}
+}

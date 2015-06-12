@@ -1,0 +1,38 @@
+/*--------------------------
+## [lazy_load_effect]
+--------------------------*/
+#site-wrapper{
+	overflow: hidden;
+}
+.lazy-load-effect{
+	-webkit-perspective-origin: center;
+	perspective-origin: center;
+	-webkit-perspective:1300px;
+	perspective:1300px;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	>div{
+		display: inline-block;
+	}
+	&-reset{
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		-webkit-animation-fill-mode: forwards;
+		animation-fill-mode: forwards;
+		-webkit-animation-name:effect;
+		animation-name:effect;
+	}
+}
+@-webkit-keyframes effect {
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none
+	}
+}
+@keyframes effect {
+	100% {
+		opacity: 1 ;
+		transform: none ;
+	}
+}

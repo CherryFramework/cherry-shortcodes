@@ -1,0 +1,3443 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cherry Shortcodes\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-05-26 15:16+0200\n"
+"PO-Revision-Date: 2015-05-26 15:16+0200\n"
+"Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
+"Language-Team: Patrik Žec (PATWIST) patwist.com <patrik.zec@gmail.com>\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.8\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../inc/assets.php:123 ../inc/vendor/sunrise.php:179
+msgid "Choose file"
+msgstr ""
+
+#: ../inc/assets.php:124
+msgid "Insert"
+msgstr ""
+
+#: ../inc/assets.php:125
+msgid "Select images"
+msgstr ""
+
+#: ../inc/assets.php:126
+msgid "Add selected images"
+msgstr ""
+
+#: ../inc/assets.php:127
+msgid "Please enter a name for new preset"
+msgstr ""
+
+#: ../inc/assets.php:128
+msgid "New preset"
+msgstr ""
+
+#: ../inc/assets.php:129
+msgid "Last used settings"
+msgstr ""
+
+#: ../inc/data.php:30
+msgid "All"
+msgstr "Všetko"
+
+#: ../inc/data.php:31
+msgid "Grid"
+msgstr ""
+
+#: ../inc/data.php:32
+msgid "Typography"
+msgstr ""
+
+#: ../inc/data.php:33 ../inc/generator.php:232
+msgid "Content"
+msgstr "Obsah"
+
+#: ../inc/data.php:34
+msgid "Media"
+msgstr "Médiá"
+
+#: ../inc/data.php:35
+msgid "Components"
+msgstr ""
+
+#: ../inc/data.php:36
+msgid "Other"
+msgstr "Ostatné"
+
+#: ../inc/data.php:45 ../inc/data.php:913 ../inc/data.php:1211
+msgid "None"
+msgstr "Žiadne"
+
+#: ../inc/data.php:46
+msgid "Solid"
+msgstr ""
+
+#: ../inc/data.php:47
+msgid "Dotted"
+msgstr ""
+
+#: ../inc/data.php:48
+msgid "Dashed"
+msgstr ""
+
+#: ../inc/data.php:49
+msgid "Double"
+msgstr ""
+
+#: ../inc/data.php:50
+msgid "Groove"
+msgstr ""
+
+#: ../inc/data.php:51
+msgid "Ridge"
+msgstr ""
+
+#: ../inc/data.php:70
+msgid "Row"
+msgstr "Riadok"
+
+#: ../inc/data.php:77 ../inc/data.php:104
+msgid "Fixed Width"
+msgstr ""
+
+#: ../inc/data.php:78 ../inc/data.php:105
+msgid "Full Width"
+msgstr ""
+
+#: ../inc/data.php:81 ../inc/data.php:108
+msgid "Type"
+msgstr "Typ"
+
+#: ../inc/data.php:82 ../inc/data.php:109
+msgid "Type width"
+msgstr ""
+
+#: ../inc/data.php:86 ../inc/data.php:113 ../inc/data.php:164
+#: ../inc/data.php:216 ../inc/data.php:243 ../inc/data.php:259
+#: ../inc/data.php:297 ../inc/data.php:385 ../inc/data.php:432
+#: ../inc/data.php:492 ../inc/data.php:554 ../inc/data.php:621
+#: ../inc/data.php:798 ../inc/data.php:995 ../inc/data.php:1299
+#: ../inc/data.php:1349 ../inc/data.php:1398 ../inc/data.php:1443
+#: ../inc/data.php:1462
+msgid "Class"
+msgstr "Trieda"
+
+#: ../inc/data.php:87 ../inc/data.php:114 ../inc/data.php:165
+#: ../inc/data.php:217 ../inc/data.php:244 ../inc/data.php:260
+#: ../inc/data.php:298 ../inc/data.php:386 ../inc/data.php:433
+#: ../inc/data.php:493 ../inc/data.php:555 ../inc/data.php:622
+#: ../inc/data.php:799 ../inc/data.php:996 ../inc/data.php:1300
+#: ../inc/data.php:1350 ../inc/data.php:1399 ../inc/data.php:1444
+#: ../inc/data.php:1463
+msgid "Extra CSS class"
+msgstr "Extra CSS trieda"
+
+#: ../inc/data.php:90
+msgid ""
+"[%prefix_col size_md=\"4\"]Column content[/%prefix_col]\n"
+"[%prefix_col size_md=\"4\"]Column content[/%prefix_col]\n"
+"[%prefix_col size_md=\"4\"]Column content[/%prefix_col]"
+msgstr ""
+
+#: ../inc/data.php:91 ../inc/data.php:118
+msgid "Row for flexible columns"
+msgstr "Riadok pre flexibilné stĺpce"
+
+#: ../inc/data.php:97
+msgid "Row Inner"
+msgstr ""
+
+#: ../inc/data.php:117
+msgid ""
+"[%prefix_col_inner size_md=\"4\"]Column content[/%prefix_col_inner]\n"
+"[%prefix_col_inner size_md=\"4\"]Column content[/%prefix_col_inner]\n"
+"[%prefix_col_inner size_md=\"4\"]Column content[/%prefix_col_inner]"
+msgstr ""
+
+#: ../inc/data.php:124
+msgid "Column"
+msgstr "Stĺpec"
+
+#: ../inc/data.php:131 ../inc/data.php:183 ../inc/data.php:238
+#: ../inc/data.php:679
+msgid "Size"
+msgstr "Veľkosť"
+
+#: ../inc/data.php:132 ../inc/data.php:184
+msgid "Select column width."
+msgstr ""
+
+#: ../inc/data.php:137 ../inc/data.php:189 ../inc/data.php:897
+#: ../inc/data.php:1195
+msgid "Offset"
+msgstr "Odsadenie"
+
+#: ../inc/data.php:138 ../inc/data.php:190
+msgid "Select column offset."
+msgstr ""
+
+#: ../inc/data.php:143 ../inc/data.php:195
+msgid "Pull"
+msgstr ""
+
+#: ../inc/data.php:144 ../inc/data.php:196
+msgid "Select column pull."
+msgstr ""
+
+#: ../inc/data.php:149 ../inc/data.php:201
+msgid "Push"
+msgstr ""
+
+#: ../inc/data.php:150 ../inc/data.php:202
+msgid "Select column push."
+msgstr ""
+
+#: ../inc/data.php:155 ../inc/data.php:207 ../inc/generator-views.php:58
+msgid "No"
+msgstr "Nie"
+
+#: ../inc/data.php:156 ../inc/data.php:208 ../inc/generator-views.php:58
+msgid "Yes"
+msgstr "Áno"
+
+#: ../inc/data.php:159 ../inc/data.php:160 ../inc/data.php:211
+#: ../inc/data.php:212
+msgid "Collapse column paddings"
+msgstr ""
+
+#: ../inc/data.php:168 ../inc/data.php:220
+msgid "Column content"
+msgstr "Obsah stĺpca"
+
+#: ../inc/data.php:169 ../inc/data.php:221
+msgid "Flexible and responsive columns"
+msgstr "Flexibilné a prispôsobivé/responzívne stĺpce"
+
+#: ../inc/data.php:176
+msgid "Column Inner"
+msgstr ""
+
+#: ../inc/data.php:228
+msgid "Spacer"
+msgstr "Medzerník"
+
+#: ../inc/data.php:239
+msgid "Spacer height"
+msgstr ""
+
+#: ../inc/data.php:247
+msgid "Vertical spacer between blocks"
+msgstr ""
+
+#: ../inc/data.php:253
+msgid "Clear"
+msgstr ""
+
+#: ../inc/data.php:263
+msgid "Clearing block"
+msgstr ""
+
+#: ../inc/data.php:269 ../inc/data.php:276 ../inc/data.php:519
+#: ../inc/data.php:726
+msgid "Icon"
+msgstr "Ikona"
+
+#: ../inc/data.php:277 ../inc/data.php:520 ../inc/data.php:727
+msgid "You can upload custom icon for this button or pick a built-in icon"
+msgstr ""
+
+#: ../inc/data.php:285 ../inc/data.php:528
+msgid "Icon size"
+msgstr "Veľkosť ikony"
+
+#: ../inc/data.php:286 ../inc/data.php:529
+msgid "Font size in px (only for font icons)"
+msgstr ""
+
+#: ../inc/data.php:292 ../inc/data.php:549
+msgid "Icon Color"
+msgstr ""
+
+#: ../inc/data.php:293 ../inc/data.php:550
+msgid "Font icon color"
+msgstr ""
+
+#: ../inc/data.php:301
+msgid "Insert custom icon"
+msgstr ""
+
+#: ../inc/data.php:307 ../inc/data.php:390
+msgid "Box"
+msgstr "Box"
+
+#: ../inc/data.php:314 ../inc/data.php:651
+msgid "Primary"
+msgstr ""
+
+#: ../inc/data.php:315
+msgid "Secondary"
+msgstr ""
+
+#: ../inc/data.php:316 ../inc/data.php:654
+msgid "Gray"
+msgstr ""
+
+#: ../inc/data.php:317
+msgid "Primary border"
+msgstr ""
+
+#: ../inc/data.php:318
+msgid "Secondary border"
+msgstr ""
+
+#: ../inc/data.php:319
+msgid "Gray border"
+msgstr ""
+
+#: ../inc/data.php:322
+msgid "Box styling preset"
+msgstr ""
+
+#: ../inc/data.php:323
+msgid "Select box styling preset"
+msgstr ""
+
+#: ../inc/data.php:329 ../inc/data.php:588
+msgid "Background Color"
+msgstr ""
+
+#: ../inc/data.php:330
+msgid "Select box background color"
+msgstr ""
+
+#: ../inc/data.php:335
+msgid "Background Image"
+msgstr ""
+
+#: ../inc/data.php:336
+msgid "Upload box background image"
+msgstr ""
+
+#: ../inc/data.php:341 ../inc/data.php:1771
+msgid "Top Left"
+msgstr ""
+
+#: ../inc/data.php:342
+msgid "Top Center"
+msgstr ""
+
+#: ../inc/data.php:343 ../inc/data.php:1772
+msgid "Top Right"
+msgstr ""
+
+#: ../inc/data.php:344
+msgid "Middle Left"
+msgstr ""
+
+#: ../inc/data.php:345
+msgid "Middle Center"
+msgstr ""
+
+#: ../inc/data.php:346
+msgid "Middle Right"
+msgstr ""
+
+#: ../inc/data.php:347 ../inc/data.php:1773
+msgid "Bottom Left"
+msgstr ""
+
+#: ../inc/data.php:348
+msgid "Bottom Center"
+msgstr ""
+
+#: ../inc/data.php:349 ../inc/data.php:1774
+msgid "Bottom Right"
+msgstr ""
+
+#: ../inc/data.php:352
+msgid "Background image position"
+msgstr ""
+
+#: ../inc/data.php:353
+msgid "Select background image position"
+msgstr ""
+
+#: ../inc/data.php:358
+msgid "No Repeat"
+msgstr ""
+
+#: ../inc/data.php:359
+msgid "Repeat All"
+msgstr ""
+
+#: ../inc/data.php:360
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: ../inc/data.php:361
+msgid "Repeat Vertically"
+msgstr ""
+
+#: ../inc/data.php:364
+msgid "Background image repeat"
+msgstr ""
+
+#: ../inc/data.php:365
+msgid "Select background image repeat"
+msgstr ""
+
+#: ../inc/data.php:370
+msgid "Scroll normally"
+msgstr ""
+
+#: ../inc/data.php:371
+msgid "Fixed in place"
+msgstr ""
+
+#: ../inc/data.php:374
+msgid "Background image attachment"
+msgstr ""
+
+#: ../inc/data.php:375
+msgid "Select background image attachment"
+msgstr ""
+
+#: ../inc/data.php:380
+msgid "Fill"
+msgstr ""
+
+#: ../inc/data.php:381
+msgid "Fill a parent container?"
+msgstr ""
+
+#: ../inc/data.php:389 ../inc/data.php:1606 ../inc/data.php:1663
+msgid "Your content goes here"
+msgstr ""
+
+#: ../inc/data.php:396 ../inc/data.php:446
+msgid "Banner"
+msgstr ""
+
+#: ../inc/data.php:403
+msgid "Banner Image"
+msgstr ""
+
+#: ../inc/data.php:404
+msgid "Upload banner image"
+msgstr ""
+
+#: ../inc/data.php:408
+msgid "Banner Title"
+msgstr ""
+
+#: ../inc/data.php:409
+msgid "Enter banner title"
+msgstr ""
+
+#: ../inc/data.php:413
+msgid "Banner URL"
+msgstr ""
+
+#: ../inc/data.php:414 ../inc/filters.php:112
+msgid "Banner link URL"
+msgstr ""
+
+#: ../inc/data.php:420 ../inc/data.php:757
+msgid "Text color"
+msgstr "Farba textu"
+
+#: ../inc/data.php:421
+msgid "Banner text color"
+msgstr ""
+
+#: ../inc/data.php:427
+msgid "Background color"
+msgstr ""
+
+#: ../inc/data.php:428 ../inc/filters.php:126
+msgid "Banner background color"
+msgstr ""
+
+#: ../inc/data.php:441 ../inc/data.php:1004 ../inc/data.php:1308
+msgid "Template"
+msgstr "Šablóna"
+
+#: ../inc/data.php:442 ../inc/data.php:1005 ../inc/data.php:1309
+msgid "Shortcode template"
+msgstr ""
+
+#: ../inc/data.php:445
+msgid "Banner content goes here"
+msgstr ""
+
+#: ../inc/data.php:452 ../inc/data.php:496
+msgid "Horizontal Rule"
+msgstr ""
+
+#: ../inc/data.php:462
+msgid "Line height"
+msgstr ""
+
+#: ../inc/data.php:463
+msgid "Horizontal rule height"
+msgstr ""
+
+#: ../inc/data.php:469
+msgid "Line color"
+msgstr ""
+
+#: ../inc/data.php:470
+msgid "Horizontal rule color"
+msgstr ""
+
+#: ../inc/data.php:478
+msgid "Indent before"
+msgstr ""
+
+#: ../inc/data.php:479
+msgid "Indent before horizontal rule"
+msgstr ""
+
+#: ../inc/data.php:487
+msgid "Indent after"
+msgstr ""
+
+#: ../inc/data.php:488
+msgid "Indent after horizontal rule"
+msgstr ""
+
+#: ../inc/data.php:502
+msgid "Title Box"
+msgstr ""
+
+#: ../inc/data.php:508 ../inc/data.php:1367 ../inc/data.php:1417
+msgid "Title"
+msgstr "Nadpis"
+
+#: ../inc/data.php:509
+msgid "Title text"
+msgstr ""
+
+#: ../inc/data.php:513
+msgid "Subtitle"
+msgstr ""
+
+#: ../inc/data.php:514
+msgid "Subtitle text"
+msgstr ""
+
+#: ../inc/data.php:535
+msgid "Title Color"
+msgstr ""
+
+#: ../inc/data.php:536
+msgid "Title text color"
+msgstr "Farba textu nadpisu"
+
+#: ../inc/data.php:542
+msgid "Subtitle Color"
+msgstr ""
+
+#: ../inc/data.php:543
+msgid "Subtitle text color"
+msgstr ""
+
+#: ../inc/data.php:558
+msgid "Title box"
+msgstr ""
+
+#: ../inc/data.php:564
+msgid "Dropcap"
+msgstr "Dropcap"
+
+#: ../inc/data.php:574
+msgid "Text size"
+msgstr ""
+
+#: ../inc/data.php:575
+msgid "Text size in px (total dropcap size automatically claculated)"
+msgstr ""
+
+#: ../inc/data.php:581
+msgid "Text Color"
+msgstr ""
+
+#: ../inc/data.php:582
+msgid "Dropcap text color"
+msgstr ""
+
+#: ../inc/data.php:589
+msgid "Dropcap background color"
+msgstr ""
+
+#: ../inc/data.php:594 ../inc/data.php:716 ../inc/data.php:732
+#: ../inc/data.php:1734
+msgid "Left"
+msgstr "Vľavo"
+
+#: ../inc/data.php:595 ../inc/data.php:717 ../inc/data.php:734
+#: ../inc/data.php:1732
+msgid "Right"
+msgstr "Vpravo"
+
+#: ../inc/data.php:596 ../inc/data.php:1770
+msgid "Center"
+msgstr "Stred"
+
+#: ../inc/data.php:599
+msgid "Align"
+msgstr "Zarovnanie"
+
+#: ../inc/data.php:600
+msgid "Dropcap alignment"
+msgstr ""
+
+#: ../inc/data.php:605
+msgid "Circle"
+msgstr ""
+
+#: ../inc/data.php:606
+msgid "Square"
+msgstr ""
+
+#: ../inc/data.php:607
+msgid "Rounded corners"
+msgstr ""
+
+#: ../inc/data.php:610
+msgid "Shape"
+msgstr ""
+
+#: ../inc/data.php:611
+msgid "Dropcap shape type"
+msgstr ""
+
+#: ../inc/data.php:616
+msgid "Border"
+msgstr ""
+
+#: ../inc/data.php:617
+msgid "Setup dropcap border"
+msgstr ""
+
+#: ../inc/data.php:625
+msgid "A"
+msgstr ""
+
+#: ../inc/data.php:626
+msgid "Dropcap box"
+msgstr ""
+
+#: ../inc/data.php:632
+msgid "Button"
+msgstr "Tlačidlo"
+
+#: ../inc/data.php:637
+msgid "Read more"
+msgstr ""
+
+#: ../inc/data.php:638
+msgid "Text"
+msgstr ""
+
+#: ../inc/data.php:639 ../inc/data.php:990 ../inc/data.php:1288
+msgid "Button text"
+msgstr "Text tlačidla"
+
+#: ../inc/data.php:643 ../inc/data.php:659
+msgid "Link"
+msgstr "Odkaz"
+
+#: ../inc/data.php:644
+msgid "Button link"
+msgstr "Odkaz tlačidla"
+
+#: ../inc/data.php:652
+msgid "Primary-light"
+msgstr ""
+
+#: ../inc/data.php:653 ../inc/data.php:1325 ../inc/data.php:1429
+msgid "Default"
+msgstr "Predvolene"
+
+#: ../inc/data.php:655
+msgid "Success"
+msgstr "Úspešné"
+
+#: ../inc/data.php:656
+msgid "Info"
+msgstr "Info"
+
+#: ../inc/data.php:657
+msgid "Warning"
+msgstr "Upozornenie"
+
+#: ../inc/data.php:658
+msgid "Danger"
+msgstr ""
+
+#: ../inc/data.php:663 ../inc/data.php:1329 ../inc/data.php:1433
+msgid "Style"
+msgstr "Štýl"
+
+#: ../inc/data.php:664
+msgid "Button style preset"
+msgstr ""
+
+#: ../inc/data.php:671
+msgid "Extra Small"
+msgstr ""
+
+#: ../inc/data.php:672
+msgid "Small"
+msgstr "Malý"
+
+#: ../inc/data.php:673
+msgid "Medium"
+msgstr ""
+
+#: ../inc/data.php:674
+msgid "Large"
+msgstr ""
+
+#: ../inc/data.php:675
+msgid "Extra Large"
+msgstr ""
+
+#: ../inc/data.php:680
+msgid "Button size preset"
+msgstr ""
+
+#: ../inc/data.php:685
+msgid "Inline"
+msgstr ""
+
+#: ../inc/data.php:686
+msgid "Wide"
+msgstr ""
+
+#: ../inc/data.php:689
+msgid "Display"
+msgstr ""
+
+#: ../inc/data.php:690
+msgid "Button display type"
+msgstr ""
+
+#: ../inc/data.php:698
+msgid "Border radius"
+msgstr ""
+
+#: ../inc/data.php:699
+msgid "Button border radius"
+msgstr ""
+
+#: ../inc/data.php:704
+msgid "Centered"
+msgstr ""
+
+#: ../inc/data.php:705
+msgid "Is button centered on the page"
+msgstr ""
+
+#: ../inc/data.php:710
+msgid "Fluid"
+msgstr "Plávajúce"
+
+#: ../inc/data.php:711
+msgid "Is button fluid"
+msgstr ""
+
+#: ../inc/data.php:720
+msgid "Fluid Position"
+msgstr ""
+
+#: ../inc/data.php:721
+msgid "Button fluid position"
+msgstr ""
+
+#: ../inc/data.php:733 ../inc/data.php:1731
+msgid "Top"
+msgstr "Hore"
+
+#: ../inc/data.php:735 ../inc/data.php:1733
+msgid "Bottom"
+msgstr "Dole"
+
+#: ../inc/data.php:738
+msgid "Icon Position"
+msgstr ""
+
+#: ../inc/data.php:739
+msgid "Button icon position"
+msgstr ""
+
+#: ../inc/data.php:743
+msgid "Description"
+msgstr "Popis"
+
+#: ../inc/data.php:744
+msgid "Small description under button text."
+msgstr ""
+
+#: ../inc/data.php:750
+msgid "Background"
+msgstr "Pozadie"
+
+#: ../inc/data.php:751
+msgid "Button background color"
+msgstr "Farba pozadia tlačidla"
+
+#: ../inc/data.php:758
+msgid "Button text color"
+msgstr "Farba textu tlačidla"
+
+#: ../inc/data.php:766
+msgid "Min width"
+msgstr ""
+
+#: ../inc/data.php:767
+msgid "Button minimal width"
+msgstr ""
+
+#: ../inc/data.php:772
+msgid "Same tab"
+msgstr "Rovnaké okno"
+
+#: ../inc/data.php:773
+msgid "New tab"
+msgstr "Nová karta"
+
+#: ../inc/data.php:776
+msgid "Target"
+msgstr "Cieľ"
+
+#: ../inc/data.php:777
+msgid "Button link target"
+msgstr "Cieľ odkazu tlačidla"
+
+#: ../inc/data.php:781
+msgid "Rel attribute"
+msgstr ""
+
+#: ../inc/data.php:782
+msgid "Here you can add value for the rel attribute."
+msgstr ""
+
+#: ../inc/data.php:789 ../inc/data.php:1101
+msgid "Fade"
+msgstr ""
+
+#: ../inc/data.php:793
+msgid "Hover animation"
+msgstr ""
+
+#: ../inc/data.php:794
+msgid "Button hover aniamtion type"
+msgstr ""
+
+#: ../inc/data.php:802
+msgid "Styled button"
+msgstr "Štýlované tlačidlo"
+
+#: ../inc/data.php:841
+msgid "Swiper carousel"
+msgstr ""
+
+#: ../inc/data.php:844
+msgid "Customizable post carousel"
+msgstr ""
+
+#: ../inc/data.php:853 ../inc/data.php:1151
+msgid "Posts per page"
+msgstr "Príspevkov na stránku"
+
+#: ../inc/data.php:854 ../inc/data.php:1152
+msgid ""
+"Specify number of posts that you want to show. Enter -1 to get all posts"
+msgstr ""
+"Špecifikujte počet príspekov, ktoré chcete zobraziť. Zadajte -1 ak chcete "
+"zobraziť všetky príspevky"
+
+#: ../inc/data.php:861 ../inc/data.php:1159
+msgid "Post types"
+msgstr "Typy príspevkov"
+
+#: ../inc/data.php:862 ../inc/data.php:1160
+msgid "Select post types. Hold Ctrl key to select multiple post types"
+msgstr ""
+"Zvoľte typy príspevkov. Stlačte a držte tlačidllo CTRL na klávesnici ak "
+"chcete vybrať viac typov príspevkov"
+
+#: ../inc/data.php:868 ../inc/data.php:1166 ../inc/generator-views.php:136
+msgid "Taxonomy"
+msgstr "Taxonómia"
+
+#: ../inc/data.php:869 ../inc/data.php:1167
+msgid "Select taxonomy to show posts from"
+msgstr "Zvoľte taxonómie pre zobrazenie príspevkov z"
+
+#: ../inc/data.php:876 ../inc/data.php:1174
+msgid "Terms"
+msgstr "Podmienky"
+
+#: ../inc/data.php:877 ../inc/data.php:1175
+msgid "Select terms to show posts from"
+msgstr "Zvoľte podmienky pre zobrazovanie príspevkov"
+
+#: ../inc/data.php:883 ../inc/data.php:1181
+msgid "Taxonomy term operator"
+msgstr "Termín taxonómií operátor"
+
+#: ../inc/data.php:884 ../inc/data.php:1182
+msgid ""
+"IN - posts that have any of selected categories terms<br/>NOT IN - posts "
+"that is does not have any of selected terms<br/>AND - posts that have all "
+"selected terms"
+msgstr ""
+"IN - príspevky, ktoré majú niektorú z vybraných podmienok kategórií<br/>NOT "
+"IN - príspevky, ktoré nemajú žiadnu z vybraných podmienok<br/>AND - "
+"príspevky, ktoré majú všetky zvolené podmienky"
+
+#: ../inc/data.php:888 ../inc/data.php:1186
+msgid "Authors"
+msgstr "Autori"
+
+#: ../inc/data.php:889 ../inc/data.php:1187
+msgid "Enter here comma-separated list of author's IDs. Example: 1,7,18"
+msgstr ""
+
+#: ../inc/data.php:898 ../inc/data.php:1196
+msgid "Specify offset to start posts loop not from first post"
+msgstr ""
+"Špecifikujte odsadenie pre začatie slučky príspevkov nie z prvého príspevku"
+
+#: ../inc/data.php:903 ../inc/data.php:1201
+msgid "Descending"
+msgstr "Zostupne"
+
+#: ../inc/data.php:904 ../inc/data.php:1202
+msgid "Ascending"
+msgstr "Vzostupne"
+
+#: ../inc/data.php:907 ../inc/data.php:1205
+msgid "Order"
+msgstr "Usporiadanie"
+
+#: ../inc/data.php:908 ../inc/data.php:1206
+msgid "Posts order"
+msgstr "Usporiadanie príspevkov"
+
+#: ../inc/data.php:914 ../inc/data.php:1212
+msgid "Post ID"
+msgstr "ID príspevku"
+
+#: ../inc/data.php:915 ../inc/data.php:1213
+msgid "Post author"
+msgstr "Autor príspevku"
+
+#: ../inc/data.php:916 ../inc/data.php:1214
+msgid "Post title"
+msgstr "Názov príspevku"
+
+#: ../inc/data.php:917 ../inc/data.php:1215
+msgid "Post slug"
+msgstr "Skrátená verzia príspevku (slug)"
+
+#: ../inc/data.php:918 ../inc/data.php:1216
+msgid "Date"
+msgstr "Dátum"
+
+#: ../inc/data.php:919 ../inc/data.php:1217
+msgid "Last modified date"
+msgstr "Dátum poslednej úpravy"
+
+#: ../inc/data.php:920 ../inc/data.php:931 ../inc/data.php:1218
+#: ../inc/data.php:1229
+msgid "Post parent"
+msgstr "Rodič príspevku"
+
+#: ../inc/data.php:921 ../inc/data.php:1219
+msgid "Random"
+msgstr "Náhodne"
+
+#: ../inc/data.php:922 ../inc/data.php:1220
+msgid "Comments number"
+msgstr "Počet komentárov"
+
+#: ../inc/data.php:923 ../inc/data.php:1221
+msgid "Menu order"
+msgstr "Usporiadanie Menu"
+
+#: ../inc/data.php:926 ../inc/data.php:1224
+msgid "Order by"
+msgstr "Usporiadať podľa"
+
+#: ../inc/data.php:927 ../inc/data.php:1225
+msgid "Order posts by"
+msgstr "Usporiadať príspevky podľa"
+
+#: ../inc/data.php:932 ../inc/data.php:1230
+msgid "Show childrens of entered post (enter post ID)"
+msgstr "Zobraziť podradené príspevky (zadajte ID príspevku)"
+
+#: ../inc/data.php:937 ../inc/data.php:1235
+msgid "Published"
+msgstr "Publikované"
+
+#: ../inc/data.php:938 ../inc/data.php:1236
+msgid "Pending"
+msgstr "Čakajúce na schválenie"
+
+#: ../inc/data.php:939 ../inc/data.php:1237
+msgid "Draft"
+msgstr "Návrh"
+
+#: ../inc/data.php:940 ../inc/data.php:1238
+msgid "Auto-draft"
+msgstr "Auto-návrh"
+
+#: ../inc/data.php:941 ../inc/data.php:1239
+msgid "Future post"
+msgstr "Budúci príspevok"
+
+#: ../inc/data.php:942 ../inc/data.php:1240
+msgid "Private post"
+msgstr "Súkromný príspevok"
+
+#: ../inc/data.php:943 ../inc/data.php:1241
+msgid "Inherit"
+msgstr "Zdediť"
+
+#: ../inc/data.php:944 ../inc/data.php:1242
+msgid "Trashed"
+msgstr "Odstránené"
+
+#: ../inc/data.php:945 ../inc/data.php:1243
+msgid "Any"
+msgstr "Nejaký"
+
+#: ../inc/data.php:948 ../inc/data.php:1246
+msgid "Post status"
+msgstr "Stav príspevku"
+
+#: ../inc/data.php:949 ../inc/data.php:1247
+msgid "Show only posts with selected status"
+msgstr "Zobraziť len príspevky so svoleným stavom"
+
+#: ../inc/data.php:954 ../inc/data.php:1252
+msgid "Ignore sticky"
+msgstr "Ignorovať prilepené"
+
+#: ../inc/data.php:955 ../inc/data.php:1253
+msgid "Select Yes to ignore posts that is sticked"
+msgstr "Zvoľte Áno pre igorovanie príspevkov, ktoré sú prilepené"
+
+#: ../inc/data.php:960 ../inc/data.php:1258
+msgid "Linked title"
+msgstr ""
+
+#: ../inc/data.php:961 ../inc/data.php:1259
+msgid "Linked title description"
+msgstr ""
+
+#: ../inc/data.php:966 ../inc/data.php:1264
+msgid "Linked featured image"
+msgstr ""
+
+#: ../inc/data.php:967 ../inc/data.php:1265
+msgid "Linked featured image description"
+msgstr ""
+
+#: ../inc/data.php:972 ../inc/data.php:1270
+msgid "Part of content"
+msgstr ""
+
+#: ../inc/data.php:973 ../inc/data.php:1271
+msgid "Full content"
+msgstr ""
+
+#: ../inc/data.php:976 ../inc/data.php:1274
+msgid "Post content"
+msgstr ""
+
+#: ../inc/data.php:977 ../inc/data.php:1275
+msgid ""
+"Choose to display an teaser, part or full content (http://codex.wordpress."
+"org/Excerpt#Excerpt.2C_automatic_excerpt.2C_and_teaser)"
+msgstr ""
+
+#: ../inc/data.php:985 ../inc/data.php:1283
+msgid "Content Length"
+msgstr ""
+
+#: ../inc/data.php:986 ../inc/data.php:1284
+msgid "Insert the number of words you want to show in the post content."
+msgstr ""
+
+#: ../inc/data.php:989 ../inc/data.php:1287 ../inc/shortcodes.php:701
+#: ../inc/shortcodes.php:1202
+msgid "read more"
+msgstr ""
+
+#: ../inc/data.php:991 ../inc/data.php:1289
+msgid "Button text description"
+msgstr ""
+
+#: ../inc/data.php:1010
+msgid "Using cropped image"
+msgstr ""
+
+#: ../inc/data.php:1011 ../inc/data.php:1071
+msgid "Slider Loop Mode"
+msgstr ""
+
+#: ../inc/data.php:1019
+msgid "Cropping image width"
+msgstr ""
+
+#: ../inc/data.php:1020
+msgid "Width value(px)"
+msgstr ""
+
+#: ../inc/data.php:1028
+msgid "Cropping image height"
+msgstr ""
+
+#: ../inc/data.php:1029
+msgid "Height value(px)"
+msgstr ""
+
+#: ../inc/data.php:1037
+msgid "Number slides per view"
+msgstr ""
+
+#: ../inc/data.php:1038
+msgid "Specify number of slides per view"
+msgstr ""
+
+#: ../inc/data.php:1046 ../inc/data.php:1047
+msgid "Multi Row Slides Layout"
+msgstr ""
+
+#: ../inc/data.php:1055
+msgid "Space Between Slides"
+msgstr ""
+
+#: ../inc/data.php:1056
+msgid "With difine space between slides(px)"
+msgstr ""
+
+#: ../inc/data.php:1064
+msgid "Duration of transition"
+msgstr ""
+
+#: ../inc/data.php:1065
+msgid "Duration of transition between slides (ms)"
+msgstr ""
+
+#: ../inc/data.php:1070
+msgid "Slider Infinite Loop"
+msgstr ""
+
+#: ../inc/data.php:1076
+msgid "Free Mode sliding"
+msgstr ""
+
+#: ../inc/data.php:1077
+msgid "No fixed positions for slides"
+msgstr ""
+
+#: ../inc/data.php:1082
+msgid "Grab Cusor"
+msgstr ""
+
+#: ../inc/data.php:1083
+msgid "Using Grab Cusor for slider"
+msgstr ""
+
+#: ../inc/data.php:1088
+msgid "Mousewheel Control"
+msgstr ""
+
+#: ../inc/data.php:1089
+msgid "Mousewheel control mode"
+msgstr ""
+
+#: ../inc/data.php:1094
+msgid "Centered Slides"
+msgstr ""
+
+#: ../inc/data.php:1095
+msgid "Centered slides mode"
+msgstr ""
+
+#: ../inc/data.php:1100
+msgid "Slide"
+msgstr ""
+
+#: ../inc/data.php:1102
+msgid "Cube"
+msgstr ""
+
+#: ../inc/data.php:1103
+msgid "Coverflow"
+msgstr ""
+
+#: ../inc/data.php:1106
+msgid "Effect Layout"
+msgstr ""
+
+#: ../inc/data.php:1107
+msgid "Could be \"slide\", \"fade\", \"cube\" or \"coverflow\" effect"
+msgstr ""
+
+#: ../inc/data.php:1112
+msgid "Slider pagination"
+msgstr ""
+
+#: ../inc/data.php:1113
+msgid "Displaying slider pagination"
+msgstr ""
+
+#: ../inc/data.php:1118
+msgid "Slider navigation"
+msgstr ""
+
+#: ../inc/data.php:1119
+msgid "Displaying slider navigation"
+msgstr ""
+
+#: ../inc/data.php:1124
+msgid "Inner"
+msgstr ""
+
+#: ../inc/data.php:1125
+msgid "Outer"
+msgstr ""
+
+#: ../inc/data.php:1128
+msgid "Slider navigation position"
+msgstr ""
+
+#: ../inc/data.php:1129
+msgid "Choose position slider navigation"
+msgstr ""
+
+#: ../inc/data.php:1136
+msgid "Posts"
+msgstr "Príspevky"
+
+#: ../inc/data.php:1142
+msgid "Post ID's"
+msgstr "ID príspevkov"
+
+#: ../inc/data.php:1143
+msgid "Enter comma separated ID's of the posts that you want to show"
+msgstr "Zadajte čiarkami oddelené ID príspevkov, ktoré chcete zobraziť"
+
+#: ../inc/data.php:1294
+msgid "Column class"
+msgstr ""
+
+#: ../inc/data.php:1295
+msgid "Column class for each items."
+msgstr ""
+
+#: ../inc/data.php:1312
+msgid "Custom posts query with customizable template"
+msgstr "Vlastné príspevky dotazov s prispôsobiteľnou šablónou"
+
+#: ../inc/data.php:1318
+msgid "Tabs"
+msgstr "Záložky"
+
+#: ../inc/data.php:1326 ../inc/data.php:1430
+msgid "Simple"
+msgstr "Jednoduché"
+
+#: ../inc/data.php:1330
+msgid "Choose style for this tabs"
+msgstr ""
+
+#: ../inc/data.php:1338
+msgid "Active tab"
+msgstr ""
+
+#: ../inc/data.php:1339
+msgid "Select which tab is open by default"
+msgstr ""
+
+#: ../inc/data.php:1344
+msgid "Vertical"
+msgstr "Vertikálne"
+
+#: ../inc/data.php:1345
+msgid "Show tabs vertically"
+msgstr "Zobraziť záložky vertikálne"
+
+#: ../inc/data.php:1353
+msgid ""
+"[%prefix_tab title=\"Title 1\"]Content 1[/%prefix_tab]\n"
+"[%prefix_tab title=\"Title 2\"]Content 2[/%prefix_tab]\n"
+"[%prefix_tab title=\"Title 3\"]Content 3[/%prefix_tab]"
+msgstr ""
+
+#: ../inc/data.php:1354
+msgid "Tabs container"
+msgstr "Kontajner záložiek"
+
+#: ../inc/data.php:1361
+msgid "Tab"
+msgstr "Záložka"
+
+#: ../inc/data.php:1366
+msgid "Tab name"
+msgstr "Názov záložky"
+
+#: ../inc/data.php:1368
+msgid "Enter tab name"
+msgstr "Zadajte názov záložky"
+
+#: ../inc/data.php:1373
+msgid "Disabled"
+msgstr ""
+
+#: ../inc/data.php:1374
+msgid "Is this tab disabled"
+msgstr ""
+
+#: ../inc/data.php:1378 ../inc/data.php:1438
+msgid "Anchor"
+msgstr ""
+
+#: ../inc/data.php:1379
+msgid ""
+"You can use unique anchor for this tab to access it with hash in page url. "
+"For example: type here <b%value>Hello</b> and then use url like http://"
+"example.com/page-url#Hello. This tab will be activated and scrolled in"
+msgstr ""
+
+#: ../inc/data.php:1383
+msgid "URL"
+msgstr ""
+
+#: ../inc/data.php:1384
+msgid ""
+"You can link this tab to any webpage. Enter here full URL to switch this tab "
+"into link"
+msgstr ""
+
+#: ../inc/data.php:1389
+msgid "Open link in same window/tab"
+msgstr ""
+
+#: ../inc/data.php:1390
+msgid "Open link in new window/tab"
+msgstr ""
+
+#: ../inc/data.php:1393
+msgid "Link target"
+msgstr ""
+
+#: ../inc/data.php:1394
+msgid "Choose how to open the custom tab link"
+msgstr ""
+
+#: ../inc/data.php:1402
+msgid "Tab content"
+msgstr "Obsah záložky"
+
+#: ../inc/data.php:1403
+msgid "Single tab"
+msgstr "jedna záložka"
+
+#: ../inc/data.php:1411
+msgid "Spoiler"
+msgstr "Spoiler"
+
+#: ../inc/data.php:1416 ../inc/shortcodes.php:1774
+msgid "Spoiler title"
+msgstr "Názov spojlera"
+
+#: ../inc/data.php:1418
+msgid "Text in spoiler title"
+msgstr "Text v názve spojlera"
+
+#: ../inc/data.php:1423
+msgid "Open"
+msgstr "Otvoriť"
+
+#: ../inc/data.php:1424
+msgid "Is spoiler content visible by default"
+msgstr "Obsah v spojleri v predvolenom nastavení viditeľný"
+
+#: ../inc/data.php:1434
+msgid "Choose style for this spoiler"
+msgstr ""
+
+#: ../inc/data.php:1439
+msgid ""
+"You can use unique anchor for this spoiler to access it with hash in page "
+"url. For example: type here <b%value>Hello</b> and then use url like http://"
+"example.com/page-url#Hello. This spoiler will be open and scrolled in"
+msgstr ""
+
+#: ../inc/data.php:1447
+msgid "Hidden content"
+msgstr "Skrytý obsah"
+
+#: ../inc/data.php:1448
+msgid "Spoiler with hidden content"
+msgstr "Spojler so skrytým obsahom"
+
+#: ../inc/data.php:1456
+msgid "Accordion"
+msgstr "Skladaný"
+
+#: ../inc/data.php:1466
+msgid ""
+"[%prefix_spoiler title=\"Spoiler Title\"]Content[/%prefix_spoiler]\n"
+"[%prefix_spoiler title=\"Spoiler Title\"]Content[/%prefix_spoiler]\n"
+"[%prefix_spoiler title=\"Spoiler Title\"]Content[/%prefix_spoiler]"
+msgstr ""
+
+#: ../inc/data.php:1467
+msgid "Accordion with spoilers"
+msgstr "Skladaný so spoilermi"
+
+#: ../inc/data.php:1475
+msgid "Google map"
+msgstr ""
+
+#: ../inc/data.php:1482
+msgid "Address"
+msgstr ""
+
+#: ../inc/data.php:1483 ../inc/data.php:1538
+msgid "The display options for the Pan control."
+msgstr ""
+
+#: ../inc/data.php:1491
+msgid "Latitude  geographical coordinates"
+msgstr ""
+
+#: ../inc/data.php:1492
+msgid ""
+"Latitude ranges between -90 and 90 degrees, inclusive. Values above or below "
+"this range will be clamped to the range [-90, 90]. This means that if the "
+"value specified is less than -90, it will be set to -90. And if the value is "
+"greater than 90, it will be set to 90."
+msgstr ""
+
+#: ../inc/data.php:1500
+msgid "Longitude geographical coordinates"
+msgstr ""
+
+#: ../inc/data.php:1501
+msgid ""
+"Longitude ranges between -180 and 180 degrees, inclusive. Values above or "
+"below this range will be wrapped so that they fall within the range. For "
+"example, a value of -190 will be converted to 170. A value of 190 will be "
+"converted to -170. This reflects the fact that longitudes wrap around the "
+"globe."
+msgstr ""
+
+#: ../inc/data.php:1509
+msgid "Map zoom level"
+msgstr ""
+
+#: ../inc/data.php:1510
+msgid "The initial Map zoom level. Required."
+msgstr ""
+
+#: ../inc/data.php:1515
+msgid "Scroll wheel"
+msgstr ""
+
+#: ../inc/data.php:1516
+msgid ""
+"If false, disables scrollwheel zooming on the map. The scrollwheel is "
+"enabled by default."
+msgstr ""
+
+#: ../inc/data.php:1522
+msgid "Map Style"
+msgstr ""
+
+#: ../inc/data.php:1523
+msgid ""
+"Styles to apply to each of the default map types. Note that for Satellite/"
+"Hybrid and Terrain modes, these styles will only apply to labels and "
+"geometry."
+msgstr ""
+
+#: ../inc/data.php:1531
+msgid "Map height"
+msgstr "Výška mapy"
+
+#: ../inc/data.php:1532
+msgid "Map height value(px)"
+msgstr ""
+
+#: ../inc/data.php:1537
+msgid "Pan control"
+msgstr ""
+
+#: ../inc/data.php:1543
+msgid "Zoom control"
+msgstr ""
+
+#: ../inc/data.php:1544
+msgid "The enabled/disabled state of the Zoom control."
+msgstr ""
+
+#: ../inc/data.php:1549
+msgid "Draggable map"
+msgstr ""
+
+#: ../inc/data.php:1550
+msgid ""
+"If false, prevents the map from being dragged. Dragging is enabled by "
+"default."
+msgstr ""
+
+#: ../inc/data.php:1555
+msgid "Marker source"
+msgstr ""
+
+#: ../inc/data.php:1556
+msgid "Upload marker url source"
+msgstr ""
+
+#: ../inc/data.php:1559
+msgid "Google Map"
+msgstr ""
+
+#: ../inc/data.php:1565 ../inc/data.php:1572
+msgid "Paralax image"
+msgstr ""
+
+#: ../inc/data.php:1573
+msgid "Upload paralax image url source"
+msgstr ""
+
+#: ../inc/data.php:1581 ../inc/data.php:1647
+msgid "Paralax speed"
+msgstr ""
+
+#: ../inc/data.php:1582 ../inc/data.php:1648
+msgid "Paralax speed value (s)"
+msgstr ""
+
+#: ../inc/data.php:1587 ../inc/data.php:1653
+msgid "Paralax invert"
+msgstr ""
+
+#: ../inc/data.php:1588 ../inc/data.php:1654
+msgid "Paralax invert direction move"
+msgstr ""
+
+#: ../inc/data.php:1596
+msgid "Paralax container min-height"
+msgstr ""
+
+#: ../inc/data.php:1597
+msgid "container min-height value (px)"
+msgstr ""
+
+#: ../inc/data.php:1602 ../inc/data.php:1659 ../inc/data.php:1713
+#: ../inc/data.php:1840
+msgid "Custom class"
+msgstr ""
+
+#: ../inc/data.php:1603 ../inc/data.php:1660 ../inc/data.php:1714
+msgid "Enter custom class"
+msgstr ""
+
+#: ../inc/data.php:1607 ../inc/data.php:1664
+msgid "Paralax block"
+msgstr ""
+
+#: ../inc/data.php:1613
+msgid "Paralax html video"
+msgstr ""
+
+#: ../inc/data.php:1620
+msgid "Poster"
+msgstr "Plagát"
+
+#: ../inc/data.php:1621
+msgid "Poster image url"
+msgstr ""
+
+#: ../inc/data.php:1626
+msgid "mp4 file"
+msgstr ""
+
+#: ../inc/data.php:1627
+msgid "URL to mp4 video-file"
+msgstr ""
+
+#: ../inc/data.php:1632
+msgid "webm file"
+msgstr ""
+
+#: ../inc/data.php:1633
+msgid "URL to webm video-file"
+msgstr ""
+
+#: ../inc/data.php:1638
+msgid "ogv file"
+msgstr ""
+
+#: ../inc/data.php:1639
+msgid "URL to ogv video-file"
+msgstr ""
+
+#: ../inc/data.php:1670 ../inc/data.php:1717
+msgid "Counter"
+msgstr ""
+
+#: ../inc/data.php:1677
+msgid "Value"
+msgstr ""
+
+#: ../inc/data.php:1678
+msgid "Value for counter"
+msgstr ""
+
+#: ../inc/data.php:1686
+msgid "Counter delay"
+msgstr ""
+
+#: ../inc/data.php:1687
+msgid "Counter delay (ms)"
+msgstr ""
+
+#: ../inc/data.php:1695
+msgid "Speed time"
+msgstr ""
+
+#: ../inc/data.php:1696
+msgid "Speed time (ms)"
+msgstr ""
+
+#: ../inc/data.php:1701
+msgid "Before content"
+msgstr ""
+
+#: ../inc/data.php:1702
+msgid "Enter before custom content"
+msgstr ""
+
+#: ../inc/data.php:1707
+msgid "After content"
+msgstr ""
+
+#: ../inc/data.php:1708
+msgid "Enter after custom content"
+msgstr ""
+
+#: ../inc/data.php:1723
+msgid "Lazy Load Effect"
+msgstr ""
+
+#: ../inc/data.php:1730
+msgid "Not changed"
+msgstr ""
+
+#: ../inc/data.php:1737
+msgid "Start Position"
+msgstr ""
+
+#: ../inc/data.php:1738
+msgid "Element position at the animation start."
+msgstr ""
+
+#: ../inc/data.php:1746
+msgid "Out rotation"
+msgstr ""
+
+#: ../inc/data.php:1747
+msgid "Initial element angle (min - -360&#176; max 360&#176;)"
+msgstr ""
+
+#: ../inc/data.php:1755
+msgid "Flip X"
+msgstr ""
+
+#: ../inc/data.php:1756
+msgid ""
+"Initial element angle Flip X (X-axis rotation min - -360&#176; max 360&#176;)"
+msgstr ""
+
+#: ../inc/data.php:1764
+msgid "Flip Y"
+msgstr ""
+
+#: ../inc/data.php:1765
+msgid ""
+"Initial element angle Flip Y (Y-axis rotation min - -360&#176; max 360&#176;)"
+msgstr ""
+
+#: ../inc/data.php:1777
+msgid "Pivot"
+msgstr ""
+
+#: ../inc/data.php:1778
+msgid "Element rotation point."
+msgstr ""
+
+#: ../inc/data.php:1786
+msgid "Scale"
+msgstr ""
+
+#: ../inc/data.php:1787
+msgid "Element scale value (min - 0; max 10;)"
+msgstr ""
+
+#: ../inc/data.php:1795
+msgid "Opacity"
+msgstr ""
+
+#: ../inc/data.php:1796
+msgid "Element opacity value (min - 0; max 1;)"
+msgstr ""
+
+#: ../inc/data.php:1801
+msgid "Ease None"
+msgstr ""
+
+#: ../inc/data.php:1802
+msgid "Ease In Cubic"
+msgstr ""
+
+#: ../inc/data.php:1803
+msgid "Ease Out Cubic"
+msgstr ""
+
+#: ../inc/data.php:1804
+msgid "Ease In Out Cubic"
+msgstr ""
+
+#: ../inc/data.php:1805
+msgid "Ease In Quart"
+msgstr ""
+
+#: ../inc/data.php:1806
+msgid "Ease Out Quart"
+msgstr ""
+
+#: ../inc/data.php:1807
+msgid "Ease In Out Quart"
+msgstr ""
+
+#: ../inc/data.php:1808
+msgid "Ease In Expo"
+msgstr ""
+
+#: ../inc/data.php:1809
+msgid "Ease Out Expo"
+msgstr ""
+
+#: ../inc/data.php:1810
+msgid "Ease In Out Expo"
+msgstr ""
+
+#: ../inc/data.php:1811
+msgid "Ease In Back"
+msgstr ""
+
+#: ../inc/data.php:1812
+msgid "Ease Out Back"
+msgstr ""
+
+#: ../inc/data.php:1813
+msgid "Ease In Out Back"
+msgstr ""
+
+#: ../inc/data.php:1816
+msgid "Easing"
+msgstr ""
+
+#: ../inc/data.php:1817
+msgid "Animation easing."
+msgstr ""
+
+#: ../inc/data.php:1825
+msgid "Animation Speed"
+msgstr ""
+
+#: ../inc/data.php:1826
+msgid "Animation speed in seconds.(Example: 0.2 or 1)"
+msgstr ""
+
+#: ../inc/data.php:1834
+msgid "Animation Delay"
+msgstr ""
+
+#: ../inc/data.php:1835
+msgid "Animation Delay in seconds"
+msgstr ""
+
+#: ../inc/data.php:1841
+msgid "Element custom class"
+msgstr ""
+
+#: ../inc/data.php:1844
+msgid "This shortcode added show animations on any page element."
+msgstr ""
+
+#: ../inc/filters.php:58
+msgid "Helper information for `Date` macros"
+msgstr ""
+
+#: ../inc/filters.php:65
+msgid "Helper information for `Author` macros"
+msgstr ""
+
+#: ../inc/filters.php:72
+msgid "Helper information for `Comments` macros"
+msgstr ""
+
+#: ../inc/filters.php:79
+msgid "Helper information for `Taxomomy` macros"
+msgstr ""
+
+#: ../inc/filters.php:86
+msgid "Helper information for `Excerpt` macros"
+msgstr ""
+
+#: ../inc/filters.php:98
+msgid "Banner image URL"
+msgstr ""
+
+#: ../inc/filters.php:105
+msgid "Banner title"
+msgstr ""
+
+#: ../inc/filters.php:119
+msgid "Banner default text color"
+msgstr ""
+
+#: ../inc/filters.php:133
+msgid "Banner content"
+msgstr ""
+
+#: ../inc/filters.php:140
+msgid "Custom CSS class"
+msgstr ""
+
+#: ../inc/generator-views.php:63 ../inc/generator-views.php:68
+#: ../inc/vendor/sunrise.php:452
+msgid "Media manager"
+msgstr ""
+
+#: ../inc/generator-views.php:68
+msgid "Icon picker"
+msgstr ""
+
+#: ../inc/generator-views.php:68
+msgid "Filter icons"
+msgstr ""
+
+#: ../inc/generator-views.php:82
+msgid "Please wait"
+msgstr ""
+
+#: ../inc/generator-views.php:89
+msgid "Untitled gallery"
+msgstr "Nepomenovaná galéria"
+
+#: ../inc/generator-views.php:95
+msgid "Galleries not found"
+msgstr "Galérie neboli nájdené"
+
+#: ../inc/generator-views.php:96
+msgid "Manage galleries"
+msgstr "Spravovať galérie"
+
+#: ../inc/generator-views.php:96
+msgid "Reload galleries"
+msgstr ""
+
+#: ../inc/generator-views.php:112
+msgid "Horizontal offset"
+msgstr ""
+
+#: ../inc/generator-views.php:112
+msgid "Vertical offset"
+msgstr ""
+
+#: ../inc/generator-views.php:112
+msgid "Blur"
+msgstr ""
+
+#: ../inc/generator-views.php:112
+msgid "Color"
+msgstr "Farba"
+
+#: ../inc/generator-views.php:123
+msgid "Border width"
+msgstr ""
+
+#: ../inc/generator-views.php:123
+msgid "Border style"
+msgstr ""
+
+#: ../inc/generator-views.php:123
+msgid "Border color"
+msgstr ""
+
+#: ../inc/generator-views.php:133
+msgid "Media library"
+msgstr ""
+
+#: ../inc/generator-views.php:134
+msgid "Recent posts"
+msgstr ""
+
+#: ../inc/generator-views.php:135
+msgid "Category"
+msgstr ""
+
+#: ../inc/generator-views.php:139
+msgid "Select images source"
+msgstr ""
+
+#: ../inc/generator-views.php:150
+msgid "Select taxonomy"
+msgstr ""
+
+#: ../inc/generator-views.php:161
+msgid "Add images"
+msgstr ""
+
+#: ../inc/generator-views.php:161
+msgid ""
+"Click the button above and select images.<br>You can select multimple images "
+"with Ctrl (Cmd) key"
+msgstr ""
+
+#: ../inc/generator-views.php:161
+msgid ""
+"Select categories to retrieve posts from.<br>You can select multiple "
+"categories with Ctrl (Cmd) key"
+msgstr ""
+
+#: ../inc/generator-views.php:161
+msgid ""
+"Select taxonomy and it's terms.<br>You can select multiple terms with Ctrl "
+"(Cmd) key"
+msgstr ""
+
+#: ../inc/generator-views.php:192 ../inc/generator-views.php:229
+msgid "Extra small devices (Phones)"
+msgstr ""
+
+#: ../inc/generator-views.php:192 ../inc/generator-views.php:229
+msgid "Small devices (Tablets)"
+msgstr ""
+
+#: ../inc/generator-views.php:192 ../inc/generator-views.php:229
+msgid "Medium devices (Desktops)"
+msgstr ""
+
+#: ../inc/generator-views.php:192 ../inc/generator-views.php:229
+msgid "Large devices (Desktops)"
+msgstr ""
+
+#: ../inc/generator.php:58 ../inc/generator.php:161
+msgid "Insert shortcode"
+msgstr "Vložiť skrátený kód"
+
+#: ../inc/generator.php:115
+msgid "Search for shortcodes"
+msgstr "Hľadajte skrátené kódy"
+
+#: ../inc/generator.php:117
+msgid "Filter by type"
+msgstr "Filtrovať podľa typu"
+
+#: ../inc/generator.php:151
+msgid "Shortcode not specified"
+msgstr "Skrátený kód nie je špecifikovaný"
+
+#: ../inc/generator.php:162
+msgid "Live preview"
+msgstr "Živý náhľad"
+
+#: ../inc/generator.php:166
+msgid "Click to return to the shortcodes list"
+msgstr "Kliknite pre návrat do zoznamu skrátených kódov"
+
+#: ../inc/generator.php:166
+msgid "All shortcodes"
+msgstr "Všetky skrátené kódy"
+
+#: ../inc/generator.php:173
+msgid "Examples of use"
+msgstr ""
+
+#: ../inc/generator.php:213
+msgid "Click to set this value"
+msgstr "Kliknite pre nastavenie tejto hodnoty"
+
+#: ../inc/generator.php:250
+msgid "Preview"
+msgstr "Ukážka"
+
+#: ../inc/generator.php:259 ../inc/tools.php:217
+msgid "Access denied"
+msgstr "Prístup zamietnutý"
+
+#: ../inc/generator.php:294
+msgid "Presets"
+msgstr ""
+
+#: ../inc/generator.php:297
+msgid "Save current settings as preset"
+msgstr ""
+
+#: ../inc/generator.php:326 ../inc/generator.php:329
+msgid "Presets not found"
+msgstr ""
+
+#: ../inc/shortcodes.php:29
+msgid "Read More"
+msgstr ""
+
+#: ../inc/shortcodes.php:270 ../inc/shortcodes.php:874
+#: ../inc/shortcodes.php:1397
+msgid "Template file (*.tmpl) not found"
+msgstr ""
+
+#: ../inc/shortcodes.php:1157 ../inc/shortcodes.php:1696
+msgid "Posts not found"
+msgstr "Príspevky neboli nájdené"
+
+#: ../inc/shortcodes.php:1748
+msgid "Tab title"
+msgstr ""
+
+#: ../inc/vendor/sunrise.php:90 ../inc/vendor/sunrise.php:91
+#: ../inc/vendor/sunrise.php:122 ../inc/vendor/sunrise.php:123
+msgid "Plugin Settings"
+msgstr ""
+
+#: ../inc/vendor/sunrise.php:180
+msgid "Use selected file"
+msgstr ""
+
+#: ../inc/vendor/sunrise.php:372
+msgid "Save changes"
+msgstr "Uložiť zmeny"
+
+#: ../inc/vendor/sunrise.php:372
+msgid "Saving"
+msgstr "Ukladanie"
+
+#: ../inc/vendor/sunrise.php:372
+msgid "Saved"
+msgstr "Uložené"
+
+#: ../inc/vendor/sunrise.php:372
+msgid ""
+"This action will delete all your settings. Are you sure? This action cannot "
+"be undone!"
+msgstr ""
+
+#: ../inc/vendor/sunrise.php:372
+msgid "Restore default settings"
+msgstr "Obnoviť predvolené nastavenia"
+
+#: ../inc/vendor/sunrise.php:379 ../inc/vendor/sunrise.php:388
+#: ../inc/vendor/sunrise.php:397 ../inc/vendor/sunrise.php:447
+msgid "Text field"
+msgstr ""
+
+#: ../inc/vendor/sunrise.php:409
+msgid "Textarea field"
+msgstr ""
+
+#: ../inc/vendor/sunrise.php:420 ../inc/vendor/sunrise.php:431
+msgid "Checkbox"
+msgstr ""
+
+#: ../inc/vendor/sunrise.php:421
+msgid "Label"
+msgstr "Štítok"
+
+#: ../inc/vendor/sunrise.php:457
+msgid "Color picker"
+msgstr ""
+
+#: ../inc/vendor/sunrise.php:465
+msgid "Pick a color"
+msgstr ""
+
+#: ../inc/vendor/sunrise.php:489
+msgid ""
+"For full functionality of this page it is reccomended to enable javascript."
+msgstr "Pre plnú funkčnosť tejto stránky je odporúčané povoliť JavaScript."
+
+#: ../inc/vendor/sunrise.php:490
+msgid "Settings saved successfully"
+msgstr "Nastavenia boli úspešne uložen="
+
+#: ../inc/vendor/sunrise.php:491
+msgid "Settings reseted successfully"
+msgstr "Nastavenia úspešne resetované"
+
+#: ../inc/vendor/sunrise.php:520
+#, php-format
+msgid "option type %s is not callable"
+msgstr ""
+
+#: ../inc/widget.php:23
+msgid "Special widget with Cherry Shortcodes."
+msgstr ""
+
+#: ../inc/widget.php:30
+msgid "Cherry Shortcodes"
+msgstr ""
+
+#: ../inc/widget.php:62
+msgid "Title:"
+msgstr "Názov:"
+
+#: ../templates/shortcodes/posts/default.tmpl:4
+#: ../templates/shortcodes/swiper_carousel/default.tmpl:4
+msgid "Posted on"
+msgstr ""
+
+#: ../templates/shortcodes/posts/default.tmpl:4
+#: ../templates/shortcodes/swiper_carousel/default.tmpl:4
+msgid "by"
+msgstr ""
+
+#~ msgid "Heading 2"
+#~ msgstr "Nadpis 2. úrovne"
+
+#~ msgid "Heading 2 style"
+#~ msgstr "Štýl nadpisu 2. úrovne"
+
+#~ msgid "Heading 2 text"
+#~ msgstr "Text nadpisu 2. úrovne"
+
+#~ msgid "Styled heading 2"
+#~ msgstr "Štýlovaná nadpis 2. úrovne"
+
+#~ msgid ""
+#~ "This shortcode doesn't work in live preview. Please insert it into editor "
+#~ "and preview on the site."
+#~ msgstr ""
+#~ "Tento skrátený kód nefunguje v živom náhľade. Prosím vložte ho do editora "
+#~ "a pozrite výsledok na stránke."
+
+#~ msgid "Gallery"
+#~ msgstr "Galéria"
+
+#~ msgid "Heading"
+#~ msgstr "Nadpis"
+
+#~ msgid "Select heading size"
+#~ msgstr "Zvoľte veľkosť nadpisu"
+
+#~ msgid "Heading text alignment"
+#~ msgstr "Zarovnanie textu nadpisu"
+
+#~ msgid "Heading text"
+#~ msgstr "Text nadpisu"
+
+#~ msgid "Styled heading"
+#~ msgstr "Štýlovaný nadpis"
+
+#~ msgid ""
+#~ "[tab title=\"Title 1\"]Content 1[/tab]\n"
+#~ "[tab title=\"Title 2\"]Content 2[/tab]\n"
+#~ "[tab title=\"Title 3\"]Content 3[/tab]"
+#~ msgstr ""
+#~ "[tab title=\"Title 1\"]Obsah 1[/tab]\n"
+#~ "[tab title=\"Title 2\"]Obsah 2[/tab]\n"
+#~ "[tab title=\"Title 3\"]Obsah 3[/tab]"
+
+#~ msgid ""
+#~ "[spoiler]Content[/spoiler]\n"
+#~ "[spoiler]Content[/spoiler]\n"
+#~ "[spoiler]Content[/spoiler]"
+#~ msgstr ""
+#~ "[spoiler]Obsah[/spoiler]\n"
+#~ "[spoiler]Obsah[/spoiler]\n"
+#~ "[spoiler]Obsah[/spoiler]"
+
+#~ msgid "Divider"
+#~ msgstr "Delič"
+
+#~ msgid "Show TOP link"
+#~ msgstr "Zobraziť TOP odkaz"
+
+#~ msgid "Show link to top of the page or not"
+#~ msgstr "Zobraziť odkaz v hornej časti stránky alebo nie"
+
+#~ msgid "Go to top"
+#~ msgstr "Ísť hore"
+
+#~ msgid "Link text"
+#~ msgstr "Text odkazu"
+
+#~ msgid "Text for the GO TOP link"
+#~ msgstr "Text pre odkaz ÍSŤ HORE"
+
+#~ msgid "Content divider with optional TOP link"
+#~ msgstr "Delič obsahuje s voliteľným HLAVNÝM odkazom"
+
+#~ msgid "Height"
+#~ msgstr "Výška"
+
+#~ msgid "Height of the spacer in pixels"
+#~ msgstr "Výška medzerníka v pixeloch"
+
+#~ msgid "Empty space with adjustable height"
+#~ msgstr "Prázdny priestor s nastaviteľnou výškou"
+
+#~ msgid "Highlight"
+#~ msgstr "Zvýrazniť"
+
+#~ msgid "Highlighted text background color"
+#~ msgstr "Zvýraznený text farbou na pozadí"
+
+#~ msgid "Highlighted text color"
+#~ msgstr "Farba zvýrazneného textu"
+
+#~ msgid "Highlighted text"
+#~ msgstr "Zvýraznený text"
+
+#~ msgid "Important"
+#~ msgstr "Dôležitý"
+
+#~ msgid "Black"
+#~ msgstr "Čierna"
+
+#~ msgid "Style of the label"
+#~ msgstr "Štýl štítku"
+
+#~ msgid "Styled label"
+#~ msgstr "Štýlovaný štítok"
+
+#~ msgid "Quote"
+#~ msgstr "Citát"
+
+#~ msgid "Cite"
+#~ msgstr "Citovať"
+
+#~ msgid "Quote author name"
+#~ msgstr "Citácia mena autora"
+
+#~ msgid "Cite url"
+#~ msgstr "Citovaná URL adresa"
+
+#~ msgid "Url of the quote author. Leave empty to disable link"
+#~ msgstr "URL adresa autora citátu. (Nechajte prázdne pre vypnutie odkazu)"
+
+#~ msgid "Blockquote alternative"
+#~ msgstr "Blockquote alternatíva"
+
+#~ msgid "Pullquote"
+#~ msgstr "Pullquote"
+
+#~ msgid "Pullquote alignment (float)"
+#~ msgstr "Zarovnanie Pullquote (plávajúce)"
+
+#~ msgid "Flat"
+#~ msgstr "Ploché"
+
+#~ msgid "Light"
+#~ msgstr "Svetlé"
+
+#~ msgid "Dropcap style preset"
+#~ msgstr "Predvoľba dropcap štýlu"
+
+#~ msgid "Choose dropcap size"
+#~ msgstr "Zvoľte veľkosť dropcap"
+
+#~ msgid "D"
+#~ msgstr "D"
+
+#~ msgid ""
+#~ "[column size=\"1/3\"]Content[/column]\n"
+#~ "[column size=\"1/3\"]Content[/column]\n"
+#~ "[column size=\"1/3\"]Content[/column]"
+#~ msgstr ""
+#~ "[column size=\"1/3\"]Obsah[/column]\n"
+#~ "[column size=\"1/3\"]Obsah[/column]\n"
+#~ "[column size=\"1/3\"]Obsah[/column]"
+
+#~ msgid "Full width"
+#~ msgstr "Plná šírka"
+
+#~ msgid "One half"
+#~ msgstr "Polovica"
+
+#~ msgid "One third"
+#~ msgstr "Tretina"
+
+#~ msgid "Two third"
+#~ msgstr "Dve tretiny"
+
+#~ msgid "One fourth"
+#~ msgstr "Štvrtina"
+
+#~ msgid "Three fourth"
+#~ msgstr "Tri štvrtiny"
+
+#~ msgid "One fifth"
+#~ msgstr "Pätina"
+
+#~ msgid "Two fifth"
+#~ msgstr "Tdve pätiny"
+
+#~ msgid "Three fifth"
+#~ msgstr "Tri šestiny"
+
+#~ msgid "Four fifth"
+#~ msgstr "Štyri šestiny"
+
+#~ msgid "One sixth"
+#~ msgstr "Šestina"
+
+#~ msgid "Five sixth"
+#~ msgstr "Päť šestín"
+
+#~ msgid "Select column width. This width will be calculated depend page width"
+#~ msgstr ""
+#~ "Zvoľte šírku stĺpca. Táto šírka sa vypočíta v závislosti od šírky stránky"
+
+#~ msgid "List"
+#~ msgstr "Zoznam"
+
+#~ msgid "Star"
+#~ msgstr "Hviezda"
+
+#~ msgid "Arrow"
+#~ msgstr "Šípka"
+
+#~ msgid "Check"
+#~ msgstr "Skontrolovať"
+
+#~ msgid "Cross"
+#~ msgstr "Kríž"
+
+#~ msgid "Thumbs up"
+#~ msgstr "Palec hore"
+
+#~ msgid "Gear"
+#~ msgstr "Výbava"
+
+#~ msgid "Time"
+#~ msgstr "Čas"
+
+#~ msgid "Note"
+#~ msgstr "Poznámka"
+
+#~ msgid "Plus"
+#~ msgstr "Plus"
+
+#~ msgid "Guard"
+#~ msgstr "Stráž"
+
+#~ msgid "Event"
+#~ msgstr "Udalosť"
+
+#~ msgid "Idea"
+#~ msgstr "Nápad"
+
+#~ msgid "Settings"
+#~ msgstr "Nastavenia"
+
+#~ msgid "Twitter"
+#~ msgstr "Twitter"
+
+#~ msgid "List items style/icons"
+#~ msgstr "Zoznam položiek štýlov/ikón"
+
+#~ msgid ""
+#~ "<ul>\n"
+#~ "<li>List item</li>\n"
+#~ "<li>List item</li>\n"
+#~ "<li>List item</li>\n"
+#~ "</ul>"
+#~ msgstr ""
+#~ "<ul>\n"
+#~ "<li>Položka v zozname</li>\n"
+#~ "<li>Položka v zozname</li>\n"
+#~ "<li>Položka v zozname</li>\n"
+#~ "</ul>"
+
+#~ msgid "Styled unordered list"
+#~ msgstr "Štylizovaný neusporiadaný zoznam"
+
+#~ msgid "Soft"
+#~ msgstr "Jemné"
+
+#~ msgid "Glass"
+#~ msgstr "Sklo"
+
+#~ msgid "Bubbles"
+#~ msgstr "Bubliny"
+
+#~ msgid "Noise"
+#~ msgstr "Hluk"
+
+#~ msgid "Stroked"
+#~ msgstr "Hladké"
+
+#~ msgid "3D"
+#~ msgstr "3D"
+
+#~ msgid "Button background style preset"
+#~ msgstr "Predvoľba štýlu pozadia tlačidla"
+
+#~ msgid "Button size"
+#~ msgstr "Veľkoť tlačidla"
+
+#~ msgid "Fluid buttons has 100% width"
+#~ msgstr "Plávajúce tlačidlá majú šírku 100%"
+
+#~ msgid "Radius"
+#~ msgstr "Zaoblenie"
+
+#~ msgid ""
+#~ "Radius of button corners. Auto-radius calculation based on button size"
+#~ msgstr ""
+#~ "Zaoblenia rohov tlačidiel. Automatické zaoblenie sa vypočítava v "
+#~ "závislosti od veľkosti tlačidla"
+
+#~ msgid ""
+#~ "You can upload custom icon for this button. Try to begin with <a href="
+#~ "\"http://webdesign.tutsplus.com/freebies/icons-freebies/exclusive-"
+#~ "freebie-50-crisp-web-app-icons/\" target=\"_blank\">these free high-"
+#~ "quality icons</a>. Download archive, unpack icons and upload in this field"
+#~ msgstr ""
+#~ "Môžete nahrať vlastnú ikonu pre toto tlačidlo. Skúste začať s <a href="
+#~ "\"http://webdesign.tutsplus.com/freebies/icons-freebies/exclusive-"
+#~ "freebie-50-crisp-web-app-icons/\" target=\"_blank\">týmito ikonami vo "
+#~ "vysokej kvalite</a>. Stiahnite archív, rozbaľte ikony a nahrajte ich sem"
+
+#~ msgid "Dark"
+#~ msgstr "Tmavé"
+
+#~ msgid "Text shadow color"
+#~ msgstr "Farba tieňu textu"
+
+#~ msgid "Color of button text shadow"
+#~ msgstr "Farba tlačidla tieňa textu"
+
+#~ msgid "Top right"
+#~ msgstr "Vpravo hore"
+
+#~ msgid "Top left"
+#~ msgstr "Vľavo hore"
+
+#~ msgid "Bottom right"
+#~ msgstr "Vpravo dole"
+
+#~ msgid "Bottom left"
+#~ msgstr "Vľavo dole"
+
+#~ msgid "Text shadow position"
+#~ msgstr "Pozícia tieňu textu"
+
+#~ msgid "Position of button text shadow"
+#~ msgstr "Pozícia tieňu na tlačidle"
+
+#~ msgid ""
+#~ "Small description under button text. This option is incompatible with "
+#~ "icon."
+#~ msgstr "Malý popis pod textom tlačidla. Táto možnosť nefunguje s ikonou."
+
+#~ msgid "Service"
+#~ msgstr "Služby"
+
+#~ msgid "Service title"
+#~ msgstr "Názov služby"
+
+#~ msgid "Service name"
+#~ msgstr "Meno služby"
+
+#~ msgid "You can upload custom icon for this box"
+#~ msgstr "Môžete nahrať vlastnú ikonu pre tento box"
+
+#~ msgid "Size of the uploaded icon in pixels"
+#~ msgstr "Veľkosť nahranej ikony v pixeloch"
+
+#~ msgid "Service description"
+#~ msgstr "Popis služby"
+
+#~ msgid "Service box with title"
+#~ msgstr "Box služby s názvom"
+
+#~ msgid "Box title"
+#~ msgstr "Názov boxu"
+
+#~ msgid "Text for the box title"
+#~ msgstr "Text pre názov boxu"
+
+#~ msgid "Box style preset"
+#~ msgstr "Predvoľba štýlu boxu"
+
+#~ msgid "Color for the box title and borders"
+#~ msgstr "Farba názvu boxu a hrán"
+
+#~ msgid "Color for the box title text"
+#~ msgstr "Farba textu nadpisu v boxe"
+
+#~ msgid "Box corners radius"
+#~ msgstr "Polomer rokov boxov"
+
+#~ msgid "Box content"
+#~ msgstr "Obsah boxu"
+
+#~ msgid "Colored box with caption"
+#~ msgstr "Farebný box s titulkom"
+
+#~ msgid "Note background color"
+#~ msgstr "Farba pozadia poznámky"
+
+#~ msgid "Note text color"
+#~ msgstr "Farba textu poznámky"
+
+#~ msgid "Note corners radius"
+#~ msgstr "Polomer rohov poznámky"
+
+#~ msgid "Note text"
+#~ msgstr "Text poznámky"
+
+#~ msgid "Colored box"
+#~ msgstr "Farebný box"
+
+#~ msgid "Lightbox"
+#~ msgstr "Lightbox"
+
+#~ msgid "Iframe"
+#~ msgstr "Iframe"
+
+#~ msgid "Image"
+#~ msgstr "Obrázok"
+
+#~ msgid "Inline (html content)"
+#~ msgstr "Inline (html obsah)"
+
+#~ msgid "Content type"
+#~ msgstr "Typ obsahu"
+
+#~ msgid "Select type of the lightbox window content"
+#~ msgstr "Vyberte typ obsahu lightbox okna"
+
+#~ msgid "Content source"
+#~ msgstr "Zdroj obsahu"
+
+#~ msgid ""
+#~ "Insert here URL or CSS selector. Use URL for Iframe and Image content "
+#~ "types. Use CSS selector for Inline content type.<br />Example values:<br /"
+#~ "><b%value>http://www.youtube.com/watch?v=NbE8INOjTKM</b> - YouTube video "
+#~ "(iframe)<br /><b%value>http://example.com/wp-content/uploads/image.jpg</"
+#~ "b> - uploaded image (image)<br /><b%value>http://example.com/</b> - any "
+#~ "web page (iframe)<br /><b%value>#contact-form</b> - any HTML content "
+#~ "(inline)"
+#~ msgstr ""
+#~ "Sem vložte adresu URL alebo selektoru CSS. Použite URL adresu pre Iframe "
+#~ "a typy obsahov obrázkov. Použite CSS selektor pre Inline typy obsahov."
+#~ "<br />Príklady hodnôt:<br /><b%value>http://www.youtube.com/watch?"
+#~ "v=NbE8INOjTKM</b> - YouTube video (iframe)<br /><b%value>http://example."
+#~ "com/wp-content/uploads/image.jpg</b> - nahraná obrázok (obrázok)<br /><b"
+#~ "%value>http://priklad.sk</b> - akákoľvek webstránka (iframe)<br /><b"
+#~ "%value>#contact-form</b> - akýkoľvek HTML obsah (inline)"
+
+#~ msgid "[button] Click Here to Watch the Video [/button]"
+#~ msgstr "[button] Kliknite pre zhliadnutie videa [/button]"
+
+#~ msgid "Lightbox window with custom content"
+#~ msgstr "Lightbox okno s vlastným obsahom"
+
+#~ msgid "Private"
+#~ msgstr "Súkromné"
+
+#~ msgid "Private note text"
+#~ msgstr "Text súkromnej poznámky"
+
+#~ msgid "Private note for post authors"
+#~ msgstr "Súkromná poznámka pre autorov príspevku"
+
+#~ msgid "YouTube"
+#~ msgstr "YouTube"
+
+#~ msgid "Url"
+#~ msgstr "URL"
+
+#~ msgid ""
+#~ "Url of YouTube page with video. Ex: http://youtube.com/watch?v=XXXXXX"
+#~ msgstr ""
+#~ "URL adresa YouTube videa. Napríklad: http://youtube.com/watch?v=XXXXXX"
+
+#~ msgid "Width"
+#~ msgstr "Šírka"
+
+#~ msgid "Player width"
+#~ msgstr "Šírka prehliadača"
+
+#~ msgid "Player height"
+#~ msgstr "Výška prehliadača"
+
+#~ msgid "Responsive"
+#~ msgstr "Prispôsobiteľnosť/responzivita"
+
+#~ msgid "Ignore width and height parameters and make player responsive"
+#~ msgstr ""
+#~ "Ignorovať parametre šírky a výšky a spraviť prehrávač prispôsobiteľný"
+
+#~ msgid "Autoplay"
+#~ msgstr "Automatické spustenie"
+
+#~ msgid "Play video automatically when page is loaded"
+#~ msgstr "Prehrať video automaticky pri načítaní stránky"
+
+#~ msgid "YouTube video"
+#~ msgstr "YouTube video"
+
+#~ msgid "Vimeo"
+#~ msgstr "Vimeo"
+
+#~ msgid "Url of Vimeo page with video"
+#~ msgstr "URL adresa Vimeo videa"
+
+#~ msgid "Vimeo video"
+#~ msgstr "Vimeo video"
+
+#~ msgid "Audio"
+#~ msgstr "Audio"
+
+#~ msgid "File"
+#~ msgstr "Súbor"
+
+#~ msgid "Audio file url. Supported formats: mp3, ogg"
+#~ msgstr "URL adresa audio súboru. Podporované formáty: mp3, ogg"
+
+#~ msgid ""
+#~ "Player width. You can specify width in percents and player will be "
+#~ "responsive. Example values: <b%value>200px</b>, <b%value>100&#37;</b>"
+#~ msgstr ""
+#~ "Šírka prehrávača. Môžete špecifikovať šírku v percentáých a prehrávač "
+#~ "bude prispôsobiteľný. Napríklad: <b%value>200px</b>, <b%value>100&#37;</b>"
+
+#~ msgid "Play file automatically when page is loaded"
+#~ msgstr "Prehrať súbor automaticky pri načítaní stránky"
+
+#~ msgid "Loop"
+#~ msgstr "Slučka"
+
+#~ msgid "Repeat when playback is ended"
+#~ msgstr "Opakovať pri ukončení prehrávania"
+
+#~ msgid "Custom audio player"
+#~ msgstr "Vlastný audio prehrávač"
+
+#~ msgid "Video"
+#~ msgstr "Video"
+
+#~ msgid "Url to mp4/flv video-file"
+#~ msgstr "URL adresa na mp4/flv video"
+
+#~ msgid "Url to poster image, that will be shown before playback"
+#~ msgstr "URL adresa na obrázok plagátu, ktorá sa zobrazí pred prehrávaním"
+
+#~ msgid "Player title"
+#~ msgstr "Názov prehrávača"
+
+#~ msgid "Controls"
+#~ msgstr "Ovládanie"
+
+#~ msgid "Show player controls (play/pause etc.) or not"
+#~ msgstr ""
+#~ "Zobraziť ovládacie tlačidla prehrávača (prehrať/pauza atď.) alebo nie"
+
+#~ msgid "Custom video player"
+#~ msgstr "Vlastný video prehrávač"
+
+#~ msgid "Table"
+#~ msgstr "Tabuľka"
+
+#~ msgid "CSV file"
+#~ msgstr "CSV súbor"
+
+#~ msgid "Upload CSV file if you want to create HTML-table from file"
+#~ msgstr "Nahrajte CSV súbor ak z neho chcete vytvoriť HTML-tabuľku"
+
+#~ msgid ""
+#~ "<table>\n"
+#~ "<tr>\n"
+#~ "\t<td>Table</td>\n"
+#~ "\t<td>Table</td>\n"
+#~ "</tr>\n"
+#~ "<tr>\n"
+#~ "\t<td>Table</td>\n"
+#~ "\t<td>Table</td>\n"
+#~ "</tr>\n"
+#~ "</table>"
+#~ msgstr ""
+#~ "<table>\n"
+#~ "<tr>\n"
+#~ "\t<td>Tabuľka</td>\n"
+#~ "\t<td>Tabuľka</td>\n"
+#~ "</tr>\n"
+#~ "<tr>\n"
+#~ "\t<td>Tabuľka</td>\n"
+#~ "\t<td>Tabuľka</td>\n"
+#~ "</tr>\n"
+#~ "</table>"
+
+#~ msgid "Styled table from HTML or CSV file"
+#~ msgstr "Tabuľka zo štýlmi z HTML alebo CSV súboru"
+
+#~ msgid "Permalink"
+#~ msgstr "Trvalý odkaz"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Post or page ID"
+#~ msgstr "ID príspevku alebo stránky"
+
+#~ msgid "Link target. blank - link will be opened in new window/tab"
+#~ msgstr "Cieľ odkazu. prázdny - odkaz sa otvorí v novom okne/záložke"
+
+#~ msgid "Permalink to specified post/page"
+#~ msgstr "Trvalý odkaz na špecifický príspevok/stránku"
+
+#~ msgid "Members"
+#~ msgstr "Členovia"
+
+#~ msgid "This content is for registered users only. Please %login%."
+#~ msgstr "Tento odkaz je len pre registrovaných používateľov. Prosím %login%."
+
+#~ msgid "Message"
+#~ msgstr "Správa"
+
+#~ msgid "Message for not logged users"
+#~ msgstr "Správa pre neprihlásených používateľov"
+
+#~ msgid "login"
+#~ msgstr "prihlásenie"
+
+#~ msgid "Login link text"
+#~ msgstr "Text odkazu na prihlásenie"
+
+#~ msgid "Text for the login link"
+#~ msgstr "Text pre prihlasovací odkaz"
+
+#~ msgid "Content for logged members"
+#~ msgstr "Obsah pre prihlásených členov"
+
+#~ msgid "Content for logged in members only"
+#~ msgstr "Obsah len pre prihlásených členov"
+
+#~ msgid "Guests"
+#~ msgstr "Hostia"
+
+#~ msgid "Content for guests"
+#~ msgstr "Obsah pre hostí"
+
+#~ msgid "Content for guests only"
+#~ msgstr "Obsah len pre hostí"
+
+#~ msgid "RSS Feed"
+#~ msgstr "RSS Zdroj"
+
+#~ msgid "Url to RSS-feed"
+#~ msgstr "URL adresa na RSS-zdroj"
+
+#~ msgid "Limit"
+#~ msgstr "Limit"
+
+#~ msgid "Number of items to show"
+#~ msgstr "Počet položiek zobrazenie"
+
+#~ msgid "Feed grabber"
+#~ msgstr "Získavač obsahu"
+
+#~ msgid "Menu"
+#~ msgstr "Menu"
+
+#~ msgid "Menu name"
+#~ msgstr "Názov menu"
+
+#~ msgid "Custom menu name. Ex: Main menu"
+#~ msgstr "Vlastný názov menu. Napr: Hlavné menu"
+
+#~ msgid "Custom menu by name"
+#~ msgstr "Vlastný názov menu podľa mena"
+
+#~ msgid "Sub pages"
+#~ msgstr "Podstránky"
+
+#~ msgid "Depth"
+#~ msgstr "Hĺbka"
+
+#~ msgid "Max depth level of children pages"
+#~ msgstr "Maximálna úroveň hĺbky podstránok"
+
+#~ msgid "Parent ID"
+#~ msgstr "Rodičovské ID"
+
+#~ msgid "ID of the parent page. Leave blank to use current page"
+#~ msgstr ""
+#~ "ID nadradenej rodičovskej stránky. Nechajte prázdne pre použitie "
+#~ "aktuálnej stránky"
+
+#~ msgid "List of sub pages"
+#~ msgstr "Zoznam podstránok"
+
+#~ msgid "Siblings"
+#~ msgstr "Súrodenci"
+
+#~ msgid "Max depth level"
+#~ msgstr "Maximálna úroveň hĺbky"
+
+#~ msgid "List of cureent page siblings"
+#~ msgstr "Zoznam aktuálnych súrodeneckých stránok"
+
+#~ msgid "Document"
+#~ msgstr "Dokument"
+
+#~ msgid "Url to uploaded document. Supported formats: doc, xls, pdf etc."
+#~ msgstr "URL na nahraný dokument. Podporované formáty: doc, xls, pdf atď."
+
+#~ msgid "Viewer width"
+#~ msgstr "Šírka prehliadača"
+
+#~ msgid "Viewer height"
+#~ msgstr "Výška prehliadača"
+
+#~ msgid "Ignore width and height parameters and make viewer responsive"
+#~ msgstr ""
+#~ "Ignorovať parametre šírky a výšky a spraviť prehliadač prispôsobiteľný"
+
+#~ msgid "Document viewer by Google"
+#~ msgstr "Prehliadač dokumentov Google"
+
+#~ msgid "Gmap"
+#~ msgstr "Gmap"
+
+#~ msgid "Map width"
+#~ msgstr "Šírka mapy"
+
+#~ msgid "Ignore width and height parameters and make map responsive"
+#~ msgstr "Ignorovať parametre šírky a výšky a spraviť mapu prispôsobiteľnú"
+
+#~ msgid "Marker"
+#~ msgstr "Značkovač"
+
+#~ msgid "Address for the marker. You can type it in any language"
+#~ msgstr "Adresa značky. Môžete ju zadať v ľubovoľnom jazyku"
+
+#~ msgid "Maps by Google"
+#~ msgstr "Mapy Google"
+
+#~ msgid "Slider"
+#~ msgstr "Posuvník"
+
+#~ msgid "Choose source gallery, that will be used for this slider"
+#~ msgstr "Vyberte zdrojovú galériu, ktorá bude použitá pre posuvník"
+
+#~ msgid "Slider width (in pixels)"
+#~ msgstr "Šírka posuvníka (v pixeloch)"
+
+#~ msgid "Slider height (in pixels)"
+#~ msgstr "Výška posuvníka (v pixeloch)"
+
+#~ msgid "Ignore width and height parameters and make slider responsive"
+#~ msgstr ""
+#~ "Ignorovať parametre šírky a výšky a spraviť posuvník prispôsobiteľný"
+
+#~ msgid "Show titles"
+#~ msgstr "Zobraziť názvy"
+
+#~ msgid "Display slide titles"
+#~ msgstr "Zobraziť názby posuvníkov"
+
+#~ msgid "Is slider centered on the page"
+#~ msgstr "Zarovnanie posuvníka na stred stránky"
+
+#~ msgid "Arrows"
+#~ msgstr "Šípky"
+
+#~ msgid "Show left and right arrows"
+#~ msgstr "Zobraziť ľavú a pravú šípku"
+
+#~ msgid "Pagination"
+#~ msgstr "Stránkovanie"
+
+#~ msgid "Show pagination"
+#~ msgstr "Zobraziť stránkovanie"
+
+#~ msgid "Mouse wheel control"
+#~ msgstr "Ovládanie kolieskom myši"
+
+#~ msgid "Allow to change slides with mouse wheel"
+#~ msgstr "Povoliť posúvanie obrázkov kolieskom myši"
+
+#~ msgid ""
+#~ "Choose interval between slide animations. Set to 0 to disable autoplay"
+#~ msgstr ""
+#~ "Zvoľte interval medzi animáciami posuvníka. Nastavte na 0 pre vypnutie "
+#~ "automatického prehrávania"
+
+#~ msgid "Speed"
+#~ msgstr "Rýchlosť"
+
+#~ msgid "Specify animation speed"
+#~ msgstr "Určte rýchlosť animácie"
+
+#~ msgid "Links target"
+#~ msgstr "Cieľ odkazov"
+
+#~ msgid "Open slides links in new window/tab"
+#~ msgstr "Otvoriť odkazy posuvníka v novom okne/záložke"
+
+#~ msgid "Customizable image slider"
+#~ msgstr "Prispôsobiteľný posuvník obrázkov"
+
+#~ msgid "Carousel"
+#~ msgstr "Kolotoč"
+
+#~ msgid "Choose source gallery, that will be used for this carousel"
+#~ msgstr "Zvoľte zdrojovú galériu, ktorá bude použitá pre kolotoč"
+
+#~ msgid "Carousel width (in pixels)"
+#~ msgstr "Šírka kolotoča (v pixeloch)"
+
+#~ msgid "Carousel height (in pixels)"
+#~ msgstr "Váška kolotoča (v pixeloch)"
+
+#~ msgid "Ignore width and height parameters and make carousel responsive"
+#~ msgstr "Ignorovať parametre šírky a výšky a spraviť kolotoč prispôsobiteľný"
+
+#~ msgid "Items to show"
+#~ msgstr "Položky na zobrazenie"
+
+#~ msgid "How much carousel items is visible"
+#~ msgstr "Koľko položiek kolotoča je vidieť"
+
+#~ msgid "Scroll number"
+#~ msgstr "Posuvník čísel"
+
+#~ msgid "How much items are scrolled in one transition"
+#~ msgstr "Koľko položiek sa posúva v jednom prechode"
+
+#~ msgid "Display titles for each item"
+#~ msgstr "Zobraziť názvy pre každú položku"
+
+#~ msgid "Is carousel centered on the page"
+#~ msgstr "Zarovnanie kolotoča na stred stránky"
+
+#~ msgid "Allow to rotate carousel with mouse wheel"
+#~ msgstr "Povoliť otáčanie kolotoču kolieskom myši"
+
+#~ msgid ""
+#~ "Choose interval between auto animations. Set to 0 to disable autoplay"
+#~ msgstr ""
+#~ "Zvoľte interval medzi animáciami. Nastavte na 0 pre vypnutie "
+#~ "automatického prehrávania"
+
+#~ msgid "Open carousel links in new window/tab"
+#~ msgstr "Otvoriť odkazy kolotoru v novom okne/záložke"
+
+#~ msgid "Customizable image carousel"
+#~ msgstr "Prispôsobiteľný obrázok kolotoča"
+
+#~ msgid "Choose source gallery, that will be used for this shortcode"
+#~ msgstr "Zvoľte zdrojovú galériu, ktorá bude použitá pre tento skrátený kód"
+
+#~ msgid "Single item width (in pixels)"
+#~ msgstr "Šírka položky (v pixeloch)"
+
+#~ msgid "Single item height (in pixels)"
+#~ msgstr "Výška položky (v pixeloch)"
+
+#~ msgid "Never"
+#~ msgstr "Nikdy"
+
+#~ msgid "On mouse over"
+#~ msgstr "Pri prejdení myšou"
+
+#~ msgid "Always"
+#~ msgstr "Vždy"
+
+#~ msgid "Title display mode"
+#~ msgstr "Mód zobrazenia názvu"
+
+#~ msgid "Open links in new window/tab"
+#~ msgstr "Otvoriť odkazy v novom okne/záložke"
+
+#~ msgid "Customizable image gallery"
+#~ msgstr "Prispôsobiteľná galéria obrázkov"
+
+#~ msgid ""
+#~ "<b>Do not change this field value if you do not understand description "
+#~ "below.</b><br/>Relative path to the template file. Default templates is "
+#~ "placed under the plugin directory (templates folder). You can copy it "
+#~ "under your theme directory and modify as you want. You can use following "
+#~ "default templates that already available in the plugin directory:<br/><b"
+#~ "%value>templates/default-loop.php</b> - posts loop<br/><b%value>templates/"
+#~ "teaser-loop.php</b> - posts loop with thumbnail and title<br/><b"
+#~ "%value>templates/single-post.php</b> - single post template<br/><b"
+#~ "%value>templates/list-loop.php</b> - unordered list with posts titles"
+#~ msgstr ""
+#~ "<b>Nemeňte hodnotu tohto poľa ak nerozumiete popisu nižšie</b><br/"
+#~ ">Relatívna cesta k súboru šablóny. Predvolené šablóny sa nachádzajú v "
+#~ "adresári s pluginmy (zložka šablóny). Môžete ich skopírovať do svojho "
+#~ "adresára s témami a a upravovať ako chcete. Môžete použiť nasledujúce "
+#~ "predvolené šablóny, ktoré sú už k dispozícii v adresári pluginu:<br/><b"
+#~ "%value>templates/default-loop.php</b> - posts loop<br/><b%value>templates/"
+#~ "teaser-loop.php</b> - posts loop with thumbnail and title<br/><b"
+#~ "%value>templates/single-post.php</b> - single post template<br/><b"
+#~ "%value>templates/list-loop.php</b> -neusporiadaný zoznam s názvami "
+#~ "príspevkov"
+
+#~ msgid "Choose the authors whose posts you want to show"
+#~ msgstr "Zvoľte autorov, ktorých príspevky chcete zobraziť"
+
+#~ msgid "Meta key"
+#~ msgstr "Kláves meta"
+
+#~ msgid "Enter meta key name to show posts that have this key"
+#~ msgstr ""
+#~ "Zadajte meta názov kľúča pte zobrazenie príspevkov, ktoré majú tento kľúč"
+
+#~ msgid "Meta key values"
+#~ msgstr "Meta kľúč hodnoty"
+
+#~ msgid "Plugin settings"
+#~ msgstr "Nastavenia pluginu"
+
+#~ msgid "Plugin homepage"
+#~ msgstr "Domovksá stránka pluginu"
+
+#~ msgid "Support forums"
+#~ msgstr "Fórum podpory"
+
+#~ msgid "Close window"
+#~ msgstr "Zavrieť okno"
+
+#~ msgid "Max upload file size"
+#~ msgstr "Maximálna veľkosť nahrávaného súboru"
+
+#~ msgid "Mb"
+#~ msgstr "Mb"
+
+#~ msgid "How to increase"
+#~ msgstr "Ako zväčšiť"
+
+#~ msgid "Shortcodes Ultimate"
+#~ msgstr "Ultimátne skrátené kódy"
+
+#~ msgid "Vladimir Anokhin"
+#~ msgstr "Vladimir Anokhin"
+
+#~ msgid "Supercharge your WordPress theme with mega pack of shortcodes"
+#~ msgstr "Obohaťte svoju WordPress tému s veľkým balením skrátených kódov"
+
+#~ msgid ""
+#~ "<h1>Oops! Plugin not activated&hellip;</h1> <p>Shortcodes Ultimate is not "
+#~ "fully compatible with your version of WordPress (%s).<br />Reccomended "
+#~ "WordPress version &ndash; %s (or higher).</p><a href=\"%s\">&larr; Return "
+#~ "to the plugins screen</a> <a href=\"%s\"%s>Continue and activate anyway "
+#~ "&rarr;</a>"
+#~ msgstr ""
+#~ "<h1>Ups! Plugin nie je aktivovaný&hellip;</h1> <p>Ultimátne skrátené kódy "
+#~ "nie sú plne kompatibilné s vašou verziou WordPressu (%s).<br />Odporúčaná "
+#~ "verzia WordPress &ndash; %s (alebo vyššia).</p><a href=\"%s\">&larr; "
+#~ "Vrátiť sa na stránku pluginov</a> <a href=\"%s\"%s>Pokračovať a aktivovať "
+#~ "aj napriek tomu &rarr;</a>"
+
+#~ msgid ""
+#~ "<h1>Oops! Plugin not activated&hellip;</h1> <p>Shortcodes Ultimate is not "
+#~ "fully compatible with your PHP version (%s).<br />Reccomended PHP version "
+#~ "&ndash; %s (or higher).</p><a href=\"%s\">&larr; Return to the plugins "
+#~ "screen</a> <a href=\"%s\"%s>Continue and activate anyway &rarr;</a>"
+#~ msgstr ""
+#~ "<h1>Ups! Plugin nie je aktivovaný</h1> <p>Ultimátne skrátené kódy nie sú "
+#~ "plne kompatibilné s vašou verziou PHP (%s).<br />Odporúčaná verzia PHP "
+#~ "&ndash; %s (alebo vyššia).</p><a href=\"%s\">&larr; Vrátiť sa na stránku "
+#~ "pluginov</a> <a href=\"%s\"%s>Pokračovať a aktivovať aj napriek tomu "
+#~ "&rarr;</a>"
+
+#~ msgid "Where to start?"
+#~ msgstr "Kde začať?"
+
+#~ msgid "Project homepage"
+#~ msgstr "Domovská stránka projektu"
+
+#~ msgid "Support forum"
+#~ msgstr "Fórum podpory"
+
+#~ msgid "Changelog"
+#~ msgstr "zoznam zmien"
+
+#~ msgid "About"
+#~ msgstr "Informácie"
+
+#~ msgid "Custom formatting"
+#~ msgstr "Vlastné formátovanie"
+
+#~ msgid ""
+#~ "Disable this option if you have some problems with other plugins or "
+#~ "content formatting"
+#~ msgstr ""
+#~ "Zakážte túto možnosť, ak máte nejaké problémy s inými pluginy alebo s "
+#~ "formátovaním obsahu"
+
+#~ msgid "Documentation article"
+#~ msgstr "Dokumentácia"
+
+#~ msgid "Enabled"
+#~ msgstr "Povolené"
+
+#~ msgid "Compatibility mode"
+#~ msgstr "Režim kompatibility"
+
+#~ msgid ""
+#~ "Enable this option if you have some problems with other plugins that uses "
+#~ "similar shortcode names"
+#~ msgstr ""
+#~ "Povoľte túto možnosť, ak máte nejaké problémy s inými pluginy, ktoré "
+#~ "používajú podobné názvy skrátených kódov"
+
+#~ msgid "etc."
+#~ msgstr "atď."
+
+#~ msgid "Skin"
+#~ msgstr "Téma"
+
+#~ msgid ""
+#~ "Choose skin for shortcodes.<br /><a href=\"%s\" target=\"_blank\">Learn "
+#~ "how to create custom skin</a><br /><a href=\"%s\" target=\"_blank"
+#~ "\"><b>Download more skins</b></a>"
+#~ msgstr ""
+#~ "Zvoľte tému skrátených kódov<br /><a href=\"%s\" target=\"_blank\">Ako "
+#~ "vytvoriť vlastnú tému</a><br /><a href=\"%s\" target=\"_blank"
+#~ "\"><b>Stiahnuť viac tém</b></a>"
+
+#~ msgid "Custom CSS"
+#~ msgstr "Vlastné CSS"
+
+#~ msgid "Galleries"
+#~ msgstr "Galérie"
+
+#~ msgid "Cheatsheet"
+#~ msgstr "Ťahák"
+
+#~ msgid "Special Shortcodes Ultimate widget"
+#~ msgstr "Špeciálny widget Ultimátnych skratených kódov"
+
+#~ msgid "This is box title"
+#~ msgstr "Toto je názov boxu"
+
+#~ msgid "please specify correct url"
+#~ msgstr "prosím špecifikujte správnu URL adresu"
+
+#~ msgid "This menu doesn't exists, or has no elements"
+#~ msgstr "Táto ponuka neexistuje, alebo nemá žiadne prvky"
+
+#~ msgid "images not found"
+#~ msgstr "obrázky neboli nenájdené"
+
+#~ msgid "template not found"
+#~ msgstr "šablóna nebola nájdená"
+
+#~ msgid "year"
+#~ msgstr "rok"
+
+#~ msgid "month"
+#~ msgstr "mesiac"
+
+#~ msgid "week"
+#~ msgstr "týždeň"
+
+#~ msgid "day"
+#~ msgstr "deň"
+
+#~ msgid "hour"
+#~ msgstr "hodina"
+
+#~ msgid "minute"
+#~ msgstr "minúta"
+
+#~ msgid "s"
+#~ msgstr "y"
+
+#~ msgid "username not specified"
+#~ msgstr "používateľské meno nie je uvedené"
+
+#~ msgid "no public messages"
+#~ msgstr "žiadne verejné správy"
+
+#~ msgid "Welcome to Shortcodes Ultimate"
+#~ msgstr "Vitajte v Ultimátnych skrátených kódoch"
+
+#~ msgid "A real swiss army knife for WordPress"
+#~ msgstr "Skutočný švajčiarsky armádny nôž pre WordPress"
+
+#~ msgid "Add-ons"
+#~ msgstr "Rozšírenia"
+
+#~ msgid "Documentation"
+#~ msgstr "Dokumentácia"
+
+#~ msgid "GitHub"
+#~ msgstr "GitHub"
+
+#~ msgid "Contact author"
+#~ msgstr "Kontaktovať autora"
+
+#~ msgid "Plugin features"
+#~ msgstr "Funkcie pluginu"
+
+#~ msgid "30+ amazing shortcodes"
+#~ msgstr "30 + úžasných skrátených kódov"
+
+#~ msgid "Power of CSS3 transitions"
+#~ msgstr "Výkon CSS3 prechodov"
+
+#~ msgid "Handy shortcodes generator"
+#~ msgstr "Praktický generátor skrátených kódov"
+
+#~ msgid "International"
+#~ msgstr "Medzinárodné"
+
+#~ msgid "Documented API"
+#~ msgstr "Dokumentácia API"
+
+#~ msgid "What is a shortcode?"
+#~ msgstr "Čo je to skrátený kód?"
+
+#~ msgid ""
+#~ "<strong>Shortcode</strong> is a WordPress-specific code that lets you do "
+#~ "nifty things with very little effort."
+#~ msgstr ""
+#~ "<strong>Skrátený kód</strong> je špecifický kód vo WordPresse ktorý vám "
+#~ "umožní robiť šikovné veci s veľmi malým úsilím."
+
+#~ msgid ""
+#~ "Shortcodes can embed files or create objects that would normally require "
+#~ "lots of complicated, ugly code in just one line. Shortcode = shortcut."
+#~ msgstr ""
+#~ "Pomocou skrátených kódov môžete vložiť súbory alebo vytvárať objekty, "
+#~ "ktoré za normálnych okolností vyžadujú oveľa komplikovanejší škaredý kód "
+#~ "v jednoduchom krátkom kóde."
+
+#~ msgid "How it works"
+#~ msgstr "Ako to funguje"
+
+#~ msgid "More videos"
+#~ msgstr "Viac videí"
+
+#~ msgid "Shortcodes Ultimate Tutorial"
+#~ msgstr "Ultimátne skrátené kódy návod"
+
+#~ msgid "How to use special widget"
+#~ msgstr "Ako použiť špeciálny widget"
+
+#~ msgid "Shortcode"
+#~ msgstr "Skrátený kód"
+
+#~ msgid "Parameters"
+#~ msgstr "Parametre"
+
+#~ msgid "Example"
+#~ msgstr "Príklad"
+
+#~ msgid "Demo"
+#~ msgstr "Demo"
+
+#~ msgid "Default value"
+#~ msgstr "Predvolená hodnota"
+
+#~ msgid "-- no parameters --"
+#~ msgstr "-- žiadne parametre --"
+
+#~ msgid ""
+#~ "This action will remove all your custom CSS, galleries and settings. Are "
+#~ "you sure? This action cannot be undone!"
+#~ msgstr ""
+#~ "Táto akcia odstráni všetky vaše vlastné CSS, galérie a nastavenia. Ste i "
+#~ "istý? Túto akciu nie je možné vrátiť späť!"
+
+#~ msgid "Insert code"
+#~ msgstr "Vložte kód"
+
+#~ msgid "You can see the original styles to override it"
+#~ msgstr "Môžete vidieť pôvodné štýly na prepísanie"
+
+#~ msgid "You can use next variables in your custom CSS"
+#~ msgstr "Môžete použiť nasledujúce premenné vo vašich vlastných CSS"
+
+#~ msgid "home url"
+#~ msgstr "domovská stránka"
+
+#~ msgid "theme url"
+#~ msgstr "stránka témy"
+
+#~ msgid "plugin url"
+#~ msgstr "stránka pluginu"
+
+#~ msgid ""
+#~ "Are you sure that you want to delete this gallery? This action can't be "
+#~ "undone!"
+#~ msgstr ""
+#~ "Ste si istí, že chcete zmazať túto galériu? Túto akciu nie je možné "
+#~ "vrátiť späť!"
+
+#~ msgid ""
+#~ "Are you sure that you want to delete this image? This action can't be "
+#~ "undone!"
+#~ msgstr ""
+#~ "Ste si istí, že chcete zmazať tento obrázok? Túto akciu nie je možné "
+#~ "vrátiť späť!"
+
+#~ msgid "Create new gallery"
+#~ msgstr "Vytvoriť novú galériu"
+
+#~ msgid "Enter gallery name"
+#~ msgstr "Zadajte názov galérie"
+
+#~ msgid "Edit gallery"
+#~ msgstr "Upraviť galériu"
+
+#~ msgid "Save &amp; close"
+#~ msgstr "Uložiť &amp; zavrieť"
+
+#~ msgid "Close"
+#~ msgstr "Zavrieť"
+
+#~ msgid "Delete"
+#~ msgstr "Odstrániť"
+
+#~ msgid "Add image"
+#~ msgstr "Pridať obrázok"
+
+#~ msgid "Edit"
+#~ msgstr "Upraviť"
+
+#~ msgid "Instructions"
+#~ msgstr "Inštrukcie"
+
+#~ msgid "Click to close"
+#~ msgstr "Kliknite pre zavrenie"
+
+#~ msgid "There is already default settings"
+#~ msgstr "Tu už sú predvolené nastavenia"
+
+#~ msgid "Settings not saved, because there is no changes"
+#~ msgstr "Nastavenie neboli uložené pretože v nich nie sú žiadne zmeny"
+
+#~ msgid "Upload"
+#~ msgstr "Nahrať"
+
+#~ msgid "Posted"
+#~ msgstr "Publikované"
+
+#~ msgid "0 comments"
+#~ msgstr "žiadne komentáre"
+
+#~ msgid "1 comment"
+#~ msgstr "1 komentár"
+
+#~ msgid "%n comments"
+#~ msgstr "%n komentárov"
+
+#~ msgid "No image URL has been entered."
+#~ msgstr "Nebola zadaná URL adresa obrázka."
+
+#~ msgid "Failed to get $file_path information using getimagesize."
+#~ msgstr "Nepodarilo sa získať $file_path informácie pomocou getimagesize."
+
+#~ msgid "Resize path invalid (GIF)"
+#~ msgstr "Neplatná cesta pre zmenu veľkosti (GIF)."
+
+#~ msgid "Resize path invalid (PNG)."
+#~ msgstr "Neplatná cesta pre zmenu veľkosti (PNG)."
+
+#~ msgid "Resize path invalid (JPG)."
+#~ msgstr "Neplatná cesta pre zmenu veľkosti (JPG)."
+
+#~ msgid "Failed to get $dest_file_name (resized image) info via @getimagesize"
+#~ msgstr ""
+#~ "Neúspech pri záskaní $dest_file_name (zmenená veľkosť) info cez "
+#~ "@getimagesize"
+
+#~ msgid "Welcome"
+#~ msgstr "Vitajte"
+
+#~ msgid "Metro"
+#~ msgstr "Metro"
+
+#~ msgid "Thin"
+#~ msgstr "Tenký"
+
+#~ msgid "Choose heading style preset"
+#~ msgstr "Zvoľte predvoľbu štýlu nadpisov"
+
+#~ msgid "Choose tabs style preset"
+#~ msgstr "Zvoľte predvoľbu štýlu záložiek"
+
+#~ msgid "Select spoiler style preset"
+#~ msgstr "Zvoľte predvoľbu pre štýl spojleru"
+
+#~ msgid "Select divider style preset"
+#~ msgstr "Zvoľte predvoľbu pre štýl deliču"
+
+#~ msgid "Quote style preset"
+#~ msgstr "Predvoľba štýlu citácie"
+
+#~ msgid "Choose style preset for pullquote"
+#~ msgstr "Zvoľte predvolený štýl pre pullquote"
+
+#~ msgid "Align to left"
+#~ msgstr "Zarovnať doľava"
+
+#~ msgid "Style preset for the inner columns"
+#~ msgstr "Predvoľba štýlu pre vnútorné stĺpy"
+
+#~ msgid "Extra CSS class for button"
+#~ msgstr "Extra CSS trieda pre rohy"
+
+#~ msgid "Hidden"
+#~ msgstr "Skrytý"
+
+#~ msgid "Player style preset"
+#~ msgstr "Prednastavený štýl prehrávača"
+
+#~ msgid "Minimal"
+#~ msgstr "Minimalistické"
+
+#~ msgid "Table style preset"
+#~ msgstr "Prednastavený štýl tabuľky"
+
+#~ msgid "Box style preset. This box will be shown for not logged users only"
+#~ msgstr ""
+#~ "Prednastavenie štýlu boxu. Toto okno sa zobrazí len neprihláseným "
+#~ "používateľom."
+
+#~ msgid "Toggle fullscreen"
+#~ msgstr "Prepnúť na celú obrazovku"

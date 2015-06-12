@@ -1,0 +1,27 @@
+.cherry-list {
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+	li {
+		padding: 0 0 5px 0;
+	}
+	&.image-icon {
+		ul {
+			li:before {
+				content: '';
+				width: 20px;
+				height: 20px;
+				margin: 0 5px 0 0;
+				display: inline-block;
+				vertical-align: middle;
+				background-size:cover;
+			}
+		}
+	}
+}
+
+.list-icon {
+	min-width: 20px;
+	text-align:left;
+}

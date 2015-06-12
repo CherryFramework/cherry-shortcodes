@@ -1,0 +1,155 @@
+/*--------------------------
+## [button]
+--------------------------*/
+.cherry-btn {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: $primary;
+	color: $button-text;
+	text-decoration: none !important;
+	text-align: center;
+	-webkit-transition: all 200ms linear;
+	-moz-transition: all 200ms linear;
+	transition: all 200ms linear;
+	&:hover {
+		color: $button-text;
+	}
+	// wide display
+	&-wide {
+		display: block;
+		width: 100%;
+		margin: 10px 0;
+	}
+
+	&-content-wrap {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	// button description
+	&-desc {
+		display: block;
+		text-align: left;
+		font-size: .8em;
+		.aligncenter &,
+		&.desc-wide {
+			text-align: center;
+		}
+	}
+	// button icon
+	&-icon {
+		&.icon-position-left {
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0 10px 0 0;
+		}
+		&.icon-position-top {
+			display: block;
+			margin: 0 0 10px 0;
+		}
+		&.icon-position-right {
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0 0 0 10px;
+		}
+		&.icon-position-bottom {
+			display: block;
+			margin: 10px 0 0 0;
+		}
+	}
+	// sizes
+	&-extra-small {
+		padding: $xs-indents;
+		font-size: $xs-size;
+		line-height: $xs-size;
+	}
+	&-small {
+		padding: $sm-indents;
+		font-size: $sm-size;
+		line-height: $sm-size;
+	}
+	&-medium {
+		padding: $md-indents;
+		font-size: $md-size;
+		line-height: $md-size;
+	}
+	&-large {
+		padding: $lg-indents;
+		font-size: $lg-size;
+		line-height: $lg-size;
+	}
+	&-extra-large {
+		padding: $xl-indents;
+		font-size: $xl-size;
+		line-height: $xl-size;
+	}
+	// styles
+	&-success {
+		background-color: $success;
+		&:hover {
+			background-color: darken($success, 10%);
+		}
+	}
+	&-info {
+		background-color: $info;
+		&:hover {
+			background-color: darken($info, 10%);
+		}
+	}
+	&-warning {
+		background-color: $warning;
+		&:hover {
+			background-color: darken($warning, 10%);
+		}
+	}
+	&-danger {
+		background-color: $danger;
+		&:hover {
+			background-color: darken($danger, 10%);
+		}
+	}
+	&-default {
+		background-color: $default;
+		&:hover {
+			background-color: white;
+		}
+	}
+	&-link {
+		background: none !important;
+		padding: 0 !important;
+		color: $primary;
+		&:hover {
+			color: darken($primary, 20%);
+		}
+	}
+	&-primary-light {
+		background: #FFF;
+	}
+	&-gray {
+		background-color: #FFF;
+	}
+
+	&-transparent {
+		border: 2px solid #FFF;
+		background: transparent;
+		box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		&:hover{
+			background: #FFF;
+			//color: $gray;
+		}
+	}
+
+}
+
+.fluid-button-left {
+	text-align: left;
+}
+
+.fluid-button-right {
+	text-align: right;
+}
+
+.aligncenter {
+	text-align: center;
+}

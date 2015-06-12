@@ -1,0 +1,32 @@
+@import "swiper";
+/*--------------------------
+## [swiper_carousel]
+--------------------------*/
+.cherry-swiper-carousel-container{
+	position: relative;
+	.cherry-swiper-carousel{
+		//box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,1);
+		.swiper-wrapper{
+			.cherry-swiper-carousel-slide{
+				//box-shadow: inset 0px 0px 0px 1px rgba(0,255,0,1);
+					.inner{
+						figure.post-thumbnail{
+							img.wp-post-image{
+								width: 100%;
+							}
+						}
+					}
+			}
+		}
+	}
+	.swiper-button-next{
+		&.outer{
+			right: -50px;
+		}
+	}
+	.swiper-button-prev{
+		&.outer{
+			left: -50px;
+		}
+	}
+}

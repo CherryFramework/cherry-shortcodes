@@ -1,0 +1,41 @@
+@import "variables";
+@import "mixins";
+
+/*--------------------------------------------------------------
+# Scaffolding
+--------------------------------------------------------------*/
+* {
+	@include box-sizing(border-box);
+}
+*:before,
+*:after {
+	@include box-sizing(border-box);
+}
+
+img {
+	@include img-responsive(inline-block);
+}
+
+.cherry-clearfix {
+	@include clearfix;
+}
+
+/*--------------------------------------------------------------
+# Shortcodes
+--------------------------------------------------------------*/
+@import "shortcodes/accordion";
+@import "shortcodes/banner";
+@import "shortcodes/box";
+@import "shortcodes/button";
+@import "shortcodes/clear";
+@import "shortcodes/counter";
+@import "shortcodes/dropcap";
+@import "shortcodes/google-map";
+@import "shortcodes/icon";
+@import "shortcodes/lazy-load-effect";
+@import "shortcodes/parallax";
+@import "shortcodes/posts";
+@import "shortcodes/swiper-carousel";
+@import "shortcodes/tabs";
+@import "shortcodes/title-box";
+@import "shortcodes/list";

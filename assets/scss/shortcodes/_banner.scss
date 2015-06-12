@@ -1,0 +1,28 @@
+/*--------------------------
+## [banner]
+--------------------------*/
+.cherry-banner {
+	margin: 0;
+	&_wrap {
+		background-size: cover;
+		background-position: 50% 50%;
+	}
+	&_content {
+		padding: 20px;
+	}
+	&_title {
+		padding: 20px 20px 0 20px;
+		margin: 0;
+	}
+	&_link {
+		text-decoration: none;
+		&:hover,
+		&:active,
+		&:focus {
+			text-decoration: none;
+		}
+		&.image-link {
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+/*--------------------------
+## [box]
+--------------------------*/
+.cherry-box {
+	.inner {
+		padding: 15px;
+	}
+	> div {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.box-primary {
+		background-color: $primary;
+		color: #fff;
+	}
+	.box-secondary {
+		background-color: $secondary;
+		color: #fff;
+	}
+	.box-gray {
+		background-color: $gray;
+	}
+	.box-primary-border {
+		border: 2px solid $primary;
+	}
+	.box-secondary-border {
+		border: 2px solid $secondary;
+	}
+	.box-gray-border {
+		border: 2px solid $gray;
+	}
+}
