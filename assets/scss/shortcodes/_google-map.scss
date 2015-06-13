@@ -1,19 +1,23 @@
 /*--------------------------
 ## [google_map]
 --------------------------*/
-.google-map-container{
+.google-map {
 	width: 100%;
-	height: 400px;
-	min-height: 100px;
-	.google-map{
+	height: 100%;
+	position: relative;
+	&-container {
 		width: 100%;
-		height: 100%;
-		position: relative;
-			img{
-				max-width: none !important;
-			}
+		height: 400px;
+		min-height: 100px;
+		.marker-desc {
+			display: none;
+		}
+		img {
+			max-width: none !important;
+		}
 	}
-	.marker-desc{
-		display: none;
+	/* Fix for IE */
+	.gmnoprint span {
+		display: inline-block;
 	}
 }

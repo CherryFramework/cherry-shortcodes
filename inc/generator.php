@@ -271,7 +271,7 @@ class Cherry_Shortcodes_Generator {
 	public static function ajax_get_terms() {
 		self::access();
 		$args = array();
-		if ( isset( $_REQUEST['tax'] ) ) $args['options'] = (array) Cherry_Shortcodes_Tools::get_terms( sanitize_key( $_REQUEST['tax'] ) );
+		if ( isset( $_REQUEST['tax'] ) ) $args['options'] = (array) Cherry_Shortcodes_Tools::get_terms( sanitize_key( $_REQUEST['tax'] ), 'slug' );
 		if ( isset( $_REQUEST['class'] ) ) $args['class'] = (string) sanitize_key( $_REQUEST['class'] );
 		if ( isset( $_REQUEST['multiple'] ) ) $args['multiple'] = (bool) sanitize_key( $_REQUEST['multiple'] );
 		if ( isset( $_REQUEST['size'] ) ) $args['size'] = (int) sanitize_key( $_REQUEST['size'] );

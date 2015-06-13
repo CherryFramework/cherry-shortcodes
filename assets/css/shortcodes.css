@@ -336,21 +336,25 @@ img {
 /*--------------------------
 ## [google_map]
 --------------------------*/
+.google-map {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* Fix for IE */
+}
 .google-map-container {
   width: 100%;
   height: 400px;
   min-height: 100px;
 }
-.google-map-container .google-map {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.google-map-container .google-map img {
-  max-width: none !important;
-}
 .google-map-container .marker-desc {
   display: none;
+}
+.google-map-container img {
+  max-width: none !important;
+}
+.google-map .gmnoprint span {
+  display: inline-block;
 }
 
 /*--------------------------
