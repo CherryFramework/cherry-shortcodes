@@ -45,6 +45,9 @@ class Cherry_Shortcodes_Assets {
 
 		// Print
 		add_action( 'cherry_shortcodes/generator/preview/after', array( __CLASS__, 'prnt' ) );
+
+		// Pass style handle to CSS compiler.
+		add_filter( 'cherry_compiler_static_css', array( $this, 'add_style_to_compiler' ) );
 	}
 
 	/**
@@ -91,6 +94,8 @@ class Cherry_Shortcodes_Assets {
 		}
 		// Font Awesome.
 		wp_register_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', false, '4.3.0', 'all' );
+		// Swiper.
+		wp_register_style( 'swiper', plugins_url( 'assets/css/swiper.css', CHERRY_SHORTCODES_FILE ), false, CHERRY_SHORTCODES_VERSION, 'all' );
 		// Shortcodes style.
 		wp_register_style( 'cherry-shortcodes-all', plugins_url( 'assets/css/shortcodes.css', CHERRY_SHORTCODES_FILE ), false, CHERRY_SHORTCODES_VERSION, 'all' );
 
@@ -158,6 +163,7 @@ class Cherry_Shortcodes_Assets {
 	 */
 	public static function enqueue_styles() {
 		wp_enqueue_style( 'cherry-shortcodes-grid' );
+		wp_enqueue_style( 'swiper' );
 		wp_enqueue_style( 'cherry-shortcodes-all' );
 
 		// Hook to dequeue stylesheets or add custom.
@@ -171,6 +177,7 @@ class Cherry_Shortcodes_Assets {
 	 */
 	public static function prnt() {
 		wp_print_styles( 'cherry-shortcodes-grid' );
+		wp_print_styles( 'swiper' );
 		wp_print_styles( 'cherry-shortcodes-all' );
 
 		$assets = self::assets();
@@ -231,6 +238,22 @@ class Cherry_Shortcodes_Assets {
 		$assets['js'] = array_unique( (array) apply_filters( 'cherry_shortcodes/assets/js', (array) array_unique( $assets['js'] ) ) );
 
 		return $assets;
+	}
+
+	/**
+	 * Pass style handle to CSS compiler.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param array $handles CSS handles to compile.
+	 */
+	public static  function add_style_to_compiler( $handles ) {
+		$handles = array_merge(
+			array( 'cherry-shortcodes-all' => plugins_url( 'assets/css/shortcodes.css', CHERRY_SHORTCODES_FILE ) ),
+			$handles
+		);
+
+		return $handles;
 	}
 }
 
