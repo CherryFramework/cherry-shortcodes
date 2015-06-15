@@ -18,8 +18,8 @@ if ( !defined( 'WPINC' ) ) {
 class Cherry_Shortcodes_Handler {
 
 	public static $postdata            = array();
-	public static $macros_pattern      = '/%%([a-zA-Z]+[^%]{2})(=[\'\"]([a-zA-Z0-9-_\s]+)[\'\"])?%%/';
-	public static $macros_args_pattern = '=[\'\"]([a-zA-Z0-9-_\s]+)[\'\"]?/';
+	public static $macros_pattern      = '/%%([a-zA-Z]+[^%]{2})(=[\'\"]([a-zA-Z0-9-_,\/\s]+)[\'\"])?%%/';
+	public static $macros_args_pattern = '=[\'\"]([a-zA-Z0-9-_,\/\s]+)[\'\"]?/';
 
 	public static $tabs = array();
 	public static $tab_count = 0;
@@ -1940,12 +1940,12 @@ class Cherry_Shortcodes_Handler {
 	 */
 	public static function replace_callback( $matches ) {
 
-		if ( !is_array( $matches ) ) {
-			return '';
+		if ( ! is_array( $matches ) ) {
+			return;
 		}
 
 		if ( empty( $matches ) ) {
-			return '';
+			return;
 		}
 
 		$key = strtolower( $matches[1] );
