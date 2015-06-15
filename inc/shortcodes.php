@@ -191,8 +191,6 @@ class Cherry_Shortcodes_Handler {
 		// Build final output.
 		$output = $open_el . $btn_content . $close_el;
 
-		cherry_query_asset( 'css', 'font-awesome' );
-
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'button' );
 	}
 
@@ -241,8 +239,6 @@ class Cherry_Shortcodes_Handler {
 
 		$class  = esc_attr( $atts['class'] );
 		$output = Cherry_Shortcodes_Tools::get_icon_html( $atts['icon'], 'cherry-icon ' . $class, null, $style );
-
-		cherry_query_asset( 'css', 'font-awesome' );
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'icon' );
 	}
@@ -436,8 +432,6 @@ class Cherry_Shortcodes_Handler {
 		$content = do_shortcode( $content );
 		$output  = sprintf( $format, $classes, $style, $content );
 
-		cherry_query_asset( 'css', 'font-awesome' );
-
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'dropcap' );
 	}
 
@@ -558,7 +552,6 @@ class Cherry_Shortcodes_Handler {
 		}
 		$output .= '</div>';
 
-		cherry_query_asset( 'css', 'font-awesome' );
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'list' );
 	}
 
@@ -1604,7 +1597,6 @@ class Cherry_Shortcodes_Handler {
 
 		if ( $atts['open'] !== 'yes' ) $atts['class'] .= ' cherry-spoiler-closed';
 
-		cherry_query_asset( 'css', 'font-awesome' );
 		cherry_query_asset( 'js', 'cherry-shortcodes-init' );
 
 		$output = '<div class="cherry-spoiler cherry-spoiler-style-' . $atts['style'] . cherry_esc_class_attr( $atts ) . '"' . $atts['anchor'] . '><div class="cherry-spoiler-title">' . esc_attr( $atts['title'] ) . '</div><div class="cherry-spoiler-content cherry-clearfix" style="display:none">' . do_shortcode( $content ) . '</div></div>';

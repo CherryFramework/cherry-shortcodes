@@ -162,8 +162,9 @@ class Cherry_Shortcodes_Assets {
 	 * @since 1.0.0
 	 */
 	public static function enqueue_styles() {
-		wp_enqueue_style( 'cherry-shortcodes-grid' );
+		wp_enqueue_style( 'font-awesome' );
 		wp_enqueue_style( 'swiper' );
+		wp_enqueue_style( 'cherry-shortcodes-grid' );
 		wp_enqueue_style( 'cherry-shortcodes-all' );
 
 		// Hook to dequeue stylesheets or add custom.
