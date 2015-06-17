@@ -1125,6 +1125,15 @@ class Cherry_Shortcodes_Data {
 							'name'    => __( 'Number slides per view', 'cherry-shortcodes' ),
 							'desc'    => __( 'Specify number of slides per view', 'cherry-shortcodes' ),
 						),
+						'slides_per_group' => array(
+							'type'    => 'slider',
+							'min'     => 1,
+							'max'     => 25,
+							'step'    => 1,
+							'default' => 1,
+							'name'    => __( 'Number slides per group', 'cherry-shortcodes' ),
+							'desc'    => __( 'Set numbers of slides to define and enable group sliding. Useful to use with slidesPerView > 1', 'cherry-shortcodes' ),
+						),
 						'slides_per_column' => array(
 							'type'    => 'slider',
 							'min'     => 1,

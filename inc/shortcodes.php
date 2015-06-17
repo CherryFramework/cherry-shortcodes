@@ -1129,6 +1129,7 @@ class Cherry_Shortcodes_Handler {
 			'crop_width'                 => 540,
 			'crop_height'                => 320,
 			'slides_per_view'            => 3,
+			'slides_per_group'           => 1,
 			'slides_per_column'          => 1,
 			'space_between_slides'       => 10,
 			'swiper_duration_speed'      => 300,
@@ -1167,6 +1168,7 @@ class Cherry_Shortcodes_Handler {
 		$crop_width                 = intval( $atts['crop_width'] );
 		$crop_height                = intval( $atts['crop_height'] );
 		$slides_per_view            = intval( $atts['slides_per_view'] );
+		$slides_per_group           = intval( $atts['slides_per_group'] );
 		$slides_per_column          = intval( $atts['slides_per_column'] );
 		$space_between_slides       = intval( $atts['space_between_slides'] );
 		$swiper_duration_speed      = intval( $atts['swiper_duration_speed'] );
@@ -1475,6 +1477,7 @@ class Cherry_Shortcodes_Handler {
 
 			$data_attr_line = '';
 			$data_attr_line .= 'data-slides-per-view="' . $slides_per_view . '"';
+			$data_attr_line .= 'data-slides-per-group="' . $slides_per_group . '"';
 			$data_attr_line .= 'data-slides-per-column="' . $slides_per_column . '"';
 			$data_attr_line .= 'data-space-between-slides="' . $space_between_slides . '"';
 			$data_attr_line .= 'data-duration-speed="' . $swiper_duration_speed . '"';

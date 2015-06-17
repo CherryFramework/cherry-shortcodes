@@ -55,6 +55,7 @@ img {
 .cherry-accordion .cherry-spoiler .cherry-spoiler-content {
   padding: 14px;
   -webkit-transition: padding-top 0.2s;
+  -o-transition: padding-top 0.2s;
   transition: padding-top 0.2s;
 }
 .cherry-accordion .cherry-spoiler.cherry-spoiler-closed .cherry-spoiler-content {
@@ -90,7 +91,6 @@ img {
   margin: 0;
 }
 .cherry-banner_wrap {
-  -webkit-background-size: cover;
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -153,6 +153,7 @@ img {
   text-decoration: none !important;
   text-align: center;
   -webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
   transition: all 200ms linear;
 }
 .cherry-btn:hover {
@@ -403,7 +404,6 @@ img {
 @keyframes effect {
   100% {
     opacity: 1;
-    -webkit-transform: none;
     transform: none;
   }
 }
@@ -421,7 +421,6 @@ img {
   margin: 0 5px 0 0;
   display: inline-block;
   vertical-align: middle;
-  -webkit-background-size: cover;
   background-size: cover;
 }
 
@@ -461,7 +460,6 @@ body .main-holder {
 .parallax-bg-inner {
   position: relative;
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
   max-width: none;

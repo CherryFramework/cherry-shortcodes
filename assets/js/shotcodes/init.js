@@ -39,6 +39,7 @@
 				jQuery('.cherry-swiper-carousel').each(function(){
 					var
 						slides_per_view = parseFloat( jQuery(this).data('slides-per-view') )
+					,	slides_per_group = parseFloat( jQuery(this).data('slides-per-group') )
 					,	slides_per_column = parseFloat( jQuery(this).data('slides-per-column') )
 					,	space_between_slides = parseFloat( jQuery(this).data('space-between-slides') )
 					,	duration_speed = parseFloat( jQuery(this).data('duration-speed') )
@@ -78,6 +79,7 @@
 
 					var swiper = new Swiper( '#cherry-'+uniqId, {
 							slidesPerView: widthLayoutChanger(),
+							slidesPerGroup: slides_per_group,
 							slidesPerColumn: slides_per_column,
 							spaceBetween: space_between_slides,
 							speed: duration_speed,
