@@ -177,8 +177,8 @@ class Cherry_Shortcodes_Assets {
 	 * @since 1.0.0
 	 */
 	public static function prnt() {
-		wp_print_styles( 'cherry-shortcodes-grid' );
 		wp_print_styles( 'swiper' );
+		wp_print_styles( 'cherry-shortcodes-grid' );
 		wp_print_styles( 'cherry-shortcodes-all' );
 
 		$assets = self::assets();

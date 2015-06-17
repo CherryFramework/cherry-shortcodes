@@ -55,42 +55,42 @@ function cherry_shortcodes_macros_buttons( $macros_buttons, $shortcode ) {
 				'value' => __( 'Image', 'cherry-shortcodes' ),
 				'open'  => '%%IMAGE%%',
 				'close' => '',
-				'title' => __( 'Helper information for `Image` macros', 'cherry-shortcodes' ),
+				// 'title' => __( 'Helper information for `Image` macros', 'cherry-shortcodes' ),
 			);
 			$macros_buttons['date'] = array(
 				'id'    => 'cherry_date',
 				'value' => 'Date',
 				'open'  => '%%DATE="' . get_option( 'date_format' ) . '"%%',
 				'close' => '',
-				'title' => __( 'Helper information for `Date` macros', 'cherry-shortcodes' ),
+				// 'title' => __( 'Helper information for `Date` macros', 'cherry-shortcodes' ),
 			);
 			$macros_buttons['author'] = array(
 				'id'    => 'cherry_author',
 				'value' => 'Author',
 				'open'  => '%%AUTHOR%%',
 				'close' => '',
-				'title' => __( 'Helper information for `Author` macros', 'cherry-shortcodes' ),
+				// 'title' => __( 'Helper information for `Author` macros', 'cherry-shortcodes' ),
 			);
 			$macros_buttons['comments'] = array(
 				'id'    => 'cherry_comments',
 				'value' => 'Comments',
 				'open'  => '%%COMMENTS%%',
 				'close' => '',
-				'title' => __( 'Helper information for `Comments` macros', 'cherry-shortcodes' ),
+				// 'title' => __( 'Helper information for `Comments` macros', 'cherry-shortcodes' ),
 			);
 			$macros_buttons['taxonomy'] = array(
 				'id'    => 'cherry_taxonomy',
 				'value' => 'Taxomomy',
 				'open'  => '%%TAXONOMY="category|post_tag|custom_taxonomy"%%',
 				'close' => '',
-				'title' => __( 'Helper information for `Taxomomy` macros', 'cherry-shortcodes' ),
+				// 'title' => __( 'Helper information for `Taxomomy` macros', 'cherry-shortcodes' ),
 			);
 			$macros_buttons['excerpt'] = array(
 				'id'    => 'cherry_excerpt',
 				'value' => 'Excerpt',
 				'open'  => '%%EXCERPT%%',
 				'close' => '',
-				'title' => __( 'Helper information for `Excerpt` macros', 'cherry-shortcodes' ),
+				// 'title' => __( 'Helper information for `Excerpt` macros', 'cherry-shortcodes' ),
 			);
 			break;
 
