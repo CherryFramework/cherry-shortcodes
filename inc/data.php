@@ -1195,7 +1195,7 @@ class Cherry_Shortcodes_Data {
 							'type'   => 'select',
 							'values' => array(
 								'slide'     => __( 'Slide', 'cherry-shortcodes' ),
-								'fade'      => __( 'Fade', 'cherry-shortcodes' ),
+								//'fade'      => __( 'Fade', 'cherry-shortcodes' ),
 								'cube'      => __( 'Cube', 'cherry-shortcodes' ),
 								'coverflow' => __( 'Coverflow', 'cherry-shortcodes' ),
 							),

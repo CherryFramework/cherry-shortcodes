@@ -106,7 +106,7 @@ class Cherry_Shortcodes_Handler {
 			$btn_atts['rel'] = esc_attr( $atts['rel'] );
 		}
 
-		$btn_atts['href'] = esc_url( $atts['url'] );
+		$btn_atts['href'] = esc_url( str_replace( '%home_url%', home_url(), $atts['url'] ) );
 
 		/**
 		 * Filter button attributes before adding to tag.
