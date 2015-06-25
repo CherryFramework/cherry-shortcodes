@@ -1077,7 +1077,7 @@ class Cherry_Shortcodes_Handler {
 			$output .= '<!--/.cherry-posts-list-->';
 
 		} else {
-			echo '<h4>' . __( 'Posts not found', 'cherry-shortcodes' ) . '</h4>';
+			return '<h4>' . __( 'Posts not found', 'cherry-shortcodes' ) . '</h4>';
 		}
 
 		// Reset the query.
@@ -1510,7 +1510,7 @@ class Cherry_Shortcodes_Handler {
 			$output = sprintf( $wrap, $instance, join( ' ', $wrap_classes ), $data_attr_line, $output, $swiper_pagination_html, $swiper_navigation_html );
 
 		} else {
-			echo '<h4>' . __( 'Posts not found', 'cherry-shortcodes' ) . '</h4>';
+			return '<h4>' . __( 'Posts not found', 'cherry-shortcodes' ) . '</h4>';
 		}
 
 		// Reset the query.
