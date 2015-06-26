@@ -117,17 +117,41 @@ class Cherry_Shortcodes_Template_Callbacks {
 		$shortcode_name = Cherry_Shortcodes_Handler::get_shortcode_name();
 
 		$defaults = apply_filters( 'cherry_shortcodes_image_template_defaults', array(
-			'wrap' => '<a href="%1$s" title="%2$s">%3$s</a>',
-			'size' => 'large',
+			'wrap'     => '<a href="%1$s" title="%2$s" class="%4$s">%3$s</a>',
+			'size'     => 'large',
+			'lightbox' => false,
 		), $shortcode_name );
 
 		$args = wp_parse_args( $args, $defaults );
 
+		$url             = get_permalink( $post->ID );
+		$image_classes   = array();
+		$image_classes[] = 'post-thumbnail_link';
+
+		if ( isset( $args['lightbox'] ) && ( true === $args['lightbox'] ) ) {
+			$image_classes[] = 'cherry-popup-img';
+			$image_classes[] = 'popup-img';
+
+			$image_classes = apply_filters( 'cherry_shortcodes_image_classes_template_callbacks', $image_classes );
+			$image_classes = array_unique( $image_classes );
+			$image_classes = array_map( 'sanitize_html_class', $image_classes );
+
+			$thumbnail_id = get_post_thumbnail_id( $post->ID );
+			$url          = wp_get_attachment_url( $thumbnail_id );
+
+			if ( ! $url ) {
+				$url = get_permalink( $post->ID );
+			}
+
+			wp_enqueue_script( 'magnific-popup' );
+		}
+
 		$image = sprintf(
 			$args['wrap'],
-			esc_url( get_permalink( $post->ID ) ),
+			esc_url( $url ),
 			esc_attr( the_title_attribute( array( 'before' => '', 'after' => '', 'echo' => false, 'post' => $post->ID ) ) ),
-			get_the_post_thumbnail( $post->ID, $args['size'] )
+			get_the_post_thumbnail( $post->ID, $args['size'] ),
+			join( ' ', $image_classes )
 		);
 
 		return apply_filters( 'cherry_shortcodes_image_template_callbacks', $image, $args, $shortcode_name );
@@ -323,45 +347,6 @@ class Cherry_Shortcodes_Template_Callbacks {
 		);
 
 		return apply_filters( 'cherry_shortcodes_permalink_template_callbacks', $permalink, $args, $shortcode_name );
-	}
-
-	public static function lightbox( $args = array() ) {
-		global $post;
-
-		if ( ! post_type_supports( get_post_type( $post->ID ), 'thumbnail' ) ) {
-			return;
-		}
-
-		if ( ! has_post_thumbnail( $post->ID ) ) {
-			return;
-		}
-
-		// Gets a current shortcode name.
-		$shortcode_name = Cherry_Shortcodes_Handler::get_shortcode_name();
-
-		$defaults = apply_filters( 'cherry_shortcodes_lightbox_template_defaults', array(
-			'wrap' => '<a href="%1$s" title="%2$s" class="cherry-popup-img popup-img">%3$s</a>',
-			'size' => 'large',
-		), $shortcode_name );
-
-		$args          = wp_parse_args( $args, $defaults );
-		$thumbnail_id  = get_post_thumbnail_id( $post->ID );
-		$thumbnail_url = wp_get_attachment_url( $thumbnail_id );
-
-		if ( ! $thumbnail_url ) {
-			return;
-		}
-
-		$lightbox = sprintf(
-			$args['wrap'],
-			esc_url( $thumbnail_url ),
-			esc_attr( the_title_attribute( array( 'before' => '', 'after' => '', 'echo' => false, 'post' => $post->ID ) ) ),
-			get_the_post_thumbnail( $post->ID, $args['size'] )
-		);
-
-		wp_enqueue_script( 'magnific-popup' );
-
-		return apply_filters( 'cherry_shortcodes_lightbox_template_callbacks', $lightbox, $args, $shortcode_name );
 	}
 
 }
