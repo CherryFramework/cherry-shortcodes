@@ -1,6 +1,6 @@
 <?php
 /**
- * Define callback functions for templater
+ * Define callback functions for templater.
  *
  * @package   Cherry_Team
  * @author    Cherry Team
@@ -60,7 +60,7 @@ class Cherry_Shortcodes_Template_Callbacks {
 		$format = func_num_args() ? func_get_arg(0) : get_option( 'date_format' );
 
 		$defaults = apply_filters( 'cherry_shortcodes_date_template_defaults', array(
-			'wrap'   => '<time datetime="%1$s">%2$s</time>',
+			'wrap' => '<time datetime="%1$s">%2$s</time>',
 		), $shortcode_name, $format );
 
 		$args = wp_parse_args( $args, $defaults );
@@ -323,6 +323,45 @@ class Cherry_Shortcodes_Template_Callbacks {
 		);
 
 		return apply_filters( 'cherry_shortcodes_permalink_template_callbacks', $permalink, $args, $shortcode_name );
+	}
+
+	public static function lightbox( $args = array() ) {
+		global $post;
+
+		if ( ! post_type_supports( get_post_type( $post->ID ), 'thumbnail' ) ) {
+			return;
+		}
+
+		if ( ! has_post_thumbnail( $post->ID ) ) {
+			return;
+		}
+
+		// Gets a current shortcode name.
+		$shortcode_name = Cherry_Shortcodes_Handler::get_shortcode_name();
+
+		$defaults = apply_filters( 'cherry_shortcodes_lightbox_template_defaults', array(
+			'wrap' => '<a href="%1$s" title="%2$s" class="cherry-popup-img popup-img">%3$s</a>',
+			'size' => 'large',
+		), $shortcode_name );
+
+		$args          = wp_parse_args( $args, $defaults );
+		$thumbnail_id  = get_post_thumbnail_id( $post->ID );
+		$thumbnail_url = wp_get_attachment_url( $thumbnail_id );
+
+		if ( ! $thumbnail_url ) {
+			return;
+		}
+
+		$lightbox = sprintf(
+			$args['wrap'],
+			esc_url( $thumbnail_url ),
+			esc_attr( the_title_attribute( array( 'before' => '', 'after' => '', 'echo' => false, 'post' => $post->ID ) ) ),
+			get_the_post_thumbnail( $post->ID, $args['size'] )
+		);
+
+		wp_enqueue_script( 'magnific-popup' );
+
+		return apply_filters( 'cherry_shortcodes_lightbox_template_callbacks', $lightbox, $args, $shortcode_name );
 	}
 
 }

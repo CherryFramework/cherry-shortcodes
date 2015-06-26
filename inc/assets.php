@@ -63,18 +63,24 @@ class Cherry_Shortcodes_Assets {
 			wp_register_script( 'cherry-lazy-load-effect', plugins_url( 'assets/js/shotcodes/lazy-load-effect.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 		}
 
-		// Google Maps API.
+		// Magnific Popup.
+		wp_register_script( 'magnific-popup', plugins_url( 'assets/js/magnific-popup.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
+
+		// Google Maps.
 		wp_register_script( 'googlemapapis', '//maps.googleapis.com/maps/api/js?v=3.exp&signed_in=false', array(), false, true );
-		// Google Map Plugin.
 		wp_register_script( 'cherry-google-map', plugins_url( 'assets/js/shotcodes/google-map.js', CHERRY_SHORTCODES_FILE ), array( 'jquery', 'googlemapapis' ), CHERRY_SHORTCODES_VERSION, true );
+
 		// Swiper.
 		wp_register_script( 'swiper', plugins_url( 'assets/js/shotcodes/swiper.jquery.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
+
 		// Parallax.
 		wp_register_script( 'device', plugins_url( 'assets/js/shotcodes/device.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 		wp_register_script( 'cherry-parallax', plugins_url( 'assets/js/shotcodes/parallax.js', CHERRY_SHORTCODES_FILE ), array( 'jquery', 'device' ), CHERRY_SHORTCODES_VERSION, true );
+
 		// Counter.
 		wp_register_script( 'waypoints', plugins_url( 'assets/js/shotcodes/waypoints.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 		wp_register_script( 'jquery-counterup', plugins_url( 'assets/js/shotcodes/jquery.counterup.js', CHERRY_SHORTCODES_FILE ), array( 'waypoints' ), CHERRY_SHORTCODES_VERSION, true );
+
 		// Shortcodes init.
 		wp_register_script( 'cherry-shortcodes-init', plugins_url( 'assets/js/shotcodes/init.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 
@@ -92,6 +98,8 @@ class Cherry_Shortcodes_Assets {
 		if ( !class_exists( 'Cherry_Framework' ) || ( doing_filter( 'cherry_shortcodes/generator/preview/before' ) ) ) {
 			wp_register_style( 'cherry-shortcodes-grid', plugins_url( 'assets/css/grid.css', CHERRY_SHORTCODES_FILE ), false, CHERRY_SHORTCODES_VERSION, 'all' );
 		}
+		// Magnific Popup.
+		wp_register_style( 'magnific-popup', plugins_url( 'assets/css/magnific-popup.css', CHERRY_SHORTCODES_FILE ), false, CHERRY_SHORTCODES_VERSION, 'all' );
 		// Font Awesome.
 		wp_register_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', false, '4.3.0', 'all' );
 		// Swiper.
@@ -109,14 +117,18 @@ class Cherry_Shortcodes_Assets {
 	 * @since 1.0.0
 	 */
 	public static function admin_register_assets() {
+
 		// Simple Slider.
 		wp_register_script( 'simple-slider', plugins_url( 'assets/js/simple-slider.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 		wp_register_style( 'simple-slider', plugins_url( 'assets/css/simple-slider.css', CHERRY_SHORTCODES_FILE ), false, CHERRY_SHORTCODES_VERSION, 'all' );
+
 		// Magnific Popup.
 		wp_register_script( 'magnific-popup', plugins_url( 'assets/js/magnific-popup.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 		wp_register_style( 'magnific-popup', plugins_url( 'assets/css/magnific-popup.css', CHERRY_SHORTCODES_FILE ), false, CHERRY_SHORTCODES_VERSION, 'all' );
+
 		// Font Awesome.
 		wp_register_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', false, '4.3.0', 'all' );
+
 		// Generator.
 		wp_register_script( 'cherry-shortcodes-generator', plugins_url( 'assets/js/generator.js', CHERRY_SHORTCODES_FILE ), array( 'farbtastic', 'magnific-popup' ), CHERRY_SHORTCODES_VERSION, true );
 		wp_register_style( 'cherry-shortcodes-generator', plugins_url( 'assets/css/generator.css', CHERRY_SHORTCODES_FILE ), array( 'farbtastic', 'magnific-popup' ), CHERRY_SHORTCODES_VERSION, 'all' );
@@ -164,6 +176,7 @@ class Cherry_Shortcodes_Assets {
 	public static function enqueue_styles() {
 		wp_enqueue_style( 'font-awesome' );
 		wp_enqueue_style( 'swiper' );
+		wp_enqueue_style( 'magnific-popup' );
 		wp_enqueue_style( 'cherry-shortcodes-grid' );
 		wp_enqueue_style( 'cherry-shortcodes-all' );
 
@@ -177,6 +190,7 @@ class Cherry_Shortcodes_Assets {
 	 * @since 1.0.0
 	 */
 	public static function prnt() {
+		wp_print_styles( 'font-awesome' );
 		wp_print_styles( 'swiper' );
 		wp_print_styles( 'cherry-shortcodes-grid' );
 		wp_print_styles( 'cherry-shortcodes-all' );

@@ -924,6 +924,11 @@ class Cherry_Shortcodes_Handler {
 				}
 				$image = Cherry_Shortcodes_Template_Callbacks::image( $image_args );
 
+				// Lightbox.
+				$lightbox_args         = array();
+				$lightbox_args['size'] = $atts['image_size'];
+				$lightbox = Cherry_Shortcodes_Template_Callbacks::lightbox( $lightbox_args );
+
 				// Content.
 				$content_args = array();
 				if ( 'part' === $atts['content_type'] ) {
@@ -939,7 +944,7 @@ class Cherry_Shortcodes_Handler {
 				);
 
 				// Prepare a current post data array.
-				$_postdata = compact( 'title', 'date', 'image', 'content', 'button' );
+				$_postdata = compact( 'title', 'date', 'image', 'content', 'button', 'lightbox' );
 
 				/**
 				 * Filters the array with a current post data.
@@ -1085,6 +1090,8 @@ class Cherry_Shortcodes_Handler {
 
 		// Reset the `postdata`.
 		self::$postdata = array();
+
+		cherry_query_asset( 'js', 'cherry-shortcodes-init' );
 
 		/**
 		 * Filters $output before return.
