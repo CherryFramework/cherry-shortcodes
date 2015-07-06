@@ -75,6 +75,10 @@ class Cherry_Shortcodes_Assets {
 		// Counter.
 		wp_register_script( 'waypoints', plugins_url( 'assets/js/shotcodes/waypoints.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 		wp_register_script( 'jquery-counterup', plugins_url( 'assets/js/shotcodes/jquery.counterup.js', CHERRY_SHORTCODES_FILE ), array( 'waypoints' ), CHERRY_SHORTCODES_VERSION, true );
+		// Video Preview.
+		wp_register_script( 'video-preview', plugins_url( 'assets/js/shotcodes/video-preview.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
+		wp_register_script( 'video-youtube','https://www.youtube.com/player_api/', array( 'jquery' , 'video-preview' ), null, true );
+
 		// Shortcodes init.
 		wp_register_script( 'cherry-shortcodes-init', plugins_url( 'assets/js/shotcodes/init.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 

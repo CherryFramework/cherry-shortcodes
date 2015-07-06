@@ -397,6 +397,18 @@ class Cherry_Shortcodes_Tools {
 		return $id;
 	}
 
+	public static function remote_query( $url ) {
+		$response = wp_remote_get( $url );
+
+		if ( is_wp_error( $response ) || wp_remote_retrieve_response_code( $response ) != '200') {
+			return false;
+		}
+
+		$response = json_decode( $response[ 'body' ] );
+
+		return $response;
+	}
+
 }
 
 new Cherry_Shortcodes_Tools;
