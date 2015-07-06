@@ -1,6 +1,6 @@
 <?php
 /**
- * Define callback functions for templater
+ * Define callback functions for templater.
  *
  * @package   Cherry_Team
  * @author    Cherry Team
@@ -60,7 +60,7 @@ class Cherry_Shortcodes_Template_Callbacks {
 		$format = func_num_args() ? func_get_arg(0) : get_option( 'date_format' );
 
 		$defaults = apply_filters( 'cherry_shortcodes_date_template_defaults', array(
-			'wrap'   => '<time datetime="%1$s">%2$s</time>',
+			'wrap' => '<time datetime="%1$s">%2$s</time>',
 		), $shortcode_name, $format );
 
 		$args = wp_parse_args( $args, $defaults );
@@ -117,17 +117,41 @@ class Cherry_Shortcodes_Template_Callbacks {
 		$shortcode_name = Cherry_Shortcodes_Handler::get_shortcode_name();
 
 		$defaults = apply_filters( 'cherry_shortcodes_image_template_defaults', array(
-			'wrap' => '<a href="%1$s" title="%2$s">%3$s</a>',
-			'size' => 'large',
+			'wrap'     => '<a href="%1$s" title="%2$s" class="%4$s">%3$s</a>',
+			'size'     => 'large',
+			'lightbox' => false,
 		), $shortcode_name );
 
 		$args = wp_parse_args( $args, $defaults );
 
+		$url             = get_permalink( $post->ID );
+		$image_classes   = array();
+		$image_classes[] = 'post-thumbnail_link';
+
+		if ( isset( $args['lightbox'] ) && ( true === $args['lightbox'] ) ) {
+			$image_classes[] = 'cherry-popup-img';
+			$image_classes[] = 'popup-img';
+
+			$image_classes = apply_filters( 'cherry_shortcodes_image_classes_template_callbacks', $image_classes );
+			$image_classes = array_unique( $image_classes );
+			$image_classes = array_map( 'sanitize_html_class', $image_classes );
+
+			$thumbnail_id = get_post_thumbnail_id( $post->ID );
+			$url          = wp_get_attachment_url( $thumbnail_id );
+
+			if ( ! $url ) {
+				$url = get_permalink( $post->ID );
+			}
+
+			wp_enqueue_script( 'magnific-popup' );
+		}
+
 		$image = sprintf(
 			$args['wrap'],
-			esc_url( get_permalink( $post->ID ) ),
+			esc_url( $url ),
 			esc_attr( the_title_attribute( array( 'before' => '', 'after' => '', 'echo' => false, 'post' => $post->ID ) ) ),
-			get_the_post_thumbnail( $post->ID, $args['size'] )
+			get_the_post_thumbnail( $post->ID, $args['size'] ),
+			join( ' ', $image_classes )
 		);
 
 		return apply_filters( 'cherry_shortcodes_image_template_callbacks', $image, $args, $shortcode_name );

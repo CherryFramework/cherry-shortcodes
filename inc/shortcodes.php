@@ -658,6 +658,7 @@ class Cherry_Shortcodes_Handler {
 				'ignore_sticky_posts' => 'yes',
 				'linked_title'        => 'yes',
 				'linked_image'        => 'yes',
+				'lightbox_image'      => 'no',
 				'image_size'          => 'thumbnail',
 				'content_type'        => 'part',
 				'content_length'      => 55,
@@ -683,6 +684,7 @@ class Cherry_Shortcodes_Handler {
 		$atts['ignore_sticky_posts'] = ( bool ) ( $atts['ignore_sticky_posts'] === 'yes' ) ? true : false;
 		$atts['linked_title']        = ( bool ) ( $atts['linked_title'] === 'yes' ) ? true : false;
 		$atts['linked_image']        = ( bool ) ( $atts['linked_image'] === 'yes' ) ? true : false;
+		$atts['lightbox_image']      = ( bool ) ( $atts['lightbox_image'] === 'yes' ) ? true : false;
 		$atts['image_size']          = sanitize_key( $atts['image_size'] );
 		$atts['content_type']        = sanitize_key( $atts['content_type'] );
 		$atts['content_length']      = intval( $atts['content_length'] );
@@ -918,7 +920,8 @@ class Cherry_Shortcodes_Handler {
 
 				// Image.
 				$image_args         = array();
-				$image_args['size'] = $image_size;
+				$image_args['size']     = $image_size;
+				$image_args['lightbox'] = $atts['lightbox_image'];
 				if ( false === $atts['linked_image'] ) {
 					$image_args['wrap'] = '%3$s';
 				}
@@ -1085,6 +1088,8 @@ class Cherry_Shortcodes_Handler {
 
 		// Reset the `postdata`.
 		self::$postdata = array();
+
+		cherry_query_asset( 'js', 'cherry-shortcodes-init' );
 
 		/**
 		 * Filters $output before return.

@@ -1361,6 +1361,12 @@ class Cherry_Shortcodes_Data {
 							'name'    => __( 'Linked featured image', 'cherry-shortcodes' ),
 							'desc'    => __( 'Linked featured image description', 'cherry-shortcodes' ),
 						),
+						'lightbox_image' => array(
+							'type'    => 'bool',
+							'default' => 'no',
+							'name'    => __( 'Open featured image in a lightbox?', 'cherry-shortcodes' ),
+							'desc'    => __( 'Open featured image in a lightbox?', 'cherry-shortcodes' ),
+						),
 						'image_size' => array(
 							'type'    => 'select',
 							'values'  => Cherry_Shortcodes_Tools::image_sizes(),
