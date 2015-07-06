@@ -106,7 +106,7 @@ class Cherry_Shortcodes_Handler {
 			$btn_atts['rel'] = esc_attr( $atts['rel'] );
 		}
 
-		$btn_atts['href'] = esc_url( $atts['url'] );
+		$btn_atts['href'] = esc_url( str_replace( '%home_url%', home_url(), $atts['url'] ) );
 
 		/**
 		 * Filter button attributes before adding to tag.
@@ -191,8 +191,6 @@ class Cherry_Shortcodes_Handler {
 		// Build final output.
 		$output = $open_el . $btn_content . $close_el;
 
-		cherry_query_asset( 'css', 'font-awesome' );
-
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'button' );
 	}
 
@@ -241,8 +239,6 @@ class Cherry_Shortcodes_Handler {
 
 		$class  = esc_attr( $atts['class'] );
 		$output = Cherry_Shortcodes_Tools::get_icon_html( $atts['icon'], 'cherry-icon ' . $class, null, $style );
-
-		cherry_query_asset( 'css', 'font-awesome' );
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'icon' );
 	}
@@ -436,8 +432,6 @@ class Cherry_Shortcodes_Handler {
 		$content = do_shortcode( $content );
 		$output  = sprintf( $format, $classes, $style, $content );
 
-		cherry_query_asset( 'css', 'font-awesome' );
-
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'dropcap' );
 	}
 
@@ -558,7 +552,6 @@ class Cherry_Shortcodes_Handler {
 		}
 		$output .= '</div>';
 
-		cherry_query_asset( 'css', 'font-awesome' );
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'list' );
 	}
 
@@ -1084,7 +1077,7 @@ class Cherry_Shortcodes_Handler {
 			$output .= '<!--/.cherry-posts-list-->';
 
 		} else {
-			echo '<h4>' . __( 'Posts not found', 'cherry-shortcodes' ) . '</h4>';
+			return '<h4>' . __( 'Posts not found', 'cherry-shortcodes' ) . '</h4>';
 		}
 
 		// Reset the query.
@@ -1136,6 +1129,7 @@ class Cherry_Shortcodes_Handler {
 			'crop_width'                 => 540,
 			'crop_height'                => 320,
 			'slides_per_view'            => 3,
+			'slides_per_group'           => 1,
 			'slides_per_column'          => 1,
 			'space_between_slides'       => 10,
 			'swiper_duration_speed'      => 300,
@@ -1174,6 +1168,7 @@ class Cherry_Shortcodes_Handler {
 		$crop_width                 = intval( $atts['crop_width'] );
 		$crop_height                = intval( $atts['crop_height'] );
 		$slides_per_view            = intval( $atts['slides_per_view'] );
+		$slides_per_group           = intval( $atts['slides_per_group'] );
 		$slides_per_column          = intval( $atts['slides_per_column'] );
 		$space_between_slides       = intval( $atts['space_between_slides'] );
 		$swiper_duration_speed      = intval( $atts['swiper_duration_speed'] );
@@ -1482,6 +1477,7 @@ class Cherry_Shortcodes_Handler {
 
 			$data_attr_line = '';
 			$data_attr_line .= 'data-slides-per-view="' . $slides_per_view . '"';
+			$data_attr_line .= 'data-slides-per-group="' . $slides_per_group . '"';
 			$data_attr_line .= 'data-slides-per-column="' . $slides_per_column . '"';
 			$data_attr_line .= 'data-space-between-slides="' . $space_between_slides . '"';
 			$data_attr_line .= 'data-duration-speed="' . $swiper_duration_speed . '"';
@@ -1514,7 +1510,7 @@ class Cherry_Shortcodes_Handler {
 			$output = sprintf( $wrap, $instance, join( ' ', $wrap_classes ), $data_attr_line, $output, $swiper_pagination_html, $swiper_navigation_html );
 
 		} else {
-			echo '<h4>' . __( 'Posts not found', 'cherry-shortcodes' ) . '</h4>';
+			return '<h4>' . __( 'Posts not found', 'cherry-shortcodes' ) . '</h4>';
 		}
 
 		// Reset the query.
@@ -1604,7 +1600,6 @@ class Cherry_Shortcodes_Handler {
 
 		if ( $atts['open'] !== 'yes' ) $atts['class'] .= ' cherry-spoiler-closed';
 
-		cherry_query_asset( 'css', 'font-awesome' );
 		cherry_query_asset( 'js', 'cherry-shortcodes-init' );
 
 		$output = '<div class="cherry-spoiler cherry-spoiler-style-' . $atts['style'] . cherry_esc_class_attr( $atts ) . '"' . $atts['anchor'] . '><div class="cherry-spoiler-title">' . esc_attr( $atts['title'] ) . '</div><div class="cherry-spoiler-content cherry-clearfix" style="display:none">' . do_shortcode( $content ) . '</div></div>';
@@ -1918,7 +1913,7 @@ class Cherry_Shortcodes_Handler {
 			//transform origin
 			$pivot = $pivot ? str_replace('_', ' ', $pivot) : 'center' ;
 			$style .= Cherry_Shortcodes_Tools::add_css_prefix('transform-origin: '.$pivot);
-			$style .= Cherry_Shortcodes_Tools::add_css_prefix('transform:' . $transform);;
+			$style .= Cherry_Shortcodes_Tools::add_css_prefix('transform:' . $transform);
 
 		}
 
@@ -1929,6 +1924,121 @@ class Cherry_Shortcodes_Handler {
 		cherry_query_asset( 'js', 'cherry-lazy-load-effect' );
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'lazy_load_effect' );
+	}
+
+	public static function video_preview( $atts = null, $content ) {
+
+
+		$atts = shortcode_atts( array(
+			'poster'				=> '',
+			'source'				=> '',
+			'control'				=> 'show',
+			'show_content_on_hover'	=> 'no',
+			'muted'					=> 'no',
+			'loop'					=> 'no',
+			'preload'				=> 'no',
+			'width'					=> '',
+			'height'				=> '',
+			'custom_class'			=> '',
+		), $atts, 'video_preview' );
+
+		$class = apply_filters( 'cherry_video_preview_class', array('class_1' => 'fa-play', 'class_2' => 'fa-pause', 'class_3' => 'fa-volume-off', 'class_4' => 'fa-volume-up') );
+		$text = apply_filters( 'cherry_video_preview_texts', array('text_1' => '', 'text_2' => '', 'text_3' => '', 'text_4' => '') );
+
+		extract($atts);
+
+		$type = strtolower(  preg_replace( '/(^(http(s)?:)?(\/\/)(www.)?)|(([.]\D{2,5})?\/[\S]+)/', '', $source ) );
+		$is_mobile = wp_is_mobile() ? 'true' : 'false' ;
+
+		if( $type === 'youtube'){
+			cherry_query_asset( 'js', 'video-youtube' );
+
+			global $video_preview_count;
+			$video_preview_count += 1;
+
+			$video_id = preg_replace( '/[\S.]+\/[\S.]+[=]|[\S.]+\//', '', $source );
+
+			if($poster){
+				$poster = '<div style="background-image: url(\'' . $poster . '\')" class="cherry-video-poster"></div>';
+			}
+
+			$video_tag = '<div id="cherry-youtube-' . $video_preview_count . '" class="youtube-player" data-video="' . $video_id . '"></div>' . $poster . '<div class="youtube-player-cap"></div>';
+		}else {
+			if( $type === 'vimeo' ){
+				$video_id = preg_replace( '/([\S.]+\/)/', '', $source );
+
+				$response = Cherry_Shortcodes_Tools::remote_query( 'https://player.vimeo.com/video/' . $video_id . '/config' );
+
+				if( $response ){
+					$file_codes = $response->request->files->codecs[0];
+
+					if( strpos( $custom_class, 'full-width' ) !== false && $is_mobile === 'false' ){
+						$poster_size = '1280';
+						$source = $response->request->files->$file_codes->hd->url;
+					}else{
+						$poster_size = '640';
+						$source = $response->request->files->$file_codes->sd->url;
+					}
+					if( !$poster ){
+						$poster = $response->video->thumbs->$poster_size;
+					}
+				}
+			}
+
+			$poster_attr = $poster ? 'poster="' . $poster . '" ' : '' ;
+			$muted_attr = $muted !== 'no' ? 'muted ' : '' ;
+			$loop_attr = $loop !== 'no' ? 'loop ' : '' ;
+			$preload_attr = $preload !== 'no' ? 'preload="auto" ' : '' ;
+			$autoplay_attr = $control === 'autoplay' ? 'autoplay ' : '' ;
+
+			$video_tag = '<video ' . $autoplay_attr . $poster_attr . $muted_attr . $loop_attr . $preload_attr . ' width="100%" height="auto">';
+				$video_tag .= '<source src="'.$source.'" type="video/mp4">';
+			$video_tag .= '</video>';
+		}
+
+		$control_tag = '';
+		if( $control !== 'hide' && $control !== 'play-on-hover' && $control !== 'autoplay' ){
+
+			$control_class = $control === 'show-on-hover' ? 'hidden-element' : '' ;
+
+			$control_tag .= '<div class="video-preview-controls ' . $control_class . '">';
+				$control_tag .= '<button class="play-pause fa ' . $class['class_1'] . '" data-class="' . $class['class_1'] . '" data-sub-class="' . $class['class_2'] . '" data-text="' . $text['text_1'] . '" data-sub-text="' . $text['text_2'] . '" type="button">' . $text['text_1'] . '</button>';
+				$control_tag .= '<button class="mute fa ' . $class['class_3'] . '" data-class="' . $class['class_3'] . '" data-sub-class="' . $class['class_4'] . '" data-text="' . $text['text_3'] . '" data-sub-text="' . $text['text_4'] . '" type="button">' . $text['text_3'] . '</button>';
+			$control_tag .= '</div>';
+		}
+
+		$content_tag = '';
+		if( $content ){
+			$content_class = $show_content_on_hover !== 'no' ? 'class="hidden-element"' : '' ;
+
+			$content_tag .= '<figcaption ' . $content_class . ' >' . $content . '</figcaption>';
+		}
+
+		$output = apply_filters( 'cherry_video_preview_before', '' );
+
+		$output .= '<figure class="video-preview ' . $custom_class . '" data-settings=\'{"control":"' . $control . '", "muted":"' . $muted . '", "loop":"' . $loop . '", "preload":"' . $preload . '", "type":"' . $type . '", "is_mobile":"' . $is_mobile . '"}\' >';
+			$output .= '<div class="video-holder">';
+				$output .= '<div class="video-inner-holder">';
+
+					$output .= $video_tag;
+
+					$output .= $control_tag;
+
+				$output .= '</div>';
+			$output .= '</div>';
+
+			$output .= $content_tag;
+
+		$output .= '</figure>';
+
+		$output .= apply_filters( 'cherry_video_preview_after', '' );
+
+		if( $type === 'youtube'){
+			cherry_query_asset( 'js', 'video-youtube' );
+		}
+		cherry_query_asset( 'js', 'video-preview' );
+
+		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'video_preview' );
 	}
 
 	/**

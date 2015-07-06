@@ -39,6 +39,7 @@
 				jQuery('.cherry-swiper-carousel').each(function(){
 					var
 						slides_per_view = parseFloat( jQuery(this).data('slides-per-view') )
+					,	slides_per_group = parseFloat( jQuery(this).data('slides-per-group') )
 					,	slides_per_column = parseFloat( jQuery(this).data('slides-per-column') )
 					,	space_between_slides = parseFloat( jQuery(this).data('space-between-slides') )
 					,	duration_speed = parseFloat( jQuery(this).data('duration-speed') )
@@ -50,34 +51,11 @@
 					,	swiper_effect = jQuery(this).data('swiper-effect')
 					,	uniqId = jQuery(this).data('uniq-id')
 					,	widthLayout = ''
-					,	widthLayoutChanger = function(){
-							var
-								windowWidth = CHERRY_API.variable.$window.width()
-							,	slidesPerView
-							;
-
-							if ( windowWidth > 1200 ) { widthLayout = 'large'; }
-							if ( windowWidth <= 1199 && windowWidth > 768 ) { widthLayout = 'medium'; }
-							if ( windowWidth <= 767 ) { widthLayout = 'small'; }
-
-							switch ( widthLayout ) {
-								case 'large':
-									slidesPerView = slides_per_view;
-									break
-								case 'medium':
-									slidesPerView = Math.ceil( slides_per_view / 2 );
-									break
-								case 'small':
-									slidesPerView = 1;
-									break
-							}
-							if( swiper_effect == 'cube' ){ slidesPerView = 1; }
-							return slidesPerView;
-						}
 					;
 
 					var swiper = new Swiper( '#cherry-'+uniqId, {
-							slidesPerView: widthLayoutChanger(),
+							slidesPerView: slides_per_view,
+							slidesPerGroup: slides_per_group,
 							slidesPerColumn: slides_per_column,
 							spaceBetween: space_between_slides,
 							speed: duration_speed,
@@ -102,6 +80,33 @@
 						var slidesNumber = widthLayoutChanger();
 						swiper.params.slidesPerView = slidesNumber;
 					});
+
+					function widthLayoutChanger(){
+						var
+							windowWidth = CHERRY_API.variable.$window.width()
+						,	slidesPerView = 1
+						;
+
+						if ( windowWidth > 1200 ) { widthLayout = 'large'; }
+						if ( windowWidth <= 1199 && windowWidth > 768 ) { widthLayout = 'medium'; }
+						if ( windowWidth <= 767 ) { widthLayout = 'small'; }
+
+						switch ( widthLayout ) {
+							case 'large':
+								slidesPerView = slides_per_view;
+								break
+							case 'medium':
+								slidesPerView = Math.ceil( slides_per_view / 2 );
+								break
+							case 'small':
+								slidesPerView = 1;
+								break
+						}
+						if( swiper_effect == 'cube' ){ slidesPerView = 1; }
+
+						return slidesPerView;
+					}
+
 				})
 		}
 	}

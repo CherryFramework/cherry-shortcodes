@@ -300,4 +300,29 @@ class Cherry_Shortcodes_Template_Callbacks {
 		return apply_filters( 'cherry_shortcodes_taxonomy_template_callbacks', $taxonomy, $args, $shortcode_name );
 	}
 
+	public static function permalink( $args = array() ) {
+		global $post;
+
+		// Gets a current shortcode name.
+		$shortcode_name = Cherry_Shortcodes_Handler::get_shortcode_name();
+
+		$defaults = apply_filters( 'cherry_shortcodes_title_template_defaults', array(
+			'wrap' => '%s',
+		), $shortcode_name );
+
+		$args      = wp_parse_args( $args, $defaults );
+		$permalink = get_permalink( $post->ID );
+
+		if ( empty( $permalink ) ) {
+			return;
+		}
+
+		$permalink = sprintf(
+			$args['wrap'],
+			esc_url( $permalink )
+		);
+
+		return apply_filters( 'cherry_shortcodes_permalink_template_callbacks', $permalink, $args, $shortcode_name );
+	}
+
 }
