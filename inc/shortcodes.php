@@ -541,6 +541,7 @@ class Cherry_Shortcodes_Handler {
 		$id			= '';
 		$type		= sanitize_key( $atts['type'] );
 		$row_class	= apply_filters( 'cherry_shortcodes_output_row_class', 'row', $atts );
+		$anchor_data = '';
 
 		if( $atts[ 'anchor' ] ){
 			$anchor = preg_replace( '/[^A-Za-z0-9-_]/', '',  $atts[ 'anchor' ] );
