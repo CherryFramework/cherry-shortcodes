@@ -17,6 +17,7 @@
 		init: function () {
 			if( CHERRY_API.status.is_ready ){
 				this.player_init();
+				this.init_youtube_player();
 			}else{
 				CHERRY_API.variable.$document.ready( $.proxy( this.player_init, this ) );
 			}
@@ -200,10 +201,6 @@
 				$button_sub_text = target.data('sub-text');
 
 			target.toggleClass($button_class+' '+$button_sub_class);
-		},
-
-		resize_youtube_player: function(){
-
 		},
 
 		resize: function(){
