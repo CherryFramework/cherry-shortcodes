@@ -1425,10 +1425,10 @@ class Cherry_Shortcodes_Data {
 					'atts'  => array(
 						'style' => array(
 							'type'   => 'select',
-							'values' => array(
+							'values' =>  apply_filters('cherry_shortcodes_tabs_styles', array(
 								'default' => __( 'Default', 'cherry-shortcodes' ),
 								'simple'  => __( 'Simple', 'cherry-shortcodes' ),
-							),
+							)),
 							'default' => 'default',
 							'name'    => __( 'Style', 'cherry-shortcodes' ),
 							'desc'    => __( 'Choose style for this tabs', 'cherry-shortcodes' ),
