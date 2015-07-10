@@ -17,9 +17,8 @@ if ( !defined( 'WPINC' ) ) {
 
 class Cherry_Shortcodes_Handler {
 
-	public static $postdata            = array();
-	public static $macros_pattern      = '/%%([a-zA-Z]+[^%]{2})(=[\'\"]([a-zA-Z0-9-_,\/\s]+)[\'\"])?%%/';
-	public static $macros_args_pattern = '=[\'\"]([a-zA-Z0-9-_,\/\s]+)[\'\"]?/';
+	public static $post_data      = array();
+	public static $macros_pattern = '/%%([a-zA-Z]+[^%]{2})(=[\'\"]([a-zA-Z0-9-_,\/\s]+)[\'\"])?%%/';
 
 	public static $tabs = array();
 	public static $tab_count = 0;
@@ -254,12 +253,6 @@ class Cherry_Shortcodes_Handler {
 			'template' => 'default.tmpl',
 		), $atts, 'banner' );
 
-		$image         = esc_url( $atts['image'] );
-		$title         = sanitize_text_field( $atts['title'] );
-		$url           = esc_url( str_replace( '%home_url%', home_url(), $atts['url'] ) );
-		$class         = esc_attr( $atts['class'] );
-		$color         = esc_attr( $atts['color'] );
-		$bgcolor       = esc_attr( $atts['bg_color'] );
 		$template_name = sanitize_file_name( $atts['template'] );
 
 		// Item template's file.
@@ -274,29 +267,12 @@ class Cherry_Shortcodes_Handler {
 		$template = ob_get_contents();
 		ob_end_clean();
 
-		// Record a shortcode name.
-		self::$postdata = array( 'banner' );
-
-		$title_syle = '';
-		if ( ! empty( $color ) ) {
-			$title_syle = ' style="color:' . $color . ';"';
-		}
-
-		self::$postdata[] = array(
-			'image'   => $image,
-			'title'   => '<h2 class="cherry-banner_title"' . $title_syle . '>' . $title . '</h2>',
-			'url'     => $url,
-			'class'   => $class,
-			'color'   => $color,
-			'bgcolor' => $bgcolor,
-			'content' => '<div class="cherry-banner_content">' . do_shortcode( $content ) . '</div>',
-		);
+		$data = array( 'image', 'title', 'url', 'color', 'bgcolor', 'content' );
+		self::setup_template_data( $data, $atts, $content );
+		self::$post_data = array_merge( array( 'tag' => 'banner' ), self::$post_data );
 
 		$result = preg_replace_callback( self::$macros_pattern, array( 'self', 'replace_callback' ), $template );
-		$result = '<div class="cherry-banner ' . $class . '">' . $result . '</div>';
-
-		// Reset the `postdata`.
-		self::$postdata = array();
+		$result = '<div class="cherry-banner ' . esc_attr( $atts['class'] ) . '">' . $result . '</div>';
 
 		return apply_filters( 'cherry_shortcodes_output', $result, $atts, 'banner' );
 	}
@@ -680,7 +656,7 @@ class Cherry_Shortcodes_Handler {
 				'ignore_sticky_posts' => 'yes',
 				'linked_title'        => 'yes',
 				'linked_image'        => 'yes',
-				'lightbox_image'      => 'no',
+				'lightbox_image'      => 'yes',
 				'image_size'          => 'thumbnail',
 				'content_type'        => 'part',
 				'content_length'      => 55,
@@ -704,13 +680,6 @@ class Cherry_Shortcodes_Handler {
 		$atts['order']               = sanitize_key( $atts['order'] );
 		$atts['orderby']             = sanitize_key( $atts['orderby'] );
 		$atts['ignore_sticky_posts'] = ( bool ) ( $atts['ignore_sticky_posts'] === 'yes' ) ? true : false;
-		$atts['linked_title']        = ( bool ) ( $atts['linked_title'] === 'yes' ) ? true : false;
-		$atts['linked_image']        = ( bool ) ( $atts['linked_image'] === 'yes' ) ? true : false;
-		$atts['lightbox_image']      = ( bool ) ( $atts['lightbox_image'] === 'yes' ) ? true : false;
-		$atts['image_size']          = sanitize_key( $atts['image_size'] );
-		$atts['content_type']        = sanitize_key( $atts['content_type'] );
-		$atts['content_length']      = intval( $atts['content_length'] );
-		$atts['button_text']         = sanitize_text_field( $atts['button_text'] );
 		$atts['col_xs']              = sanitize_key( $atts['col_xs'] );
 		$atts['col_sm']              = sanitize_key( $atts['col_sm'] );
 		$atts['col_md']              = sanitize_key( $atts['col_md'] );
@@ -868,18 +837,6 @@ class Cherry_Shortcodes_Handler {
 			$template = ob_get_contents();
 			ob_end_clean();
 
-			// Thumbnail.
-			$image_size = $atts['image_size'];
-			if ( preg_match( call_user_func( array( 'self', 'get_macros_args_pattern' ), 'IMAGE' ), $template, $match ) ) {
-				$image_size = $match[1];
-			}
-
-			// Button classes.
-			$btn_classes = '';
-			if ( preg_match( call_user_func( array( 'self', 'get_macros_args_pattern' ), 'BUTTON' ), $template, $match ) ) {
-				$btn_classes = $match[1];
-			}
-
 			// Grid columns.
 			$grid_columns = apply_filters( 'cherry_shortcodes_grid_columns', 12 );
 
@@ -917,6 +874,10 @@ class Cherry_Shortcodes_Handler {
 			// Posts counter.
 			$current_post = 0;
 
+			$data = array( 'image', 'title', 'date', 'author', 'comments', 'taxonomy', 'excerpt', 'content', 'button' );
+			self::setup_template_data( $data, $atts );
+			self::$post_data = array_merge( array( 'tag' => 'posts' ), self::$post_data );
+
 			while ( $posts_query->have_posts() ) :
 				$posts_query->the_post();
 
@@ -929,55 +890,6 @@ class Cherry_Shortcodes_Handler {
 				if ( 'private' == get_post_status( $post_id ) && ! current_user_can( 'read_private_posts' ) ) {
 					continue;
 				}
-
-				// Record a shortcode name.
-				self::$postdata = array( 'posts' );
-
-				// Title.
-				$title_args = array();
-				if ( false === $atts['linked_title'] ) {
-					$title_args['wrap'] = '%3$s';
-				}
-				$title = Cherry_Shortcodes_Template_Callbacks::title( $title_args );
-
-				// Image.
-				$image_args         = array();
-				$image_args['size']     = $image_size;
-				$image_args['lightbox'] = $atts['lightbox_image'];
-				if ( false === $atts['linked_image'] ) {
-					$image_args['wrap'] = '%3$s';
-				}
-				$image = Cherry_Shortcodes_Template_Callbacks::image( $image_args );
-
-				// Content.
-				$content_args = array();
-				if ( 'part' === $atts['content_type'] ) {
-					$content_args['length'] = $atts['content_length'];
-				}
-				$content = Cherry_Shortcodes_Template_Callbacks::content( $content_args );
-
-				// Button.
-				$button = Cherry_Shortcodes_Template_Callbacks::button( array(
-						'class' => esc_attr( $btn_classes ),
-						'text'  => $atts['button_text'],
-					)
-				);
-
-				// Prepare a current post data array.
-				$_postdata = compact( 'title', 'date', 'image', 'content', 'button' );
-
-				/**
-				 * Filters the array with a current post data.
-				 *
-				 * @since 1.0.0
-				 * @param array  $_postdata Array with a current post data.
-				 * @param int    $post_id   Post ID.
-				 * @param array  $atts      Shortcode attributes.
-				 */
-				$_postdata = apply_filters( 'cherry_shortcode_posts_postdata', $_postdata, $post_id, $atts );
-
-				// Init a `postdata` array.
-				self::$postdata[] = $_postdata;
 
 				// Perform a regular expression.
 				$tpl = preg_replace_callback( self::$macros_pattern, array( 'self', 'replace_callback' ), $tpl );
@@ -1108,11 +1020,6 @@ class Cherry_Shortcodes_Handler {
 		// Reset the query.
 		wp_reset_postdata();
 
-		// Reset the `postdata`.
-		self::$postdata = array();
-
-		cherry_query_asset( 'js', 'cherry-shortcodes-init' );
-
 		/**
 		 * Filters $output before return.
 		 *
@@ -1185,11 +1092,6 @@ class Cherry_Shortcodes_Handler {
 		$post_parent                = $atts['post_parent'];
 		$post_status                = $atts['post_status'];
 		$ignore_sticky_posts        = ( bool ) ( $atts['ignore_sticky_posts'] === 'yes' ) ? true : false;
-		$linked_title               = ( bool ) ( $atts['linked_title'] === 'yes' ) ? true : false;
-		$linked_image               = ( bool ) ( $atts['linked_image'] === 'yes' ) ? true : false;
-		$content_type               = sanitize_key( $atts['content_type'] );
-		$content_length             = intval( $atts['content_length'] );
-		$button_text                = sanitize_text_field( $atts['button_text'] );
 		$template_name              = sanitize_file_name( $atts['template'] );
 		$crop_image                 = ( bool ) ( $atts['crop_image'] === 'yes' ) ? true : false;
 		$crop_width                 = intval( $atts['crop_width'] );
@@ -1355,86 +1257,22 @@ class Cherry_Shortcodes_Handler {
 			$template = ob_get_contents();
 			ob_end_clean();
 
-			// Button classes.
-			$btn_classes = '';
-			if ( preg_match( call_user_func( array( 'self', 'get_macros_args_pattern' ), 'BUTTON' ), $template, $match ) ) {
-				$btn_classes = $match[1];
-			}
+			$data = array( 'image', 'title', 'date', 'author', 'comments', 'taxonomy', 'excerpt', 'content', 'button' );
+			self::setup_template_data( $data, $atts );
+			self::$post_data = array_merge( array( 'tag' => 'swiper_carousel' ), self::$post_data );
 
 			while ( $posts_query->have_posts() ) :
 				$posts_query->the_post();
 
 				// Prepare a data.
-				$tpl            = $template;
-				$post_id        = get_the_ID();
-				$post_type      = get_post_type( $post_id );
-				$permalink      = get_permalink();
-				$title_attr     = the_title_attribute( array( 'echo' => false ) );
+				$tpl        = $template;
+				$post_id    = get_the_ID();
+				$post_type  = get_post_type( $post_id );
 
 				// If post is set to private, only show to logged in users.
 				if ( 'private' == get_post_status( $post_id ) && ! current_user_can( 'read_private_posts' ) ) {
 					continue;
 				}
-
-				// Record a shortcode name.
-				self::$postdata = array( 'swiper_carousel' );
-
-				// Title.
-				$title_args = array();
-				if ( false === $linked_title ) {
-					$title_args['wrap'] = '%3$s';
-				}
-				$title = Cherry_Shortcodes_Template_Callbacks::title( $title_args );
-
-				// Image.
-				$image = '';
-				if ( post_type_supports( $post_type, 'thumbnail' ) ) {
-
-					if ( $crop_image ) {
-						$img_url   = wp_get_attachment_url( get_post_thumbnail_id(), 'full');
-						$thumbnail = Cherry_Shortcodes_Tools::get_crop_image( $img_url, $crop_width, $crop_height );
-					} else {
-						$thumbnail = has_post_thumbnail( $post_id ) ? get_the_post_thumbnail( $post_id, 'large' ) : '';
-					}
-
-					$image = ( $linked_image ) ?
-						sprintf( '<a href="%1$s" title="%2$s" class="%3$s">%4$s</a>',
-							esc_url( $permalink ),
-							esc_attr( $title_attr ),
-							'post-thumbnail',
-							$thumbnail
-						) : sprintf( '%s', $thumbnail );
-				}
-
-				// Content.
-				$content_args = array();
-				if ( 'part' === $content_type ) {
-					$content_args['length'] = $content_length;
-				}
-				$content = Cherry_Shortcodes_Template_Callbacks::content( $content_args );
-
-				// Button.
-				$button = Cherry_Shortcodes_Template_Callbacks::button( array(
-						'class' => esc_attr( $btn_classes ),
-						'text'  => $button_text,
-					)
-				);
-
-				// Prepare a current post data array.
-				$_postdata = compact( 'title', 'date', 'image', 'content', 'button' );
-
-				/**
-				 * Filters the array with a current post data.
-				 *
-				 * @since 1.0.0
-				 * @param array  $_postdata Array with a current post data.
-				 * @param int    $post_id   Post ID.
-				 * @param array  $atts      Shortcode attributes.
-				 */
-				$_postdata = apply_filters( 'cherry-shortcode-swiper-carousel-postdata', $_postdata, $post_id, $atts );
-
-				// Init a `postdata` array.
-				self::$postdata[] = $_postdata;
 
 				// Perform a regular expression.
 				$tpl = preg_replace_callback( self::$macros_pattern, array( 'self', 'replace_callback' ), $tpl );
@@ -1542,9 +1380,6 @@ class Cherry_Shortcodes_Handler {
 
 		// Reset the query.
 		wp_reset_postdata();
-
-		// Reset the `postdata`.
-		self::$postdata = array();
 
 		cherry_query_asset( 'js', array( 'swiper', 'cherry-shortcodes-init' ) );
 
@@ -2068,44 +1903,71 @@ class Cherry_Shortcodes_Handler {
 	}
 
 	/**
-	 * Callback-function for `preg_replace_callback`.
+	 * Prepare template data to replace
 	 *
 	 * @since  1.0.0
-	 * @param  array|null $matches
-	 * @return string
+	 * @param  array  $atts output attributes
 	 */
+	public static function setup_template_data( $data, $atts, $content = null ) {
+		require_once( CHERRY_SHORTCODES_DIR . 'inc/template-callbacks.php' );
+
+		$callbacks = new Cherry_Shortcodes_Template_Callbacks( $atts, $content );
+
+		$full_data = array(
+			'title'     => array( $callbacks, 'title' ),
+			'date'      => array( $callbacks, 'date' ),
+			'button'    => array( $callbacks, 'button' ),
+			'image'     => array( $callbacks, 'image' ),
+			'excerpt'   => array( $callbacks, 'excerpt' ),
+			'content'   => array( $callbacks, 'content' ),
+			'author'    => array( $callbacks, 'author' ),
+			'comments'  => array( $callbacks, 'comments' ),
+			'taxonomy'  => array( $callbacks, 'taxonomy' ),
+			'permalink' => array( $callbacks, 'permalink' ),
+			'color'     => array( $callbacks, 'banner_color' ),
+			'bgcolor'   => array( $callbacks, 'banner_bgcolor' ),
+			'url'       => array( $callbacks, 'banner_url' ),
+		);
+
+		$_data = array();
+		foreach ( $data as $d ) {
+			if ( ! empty( $full_data[ $d ] ) ) {
+				$_data = array_merge( $_data, array( $d => $full_data[ $d ] ) );
+			}
+		}
+
+		self::$post_data = apply_filters( 'cherry_shortcodes_data_callbacks', $_data, $atts );
+	}
+
 	public static function replace_callback( $matches ) {
 
-		if ( ! is_array( $matches ) ) {
-			return;
+		if ( !is_array( $matches ) ) {
+			return '';
 		}
 
 		if ( empty( $matches ) ) {
-			return;
+			return '';
 		}
 
 		$key = strtolower( $matches[1] );
 
-		if ( isset( self::$postdata[1][ $key ] ) ) {
-			return self::$postdata[1][ $key ];
+		// if key not found in data -return nothing
+		if ( ! isset( self::$post_data[ $key ] ) ) {
+			return '';
 		}
 
-		$callback = array( 'Cherry_Shortcodes_Template_Callbacks', $key );
+		$callback = self::$post_data[ $key ];
 
 		if ( ! is_callable( $callback ) ) {
 			return;
 		}
 
-		// If found parameters and has correct callback - process it.
+		// if found parameters and has correct callback - process it
 		if ( isset( $matches[3] ) ) {
 			return call_user_func( $callback, $matches[3] );
 		}
 
 		return call_user_func( $callback );
-	}
-
-	public static function get_macros_args_pattern( $m ) {
-		return '/%%' . $m . '=[\'\"]([a-zA-Z0-9-_\s]+)[\'\"]?%%/';
 	}
 
 	/**
@@ -2137,7 +1999,7 @@ class Cherry_Shortcodes_Handler {
 	}
 
 	public static function get_shortcode_name() {
-		return ! empty( self::$postdata[0] ) ? self::$postdata[0] : '';
+		return ! empty( self::$post_data['tag'] ) ? self::$post_data['tag'] : '';
 	}
 }
 

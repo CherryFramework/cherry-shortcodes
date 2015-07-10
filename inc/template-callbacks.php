@@ -1,6 +1,6 @@
 <?php
 /**
- * Define callback functions for templater.
+ * Define callback functions for templater
  *
  * @package   Cherry_Team
  * @author    Cherry Team
@@ -21,89 +21,107 @@ if ( !defined( 'WPINC' ) ) {
  */
 class Cherry_Shortcodes_Template_Callbacks {
 
-	function __construct() {}
+	/**
+	 * Shortcode attributes array
+	 * @var array
+	 */
+	public $atts = array();
 
-	public static function title( $args = array() ) {
-		global $post;
+	public $content = null;
 
-		// Gets a current shortcode name.
-		$shortcode_name = Cherry_Shortcodes_Handler::get_shortcode_name();
-
-		$defaults = apply_filters( 'cherry_shortcodes_title_template_defaults', array(
-			'wrap' => '<a href="%1$s" title="%2$s">%3$s</a>',
-		), $shortcode_name );
-
-		$args  = wp_parse_args( $args, $defaults );
-		$title = get_the_title( $post->ID );
-
-		if ( empty( $title ) ) {
-			return;
-		}
-
-		$title = sprintf(
-			$args['wrap'],
-			esc_url( get_permalink( $post->ID ) ),
-			esc_attr( the_title_attribute( array( 'before' => '', 'after' => '', 'echo' => false, 'post' => $post->ID ) ) ),
-			$title
-		);
-
-		return apply_filters( 'cherry_shortcodes_title_template_callbacks', $title, $args, $shortcode_name );
+	function __construct( $atts, $content ) {
+		$this->atts    = $atts;
+		$this->content = $content;
 	}
 
-	public static function date( $args = array() ) {
+	public function title() {
 		global $post;
 
-		// Gets a current shortcode name.
-		$shortcode_name = Cherry_Shortcodes_Handler::get_shortcode_name();
+		$shortcode = Cherry_Shortcodes_Handler::get_shortcode_name();
 
-		// Gets data format.
-		$format = func_num_args() ? func_get_arg(0) : get_option( 'date_format' );
+		switch ( $shortcode ) {
+			case 'banner':
+				$wrap  = '<h2 class="cherry-banner_title"%1$s>%2$s</h2>';
+				$title = sanitize_text_field( $this->atts['title'] );
 
-		$defaults = apply_filters( 'cherry_shortcodes_date_template_defaults', array(
-			'wrap' => '<time datetime="%1$s">%2$s</time>',
-		), $shortcode_name, $format );
+				$title_syle = '';
+				if ( ! empty( $this->atts['color'] ) ) {
+					$title_syle = ' style="color:' . esc_attr( $this->atts['color'] ) . ';"';
+				}
 
-		$args = wp_parse_args( $args, $defaults );
+				$title = sprintf(
+					$wrap,
+					$title_syle,
+					$title
+				);
+				break;
+
+			default:
+				$wrap  = ( 'no' === $this->atts['linked_title'] ) ? '%3$s' : '<a href="%1$s" title="%2$s">%3$s</a>';
+				$title = get_the_title( $post->ID );
+
+				if ( empty( $title ) ) {
+					return;
+				}
+
+				$title = sprintf(
+					$wrap,
+					esc_url( get_permalink( $post->ID ) ),
+					esc_attr( the_title_attribute( array( 'before' => '', 'after' => '', 'echo' => false, 'post' => $post->ID ) ) ),
+					$title
+				);
+				break;
+		}
+
+		return apply_filters( 'cherry_shortcodes_title_template_callbacks', $title, $this->atts, $shortcode );
+	}
+
+	public function date( $format = '' ) {
+		global $post;
+
+		$shortcode = Cherry_Shortcodes_Handler::get_shortcode_name();
+
+		if ( empty( $format ) ) {
+			$format = get_option( 'date_format' );
+		}
 
 		$date = sprintf(
-			$args['wrap'],
+			'<time datetime="%1$s">%2$s</time>',
 			esc_attr( get_the_date( 'c' ) ),
 			esc_attr( get_the_date( $format, $post->ID ) )
 		);
 
-		return apply_filters( 'cherry_shortcodes_date_template_callbacks', $date, $args, $shortcode_name );
+		return apply_filters( 'cherry_shortcodes_date_template_callbacks', $date, $this->atts, $shortcode );
 	}
 
-	public static function button( $args = array() ) {
+	public function button( $classes = '' ) {
 		global $post;
 
-		// Gets a current shortcode name.
-		$shortcode_name = Cherry_Shortcodes_Handler::get_shortcode_name();
+		$shortcode   = Cherry_Shortcodes_Handler::get_shortcode_name();
+		$button_text = sanitize_text_field( $this->atts['button_text'] );
 
-		$defaults = apply_filters( 'cherry_shortcodes_button_template_defaults', array(
-			'wrap'  => '<a href="%1$s" class="%2$s">%3$s</a>',
-			'class' => 'btn btn-default',
-			'text'  => '',
-		), $shortcode_name );
-
-		$args = wp_parse_args( $args, $defaults );
-
-		if ( empty( $args['text'] ) ) {
+		if ( empty( $button_text ) ) {
 			return;
 		}
 
 		$button = sprintf(
-				$args['wrap'],
-				esc_url( get_permalink( $post->ID ) ),
-				esc_attr( $args['class'] ),
-				apply_filters( 'cherry_shortcodes_translate', $args['text'], 'button_text' )
-			);
+			'<a href="%1$s" class="%2$s">%3$s</a>',
+			esc_url( get_permalink( $post->ID ) ),
+			esc_attr( $classes ),
+			$button_text
+		);
 
-		return apply_filters( 'cherry_shortcodes_button_template_callbacks', $button, $args, $shortcode_name );
+		return apply_filters( 'cherry_shortcodes_button_template_callbacks', $button, $this->atts, $shortcode );
 	}
 
-	public static function image( $args = array() ) {
+	public function image( $size = '' ) {
 		global $post;
+
+		$shortcode = Cherry_Shortcodes_Handler::get_shortcode_name();
+
+		if ( 'banner' == $shortcode ) {
+			return esc_url( $this->atts['image'] );
+		}
 
 		if ( ! post_type_supports( get_post_type( $post->ID ), 'thumbnail' ) ) {
 			return;
@@ -113,48 +131,73 @@ class Cherry_Shortcodes_Template_Callbacks {
 			return;
 		}
 
-		// Gets a current shortcode name.
-		$shortcode_name = Cherry_Shortcodes_Handler::get_shortcode_name();
-
-		$defaults = apply_filters( 'cherry_shortcodes_image_template_defaults', array(
-			'wrap'     => '<a href="%1$s" title="%2$s" class="%4$s">%3$s</a>',
-			'size'     => 'large',
-			'lightbox' => false,
-		), $shortcode_name );
-
-		$args = wp_parse_args( $args, $defaults );
-
-		$url             = get_permalink( $post->ID );
+		$url = get_permalink( $post->ID );
 		$image_classes   = array();
 		$image_classes[] = 'post-thumbnail_link';
 
-		if ( isset( $args['lightbox'] ) && ( true === $args['lightbox'] ) ) {
-			$image_classes[] = 'cherry-popup-img';
-			$image_classes[] = 'popup-img';
+		switch ( $shortcode ) {
+			case 'posts':
 
-			$image_classes = apply_filters( 'cherry_shortcodes_image_classes_template_callbacks', $image_classes );
-			$image_classes = array_unique( $image_classes );
-			$image_classes = array_map( 'sanitize_html_class', $image_classes );
+				if ( empty( $size ) ) {
+					$size = sanitize_key( $this->atts['image_size'] );
+				}
 
-			$thumbnail_id = get_post_thumbnail_id( $post->ID );
-			$url          = wp_get_attachment_url( $thumbnail_id );
+				if ( isset( $this->atts['lightbox_image'] ) && ( 'yes' === $this->atts['lightbox_image'] ) ) {
+					$image_classes[] = 'cherry-popup-img';
+					$image_classes[] = 'popup-img';
 
-			if ( ! $url ) {
-				$url = get_permalink( $post->ID );
-			}
+					$thumbnail_id = get_post_thumbnail_id( $post->ID );
+					$url          = wp_get_attachment_url( $thumbnail_id );
 
-			wp_enqueue_script( 'magnific-popup' );
+					if ( ! $url ) {
+						$url = get_permalink( $post->ID );
+					}
+
+					wp_enqueue_script( 'magnific-popup' );
+				}
+
+				$thumbnail = get_the_post_thumbnail( $post->ID, $size );
+				break;
+
+			case 'swiper_carousel':
+				$post_id     = get_the_ID();
+				$crop_image  = ( bool ) ( 'yes' === $this->atts['crop_image'] ) ? true : false;
+				$crop_width  = intval( $this->atts['crop_width'] );
+				$crop_height = intval( $this->atts['crop_height'] );
+
+				if ( $crop_image ) {
+					$img_url   = wp_get_attachment_url( get_post_thumbnail_id(), 'full' );
+					$thumbnail = Cherry_Shortcodes_Tools::get_crop_image( $img_url, $crop_width, $crop_height );
+				} else {
+					$thumbnail = get_the_post_thumbnail( $post->ID, 'large' );
+				}
+				break;
+
+			default:
+
+				if ( empty( $this->atts['image_size'] ) ) {
+					$thumbnail = get_the_post_thumbnail( $post->ID, 'large' );
+				} else {
+					$thumbnail = get_the_post_thumbnail( $post->ID, sanitize_key( $this->atts['image_size'] ) );
+				}
+				break;
 		}
 
+		$wrap = ( 'no' === $this->atts['linked_image'] ) ? '%3$s' : '<a href="%1$s" title="%2$s" class="%4$s">%3$s</a>';
+
+		$image_classes = apply_filters( 'cherry_shortcodes_image_classes_template_callbacks', $image_classes, $shortcode );
+		$image_classes = array_unique( $image_classes );
+		$image_classes = array_map( 'sanitize_html_class', $image_classes );
+
 		$image = sprintf(
-			$args['wrap'],
+			$wrap,
 			esc_url( $url ),
 			esc_attr( the_title_attribute( array( 'before' => '', 'after' => '', 'echo' => false, 'post' => $post->ID ) ) ),
-			get_the_post_thumbnail( $post->ID, $args['size'] ),
+			$thumbnail,
 			join( ' ', $image_classes )
 		);
 
-		return apply_filters( 'cherry_shortcodes_image_template_callbacks', $image, $args, $shortcode_name );
+		return apply_filters( 'cherry_shortcodes_image_template_callbacks', $image, $this->atts, $shortcode );
 	}
 
 	/**
@@ -162,7 +205,7 @@ class Cherry_Shortcodes_Template_Callbacks {
 	 *
 	 * @since 1.0.0
 	 */
-	public static function excerpt( $args = array() ) {
+	public function excerpt() {
 		global $post;
 
 		if ( ! has_excerpt( $post->ID ) ) {
@@ -173,23 +216,14 @@ class Cherry_Shortcodes_Template_Callbacks {
 			return;
 		}
 
-		// Gets a current shortcode name.
-		$shortcode_name = Cherry_Shortcodes_Handler::get_shortcode_name();
-
-		$defaults = apply_filters( 'cherry_shortcodes_excerpt_template_defaults', array(
-			'wrap'  => '<div class="%1$s">%2$s</div>',
-			'class' => 'post-excerpt',
-		), $shortcode_name );
-
-		$args = wp_parse_args( $args, $defaults );
+		$shortcode = Cherry_Shortcodes_Handler::get_shortcode_name();
 
 		$excerpt = sprintf(
-			$args['wrap'],
-			$args['class'],
+			'<div class="post-excerpt">%s</div>',
 			apply_filters( 'the_excerpt', get_the_excerpt() )
 		);
 
-		return apply_filters( 'cherry_shortcodes_excerpt_template_callbacks', $excerpt, $args, $shortcode_name );
+		return apply_filters( 'cherry_shortcodes_excerpt_template_callbacks', $excerpt, $this->atts, $shortcode );
 	}
 
 	/**
@@ -197,110 +231,100 @@ class Cherry_Shortcodes_Template_Callbacks {
 	 *
 	 * @since  1.0.0
 	 */
-	public static function content( $args = array() ) {
-		// Gets a current shortcode name.
-		$shortcode_name = Cherry_Shortcodes_Handler::get_shortcode_name();
+	public function content() {
+		$shortcode = Cherry_Shortcodes_Handler::get_shortcode_name();
 
-		$defaults = apply_filters( 'cherry_shortcodes_content_template_defaults', array(
-			'wrap'   => '<div class="%1$s">%2$s</div>',
-			'class'  => 'post-content',
-			'length' => -1,
-		), $shortcode_name );
+		switch ( $shortcode ) {
+			case 'banner':
+				$content = '<div class="cherry-banner_content">' . do_shortcode( $this->content ) . '</div>';
+				break;
 
-		$args     = wp_parse_args( $args, $defaults );
-		$_content = get_the_content( '' );
+			default:
+				$_content = get_the_content( '' );
 
-		if ( ! $_content ) {
-			return;
+				if ( ! $_content ) {
+					return;
+				}
+
+				$class          = 'post-content';
+				$content_type   = sanitize_key( $this->atts['content_type'] );
+				$content_length = absint( $this->atts['content_length'] );
+
+				if ( ! $content_length ) {
+					return;
+				}
+
+				if ( 'full' == $content_type || post_password_required() ) {
+					$content = apply_filters( 'the_content', $_content );
+					$class   .= ' full';
+				} elseif ( 'part' == $content_type ) {
+					/* wp_trim_excerpt analog */
+					$content = strip_shortcodes( $_content );
+					$content = apply_filters( 'the_content', $content );
+					$content = str_replace( ']]>', ']]&gt;', $content );
+					$content = wp_trim_words( $content, $content_length, apply_filters( 'cherry_shortcodes_content_callback_more', '', $this->atts, $shortcode ) );
+					$class   .= ' part';
+				}
+
+				$content = sprintf(
+					'<div class="%1$s">%2$s</div>',
+					esc_attr( $class ),
+					$content
+				);
+				break;
 		}
 
-		$args['length'] = intval( $args['length'] );
-
-		if ( -1 == $args['length'] || post_password_required() ) {
-			$content       = apply_filters( 'the_content', $_content );
-			$args['class'] .= ' full';
-		} else {
-			/* wp_trim_excerpt analog */
-			$content = strip_shortcodes( $_content );
-			$content = apply_filters( 'the_content', $content );
-			$content = str_replace( ']]>', ']]&gt;', $content );
-			$content = wp_trim_words( $content, $args['length'], apply_filters( 'cherry_shortcodes_content_callback_more', '', $args, $shortcode_name ) );
-			$args['class'] .= ' part';
-		}
-
-		$content = sprintf( $args['wrap'], esc_attr( $args['class'] ), $content );
-
-		return apply_filters( 'cherry_shortcodes_content_template_callbacks', $content, $args, $shortcode_name );
+		return apply_filters( 'cherry_shortcodes_content_template_callbacks', $content, $this->atts, $shortcode );
 	}
 
-	public static function comments( $args = array() ) {
+	public function comments() {
 		global $post;
 
 		if ( ! post_type_supports( get_post_type( $post->ID ), 'comments' ) ) {
 			return;
 		}
 
-		// Gets a current shortcode name.
-		$shortcode_name = Cherry_Shortcodes_Handler::get_shortcode_name();
-
-		$defaults = apply_filters( 'cherry_shortcodes_comments_template_defaults', array(
-			'wrap'  => '<span class="%1$s"><a href="%2$s">%3$s</a></span>',
-			'class' => 'post-comments-link',
-		), $shortcode_name );
-
-		$args = wp_parse_args( $args, $defaults );
-
-		$comments = ( comments_open( $post->ID ) && get_comments_number( $post->ID ) ) ? get_comments_number( $post->ID ) : false;
+		$shortcode = Cherry_Shortcodes_Handler::get_shortcode_name();
+		$comments  = ( comments_open( $post->ID ) && get_comments_number( $post->ID ) ) ? get_comments_number( $post->ID ) : false;
 
 		if ( false === $comments ) {
 			return;
 		}
 
-		$comments = sprintf( $args['wrap'], $args['class'], esc_url( get_comments_link( $post->ID ) ), $comments );
+		$comments = sprintf(
+			'<span class="post-comments-link"><a href="%1$s">%2$s</a></span>',
+			esc_url( get_comments_link( $post->ID ) ),
+			$comments
+		);
 
-		return apply_filters( 'cherry_shortcodes_comments_template_callbacks', $comments, $args, $shortcode_name );
+		return apply_filters( 'cherry_shortcodes_comments_template_callbacks', $comments, $this->atts, $shortcode );
 	}
 
-	public static function author( $args = array() ) {
+	public function author() {
 		global $post;
 
-		// Gets a current shortcode name.
-		$shortcode_name = Cherry_Shortcodes_Handler::get_shortcode_name();
-
-		$defaults = apply_filters( 'cherry_shortcodes_author_template_defaults', array(
-			'wrap'  => '<span class="%1$s vcard"><a href="%2$s" rel="author">%3$s</a></span>',
-			'class' => 'post-author',
-		), $shortcode_name );
-
-		$args = wp_parse_args( $args, $defaults );
-
+		$shortcode  = Cherry_Shortcodes_Handler::get_shortcode_name();
 		$author_url = get_author_posts_url( get_the_author_meta( 'ID' ) );
-		$author     = sprintf( $args['wrap'], $args['class'], esc_url( $author_url ), get_the_author() );
 
-		return apply_filters( 'cherry_shortcodes_author_template_callbacks', $author, $args, $shortcode_name );
+		$author = sprintf(
+			'<span class="post-author vcard"><a href="%1$s" rel="author">%2$s</a></span>',
+			esc_url( $author_url ),
+			get_the_author()
+		);
+
+		return apply_filters( 'cherry_shortcodes_author_template_callbacks', $author, $this->atts, $shortcode );
 	}
 
-	public static function taxonomy( $args = array() ) {
+	public function taxonomy( $tax = '' ) {
 		global $post;
 
-		if ( ! func_num_args() ) {
+		if ( empty( $tax ) ) {
 			return;
 		}
 
-		// Gets a current shortcode name.
-		$shortcode_name = Cherry_Shortcodes_Handler::get_shortcode_name();
-
-		$tax = func_get_arg(0);
-
-		$defaults = apply_filters( 'cherry_shortcodes_taxonomy_template_defaults', array(
-			'wrap'  => '<span class="%1$s %1$s-%2$s">%3$s</span>',
-			'class' => 'post-tax',
-		), $shortcode_name, $tax );
-
-		$args = wp_parse_args( $args, $defaults );
-
-		$tax_data = array();
-		$terms    = wp_get_post_terms( $post->ID, $tax );
+		$shortcode = Cherry_Shortcodes_Handler::get_shortcode_name();
+		$tax_data  = array();
+		$terms     = wp_get_post_terms( $post->ID, $tax );
 
 		if ( empty( $terms ) ) {
 			return;
@@ -315,38 +339,57 @@ class Cherry_Shortcodes_Template_Callbacks {
 		}
 
 		$taxonomy = sprintf(
-			$args['wrap'],
-			esc_attr( $args['class'] ),
+			'<span class="post-tax post-tax-%1$s">%2$s</span>',
 			sanitize_html_class( $tax ),
 			join( ' ', $tax_data )
 		);
 
-		return apply_filters( 'cherry_shortcodes_taxonomy_template_callbacks', $taxonomy, $args, $shortcode_name );
+		return apply_filters( 'cherry_shortcodes_taxonomy_template_callbacks', $taxonomy, $this->atts, $shortcode );
 	}
 
-	public static function permalink( $args = array() ) {
+	public function permalink() {
 		global $post;
 
-		// Gets a current shortcode name.
-		$shortcode_name = Cherry_Shortcodes_Handler::get_shortcode_name();
-
-		$defaults = apply_filters( 'cherry_shortcodes_title_template_defaults', array(
-			'wrap' => '%s',
-		), $shortcode_name );
-
-		$args      = wp_parse_args( $args, $defaults );
-		$permalink = get_permalink( $post->ID );
+		$shortcode = Cherry_Shortcodes_Handler::get_shortcode_name();
+		$permalink = esc_url( get_permalink( $post->ID ) );
 
 		if ( empty( $permalink ) ) {
 			return;
 		}
 
-		$permalink = sprintf(
-			$args['wrap'],
-			esc_url( $permalink )
-		);
+		return apply_filters( 'cherry_shortcodes_permalink_template_callbacks', $permalink, $this->atts, $shortcode );
+	}
 
-		return apply_filters( 'cherry_shortcodes_permalink_template_callbacks', $permalink, $args, $shortcode_name );
+	public function banner_color() {
+		global $post;
+
+		if ( empty( $this->atts['color'] ) ) {
+			return;
+		}
+
+		return apply_filters( 'cherry_shortcodes_banner_color_template_callbacks', esc_attr( $this->atts['color'] ), $this->atts );
+	}
+
+	public function banner_bgcolor() {
+		global $post;
+
+		if ( empty( $this->atts['bg_color'] ) ) {
+			return;
+		}
+
+		return apply_filters( 'cherry_shortcodes_banner_bgcolor_template_callbacks', esc_attr( $this->atts['bg_color'] ), $this->atts );
+	}
+
+	public function banner_url() {
+		global $post;
+
+		if ( empty( $this->atts['url'] ) ) {
+			return;
+		}
+
+		$url = str_replace( '%home_url%', home_url(), $this->atts['url'] );
+
+		return apply_filters( 'cherry_shortcodes_banner_url_template_callbacks', esc_url( $url ), $this->atts );
 	}
 
 }
