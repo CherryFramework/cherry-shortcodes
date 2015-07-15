@@ -1847,13 +1847,14 @@ class Cherry_Shortcodes_Handler {
 				}
 			}
 
-			$poster_attr = $poster ? 'poster="' . $poster . '" ' : '' ;
+			$poster = $poster ? '<div style="background-image: url(\'' . $poster . '\')" class="cherry-video-poster"></div>' : '' ;
 			$muted_attr = $muted !== 'no' ? 'muted ' : '' ;
 			$loop_attr = $loop !== 'no' ? 'loop ' : '' ;
 			$preload_attr = $preload !== 'no' ? 'preload="auto" ' : '' ;
 			$autoplay_attr = $control === 'autoplay' ? 'autoplay ' : '' ;
 
-			$video_tag = '<video ' . $autoplay_attr . $poster_attr . $muted_attr . $loop_attr . $preload_attr . ' width="100%" height="auto">';
+			$video_tag = $poster;
+			$video_tag .= '<video ' . $autoplay_attr  . $muted_attr . $loop_attr . $preload_attr . ' width="100%" height="auto" >';
 				$video_tag .= '<source src="'.$source.'" type="video/mp4">';
 			$video_tag .= '</video>';
 		}
