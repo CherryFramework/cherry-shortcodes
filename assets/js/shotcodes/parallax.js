@@ -178,7 +178,6 @@ jQuery(document).ready(function($){
 						break
 
 					default:
-						bufferRatio = 2.25;
 
 						if(bufferRatio > 5) bufferRatio = 5;
 						if(bufferRatio <= 1) {
