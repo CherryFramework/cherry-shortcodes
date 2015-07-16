@@ -85,6 +85,11 @@ class Cherry_Shortcodes_Data {
 							'default' => '',
 							'name'    => __( 'Class', 'cherry-shortcodes' ),
 							'desc'    => __( 'Extra CSS class', 'cherry-shortcodes' ),
+						),
+						'anchor' => array(
+							'default' => '',
+							'name'    => __( 'Anchor', 'cherry-shortcodes' ),
+							'desc'    => __( 'This option defines menu item marker.', 'cherry-shortcodes' ),
 						)
 					),
 					'content' => __( "[%prefix_col size_md=\"4\"]Column content[/%prefix_col]\n[%prefix_col size_md=\"4\"]Column content[/%prefix_col]\n[%prefix_col size_md=\"4\"]Column content[/%prefix_col]", 'cherry-shortcodes' ),
@@ -112,6 +117,11 @@ class Cherry_Shortcodes_Data {
 							'default' => '',
 							'name'    => __( 'Class', 'cherry-shortcodes' ),
 							'desc'    => __( 'Extra CSS class', 'cherry-shortcodes' ),
+						),
+						'anchor' => array(
+							'default' => '',
+							'name'    => __( 'Anchor', 'cherry-shortcodes' ),
+							'desc'    => __( 'This option defines menu item marker.', 'cherry-shortcodes' ),
 						)
 					),
 					'content' => __( "[%prefix_col_inner size_md=\"4\"]Column content[/%prefix_col_inner]\n[%prefix_col_inner size_md=\"4\"]Column content[/%prefix_col_inner]\n[%prefix_col_inner size_md=\"4\"]Column content[/%prefix_col_inner]", 'cherry-shortcodes' ),
@@ -1983,7 +1993,7 @@ class Cherry_Shortcodes_Data {
 								'autoplay	'	=> __( 'Video Autoplay', 'cherry-shortcodes' ),
 								'play-on-hover'	=> __( 'Play video on mouse hover', 'cherry-shortcodes' ),
 							),
-							'default'	=> 'no',
+							'default'	=> 'show_content_on_hover',
 							'name'		=> __( 'Controls.', 'cherry-shortcodes' ),
 							'desc'		=> __( '', 'cherry-shortcodes' ),
 						),

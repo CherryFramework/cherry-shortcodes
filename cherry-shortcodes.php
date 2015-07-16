@@ -137,7 +137,6 @@ if ( !class_exists( 'Cherry_Shortcodes' ) ) {
 		function includes() {
 			require_once( CHERRY_SHORTCODES_DIR . 'inc/vendor/sunrise.php' );
 			require_once( CHERRY_SHORTCODES_DIR . 'inc/assets.php' );
-			require_once( CHERRY_SHORTCODES_DIR . 'inc/template-callbacks.php' );
 			require_once( CHERRY_SHORTCODES_DIR . 'inc/shortcodes.php' );
 			require_once( CHERRY_SHORTCODES_DIR . 'inc/data.php' );
 			require_once( CHERRY_SHORTCODES_DIR . 'inc/tools.php' );

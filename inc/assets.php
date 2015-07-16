@@ -86,6 +86,9 @@ class Cherry_Shortcodes_Assets {
 		wp_register_script( 'video-youtube','https://www.youtube.com/player_api/', array( 'jquery' , 'video-preview' ), null, true );
 
 		// Shortcodes init.
+		wp_register_script( 'page-anchor', plugins_url( 'assets/js/shotcodes/page-anchor.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
+
+		// Shortcodes init.
 		wp_register_script( 'cherry-shortcodes-init', plugins_url( 'assets/js/shotcodes/init.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 
 		// Hook to deregister javascripts or add custom.
