@@ -179,7 +179,7 @@ jQuery(document).ready(function($){
 
 					default:
 
-						if(bufferRatio > 5) bufferRatio = 5;
+						if(bufferRatio > 10) bufferRatio = 10;
 						if(bufferRatio <= 1) {
 							if($.browser.msie){
 								parallax = false;
