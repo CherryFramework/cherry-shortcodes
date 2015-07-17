@@ -1,5 +1,12 @@
 (function($){
 	"use strict";
+
+	$.extend( $.expr[ ':' ], {
+		'position_fixed': function( element, index, match ) {
+			return $( element ).css( 'position' ) === 'fixed';
+		}
+	});
+
 	CHERRY_API.utilites.namespace( 'shortcode.row.page_anchor' );
 
 	CHERRY_API.shortcode.row.page_anchor = {
@@ -20,7 +27,7 @@
 			if( CHERRY_API.status.is_ready ){
 				this.events.do_script();
 			}else{
-				CHERRY_API.variable.$document.ready( $.proxy( this.do_script, this ) );
+				CHERRY_API.variable.$document.ready( this.do_script.bind( this ) );
 			}
 		},
 
@@ -135,7 +142,19 @@
 		},
 
 		get_target_offset:function( target ){
-			return target[0] ? target.offset().top : false ;
+			var position = 0;
+
+			if( sticky_data.args.active ){
+				var fixed_header = $('header#header');
+				position = target[0] ? target.offset().top - fixed_header.outerHeight() - fixed_header.position().top  : false ;
+
+				console.log(fixed_header.outerHeight())
+				console.log(fixed_header.position().top,  '/-------------------')
+			}else{
+				position= target[0] ? target.offset().top : false ;
+			}
+
+			return Math.round( position );
 		},
 
 		in_viewport:function( target ){
