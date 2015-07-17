@@ -147,9 +147,6 @@
 			if( sticky_data.args.active ){
 				var fixed_header = $('header#header');
 				position = target[0] ? target.offset().top - fixed_header.outerHeight() - fixed_header.position().top  : false ;
-
-				console.log(fixed_header.outerHeight())
-				console.log(fixed_header.position().top,  '/-------------------')
 			}else{
 				position= target[0] ? target.offset().top : false ;
 			}
