@@ -1635,7 +1635,7 @@ class Cherry_Shortcodes_Handler {
 		$custom_class   = sanitize_text_field( $atts['custom_class'] );
 
 		$data_attr_line = '';
-			$data_attr_line .= 'data-delay="' . $delay . '"';
+			$data_attr_line .= 'data-delay="' . $delay . '" ';
 			$data_attr_line .= 'data-time="' . $time . '"';
 
 		$html = '<div class="cherry-counter ' . esc_attr( $custom_class ) . '" ' . $data_attr_line . '>';
