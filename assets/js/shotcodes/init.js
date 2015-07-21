@@ -288,4 +288,30 @@
 	}
 	CHERRY_API.shortcode.tabs.init();
 
+	// tools.popup
+	CHERRY_API.utilites.namespace('tools.popup');
+
+	if ( $.isEmptyObject( CHERRY_API.tools.popup ) ) {
+		CHERRY_API.tools.popup = {
+			init: function( target ) {
+				var self = this;
+				if ( CHERRY_API.status.document_ready ) {
+					self.render( target );
+				} else {
+					CHERRY_API.variable.$document.on('ready', self.render( target ) );
+				}
+			},
+			render: function( target ) {
+				if ( ! $.isFunction( jQuery.fn.magnificPopup ) ) {
+					return;
+				}
+
+				$('.cherry-popup-img').each(function( index, el ) {
+					$(this).magnificPopup({ type: 'image' });
+				});
+			}
+		}
+	}
+	CHERRY_API.tools.popup.init();
+
 }(jQuery));

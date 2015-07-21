@@ -3,7 +3,7 @@
  * Plugin Name: Cherry Shortcodes
  * Plugin URI:  http://www.cherryframework.com/
  * Description: A pack of WordPress shortcodes.
- * Version:     1.0.0 beta
+ * Version:     1.0.1 beta
  * Author:      Cherry Team
  * Author URI:  http://www.cherryframework.com/
  * Text Domain: cherry-shortcodes
@@ -82,7 +82,7 @@ if ( !class_exists( 'Cherry_Shortcodes' ) ) {
 			 *
 			 * @since 1.0.0
 			 */
-			define( 'CHERRY_SHORTCODES_VERSION', '1.0.0' );
+			define( 'CHERRY_SHORTCODES_VERSION', '1.0.1' );
 
 			/**
 			 * Set the slug of the plugin.
@@ -137,7 +137,6 @@ if ( !class_exists( 'Cherry_Shortcodes' ) ) {
 		function includes() {
 			require_once( CHERRY_SHORTCODES_DIR . 'inc/vendor/sunrise.php' );
 			require_once( CHERRY_SHORTCODES_DIR . 'inc/assets.php' );
-			require_once( CHERRY_SHORTCODES_DIR . 'inc/template-callbacks.php' );
 			require_once( CHERRY_SHORTCODES_DIR . 'inc/shortcodes.php' );
 			require_once( CHERRY_SHORTCODES_DIR . 'inc/data.php' );
 			require_once( CHERRY_SHORTCODES_DIR . 'inc/tools.php' );

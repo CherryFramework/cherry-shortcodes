@@ -85,6 +85,11 @@ class Cherry_Shortcodes_Data {
 							'default' => '',
 							'name'    => __( 'Class', 'cherry-shortcodes' ),
 							'desc'    => __( 'Extra CSS class', 'cherry-shortcodes' ),
+						),
+						'anchor' => array(
+							'default' => '',
+							'name'    => __( 'Anchor', 'cherry-shortcodes' ),
+							'desc'    => __( 'This option defines menu item marker.', 'cherry-shortcodes' ),
 						)
 					),
 					'content' => __( "[%prefix_col size_md=\"4\"]Column content[/%prefix_col]\n[%prefix_col size_md=\"4\"]Column content[/%prefix_col]\n[%prefix_col size_md=\"4\"]Column content[/%prefix_col]", 'cherry-shortcodes' ),
@@ -112,6 +117,11 @@ class Cherry_Shortcodes_Data {
 							'default' => '',
 							'name'    => __( 'Class', 'cherry-shortcodes' ),
 							'desc'    => __( 'Extra CSS class', 'cherry-shortcodes' ),
+						),
+						'anchor' => array(
+							'default' => '',
+							'name'    => __( 'Anchor', 'cherry-shortcodes' ),
+							'desc'    => __( 'This option defines menu item marker.', 'cherry-shortcodes' ),
 						)
 					),
 					'content' => __( "[%prefix_col_inner size_md=\"4\"]Column content[/%prefix_col_inner]\n[%prefix_col_inner size_md=\"4\"]Column content[/%prefix_col_inner]\n[%prefix_col_inner size_md=\"4\"]Column content[/%prefix_col_inner]", 'cherry-shortcodes' ),
@@ -1361,6 +1371,12 @@ class Cherry_Shortcodes_Data {
 							'name'    => __( 'Linked featured image', 'cherry-shortcodes' ),
 							'desc'    => __( 'Linked featured image description', 'cherry-shortcodes' ),
 						),
+						'lightbox_image' => array(
+							'type'    => 'bool',
+							'default' => 'no',
+							'name'    => __( 'Open featured image in a lightbox?', 'cherry-shortcodes' ),
+							'desc'    => __( 'Open featured image in a lightbox?', 'cherry-shortcodes' ),
+						),
 						'image_size' => array(
 							'type'    => 'select',
 							'values'  => Cherry_Shortcodes_Tools::image_sizes(),
@@ -1948,8 +1964,73 @@ class Cherry_Shortcodes_Data {
 					'desc' => __( 'This shortcode added show animations on any page element.', 'cherry-shortcodes' ),
 					'icon' => 'magic',
 				),
-
-			) );
+				// [video_preview][/video_preview]
+				'video_preview' => array(
+					'name'  => __( 'Video Preview', 'cherry-shortcodes' ),
+					'desc' => __( 'Video Preview', 'cherry-shortcodes' ),
+					'icon' => 'film',
+					'type'  => 'wrap',
+					'group' => 'media',
+					'atts'  => array(
+						'source' => array(
+							'type'    => 'upload',
+							'default' => '',
+							'name'    => __( 'URL or File.', 'cherry-shortcodes' ),
+							'desc'    => __( 'To use video from YouTube or Vimeo input video URL. You can also upload video file from media library.', 'cherry-shortcodes' ),
+						),
+						'poster' => array(
+							'type'    => 'upload',
+							'default' => '',
+							'name'    => __( 'Poster.', 'cherry-shortcodes' ),
+							'desc'    => __( 'Poster image url.', 'cherry-shortcodes' ),
+						),
+						'control' => array(
+							'type'		=> 'select',
+							'values'	=> array(
+								'hide'			=> __( 'Hide control buttons', 'cherry-shortcodes' ),
+								'show'			=> __( 'Show control buttons', 'cherry-shortcodes' ),
+								'show-on-hover'	=> __( 'Show control button on mouse hover', 'cherry-shortcodes' ),
+								'autoplay	'	=> __( 'Video Autoplay', 'cherry-shortcodes' ),
+								'play-on-hover'	=> __( 'Play video on mouse hover', 'cherry-shortcodes' ),
+							),
+							'default'	=> 'show_content_on_hover',
+							'name'		=> __( 'Controls.', 'cherry-shortcodes' ),
+							'desc'		=> __( '', 'cherry-shortcodes' ),
+						),
+						'show_content_on_hover' => array(
+							'type'		=> 'bool',
+							'default'	=> 'no',
+							'name'		=> __( 'Show content on mouse hover.', 'cherry-shortcodes' ),
+							'desc'		=> __( '', 'cherry-shortcodes' ),
+						),
+						'muted' => array(
+							'type'    => 'bool',
+							'default' => 'no',
+							'name'    => __( 'Muted.', 'cherry-shortcodes' ),
+							'desc'    => __( '', 'cherry-shortcodes' ),
+						),
+						'loop' => array(
+							'type'    => 'bool',
+							'default' => 'no',
+							'name'    => __( 'Loop.', 'cherry-shortcodes' ),
+							'desc'    => __( '', 'cherry-shortcodes' ),
+						),
+						'preload' => array(
+							'type'    => 'bool',
+							'default' => 'no',
+							'name'    => __( 'Preload.', 'cherry-shortcodes' ),
+							'desc'    => __( '', 'cherry-shortcodes' ),
+						),
+						'custom_class' => array(
+							'type'    => 'text',
+							'default' => '',
+							'name'    => __( 'Custom class', 'cherry-shortcodes' ),
+							'desc'    => __( 'Element custom class. You can use "full-width" class for video', 'cherry-shortcodes' ),
+						)
+					)
+				)
+			)
+		);
 
 		// Return result.
 		return ( is_string( $shortcode ) ) ? $shortcodes[ sanitize_text_field( $shortcode ) ] : $shortcodes;

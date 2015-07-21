@@ -17,6 +17,8 @@ add_filter( 'cherry_shortcodes_tools_get_types',      'cherry_shortcodes_unset_t
 add_filter( 'cherry_shortcodes_tools_get_taxonomies', 'cherry_shortcodes_unset_taxonomy' );
 add_filter( 'cherry_templater_target_dirs',           'cherry_templater_add_target_dirs' );
 add_filter( 'cherry_templater_macros_buttons',        'cherry_shortcodes_macros_buttons', 10, 2 );
+add_filter( 'cherry_general_options_list', 'add_option_item' );
+add_filter( 'nav_menu_link_attributes', 'modify_nav_menu_args' );
 
 function cherry_shortcodes_unset_type( $types ) {
 	unset( $types['nav_menu_item'] );
@@ -157,4 +159,34 @@ function cherry_shortcodes_macros_buttons( $macros_buttons, $shortcode ) {
 	}
 
 	return $macros_buttons;
+}
+
+function add_option_item($general_options){
+	$all_pages     = array();
+	$all_pages_obj = get_pages( 'sort_column=post_parent,menu_order' );
+	$all_pages[''] = __( 'Select a page:', 'cherry' );
+
+	foreach ( $all_pages_obj as $page ) {
+		$all_pages[$page->ID] = $page->post_title;
+	}
+
+	$general_options['general-landing-page'] = array(
+		'type'        => 'select',
+		'title'       => __( 'Landing page', 'cherry-shortcodes' ),
+		'description' => __( 'Please select landing page. (Page with anchor navigation menu.)', 'cherry-shortcodes' ),
+		'value'       => '',
+		'class'       => 'width-full',
+		'options'     => $all_pages,
+	);
+	return $general_options;
+}
+
+function modify_nav_menu_args ( $atts ) {
+	$general_landing_page = cherry_get_option('general-landing-page');
+	$page_id = get_the_ID();
+
+	if( $general_landing_page && $general_landing_page != $page_id && strpos($atts['href'], '#') === 0){
+		$atts['href'] = get_page_link( $general_landing_page ) . $atts['href'];
+	};
+	return $atts;
 }

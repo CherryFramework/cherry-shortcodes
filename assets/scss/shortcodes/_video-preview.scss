@@ -1,0 +1,56 @@
+/*--------------------------
+## [lazy_load_effect]
+--------------------------*/
+figure.video-preview{
+	.hidden-element{
+		opacity: 0;
+		transition: opacity 0.4s ease-in-out;
+	}
+	&:hover .hidden-element{
+		opacity: 1;
+		transition: opacity 0.4s ease-in-out;
+	}
+	&.full-width .video-inner-holder{
+		left: 0;
+		width: 100%;
+		position: absolute;
+	}
+	.video-inner-holder{
+		position: relative;
+		width: auto;
+		left:inherit;
+		.youtube-player-cap, .cherry-video-poster{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.youtube-player-cap{
+			z-index: 0;
+		}
+		.cherry-video-poster{
+			background-repeat: no-repeat;
+			background-size: cover;
+			z-index: 1;
+		}
+	}
+	.video-preview-controls{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 78px;
+		z-index: 2;
+		&>.play-pause, &>.mute{
+			font-size: 28px;
+			background: none;
+			border: none;
+			box-shadow: none;
+			outline: none;
+			color: #fff;
+			width: 50%;
+			text-align: left;
+		}
+	}
+}
