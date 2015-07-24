@@ -356,8 +356,7 @@ class Cherry_Shortcodes_Tools {
 	 *                                            custom class name, image alt name.
 	 * @return string (HTML-formatted).
 	 */
-	public static function get_crop_image( $img_url = '', $width = 100, $height = 100, $custom_class = '', $alt_value = '' ) {
-		$attachment_id = self::get_attachment_id_from_src( $img_url );
+	public static function get_crop_image( $img_url = '', $attachment_id = null, $width = 100, $height = 100, $custom_class = '', $alt_value = '' ) {
 
 		// check if $attachment_id exist
 		if ( $attachment_id == null ) {
@@ -379,9 +378,8 @@ class Cherry_Shortcodes_Tools {
 			'mime-type'		=> get_post_mime_type($attachment_id)
 		);
 		// wp update attachment metadata
-		if( wp_update_attachment_metadata( $attachment_id, $attachment_metadata ) ){
+		wp_update_attachment_metadata( $attachment_id, $attachment_metadata );
 
-		}
 		$ratio_value = $height / $width;
 		$image .= '<img class="wp-post-image croped-image ' . $custom_class . '" data-ratio="' . $ratio_value . '" width="' . $width . '" height="' . $height .'" src="' . $croped_image_url . '" alt="'. $alt_value .'">';
 
