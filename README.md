@@ -4,6 +4,13 @@ A pack of WordPress shortcodes.
 
 ##Change log##
 
+#### v1.0.2 ####
+
+* FIX: https://github.com/CherryFramework/cherry-shortcodes/issues/1
+* FIX: returned filters
+* FIX: `crop_image` function
+* UPD: raname .pot file
+
 #### v1.0.1 ####
 
 * ADD: `[video_preview]` shortcode
