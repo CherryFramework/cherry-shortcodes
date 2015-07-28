@@ -167,7 +167,7 @@ class Cherry_Shortcodes_Template_Callbacks {
 
 				if ( $crop_image ) {
 					$img_url   = wp_get_attachment_url( get_post_thumbnail_id(), 'full' );
-					$thumbnail = Cherry_Shortcodes_Tools::get_crop_image( $img_url, $crop_width, $crop_height );
+					$thumbnail = Cherry_Shortcodes_Tools::get_crop_image( $img_url, get_post_thumbnail_id(), $crop_width, $crop_height );
 				} else {
 					$thumbnail = get_the_post_thumbnail( $post->ID, 'large' );
 				}
