@@ -1570,14 +1570,14 @@ class Cherry_Shortcodes_Handler {
 		return apply_filters( 'cherry_shortcodes_output', $html, $atts, 'google_map' );
 	}
 
-	public static function paralax_image( $atts = null, $content = null ) {
+	public static function parallax_image( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 			'bg_image'         => '',
 			'speed'            => '1.5',
 			'invert'           => 'no',
 			'min_height'       => '300',
 			'custom_class'     => '',
-		), $atts, 'paralax_image' );
+		), $atts, 'parallax_image' );
 
 		$bg_image     = sanitize_text_field( $atts['bg_image'] );
 		$speed        = floatval( $atts['speed'] );
@@ -1596,10 +1596,10 @@ class Cherry_Shortcodes_Handler {
 
 		cherry_query_asset( 'js', 'cherry-parallax' );
 
-		return apply_filters( 'cherry_shortcodes_output', $html, $atts, 'paralax_image' );
+		return apply_filters( 'cherry_shortcodes_output', $html, $atts, 'parallax_image' );
 	}
 
-	public static function paralax_html_video( $atts = null, $content = null ) {
+	public static function parallax_html_video( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 			'poster'       => '',
 			'mp4'          => '',
@@ -1608,7 +1608,7 @@ class Cherry_Shortcodes_Handler {
 			'speed'        => '1.5',
 			'invert'       => 'no',
 			'custom_class' => '',
-		), $atts, 'paralax_html_video' );
+		), $atts, 'parallax_html_video' );
 
 		$poster       = sanitize_text_field( $atts['poster'] );
 		$mp4          = sanitize_text_field( $atts['mp4'] );
@@ -1635,7 +1635,7 @@ class Cherry_Shortcodes_Handler {
 
 		cherry_query_asset( 'js', 'cherry-parallax' );
 
-		return apply_filters( 'cherry_shortcodes_output', $html, $atts, 'paralax_html_video' );
+		return apply_filters( 'cherry_shortcodes_output', $html, $atts, 'parallax_html_video' );
 	}
 
 	public static function counter( $atts = null, $content = null ) {

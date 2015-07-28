@@ -1680,17 +1680,17 @@ class Cherry_Shortcodes_Data {
 					'icon' => 'map-marker',
 				),
 
-				// [paralax_image][/paralax_image]
-				'paralax_image' => array(
-					'name'  => __( 'Paralax image', 'cherry-shortcodes' ),
+				// [parallax_image][/parallax_image]
+				'parallax_image' => array(
+					'name'  => __( 'Parallax image', 'cherry-shortcodes' ),
 					'type'  => 'wrap',
 					'group' => 'media',
 					'atts'  => array(
 						'bg_image' => array(
 							'type'    => 'upload',
 							'default' => '',
-							'name'    => __( 'Paralax image', 'cherry-shortcodes' ),
-							'desc'    => __( 'Upload paralax image url source', 'cherry-shortcodes' ),
+							'name'    => __( 'Parallax image', 'cherry-shortcodes' ),
+							'desc'    => __( 'Upload parallax image url source', 'cherry-shortcodes' ),
 						),
 						'speed' => array(
 							'type'    => 'number',
@@ -1698,14 +1698,14 @@ class Cherry_Shortcodes_Data {
 							'max'     => 10,
 							'step'    => 0.1,
 							'default' => 1.5,
-							'name'    => __( 'Paralax speed', 'cherry-shortcodes' ),
-							'desc'    => __( 'Paralax speed value (s)', 'cherry-shortcodes' ),
+							'name'    => __( 'Parallax speed', 'cherry-shortcodes' ),
+							'desc'    => __( 'Parallax speed value (s)', 'cherry-shortcodes' ),
 						),
 						'invert' => array(
 							'type'    => 'bool',
 							'default' => 'no',
-							'name'    => __( 'Paralax invert', 'cherry-shortcodes' ),
-							'desc'    => __( 'Paralax invert direction move', 'cherry-shortcodes' ),
+							'name'    => __( 'Parallax invert', 'cherry-shortcodes' ),
+							'desc'    => __( 'Parallax invert direction move', 'cherry-shortcodes' ),
 						),
 						'min_height' => array(
 							'type'    => 'number',
@@ -1713,7 +1713,7 @@ class Cherry_Shortcodes_Data {
 							'max'     => 1000,
 							'step'    => 1,
 							'default' => 300,
-							'name'    => __( 'Paralax container min-height', 'cherry-shortcodes' ),
+							'name'    => __( 'Parallax container min-height', 'cherry-shortcodes' ),
 							'desc'    => __( 'container min-height value (px)', 'cherry-shortcodes' ),
 						),
 						'custom_class' => array(
@@ -1724,13 +1724,13 @@ class Cherry_Shortcodes_Data {
 						),
 					),
 					'content' => __( 'Your content goes here', 'cherry-shortcodes' ),
-					'desc'    => __( 'Paralax block', 'cherry-shortcodes' ),
+					'desc'    => __( 'Parallax block', 'cherry-shortcodes' ),
 					'icon'    => 'star-half-o',
 				),
 
-				// [paralax_html_video][/paralax_html_video]
-				'paralax_html_video' => array(
-					'name'  => __( 'Paralax html video', 'cherry-shortcodes' ),
+				// [parallax_html_video][/parallax_html_video]
+				'parallax_html_video' => array(
+					'name'  => __( 'Parallax html video', 'cherry-shortcodes' ),
 					'type'  => 'wrap',
 					'group' => 'media',
 					'atts'  => array(
@@ -1764,14 +1764,14 @@ class Cherry_Shortcodes_Data {
 							'max'     => 10,
 							'step'    => 0.1,
 							'default' => 1.5,
-							'name'    => __( 'Paralax speed', 'cherry-shortcodes' ),
-							'desc'    => __( 'Paralax speed value (s)', 'cherry-shortcodes' ),
+							'name'    => __( 'Parallax speed', 'cherry-shortcodes' ),
+							'desc'    => __( 'Parallax speed value (s)', 'cherry-shortcodes' ),
 						),
 						'invert' => array(
 							'type'    => 'bool',
 							'default' => 'no',
-							'name'    => __( 'Paralax invert', 'cherry-shortcodes' ),
-							'desc'    => __( 'Paralax invert direction move', 'cherry-shortcodes' ),
+							'name'    => __( 'Parallax invert', 'cherry-shortcodes' ),
+							'desc'    => __( 'Parallax invert direction move', 'cherry-shortcodes' ),
 						),
 						'custom_class' => array(
 							'type'    => 'text',
@@ -1781,7 +1781,7 @@ class Cherry_Shortcodes_Data {
 						),
 					),
 					'content' => __( 'Your content goes here', 'cherry-shortcodes' ),
-					'desc'    => __( 'Paralax block', 'cherry-shortcodes' ),
+					'desc'    => __( 'Parallax block', 'cherry-shortcodes' ),
 					'icon'    => 'star-half-o',
 				),
 

@@ -179,6 +179,15 @@ if ( !class_exists( 'Cherry_Shortcodes' ) ) {
 				add_shortcode( CHERRY_SHORTCODES_PREFIX . $id, $func );
 			}
 
+			/**
+			 * Adds a fallback-compatibility after renaming shortcodes.
+			 *
+			 * @since 1.0.2
+			 * @see   https://github.com/CherryFramework/cherry-shortcodes/issues/1
+			 */
+			add_shortcode( CHERRY_SHORTCODES_PREFIX . 'paralax_image', array( 'Cherry_Shortcodes_Handler', 'parallax_image' ) );
+			add_shortcode( CHERRY_SHORTCODES_PREFIX . 'paralax_html_video', array( 'Cherry_Shortcodes_Handler', 'parallax_html_video' ) );
+
 			// Class Cherry API JS
 			require_once( CHERRY_SHORTCODES_DIR . 'inc/class-cherry-api-js.php' );
 		}
