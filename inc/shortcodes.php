@@ -1570,6 +1570,10 @@ class Cherry_Shortcodes_Handler {
 		return apply_filters( 'cherry_shortcodes_output', $html, $atts, 'google_map' );
 	}
 
+	public static function paralax_image( $atts = null, $content = null ) {
+		return self::parallax_image( $atts, $content );
+	}
+
 	public static function parallax_image( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 			'bg_image'         => '',
@@ -1597,6 +1601,10 @@ class Cherry_Shortcodes_Handler {
 		cherry_query_asset( 'js', 'cherry-parallax' );
 
 		return apply_filters( 'cherry_shortcodes_output', $html, $atts, 'parallax_image' );
+	}
+
+	public static function paralax_html_video( $atts = null, $content = null ) {
+		return self::parallax_html_video( $atts, $content );
 	}
 
 	public static function parallax_html_video( $atts = null, $content = null ) {
