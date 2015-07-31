@@ -969,7 +969,7 @@ class Cherry_Shortcodes_Data {
 						'tax_term' => array(
 							'type'     => 'select',
 							'multiple' => true,
-							'values'   => Cherry_Shortcodes_Tools::get_terms( 'category', 'slug' ),
+							'values'   => array(), // stay empty
 							'default'  => '',
 							'name'     => __( 'Terms', 'cherry-shortcodes' ),
 							'desc'     => __( 'Select terms to show posts from', 'cherry-shortcodes' ),
@@ -1276,7 +1276,7 @@ class Cherry_Shortcodes_Data {
 						'tax_term' => array(
 							'type'     => 'select',
 							'multiple' => true,
-							'values'   => Cherry_Shortcodes_Tools::get_terms( 'category', 'slug' ),
+							'values'   => array(), // stay empty
 							'default'  => '',
 							'name'     => __( 'Terms', 'cherry-shortcodes' ),
 							'desc'     => __( 'Select terms to show posts from', 'cherry-shortcodes' ),

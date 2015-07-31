@@ -50,7 +50,7 @@ if ( !class_exists( 'Cherry_Shortcodes' ) ) {
 			// Load the functions files.
 			add_action( 'plugins_loaded', array( $this, 'includes' ),  3 );
 
-			add_action( 'init', array( $this, 'register' ), 10 );
+			add_action( 'init', array( $this, 'register' ), 11 );
 			add_action( 'init', array( $this, 'update' ),   20 );
 
 			// Enable shortcodes in text widgets.
