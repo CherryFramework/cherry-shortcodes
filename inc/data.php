@@ -1672,8 +1672,9 @@ class Cherry_Shortcodes_Data {
 						'map_marker' => array(
 							'type'    => 'upload',
 							'default' => '',
+							'data_type' => 'id',
 							'name'    => __( 'Marker source', 'cherry-shortcodes' ),
-							'desc'    => __( 'Upload marker url source', 'cherry-shortcodes' ),
+							'desc'    => __( 'Select marker id attachment', 'cherry-shortcodes' ),
 						),
 					),
 					'desc' => __( 'Google Map', 'cherry-shortcodes' ),

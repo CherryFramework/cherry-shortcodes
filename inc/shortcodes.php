@@ -1518,7 +1518,7 @@ class Cherry_Shortcodes_Handler {
 			$lng_value    = floatval( $geo_position['lng'] );
 		}
 
-		$map_marker_attachment_id = Cherry_Shortcodes_Tools::get_attachment_id_from_src( $map_marker );
+		$map_marker_attachment_id = !is_numeric( $map_marker ) ? Cherry_Shortcodes_Tools::get_attachment_id_from_src( $map_marker ) : intval( $map_marker );
 
 		if ( isset( $map_marker_attachment_id ) ) {
 			$map_marker = wp_get_attachment_image_src( $map_marker_attachment_id );

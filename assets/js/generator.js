@@ -388,6 +388,7 @@ jQuery(document).ready(function($) {
 					$button.on('click', function(e) {
 						e.preventDefault();
 						e.stopPropagation();
+						var data_type = $(this).data('type');
 						// If the frame already exists, reopen it
 						if (typeof(file) !== 'undefined') file.close();
 						// Create WP media frame.
@@ -403,8 +404,11 @@ jQuery(document).ready(function($) {
 						});
 						//callback for selected image
 						file.on('select', function() {
-							var attachment = file.state().get('selection').first().toJSON();
-							$val.val(attachment.url).trigger('change');
+							var
+								attachment = file.state().get('selection').first().toJSON()
+							,	attachment_value = ( data_type == 'url' ) ? attachment.url : attachment.id
+							;
+							$val.val(attachment_value).trigger('change');
 						});
 						// Open modal
 						file.open();

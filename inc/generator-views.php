@@ -60,7 +60,8 @@ class Cherry_Shortcodes_Generator_Views {
 	}
 
 	public static function upload( $id, $field ) {
-		$return = '<input type="text" name="' . $id . '" value="' . esc_attr( $field['default'] ) . '" id="cherry-generator-attr-' . $id . '" class="cherry-generator-attr cherry-generator-upload-value" /><div class="cherry-generator-field-actions"><a href="javascript:;" class="button cherry-generator-upload-button"><img src="' . admin_url( '/images/media-button.png' ) . '" alt="' . __( 'Media manager', 'cherry-shortcodes' ) . '" />' . __( 'Media manager', 'cherry-shortcodes' ) . '</a></div>';
+		$data_type = isset( $field['data_type'] ) && 'id' == $field['data_type'] ? 'data-type="id"' : 'data-type="url"';
+		$return = '<input type="text" name="' . $id . '" value="' . esc_attr( $field['default'] ) . '" id="cherry-generator-attr-' . $id . '" class="cherry-generator-attr cherry-generator-upload-value" /><div class="cherry-generator-field-actions"><a href="javascript:;" class="button cherry-generator-upload-button" ' . $data_type . '><img src="' . admin_url( '/images/media-button.png' ) . '" alt="' . __( 'Media manager', 'cherry-shortcodes' ) . '" />' . __( 'Media manager', 'cherry-shortcodes' ) . '</a></div>';
 		return $return;
 	}
 
