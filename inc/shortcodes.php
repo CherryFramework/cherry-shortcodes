@@ -892,6 +892,16 @@ class Cherry_Shortcodes_Handler {
 					continue;
 				}
 
+				/**
+				 * Filters the array with a current post data.
+				 *
+				 * @since 1.0.0
+				 * @param array  $_postdata Array with a current post data.
+				 * @param int    $post_id   Post ID.
+				 * @param array  $atts      Shortcode attributes.
+				 */
+				self::$post_data = apply_filters( 'cherry_shortcode_posts_postdata', self::$post_data, $post_id, $atts );
+
 				// Perform a regular expression.
 				$tpl = preg_replace_callback( self::$macros_pattern, array( 'self', 'replace_callback' ), $tpl );
 
@@ -1258,6 +1268,7 @@ class Cherry_Shortcodes_Handler {
 			$template = ob_get_contents();
 			ob_end_clean();
 
+			// Default macros-array.
 			$data = array( 'image', 'title', 'date', 'author', 'comments', 'taxonomy', 'excerpt', 'content', 'button' );
 			self::setup_template_data( $data, $atts );
 			self::$post_data = array_merge( array( 'tag' => 'swiper_carousel' ), self::$post_data );
@@ -1274,6 +1285,16 @@ class Cherry_Shortcodes_Handler {
 				if ( 'private' == get_post_status( $post_id ) && ! current_user_can( 'read_private_posts' ) ) {
 					continue;
 				}
+
+				/**
+				 * Filters the array with a current post data.
+				 *
+				 * @since 1.0.0
+				 * @param array  $_postdata Array with a current post data.
+				 * @param int    $post_id   Post ID.
+				 * @param array  $atts      Shortcode attributes.
+				 */
+				self::$post_data = apply_filters( 'cherry-shortcode-swiper-carousel-postdata', self::$post_data, $post_id, $atts );
 
 				// Perform a regular expression.
 				$tpl = preg_replace_callback( self::$macros_pattern, array( 'self', 'replace_callback' ), $tpl );
@@ -1550,13 +1571,17 @@ class Cherry_Shortcodes_Handler {
 	}
 
 	public static function paralax_image( $atts = null, $content = null ) {
+		return self::parallax_image( $atts, $content );
+	}
+
+	public static function parallax_image( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 			'bg_image'         => '',
 			'speed'            => '1.5',
 			'invert'           => 'no',
 			'min_height'       => '300',
 			'custom_class'     => '',
-		), $atts, 'paralax_image' );
+		), $atts, 'parallax_image' );
 
 		$bg_image     = sanitize_text_field( $atts['bg_image'] );
 		$speed        = floatval( $atts['speed'] );
@@ -1575,10 +1600,14 @@ class Cherry_Shortcodes_Handler {
 
 		cherry_query_asset( 'js', 'cherry-parallax' );
 
-		return apply_filters( 'cherry_shortcodes_output', $html, $atts, 'paralax_image' );
+		return apply_filters( 'cherry_shortcodes_output', $html, $atts, 'parallax_image' );
 	}
 
 	public static function paralax_html_video( $atts = null, $content = null ) {
+		return self::parallax_html_video( $atts, $content );
+	}
+
+	public static function parallax_html_video( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 			'poster'       => '',
 			'mp4'          => '',
@@ -1587,7 +1616,7 @@ class Cherry_Shortcodes_Handler {
 			'speed'        => '1.5',
 			'invert'       => 'no',
 			'custom_class' => '',
-		), $atts, 'paralax_html_video' );
+		), $atts, 'parallax_html_video' );
 
 		$poster       = sanitize_text_field( $atts['poster'] );
 		$mp4          = sanitize_text_field( $atts['mp4'] );
@@ -1614,7 +1643,7 @@ class Cherry_Shortcodes_Handler {
 
 		cherry_query_asset( 'js', 'cherry-parallax' );
 
-		return apply_filters( 'cherry_shortcodes_output', $html, $atts, 'paralax_html_video' );
+		return apply_filters( 'cherry_shortcodes_output', $html, $atts, 'parallax_html_video' );
 	}
 
 	public static function counter( $atts = null, $content = null ) {
@@ -1932,9 +1961,9 @@ class Cherry_Shortcodes_Handler {
 		);
 
 		$_data = array();
-		foreach ( $data as $d ) {
-			if ( ! empty( $full_data[ $d ] ) ) {
-				$_data = array_merge( $_data, array( $d => $full_data[ $d ] ) );
+		foreach ( $data as $key ) {
+			if ( ! empty( $full_data[ $key ] ) ) {
+				$_data = array_merge( $_data, array( $key => $full_data[ $key ] ) );
 			}
 		}
 
@@ -1943,7 +1972,7 @@ class Cherry_Shortcodes_Handler {
 
 	public static function replace_callback( $matches ) {
 
-		if ( !is_array( $matches ) ) {
+		if ( ! is_array( $matches ) ) {
 			return '';
 		}
 
@@ -1953,14 +1982,14 @@ class Cherry_Shortcodes_Handler {
 
 		$key = strtolower( $matches[1] );
 
-		// if key not found in data -return nothing
+		// if key not found in data - return nothing
 		if ( ! isset( self::$post_data[ $key ] ) ) {
 			return '';
 		}
 
 		$callback = self::$post_data[ $key ];
 
-		if ( ! is_callable( $callback ) ) {
+		if ( is_array( $callback ) && ! is_callable( $callback ) ) {
 			return;
 		}
 
@@ -1969,7 +1998,7 @@ class Cherry_Shortcodes_Handler {
 			return call_user_func( $callback, $matches[3] );
 		}
 
-		return call_user_func( $callback );
+		return is_callable( $callback ) ? call_user_func( $callback ) : $callback;
 	}
 
 	/**

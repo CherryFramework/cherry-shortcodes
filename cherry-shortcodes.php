@@ -3,7 +3,7 @@
  * Plugin Name: Cherry Shortcodes
  * Plugin URI:  http://www.cherryframework.com/
  * Description: A pack of WordPress shortcodes.
- * Version:     1.0.1
+ * Version:     1.0.2
  * Author:      Cherry Team
  * Author URI:  http://www.cherryframework.com/
  * Text Domain: cherry-shortcodes
@@ -50,7 +50,7 @@ if ( !class_exists( 'Cherry_Shortcodes' ) ) {
 			// Load the functions files.
 			add_action( 'plugins_loaded', array( $this, 'includes' ),  3 );
 
-			add_action( 'init', array( $this, 'register' ), 10 );
+			add_action( 'init', array( $this, 'register' ), 11 );
 			add_action( 'init', array( $this, 'update' ),   20 );
 
 			// Enable shortcodes in text widgets.
@@ -82,7 +82,7 @@ if ( !class_exists( 'Cherry_Shortcodes' ) ) {
 			 *
 			 * @since 1.0.0
 			 */
-			define( 'CHERRY_SHORTCODES_VERSION', '1.0.1' );
+			define( 'CHERRY_SHORTCODES_VERSION', '1.0.2' );
 
 			/**
 			 * Set the slug of the plugin.
@@ -178,6 +178,15 @@ if ( !class_exists( 'Cherry_Shortcodes' ) ) {
 				// Register shortcode.
 				add_shortcode( CHERRY_SHORTCODES_PREFIX . $id, $func );
 			}
+
+			/**
+			 * Adds a fallback-compatibility after renaming shortcodes.
+			 *
+			 * @since 1.0.2
+			 * @see   https://github.com/CherryFramework/cherry-shortcodes/issues/1
+			 */
+			add_shortcode( CHERRY_SHORTCODES_PREFIX . 'paralax_image', array( 'Cherry_Shortcodes_Handler', 'parallax_image' ) );
+			add_shortcode( CHERRY_SHORTCODES_PREFIX . 'paralax_html_video', array( 'Cherry_Shortcodes_Handler', 'parallax_html_video' ) );
 
 			// Class Cherry API JS
 			require_once( CHERRY_SHORTCODES_DIR . 'inc/class-cherry-api-js.php' );
