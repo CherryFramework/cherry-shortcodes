@@ -500,8 +500,9 @@ class Cherry_Shortcodes_Data {
 						'image' => array(
 							'type'    => 'upload',
 							'default' => '',
+							'data_type' => 'id',
 							'name'    => __( 'Banner Image', 'cherry-shortcodes' ),
-							'desc'    => __( 'Upload banner image', 'cherry-shortcodes' ),
+							'desc'    => __( 'Select attachment banner image', 'cherry-shortcodes' ),
 						),
 						'title' => array(
 							'default' => '',
