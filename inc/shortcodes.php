@@ -657,7 +657,7 @@ class Cherry_Shortcodes_Handler {
 				'ignore_sticky_posts' => 'yes',
 				'linked_title'        => 'yes',
 				'linked_image'        => 'yes',
-				'lightbox_image'      => 'yes',
+				'lightbox_image'      => 'no',
 				'image_size'          => 'thumbnail',
 				'content_type'        => 'part',
 				'content_length'      => 55,

@@ -1073,7 +1073,7 @@ class Cherry_Shortcodes_Data {
 							),
 							'default' => 'part',
 							'name'    => __( 'Post content', 'cherry-shortcodes' ),
-							'desc'    => __( 'Choose to display a part or d content', 'cherry-shortcodes' ),
+							'desc'    => __( 'Choose to display a part or full content ', 'cherry-shortcodes' ),
 						),
 						'content_length' => array(
 							'type'    => 'number',
@@ -1393,7 +1393,7 @@ class Cherry_Shortcodes_Data {
 							),
 							'default' => 'part',
 							'name'    => __( 'Post content', 'cherry-shortcodes' ),
-							'desc'    => __( 'Choose to display a part or d content', 'cherry-shortcodes' ),
+							'desc'    => __( 'Choose to display a part or full content ', 'cherry-shortcodes' ),
 						),
 						'content_length' => array(
 							'type'    => 'number',
