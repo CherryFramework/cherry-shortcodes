@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cherry Shortcodes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-26 15:07+0200\n"
-"PO-Revision-Date: 2015-05-26 15:07+0200\n"
+"POT-Creation-Date: 2015-07-30 17:18+0300\n"
+"PO-Revision-Date: 2015-07-30 17:18+0300\n"
 "Last-Translator: J.L.Dokter <jldokter@gmail.com>\n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -11,45 +11,45 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.8\n"
+"X-Generator: Poedit 1.8.3\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Textdomain-Support: yes\n"
-"X-Poedit-Basepath: ..\\\n"
+"X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
 
 # @ su
 # @ textdomain
-#: inc/assets.php:123 inc/vendor/sunrise.php:179
+#: inc/assets.php:143 inc/vendor/sunrise.php:179
 msgid "Choose file"
 msgstr "Kies bestand"
 
 # @ su
-#: inc/assets.php:124
+#: inc/assets.php:144
 msgid "Insert"
 msgstr "Voeg in"
 
 # @ su
-#: inc/assets.php:125
+#: inc/assets.php:145
 msgid "Select images"
 msgstr "Selecteer images"
 
 # @ su
-#: inc/assets.php:126
+#: inc/assets.php:146
 msgid "Add selected images"
 msgstr "Voeg geselecteerde images toe"
 
-#: inc/assets.php:127
+#: inc/assets.php:147
 msgid "Please enter a name for new preset"
 msgstr "Geef een naam op voor de nieuwe preset"
 
 # @ su
-#: inc/assets.php:128
+#: inc/assets.php:148
 msgid "New preset"
 msgstr "Nieuwe voorinstelling"
 
-#: inc/assets.php:129
+#: inc/assets.php:149
 msgid "Last used settings"
 msgstr ""
 
@@ -67,7 +67,7 @@ msgid "Typography"
 msgstr ""
 
 # @ su
-#: inc/data.php:33 inc/generator.php:232
+#: inc/data.php:33 inc/generator.php:231
 msgid "Content"
 msgstr "Inhoud"
 
@@ -86,7 +86,7 @@ msgid "Other"
 msgstr "Andere"
 
 # @ su
-#: inc/data.php:45 inc/data.php:913 inc/data.php:1211
+#: inc/data.php:45 inc/data.php:1011 inc/data.php:1318
 msgid "None"
 msgstr "Geen"
 
@@ -125,42 +125,53 @@ msgstr "Rand"
 msgid "Row"
 msgstr "Rij"
 
-#: inc/data.php:77 inc/data.php:104
+#: inc/data.php:77 inc/data.php:109
 msgid "Fixed Width"
 msgstr ""
 
-#: inc/data.php:78 inc/data.php:105
+#: inc/data.php:78 inc/data.php:110
 msgid "Full Width"
 msgstr ""
 
 # @ su
-#: inc/data.php:81 inc/data.php:108
+#: inc/data.php:81 inc/data.php:113
 msgid "Type"
 msgstr "Soort"
 
-#: inc/data.php:82 inc/data.php:109
+#: inc/data.php:82 inc/data.php:114
 msgid "Type width"
 msgstr ""
 
 # @ su
-#: inc/data.php:86 inc/data.php:113 inc/data.php:164 inc/data.php:216
-#: inc/data.php:243 inc/data.php:259 inc/data.php:297 inc/data.php:385
-#: inc/data.php:432 inc/data.php:492 inc/data.php:554 inc/data.php:621
-#: inc/data.php:798 inc/data.php:995 inc/data.php:1299 inc/data.php:1349
-#: inc/data.php:1398 inc/data.php:1443 inc/data.php:1462
+#: inc/data.php:86 inc/data.php:118 inc/data.php:174 inc/data.php:226
+#: inc/data.php:253 inc/data.php:269 inc/data.php:307 inc/data.php:395
+#: inc/data.php:485 inc/data.php:532 inc/data.php:592 inc/data.php:654
+#: inc/data.php:728 inc/data.php:905 inc/data.php:927 inc/data.php:1093
+#: inc/data.php:1419 inc/data.php:1469 inc/data.php:1518 inc/data.php:1563
+#: inc/data.php:1582
 msgid "Class"
 msgstr "Klasse"
 
 # @ su
-#: inc/data.php:87 inc/data.php:114 inc/data.php:165 inc/data.php:217
-#: inc/data.php:244 inc/data.php:260 inc/data.php:298 inc/data.php:386
-#: inc/data.php:433 inc/data.php:493 inc/data.php:555 inc/data.php:622
-#: inc/data.php:799 inc/data.php:996 inc/data.php:1300 inc/data.php:1350
-#: inc/data.php:1399 inc/data.php:1444 inc/data.php:1463
+#: inc/data.php:87 inc/data.php:119 inc/data.php:175 inc/data.php:227
+#: inc/data.php:254 inc/data.php:270 inc/data.php:308 inc/data.php:396
+#: inc/data.php:486 inc/data.php:533 inc/data.php:593 inc/data.php:655
+#: inc/data.php:729 inc/data.php:906 inc/data.php:928 inc/data.php:1094
+#: inc/data.php:1420 inc/data.php:1470 inc/data.php:1519 inc/data.php:1564
+#: inc/data.php:1583
 msgid "Extra CSS class"
 msgstr "Extra CSS klasse"
 
-#: inc/data.php:90
+# @ su
+#: inc/data.php:91 inc/data.php:123 inc/data.php:1498 inc/data.php:1558
+msgid "Anchor"
+msgstr "Anker"
+
+#: inc/data.php:92 inc/data.php:124
+msgid "This option defines menu item marker."
+msgstr ""
+
+#: inc/data.php:95
 msgid ""
 "[%prefix_col size_md=\"4\"]Column content[/%prefix_col]\n"
 "[%prefix_col size_md=\"4\"]Column content[/%prefix_col]\n"
@@ -168,15 +179,15 @@ msgid ""
 msgstr ""
 
 # @ su
-#: inc/data.php:91 inc/data.php:118
+#: inc/data.php:96 inc/data.php:128
 msgid "Row for flexible columns"
 msgstr "Rij met flexibele kolommen"
 
-#: inc/data.php:97
+#: inc/data.php:102
 msgid "Row Inner"
 msgstr ""
 
-#: inc/data.php:117
+#: inc/data.php:127
 msgid ""
 "[%prefix_col_inner size_md=\"4\"]Column content[/%prefix_col_inner]\n"
 "[%prefix_col_inner size_md=\"4\"]Column content[/%prefix_col_inner]\n"
@@ -184,1221 +195,1242 @@ msgid ""
 msgstr ""
 
 # @ su
-#: inc/data.php:124
+#: inc/data.php:134
 msgid "Column"
 msgstr "Kolom"
 
 # @ su
-#: inc/data.php:131 inc/data.php:183 inc/data.php:238 inc/data.php:679
+#: inc/data.php:141 inc/data.php:193 inc/data.php:248 inc/data.php:786
 msgid "Size"
 msgstr "Grootte"
 
-#: inc/data.php:132 inc/data.php:184
+#: inc/data.php:142 inc/data.php:194
 msgid "Select column width."
 msgstr ""
 
 # @ su
-#: inc/data.php:137 inc/data.php:189 inc/data.php:897 inc/data.php:1195
+#: inc/data.php:147 inc/data.php:199 inc/data.php:995 inc/data.php:1302
 msgid "Offset"
 msgstr "Offset"
 
-#: inc/data.php:138 inc/data.php:190
+#: inc/data.php:148 inc/data.php:200
 msgid "Select column offset."
 msgstr ""
 
-#: inc/data.php:143 inc/data.php:195
+#: inc/data.php:153 inc/data.php:205
 msgid "Pull"
 msgstr ""
 
-#: inc/data.php:144 inc/data.php:196
+#: inc/data.php:154 inc/data.php:206
 msgid "Select column pull."
 msgstr ""
 
-#: inc/data.php:149 inc/data.php:201
+#: inc/data.php:159 inc/data.php:211
 msgid "Push"
 msgstr ""
 
-#: inc/data.php:150 inc/data.php:202
+#: inc/data.php:160 inc/data.php:212
 msgid "Select column push."
 msgstr ""
 
 # @ su
-#: inc/data.php:155 inc/data.php:207 inc/generator-views.php:58
+#: inc/data.php:165 inc/data.php:217 inc/generator-views.php:58
 msgid "No"
 msgstr "Nee"
 
 # @ su
-#: inc/data.php:156 inc/data.php:208 inc/generator-views.php:58
+#: inc/data.php:166 inc/data.php:218 inc/generator-views.php:58
 msgid "Yes"
 msgstr "Ja"
 
-#: inc/data.php:159 inc/data.php:160 inc/data.php:211 inc/data.php:212
+#: inc/data.php:169 inc/data.php:170 inc/data.php:221 inc/data.php:222
 msgid "Collapse column paddings"
 msgstr ""
 
 # @ su
-#: inc/data.php:168 inc/data.php:220
+#: inc/data.php:178 inc/data.php:230
 msgid "Column content"
 msgstr "Inhoud kolom"
 
 # @ su
-#: inc/data.php:169 inc/data.php:221
+#: inc/data.php:179 inc/data.php:231
 msgid "Flexible and responsive columns"
 msgstr "Flexibele en mee-bewegende kolomen"
 
-#: inc/data.php:176
+#: inc/data.php:186
 msgid "Column Inner"
 msgstr ""
 
 # @ su
-#: inc/data.php:228
+#: inc/data.php:238
 msgid "Spacer"
 msgstr "Spacer"
 
-#: inc/data.php:239
+#: inc/data.php:249
 msgid "Spacer height"
 msgstr ""
 
-#: inc/data.php:247
+#: inc/data.php:257
 msgid "Vertical spacer between blocks"
 msgstr ""
 
-#: inc/data.php:253
+#: inc/data.php:263
 msgid "Clear"
 msgstr ""
 
-#: inc/data.php:263
+#: inc/data.php:273
 msgid "Clearing block"
 msgstr ""
 
 # @ su
-#: inc/data.php:269 inc/data.php:276 inc/data.php:519 inc/data.php:726
+#: inc/data.php:279 inc/data.php:286 inc/data.php:619 inc/data.php:833
+#: inc/data.php:922
 msgid "Icon"
 msgstr "Icon"
 
 # @ su
-#: inc/data.php:277 inc/data.php:520 inc/data.php:727
+#: inc/data.php:287 inc/data.php:620 inc/data.php:834 inc/data.php:923
 msgid "You can upload custom icon for this button or pick a built-in icon"
 msgstr ""
 "U kunt een eigen icon uploaden voor deze knop of een ingebouwde knop kiezen"
 
 # @ su
-#: inc/data.php:285 inc/data.php:528
+#: inc/data.php:295 inc/data.php:628
 msgid "Icon size"
 msgstr "Icon grootte"
 
-#: inc/data.php:286 inc/data.php:529
+#: inc/data.php:296 inc/data.php:629
 msgid "Font size in px (only for font icons)"
 msgstr ""
 
-#: inc/data.php:292 inc/data.php:549
+#: inc/data.php:302 inc/data.php:649
 msgid "Icon Color"
 msgstr ""
 
-#: inc/data.php:293 inc/data.php:550
+#: inc/data.php:303 inc/data.php:650
 msgid "Font icon color"
 msgstr ""
 
-#: inc/data.php:301
+#: inc/data.php:311
 msgid "Insert custom icon"
 msgstr ""
 
 # @ su
-#: inc/data.php:307 inc/data.php:390
+#: inc/data.php:317 inc/data.php:400
 msgid "Box"
 msgstr "Kader"
 
-#: inc/data.php:314 inc/data.php:651
+#: inc/data.php:324 inc/data.php:414 inc/data.php:758
 msgid "Primary"
 msgstr ""
 
-#: inc/data.php:315
+#: inc/data.php:325 inc/data.php:415
 msgid "Secondary"
 msgstr ""
 
-#: inc/data.php:316 inc/data.php:654
+#: inc/data.php:326 inc/data.php:416 inc/data.php:761
 msgid "Gray"
 msgstr ""
 
-#: inc/data.php:317
+#: inc/data.php:327 inc/data.php:417
 msgid "Primary border"
 msgstr ""
 
-#: inc/data.php:318
+#: inc/data.php:328 inc/data.php:418
 msgid "Secondary border"
 msgstr ""
 
-#: inc/data.php:319
+#: inc/data.php:329 inc/data.php:419
 msgid "Gray border"
 msgstr ""
 
-#: inc/data.php:322
+#: inc/data.php:332 inc/data.php:422
 msgid "Box styling preset"
 msgstr ""
 
-#: inc/data.php:323
+#: inc/data.php:333 inc/data.php:423
 msgid "Select box styling preset"
 msgstr ""
 
-#: inc/data.php:329 inc/data.php:588
+#: inc/data.php:339 inc/data.php:429 inc/data.php:697
 msgid "Background Color"
 msgstr ""
 
-#: inc/data.php:330
+#: inc/data.php:340 inc/data.php:430
 msgid "Select box background color"
 msgstr ""
 
-#: inc/data.php:335
+#: inc/data.php:345 inc/data.php:435
 msgid "Background Image"
 msgstr ""
 
-#: inc/data.php:336
+#: inc/data.php:346 inc/data.php:436
 msgid "Upload box background image"
 msgstr ""
 
-#: inc/data.php:341 inc/data.php:1771
+#: inc/data.php:351 inc/data.php:441 inc/data.php:1891
 msgid "Top Left"
 msgstr ""
 
-#: inc/data.php:342
+#: inc/data.php:352 inc/data.php:442
 msgid "Top Center"
 msgstr ""
 
-#: inc/data.php:343 inc/data.php:1772
+#: inc/data.php:353 inc/data.php:443 inc/data.php:1892
 msgid "Top Right"
 msgstr ""
 
-#: inc/data.php:344
+#: inc/data.php:354 inc/data.php:444
 msgid "Middle Left"
 msgstr ""
 
-#: inc/data.php:345
+#: inc/data.php:355 inc/data.php:445
 msgid "Middle Center"
 msgstr ""
 
-#: inc/data.php:346
+#: inc/data.php:356 inc/data.php:446
 msgid "Middle Right"
 msgstr ""
 
-#: inc/data.php:347 inc/data.php:1773
+#: inc/data.php:357 inc/data.php:447 inc/data.php:1893
 msgid "Bottom Left"
 msgstr ""
 
-#: inc/data.php:348
+#: inc/data.php:358 inc/data.php:448
 msgid "Bottom Center"
 msgstr ""
 
-#: inc/data.php:349 inc/data.php:1774
+#: inc/data.php:359 inc/data.php:449 inc/data.php:1894
 msgid "Bottom Right"
 msgstr ""
 
-#: inc/data.php:352
+#: inc/data.php:362 inc/data.php:452
 msgid "Background image position"
 msgstr ""
 
-#: inc/data.php:353
+#: inc/data.php:363 inc/data.php:453
 msgid "Select background image position"
 msgstr ""
 
-#: inc/data.php:358
+#: inc/data.php:368 inc/data.php:458
 msgid "No Repeat"
 msgstr ""
 
-#: inc/data.php:359
+#: inc/data.php:369 inc/data.php:459
 msgid "Repeat All"
 msgstr ""
 
-#: inc/data.php:360
+#: inc/data.php:370 inc/data.php:460
 msgid "Repeat Horizontally"
 msgstr ""
 
-#: inc/data.php:361
+#: inc/data.php:371 inc/data.php:461
 msgid "Repeat Vertically"
 msgstr ""
 
-#: inc/data.php:364
+#: inc/data.php:374 inc/data.php:464
 msgid "Background image repeat"
 msgstr ""
 
-#: inc/data.php:365
+#: inc/data.php:375 inc/data.php:465
 msgid "Select background image repeat"
 msgstr ""
 
-#: inc/data.php:370
+#: inc/data.php:380 inc/data.php:470
 msgid "Scroll normally"
 msgstr ""
 
-#: inc/data.php:371
+#: inc/data.php:381 inc/data.php:471
 msgid "Fixed in place"
 msgstr ""
 
-#: inc/data.php:374
+#: inc/data.php:384 inc/data.php:474
 msgid "Background image attachment"
 msgstr ""
 
-#: inc/data.php:375
+#: inc/data.php:385 inc/data.php:475
 msgid "Select background image attachment"
 msgstr ""
 
-#: inc/data.php:380
+#: inc/data.php:390 inc/data.php:480
 msgid "Fill"
 msgstr ""
 
-#: inc/data.php:381
+#: inc/data.php:391 inc/data.php:481
 msgid "Fill a parent container?"
 msgstr ""
 
-#: inc/data.php:389 inc/data.php:1606 inc/data.php:1663
+#: inc/data.php:399 inc/data.php:489 inc/data.php:1726 inc/data.php:1783
 msgid "Your content goes here"
 msgstr ""
 
-#: inc/data.php:396 inc/data.php:446
-msgid "Banner"
-msgstr ""
-
-#: inc/data.php:403
-msgid "Banner Image"
-msgstr ""
-
-#: inc/data.php:404
-msgid "Upload banner image"
-msgstr ""
-
-#: inc/data.php:408
-msgid "Banner Title"
-msgstr ""
-
-#: inc/data.php:409
-msgid "Enter banner title"
+#: inc/data.php:406 inc/data.php:490
+msgid "Box Inner"
 msgstr ""
 
 #: inc/data.php:413
+msgid "No preset"
+msgstr ""
+
+#: inc/data.php:496 inc/data.php:546
+msgid "Banner"
+msgstr ""
+
+#: inc/data.php:503
+msgid "Banner Image"
+msgstr ""
+
+#: inc/data.php:504
+msgid "Upload banner image"
+msgstr ""
+
+#: inc/data.php:508
+msgid "Banner Title"
+msgstr ""
+
+#: inc/data.php:509
+msgid "Enter banner title"
+msgstr ""
+
+#: inc/data.php:513
 msgid "Banner URL"
 msgstr ""
 
-#: inc/data.php:414 inc/filters.php:112
+#: inc/data.php:514 inc/filters.php:121
 msgid "Banner link URL"
 msgstr ""
 
 # @ su
-#: inc/data.php:420 inc/data.php:757
+#: inc/data.php:520 inc/data.php:864
 msgid "Text color"
 msgstr "Tekst kleur"
 
-#: inc/data.php:421
+#: inc/data.php:521
 msgid "Banner text color"
 msgstr ""
 
-#: inc/data.php:427
+#: inc/data.php:527
 msgid "Background color"
 msgstr ""
 
-#: inc/data.php:428 inc/filters.php:126
+#: inc/data.php:528 inc/filters.php:135
 msgid "Banner background color"
 msgstr ""
 
 # @ su
-#: inc/data.php:441 inc/data.php:1004 inc/data.php:1308
+#: inc/data.php:541 inc/data.php:1102 inc/data.php:1428
 msgid "Template"
 msgstr "Template"
 
-#: inc/data.php:442 inc/data.php:1005 inc/data.php:1309
+#: inc/data.php:542 inc/data.php:1103 inc/data.php:1429
 msgid "Shortcode template"
 msgstr ""
 
-#: inc/data.php:445
+#: inc/data.php:545
 msgid "Banner content goes here"
 msgstr ""
 
-#: inc/data.php:452 inc/data.php:496
+#: inc/data.php:552 inc/data.php:596
 msgid "Horizontal Rule"
 msgstr ""
 
-#: inc/data.php:462
+#: inc/data.php:562
 msgid "Line height"
 msgstr ""
 
-#: inc/data.php:463
+#: inc/data.php:563
 msgid "Horizontal rule height"
 msgstr ""
 
-#: inc/data.php:469
+#: inc/data.php:569
 msgid "Line color"
 msgstr ""
 
-#: inc/data.php:470
+#: inc/data.php:570
 msgid "Horizontal rule color"
 msgstr ""
 
-#: inc/data.php:478
+#: inc/data.php:578
 msgid "Indent before"
 msgstr ""
 
-#: inc/data.php:479
+#: inc/data.php:579
 msgid "Indent before horizontal rule"
 msgstr ""
 
-#: inc/data.php:487
+#: inc/data.php:587
 msgid "Indent after"
 msgstr ""
 
-#: inc/data.php:488
+#: inc/data.php:588
 msgid "Indent after horizontal rule"
 msgstr ""
 
-#: inc/data.php:502
+#: inc/data.php:602
 msgid "Title Box"
 msgstr ""
 
 # @ su
-#: inc/data.php:508 inc/data.php:1367 inc/data.php:1417
+#: inc/data.php:608 inc/data.php:1487 inc/data.php:1537
 msgid "Title"
 msgstr "Titel"
 
-#: inc/data.php:509
+#: inc/data.php:609
 msgid "Title text"
 msgstr ""
 
-#: inc/data.php:513
+#: inc/data.php:613
 msgid "Subtitle"
 msgstr ""
 
-#: inc/data.php:514
+#: inc/data.php:614
 msgid "Subtitle text"
 msgstr ""
 
-#: inc/data.php:535
+#: inc/data.php:635
 msgid "Title Color"
 msgstr ""
 
 # @ su
-#: inc/data.php:536
+#: inc/data.php:636
 msgid "Title text color"
 msgstr "Kleur van de titel-tekst"
 
-#: inc/data.php:542
+#: inc/data.php:642
 msgid "Subtitle Color"
 msgstr ""
 
-#: inc/data.php:543
+#: inc/data.php:643
 msgid "Subtitle text color"
 msgstr ""
 
-#: inc/data.php:558
+#: inc/data.php:658
 msgid "Title box"
 msgstr ""
 
 # @ su
-#: inc/data.php:564
+#: inc/data.php:664
 msgid "Dropcap"
 msgstr "Dropcap"
 
-#: inc/data.php:574
+#: inc/data.php:674
 msgid "Text size"
 msgstr ""
 
-#: inc/data.php:575
-msgid "Text size in px (total dropcap size automatically claculated)"
+#: inc/data.php:675
+msgid "Text size in px"
 msgstr ""
 
-#: inc/data.php:581
+#: inc/data.php:683
+msgid "Canvas size"
+msgstr ""
+
+#: inc/data.php:684
+msgid "Canvas size in px"
+msgstr ""
+
+#: inc/data.php:690
 msgid "Text Color"
 msgstr ""
 
-#: inc/data.php:582
+#: inc/data.php:691
 msgid "Dropcap text color"
 msgstr ""
 
-#: inc/data.php:589
+#: inc/data.php:698
 msgid "Dropcap background color"
 msgstr ""
 
 # @ su
-#: inc/data.php:594 inc/data.php:716 inc/data.php:732 inc/data.php:1734
+#: inc/data.php:703 inc/data.php:823 inc/data.php:839 inc/data.php:1854
 msgid "Left"
 msgstr "Links"
 
 # @ su
-#: inc/data.php:595 inc/data.php:717 inc/data.php:734 inc/data.php:1732
+#: inc/data.php:704 inc/data.php:824 inc/data.php:841 inc/data.php:1852
 msgid "Right"
 msgstr "Rechts"
 
 # @ su
-#: inc/data.php:596 inc/data.php:1770
+#: inc/data.php:705 inc/data.php:1890
 msgid "Center"
 msgstr "Midden"
 
 # @ su
-#: inc/data.php:599
+#: inc/data.php:708
 msgid "Align"
 msgstr "Uitlijnen"
 
-#: inc/data.php:600
+#: inc/data.php:709
 msgid "Dropcap alignment"
 msgstr ""
 
-#: inc/data.php:605
-msgid "Circle"
+#: inc/data.php:717 inc/data.php:805
+msgid "Border radius"
 msgstr ""
 
-# @ su
-#: inc/data.php:606
-msgid "Square"
-msgstr "Rechthoek"
-
-# @ su
-#: inc/data.php:607
-msgid "Rounded corners"
-msgstr "Ronde hoeken"
-
-#: inc/data.php:610
-msgid "Shape"
+#: inc/data.php:718
+msgid "Border radius size in px"
 msgstr ""
 
-#: inc/data.php:611
-msgid "Dropcap shape type"
-msgstr ""
-
-#: inc/data.php:616
+#: inc/data.php:723
 msgid "Border"
 msgstr ""
 
-#: inc/data.php:617
+#: inc/data.php:724
 msgid "Setup dropcap border"
 msgstr ""
 
-#: inc/data.php:625
+#: inc/data.php:732
 msgid "A"
 msgstr ""
 
-#: inc/data.php:626
+#: inc/data.php:733
 msgid "Dropcap box"
 msgstr ""
 
 # @ su
-#: inc/data.php:632
+#: inc/data.php:739
 msgid "Button"
 msgstr "Drukknop"
 
-#: inc/data.php:637
+#: inc/data.php:744
 msgid "Read more"
 msgstr ""
 
-#: inc/data.php:638
+#: inc/data.php:745
 msgid "Text"
 msgstr ""
 
 # @ su
-#: inc/data.php:639 inc/data.php:990 inc/data.php:1288
+#: inc/data.php:746 inc/data.php:1088 inc/data.php:1408
 msgid "Button text"
 msgstr "Tekst drukknop"
 
 # @ su
-#: inc/data.php:643 inc/data.php:659
+#: inc/data.php:750 inc/data.php:766
 msgid "Link"
 msgstr "Link"
 
 # @ su
-#: inc/data.php:644
+#: inc/data.php:751
 msgid "Button link"
 msgstr "Link drukknop"
 
-#: inc/data.php:652
+#: inc/data.php:759
 msgid "Primary-light"
 msgstr ""
 
 # @ su
-#: inc/data.php:653 inc/data.php:1325 inc/data.php:1429
+#: inc/data.php:760 inc/data.php:1445 inc/data.php:1549
 msgid "Default"
 msgstr "Standaard"
 
 # @ su
-#: inc/data.php:655
+#: inc/data.php:762
 msgid "Success"
 msgstr "Succes"
 
 # @ su
-#: inc/data.php:656
+#: inc/data.php:763
 msgid "Info"
 msgstr "Informatie"
 
 # @ su
-#: inc/data.php:657
+#: inc/data.php:764
 msgid "Warning"
 msgstr "Waarschuwing"
 
-#: inc/data.php:658
+#: inc/data.php:765
 msgid "Danger"
 msgstr ""
 
 # @ su
-#: inc/data.php:663 inc/data.php:1329 inc/data.php:1433
+#: inc/data.php:770 inc/data.php:1449 inc/data.php:1553
 msgid "Style"
 msgstr "Stijl"
 
-#: inc/data.php:664
+#: inc/data.php:771
 msgid "Button style preset"
 msgstr ""
 
-#: inc/data.php:671
+#: inc/data.php:778
 msgid "Extra Small"
 msgstr ""
 
-#: inc/data.php:672
+#: inc/data.php:779
 msgid "Small"
 msgstr ""
 
-#: inc/data.php:673
+#: inc/data.php:780
 msgid "Medium"
 msgstr ""
 
-#: inc/data.php:674
+#: inc/data.php:781
 msgid "Large"
 msgstr ""
 
-#: inc/data.php:675
+#: inc/data.php:782
 msgid "Extra Large"
 msgstr ""
 
-#: inc/data.php:680
+#: inc/data.php:787
 msgid "Button size preset"
 msgstr ""
 
 # @ su
-#: inc/data.php:685
+#: inc/data.php:792
 msgid "Inline"
 msgstr "Inline"
 
-#: inc/data.php:686
+#: inc/data.php:793
 msgid "Wide"
 msgstr ""
 
-#: inc/data.php:689
+#: inc/data.php:796
 msgid "Display"
 msgstr ""
 
-#: inc/data.php:690
+#: inc/data.php:797
 msgid "Button display type"
 msgstr ""
 
-#: inc/data.php:698
-msgid "Border radius"
-msgstr ""
-
-#: inc/data.php:699
+#: inc/data.php:806
 msgid "Button border radius"
 msgstr ""
 
 # @ su
-#: inc/data.php:704
+#: inc/data.php:811
 msgid "Centered"
 msgstr "Gecentreerd"
 
 # @ su
-#: inc/data.php:705
+#: inc/data.php:812
 msgid "Is button centered on the page"
 msgstr "Is de drukknop op de pagina gecentreerd?"
 
 # @ su
-#: inc/data.php:710
+#: inc/data.php:817
 msgid "Fluid"
 msgstr "Vloeiend"
 
-#: inc/data.php:711
+#: inc/data.php:818
 msgid "Is button fluid"
 msgstr ""
 
-#: inc/data.php:720
+#: inc/data.php:827
 msgid "Fluid Position"
 msgstr ""
 
-#: inc/data.php:721
+#: inc/data.php:828
 msgid "Button fluid position"
 msgstr ""
 
 # @ su
-#: inc/data.php:733 inc/data.php:1731
+#: inc/data.php:840 inc/data.php:1851
 msgid "Top"
 msgstr "Boven"
 
 # @ su
-#: inc/data.php:735 inc/data.php:1733
+#: inc/data.php:842 inc/data.php:1853
 msgid "Bottom"
 msgstr "Onder"
 
-#: inc/data.php:738
+#: inc/data.php:845
 msgid "Icon Position"
 msgstr ""
 
-#: inc/data.php:739
+#: inc/data.php:846
 msgid "Button icon position"
 msgstr ""
 
 # @ su
-#: inc/data.php:743
+#: inc/data.php:850
 msgid "Description"
 msgstr "Omschrijving"
 
-#: inc/data.php:744
+#: inc/data.php:851
 msgid "Small description under button text."
 msgstr ""
 
 # @ su
-#: inc/data.php:750
+#: inc/data.php:857
 msgid "Background"
 msgstr "Achtergrond"
 
 # @ su
-#: inc/data.php:751
+#: inc/data.php:858
 msgid "Button background color"
 msgstr "Achtergrond kleur drukknop"
 
 # @ su
-#: inc/data.php:758
+#: inc/data.php:865
 msgid "Button text color"
 msgstr "Tekst kleur drukknop"
 
-#: inc/data.php:766
+#: inc/data.php:873
 msgid "Min width"
 msgstr ""
 
-#: inc/data.php:767
+#: inc/data.php:874
 msgid "Button minimal width"
 msgstr ""
 
 # @ su
-#: inc/data.php:772
+#: inc/data.php:879
 msgid "Same tab"
 msgstr "Dezelfde tab"
 
 # @ su
-#: inc/data.php:773
+#: inc/data.php:880
 msgid "New tab"
 msgstr "Nieuwe tab"
 
 # @ su
-#: inc/data.php:776
+#: inc/data.php:883
 msgid "Target"
 msgstr "Doel"
 
 # @ su
-#: inc/data.php:777
+#: inc/data.php:884
 msgid "Button link target"
 msgstr "Doel van de drukknop-link"
 
-#: inc/data.php:781
+#: inc/data.php:888
 msgid "Rel attribute"
 msgstr ""
 
-#: inc/data.php:782
+#: inc/data.php:889
 msgid "Here you can add value for the rel attribute."
 msgstr ""
 
-#: inc/data.php:789 inc/data.php:1101
+#: inc/data.php:896
 msgid "Fade"
 msgstr ""
 
-#: inc/data.php:793
+#: inc/data.php:900
 msgid "Hover animation"
 msgstr ""
 
-#: inc/data.php:794
+#: inc/data.php:901
 msgid "Button hover aniamtion type"
 msgstr ""
 
 # @ su
-#: inc/data.php:802
+#: inc/data.php:909
 msgid "Styled button"
 msgstr "Gestijlde drukknop"
 
-#: inc/data.php:841
+# @ su
+#: inc/data.php:915 inc/data.php:932
+msgid "List"
+msgstr "Lijst"
+
+#: inc/data.php:931
+msgid "List Item"
+msgstr ""
+
+#: inc/data.php:939
 msgid "Swiper carousel"
 msgstr ""
 
-#: inc/data.php:844
+#: inc/data.php:942
 msgid "Customizable post carousel"
 msgstr ""
 
 # @ su
-#: inc/data.php:853 inc/data.php:1151
+#: inc/data.php:951 inc/data.php:1258
 msgid "Posts per page"
 msgstr "Berichten per pagina"
 
 # @ su
-#: inc/data.php:854 inc/data.php:1152
+#: inc/data.php:952 inc/data.php:1259
 msgid ""
 "Specify number of posts that you want to show. Enter -1 to get all posts"
 msgstr "Geeft het aantal berichten op die u wilt tonen. 1 voor alle berichten"
 
 # @ su
-#: inc/data.php:861 inc/data.php:1159
+#: inc/data.php:959 inc/data.php:1266
 msgid "Post types"
 msgstr "Bericht typen"
 
 # @ su
-#: inc/data.php:862 inc/data.php:1160
+#: inc/data.php:960 inc/data.php:1267
 msgid "Select post types. Hold Ctrl key to select multiple post types"
 msgstr ""
 "Selecteer bericht-type. Houd Ctrl-toets ingedrukt om meerdere typen te "
 "selecteren"
 
 # @ su
-#: inc/data.php:868 inc/data.php:1166 inc/generator-views.php:136
+#: inc/data.php:966 inc/data.php:1273 inc/generator-views.php:136
 msgid "Taxonomy"
 msgstr "Taxonomie"
 
 # @ su
-#: inc/data.php:869 inc/data.php:1167
+#: inc/data.php:967 inc/data.php:1274
 msgid "Select taxonomy to show posts from"
 msgstr "Selecteer taxonomie voor te tonen berichten"
 
 # @ su
-#: inc/data.php:876 inc/data.php:1174
+#: inc/data.php:974 inc/data.php:1281
 msgid "Terms"
 msgstr "Termen"
 
 # @ su
-#: inc/data.php:877 inc/data.php:1175
+#: inc/data.php:975 inc/data.php:1282
 msgid "Select terms to show posts from"
 msgstr "Selecteer de termen waarvan u de berichten wilt zien"
 
 # @ su
-#: inc/data.php:883 inc/data.php:1181
+#: inc/data.php:981 inc/data.php:1288
 msgid "Taxonomy term operator"
 msgstr "Taxonomie termen operator"
 
-# @ su
-#: inc/data.php:884 inc/data.php:1182
+#: inc/data.php:982 inc/data.php:1289
 msgid ""
 "IN - posts that have any of selected categories terms<br/>NOT IN - posts "
-"that is does not have any of selected terms<br/>AND - posts that have all "
+"that  do not have any of selected terms<br/>AND - posts that have all "
 "selected terms"
 msgstr ""
-"IN - berichten die een van de geselecteerde categorieën bevatten<br/>NOT IN "
-"- berichten die geen van de geselecteerde categorieën bevatten<br/>AND - "
-"berichten die alle geselecteerde categorieën bevatten."
 
 # @ su
-#: inc/data.php:888 inc/data.php:1186
+#: inc/data.php:986 inc/data.php:1293
 msgid "Authors"
 msgstr "Auteurs"
 
-#: inc/data.php:889 inc/data.php:1187
+#: inc/data.php:987 inc/data.php:1294
 msgid "Enter here comma-separated list of author's IDs. Example: 1,7,18"
 msgstr ""
 
 # @ su
-#: inc/data.php:898 inc/data.php:1196
+#: inc/data.php:996 inc/data.php:1303
 msgid "Specify offset to start posts loop not from first post"
 msgstr ""
 "Specificeer waar u de loop wilt starten als dit niet het eerste bericht is "
 
 # @ su
-#: inc/data.php:903 inc/data.php:1201
+#: inc/data.php:1001 inc/data.php:1308
 msgid "Descending"
 msgstr "Oplopend"
 
 # @ su
-#: inc/data.php:904 inc/data.php:1202
+#: inc/data.php:1002 inc/data.php:1309
 msgid "Ascending"
 msgstr "Aflopend"
 
 # @ su
-#: inc/data.php:907 inc/data.php:1205
+#: inc/data.php:1005 inc/data.php:1312
 msgid "Order"
 msgstr "Volgorde"
 
 # @ su
-#: inc/data.php:908 inc/data.php:1206
+#: inc/data.php:1006 inc/data.php:1313
 msgid "Posts order"
 msgstr "Volgorde berichten"
 
 # @ su
-#: inc/data.php:914 inc/data.php:1212
+#: inc/data.php:1012 inc/data.php:1319
 msgid "Post ID"
 msgstr "ID bericht"
 
 # @ su
-#: inc/data.php:915 inc/data.php:1213
+#: inc/data.php:1013 inc/data.php:1320
 msgid "Post author"
 msgstr "Auteur bericht"
 
 # @ su
-#: inc/data.php:916 inc/data.php:1214
+#: inc/data.php:1014 inc/data.php:1321
 msgid "Post title"
 msgstr "Bericht titel"
 
 # @ su
-#: inc/data.php:917 inc/data.php:1215
+#: inc/data.php:1015 inc/data.php:1322
 msgid "Post slug"
 msgstr "Slug van het bericht"
 
 # @ su
-#: inc/data.php:918 inc/data.php:1216
+#: inc/data.php:1016 inc/data.php:1323
 msgid "Date"
 msgstr "Datum"
 
 # @ su
-#: inc/data.php:919 inc/data.php:1217
+#: inc/data.php:1017 inc/data.php:1324
 msgid "Last modified date"
 msgstr "Datum laatste wijziging"
 
 # @ su
-#: inc/data.php:920 inc/data.php:931 inc/data.php:1218 inc/data.php:1229
+#: inc/data.php:1018 inc/data.php:1029 inc/data.php:1325 inc/data.php:1336
 msgid "Post parent"
 msgstr "Bericht-ouder"
 
 # @ su
-#: inc/data.php:921 inc/data.php:1219
+#: inc/data.php:1019 inc/data.php:1326
 msgid "Random"
 msgstr "Willekeurig"
 
 # @ su
-#: inc/data.php:922 inc/data.php:1220
+#: inc/data.php:1020 inc/data.php:1327
 msgid "Comments number"
 msgstr "Aantal commentaar"
 
 # @ su
-#: inc/data.php:923 inc/data.php:1221
+#: inc/data.php:1021 inc/data.php:1328
 msgid "Menu order"
 msgstr "Volgorde menu"
 
 # @ su
-#: inc/data.php:926 inc/data.php:1224
+#: inc/data.php:1024 inc/data.php:1331
 msgid "Order by"
 msgstr "Sorteer op"
 
 # @ su
-#: inc/data.php:927 inc/data.php:1225
+#: inc/data.php:1025 inc/data.php:1332
 msgid "Order posts by"
 msgstr "Sorteer berichten op"
 
-# @ su
-#: inc/data.php:932 inc/data.php:1230
-msgid "Show childrens of entered post (enter post ID)"
-msgstr "Toon subpagina's van het opgegeven bericht (geef bericht-ID)"
+#: inc/data.php:1030 inc/data.php:1337
+msgid "Show children of entered post (enter post ID)"
+msgstr ""
 
 # @ su
-#: inc/data.php:937 inc/data.php:1235
+#: inc/data.php:1035 inc/data.php:1342
 msgid "Published"
 msgstr "Gepubliceerd"
 
 # @ su
-#: inc/data.php:938 inc/data.php:1236
+#: inc/data.php:1036 inc/data.php:1343
 msgid "Pending"
 msgstr "Afwachtend"
 
 # @ su
-#: inc/data.php:939 inc/data.php:1237
+#: inc/data.php:1037 inc/data.php:1344
 msgid "Draft"
 msgstr "Concept"
 
 # @ su
-#: inc/data.php:940 inc/data.php:1238
+#: inc/data.php:1038 inc/data.php:1345
 msgid "Auto-draft"
 msgstr "Auto-concept"
 
 # @ su
-#: inc/data.php:941 inc/data.php:1239
+#: inc/data.php:1039 inc/data.php:1346
 msgid "Future post"
 msgstr "Toekomstige berichten"
 
 # @ su
-#: inc/data.php:942 inc/data.php:1240
+#: inc/data.php:1040 inc/data.php:1347
 msgid "Private post"
 msgstr "Privé bericht"
 
 # @ su
-#: inc/data.php:943 inc/data.php:1241
+#: inc/data.php:1041 inc/data.php:1348
 msgid "Inherit"
 msgstr "Ge-erft"
 
 # @ su
-#: inc/data.php:944 inc/data.php:1242
+#: inc/data.php:1042 inc/data.php:1349
 msgid "Trashed"
 msgstr "Weggegooid"
 
 # @ su
-#: inc/data.php:945 inc/data.php:1243
+#: inc/data.php:1043 inc/data.php:1350
 msgid "Any"
 msgstr "Elke"
 
 # @ su
-#: inc/data.php:948 inc/data.php:1246
+#: inc/data.php:1046 inc/data.php:1353
 msgid "Post status"
 msgstr "Status bericht"
 
 # @ su
-#: inc/data.php:949 inc/data.php:1247
+#: inc/data.php:1047 inc/data.php:1354
 msgid "Show only posts with selected status"
 msgstr "Toon enkel berichten met de geselecteerde status"
 
 # @ su
-#: inc/data.php:954 inc/data.php:1252
+#: inc/data.php:1052 inc/data.php:1359
 msgid "Ignore sticky"
 msgstr "Negeer sticky-status"
 
-# @ su
-#: inc/data.php:955 inc/data.php:1253
-msgid "Select Yes to ignore posts that is sticked"
-msgstr "Selecteer Ja om sticky berichten te negeren"
+#: inc/data.php:1053 inc/data.php:1360
+msgid "Select Yes to ignore posts that are sticked"
+msgstr ""
 
-#: inc/data.php:960 inc/data.php:1258
+#: inc/data.php:1058 inc/data.php:1365
 msgid "Linked title"
 msgstr ""
 
-#: inc/data.php:961 inc/data.php:1259
+#: inc/data.php:1059 inc/data.php:1366
 msgid "Linked title description"
 msgstr ""
 
-#: inc/data.php:966 inc/data.php:1264
+#: inc/data.php:1064 inc/data.php:1371
 msgid "Linked featured image"
 msgstr ""
 
-#: inc/data.php:967 inc/data.php:1265
+#: inc/data.php:1065 inc/data.php:1372
 msgid "Linked featured image description"
 msgstr ""
 
-#: inc/data.php:972 inc/data.php:1270
+#: inc/data.php:1070 inc/data.php:1390
 msgid "Part of content"
 msgstr ""
 
-#: inc/data.php:973 inc/data.php:1271
+#: inc/data.php:1071 inc/data.php:1391
 msgid "Full content"
 msgstr ""
 
-#: inc/data.php:976 inc/data.php:1274
+#: inc/data.php:1074 inc/data.php:1394
 msgid "Post content"
 msgstr ""
 
-#: inc/data.php:977 inc/data.php:1275
-msgid ""
-"Choose to display an teaser, part or full content (http://codex.wordpress."
-"org/Excerpt#Excerpt.2C_automatic_excerpt.2C_and_teaser)"
+#: inc/data.php:1075 inc/data.php:1395
+msgid "Choose to display a part or d content"
 msgstr ""
 
-#: inc/data.php:985 inc/data.php:1283
+#: inc/data.php:1083 inc/data.php:1403
 msgid "Content Length"
 msgstr ""
 
-#: inc/data.php:986 inc/data.php:1284
+#: inc/data.php:1084 inc/data.php:1404
 msgid "Insert the number of words you want to show in the post content."
 msgstr ""
 
-#: inc/data.php:989 inc/data.php:1287 inc/shortcodes.php:701
-#: inc/shortcodes.php:1202
+#: inc/data.php:1087 inc/data.php:1407 inc/shortcodes.php:664
+#: inc/shortcodes.php:1070
 msgid "read more"
 msgstr ""
 
-#: inc/data.php:991 inc/data.php:1289
+#: inc/data.php:1089 inc/data.php:1409
 msgid "Button text description"
 msgstr ""
 
-#: inc/data.php:1010
+#: inc/data.php:1108
 msgid "Using cropped image"
 msgstr ""
 
-#: inc/data.php:1011 inc/data.php:1071
+#: inc/data.php:1109 inc/data.php:1178
 msgid "Slider Loop Mode"
 msgstr ""
 
-#: inc/data.php:1019
+#: inc/data.php:1117
 msgid "Cropping image width"
 msgstr ""
 
-#: inc/data.php:1020
+#: inc/data.php:1118
 msgid "Width value(px)"
 msgstr ""
 
-#: inc/data.php:1028
+#: inc/data.php:1126
 msgid "Cropping image height"
 msgstr ""
 
-#: inc/data.php:1029
+#: inc/data.php:1127
 msgid "Height value(px)"
 msgstr ""
 
-#: inc/data.php:1037
-msgid "Number slides per view"
+#: inc/data.php:1135
+msgid "Number of slides per view"
 msgstr ""
 
-#: inc/data.php:1038
+#: inc/data.php:1136
 msgid "Specify number of slides per view"
 msgstr ""
 
-#: inc/data.php:1046 inc/data.php:1047
+#: inc/data.php:1144
+msgid "Number slides per group"
+msgstr ""
+
+#: inc/data.php:1145
+msgid ""
+"Set numbers of slides to define and enable group sliding. Useful to use with "
+"slidesPerView > 1"
+msgstr ""
+
+#: inc/data.php:1153 inc/data.php:1154
 msgid "Multi Row Slides Layout"
 msgstr ""
 
-#: inc/data.php:1055
+#: inc/data.php:1162
 msgid "Space Between Slides"
 msgstr ""
 
-#: inc/data.php:1056
-msgid "With difine space between slides(px)"
+#: inc/data.php:1163
+msgid "Width of the space between slides(px)"
 msgstr ""
 
-#: inc/data.php:1064
+#: inc/data.php:1171
 msgid "Duration of transition"
 msgstr ""
 
-#: inc/data.php:1065
+#: inc/data.php:1172
 msgid "Duration of transition between slides (ms)"
 msgstr ""
 
-#: inc/data.php:1070
+#: inc/data.php:1177
 msgid "Slider Infinite Loop"
 msgstr ""
 
-#: inc/data.php:1076
+#: inc/data.php:1183
 msgid "Free Mode sliding"
 msgstr ""
 
-#: inc/data.php:1077
+#: inc/data.php:1184
 msgid "No fixed positions for slides"
 msgstr ""
 
-#: inc/data.php:1082
-msgid "Grab Cusor"
+#: inc/data.php:1189
+msgid "Grab Cursor"
 msgstr ""
 
-#: inc/data.php:1083
-msgid "Using Grab Cusor for slider"
+#: inc/data.php:1190
+msgid "Using Grab Cursor for slider"
 msgstr ""
 
-#: inc/data.php:1088
+#: inc/data.php:1195
 msgid "Mousewheel Control"
 msgstr ""
 
-#: inc/data.php:1089
+#: inc/data.php:1196
 msgid "Mousewheel control mode"
 msgstr ""
 
-#: inc/data.php:1094
+#: inc/data.php:1201
 msgid "Centered Slides"
 msgstr ""
 
-#: inc/data.php:1095
+#: inc/data.php:1202
 msgid "Centered slides mode"
 msgstr ""
 
-#: inc/data.php:1100
+#: inc/data.php:1207
 msgid "Slide"
 msgstr ""
 
-#: inc/data.php:1102
+#: inc/data.php:1209
 msgid "Cube"
 msgstr ""
 
-#: inc/data.php:1103
+#: inc/data.php:1210
 msgid "Coverflow"
 msgstr ""
 
-#: inc/data.php:1106
+#: inc/data.php:1213
 msgid "Effect Layout"
 msgstr ""
 
-#: inc/data.php:1107
+#: inc/data.php:1214
 msgid "Could be \"slide\", \"fade\", \"cube\" or \"coverflow\" effect"
 msgstr ""
 
-#: inc/data.php:1112
+#: inc/data.php:1219
 msgid "Slider pagination"
 msgstr ""
 
-#: inc/data.php:1113
+#: inc/data.php:1220
 msgid "Displaying slider pagination"
 msgstr ""
 
-#: inc/data.php:1118
+#: inc/data.php:1225
 msgid "Slider navigation"
 msgstr ""
 
-#: inc/data.php:1119
+#: inc/data.php:1226
 msgid "Displaying slider navigation"
 msgstr ""
 
-#: inc/data.php:1124
+#: inc/data.php:1231
 msgid "Inner"
 msgstr ""
 
-#: inc/data.php:1125
+#: inc/data.php:1232
 msgid "Outer"
 msgstr ""
 
-#: inc/data.php:1128
+#: inc/data.php:1235
 msgid "Slider navigation position"
 msgstr ""
 
-#: inc/data.php:1129
-msgid "Choose position slider navigation"
+#: inc/data.php:1236
+msgid "Choose slider navigation position"
 msgstr ""
 
 # @ su
-#: inc/data.php:1136
+#: inc/data.php:1243
 msgid "Posts"
 msgstr "Berichten"
 
 # @ su
-#: inc/data.php:1142
+#: inc/data.php:1249
 msgid "Post ID's"
 msgstr "ID's berichten"
 
 # @ su
-#: inc/data.php:1143
+#: inc/data.php:1250
 msgid "Enter comma separated ID's of the posts that you want to show"
 msgstr "Geef de ID's (komma-gescheiden) van de berichten op die u wilt tonen."
 
-#: inc/data.php:1294
+#: inc/data.php:1377 inc/data.php:1378
+msgid "Open featured image in a lightbox?"
+msgstr ""
+
+#: inc/data.php:1384
+msgid "Featured image size"
+msgstr ""
+
+#: inc/data.php:1385
+msgid "Select size for a Featured image"
+msgstr ""
+
+#: inc/data.php:1414
 msgid "Column class"
 msgstr ""
 
-#: inc/data.php:1295
-msgid "Column class for each items."
+#: inc/data.php:1415
+msgid "Column class for each item."
 msgstr ""
 
 # @ su
-#: inc/data.php:1312
+#: inc/data.php:1432
 msgid "Custom posts query with customizable template"
 msgstr "Aangepaste berichten opvragen met een aanpasbaar template"
 
 # @ su
-#: inc/data.php:1318
+#: inc/data.php:1438
 msgid "Tabs"
 msgstr "Tabs"
 
 # @ su
-#: inc/data.php:1326 inc/data.php:1430
+#: inc/data.php:1446 inc/data.php:1550
 msgid "Simple"
 msgstr "Simpel"
 
-# @ su
-#: inc/data.php:1330
-msgid "Choose style for this tabs"
-msgstr "Kies de stijl voor deze tabs"
+#: inc/data.php:1450
+msgid "Choose style for these tabs"
+msgstr ""
 
 # @ su
-#: inc/data.php:1338
+#: inc/data.php:1458
 msgid "Active tab"
 msgstr "Actieve tab"
 
 # @ su
-#: inc/data.php:1339
+#: inc/data.php:1459
 msgid "Select which tab is open by default"
 msgstr "Selecteer de standaard open tab"
 
 # @ su
-#: inc/data.php:1344
+#: inc/data.php:1464
 msgid "Vertical"
 msgstr "Vertikaal"
 
 # @ su
-#: inc/data.php:1345
+#: inc/data.php:1465
 msgid "Show tabs vertically"
 msgstr "Toon de tabs vertikaal"
 
 # @ su
-#: inc/data.php:1353
+#: inc/data.php:1473
 msgid ""
 "[%prefix_tab title=\"Title 1\"]Content 1[/%prefix_tab]\n"
 "[%prefix_tab title=\"Title 2\"]Content 2[/%prefix_tab]\n"
@@ -1409,42 +1441,37 @@ msgstr ""
 "[%prefix_tab title=\"Title 3\"]Content 3[/%prefix_tab]"
 
 # @ su
-#: inc/data.php:1354
+#: inc/data.php:1474
 msgid "Tabs container"
 msgstr "Tabs container"
 
 # @ su
-#: inc/data.php:1361
+#: inc/data.php:1481
 msgid "Tab"
 msgstr "Tab"
 
 # @ su
-#: inc/data.php:1366
+#: inc/data.php:1486
 msgid "Tab name"
 msgstr "Tab naam"
 
 # @ su
-#: inc/data.php:1368
+#: inc/data.php:1488
 msgid "Enter tab name"
 msgstr "Geef tab-naam op"
 
 # @ su
-#: inc/data.php:1373
+#: inc/data.php:1493
 msgid "Disabled"
 msgstr "Uitgeschakeld"
 
 # @ su
-#: inc/data.php:1374
+#: inc/data.php:1494
 msgid "Is this tab disabled"
 msgstr "Is deze tab uitgeschakeld?"
 
 # @ su
-#: inc/data.php:1378 inc/data.php:1438
-msgid "Anchor"
-msgstr "Anker"
-
-# @ su
-#: inc/data.php:1379
+#: inc/data.php:1499
 msgid ""
 "You can use unique anchor for this tab to access it with hash in page url. "
 "For example: type here <b%value>Hello</b> and then use url like http://"
@@ -1455,100 +1482,95 @@ msgstr ""
 "een URL zoals http://voorbeeld.com/pagina-url#Hallo. De tab zal worden "
 "geactiveerd en de inhoud toont de betreffende plek in het document."
 
-#: inc/data.php:1383
+#: inc/data.php:1503
 msgid "URL"
 msgstr ""
 
-#: inc/data.php:1384
+#: inc/data.php:1504
 msgid ""
-"You can link this tab to any webpage. Enter here full URL to switch this tab "
+"You can link this tab to any webpage. Enter here d URL to switch this tab "
 "into link"
 msgstr ""
 
-#: inc/data.php:1389
-msgid "Open link in same window/tab"
+#: inc/data.php:1509
+msgid "Open link in the same window/tab"
 msgstr ""
 
-#: inc/data.php:1390
-msgid "Open link in new window/tab"
+#: inc/data.php:1510
+msgid "Open link in a new window/tab"
 msgstr ""
 
-#: inc/data.php:1393
+#: inc/data.php:1513
 msgid "Link target"
 msgstr ""
 
-#: inc/data.php:1394
+#: inc/data.php:1514
 msgid "Choose how to open the custom tab link"
 msgstr ""
 
 # @ su
-#: inc/data.php:1402
+#: inc/data.php:1522
 msgid "Tab content"
 msgstr "Tab inhoud"
 
 # @ su
-#: inc/data.php:1403
+#: inc/data.php:1523
 msgid "Single tab"
 msgstr "Enkele tab"
 
 # @ su
-#: inc/data.php:1411
+#: inc/data.php:1531
 msgid "Spoiler"
 msgstr "Spoiler"
 
 # @ su
-#: inc/data.php:1416 inc/shortcodes.php:1774
+#: inc/data.php:1536 inc/shortcodes.php:1475
 msgid "Spoiler title"
 msgstr "Spoiler titel"
 
 # @ su
-#: inc/data.php:1418
+#: inc/data.php:1538
 msgid "Text in spoiler title"
 msgstr "Spoiler titel-tekst"
 
 # @ su
-#: inc/data.php:1423
+#: inc/data.php:1543
 msgid "Open"
 msgstr "Open"
 
 # @ su
-#: inc/data.php:1424
+#: inc/data.php:1544
 msgid "Is spoiler content visible by default"
 msgstr "Is de spoiler inhoud standaard zichtbaar?"
 
 # @ su
-#: inc/data.php:1434
+#: inc/data.php:1554
 msgid "Choose style for this spoiler"
 msgstr "Kies de stijl voor deze spoiler"
 
-# @ su
-#: inc/data.php:1439
+#: inc/data.php:1559
 msgid ""
 "You can use unique anchor for this spoiler to access it with hash in page "
 "url. For example: type here <b%value>Hello</b> and then use url like http://"
-"example.com/page-url#Hello. This spoiler will be open and scrolled in"
+"example.com/page-url#Hello. This spoiler will be opened and scrolled in"
 msgstr ""
-"U kunt een uniek anker voor deze spoiler gebruiken om het met een # in de "
-"pagina URL te bereiken. Bij voorbeeld: geef in <b%value>Hallo</b> en gebruik "
-"dan een URL zoals http://voorbeeld.com/pagina-url#Hallo. De spoiler zal "
-"worden geactiveerd en de inhoud toont de betreffende plek in het document."
 
 # @ su
-#: inc/data.php:1447
+#: inc/data.php:1567
 msgid "Hidden content"
 msgstr "Verborgen inhoud"
 
 # @ su
-#: inc/data.php:1448
+#: inc/data.php:1568
 msgid "Spoiler with hidden content"
 msgstr "Spoiler met verborgen inhoud"
 
 # @ su
-#: inc/data.php:1456
+#: inc/data.php:1576
 msgid "Accordion"
 msgstr "Accordion"
 
-#: inc/data.php:1466
+#: inc/data.php:1586
 msgid ""
 "[%prefix_spoiler title=\"Spoiler Title\"]Content[/%prefix_spoiler]\n"
 "[%prefix_spoiler title=\"Spoiler Title\"]Content[/%prefix_spoiler]\n"
@@ -1556,27 +1578,27 @@ msgid ""
 msgstr ""
 
 # @ su
-#: inc/data.php:1467
+#: inc/data.php:1587
 msgid "Accordion with spoilers"
 msgstr "Accordion met spoilers"
 
-#: inc/data.php:1475
+#: inc/data.php:1595
 msgid "Google map"
 msgstr ""
 
-#: inc/data.php:1482
+#: inc/data.php:1602
 msgid "Address"
 msgstr ""
 
-#: inc/data.php:1483 inc/data.php:1538
+#: inc/data.php:1603 inc/data.php:1658
 msgid "The display options for the Pan control."
 msgstr ""
 
-#: inc/data.php:1491
+#: inc/data.php:1611
 msgid "Latitude  geographical coordinates"
 msgstr ""
 
-#: inc/data.php:1492
+#: inc/data.php:1612
 msgid ""
 "Latitude ranges between -90 and 90 degrees, inclusive. Values above or below "
 "this range will be clamped to the range [-90, 90]. This means that if the "
@@ -1584,11 +1606,11 @@ msgid ""
 "greater than 90, it will be set to 90."
 msgstr ""
 
-#: inc/data.php:1500
+#: inc/data.php:1620
 msgid "Longitude geographical coordinates"
 msgstr ""
 
-#: inc/data.php:1501
+#: inc/data.php:1621
 msgid ""
 "Longitude ranges between -180 and 180 degrees, inclusive. Values above or "
 "below this range will be wrapped so that they fall within the range. For "
@@ -1597,29 +1619,29 @@ msgid ""
 "globe."
 msgstr ""
 
-#: inc/data.php:1509
+#: inc/data.php:1629
 msgid "Map zoom level"
 msgstr ""
 
-#: inc/data.php:1510
+#: inc/data.php:1630
 msgid "The initial Map zoom level. Required."
 msgstr ""
 
-#: inc/data.php:1515
+#: inc/data.php:1635
 msgid "Scroll wheel"
 msgstr ""
 
-#: inc/data.php:1516
+#: inc/data.php:1636
 msgid ""
 "If false, disables scrollwheel zooming on the map. The scrollwheel is "
 "enabled by default."
 msgstr ""
 
-#: inc/data.php:1522
+#: inc/data.php:1642
 msgid "Map Style"
 msgstr ""
 
-#: inc/data.php:1523
+#: inc/data.php:1643
 msgid ""
 "Styles to apply to each of the default map types. Note that for Satellite/"
 "Hybrid and Terrain modes, these styles will only apply to labels and "
@@ -1627,361 +1649,425 @@ msgid ""
 msgstr ""
 
 # @ su
-#: inc/data.php:1531
+#: inc/data.php:1651
 msgid "Map height"
 msgstr "Kaart hoogte"
 
-#: inc/data.php:1532
+#: inc/data.php:1652
 msgid "Map height value(px)"
 msgstr ""
 
-#: inc/data.php:1537
+#: inc/data.php:1657
 msgid "Pan control"
 msgstr ""
 
-#: inc/data.php:1543
+#: inc/data.php:1663
 msgid "Zoom control"
 msgstr ""
 
-#: inc/data.php:1544
+#: inc/data.php:1664
 msgid "The enabled/disabled state of the Zoom control."
 msgstr ""
 
-#: inc/data.php:1549
+#: inc/data.php:1669
 msgid "Draggable map"
 msgstr ""
 
-#: inc/data.php:1550
+#: inc/data.php:1670
 msgid ""
 "If false, prevents the map from being dragged. Dragging is enabled by "
 "default."
 msgstr ""
 
-#: inc/data.php:1555
+#: inc/data.php:1675
 msgid "Marker source"
 msgstr ""
 
-#: inc/data.php:1556
-msgid "Upload marker url source"
+#: inc/data.php:1676
+msgid "Upload marker source"
 msgstr ""
 
-#: inc/data.php:1559
+#: inc/data.php:1679
 msgid "Google Map"
 msgstr ""
 
-#: inc/data.php:1565 inc/data.php:1572
-msgid "Paralax image"
+#: inc/data.php:1685 inc/data.php:1692
+msgid "Parallax image"
 msgstr ""
 
-#: inc/data.php:1573
-msgid "Upload paralax image url source"
+#: inc/data.php:1693
+msgid "Upload parallax image url source"
 msgstr ""
 
-#: inc/data.php:1581 inc/data.php:1647
-msgid "Paralax speed"
+#: inc/data.php:1701 inc/data.php:1767
+msgid "Parallax speed"
 msgstr ""
 
-#: inc/data.php:1582 inc/data.php:1648
-msgid "Paralax speed value (s)"
+#: inc/data.php:1702 inc/data.php:1768
+msgid "Parallax speed value (s)"
 msgstr ""
 
-#: inc/data.php:1587 inc/data.php:1653
-msgid "Paralax invert"
+#: inc/data.php:1707 inc/data.php:1773
+msgid "Parallax invert"
 msgstr ""
 
-#: inc/data.php:1588 inc/data.php:1654
-msgid "Paralax invert direction move"
+#: inc/data.php:1708 inc/data.php:1774
+msgid "Parallax invert direction move"
 msgstr ""
 
-#: inc/data.php:1596
-msgid "Paralax container min-height"
+#: inc/data.php:1716
+msgid "Parallax container min-height"
 msgstr ""
 
-#: inc/data.php:1597
+#: inc/data.php:1717
 msgid "container min-height value (px)"
 msgstr ""
 
-#: inc/data.php:1602 inc/data.php:1659 inc/data.php:1713 inc/data.php:1840
+#: inc/data.php:1722 inc/data.php:1779 inc/data.php:1833 inc/data.php:1960
+#: inc/data.php:2027
 msgid "Custom class"
 msgstr ""
 
-#: inc/data.php:1603 inc/data.php:1660 inc/data.php:1714
+#: inc/data.php:1723 inc/data.php:1780 inc/data.php:1834
 msgid "Enter custom class"
 msgstr ""
 
-#: inc/data.php:1607 inc/data.php:1664
-msgid "Paralax block"
+#: inc/data.php:1727 inc/data.php:1784
+msgid "Parallax block"
 msgstr ""
 
-#: inc/data.php:1613
-msgid "Paralax html video"
+#: inc/data.php:1733
+msgid "Parallax html video"
 msgstr ""
 
 # @ su
-#: inc/data.php:1620
+#: inc/data.php:1740
 msgid "Poster"
 msgstr "Aanbieder"
 
-#: inc/data.php:1621
+#: inc/data.php:1741
 msgid "Poster image url"
 msgstr ""
 
-#: inc/data.php:1626
+#: inc/data.php:1746
 msgid "mp4 file"
 msgstr ""
 
-#: inc/data.php:1627
+#: inc/data.php:1747
 msgid "URL to mp4 video-file"
 msgstr ""
 
-#: inc/data.php:1632
+#: inc/data.php:1752
 msgid "webm file"
 msgstr ""
 
-#: inc/data.php:1633
+#: inc/data.php:1753
 msgid "URL to webm video-file"
 msgstr ""
 
-#: inc/data.php:1638
+#: inc/data.php:1758
 msgid "ogv file"
 msgstr ""
 
-#: inc/data.php:1639
+#: inc/data.php:1759
 msgid "URL to ogv video-file"
 msgstr ""
 
-#: inc/data.php:1670 inc/data.php:1717
+#: inc/data.php:1790 inc/data.php:1837
 msgid "Counter"
 msgstr ""
 
-#: inc/data.php:1677
+#: inc/data.php:1797
 msgid "Value"
 msgstr ""
 
-#: inc/data.php:1678
+#: inc/data.php:1798
 msgid "Value for counter"
 msgstr ""
 
-#: inc/data.php:1686
+#: inc/data.php:1806
 msgid "Counter delay"
 msgstr ""
 
-#: inc/data.php:1687
+#: inc/data.php:1807
 msgid "Counter delay (ms)"
 msgstr ""
 
-#: inc/data.php:1695
+#: inc/data.php:1815
 msgid "Speed time"
 msgstr ""
 
-#: inc/data.php:1696
+#: inc/data.php:1816
 msgid "Speed time (ms)"
 msgstr ""
 
-#: inc/data.php:1701
+#: inc/data.php:1821
 msgid "Before content"
 msgstr ""
 
-#: inc/data.php:1702
+#: inc/data.php:1822
 msgid "Enter before custom content"
 msgstr ""
 
-#: inc/data.php:1707
+#: inc/data.php:1827
 msgid "After content"
 msgstr ""
 
-#: inc/data.php:1708
+#: inc/data.php:1828
 msgid "Enter after custom content"
 msgstr ""
 
-#: inc/data.php:1723
+#: inc/data.php:1843
 msgid "Lazy Load Effect"
 msgstr ""
 
-#: inc/data.php:1730
+#: inc/data.php:1850
 msgid "Not changed"
 msgstr ""
 
-#: inc/data.php:1737
+#: inc/data.php:1857
 msgid "Start Position"
 msgstr ""
 
-#: inc/data.php:1738
+#: inc/data.php:1858
 msgid "Element position at the animation start."
 msgstr ""
 
-#: inc/data.php:1746
+#: inc/data.php:1866
 msgid "Out rotation"
 msgstr ""
 
-#: inc/data.php:1747
+#: inc/data.php:1867
 msgid "Initial element angle (min - -360&#176; max 360&#176;)"
 msgstr ""
 
-#: inc/data.php:1755
+#: inc/data.php:1875
 msgid "Flip X"
 msgstr ""
 
-#: inc/data.php:1756
+#: inc/data.php:1876
 msgid ""
 "Initial element angle Flip X (X-axis rotation min - -360&#176; max 360&#176;)"
 msgstr ""
 
-#: inc/data.php:1764
+#: inc/data.php:1884
 msgid "Flip Y"
 msgstr ""
 
-#: inc/data.php:1765
+#: inc/data.php:1885
 msgid ""
 "Initial element angle Flip Y (Y-axis rotation min - -360&#176; max 360&#176;)"
 msgstr ""
 
-#: inc/data.php:1777
+#: inc/data.php:1897
 msgid "Pivot"
 msgstr ""
 
-#: inc/data.php:1778
+#: inc/data.php:1898
 msgid "Element rotation point."
 msgstr ""
 
-#: inc/data.php:1786
+#: inc/data.php:1906
 msgid "Scale"
 msgstr ""
 
-#: inc/data.php:1787
+#: inc/data.php:1907
 msgid "Element scale value (min - 0; max 10;)"
 msgstr ""
 
-#: inc/data.php:1795
+#: inc/data.php:1915
 msgid "Opacity"
 msgstr ""
 
-#: inc/data.php:1796
+#: inc/data.php:1916
 msgid "Element opacity value (min - 0; max 1;)"
 msgstr ""
 
-#: inc/data.php:1801
+#: inc/data.php:1921
 msgid "Ease None"
 msgstr ""
 
-#: inc/data.php:1802
+#: inc/data.php:1922
 msgid "Ease In Cubic"
 msgstr ""
 
-#: inc/data.php:1803
+#: inc/data.php:1923
 msgid "Ease Out Cubic"
 msgstr ""
 
-#: inc/data.php:1804
+#: inc/data.php:1924
 msgid "Ease In Out Cubic"
 msgstr ""
 
-#: inc/data.php:1805
+#: inc/data.php:1925
 msgid "Ease In Quart"
 msgstr ""
 
-#: inc/data.php:1806
+#: inc/data.php:1926
 msgid "Ease Out Quart"
 msgstr ""
 
-#: inc/data.php:1807
+#: inc/data.php:1927
 msgid "Ease In Out Quart"
 msgstr ""
 
-#: inc/data.php:1808
+#: inc/data.php:1928
 msgid "Ease In Expo"
 msgstr ""
 
-#: inc/data.php:1809
+#: inc/data.php:1929
 msgid "Ease Out Expo"
 msgstr ""
 
-#: inc/data.php:1810
+#: inc/data.php:1930
 msgid "Ease In Out Expo"
 msgstr ""
 
-#: inc/data.php:1811
+#: inc/data.php:1931
 msgid "Ease In Back"
 msgstr ""
 
-#: inc/data.php:1812
+#: inc/data.php:1932
 msgid "Ease Out Back"
 msgstr ""
 
-#: inc/data.php:1813
+#: inc/data.php:1933
 msgid "Ease In Out Back"
 msgstr ""
 
-#: inc/data.php:1816
+#: inc/data.php:1936
 msgid "Easing"
 msgstr ""
 
-#: inc/data.php:1817
+#: inc/data.php:1937
 msgid "Animation easing."
 msgstr ""
 
-#: inc/data.php:1825
+#: inc/data.php:1945
 msgid "Animation Speed"
 msgstr ""
 
-#: inc/data.php:1826
+#: inc/data.php:1946
 msgid "Animation speed in seconds.(Example: 0.2 or 1)"
 msgstr ""
 
-#: inc/data.php:1834
+#: inc/data.php:1954
 msgid "Animation Delay"
 msgstr ""
 
-#: inc/data.php:1835
+#: inc/data.php:1955
 msgid "Animation Delay in seconds"
 msgstr ""
 
-#: inc/data.php:1841
+#: inc/data.php:1961
 msgid "Element custom class"
 msgstr ""
 
-#: inc/data.php:1844
-msgid "This shortcode added show animations on any page element."
+#: inc/data.php:1964
+msgid "This shortcode adds show animations on any page element."
 msgstr ""
 
-#: inc/filters.php:58
-msgid "Helper information for `Date` macros"
+#: inc/data.php:1969 inc/data.php:1970
+msgid "Video Preview"
 msgstr ""
 
-#: inc/filters.php:65
-msgid "Helper information for `Author` macros"
+#: inc/data.php:1978
+msgid "URL or File."
 msgstr ""
 
-#: inc/filters.php:72
-msgid "Helper information for `Comments` macros"
+#: inc/data.php:1979
+msgid ""
+"To use video from YouTube or Vimeo input video URL. You can also upload "
+"video file from media library."
 msgstr ""
 
-#: inc/filters.php:79
-msgid "Helper information for `Taxomomy` macros"
+#: inc/data.php:1984
+msgid "Poster."
 msgstr ""
 
-#: inc/filters.php:86
-msgid "Helper information for `Excerpt` macros"
+#: inc/data.php:1985
+msgid "Poster image url."
 msgstr ""
 
-#: inc/filters.php:98
+#: inc/data.php:1990
+msgid "Hide control buttons"
+msgstr ""
+
+#: inc/data.php:1991
+msgid "Show control buttons"
+msgstr ""
+
+#: inc/data.php:1992
+msgid "Show control button on mouse hover"
+msgstr ""
+
+#: inc/data.php:1993
+msgid "Video Autoplay"
+msgstr ""
+
+#: inc/data.php:1994
+msgid "Play video on mouse hover"
+msgstr ""
+
+#: inc/data.php:1997
+msgid "Controls."
+msgstr ""
+
+#: inc/data.php:2003
+msgid "Show content on mouse hover."
+msgstr ""
+
+#: inc/data.php:2009
+msgid "Muted."
+msgstr ""
+
+#: inc/data.php:2015
+msgid "Loop."
+msgstr ""
+
+#: inc/data.php:2021
+msgid "Preload."
+msgstr ""
+
+#: inc/data.php:2028
+msgid "Element custom class. You can use \"full-width\" class for video"
+msgstr ""
+
+# @ su
+#: inc/filters.php:57
+msgid "Image"
+msgstr "Image"
+
+#: inc/filters.php:107
 msgid "Banner image URL"
 msgstr ""
 
-#: inc/filters.php:105
+#: inc/filters.php:114
 msgid "Banner title"
 msgstr ""
 
-#: inc/filters.php:119
+#: inc/filters.php:128
 msgid "Banner default text color"
 msgstr ""
 
-#: inc/filters.php:133
+#: inc/filters.php:142
 msgid "Banner content"
 msgstr ""
 
-#: inc/filters.php:140
+#: inc/filters.php:149
 msgid "Custom CSS class"
+msgstr ""
+
+#: inc/filters.php:167
+msgid "Select a page:"
+msgstr ""
+
+#: inc/filters.php:175
+msgid "Landing page"
+msgstr ""
+
+#: inc/filters.php:176
+msgid "Please select landing page. (Page with anchor navigation menu.)"
 msgstr ""
 
 # @ su
@@ -2118,24 +2204,24 @@ msgstr ""
 "Selecteer taxonomie en de termen.<br/>Selecteer meerdere termen met de Ctrl "
 "(Cmd) toets"
 
-#: inc/generator-views.php:192 inc/generator-views.php:229
+#: inc/generator-views.php:193 inc/generator-views.php:230
 msgid "Extra small devices (Phones)"
 msgstr ""
 
-#: inc/generator-views.php:192 inc/generator-views.php:229
+#: inc/generator-views.php:193 inc/generator-views.php:230
 msgid "Small devices (Tablets)"
 msgstr ""
 
-#: inc/generator-views.php:192 inc/generator-views.php:229
+#: inc/generator-views.php:193 inc/generator-views.php:230
 msgid "Medium devices (Desktops)"
 msgstr ""
 
-#: inc/generator-views.php:192 inc/generator-views.php:229
+#: inc/generator-views.php:193 inc/generator-views.php:230
 msgid "Large devices (Desktops)"
 msgstr ""
 
 # @ su
-#: inc/generator.php:58 inc/generator.php:161
+#: inc/generator.php:58 inc/generator.php:160
 msgid "Insert shortcode"
 msgstr "Voeg shortcode in"
 
@@ -2150,72 +2236,72 @@ msgid "Filter by type"
 msgstr "Filter op type"
 
 # @ su
-#: inc/generator.php:151
+#: inc/generator.php:150
 msgid "Shortcode not specified"
 msgstr "Shortcode niet gespecificeerd"
 
 # @ su
-#: inc/generator.php:162
+#: inc/generator.php:161
 msgid "Live preview"
 msgstr "Toon shortcode in actie"
 
 # @ su
-#: inc/generator.php:166
+#: inc/generator.php:165
 msgid "Click to return to the shortcodes list"
 msgstr "Klik om terug te keren naar de shortcode-lijst"
 
 # @ su
-#: inc/generator.php:166
+#: inc/generator.php:165
 msgid "All shortcodes"
 msgstr "Alle shortcodes"
 
-#: inc/generator.php:173
+#: inc/generator.php:172
 msgid "Examples of use"
 msgstr ""
 
 # @ su
-#: inc/generator.php:213
+#: inc/generator.php:212
 msgid "Click to set this value"
 msgstr "Klik om deze waarde in te stellen"
 
 # @ su
-#: inc/generator.php:250
+#: inc/generator.php:249
 msgid "Preview"
 msgstr "Voorbeeld"
 
 # @ su
-#: inc/generator.php:259 inc/tools.php:217
+#: inc/generator.php:258 inc/tools.php:230
 msgid "Access denied"
 msgstr "Toegang geweigerd"
 
-#: inc/generator.php:294
+#: inc/generator.php:293
 msgid "Presets"
 msgstr "Voorinstellingen"
 
-#: inc/generator.php:297
+#: inc/generator.php:296
 msgid "Save current settings as preset"
 msgstr "Bewaar huidige instellingen als voorinstelling"
 
 # @ su
-#: inc/generator.php:326 inc/generator.php:329
+#: inc/generator.php:325 inc/generator.php:328
 msgid "Presets not found"
 msgstr "Voorinstellingen niet gevonden"
 
-#: inc/shortcodes.php:29
+#: inc/shortcodes.php:31
 msgid "Read More"
 msgstr ""
 
-#: inc/shortcodes.php:270 inc/shortcodes.php:874 inc/shortcodes.php:1397
+#: inc/shortcodes.php:262 inc/shortcodes.php:833 inc/shortcodes.php:1263
 msgid "Template file (*.tmpl) not found"
 msgstr ""
 
 # @ su
-#: inc/shortcodes.php:1157 inc/shortcodes.php:1696
+#: inc/shortcodes.php:1028 inc/shortcodes.php:1400
 msgid "Posts not found"
 msgstr "Bericht niet gevonden"
 
 # @ su
-#: inc/shortcodes.php:1748
+#: inc/shortcodes.php:1449
 msgid "Tab title"
 msgstr "Tab titel"
 
@@ -2337,6 +2423,49 @@ msgstr ""
 #: templates/shortcodes/swiper_carousel/default.tmpl:4
 msgid "by"
 msgstr ""
+
+# @ su
+#~ msgid "Square"
+#~ msgstr "Rechthoek"
+
+# @ su
+#~ msgid "Rounded corners"
+#~ msgstr "Ronde hoeken"
+
+# @ su
+#~ msgid ""
+#~ "IN - posts that have any of selected categories terms<br/>NOT IN - posts "
+#~ "that is does not have any of selected terms<br/>AND - posts that have all "
+#~ "selected terms"
+#~ msgstr ""
+#~ "IN - berichten die een van de geselecteerde categorieën bevatten<br/>NOT "
+#~ "IN - berichten die geen van de geselecteerde categorieën bevatten<br/>AND "
+#~ "- berichten die alle geselecteerde categorieën bevatten."
+
+# @ su
+#~ msgid "Show childrens of entered post (enter post ID)"
+#~ msgstr "Toon subpagina's van het opgegeven bericht (geef bericht-ID)"
+
+# @ su
+#~ msgid "Select Yes to ignore posts that is sticked"
+#~ msgstr "Selecteer Ja om sticky berichten te negeren"
+
+# @ su
+#~ msgid "Choose style for this tabs"
+#~ msgstr "Kies de stijl voor deze tabs"
+
+# @ su
+#~ msgid ""
+#~ "You can use unique anchor for this spoiler to access it with hash in page "
+#~ "url. For example: type here <b%value>Hello</b> and then use url like "
+#~ "http://example.com/page-url#Hello. This spoiler will be open and scrolled "
+#~ "in"
+#~ msgstr ""
+#~ "U kunt een uniek anker voor deze spoiler gebruiken om het met een # in de "
+#~ "pagina URL te bereiken. Bij voorbeeld: geef in <b%value>Hallo</b> en "
+#~ "gebruik dan een URL zoals http://voorbeeld.com/pagina-url#Hallo. De "
+#~ "spoiler zal worden geactiveerd en de inhoud toont de betreffende plek in "
+#~ "het document."
 
 # @ su
 #~ msgid "Welcome to Shortcodes Ultimate"
@@ -2875,10 +3004,6 @@ msgstr ""
 #~ msgstr "Is deze kolom op de pagina gecentreerd?"
 
 # @ su
-#~ msgid "List"
-#~ msgstr "Lijst"
-
-# @ su
 #~ msgid "You can upload custom icon for this list or pick a built-in icon"
 #~ msgstr ""
 #~ "U kunt een eigen icon uploaden voor deze lijst of een ingebouwde icon "
@@ -3084,10 +3209,6 @@ msgstr ""
 # @ su
 #~ msgid "Iframe"
 #~ msgstr "iframe"
-
-# @ su
-#~ msgid "Image"
-#~ msgstr "Image"
 
 # @ su
 #~ msgid "Inline (html content)"

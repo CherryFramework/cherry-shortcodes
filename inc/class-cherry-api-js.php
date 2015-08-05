@@ -37,13 +37,19 @@ if ( !class_exists( 'Cherry_Api_Js' ) ) {
 		 */
 		public function enqueue_cherry_api_scripts() {
 			// Cherry Framework JS API
-			if(  $this ->options[ 'product_type' ] === 'framework' ){
-				$src = esc_url( trailingslashit( CHERRY_URI ) . 'assets/js/cherry-api.js' ) ;
+			if ( $this ->options[ 'product_type' ] === 'framework' ) {
+
+				if ( ! defined( 'CHERRY_VERSION' ) ) {
+					return;
+				}
+
+				$src     = esc_url( trailingslashit( CHERRY_URI ) . 'assets/js/cherry-api.js' ) ;
 				$version = CHERRY_VERSION;
-			}else{
-				$src = plugins_url( 'assets/js/cherry-api.js', CHERRY_SHORTCODES_FILE ) ;
+			} else {
+				$src     = plugins_url( 'assets/js/cherry-api.js', CHERRY_SHORTCODES_FILE ) ;
 				$version = CHERRY_SHORTCODES_VERSION;
 			}
+
 			wp_register_script( 'cherry-api', $src, array( 'jquery' ), $version, true );
 			wp_enqueue_script( 'cherry-api' );
 		}

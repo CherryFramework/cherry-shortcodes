@@ -3,7 +3,7 @@
  * Plugin Name: Cherry Shortcodes
  * Plugin URI:  http://www.cherryframework.com/
  * Description: A pack of WordPress shortcodes.
- * Version:     1.0.2
+ * Version:     1.0.3 beta
  * Author:      Cherry Team
  * Author URI:  http://www.cherryframework.com/
  * Text Domain: cherry-shortcodes
@@ -50,7 +50,7 @@ if ( !class_exists( 'Cherry_Shortcodes' ) ) {
 			// Load the functions files.
 			add_action( 'plugins_loaded', array( $this, 'includes' ),  3 );
 
-			add_action( 'init', array( $this, 'register' ), 10 );
+			add_action( 'init', array( $this, 'register' ), 11 );
 			add_action( 'init', array( $this, 'update' ),   20 );
 
 			// Enable shortcodes in text widgets.
@@ -82,7 +82,7 @@ if ( !class_exists( 'Cherry_Shortcodes' ) ) {
 			 *
 			 * @since 1.0.0
 			 */
-			define( 'CHERRY_SHORTCODES_VERSION', '1.0.2' );
+			define( 'CHERRY_SHORTCODES_VERSION', '1.0.3 beta' );
 
 			/**
 			 * Set the slug of the plugin.

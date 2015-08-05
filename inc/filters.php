@@ -182,6 +182,11 @@ function cherry_shortcodes_add_option_item($general_options){
 }
 
 function cherry_shortcodes_modify_nav_menu_args( $atts ) {
+
+	if ( ! function_exists( 'cherry_get_option' ) ) {
+		return $atts;
+	}
+
 	$general_landing_page = cherry_get_option('general-landing-page');
 	$page_id = get_the_ID();
 
