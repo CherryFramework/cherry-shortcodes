@@ -4,6 +4,13 @@ A pack of WordPress shortcodes.
 
 ##Change log##
 
+#### v1.0.3 ####
+
+* UPD: Optimize a shortcode registration
+* UPD: Shortcode descriptions
+* UPD: Element with type `upload` (added a new attribute - `data_type`)
+* FIX: Dependence plugin
+
 #### v1.0.2 ####
 
 * FIX: https://github.com/CherryFramework/cherry-shortcodes/issues/1
