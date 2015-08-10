@@ -500,8 +500,9 @@ class Cherry_Shortcodes_Data {
 						'image' => array(
 							'type'    => 'upload',
 							'default' => '',
+							'data_type' => 'id',
 							'name'    => __( 'Banner Image', 'cherry-shortcodes' ),
-							'desc'    => __( 'Upload banner image', 'cherry-shortcodes' ),
+							'desc'    => __( 'Select attachment banner image', 'cherry-shortcodes' ),
 						),
 						'title' => array(
 							'default' => '',
@@ -969,7 +970,7 @@ class Cherry_Shortcodes_Data {
 						'tax_term' => array(
 							'type'     => 'select',
 							'multiple' => true,
-							'values'   => Cherry_Shortcodes_Tools::get_terms( 'category', 'slug' ),
+							'values'   => array(), // stay empty
 							'default'  => '',
 							'name'     => __( 'Terms', 'cherry-shortcodes' ),
 							'desc'     => __( 'Select terms to show posts from', 'cherry-shortcodes' ),
@@ -979,7 +980,7 @@ class Cherry_Shortcodes_Data {
 							'values'  => array( 'IN', 'NOT IN', 'AND' ),
 							'default' => 'IN',
 							'name'    => __( 'Taxonomy term operator', 'cherry-shortcodes' ),
-							'desc'    => __( 'IN - posts that have any of selected categories terms<br/>NOT IN - posts that is does not have any of selected terms<br/>AND - posts that have all selected terms', 'cherry-shortcodes' ),
+							'desc'    => __( 'IN - posts that have any of selected categories terms<br/>NOT IN - posts that  do not have any of selected terms<br/>AND - posts that have all selected terms', 'cherry-shortcodes' ),
 						),
 						'author' => array(
 							'default' => '',
@@ -1027,7 +1028,7 @@ class Cherry_Shortcodes_Data {
 						'post_parent' => array(
 							'default' => '',
 							'name'    => __( 'Post parent', 'cherry-shortcodes' ),
-							'desc'    => __( 'Show childrens of entered post (enter post ID)', 'cherry-shortcodes' ),
+							'desc'    => __( 'Show children of entered post (enter post ID)', 'cherry-shortcodes' ),
 						),
 						'post_status' => array(
 							'type'   => 'select',
@@ -1050,7 +1051,7 @@ class Cherry_Shortcodes_Data {
 							'type'    => 'bool',
 							'default' => 'no',
 							'name'    => __( 'Ignore sticky', 'cherry-shortcodes' ),
-							'desc'    => __( 'Select Yes to ignore posts that is sticked', 'cherry-shortcodes' ),
+							'desc'    => __( 'Select Yes to ignore posts that are sticked', 'cherry-shortcodes' ),
 						),
 						'linked_title' => array(
 							'type'    => 'bool',
@@ -1072,7 +1073,7 @@ class Cherry_Shortcodes_Data {
 							),
 							'default' => 'part',
 							'name'    => __( 'Post content', 'cherry-shortcodes' ),
-							'desc'    => __( 'Choose to display a part or full content', 'cherry-shortcodes' ),
+							'desc'    => __( 'Choose to display a part or full content ', 'cherry-shortcodes' ),
 						),
 						'content_length' => array(
 							'type'    => 'number',
@@ -1132,7 +1133,7 @@ class Cherry_Shortcodes_Data {
 							'max'     => 25,
 							'step'    => 1,
 							'default' => 3,
-							'name'    => __( 'Number slides per view', 'cherry-shortcodes' ),
+							'name'    => __( 'Number of slides per view', 'cherry-shortcodes' ),
 							'desc'    => __( 'Specify number of slides per view', 'cherry-shortcodes' ),
 						),
 						'slides_per_group' => array(
@@ -1160,7 +1161,7 @@ class Cherry_Shortcodes_Data {
 							'step'    => 1,
 							'default' => 10,
 							'name'    => __( 'Space Between Slides', 'cherry-shortcodes' ),
-							'desc'    => __( 'With difine space between slides(px)', 'cherry-shortcodes' ),
+							'desc'    => __( 'Width of the space between slides(px)', 'cherry-shortcodes' ),
 						),
 						'swiper_duration_speed' => array(
 							'type'    => 'slider',
@@ -1186,8 +1187,8 @@ class Cherry_Shortcodes_Data {
 						'swiper_grab_cursor' => array(
 							'type'    => 'bool',
 							'default' => 'no',
-							'name'    => __( 'Grab Cusor', 'cherry-shortcodes' ),
-							'desc'    => __( 'Using Grab Cusor for slider', 'cherry-shortcodes' ),
+							'name'    => __( 'Grab Cursor', 'cherry-shortcodes' ),
+							'desc'    => __( 'Using Grab Cursor for slider', 'cherry-shortcodes' ),
 						),
 						'swiper_mouse_wheel' => array(
 							'type'    => 'bool',
@@ -1233,7 +1234,7 @@ class Cherry_Shortcodes_Data {
 							),
 							'default' => 'inner',
 							'name'    => __( 'Slider navigation position', 'cherry-shortcodes' ),
-							'desc'    => __( 'Choose position slider navigation', 'cherry-shortcodes' ),
+							'desc'    => __( 'Choose slider navigation position', 'cherry-shortcodes' ),
 						),
 					)
 				),
@@ -1276,7 +1277,7 @@ class Cherry_Shortcodes_Data {
 						'tax_term' => array(
 							'type'     => 'select',
 							'multiple' => true,
-							'values'   => Cherry_Shortcodes_Tools::get_terms( 'category', 'slug' ),
+							'values'   => array(), // stay empty
 							'default'  => '',
 							'name'     => __( 'Terms', 'cherry-shortcodes' ),
 							'desc'     => __( 'Select terms to show posts from', 'cherry-shortcodes' ),
@@ -1286,7 +1287,7 @@ class Cherry_Shortcodes_Data {
 							'values'  => array( 'IN', 'NOT IN', 'AND' ),
 							'default' => 'IN',
 							'name'    => __( 'Taxonomy term operator', 'cherry-shortcodes' ),
-							'desc'    => __( 'IN - posts that have any of selected categories terms<br/>NOT IN - posts that is does not have any of selected terms<br/>AND - posts that have all selected terms', 'cherry-shortcodes' ),
+							'desc'    => __( 'IN - posts that have any of selected categories terms<br/>NOT IN - posts that  do not have any of selected terms<br/>AND - posts that have all selected terms', 'cherry-shortcodes' ),
 						),
 						'author' => array(
 							'default' => '',
@@ -1334,7 +1335,7 @@ class Cherry_Shortcodes_Data {
 						'post_parent' => array(
 							'default' => '',
 							'name'    => __( 'Post parent', 'cherry-shortcodes' ),
-							'desc'    => __( 'Show childrens of entered post (enter post ID)', 'cherry-shortcodes' ),
+							'desc'    => __( 'Show children of entered post (enter post ID)', 'cherry-shortcodes' ),
 						),
 						'post_status' => array(
 							'type'   => 'select',
@@ -1357,7 +1358,7 @@ class Cherry_Shortcodes_Data {
 							'type'    => 'bool',
 							'default' => 'yes',
 							'name'    => __( 'Ignore sticky', 'cherry-shortcodes' ),
-							'desc'    => __( 'Select Yes to ignore posts that is sticked', 'cherry-shortcodes' ),
+							'desc'    => __( 'Select Yes to ignore posts that are sticked', 'cherry-shortcodes' ),
 						),
 						'linked_title' => array(
 							'type'    => 'bool',
@@ -1388,11 +1389,11 @@ class Cherry_Shortcodes_Data {
 							'type' => 'select',
 							'values' => array(
 								'part'    => __( 'Part of content', 'cherry-shortcodes' ),
-								'full'    => __( 'Full content', 'cherry-shortcodes' ),
+								'd'    => __( 'Full content', 'cherry-shortcodes' ),
 							),
 							'default' => 'part',
 							'name'    => __( 'Post content', 'cherry-shortcodes' ),
-							'desc'    => __( 'Choose to display a part or full content', 'cherry-shortcodes' ),
+							'desc'    => __( 'Choose to display a part or full content ', 'cherry-shortcodes' ),
 						),
 						'content_length' => array(
 							'type'    => 'number',
@@ -1412,7 +1413,7 @@ class Cherry_Shortcodes_Data {
 							'type'    => 'responsive',
 							'default' => '12 6 3 3',
 							'name'    => __( 'Column class', 'cherry-shortcodes' ),
-							'desc'    => __( 'Column class for each items.', 'cherry-shortcodes' ),
+							'desc'    => __( 'Column class for each item.', 'cherry-shortcodes' ),
 						),
 						'class' => array(
 							'default' => '',
@@ -1447,7 +1448,7 @@ class Cherry_Shortcodes_Data {
 							)),
 							'default' => 'default',
 							'name'    => __( 'Style', 'cherry-shortcodes' ),
-							'desc'    => __( 'Choose style for this tabs', 'cherry-shortcodes' ),
+							'desc'    => __( 'Choose style for these tabs', 'cherry-shortcodes' ),
 						),
 						'active' => array(
 							'type'    => 'number',
@@ -1501,13 +1502,13 @@ class Cherry_Shortcodes_Data {
 						'url' => array(
 							'default' => '',
 							'name'    => __( 'URL', 'cherry-shortcodes' ),
-							'desc'    => __( 'You can link this tab to any webpage. Enter here full URL to switch this tab into link', 'cherry-shortcodes' ),
+							'desc'    => __( 'You can link this tab to any webpage. Enter here d URL to switch this tab into link', 'cherry-shortcodes' ),
 						),
 						'target' => array(
 							'type' => 'select',
 							'values' => array(
-								'self'  => __( 'Open link in same window/tab', 'cherry-shortcodes' ),
-								'blank' => __( 'Open link in new window/tab', 'cherry-shortcodes' ),
+								'self'  => __( 'Open link in the same window/tab', 'cherry-shortcodes' ),
+								'blank' => __( 'Open link in a new window/tab', 'cherry-shortcodes' ),
 							),
 							'default' => 'blank',
 							'name'    => __( 'Link target', 'cherry-shortcodes' ),
@@ -1556,7 +1557,7 @@ class Cherry_Shortcodes_Data {
 						'anchor' => array(
 							'default' => '',
 							'name'    => __( 'Anchor', 'cherry-shortcodes' ),
-							'desc'    => __( 'You can use unique anchor for this spoiler to access it with hash in page url. For example: type here <b%value>Hello</b> and then use url like http://example.com/page-url#Hello. This spoiler will be open and scrolled in', 'cherry-shortcodes' ),
+							'desc'    => __( 'You can use unique anchor for this spoiler to access it with hash in page url. For example: type here <b%value>Hello</b> and then use url like http://example.com/page-url#Hello. This spoiler will be opened and scrolled in', 'cherry-shortcodes' ),
 						),
 						'class' => array(
 							'default' => '',
@@ -1672,25 +1673,26 @@ class Cherry_Shortcodes_Data {
 						'map_marker' => array(
 							'type'    => 'upload',
 							'default' => '',
+							'data_type' => 'id',
 							'name'    => __( 'Marker source', 'cherry-shortcodes' ),
-							'desc'    => __( 'Upload marker url source', 'cherry-shortcodes' ),
+							'desc'    => __( 'Select marker id attachment', 'cherry-shortcodes' ),
 						),
 					),
 					'desc' => __( 'Google Map', 'cherry-shortcodes' ),
 					'icon' => 'map-marker',
 				),
 
-				// [paralax_image][/paralax_image]
-				'paralax_image' => array(
-					'name'  => __( 'Paralax image', 'cherry-shortcodes' ),
+				// [parallax_image][/parallax_image]
+				'parallax_image' => array(
+					'name'  => __( 'Parallax image', 'cherry-shortcodes' ),
 					'type'  => 'wrap',
 					'group' => 'media',
 					'atts'  => array(
 						'bg_image' => array(
 							'type'    => 'upload',
 							'default' => '',
-							'name'    => __( 'Paralax image', 'cherry-shortcodes' ),
-							'desc'    => __( 'Upload paralax image url source', 'cherry-shortcodes' ),
+							'name'    => __( 'Parallax image', 'cherry-shortcodes' ),
+							'desc'    => __( 'Upload parallax image url source', 'cherry-shortcodes' ),
 						),
 						'speed' => array(
 							'type'    => 'number',
@@ -1698,14 +1700,14 @@ class Cherry_Shortcodes_Data {
 							'max'     => 10,
 							'step'    => 0.1,
 							'default' => 1.5,
-							'name'    => __( 'Paralax speed', 'cherry-shortcodes' ),
-							'desc'    => __( 'Paralax speed value (s)', 'cherry-shortcodes' ),
+							'name'    => __( 'Parallax speed', 'cherry-shortcodes' ),
+							'desc'    => __( 'Parallax speed value (s)', 'cherry-shortcodes' ),
 						),
 						'invert' => array(
 							'type'    => 'bool',
 							'default' => 'no',
-							'name'    => __( 'Paralax invert', 'cherry-shortcodes' ),
-							'desc'    => __( 'Paralax invert direction move', 'cherry-shortcodes' ),
+							'name'    => __( 'Parallax invert', 'cherry-shortcodes' ),
+							'desc'    => __( 'Parallax invert direction move', 'cherry-shortcodes' ),
 						),
 						'min_height' => array(
 							'type'    => 'number',
@@ -1713,7 +1715,7 @@ class Cherry_Shortcodes_Data {
 							'max'     => 1000,
 							'step'    => 1,
 							'default' => 300,
-							'name'    => __( 'Paralax container min-height', 'cherry-shortcodes' ),
+							'name'    => __( 'Parallax container min-height', 'cherry-shortcodes' ),
 							'desc'    => __( 'container min-height value (px)', 'cherry-shortcodes' ),
 						),
 						'custom_class' => array(
@@ -1724,13 +1726,13 @@ class Cherry_Shortcodes_Data {
 						),
 					),
 					'content' => __( 'Your content goes here', 'cherry-shortcodes' ),
-					'desc'    => __( 'Paralax block', 'cherry-shortcodes' ),
+					'desc'    => __( 'Parallax block', 'cherry-shortcodes' ),
 					'icon'    => 'star-half-o',
 				),
 
-				// [paralax_html_video][/paralax_html_video]
-				'paralax_html_video' => array(
-					'name'  => __( 'Paralax html video', 'cherry-shortcodes' ),
+				// [parallax_html_video][/parallax_html_video]
+				'parallax_html_video' => array(
+					'name'  => __( 'Parallax html video', 'cherry-shortcodes' ),
 					'type'  => 'wrap',
 					'group' => 'media',
 					'atts'  => array(
@@ -1764,14 +1766,14 @@ class Cherry_Shortcodes_Data {
 							'max'     => 10,
 							'step'    => 0.1,
 							'default' => 1.5,
-							'name'    => __( 'Paralax speed', 'cherry-shortcodes' ),
-							'desc'    => __( 'Paralax speed value (s)', 'cherry-shortcodes' ),
+							'name'    => __( 'Parallax speed', 'cherry-shortcodes' ),
+							'desc'    => __( 'Parallax speed value (s)', 'cherry-shortcodes' ),
 						),
 						'invert' => array(
 							'type'    => 'bool',
 							'default' => 'no',
-							'name'    => __( 'Paralax invert', 'cherry-shortcodes' ),
-							'desc'    => __( 'Paralax invert direction move', 'cherry-shortcodes' ),
+							'name'    => __( 'Parallax invert', 'cherry-shortcodes' ),
+							'desc'    => __( 'Parallax invert direction move', 'cherry-shortcodes' ),
 						),
 						'custom_class' => array(
 							'type'    => 'text',
@@ -1781,7 +1783,7 @@ class Cherry_Shortcodes_Data {
 						),
 					),
 					'content' => __( 'Your content goes here', 'cherry-shortcodes' ),
-					'desc'    => __( 'Paralax block', 'cherry-shortcodes' ),
+					'desc'    => __( 'Parallax block', 'cherry-shortcodes' ),
 					'icon'    => 'star-half-o',
 				),
 
@@ -1961,7 +1963,7 @@ class Cherry_Shortcodes_Data {
 							'desc'    => __( 'Element custom class', 'cherry-shortcodes' ),
 						),
 					),
-					'desc' => __( 'This shortcode added show animations on any page element.', 'cherry-shortcodes' ),
+					'desc' => __( 'This shortcode adds show animations on any page element.', 'cherry-shortcodes' ),
 					'icon' => 'magic',
 				),
 				// [video_preview][/video_preview]
@@ -1995,31 +1997,31 @@ class Cherry_Shortcodes_Data {
 							),
 							'default'	=> 'show_content_on_hover',
 							'name'		=> __( 'Controls.', 'cherry-shortcodes' ),
-							'desc'		=> __( '', 'cherry-shortcodes' ),
+							// 'desc'		=> __( '', 'cherry-shortcodes' ),
 						),
 						'show_content_on_hover' => array(
 							'type'		=> 'bool',
 							'default'	=> 'no',
 							'name'		=> __( 'Show content on mouse hover.', 'cherry-shortcodes' ),
-							'desc'		=> __( '', 'cherry-shortcodes' ),
+							// 'desc'		=> __( '', 'cherry-shortcodes' ),
 						),
 						'muted' => array(
 							'type'    => 'bool',
 							'default' => 'no',
 							'name'    => __( 'Muted.', 'cherry-shortcodes' ),
-							'desc'    => __( '', 'cherry-shortcodes' ),
+							// 'desc'    => __( '', 'cherry-shortcodes' ),
 						),
 						'loop' => array(
 							'type'    => 'bool',
 							'default' => 'no',
 							'name'    => __( 'Loop.', 'cherry-shortcodes' ),
-							'desc'    => __( '', 'cherry-shortcodes' ),
+							// 'desc'    => __( '', 'cherry-shortcodes' ),
 						),
 						'preload' => array(
 							'type'    => 'bool',
 							'default' => 'no',
 							'name'    => __( 'Preload.', 'cherry-shortcodes' ),
-							'desc'    => __( '', 'cherry-shortcodes' ),
+							// 'desc'    => __( '', 'cherry-shortcodes' ),
 						),
 						'custom_class' => array(
 							'type'    => 'text',

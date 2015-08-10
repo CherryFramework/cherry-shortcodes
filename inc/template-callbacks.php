@@ -118,9 +118,13 @@ class Cherry_Shortcodes_Template_Callbacks {
 		global $post;
 
 		$shortcode = Cherry_Shortcodes_Handler::get_shortcode_name();
-
 		if ( 'banner' == $shortcode ) {
-			return esc_url( $this->atts['image'] );
+			if( !is_numeric( $this->atts['image'] ) ){
+				return esc_url( $this->atts['image'] );
+			}else{
+				$attachment_image = wp_get_attachment_image_src( intval( $this->atts['image'] ) );
+				return esc_url( $attachment_image[0] );
+			}
 		}
 
 		if ( ! post_type_supports( get_post_type( $post->ID ), 'thumbnail' ) ) {
@@ -167,7 +171,7 @@ class Cherry_Shortcodes_Template_Callbacks {
 
 				if ( $crop_image ) {
 					$img_url   = wp_get_attachment_url( get_post_thumbnail_id(), 'full' );
-					$thumbnail = Cherry_Shortcodes_Tools::get_crop_image( $img_url, $crop_width, $crop_height );
+					$thumbnail = Cherry_Shortcodes_Tools::get_crop_image( $img_url, get_post_thumbnail_id(), $crop_width, $crop_height );
 				} else {
 					$thumbnail = get_the_post_thumbnail( $post->ID, 'large' );
 				}
