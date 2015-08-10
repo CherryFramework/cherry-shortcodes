@@ -185,7 +185,9 @@ function modify_nav_menu_args ( $atts ) {
 	$general_landing_page = cherry_get_option('general-landing-page');
 	$page_id = get_the_ID();
 
-	if( $general_landing_page && $general_landing_page != $page_id && strpos($atts['href'], '#') === 0){
+	if( $general_landing_page && $general_landing_page != $page_id && strpos($atts['href'], '#') === 0
+		|| is_page_template( 'templates/template-landing.php' )  && strpos($atts['href'], '#') === 0
+		){
 		$atts['href'] = get_page_link( $general_landing_page ) . $atts['href'];
 	};
 	return $atts;

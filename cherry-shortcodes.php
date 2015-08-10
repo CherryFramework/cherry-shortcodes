@@ -3,11 +3,12 @@
  * Plugin Name: Cherry Shortcodes
  * Plugin URI:  http://www.cherryframework.com/
  * Description: A pack of WordPress shortcodes.
- * Version:     1.0.1 beta
+ * Version:     1.0.1
  * Author:      Cherry Team
  * Author URI:  http://www.cherryframework.com/
  * Text Domain: cherry-shortcodes
- * License:     GPL
+ * License:     GPL-3.0+
+ * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
  * Domain Path: /languages
  */
 
