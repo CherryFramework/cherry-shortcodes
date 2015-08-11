@@ -35,11 +35,28 @@
 					//resize inner holder
 					CHERRY_API.variable.$window.on( 'resize.video_preview', $.proxy( obj.resize, obj ) ).trigger( 'resize.video_preview' );
 					$this.filter( obj.full_width_class ).on( 'load', obj.video, $.proxy( obj.resize, obj ) );
+
+					this.getElementsByTagName("video")[0].addEventListener("pause", function( event ){ 
+						var $wrap = $( event.target ).parents( CHERRY_API.shortcode.video_preview.wrap ),
+							button = $(CHERRY_API.shortcode.video_preview.button_play_pause, $wrap);
+							
+						obj.chenge_style( button );
+					 }, true)
+					this.getElementsByTagName("video")[0].addEventListener("play", function( event ){ 
+						var $wrap = $( event.target ).parents( CHERRY_API.shortcode.video_preview.wrap ),
+							button = $(CHERRY_API.shortcode.video_preview.button_play_pause, $wrap);
+							
+						obj.chenge_style( button );
+					 }, true);
 				}
 
 				//controls event
 				if( data.control === 'show' || data.control === 'show-on-hover' ){
-					$this.on( 'click', obj.button_play_pause, obj.play_stop ).on( 'click', obj.button_mute, obj.muted ).on( 'click', obj.video, obj.play_stop );
+					$this
+						.on( 'click', obj.button_play_pause, obj.play_stop )
+						.on( 'click', obj.button_mute, obj.muted )
+						.on( 'click', obj.video, obj.play_stop );
+
 				}else if( data.control === 'play-on-hover' ){
 					$this.on( 'mouseover', '.video-inner-holder', obj.play_stop ).on( 'mouseout', '.video-inner-holder', obj.play_stop );
 				}
@@ -104,6 +121,7 @@
 
 						CHERRY_API.variable.$window.trigger( 'resize.video_preview' );
 
+
 						if(settings.mute){
 							event.target.mute();
 						}
@@ -121,14 +139,16 @@
 						}
 					},
 					'onStateChange':function(event){
-						if(event.data === 0){
-							var $wrap = $(event.target.f).parents(obj.wrap),
-								button = $(obj.button_play_pause, $wrap);
+						var $wrap = $(event.target.f).parents(obj.wrap),
+							button = $(obj.button_play_pause, $wrap);
 
-							if( settings.loop !== 1 ){
+						if(event.data === 0 && settings.loop !== 1 ){
 								event.target.seekTo(0, true).stopVideo();
-							}
+						}
 
+						if(event.data === 0
+							|| event.data === 1 
+							|| event.data === 2){
 							obj.chenge_style( button );
 						}
 					}
@@ -139,10 +159,12 @@
 		},
 
 		play_stop: function () {
+
 			var $wrap = $( this ).parents( CHERRY_API.shortcode.video_preview.wrap ),
 				data = $wrap.data('settings'),
 				corrent_video,
-				poster = $('.cherry-video-poster', $wrap);
+				poster = $('.cherry-video-poster', $wrap),
+				button = $(CHERRY_API.shortcode.video_preview.button_play_pause, $wrap);
 
 			if( data.type === 'youtube' ){
 				var frame_id = $('iframe', $wrap ).attr('id');
@@ -165,8 +187,6 @@
 			}
 
 			if(poster[0]){ poster.remove(); }
-
-			CHERRY_API.shortcode.video_preview.chenge_style( $( this ) );
 		},
 
 		muted: function () {
@@ -199,9 +219,9 @@
 
 		chenge_style: function( target ){
 			var $button_class = target.data('class'),
-				$button_sub_class = target.data('sub-class'),
+				$button_sub_class = target.data('sub-class')/*,
 				$button_text = target.data('text'),
-				$button_sub_text = target.data('sub-text');
+				$button_sub_text = target.data('sub-text')*/;
 
 			target.toggleClass($button_class+' '+$button_sub_class);
 		},
