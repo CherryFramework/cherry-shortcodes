@@ -4,6 +4,13 @@ A pack of WordPress shortcodes.
 
 ##Change log##
 
+#### v1.0.4 ####
+
+* FIX: Updater class logic
+* FIX: `video_preview` shortcode
+* FIX: WP 4.3.0 compatibility - updated constructor method for WP_Widget
+* UPD: Font Awesome to 4.4.0
+
 #### v1.0.3 ####
 
 * UPD: Optimize a shortcode registration
