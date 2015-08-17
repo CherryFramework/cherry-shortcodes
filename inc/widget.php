@@ -27,7 +27,7 @@ class Cherry_Shortcodes_Widget extends WP_Widget {
 			'height'  => 350,
 			'id_base' => 'cherry-shortcodes'
 		);
-		$this->WP_Widget( 'cherry-shortcodes', __( 'Cherry Shortcodes', 'cherry-shortcodes' ), $widget_ops, $control_ops );
+		parent::__construct( 'cherry-shortcodes', __( 'Cherry Shortcodes', 'cherry-shortcodes' ), $widget_ops, $control_ops );
 	}
 
 	public static function register() {
