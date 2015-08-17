@@ -108,7 +108,7 @@ class Cherry_Shortcodes_Assets {
 		// Magnific Popup.
 		wp_register_style( 'magnific-popup', plugins_url( 'assets/css/magnific-popup.css', CHERRY_SHORTCODES_FILE ), false, CHERRY_SHORTCODES_VERSION, 'all' );
 		// Font Awesome.
-		wp_register_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', false, '4.3.0', 'all' );
+		wp_register_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', false, '4.4.0', 'all' );
 		// Swiper.
 		wp_register_style( 'swiper', plugins_url( 'assets/css/swiper.css', CHERRY_SHORTCODES_FILE ), false, CHERRY_SHORTCODES_VERSION, 'all' );
 		// Shortcodes style.
