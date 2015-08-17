@@ -36,16 +36,16 @@
 					CHERRY_API.variable.$window.on( 'resize.video_preview', $.proxy( obj.resize, obj ) ).trigger( 'resize.video_preview' );
 					$this.filter( obj.full_width_class ).on( 'load', obj.video, $.proxy( obj.resize, obj ) );
 
-					this.getElementsByTagName("video")[0].addEventListener("pause", function( event ){ 
+					this.getElementsByTagName("video")[0].addEventListener("pause", function( event ){
 						var $wrap = $( event.target ).parents( CHERRY_API.shortcode.video_preview.wrap ),
 							button = $(CHERRY_API.shortcode.video_preview.button_play_pause, $wrap);
-							
+
 						obj.chenge_style( button );
 					 }, true)
-					this.getElementsByTagName("video")[0].addEventListener("play", function( event ){ 
+					this.getElementsByTagName("video")[0].addEventListener("play", function( event ){
 						var $wrap = $( event.target ).parents( CHERRY_API.shortcode.video_preview.wrap ),
 							button = $(CHERRY_API.shortcode.video_preview.button_play_pause, $wrap);
-							
+
 						obj.chenge_style( button );
 					 }, true);
 				}
@@ -69,6 +69,8 @@
 				if( data.muted !== 'no' ){
 					obj.chenge_style( $( obj.button_mute, $this ) );
 				}
+
+				$this.on( 'click', '.video-holder, iframe', obj.remove_poster );
 			})
 		},
 
@@ -135,7 +137,7 @@
 						if(settings.autoplay){
 							corrent_video.playVideo();
 						}else{
-							corrent_video.seekTo(0, true).stopVideo();
+							//corrent_video.seekTo(0, true).stopVideo();
 						}
 					},
 					'onStateChange':function(event){
@@ -143,14 +145,16 @@
 							button = $(obj.button_play_pause, $wrap);
 
 						if(event.data === 0 && settings.loop !== 1 ){
-								event.target.seekTo(0, true).stopVideo();
+								//event.target.seekTo(0, true).stopVideo();
 						}
 
 						if(event.data === 0
-							|| event.data === 1 
+							|| event.data === 1
 							|| event.data === 2){
 							obj.chenge_style( button );
 						}
+
+						CHERRY_API.shortcode.video_preview.remove_poster( $wrap );
 					}
 				}
 				});
@@ -159,11 +163,9 @@
 		},
 
 		play_stop: function () {
-
 			var $wrap = $( this ).parents( CHERRY_API.shortcode.video_preview.wrap ),
 				data = $wrap.data('settings'),
 				corrent_video,
-				poster = $('.cherry-video-poster', $wrap),
 				button = $(CHERRY_API.shortcode.video_preview.button_play_pause, $wrap);
 
 			if( data.type === 'youtube' ){
@@ -185,8 +187,7 @@
 					corrent_video.pause();
 				}
 			}
-
-			if(poster[0]){ poster.remove(); }
+			CHERRY_API.shortcode.video_preview.remove_poster( $wrap );
 		},
 
 		muted: function () {
@@ -224,6 +225,14 @@
 				$button_sub_text = target.data('sub-text')*/;
 
 			target.toggleClass($button_class+' '+$button_sub_class);
+		},
+
+		remove_poster: function( target ){
+			var poster = $('.cherry-video-poster', target);
+
+			if( poster[0] ){
+				poster.remove();
+			 }
 		},
 
 		resize: function(){
