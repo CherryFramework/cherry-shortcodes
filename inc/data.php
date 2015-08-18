@@ -877,8 +877,8 @@ class Cherry_Shortcodes_Data {
 						'target' => array(
 							'type'   => 'select',
 							'values' => array(
-								'self'  => __( 'Same tab', 'cherry-shortcodes' ),
-								'blank' => __( 'New tab', 'cherry-shortcodes' ),
+								'_self'  => __( 'Same tab', 'cherry-shortcodes' ),
+								'_blank' => __( 'New tab', 'cherry-shortcodes' ),
 							),
 							'default' => 'self',
 							'name'    => __( 'Target', 'cherry-shortcodes' ),
