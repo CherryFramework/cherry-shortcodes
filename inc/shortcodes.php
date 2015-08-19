@@ -99,6 +99,8 @@ class Cherry_Shortcodes_Handler {
 
 		if ( ! empty( $atts['target'] ) && in_array( $atts['target'], array( '_self', '_blank' ) ) ) {
 			$btn_atts['target'] = esc_attr( $atts['target'] );
+		} elseif ( ! empty( $atts['target'] ) && in_array( $atts['target'], array( 'self', 'blank' ) ) ) {
+			$btn_atts['target'] = esc_attr( '_' . $atts['target'] );
 		}
 
 		if ( ! empty( $atts['rel'] ) ) {

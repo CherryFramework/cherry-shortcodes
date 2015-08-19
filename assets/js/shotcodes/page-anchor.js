@@ -158,7 +158,7 @@
 			var start_position = this.anchors[target][0],
 				end_position = this.anchors[target][2],
 				top_point = this.$window.scrollTop(),
-				bottom_point = (top_point + this.window_height / 4) + this.window_height / 2;
+				bottom_point = top_point + this.window_height / 2;
 
 			if( start_position > top_point && start_position < bottom_point || end_position > top_point && end_position < bottom_point){
 				return true;
