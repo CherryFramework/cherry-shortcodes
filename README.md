@@ -9,6 +9,8 @@ A pack of WordPress shortcodes.
 * FIX: Updater class logic
 * FIX: `video_preview` shortcode
 * FIX: WP 4.3.0 compatibility - updated constructor method for WP_Widget
+* FIX: image size attribute for a `banner` shortcode
+* FIX: default attributes value for `col` shortcode - offset, pull, push
 * UPD: Font Awesome to 4.4.0
 
 #### v1.0.3 ####
