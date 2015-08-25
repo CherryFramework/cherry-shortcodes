@@ -122,7 +122,7 @@ class Cherry_Shortcodes_Template_Callbacks {
 			if( !is_numeric( $this->atts['image'] ) ){
 				return esc_url( $this->atts['image'] );
 			}else{
-				$attachment_image = wp_get_attachment_image_src( intval( $this->atts['image'] ) );
+				$attachment_image = wp_get_attachment_image_src( intval( $this->atts['image'] ), 'full' );
 				return esc_url( $attachment_image[0] );
 			}
 		}
