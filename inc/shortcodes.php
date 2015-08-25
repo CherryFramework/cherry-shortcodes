@@ -535,17 +535,17 @@ class Cherry_Shortcodes_Handler {
 
 	public static function row( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
-			'type'		=> 'full-width',
-			'class'		=> '',
-			'anchor'	=> ''
+			'type'   => 'full-width',
+			'class'  => '',
+			'anchor' => '',
 		), $atts, 'row' );
 
-		$id			= '';
-		$type		= sanitize_key( $atts['type'] );
-		$row_class	= apply_filters( 'cherry_shortcodes_output_row_class', 'row', $atts );
+		$id          = '';
+		$type        = sanitize_key( $atts['type'] );
+		$row_class   = apply_filters( 'cherry_shortcodes_output_row_class', 'row', $atts );
 		$anchor_data = '';
 
-		if( $atts[ 'anchor' ] ){
+		if ( $atts[ 'anchor' ] ) {
 			$anchor = preg_replace( '/[^A-Za-z0-9-_]/', '',  $atts[ 'anchor' ] );
 			$anchor = str_replace( ' ', '-', $anchor );
 
@@ -562,7 +562,7 @@ class Cherry_Shortcodes_Handler {
 
 			$id = '';
 			$anchor_data = '';
-		}else{
+		} else {
 			$container = '%s';
 			$class = cherry_esc_class_attr( $atts );
 		}
@@ -577,56 +577,89 @@ class Cherry_Shortcodes_Handler {
 		return self::row( $atts, $content );
 	}
 
-	public static function col( $atts = null, $content = null ) {
+	public static function col( $original_atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 			'size_xs'   => 'none',
 			'size_sm'   => 'none',
 			'size_md'   => 'none',
 			'size_lg'   => 'none',
-			'offset_xs' => 'none',
-			'offset_sm' => 'none',
-			'offset_md' => 'none',
-			'offset_lg' => 'none',
-			'pull_xs'   => 'none',
-			'pull_sm'   => 'none',
-			'pull_md'   => 'none',
-			'pull_lg'   => 'none',
-			'push_xs'   => 'none',
-			'push_sm'   => 'none',
-			'push_md'   => 'none',
-			'push_lg'   => 'none',
+			'offset_xs' => '',
+			'offset_sm' => '',
+			'offset_md' => '',
+			'offset_lg' => '',
+			'pull_xs'   => '',
+			'pull_sm'   => '',
+			'pull_md'   => '',
+			'pull_lg'   => '',
+			'push_xs'   => '',
+			'push_sm'   => '',
+			'push_md'   => '',
+			'push_lg'   => '',
 			'collapse'  => 'no',
 			'class'     => '',
-		), $atts, 'col' );
+		), $original_atts, 'col' );
 
-		$class  = '';
+		$class = '';
 
 		// Size
-		$class .= ( 'none' == $atts['size_xs'] )   ? '' : ' col-xs-' . sanitize_key( $atts['size_xs'] );
-		$class .= ( 'none' == $atts['size_sm'] )   ? '' : ' col-sm-' . sanitize_key( $atts['size_sm'] );
-		$class .= ( 'none' == $atts['size_md'] )   ? '' : ' col-md-' . sanitize_key( $atts['size_md'] );
-		$class .= ( 'none' == $atts['size_lg'] )   ? '' : ' col-lg-' . sanitize_key( $atts['size_lg'] );
+		$class .= ( 'none' == $atts['size_xs'] ) ? '' : ' col-xs-' . sanitize_key( $atts['size_xs'] );
+		$class .= ( 'none' == $atts['size_sm'] ) ? '' : ' col-sm-' . sanitize_key( $atts['size_sm'] );
+		$class .= ( 'none' == $atts['size_md'] ) ? '' : ' col-md-' . sanitize_key( $atts['size_md'] );
+		$class .= ( 'none' == $atts['size_lg'] ) ? '' : ' col-lg-' . sanitize_key( $atts['size_lg'] );
 
 		// Offset
-		$class .= ( 'none' == $atts['offset_xs'] ) ? '' : ' col-xs-offset-' . sanitize_key( $atts['offset_xs'] );
-		$class .= ( 'none' == $atts['offset_sm'] ) ? '' : ' col-sm-offset-' . sanitize_key( $atts['offset_sm'] );
-		$class .= ( 'none' == $atts['offset_md'] ) ? '' : ' col-md-offset-' . sanitize_key( $atts['offset_md'] );
-		$class .= ( 'none' == $atts['offset_lg'] ) ? '' : ' col-lg-offset-' . sanitize_key( $atts['offset_lg'] );
+		if ( ! empty( $original_atts['offset_xs'] ) ) {
+			$class .= ( 'none' == $original_atts['offset_xs'] ) ? ' col-xs-offset-0' : ' col-xs-offset-' . sanitize_key( $atts['offset_xs'] );
+		}
+
+		if ( ! empty( $original_atts['offset_sm'] ) ) {
+			$class .= ( 'none' == $original_atts['offset_sm'] ) ? ' col-sm-offset-0' : ' col-sm-offset-' . sanitize_key( $atts['offset_sm'] );
+		}
+
+		if ( ! empty( $original_atts['offset_md'] ) ) {
+			$class .= ( 'none' == $original_atts['offset_md'] ) ? ' col-md-offset-0' : ' col-md-offset-' . sanitize_key( $atts['offset_md'] );
+		}
+
+		if ( ! empty( $original_atts['offset_lg'] ) ) {
+			$class .= ( 'none' == $original_atts['offset_lg'] ) ? ' col-lg-offset-0' : ' col-lg-offset-' . sanitize_key( $atts['offset_lg'] );
+		}
 
 		// Pull
-		$class .= ( 'none' == $atts['pull_xs']  )  ? '' : ' col-xs-pull-' . sanitize_key( $atts['pull_xs'] );
-		$class .= ( 'none' == $atts['pull_sm']  )  ? '' : ' col-sm-pull-' . sanitize_key( $atts['pull_sm'] );
-		$class .= ( 'none' == $atts['pull_md']  )  ? '' : ' col-md-pull-' . sanitize_key( $atts['pull_md'] );
-		$class .= ( 'none' == $atts['pull_lg']  )  ? '' : ' col-lg-pull-' . sanitize_key( $atts['pull_lg'] );
+		if ( ! empty( $original_atts['pull_xs'] ) ) {
+			$class .= ( 'none' == $original_atts['pull_xs'] ) ? ' col-xs-pull-0' : ' col-xs-pull-' . sanitize_key( $atts['pull_xs'] );
+		}
+
+		if ( ! empty( $original_atts['pull_sm'] ) ) {
+			$class .= ( 'none' == $original_atts['pull_sm'] ) ? ' col-sm-pull-0' : ' col-sm-pull-' . sanitize_key( $atts['pull_sm'] );
+		}
+
+		if ( ! empty( $original_atts['pull_md'] ) ) {
+			$class .= ( 'none' == $original_atts['pull_md'] ) ? ' col-md-pull-0' : ' col-md-pull-' . sanitize_key( $atts['pull_md'] );
+		}
+
+		if ( ! empty( $original_atts['pull_lg'] ) ) {
+			$class .= ( 'none' == $original_atts['pull_lg'] ) ? ' col-lg-pull-0' : ' col-lg-pull-' . sanitize_key( $atts['pull_lg'] );
+		}
 
 		// Push
-		$class .= ( 'none' == $atts['push_xs']  )  ? '' : ' col-xs-push-' . sanitize_key( $atts['push_xs'] );
-		$class .= ( 'none' == $atts['push_sm']  )  ? '' : ' col-sm-push-' . sanitize_key( $atts['push_sm'] );
-		$class .= ( 'none' == $atts['push_md']  )  ? '' : ' col-md-push-' . sanitize_key( $atts['push_md'] );
-		$class .= ( 'none' == $atts['push_lg']  )  ? '' : ' col-lg-push-' . sanitize_key( $atts['push_lg'] );
+		if ( ! empty( $original_atts['push_xs'] ) ) {
+			$class .= ( 'none' == $original_atts['push_xs'] ) ? ' col-xs-push-0' : ' col-xs-push-' . sanitize_key( $atts['push_xs'] );
+		}
+
+		if ( ! empty( $original_atts['push_sm'] ) ) {
+			$class .= ( 'none' == $original_atts['push_sm'] ) ? ' col-sm-push-0' : ' col-sm-push-' . sanitize_key( $atts['push_sm'] );
+		}
+
+		if ( ! empty( $original_atts['push_md'] ) ) {
+			$class .= ( 'none' == $original_atts['push_md'] ) ? ' col-md-push-0' : ' col-md-push-' . sanitize_key( $atts['push_md'] );
+		}
+
+		if ( ! empty( $original_atts['push_lg'] ) ) {
+			$class .= ( 'none' == $original_atts['push_lg'] ) ? ' col-lg-push-0' : ' col-lg-push-' . sanitize_key( $atts['push_lg'] );
+		}
 
 		// Collapse?
-		$class .= ( 'yes' != $atts['collapse']  )  ? '' : ' collapse-col';
+		$class .= ( 'yes' != $atts['collapse'] ) ? '' : ' collapse-col';
 
 		$output = '<div class="' . trim( esc_attr( $class ) ) . cherry_esc_class_attr( $atts ) . '">' . do_shortcode( $content ) . '</div>';
 		$output = apply_filters( 'cherry_shortcodes_output', $output, $atts, 'col' );
