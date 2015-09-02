@@ -165,9 +165,8 @@ class Cherry_Shortcodes_Generator_Views {
 
 	public static function responsive( $id, $field ) {
 
-		if ( !isset( $field['values'] ) ) :
+		if ( ! isset( $field['values'] ) ) :
 
-			// $count       = ( $id === 'size' ) ? 1 : 0;
 			$count       = 1;
 			$grid_column = apply_filters( 'cherry_shortcodes_grid_columns', 12 );
 			$_values     = array( 'none' );
@@ -184,14 +183,13 @@ class Cherry_Shortcodes_Generator_Views {
 
 		endif;
 
-		$field['default'] = ( $field['default'] === 'none' ) ? array( 'none', 'none', 'none', 'none' ) : explode( ' ', $field['default'] );
-		$field_0 = $field_1 = $field_2 = $field_3 = $field;
+		$field_xs = $field_sm = $field_md = $field_lg = $field;
+		$field_xs['default'] = $field['default'][ $id . '_xs' ];
+		$field_sm['default'] = $field['default'][ $id . '_sm' ];
+		$field_md['default'] = $field['default'][ $id . '_md' ];
+		$field_lg['default'] = $field['default'][ $id . '_lg' ];
 
-		for ( $i = 0; $i < count( $field['default'] ); $i++ ) {
-			${'field_' . $i}['default'] = ( $field['default'][ $i ] == 'none' ) ? 'none' : absint( $field['default'][ $i ] );
-		}
-
-		$return = '<div class="cherry-generator-responsive"><span class="cherry-generator-responsive-field">' . self::select( $id . '_xs', $field_0 ) . '<small>' . __( 'Extra small devices (Phones)', 'cherry-shortcodes' ) . '</small></span><span class="cherry-generator-responsive-field">' . self::select( $id . '_sm', $field_1 ) . '<small>' . __( 'Small devices (Tablets)', 'cherry-shortcodes' ) . '</small></span><span class="cherry-generator-responsive-field">' . self::select( $id . '_md', $field_2 ) . '<small>' . __( 'Medium devices (Desktops)', 'cherry-shortcodes' ) . '</small></span><span class="cherry-generator-responsive-field">' . self::select( $id . '_lg', $field_3 ) . '<small>' . __( 'Large devices (Desktops)', 'cherry-shortcodes' ) . '</small></span></div>';
+		$return = '<div class="cherry-generator-responsive"><span class="cherry-generator-responsive-field">' . self::select( $id . '_xs', $field_xs ) . '<small>' . __( 'Extra small devices (Phones)', 'cherry-shortcodes' ) . '</small></span><span class="cherry-generator-responsive-field">' . self::select( $id . '_sm', $field_sm ) . '<small>' . __( 'Small devices (Tablets)', 'cherry-shortcodes' ) . '</small></span><span class="cherry-generator-responsive-field">' . self::select( $id . '_md', $field_md ) . '<small>' . __( 'Medium devices (Desktops)', 'cherry-shortcodes' ) . '</small></span><span class="cherry-generator-responsive-field">' . self::select( $id . '_lg', $field_lg ) . '<small>' . __( 'Large devices (Desktops)', 'cherry-shortcodes' ) . '</small></span></div>';
 
 		return $return;
 	}
