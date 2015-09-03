@@ -46,7 +46,7 @@ class Cherry_Shortcodes_Generator_Views {
 		// Create options
 		foreach ( $field['values'] as $option_value => $option_title ) {
 			// Is this option selected
-			$selected = ( $field['default'] === $option_value ) ? ' selected="selected"' : '';
+			$selected = ( $field['default'] == $option_value ) ? ' selected="selected"' : '';
 			// Create option
 			$return .= '<option value="' . $option_value . '"' . $selected . '>' . $option_title . '</option>';
 		}
