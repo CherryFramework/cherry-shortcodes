@@ -524,7 +524,8 @@ class Cherry_Shortcodes_Handler {
 		$output .= Cherry_Shortcodes_Tools::append_icons( $content, $atts['icon'] );
 		if ( 'image-icon' == $icon_type ) {
 
-			$style = '.' . $uniq_class . ' ul li:before {background-image: url(' . $atts['icon'] . '); }';
+			$image = Cherry_Shortcodes_Tools::get_image_url( $atts['icon'] );
+			$style = '.' . $uniq_class . ' ul li:before {background-image: url(' . $image . '); }';
 
 			$output .= sprintf( '<style>%s</style>', $style );
 		}
