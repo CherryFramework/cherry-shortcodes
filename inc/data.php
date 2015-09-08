@@ -137,25 +137,45 @@ class Cherry_Shortcodes_Data {
 					'atts'  => array(
 						'size' => array(
 							'type'    => 'responsive',
-							'default' => 'none none 6 none',
+							'default' => array(
+								'size_xs' => 'none',
+								'size_sm' => 'none',
+								'size_md' => 'none',
+								'size_lg' => 'none',
+							),
 							'name'    => __( 'Size', 'cherry-shortcodes' ),
 							'desc'    => __( 'Select column width.', 'cherry-shortcodes' ),
 						),
 						'offset' => array(
 							'type'    => 'responsive',
-							'default' => 'none',
+							'default' => array(
+								'offset_xs' => 'none',
+								'offset_sm' => 'none',
+								'offset_md' => 'none',
+								'offset_lg' => 'none',
+							),
 							'name'    => __( 'Offset', 'cherry-shortcodes' ),
 							'desc'    => __( 'Select column offset.', 'cherry-shortcodes' ),
 						),
 						'pull' => array(
 							'type'    => 'responsive',
-							'default' => 'none',
+							'default' => array(
+								'pull_xs' => 'none',
+								'pull_sm' => 'none',
+								'pull_md' => 'none',
+								'pull_lg' => 'none',
+							),
 							'name'    => __( 'Pull', 'cherry-shortcodes' ),
 							'desc'    => __( 'Select column pull.', 'cherry-shortcodes' ),
 						),
 						'push' => array(
 							'type'    => 'responsive',
-							'default' => 'none',
+							'default' => array(
+								'push_xs' => 'none',
+								'push_sm' => 'none',
+								'push_md' => 'none',
+								'push_lg' => 'none',
+							),
 							'name'    => __( 'Push', 'cherry-shortcodes' ),
 							'desc'    => __( 'Select column push.', 'cherry-shortcodes' ),
 						),
@@ -189,25 +209,45 @@ class Cherry_Shortcodes_Data {
 					'atts'  => array(
 						'size' => array(
 							'type'    => 'responsive',
-							'default' => 'none none 6 none',
+							'default' => array(
+								'size_xs' => 'none',
+								'size_sm' => 'none',
+								'size_md' => 'none',
+								'size_lg' => 'none',
+							),
 							'name'    => __( 'Size', 'cherry-shortcodes' ),
 							'desc'    => __( 'Select column width.', 'cherry-shortcodes' ),
 						),
 						'offset' => array(
 							'type'    => 'responsive',
-							'default' => 'none',
+							'default' => array(
+								'offset_xs' => 'none',
+								'offset_sm' => 'none',
+								'offset_md' => 'none',
+								'offset_lg' => 'none',
+							),
 							'name'    => __( 'Offset', 'cherry-shortcodes' ),
 							'desc'    => __( 'Select column offset.', 'cherry-shortcodes' ),
 						),
 						'pull' => array(
 							'type'    => 'responsive',
-							'default' => 'none',
+							'default' => array(
+								'pull_xs' => 'none',
+								'pull_sm' => 'none',
+								'pull_md' => 'none',
+								'pull_lg' => 'none',
+							),
 							'name'    => __( 'Pull', 'cherry-shortcodes' ),
 							'desc'    => __( 'Select column pull.', 'cherry-shortcodes' ),
 						),
 						'push' => array(
 							'type'    => 'responsive',
-							'default' => 'none',
+							'default' => array(
+								'push_xs' => 'none',
+								'push_sm' => 'none',
+								'push_md' => 'none',
+								'push_lg' => 'none',
+							),
 							'name'    => __( 'Push', 'cherry-shortcodes' ),
 							'desc'    => __( 'Select column push.', 'cherry-shortcodes' ),
 						),
@@ -1411,7 +1451,12 @@ class Cherry_Shortcodes_Data {
 						),
 						'col' => array(
 							'type'    => 'responsive',
-							'default' => '12 6 3 3',
+							'default' => array(
+								'col_xs' => 'none',
+								'col_sm' => 'none',
+								'col_md' => 'none',
+								'col_lg' => 'none',
+							),
 							'name'    => __( 'Column class', 'cherry-shortcodes' ),
 							'desc'    => __( 'Column class for each item.', 'cherry-shortcodes' ),
 						),

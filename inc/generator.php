@@ -179,27 +179,43 @@ class Cherry_Shortcodes_Generator {
 				$counter         = 0;
 				$left_container  = '';
 				$right_container = '';
-				$half            = ceil( count($shortcode['atts']) / 2 );
+				$half            = ceil( count( $shortcode['atts'] ) / 2 );
 
 				foreach ( $shortcode['atts'] as $attr_name => $attr_info ) {
-					// Prepare default value.
-					$item = '';
-					$default = (string) ( isset( $attr_info['default'] ) ) ? $attr_info['default'] : '';
-					$attr_info['name'] = (isset( $attr_info['name'] )) ? $attr_info['name'] : $attr_name;
-					$item .= '<div class="cherry-generator-attr-container" data-default="' . esc_attr( $default ) . '">';
-					$item .= '<h5>' . $attr_info['name'] . '</h5>';
+
+					$attr_info['name'] = ( isset( $attr_info['name'] ) ) ? $attr_info['name'] : $attr_name;
 
 					// Create field types.
-					if ( !isset( $attr_info['type'] )
+					if ( ! isset( $attr_info['type'] )
 						&& isset( $attr_info['values'] )
 						&& is_array( $attr_info['values'] )
 						&& count( $attr_info['values'] )
 						) {
 						$attr_info['type'] = 'select';
 
-					} elseif ( !isset( $attr_info['type'] ) ) {
+					} elseif ( ! isset( $attr_info['type'] ) ) {
 						$attr_info['type'] = 'text';
 					}
+
+					// Prepare default value.
+					$item    = '';
+					$default = '';
+
+					if ( isset( $attr_info['default'] ) ) {
+
+						if ( is_array( $attr_info['default'] ) ) {
+							foreach ( $attr_info['default'] as $key => $value ) {
+								$default .= ' data-' . esc_attr( $key ) . '="' . esc_attr( $value ) . '"';
+							}
+							$default .= ' data-changed=""';
+						} else {
+							$default = (string) $attr_info['default'];
+							$default = 'data-default="' . esc_attr( $default ) . '"';
+						}
+					}
+
+					$item .= '<div class="cherry-generator-attr-container cherry-generator-skip" ' . $default . ' data-field-type="' . esc_attr( $attr_info['type'] ) . '">';
+					$item .= '<h5>' . $attr_info['name'] . '</h5>';
 
 					if ( is_callable( array( 'Cherry_Shortcodes_Generator_Views', $attr_info['type'] ) ) ) {
 						$item .= call_user_func( array( 'Cherry_Shortcodes_Generator_Views', $attr_info['type'] ), $attr_name, $attr_info );
@@ -214,7 +230,11 @@ class Cherry_Shortcodes_Generator {
 
 					$item .= '</div>';
 
-					( $counter < $half ) ? $left_container .= $item : $right_container .= $item;
+					if ( $counter < $half ) {
+						$left_container .= $item;
+					} else {
+						$right_container .= $item;
+					}
 
 					$counter++;
 				}

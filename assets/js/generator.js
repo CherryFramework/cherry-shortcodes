@@ -605,13 +605,58 @@ jQuery(document).ready(function($) {
 					});
 				});
 				// Remove skip class when setting is changed
-				$settings.find('.cherry-generator-attr').on('change keyup blur', function() {
+				$settings.find('.cherry-generator-attr').on('change blur keyup', function() {
 					var $cnt = $(this).parents('.cherry-generator-attr-container'),
-						_default = $cnt.data('default'),
-						val = $(this).val();
-					// Value is changed
-					if (val != _default) $cnt.removeClass('cherry-generator-skip');
-					else $cnt.addClass('cherry-generator-skip');
+						name = $(this).attr('name'),
+						field_type = $cnt.data('field-type'),
+						val = $(this).val(),
+						changed,
+						arr,
+						find,
+						_default;
+
+					if ('responsive' === field_type) {
+						_default = $cnt.data(name);
+						changed = $cnt.data('changed');
+						arr = changed.length ? changed.split(',') : [];
+
+						// Value is changed?
+						if (val != _default) {
+							if (4 === arr.length) return;
+
+							if (false === in_array(name, arr)) {
+								arr.push(name);
+								$cnt
+									.removeClass('cherry-generator-skip')
+									.data('changed', arr.join(','));
+							}
+
+						} else {
+
+							find = in_array(name, arr);
+
+							if (false !== find) arr.splice(find, 1);
+
+							if (0 === arr.length) {
+								$cnt
+									.addClass('cherry-generator-skip')
+									.data('changed', '');
+							} else {
+								$cnt
+									.data('changed', arr.join(','));
+							}
+						}
+
+					} else {
+						_default = $cnt.data('default');
+
+						// Value is changed?
+						if (val != _default) {
+							$cnt.removeClass('cherry-generator-skip');
+						} else {
+							$cnt.addClass('cherry-generator-skip');
+						}
+					}
 				});
 				// Init value setters
 				$('.cherry-generator-set-value').click(function(e) {
@@ -935,5 +980,16 @@ jQuery(document).ready(function($) {
 		}, 300);
 		// Save shortcode to div
 		$result.text(shortcode);
+	}
+
+	function in_array(needle, haystack) {
+		var len = haystack.length;
+
+		if (0 === len) return false;
+
+		for (var i = 0; i < haystack.length; i++) {
+			if (needle === haystack[i]) return i;
+		}
+		return false;
 	}
 });

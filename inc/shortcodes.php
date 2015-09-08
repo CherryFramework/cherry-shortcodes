@@ -577,7 +577,7 @@ class Cherry_Shortcodes_Handler {
 		return self::row( $atts, $content );
 	}
 
-	public static function col( $atts = null, $content = null ) {
+	public static function col( $original_atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 			'size_xs'   => 'none',
 			'size_sm'   => 'none',
@@ -597,7 +597,7 @@ class Cherry_Shortcodes_Handler {
 			'push_lg'   => '',
 			'collapse'  => 'no',
 			'class'     => '',
-		), $atts, 'col' );
+		), $original_atts, 'col' );
 
 		$class = '';
 
@@ -608,54 +608,54 @@ class Cherry_Shortcodes_Handler {
 		$class .= ( 'none' == $atts['size_lg'] ) ? '' : ' col-lg-' . sanitize_key( $atts['size_lg'] );
 
 		// Offset
-		if ( '' !== $atts['offset_xs'] ) {
-			$class .= ( 'none' == $atts['offset_xs'] ) ? ' col-xs-offset-0' : ' col-xs-offset-' . sanitize_key( $atts['offset_xs'] );
+		if ( ! empty( $original_atts['offset_xs'] ) ) {
+			$class .= ( 'none' == $original_atts['offset_xs'] ) ? ' col-xs-offset-0' : ' col-xs-offset-' . sanitize_key( $atts['offset_xs'] );
 		}
 
-		if ( '' !== $atts['offset_sm'] ) {
-			$class .= ( 'none' == $atts['offset_sm'] ) ? ' col-sm-offset-0' : ' col-sm-offset-' . sanitize_key( $atts['offset_sm'] );
+		if ( ! empty( $original_atts['offset_sm'] ) ) {
+			$class .= ( 'none' == $original_atts['offset_sm'] ) ? ' col-sm-offset-0' : ' col-sm-offset-' . sanitize_key( $atts['offset_sm'] );
 		}
 
-		if ( '' !== $atts['offset_md'] ) {
-			$class .= ( 'none' == $atts['offset_md'] ) ? ' col-md-offset-0' : ' col-md-offset-' . sanitize_key( $atts['offset_md'] );
+		if ( ! empty( $original_atts['offset_md'] ) ) {
+			$class .= ( 'none' == $original_atts['offset_md'] ) ? ' col-md-offset-0' : ' col-md-offset-' . sanitize_key( $atts['offset_md'] );
 		}
 
-		if ( '' !== $atts['offset_lg'] ) {
-			$class .= ( 'none' == $atts['offset_lg'] ) ? ' col-lg-offset-0' : ' col-lg-offset-' . sanitize_key( $atts['offset_lg'] );
+		if ( ! empty( $original_atts['offset_lg'] ) ) {
+			$class .= ( 'none' == $original_atts['offset_lg'] ) ? ' col-lg-offset-0' : ' col-lg-offset-' . sanitize_key( $atts['offset_lg'] );
 		}
 
 		// Pull
-		if ( '' !== $atts['pull_xs'] ) {
-			$class .= ( 'none' == $atts['pull_xs'] ) ? ' col-xs-pull-0' : ' col-xs-pull-' . sanitize_key( $atts['pull_xs'] );
+		if ( ! empty( $original_atts['pull_xs'] ) ) {
+			$class .= ( 'none' == $original_atts['pull_xs'] ) ? ' col-xs-pull-0' : ' col-xs-pull-' . sanitize_key( $atts['pull_xs'] );
 		}
 
-		if ( '' !== $atts['pull_sm'] ) {
-			$class .= ( 'none' == $atts['pull_sm'] ) ? ' col-sm-pull-0' : ' col-sm-pull-' . sanitize_key( $atts['pull_sm'] );
+		if ( ! empty( $original_atts['pull_sm'] ) ) {
+			$class .= ( 'none' == $original_atts['pull_sm'] ) ? ' col-sm-pull-0' : ' col-sm-pull-' . sanitize_key( $atts['pull_sm'] );
 		}
 
-		if ( '' !== $atts['pull_md'] ) {
-			$class .= ( 'none' == $atts['pull_md'] ) ? ' col-md-pull-0' : ' col-md-pull-' . sanitize_key( $atts['pull_md'] );
+		if ( ! empty( $original_atts['pull_md'] ) ) {
+			$class .= ( 'none' == $original_atts['pull_md'] ) ? ' col-md-pull-0' : ' col-md-pull-' . sanitize_key( $atts['pull_md'] );
 		}
 
-		if ( '' !== $atts['pull_lg'] ) {
-			$class .= ( 'none' == $atts['pull_lg'] ) ? ' col-lg-pull-0' : ' col-lg-pull-' . sanitize_key( $atts['pull_lg'] );
+		if ( ! empty( $original_atts['pull_lg'] ) ) {
+			$class .= ( 'none' == $original_atts['pull_lg'] ) ? ' col-lg-pull-0' : ' col-lg-pull-' . sanitize_key( $atts['pull_lg'] );
 		}
 
 		// Push
-		if ( '' !== $atts['push_xs'] ) {
-			$class .= ( 'none' == $atts['push_xs'] ) ? ' col-xs-push-0' : ' col-xs-push-' . sanitize_key( $atts['push_xs'] );
+		if ( ! empty( $original_atts['push_xs'] ) ) {
+			$class .= ( 'none' == $original_atts['push_xs'] ) ? ' col-xs-push-0' : ' col-xs-push-' . sanitize_key( $atts['push_xs'] );
 		}
 
-		if ( '' !== $atts['push_sm'] ) {
-			$class .= ( 'none' == $atts['push_sm'] ) ? ' col-sm-push-0' : ' col-sm-push-' . sanitize_key( $atts['push_sm'] );
+		if ( ! empty( $original_atts['push_sm'] ) ) {
+			$class .= ( 'none' == $original_atts['push_sm'] ) ? ' col-sm-push-0' : ' col-sm-push-' . sanitize_key( $atts['push_sm'] );
 		}
 
-		if ( '' !== $atts['push_md'] ) {
-			$class .= ( 'none' == $atts['push_md'] ) ? ' col-md-push-0' : ' col-md-push-' . sanitize_key( $atts['push_md'] );
+		if ( ! empty( $original_atts['push_md'] ) ) {
+			$class .= ( 'none' == $original_atts['push_md'] ) ? ' col-md-push-0' : ' col-md-push-' . sanitize_key( $atts['push_md'] );
 		}
 
-		if ( '' !== $atts['push_lg'] ) {
-			$class .= ( 'none' == $atts['push_lg'] ) ? ' col-lg-push-0' : ' col-lg-push-' . sanitize_key( $atts['push_lg'] );
+		if ( ! empty( $original_atts['push_lg'] ) ) {
+			$class .= ( 'none' == $original_atts['push_lg'] ) ? ' col-lg-push-0' : ' col-lg-push-' . sanitize_key( $atts['push_lg'] );
 		}
 
 		// Collapse?
@@ -697,9 +697,9 @@ class Cherry_Shortcodes_Handler {
 				'content_type'        => 'part',
 				'content_length'      => 55,
 				'button_text'         => __( 'read more', 'cherry-shortcodes' ),
-				'col_xs'              => '12',
-				'col_sm'              => '6',
-				'col_md'              => '3',
+				'col_xs'              => 'none',
+				'col_sm'              => 'none',
+				'col_md'              => 'none',
 				'col_lg'              => 'none',
 				'class'               => '',
 				'template'            => 'default.tmpl',
@@ -1027,7 +1027,14 @@ class Cherry_Shortcodes_Handler {
 			// Prepare the CSS classes for list.
 			$wrap_classes        = array();
 			$wrap_classes[]      = 'cherry-posts-list';
-			$wrap_classes['row'] = 'row';
+
+			if ( ( ! empty( $atts['col_xs'] ) && 'none' !== $atts['col_xs'] )
+				|| ( ! empty( $atts['col_sm'] ) && 'none' !== $atts['col_sm'] )
+				|| ( ! empty( $atts['col_md'] ) && 'none' !== $atts['col_md'] )
+				|| ( ! empty( $atts['col_lg'] ) && 'none' !== $atts['col_lg'] )
+				) {
+				$wrap_classes['row'] = 'row';
+			}
 
 			if ( $atts['class'] ) {
 				$wrap_classes[] = esc_attr( $atts['class'] );
