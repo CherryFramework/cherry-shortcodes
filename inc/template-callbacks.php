@@ -118,13 +118,9 @@ class Cherry_Shortcodes_Template_Callbacks {
 		global $post;
 
 		$shortcode = Cherry_Shortcodes_Handler::get_shortcode_name();
+
 		if ( 'banner' == $shortcode ) {
-			if( !is_numeric( $this->atts['image'] ) ){
-				return esc_url( $this->atts['image'] );
-			}else{
-				$attachment_image = wp_get_attachment_image_src( intval( $this->atts['image'] ), 'full' );
-				return esc_url( $attachment_image[0] );
-			}
+			return Cherry_Shortcodes_Tools::get_image_url( $this->atts['image'] );
 		}
 
 		if ( ! post_type_supports( get_post_type( $post->ID ), 'thumbnail' ) ) {
