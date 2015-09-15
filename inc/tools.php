@@ -386,6 +386,23 @@ class Cherry_Shortcodes_Tools {
 		return $image;
 	}
 
+	/**
+	 * Get image by id or url (backward compatibility)
+	 *
+	 * @since  1.0.0
+	 * @param  string $source attachment id or image url
+	 * @param  string $image_size image size
+	 * @return string
+	 */
+	public static function get_image_url( $source, $image_size = 'full') {
+		if( !is_numeric( $source ) ){
+			return esc_url( $source );
+		}else{
+			$attachment_image = wp_get_attachment_image_src( intval( $source ), $image_size );
+			return esc_url( $attachment_image[0] );
+		}
+	}
+
 	public static function get_attachment_id_from_src( $image_src ) {
 		global $wpdb;
 

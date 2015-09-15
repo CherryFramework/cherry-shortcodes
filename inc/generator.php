@@ -214,7 +214,7 @@ class Cherry_Shortcodes_Generator {
 						}
 					}
 
-					$item .= '<div class="cherry-generator-attr-container" ' . $default . ' data-field-type="' . esc_attr( $attr_info['type'] ) . '">';
+					$item .= '<div class="cherry-generator-attr-container cherry-generator-skip" ' . $default . ' data-field-type="' . esc_attr( $attr_info['type'] ) . '">';
 					$item .= '<h5>' . $attr_info['name'] . '</h5>';
 
 					if ( is_callable( array( 'Cherry_Shortcodes_Generator_Views', $attr_info['type'] ) ) ) {

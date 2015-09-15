@@ -524,7 +524,8 @@ class Cherry_Shortcodes_Handler {
 		$output .= Cherry_Shortcodes_Tools::append_icons( $content, $atts['icon'] );
 		if ( 'image-icon' == $icon_type ) {
 
-			$style = '.' . $uniq_class . ' ul li:before {background-image: url(' . $atts['icon'] . '); }';
+			$image = Cherry_Shortcodes_Tools::get_image_url( $atts['icon'] );
+			$style = '.' . $uniq_class . ' ul li:before {background-image: url(' . $image . '); }';
 
 			$output .= sprintf( '<style>%s</style>', $style );
 		}
@@ -697,9 +698,9 @@ class Cherry_Shortcodes_Handler {
 				'content_type'        => 'part',
 				'content_length'      => 55,
 				'button_text'         => __( 'read more', 'cherry-shortcodes' ),
-				'col_xs'              => '12',
-				'col_sm'              => '6',
-				'col_md'              => '3',
+				'col_xs'              => 'none',
+				'col_sm'              => 'none',
+				'col_md'              => 'none',
 				'col_lg'              => 'none',
 				'class'               => '',
 				'template'            => 'default.tmpl',
@@ -1027,7 +1028,14 @@ class Cherry_Shortcodes_Handler {
 			// Prepare the CSS classes for list.
 			$wrap_classes        = array();
 			$wrap_classes[]      = 'cherry-posts-list';
-			$wrap_classes['row'] = 'row';
+
+			if ( ( ! empty( $atts['col_xs'] ) && 'none' !== $atts['col_xs'] )
+				|| ( ! empty( $atts['col_sm'] ) && 'none' !== $atts['col_sm'] )
+				|| ( ! empty( $atts['col_md'] ) && 'none' !== $atts['col_md'] )
+				|| ( ! empty( $atts['col_lg'] ) && 'none' !== $atts['col_lg'] )
+				) {
+				$wrap_classes['row'] = 'row';
+			}
 
 			if ( $atts['class'] ) {
 				$wrap_classes[] = esc_attr( $atts['class'] );

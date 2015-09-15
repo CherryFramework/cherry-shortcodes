@@ -1451,7 +1451,12 @@ class Cherry_Shortcodes_Data {
 						),
 						'col' => array(
 							'type'    => 'responsive',
-							'default' => '12 6 3 3',
+							'default' => array(
+								'col_xs' => 'none',
+								'col_sm' => 'none',
+								'col_md' => 'none',
+								'col_lg' => 'none',
+							),
 							'name'    => __( 'Column class', 'cherry-shortcodes' ),
 							'desc'    => __( 'Column class for each item.', 'cherry-shortcodes' ),
 						),
