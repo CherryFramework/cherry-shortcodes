@@ -287,6 +287,7 @@ class Cherry_Shortcodes_Handler {
 			'bg_position'   => 'center',
 			'bg_repeat'     => 'no-repeat',
 			'bg_attachment' => 'scroll',
+			'bg_size'       => 'auto',
 			'fill'          => 'no',
 			'class'         => '',
 		), $atts, 'box' );
@@ -322,6 +323,7 @@ class Cherry_Shortcodes_Handler {
 			$allowed_repeat     = array( 'repeat', 'no-repeat', 'repeat-x', 'repeat-y' );
 			$allowed_position   = array( 'top left', 'top center', 'top right', 'left', 'center', 'right', 'bottom left', 'bottom center', 'bottom right' );
 			$allowed_attachment = array( 'fixed', 'scroll' );
+			$allowed_size       = array( 'auto', 'cover', 'contain' );
 
 			// Prepare image BG properties.
 			$repeat = esc_attr( $atts['bg_repeat'] );
@@ -333,9 +335,13 @@ class Cherry_Shortcodes_Handler {
 			$attachment = esc_attr( $atts['bg_attachment'] );
 			$attachment = in_array( $attachment, $allowed_attachment ) ? $attachment : 'scroll';
 
+			$size = esc_attr( $atts['bg_size'] );
+			$size = in_array( $size, $allowed_size ) ? $size : 'auto';
+
 			$styles['background-repeat']     = $repeat;
 			$styles['background-position']   = $position;
 			$styles['background-attachment'] = $attachment;
+			$styles['background-size']       = $size;
 		}
 
 		if ( ! empty( $atts['bg_color'] ) ) {
