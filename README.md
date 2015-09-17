@@ -4,6 +4,14 @@ A pack of WordPress shortcodes.
 
 ##Change log##
 
+#### v1.0.5 ####
+
+* NEW: Attribute in `box` and `box_inner` shortcode - background-size
+* UPD: Compressed css/js
+* UPD: Set of default attributes in `posts` shortcode
+* FIX: Correctly get image URL for image icon in `list` shortcode
+* ADD: `get_image_url` static method to shortcode tools
+
 #### v1.0.4 ####
 
 * FIX: Updater class logic
