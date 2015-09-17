@@ -525,6 +525,17 @@ class Cherry_Shortcodes_Data {
 							'name'    => __( 'Background image attachment', 'cherry-shortcodes' ),
 							'desc'    => __( 'Select background image attachment', 'cherry-shortcodes' ),
 						),
+						'bg_size' => array(
+							'type'   => 'select',
+							'values' => array(
+								'auto'    => __( 'Auto', 'cherry-shortcodes' ),
+								'cover'   => __( 'Cover', 'cherry-shortcodes' ),
+								'contain' => __( 'Contain', 'cherry-shortcodes' ),
+							),
+							'default' => 'auto',
+							'name'    => __( 'Background image size', 'cherry-shortcodes' ),
+							'desc'    => __( 'Select background image size', 'cherry-shortcodes' ),
+						),
 						'fill' => array(
 							'type'    => 'bool',
 							'default' => 'no',
