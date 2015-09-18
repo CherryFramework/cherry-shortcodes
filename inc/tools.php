@@ -166,6 +166,7 @@ class Cherry_Shortcodes_Tools {
 			);
 
 		} else {
+			$icon = Cherry_Shortcodes_Tools::get_image_url( $icon );
 			return sprintf(
 				'<span class="%2$s"><img src="%1$s" alt="%3$s"></span>',
 				esc_url( $icon ), esc_attr( $class ), esc_attr( $alt )
