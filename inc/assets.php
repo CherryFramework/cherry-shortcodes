@@ -136,9 +136,9 @@ class Cherry_Shortcodes_Assets {
 		// Font Awesome.
 		wp_register_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', false, '4.4.0', 'all' );
 
-		// Generator.
-		wp_register_script( 'cherry-shortcodes-generator', plugins_url( 'assets/js/generator.js', CHERRY_SHORTCODES_FILE ), array( 'farbtastic', 'magnific-popup' ), CHERRY_SHORTCODES_VERSION, true );
-		wp_register_style( 'cherry-shortcodes-generator', plugins_url( 'assets/css/generator.css', CHERRY_SHORTCODES_FILE ), array( 'farbtastic', 'magnific-popup' ), CHERRY_SHORTCODES_VERSION, 'all' );
+		wp_register_script( 'cherry-shortcodes-generator', plugins_url( 'assets/js/generator.js', CHERRY_SHORTCODES_FILE ), array( 'wp-color-picker', 'magnific-popup' ), CHERRY_SHORTCODES_VERSION, true );
+		wp_register_style( 'cherry-shortcodes-generator', plugins_url( 'assets/css/generator.css', CHERRY_SHORTCODES_FILE ), array( 'wp-color-picker', 'magnific-popup' ), CHERRY_SHORTCODES_VERSION, 'all' );
+
 		wp_localize_script( 'cherry-shortcodes-generator', 'cherry_shortcodes_generator', array(
 				'upload_title'         => __( 'Choose file', 'cherry-shortcodes' ),
 				'upload_insert'        => __( 'Insert', 'cherry-shortcodes' ),
