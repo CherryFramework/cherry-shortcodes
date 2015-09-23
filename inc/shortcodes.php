@@ -917,7 +917,7 @@ class Cherry_Shortcodes_Handler {
 			// Posts counter.
 			$current_post = 0;
 
-			$data = array( 'image', 'title', 'date', 'author', 'comments', 'taxonomy', 'excerpt', 'content', 'button' );
+			$data = array( 'image', 'title', 'date', 'author', 'comments', 'taxonomy', 'excerpt', 'content', 'button', 'permalink' );
 			self::setup_template_data( $data, $atts );
 			self::$post_data = array_merge( array( 'tag' => 'posts' ), self::$post_data );
 
@@ -1318,7 +1318,7 @@ class Cherry_Shortcodes_Handler {
 			ob_end_clean();
 
 			// Default macros-array.
-			$data = array( 'image', 'title', 'date', 'author', 'comments', 'taxonomy', 'excerpt', 'content', 'button' );
+			$data = array( 'image', 'title', 'date', 'author', 'comments', 'taxonomy', 'excerpt', 'content', 'button', 'permalink' );
 			self::setup_template_data( $data, $atts );
 			self::$post_data = array_merge( array( 'tag' => 'swiper_carousel' ), self::$post_data );
 
