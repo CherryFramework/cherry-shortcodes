@@ -74,11 +74,11 @@ class Cherry_Shortcodes_Generator {
 
 		$admin_styles = apply_filters(
 			'cherry_shortcodes_admin_styles',
-			array( 'simple-slider', 'farbtastic', 'magnific-popup', 'font-awesome', 'cherry-shortcodes-all', 'cherry-shortcodes-generator' )
+			array( 'simple-slider', 'wp-color-picker', 'magnific-popup', 'font-awesome', 'cherry-shortcodes-all', 'cherry-shortcodes-generator' )
 		);
 
 		cherry_query_asset( 'css', $admin_styles );
-		cherry_query_asset( 'js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-mouse', 'simple-slider', 'farbtastic', 'magnific-popup', 'cherry-shortcodes-generator' ) );
+		cherry_query_asset( 'js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-mouse', 'simple-slider', 'wp-color-picker', 'magnific-popup', 'cherry-shortcodes-generator' ) );
 
 		// Print/return result
 		if ( $args['echo'] ) {
