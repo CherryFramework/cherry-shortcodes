@@ -1576,6 +1576,7 @@ class Cherry_Shortcodes_Handler {
 		$map_draggable = ( bool ) ( $atts['map_draggable'] === 'yes' ) ? apply_filters( 'cherry_shortcodes_google_map_draggable', ! wp_is_mobile(), $atts ) : false;
 		$scroll_wheel  = ( bool ) ( $atts['scroll_wheel']  === 'yes' ) ? true : false;
 		$addr          = sanitize_text_field( $atts['geo_address'] );
+		$addr_set      = array();
 		$map_style     = sanitize_text_field( $atts['map_style'] );
 		$custom_class  = sanitize_text_field( $atts['custom_class'] );
 		$map_marker    = sanitize_text_field( $atts['map_marker'] );
@@ -1583,9 +1584,21 @@ class Cherry_Shortcodes_Handler {
 		$style         = Cherry_Shortcodes_Tools::get_map_style_json( $map_style );
 
 		if ( '' !== $addr ) {
-			$geo_position = Cherry_Shortcodes_Tools::google_geocoding( $addr );
-			$lat_value    = floatval( $geo_position['lat'] );
-			$lng_value    = floatval( $geo_position['lng'] );
+			$addr = explode('and', $addr);
+			if( count( $addr ) == 1 ){
+				$geo_position = Cherry_Shortcodes_Tools::google_geocoding( $addr[0] );
+				$lat_value    = floatval( $geo_position['lat'] );
+				$lng_value    = floatval( $geo_position['lng'] );
+
+			}else{
+				foreach ( $addr as $addr_key => $addr_value ) {
+					$geo_position = Cherry_Shortcodes_Tools::google_geocoding( $addr_value );
+					$addr_set[ $addr_key ] = array(
+						'lat' => floatval( $geo_position['lat'] ),
+						'lng' => floatval( $geo_position['lng'] ),
+					);
+				}
+			}
 		}
 
 		$map_marker_attachment_id = !is_numeric( $map_marker ) ? Cherry_Shortcodes_Tools::get_attachment_id_from_src( $map_marker ) : intval( $map_marker );
@@ -1608,6 +1621,9 @@ class Cherry_Shortcodes_Handler {
 			$data_attr_line .= 'data-map-draggable="' . $map_draggable . '"';
 			$data_attr_line .= "data-map-marker='" . $map_marker . "'";
 			$data_attr_line .= "data-map-style='" . $style . "'";
+			if( !empty( $addr_set ) ){
+				$data_attr_line .= "data-multi-marker='" . json_encode( $addr_set ) . "'";
+			}
 
 		$html = '<div class="google-map-container ' . $custom_class.'" style="height:' . $map_height . 'px;" ' . $data_attr_line . '>';
 			$html .= '<div id="google-map-' . $random_id . '" class="google-map"></div>';
