@@ -24,6 +24,7 @@
 				,	mapDraggable = ( _this.data('map-draggable' ) == 1) ? true : false
 				,	mapMarkerImage = _this.data('map-marker')
 				,	mapStyle = _this.data('map-style')
+				,	multiMarker = _this.data('multi-marker')
 				,	contentString = $('.marker-desc', _this).html()
 				,	markerSettings = {}
 				,	infowindow = new google.maps.InfoWindow({
@@ -36,19 +37,28 @@
 						,	coordData = new google.maps.LatLng( latValue, lngValue )
 						,	marker
 						,	styleArray = mapStyle
-						,	mapOptions = {
-								zoom: zoomValue,
-								center: coordData,
-								scrollwheel: scrollWheel,
-								styles: styleArray,
-								panControl: panControl,
-								zoomControl: zoomControl,
-								scaleControl: false,
-								draggable: mapDraggable
-							}
+						,	mapOptions = null
+						,	markerIcon = null
+						,	isMultiMarker = false
 						;
 
+						isMultiMarker = ( !!multiMarker ) ? true : false ;
+						if(isMultiMarker){
+							coordData = new google.maps.LatLng( multiMarker[0]['lat'], multiMarker[0]['lng'] );
+						}
+						mapOptions = {
+							zoom: zoomValue,
+							center: coordData,
+							scrollwheel: scrollWheel,
+							styles: styleArray,
+							panControl: panControl,
+							zoomControl: zoomControl,
+							scaleControl: false,
+							draggable: mapDraggable
+						}
+
 						map = new google.maps.Map( $('#'+mapId)[0], mapOptions);
+
 						if( mapMarkerImage !== 'default'){
 							var markerIcon = {
 								url: mapMarkerImage[0],
@@ -56,7 +66,20 @@
 								origin: new google.maps.Point(0,0),
 								anchor: new google.maps.Point(( mapMarkerImage[1]/2 ), mapMarkerImage[2])
 							};
+						}
 
+						if( isMultiMarker ){
+							for (var prop in multiMarker) {
+								markerSettings = {
+									map: map,
+									draggable: false,
+									animation: google.maps.Animation.DROP,
+									position: multiMarker[prop],
+									icon: markerIcon
+								}
+								marker = new google.maps.Marker( markerSettings );
+							};
+						}else{
 							markerSettings = {
 								map: map,
 								draggable: false,
@@ -64,16 +87,10 @@
 								position: coordData,
 								icon: markerIcon
 							}
-						}else{
-							markerSettings = {
-								map: map,
-								draggable: false,
-								animation: google.maps.Animation.DROP,
-								position: coordData
-							}
+
+							marker = new google.maps.Marker( markerSettings );
 						}
 
-						marker = new google.maps.Marker( markerSettings );
 
 						google.maps.event.addListener(marker, 'click', function() {
 							if( '' !== contentString){
