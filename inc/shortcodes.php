@@ -516,12 +516,10 @@ class Cherry_Shortcodes_Handler {
 		$icon_type  = ( false === strpos( $atts['icon'], 'icon:' ) ) ? 'image-icon' : 'font-icon';
 		$uniq_class = 'cherry-list_' . rand( 1000, 9999 );
 
-		$classes = array(
-			'cherry-list',
-			$icon_type,
-			$uniq_class,
-			cherry_esc_class_attr( $atts ),
-
+		$classes = apply_filters(
+			'cherry_shortcodes_list_classes',
+			array( 'cherry-list', $icon_type, $uniq_class, cherry_esc_class_attr( $atts ) ),
+			$atts
 		);
 
 		$class = implode( ' ', $classes );
