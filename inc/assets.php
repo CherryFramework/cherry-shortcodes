@@ -83,9 +83,9 @@ class Cherry_Shortcodes_Assets {
 
 		// Video Preview.
 		wp_register_script( 'video-preview', plugins_url( 'assets/js/shotcodes/video-preview.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
-		wp_register_script( 'video-youtube','https://www.youtube.com/player_api/', array( 'jquery' , 'video-preview' ), null, true );
+		wp_register_script( 'video-youtube', 'https://www.youtube.com/player_api/', array( 'jquery' , 'video-preview' ), null, true );
 
-		// Shortcodes init.
+		// Page Anchor.
 		wp_register_script( 'page-anchor', plugins_url( 'assets/js/shotcodes/page-anchor.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 
 		// Shortcodes init.

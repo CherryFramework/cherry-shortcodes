@@ -1882,79 +1882,108 @@ class Cherry_Shortcodes_Handler {
 	}
 
 	public static function video_preview( $atts = null, $content ) {
-
 		$atts = shortcode_atts( array(
-			'poster'				=> '',
-			'source'				=> '',
-			'control'				=> 'show',
-			'show_content_on_hover'	=> 'no',
-			'muted'					=> 'no',
-			'loop'					=> 'no',
-			'preload'				=> 'no',
-			'width'					=> '',
-			'height'				=> '',
-			'custom_class'			=> '',
+			'poster'                => '',
+			'source'                => '',
+			'control'               => 'show',
+			'show_content_on_hover' => 'no',
+			'muted'                 => 'no',
+			'loop'                  => 'no',
+			'preload'               => 'no',
+			'width'                 => '',
+			'height'                => '',
+			'custom_class'          => '',
 		), $atts, 'video_preview' );
 
-		$video_preview_class = apply_filters( 'cherry_video_preview_class', array('class_1' => 'fa-play', 'class_2' => 'fa-pause', 'class_3' => 'fa-volume-off', 'class_4' => 'fa-volume-up') );
-		$video_preview_text = apply_filters( 'cherry_video_preview_texts', array('text_1' => '', 'text_2' => '', 'text_3' => '', 'text_4' => '') );
+		$video_preview_class = apply_filters( 'cherry_video_preview_class', array(
+			'class_1' => 'fa-play',
+			'class_2' => 'fa-pause',
+			'class_3' => 'fa-volume-off',
+			'class_4' => 'fa-volume-up',
+		) );
 
-		extract($atts);
+		$video_preview_text = apply_filters( 'cherry_video_preview_texts', array(
+			'text_1' => '',
+			'text_2' => '',
+			'text_3' => '',
+			'text_4' => '',
+		) );
 
-		$type = strtolower(  preg_replace( '/(^(http(s)?:)?(\/\/)(www.)?)|(([.]\D{2,5})?\/[\S]+)/', '', $source ) );
-		$is_mobile = wp_is_mobile() ? 'true' : 'false' ;
+		extract( $atts );
 
-		if( $type === 'youtube'){
-			cherry_query_asset( 'js', 'video-youtube' );
+		$source = sanitize_text_field( $atts['source'] );
 
-			global $video_preview_count;
-			$video_preview_count += 1;
+		if ( empty( $source ) ) {
+			return;
+		}
 
+		$poster = sanitize_text_field( $atts['poster'] );
+
+		$type = strtolower( preg_replace( '/(^(http(s)?:)?(\/\/)(www.)?)|(([.]\D{2,5})?\/[\S]+)/', '', $source ) );
+		$is_mobile = wp_is_mobile() ? 'true' : 'false';
+		$is_vimeo  = $is_youtube = false;
+
+		$yt_pattern    = '#^https?://(?:www\.)?(?:youtube\.com/watch|youtu\.be/)#';
+		$vimeo_pattern = '#^https?://(.+\.)?vimeo\.com/.*#';
+
+		$is_vimeo = ( preg_match( $vimeo_pattern, $source ) );
+		$is_youtube = ( preg_match( $yt_pattern, $source ) );
+
+		if ( $is_youtube ) {
+
+			static $video_preview_count = 0;
+			$video_preview_count++;
+
+			$type     = 'youtube';
 			$video_id = preg_replace( '/[\S.]+\/[\S.]+[=]|[\S.]+\//', '', $source );
 
-			if($poster){
-				$poster = '<div style="background-image: url(\'' . $poster . '\')" class="cherry-video-poster"></div>';
+			if ( $poster ) {
+				$poster = '<div style="background-image: url(\'' . esc_url( $poster ) . '\')" class="cherry-video-poster"></div>';
 			}
 
 			$video_tag = '<div id="cherry-youtube-' . $video_preview_count . '" class="youtube-player" data-video="' . $video_id . '"></div>' . $poster . '<div class="youtube-player-cap"></div>';
-		}else {
-			if( $type === 'vimeo' ){
-				$video_id = preg_replace( '/([\S.]+\/)/', '', $source );
 
+		} else {
+
+			if ( $is_vimeo ) {
+				$video_id = preg_replace( '/([\S.]+\/)/', '', $source );
 				$response = Cherry_Shortcodes_Tools::remote_query( 'https://player.vimeo.com/video/' . $video_id . '/config' );
 
-				if( $response ){
+				if ( $response ) {
 					$file_codes = $response->request->files->codecs[0];
 
-					if( strpos( $custom_class, 'full-width' ) !== false && $is_mobile === 'false' ){
+					if ( strpos( $custom_class, 'full-width' ) !== false && ( $is_mobile === 'false' ) ) {
 						$poster_size = '1280';
 						$source = $response->request->files->$file_codes->hd->url;
-					}else{
+					} else {
 						$poster_size = '640';
 						$source = $response->request->files->$file_codes->sd->url;
 					}
-					if( !$poster ){
+
+					if ( ! $poster ) {
 						$poster = $response->video->thumbs->$poster_size;
 					}
 				}
 			}
 
-			$poster = $poster ? '<div style="background-image: url(\'' . $poster . '\')" class="cherry-video-poster"></div>' : '' ;
-			$muted_attr = $muted !== 'no' ? 'muted ' : '' ;
-			$loop_attr = $loop !== 'no' ? 'loop ' : '' ;
-			$preload_attr = $preload !== 'no' ? 'preload="auto" ' : '' ;
-			$autoplay_attr = $control === 'autoplay' ? 'autoplay ' : '' ;
+			$poster = $poster ? '<div style="background-image: url(\'' . esc_url( $poster ) . '\')" class="cherry-video-poster"></div>' : '';
 
-			$video_tag = $poster;
-			$video_tag .= '<video ' . $autoplay_attr  . $muted_attr . $loop_attr . $preload_attr . ' width="100%" height="auto" >';
-				$video_tag .= '<source src="'.$source.'" type="video/mp4">';
+			$muted_attr    = $muted !== 'no' ? 'muted ' : '';
+			$loop_attr     = $loop !== 'no' ? 'loop ' : '';
+			$preload_attr  = $preload !== 'no' ? 'preload="auto" ' : '';
+			$autoplay_attr = $control === 'autoplay' ? 'autoplay ' : '';
+			$video_tag     = $poster;
+
+			$video_tag .= '<video ' . $autoplay_attr  . $muted_attr . $loop_attr . $preload_attr . ' width="100%" height="auto">';
+				$video_tag .= '<source src="' . $source . '" type="video/mp4">';
 			$video_tag .= '</video>';
 		}
 
 		$control_tag = '';
-		if( $control !== 'hide' && $control !== 'play-on-hover' && $control !== 'autoplay' ){
 
-			$control_class = $control === 'show-on-hover' ? 'hidden-element' : '' ;
+		if ( $control !== 'hide' && $control !== 'play-on-hover' && $control !== 'autoplay' ) {
+
+			$control_class = $control === 'show-on-hover' ? 'hidden-element' : '';
 
 			$control_tag .= '<div class="video-preview-controls ' . $control_class . '">';
 				$control_tag .= '<button class="play-pause fa ' . $video_preview_class['class_1'] . '" data-class="' . $video_preview_class['class_1'] . '" data-sub-class="' . $video_preview_class['class_2'] . '" data-text="' . __( $video_preview_text['text_1'], 'cherry-shortcodes' ) . '" data-sub-text="' . __( $video_preview_text['text_2'], 'cherry-shortcodes' ) . '" type="button">' . __( $video_preview_text['text_1'], 'cherry-shortcodes' ) . '</button>';
@@ -1963,34 +1992,30 @@ class Cherry_Shortcodes_Handler {
 		}
 
 		$content_tag = '';
-		if( $content ){
-			$content_class = $show_content_on_hover !== 'no' ? 'class="hidden-element"' : '' ;
 
+		if ( $content ) {
+			$content_class = $show_content_on_hover !== 'no' ? 'class="hidden-element"' : '';
 			$content_tag .= '<figcaption ' . $content_class . ' >' . do_shortcode( $content ) . '</figcaption>';
 		}
 
 		$output = apply_filters( 'cherry_video_preview_before', '' );
 
-		$output .= '<figure class="video-preview ' . $custom_class . '" data-settings=\'{"control":"' . $control . '", "muted":"' . $muted . '", "loop":"' . $loop . '", "preload":"' . $preload . '", "type":"' . $type . '", "is_mobile":"' . $is_mobile . '"}\' >';
+		$output .= '<figure class="video-preview ' . esc_attr( $custom_class ) . '" data-settings=\'{"control":"' . $control . '", "muted":"' . $muted . '", "loop":"' . $loop . '", "preload":"' . $preload . '", "type":"' . $type . '", "is_mobile":"' . $is_mobile . '"}\' >';
 			$output .= '<div class="video-holder">';
 				$output .= '<div class="video-inner-holder">';
-
 					$output .= $video_tag;
-
 					$output .= $control_tag;
-
 				$output .= '</div>';
 			$output .= '</div>';
-
 			$output .= $content_tag;
-
 		$output .= '</figure>';
 
 		$output .= apply_filters( 'cherry_video_preview_after', '' );
 
-		if( $type === 'youtube'){
+		if ( $type === 'youtube' ) {
 			cherry_query_asset( 'js', 'video-youtube' );
 		}
+
 		cherry_query_asset( 'js', 'video-preview' );
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'video_preview' );
