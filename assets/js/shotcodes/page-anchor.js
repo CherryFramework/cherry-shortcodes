@@ -106,7 +106,7 @@
 
 		set_activ_button:function(){
 			$( '.current-menu-item, .current_page_item', this.wp_menu ).removeClass('current-menu-item current_page_item');
-			$( this.wp_menu_item + ' a[href="' + window.location.hash + '"]', this.wp_menu ).parent().addClass('current-menu-item current_page_item');
+			$( this.wp_menu_item + ' a[href$="' + window.location.hash + '"]', this.wp_menu ).parent().addClass('current-menu-item current_page_item');
 		},
 
 		set_window_height:function(){
