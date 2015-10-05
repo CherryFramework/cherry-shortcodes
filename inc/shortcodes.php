@@ -349,7 +349,7 @@ class Cherry_Shortcodes_Handler {
 		}
 
 		$style  = Cherry_Shortcodes_Tools::prepare_styles( $styles );
-		$format = '<div class="%s"><div class="%s" style="%s">%s</div></div>';
+		$format = apply_filters( 'cherry_shortcode_box_format', '<div class="%s"><div class="%s" style="%s">%s</div></div>' );
 		$output = sprintf( $format, $class, $preset_class, $style, do_shortcode( $content ) );
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'box' );
