@@ -1788,7 +1788,7 @@ class Cherry_Shortcodes_Data {
 						'custom_class' => array(
 							'type'    => 'text',
 							'default' => '',
-							'name'    => __( 'Custom class', 'cherry-shortcodes' ),
+							'name'    => __( 'Class', 'cherry-shortcodes' ),
 							'desc'    => __( 'Enter custom class', 'cherry-shortcodes' ),
 						),
 					),
@@ -1845,7 +1845,7 @@ class Cherry_Shortcodes_Data {
 						'custom_class' => array(
 							'type'    => 'text',
 							'default' => '',
-							'name'    => __( 'Custom class', 'cherry-shortcodes' ),
+							'name'    => __( 'Class', 'cherry-shortcodes' ),
 							'desc'    => __( 'Enter custom class', 'cherry-shortcodes' ),
 						),
 					),
@@ -1899,7 +1899,7 @@ class Cherry_Shortcodes_Data {
 						'custom_class' => array(
 							'type'    => 'text',
 							'default' => '',
-							'name'    => __( 'Custom class', 'cherry-shortcodes' ),
+							'name'    => __( 'Class', 'cherry-shortcodes' ),
 							'desc'    => __( 'Enter custom class', 'cherry-shortcodes' ),
 						),
 					),
@@ -2026,7 +2026,7 @@ class Cherry_Shortcodes_Data {
 						'custom_class' => array(
 							'type'    => 'text',
 							'default' => '',
-							'name'    => __( 'Custom class', 'cherry-shortcodes' ),
+							'name'    => __( 'Class', 'cherry-shortcodes' ),
 							'desc'    => __( 'Element custom class', 'cherry-shortcodes' ),
 						),
 					),
@@ -2088,7 +2088,7 @@ class Cherry_Shortcodes_Data {
 						'custom_class' => array(
 							'type'    => 'text',
 							'default' => '',
-							'name'    => __( 'Custom class', 'cherry-shortcodes' ),
+							'name'    => __( 'Class', 'cherry-shortcodes' ),
 							'desc'    => __( 'Element custom class. You can use "full-width" class for video', 'cherry-shortcodes' ),
 						),
 					)
