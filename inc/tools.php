@@ -367,6 +367,11 @@ class Cherry_Shortcodes_Tools {
 		$image = '';
 		//resize & crop img
 		$croped_image_url = aq_resize( $img_url, $width, $height, true );
+
+		if( !$croped_image_url ){
+			$croped_image_url = $img_url;
+		}
+
 		// get $pathinfo
 		$pathinfo = pathinfo( $croped_image_url );
 		//get $attachment metadata
