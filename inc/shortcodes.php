@@ -226,6 +226,7 @@ class Cherry_Shortcodes_Handler {
 		$atts = shortcode_atts( array(
 			'icon'  => '',
 			'size'  => 20,
+			'align' => 'none',
 			'color' => '',
 			'class' => '',
 		), $atts, 'icon' );
@@ -234,12 +235,18 @@ class Cherry_Shortcodes_Handler {
 			return;
 		}
 
+		$align = in_array( $atts['align'], array( 'none', 'left', 'center', 'right' ) ) ? $atts['align'] : 'none';
+
 		$style = array();
 		$style['font-size'] = ( 0 != absint( $atts['size'] ) ) ? absint( $atts['size'] ) . 'px' : false;
 		$style['color']     = ( !empty( $atts['color'] ) ) ? esc_attr( $atts['color'] ) : false;
 
 		$class  = esc_attr( $atts['class'] );
 		$output = Cherry_Shortcodes_Tools::get_icon_html( $atts['icon'], 'cherry-icon ' . $class, null, $style );
+
+		if ( 'none' !== $align ) {
+			$output = sprintf( '<div class="align%1$s">%2$s</div>', $align, $output );
+		}
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'icon' );
 	}

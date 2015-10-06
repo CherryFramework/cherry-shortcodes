@@ -335,6 +335,18 @@ class Cherry_Shortcodes_Data {
 							'name'    => __( 'Icon size', 'cherry-shortcodes' ),
 							'desc'    => __( 'Font size in px (only for font icons)', 'cherry-shortcodes' ),
 						),
+						'align' => array(
+							'type'   => 'select',
+							'values' => array(
+								'none'   => __( 'None', 'cherry-shortcodes' ),
+								'left'   => __( 'Left', 'cherry-shortcodes' ),
+								'center' => __( 'Center', 'cherry-shortcodes' ),
+								'right'  => __( 'Right', 'cherry-shortcodes' ),
+							),
+							'default' => 'no',
+							'name'    => __( 'Alignment', 'cherry-shortcodes' ),
+							'desc'    => __( 'Select icon alignment', 'cherry-shortcodes' ),
+						),
 						'color' => array(
 							'type'    => 'color',
 							'values'  => array(),
