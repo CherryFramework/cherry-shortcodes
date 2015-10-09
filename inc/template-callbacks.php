@@ -291,13 +291,15 @@ class Cherry_Shortcodes_Template_Callbacks {
 			return;
 		}
 
-		$comments = sprintf(
+		$url = esc_url( get_comments_link( $post->ID ) );
+
+		$content = sprintf(
 			'<span class="post-comments-link"><a href="%1$s">%2$s</a></span>',
 			esc_url( get_comments_link( $post->ID ) ),
 			$comments
 		);
 
-		return apply_filters( 'cherry_shortcodes_comments_template_callbacks', $comments, $this->atts, $shortcode );
+		return apply_filters( 'cherry_shortcodes_comments_template_callbacks', $content, $comments, $url, $this->atts, $shortcode );
 	}
 
 	public function author() {
