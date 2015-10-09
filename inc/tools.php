@@ -393,6 +393,25 @@ class Cherry_Shortcodes_Tools {
 	}
 
 	/**
+	 * Get CSS class name for shortcode by template name
+	 *
+	 * @since  1.0.6
+	 * @param  string $template template name
+	 * @return string|bool false
+	 */
+	public static function get_template_class( $template ) {
+
+		if ( ! $template ) {
+			return false;
+		}
+
+		$prefix = apply_filters( 'cherry_shortcodes_template_class_prefix', 'template' );
+		$class  = sprintf( '%s-%s', esc_attr( $prefix ), esc_attr( str_replace( '.tmpl', '', $template ) ) );
+
+		return $class;
+	}
+
+	/**
 	 * Get image by id or url (backward compatibility)
 	 *
 	 * @since  1.0.0

@@ -281,7 +281,15 @@ class Cherry_Shortcodes_Handler {
 		self::$post_data = array_merge( array( 'tag' => 'banner' ), self::$post_data );
 
 		$result = preg_replace_callback( self::$macros_pattern, array( 'self', 'replace_callback' ), $template );
-		$result = '<div class="cherry-banner ' . esc_attr( $atts['class'] ) . '">' . $result . '</div>';
+
+		$wrap_classes   = array();
+		$wrap_classes[] = 'cherry-banner';
+		$wrap_classes[] = Cherry_Shortcodes_Tools::get_template_class( $atts['template'] );
+		$wrap_classes[] = esc_attr( $atts['class'] );
+
+		$classes = implode( ' ', $wrap_classes );
+
+		$result = '<div class="' . $classes . '">' . $result . '</div>';
 
 		return apply_filters( 'cherry_shortcodes_output', $result, $atts, 'banner' );
 	}
@@ -1037,8 +1045,9 @@ class Cherry_Shortcodes_Handler {
 			endwhile;
 
 			// Prepare the CSS classes for list.
-			$wrap_classes        = array();
-			$wrap_classes[]      = 'cherry-posts-list';
+			$wrap_classes   = array();
+			$wrap_classes[] = 'cherry-posts-list';
+			$wrap_classes[] = Cherry_Shortcodes_Tools::get_template_class( $atts['template'] );
 
 			if ( ( ! empty( $atts['col_xs'] ) && 'none' !== $atts['col_xs'] )
 				|| ( ! empty( $atts['col_sm'] ) && 'none' !== $atts['col_sm'] )
@@ -1400,6 +1409,7 @@ class Cherry_Shortcodes_Handler {
 			$wrap_classes   = array();
 			$wrap_classes[] = 'cherry-swiper-carousel';
 			$wrap_classes[] = 'swiper-container';
+			$wrap_classes[] = Cherry_Shortcodes_Tools::get_template_class( $atts['template'] );
 
 			if ( $atts['class'] ) {
 				$wrap_classes[] = esc_attr( $atts['class'] );
