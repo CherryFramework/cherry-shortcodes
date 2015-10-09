@@ -493,21 +493,50 @@ class Cherry_Shortcodes_Handler {
 
 	public static function spacer( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
-			'size'  => '20',
-			'class' => '',
+			'size'    => '20',
+			'size_sm' => '',
+			'size_xs' => '',
+			'class'   => '',
 		), $atts, 'spacer' );
 
-		$size = intval( $atts['size'] );
+		$classes = array( 'cherry-spacer' );
 
-		if ( 0 <= $size ) {
-			$prop = 'height';
-			$size = (string)$size . 'px';
-		} else {
-			$prop = 'margin-top';
-			$size = (string)$size . 'px';
+		if ( ! empty( $atts['class'] ) ) {
+			$classes[] = esc_attr( $atts['class'] );
 		}
 
-		$output = '<div class="cherry-spacer' . cherry_esc_class_attr( $atts ) . '" style="' . $prop . ':' . $size . '"></div>';
+		if ( empty( $atts['size_sm'] ) && empty( $atts['size_xs'] ) ) {
+
+			$output = Cherry_Shortcodes_Tools::get_spacer_block( $atts['size'], $classes );
+			return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'spacer' );
+		}
+
+		$size_md = $atts['size'];
+		$size_sm = $atts['size_sm'];
+		$size_xs = $atts['size_xs'];
+
+		if ( ! $size_sm ) {
+			$size_sm = $size_md;
+		}
+
+		if ( ! $size_xs ) {
+			$size_xs = $size_sm;
+		}
+
+		$md_classes = $classes;
+		$sm_classes = $classes;
+		$xs_classes = $classes;
+
+		$md_classes[] = 'hidden-xs';
+		$md_classes[] = 'hidden-sm';
+
+		$sm_classes[] = 'visible-sm-block';
+
+		$xs_classes[] = 'visible-xs-block';
+
+		$output  = Cherry_Shortcodes_Tools::get_spacer_block( $size_md, $md_classes );
+		$output .= Cherry_Shortcodes_Tools::get_spacer_block( $size_sm, $sm_classes );
+		$output .= Cherry_Shortcodes_Tools::get_spacer_block( $size_xs, $xs_classes );
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'spacer' );
 	}

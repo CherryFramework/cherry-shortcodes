@@ -412,6 +412,33 @@ class Cherry_Shortcodes_Tools {
 	}
 
 	/**
+	 * Get spacer div with specific CSS classes and tr
+	 *
+	 * @since  1.0.6
+	 * @param  string $size    spacer value.
+	 * @param  array  $classes spacer block CSS classes.
+	 * @return string
+	 */
+	public static function get_spacer_block( $size, $classes ) {
+
+		$size = intval( $size );
+
+		if ( 0 <= $size ) {
+			$prop = 'height';
+			$size = (string)$size . 'px';
+		} else {
+			$prop = 'margin-top';
+			$size = (string)$size . 'px';
+		}
+
+		return sprintf(
+			'<div class="%3$s" style="%1$s:%2$s;"></div>',
+			$prop, $size, esc_attr( implode( ' ', $classes ) )
+		);
+
+	}
+
+	/**
 	 * Get image by id or url (backward compatibility)
 	 *
 	 * @since  1.0.0
