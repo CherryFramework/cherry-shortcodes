@@ -4,6 +4,24 @@ A pack of WordPress shortcodes.
 
 ##Change log##
 
+#### v1.0.6 ####
+
+* UPD: Pass additional parameters into `cherry_shortcodes_comments_template_callbacks` filter
+* UPD: `class` attribute name for all ahortcodes
+* UPD: Compressed assets
+* UPD: `color-picker` interface element (backend)
+* FIX: Crop image tool
+* FIX: `[carousel]` shortcode
+* FIX: Anchor button selector
+* FIX: `[video-preview]` shortcode
+* FIX: Image icon processing
+* ADD: Attributes `size_sm` and `size_xs` for `[spacer]` shortcode
+* ADD: Pass current template name into shortcode wrapper CSS classes (for `posts`, `swiper_carousel` and `banner` shortcodes)
+* ADD: `align` attribute for `[icon]` shortcode
+* ADD: Filter to the `[box]` shortcode format
+* ADD: Filter `cherry_shortcodes_list_classes` to modify `[list]` shortcode classes
+* ADD: `[google_map]` multi marker possibility
+
 #### v1.0.5 ####
 
 * NEW: Attribute in `box` and `box_inner` shortcode - background-size
