@@ -28,6 +28,7 @@ jQuery(document).ready(function($) {
 		$(this).magnificPopup({
 			type: 'inline',
 			alignTop: true,
+			removalDelay: 1,
 			callbacks: {
 				open: function() {
 					// Open queried shortcode
@@ -240,12 +241,10 @@ jQuery(document).ready(function($) {
 				});
 				// Init color pickers
 				$('.cherry-generator-select-color').each(function(index) {
-					$(this).find('.cherry-generator-select-color-wheel').filter(':first').farbtastic('.cherry-generator-select-color-value:eq(' + index + ')');
-					$(this).find('.cherry-generator-select-color-value').focus(function() {
-						$('.cherry-generator-select-color-wheel:eq(' + index + ')').show();
-					});
-					$(this).find('.cherry-generator-select-color-value').blur(function() {
-						$('.cherry-generator-select-color-wheel:eq(' + index + ')').hide();
+					$(this).find('.cherry-generator-select-color-value').wpColorPicker({
+						change: function(event, ui){
+							check_default_value($(this).closest('.cherry-generator-attr-container'), ui.color.toString());
+						}
 					});
 				});
 				// Init image sourse pickers
@@ -541,18 +540,11 @@ jQuery(document).ready(function($) {
 						$blur = $picker.find('.cherry-generator-sp-blur'),
 						$color = {
 							cnt: $picker.find('.cherry-generator-shadow-picker-color'),
-							value: $picker.find('.cherry-generator-shadow-picker-color-value'),
-							wheel: $picker.find('.cherry-generator-shadow-picker-color-wheel')
+							value: $picker.find('.cherry-generator-shadow-picker-color-value')
 						},
 						$val = $picker.find('.cherry-generator-attr');
 					// Init color picker
-					$color.wheel.farbtastic($color.value);
-					$color.value.focus(function() {
-						$color.wheel.show();
-					});
-					$color.value.blur(function() {
-						$color.wheel.hide();
-					});
+					$color.value.wpColorPicker();
 					// Handle text fields
 					$fields.on('change blur keyup', function() {
 						$val.val($hoff.val() + 'px ' + $voff.val() + 'px ' + $blur.val() + 'px ' + $color.value.val()).trigger('change');
@@ -569,6 +561,7 @@ jQuery(document).ready(function($) {
 						}
 					});
 				});
+
 				// Init border pickers
 				$('.cherry-generator-border-picker').each(function(index) {
 					var $picker = $(this),
@@ -577,18 +570,11 @@ jQuery(document).ready(function($) {
 						$style = $picker.find('.cherry-generator-bp-style'),
 						$color = {
 							cnt: $picker.find('.cherry-generator-border-picker-color'),
-							value: $picker.find('.cherry-generator-border-picker-color-value'),
-							wheel: $picker.find('.cherry-generator-border-picker-color-wheel')
+							value: $picker.find('.cherry-generator-border-picker-color-value')
 						},
 						$val = $picker.find('.cherry-generator-attr');
 					// Init color picker
-					$color.wheel.farbtastic($color.value);
-					$color.value.focus(function() {
-						$color.wheel.show();
-					});
-					$color.value.blur(function() {
-						$color.wheel.hide();
-					});
+					$color.value.wpColorPicker();
 					// Handle text fields
 					$fields.on('change blur keyup', function() {
 						$val.val($width.val() + 'px ' + $style.val() + ' ' + $color.value.val()).trigger('change');
@@ -648,14 +634,7 @@ jQuery(document).ready(function($) {
 						}
 
 					} else {
-						_default = $cnt.data('default');
-
-						// Value is changed?
-						if (val != _default) {
-							$cnt.removeClass('cherry-generator-skip');
-						} else {
-							$cnt.addClass('cherry-generator-skip');
-						}
+						check_default_value($cnt, val);
 					}
 				});
 				// Init value setters
@@ -843,9 +822,9 @@ jQuery(document).ready(function($) {
 				}
 			});
 		}
-		/**
-		 * Remove preset by ID
-		 */
+	/**
+	 * Remove preset by ID
+	 */
 	function remove_preset(id) {
 		// Get current shortcode name
 		var shortcode = $('.cherry-generator-presets').data('shortcode');
@@ -991,5 +970,16 @@ jQuery(document).ready(function($) {
 			if (needle === haystack[i]) return i;
 		}
 		return false;
+	}
+
+	function check_default_value(container, val) {
+		_default = container.data('default');
+
+		// Value is changed?
+		if (val != _default) {
+			container.removeClass('cherry-generator-skip');
+		} else {
+			container.addClass('cherry-generator-skip');
+		}
 	}
 });

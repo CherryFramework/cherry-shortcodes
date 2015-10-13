@@ -226,6 +226,7 @@ class Cherry_Shortcodes_Handler {
 		$atts = shortcode_atts( array(
 			'icon'  => '',
 			'size'  => 20,
+			'align' => 'none',
 			'color' => '',
 			'class' => '',
 		), $atts, 'icon' );
@@ -234,12 +235,18 @@ class Cherry_Shortcodes_Handler {
 			return;
 		}
 
+		$align = in_array( $atts['align'], array( 'none', 'left', 'center', 'right' ) ) ? $atts['align'] : 'none';
+
 		$style = array();
 		$style['font-size'] = ( 0 != absint( $atts['size'] ) ) ? absint( $atts['size'] ) . 'px' : false;
 		$style['color']     = ( !empty( $atts['color'] ) ) ? esc_attr( $atts['color'] ) : false;
 
 		$class  = esc_attr( $atts['class'] );
 		$output = Cherry_Shortcodes_Tools::get_icon_html( $atts['icon'], 'cherry-icon ' . $class, null, $style );
+
+		if ( 'none' !== $align ) {
+			$output = sprintf( '<div class="align%1$s">%2$s</div>', $align, $output );
+		}
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'icon' );
 	}
@@ -274,7 +281,15 @@ class Cherry_Shortcodes_Handler {
 		self::$post_data = array_merge( array( 'tag' => 'banner' ), self::$post_data );
 
 		$result = preg_replace_callback( self::$macros_pattern, array( 'self', 'replace_callback' ), $template );
-		$result = '<div class="cherry-banner ' . esc_attr( $atts['class'] ) . '">' . $result . '</div>';
+
+		$wrap_classes   = array();
+		$wrap_classes[] = 'cherry-banner';
+		$wrap_classes[] = Cherry_Shortcodes_Tools::get_template_class( $atts['template'] );
+		$wrap_classes[] = esc_attr( $atts['class'] );
+
+		$classes = implode( ' ', $wrap_classes );
+
+		$result = '<div class="' . $classes . '">' . $result . '</div>';
 
 		return apply_filters( 'cherry_shortcodes_output', $result, $atts, 'banner' );
 	}
@@ -349,7 +364,7 @@ class Cherry_Shortcodes_Handler {
 		}
 
 		$style  = Cherry_Shortcodes_Tools::prepare_styles( $styles );
-		$format = '<div class="%s"><div class="%s" style="%s">%s</div></div>';
+		$format = apply_filters( 'cherry_shortcode_box_format', '<div class="%s"><div class="%s" style="%s">%s</div></div>' );
 		$output = sprintf( $format, $class, $preset_class, $style, do_shortcode( $content ) );
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'box' );
@@ -478,21 +493,50 @@ class Cherry_Shortcodes_Handler {
 
 	public static function spacer( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
-			'size'  => '20',
-			'class' => '',
+			'size'    => '20',
+			'size_sm' => '',
+			'size_xs' => '',
+			'class'   => '',
 		), $atts, 'spacer' );
 
-		$size = intval( $atts['size'] );
+		$classes = array( 'cherry-spacer' );
 
-		if ( 0 <= $size ) {
-			$prop = 'height';
-			$size = (string)$size . 'px';
-		} else {
-			$prop = 'margin-top';
-			$size = (string)$size . 'px';
+		if ( ! empty( $atts['class'] ) ) {
+			$classes[] = esc_attr( $atts['class'] );
 		}
 
-		$output = '<div class="cherry-spacer' . cherry_esc_class_attr( $atts ) . '" style="' . $prop . ':' . $size . '"></div>';
+		if ( empty( $atts['size_sm'] ) && empty( $atts['size_xs'] ) ) {
+
+			$output = Cherry_Shortcodes_Tools::get_spacer_block( $atts['size'], $classes );
+			return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'spacer' );
+		}
+
+		$size_md = $atts['size'];
+		$size_sm = $atts['size_sm'];
+		$size_xs = $atts['size_xs'];
+
+		if ( ! $size_sm ) {
+			$size_sm = $size_md;
+		}
+
+		if ( ! $size_xs ) {
+			$size_xs = $size_sm;
+		}
+
+		$md_classes = $classes;
+		$sm_classes = $classes;
+		$xs_classes = $classes;
+
+		$md_classes[] = 'hidden-xs';
+		$md_classes[] = 'hidden-sm';
+
+		$sm_classes[] = 'visible-sm-block';
+
+		$xs_classes[] = 'visible-xs-block';
+
+		$output  = Cherry_Shortcodes_Tools::get_spacer_block( $size_md, $md_classes );
+		$output .= Cherry_Shortcodes_Tools::get_spacer_block( $size_sm, $sm_classes );
+		$output .= Cherry_Shortcodes_Tools::get_spacer_block( $size_xs, $xs_classes );
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'spacer' );
 	}
@@ -516,12 +560,10 @@ class Cherry_Shortcodes_Handler {
 		$icon_type  = ( false === strpos( $atts['icon'], 'icon:' ) ) ? 'image-icon' : 'font-icon';
 		$uniq_class = 'cherry-list_' . rand( 1000, 9999 );
 
-		$classes = array(
-			'cherry-list',
-			$icon_type,
-			$uniq_class,
-			cherry_esc_class_attr( $atts ),
-
+		$classes = apply_filters(
+			'cherry_shortcodes_list_classes',
+			array( 'cherry-list', $icon_type, $uniq_class, cherry_esc_class_attr( $atts ) ),
+			$atts
 		);
 
 		$class = implode( ' ', $classes );
@@ -917,7 +959,7 @@ class Cherry_Shortcodes_Handler {
 			// Posts counter.
 			$current_post = 0;
 
-			$data = array( 'image', 'title', 'date', 'author', 'comments', 'taxonomy', 'excerpt', 'content', 'button' );
+			$data = array( 'image', 'title', 'date', 'author', 'comments', 'taxonomy', 'excerpt', 'content', 'button', 'permalink' );
 			self::setup_template_data( $data, $atts );
 			self::$post_data = array_merge( array( 'tag' => 'posts' ), self::$post_data );
 
@@ -1032,8 +1074,9 @@ class Cherry_Shortcodes_Handler {
 			endwhile;
 
 			// Prepare the CSS classes for list.
-			$wrap_classes        = array();
-			$wrap_classes[]      = 'cherry-posts-list';
+			$wrap_classes   = array();
+			$wrap_classes[] = 'cherry-posts-list';
+			$wrap_classes[] = Cherry_Shortcodes_Tools::get_template_class( $atts['template'] );
 
 			if ( ( ! empty( $atts['col_xs'] ) && 'none' !== $atts['col_xs'] )
 				|| ( ! empty( $atts['col_sm'] ) && 'none' !== $atts['col_sm'] )
@@ -1318,7 +1361,7 @@ class Cherry_Shortcodes_Handler {
 			ob_end_clean();
 
 			// Default macros-array.
-			$data = array( 'image', 'title', 'date', 'author', 'comments', 'taxonomy', 'excerpt', 'content', 'button' );
+			$data = array( 'image', 'title', 'date', 'author', 'comments', 'taxonomy', 'excerpt', 'content', 'button', 'permalink' );
 			self::setup_template_data( $data, $atts );
 			self::$post_data = array_merge( array( 'tag' => 'swiper_carousel' ), self::$post_data );
 
@@ -1395,6 +1438,7 @@ class Cherry_Shortcodes_Handler {
 			$wrap_classes   = array();
 			$wrap_classes[] = 'cherry-swiper-carousel';
 			$wrap_classes[] = 'swiper-container';
+			$wrap_classes[] = Cherry_Shortcodes_Tools::get_template_class( $atts['template'] );
 
 			if ( $atts['class'] ) {
 				$wrap_classes[] = esc_attr( $atts['class'] );
@@ -1576,6 +1620,7 @@ class Cherry_Shortcodes_Handler {
 		$map_draggable = ( bool ) ( $atts['map_draggable'] === 'yes' ) ? apply_filters( 'cherry_shortcodes_google_map_draggable', ! wp_is_mobile(), $atts ) : false;
 		$scroll_wheel  = ( bool ) ( $atts['scroll_wheel']  === 'yes' ) ? true : false;
 		$addr          = sanitize_text_field( $atts['geo_address'] );
+		$addr_set      = array();
 		$map_style     = sanitize_text_field( $atts['map_style'] );
 		$custom_class  = sanitize_text_field( $atts['custom_class'] );
 		$map_marker    = sanitize_text_field( $atts['map_marker'] );
@@ -1583,9 +1628,21 @@ class Cherry_Shortcodes_Handler {
 		$style         = Cherry_Shortcodes_Tools::get_map_style_json( $map_style );
 
 		if ( '' !== $addr ) {
-			$geo_position = Cherry_Shortcodes_Tools::google_geocoding( $addr );
-			$lat_value    = floatval( $geo_position['lat'] );
-			$lng_value    = floatval( $geo_position['lng'] );
+			$addr = explode('and', $addr);
+			if( count( $addr ) == 1 ){
+				$geo_position = Cherry_Shortcodes_Tools::google_geocoding( $addr[0] );
+				$lat_value    = floatval( $geo_position['lat'] );
+				$lng_value    = floatval( $geo_position['lng'] );
+
+			}else{
+				foreach ( $addr as $addr_key => $addr_value ) {
+					$geo_position = Cherry_Shortcodes_Tools::google_geocoding( $addr_value );
+					$addr_set[ $addr_key ] = array(
+						'lat' => floatval( $geo_position['lat'] ),
+						'lng' => floatval( $geo_position['lng'] ),
+					);
+				}
+			}
 		}
 
 		$map_marker_attachment_id = !is_numeric( $map_marker ) ? Cherry_Shortcodes_Tools::get_attachment_id_from_src( $map_marker ) : intval( $map_marker );
@@ -1608,6 +1665,9 @@ class Cherry_Shortcodes_Handler {
 			$data_attr_line .= 'data-map-draggable="' . $map_draggable . '"';
 			$data_attr_line .= "data-map-marker='" . $map_marker . "'";
 			$data_attr_line .= "data-map-style='" . $style . "'";
+			if( !empty( $addr_set ) ){
+				$data_attr_line .= "data-multi-marker='" . json_encode( $addr_set ) . "'";
+			}
 
 		$html = '<div class="google-map-container ' . $custom_class.'" style="height:' . $map_height . 'px;" ' . $data_attr_line . '>';
 			$html .= '<div id="google-map-' . $random_id . '" class="google-map"></div>';
@@ -1868,79 +1928,108 @@ class Cherry_Shortcodes_Handler {
 	}
 
 	public static function video_preview( $atts = null, $content ) {
-
 		$atts = shortcode_atts( array(
-			'poster'				=> '',
-			'source'				=> '',
-			'control'				=> 'show',
-			'show_content_on_hover'	=> 'no',
-			'muted'					=> 'no',
-			'loop'					=> 'no',
-			'preload'				=> 'no',
-			'width'					=> '',
-			'height'				=> '',
-			'custom_class'			=> '',
+			'poster'                => '',
+			'source'                => '',
+			'control'               => 'show',
+			'show_content_on_hover' => 'no',
+			'muted'                 => 'no',
+			'loop'                  => 'no',
+			'preload'               => 'no',
+			'width'                 => '',
+			'height'                => '',
+			'custom_class'          => '',
 		), $atts, 'video_preview' );
 
-		$video_preview_class = apply_filters( 'cherry_video_preview_class', array('class_1' => 'fa-play', 'class_2' => 'fa-pause', 'class_3' => 'fa-volume-off', 'class_4' => 'fa-volume-up') );
-		$video_preview_text = apply_filters( 'cherry_video_preview_texts', array('text_1' => '', 'text_2' => '', 'text_3' => '', 'text_4' => '') );
+		$video_preview_class = apply_filters( 'cherry_video_preview_class', array(
+			'class_1' => 'fa-play',
+			'class_2' => 'fa-pause',
+			'class_3' => 'fa-volume-off',
+			'class_4' => 'fa-volume-up',
+		) );
 
-		extract($atts);
+		$video_preview_text = apply_filters( 'cherry_video_preview_texts', array(
+			'text_1' => '',
+			'text_2' => '',
+			'text_3' => '',
+			'text_4' => '',
+		) );
 
-		$type = strtolower(  preg_replace( '/(^(http(s)?:)?(\/\/)(www.)?)|(([.]\D{2,5})?\/[\S]+)/', '', $source ) );
-		$is_mobile = wp_is_mobile() ? 'true' : 'false' ;
+		extract( $atts );
 
-		if( $type === 'youtube'){
-			cherry_query_asset( 'js', 'video-youtube' );
+		$source = sanitize_text_field( $atts['source'] );
 
-			global $video_preview_count;
-			$video_preview_count += 1;
+		if ( empty( $source ) ) {
+			return;
+		}
 
+		$poster = sanitize_text_field( $atts['poster'] );
+
+		$type = strtolower( preg_replace( '/(^(http(s)?:)?(\/\/)(www.)?)|(([.]\D{2,5})?\/[\S]+)/', '', $source ) );
+		$is_mobile = wp_is_mobile() ? 'true' : 'false';
+		$is_vimeo  = $is_youtube = false;
+
+		$yt_pattern    = '#^https?://(?:www\.)?(?:youtube\.com/watch|youtu\.be/)#';
+		$vimeo_pattern = '#^https?://(.+\.)?vimeo\.com/.*#';
+
+		$is_vimeo = ( preg_match( $vimeo_pattern, $source ) );
+		$is_youtube = ( preg_match( $yt_pattern, $source ) );
+
+		if ( $is_youtube ) {
+
+			static $video_preview_count = 0;
+			$video_preview_count++;
+
+			$type     = 'youtube';
 			$video_id = preg_replace( '/[\S.]+\/[\S.]+[=]|[\S.]+\//', '', $source );
 
-			if($poster){
-				$poster = '<div style="background-image: url(\'' . $poster . '\')" class="cherry-video-poster"></div>';
+			if ( $poster ) {
+				$poster = '<div style="background-image: url(\'' . esc_url( $poster ) . '\')" class="cherry-video-poster"></div>';
 			}
 
 			$video_tag = '<div id="cherry-youtube-' . $video_preview_count . '" class="youtube-player" data-video="' . $video_id . '"></div>' . $poster . '<div class="youtube-player-cap"></div>';
-		}else {
-			if( $type === 'vimeo' ){
-				$video_id = preg_replace( '/([\S.]+\/)/', '', $source );
 
+		} else {
+
+			if ( $is_vimeo ) {
+				$video_id = preg_replace( '/([\S.]+\/)/', '', $source );
 				$response = Cherry_Shortcodes_Tools::remote_query( 'https://player.vimeo.com/video/' . $video_id . '/config' );
 
-				if( $response ){
+				if ( $response ) {
 					$file_codes = $response->request->files->codecs[0];
 
-					if( strpos( $custom_class, 'full-width' ) !== false && $is_mobile === 'false' ){
+					if ( strpos( $custom_class, 'full-width' ) !== false && ( $is_mobile === 'false' ) ) {
 						$poster_size = '1280';
 						$source = $response->request->files->$file_codes->hd->url;
-					}else{
+					} else {
 						$poster_size = '640';
 						$source = $response->request->files->$file_codes->sd->url;
 					}
-					if( !$poster ){
+
+					if ( ! $poster ) {
 						$poster = $response->video->thumbs->$poster_size;
 					}
 				}
 			}
 
-			$poster = $poster ? '<div style="background-image: url(\'' . $poster . '\')" class="cherry-video-poster"></div>' : '' ;
-			$muted_attr = $muted !== 'no' ? 'muted ' : '' ;
-			$loop_attr = $loop !== 'no' ? 'loop ' : '' ;
-			$preload_attr = $preload !== 'no' ? 'preload="auto" ' : '' ;
-			$autoplay_attr = $control === 'autoplay' ? 'autoplay ' : '' ;
+			$poster = $poster ? '<div style="background-image: url(\'' . esc_url( $poster ) . '\')" class="cherry-video-poster"></div>' : '';
 
-			$video_tag = $poster;
-			$video_tag .= '<video ' . $autoplay_attr  . $muted_attr . $loop_attr . $preload_attr . ' width="100%" height="auto" >';
-				$video_tag .= '<source src="'.$source.'" type="video/mp4">';
+			$muted_attr    = $muted !== 'no' ? 'muted ' : '';
+			$loop_attr     = $loop !== 'no' ? 'loop ' : '';
+			$preload_attr  = $preload !== 'no' ? 'preload="auto" ' : '';
+			$autoplay_attr = $control === 'autoplay' ? 'autoplay ' : '';
+			$video_tag     = $poster;
+
+			$video_tag .= '<video ' . $autoplay_attr  . $muted_attr . $loop_attr . $preload_attr . ' width="100%" height="auto">';
+				$video_tag .= '<source src="' . $source . '" type="video/mp4">';
 			$video_tag .= '</video>';
 		}
 
 		$control_tag = '';
-		if( $control !== 'hide' && $control !== 'play-on-hover' && $control !== 'autoplay' ){
 
-			$control_class = $control === 'show-on-hover' ? 'hidden-element' : '' ;
+		if ( $control !== 'hide' && $control !== 'play-on-hover' && $control !== 'autoplay' ) {
+
+			$control_class = $control === 'show-on-hover' ? 'hidden-element' : '';
 
 			$control_tag .= '<div class="video-preview-controls ' . $control_class . '">';
 				$control_tag .= '<button class="play-pause fa ' . $video_preview_class['class_1'] . '" data-class="' . $video_preview_class['class_1'] . '" data-sub-class="' . $video_preview_class['class_2'] . '" data-text="' . __( $video_preview_text['text_1'], 'cherry-shortcodes' ) . '" data-sub-text="' . __( $video_preview_text['text_2'], 'cherry-shortcodes' ) . '" type="button">' . __( $video_preview_text['text_1'], 'cherry-shortcodes' ) . '</button>';
@@ -1949,34 +2038,30 @@ class Cherry_Shortcodes_Handler {
 		}
 
 		$content_tag = '';
-		if( $content ){
-			$content_class = $show_content_on_hover !== 'no' ? 'class="hidden-element"' : '' ;
 
+		if ( $content ) {
+			$content_class = $show_content_on_hover !== 'no' ? 'class="hidden-element"' : '';
 			$content_tag .= '<figcaption ' . $content_class . ' >' . do_shortcode( $content ) . '</figcaption>';
 		}
 
 		$output = apply_filters( 'cherry_video_preview_before', '' );
 
-		$output .= '<figure class="video-preview ' . $custom_class . '" data-settings=\'{"control":"' . $control . '", "muted":"' . $muted . '", "loop":"' . $loop . '", "preload":"' . $preload . '", "type":"' . $type . '", "is_mobile":"' . $is_mobile . '"}\' >';
+		$output .= '<figure class="video-preview ' . esc_attr( $custom_class ) . '" data-settings=\'{"control":"' . $control . '", "muted":"' . $muted . '", "loop":"' . $loop . '", "preload":"' . $preload . '", "type":"' . $type . '", "is_mobile":"' . $is_mobile . '"}\' >';
 			$output .= '<div class="video-holder">';
 				$output .= '<div class="video-inner-holder">';
-
 					$output .= $video_tag;
-
 					$output .= $control_tag;
-
 				$output .= '</div>';
 			$output .= '</div>';
-
 			$output .= $content_tag;
-
 		$output .= '</figure>';
 
 		$output .= apply_filters( 'cherry_video_preview_after', '' );
 
-		if( $type === 'youtube'){
+		if ( $type === 'youtube' ) {
 			cherry_query_asset( 'js', 'video-youtube' );
 		}
+
 		cherry_query_asset( 'js', 'video-preview' );
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'video_preview' );

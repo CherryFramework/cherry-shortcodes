@@ -166,6 +166,7 @@ class Cherry_Shortcodes_Tools {
 			);
 
 		} else {
+			$icon = Cherry_Shortcodes_Tools::get_image_url( $icon );
 			return sprintf(
 				'<span class="%2$s"><img src="%1$s" alt="%3$s"></span>',
 				esc_url( $icon ), esc_attr( $class ), esc_attr( $alt )
@@ -366,6 +367,11 @@ class Cherry_Shortcodes_Tools {
 		$image = '';
 		//resize & crop img
 		$croped_image_url = aq_resize( $img_url, $width, $height, true );
+
+		if( !$croped_image_url ){
+			$croped_image_url = $img_url;
+		}
+
 		// get $pathinfo
 		$pathinfo = pathinfo( $croped_image_url );
 		//get $attachment metadata
@@ -384,6 +390,52 @@ class Cherry_Shortcodes_Tools {
 		$image .= '<img class="wp-post-image croped-image ' . $custom_class . '" data-ratio="' . $ratio_value . '" width="' . $width . '" height="' . $height .'" src="' . $croped_image_url . '" alt="'. $alt_value .'">';
 
 		return $image;
+	}
+
+	/**
+	 * Get CSS class name for shortcode by template name
+	 *
+	 * @since  1.0.6
+	 * @param  string $template template name
+	 * @return string|bool false
+	 */
+	public static function get_template_class( $template ) {
+
+		if ( ! $template ) {
+			return false;
+		}
+
+		$prefix = apply_filters( 'cherry_shortcodes_template_class_prefix', 'template' );
+		$class  = sprintf( '%s-%s', esc_attr( $prefix ), esc_attr( str_replace( '.tmpl', '', $template ) ) );
+
+		return $class;
+	}
+
+	/**
+	 * Get spacer div with specific CSS classes and tr
+	 *
+	 * @since  1.0.6
+	 * @param  string $size    spacer value.
+	 * @param  array  $classes spacer block CSS classes.
+	 * @return string
+	 */
+	public static function get_spacer_block( $size, $classes ) {
+
+		$size = intval( $size );
+
+		if ( 0 <= $size ) {
+			$prop = 'height';
+			$size = (string)$size . 'px';
+		} else {
+			$prop = 'margin-top';
+			$size = (string)$size . 'px';
+		}
+
+		return sprintf(
+			'<div class="%3$s" style="%1$s:%2$s;"></div>',
+			$prop, $size, esc_attr( implode( ' ', $classes ) )
+		);
+
 	}
 
 	/**

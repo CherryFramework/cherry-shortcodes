@@ -51,11 +51,17 @@
 					,	swiper_effect = jQuery(this).data('swiper-effect')
 					,	uniqId = jQuery(this).data('uniq-id')
 					,	widthLayout = ''
+					,	delta_slides_per_view = 1
+					,	delta_slides_per_group = slides_per_group
 					;
 
+					delta_slides_per_view = widthLayoutChanger();
+					if( delta_slides_per_view !== slides_per_view ){
+						delta_slides_per_group = delta_slides_per_view;
+					}
 					var swiper = new Swiper( '#cherry-'+uniqId, {
-							slidesPerView: slides_per_view,
-							slidesPerGroup: slides_per_group,
+							slidesPerView: delta_slides_per_view,
+							slidesPerGroup: delta_slides_per_group,
 							slidesPerColumn: slides_per_column,
 							spaceBetween: space_between_slides,
 							speed: duration_speed,
@@ -77,8 +83,18 @@
 					);
 
 					CHERRY_API.variable.$window.on('resize.swiper_resize', function(){
-						var slidesNumber = widthLayoutChanger();
-						swiper.params.slidesPerView = slidesNumber;
+						var
+							deltaSlidesNumber = widthLayoutChanger()
+						,	delta_slides_per_group
+						;
+
+						if( deltaSlidesNumber !== slides_per_view ){
+							swiper.params.slidesPerGroup = deltaSlidesNumber;
+						}else{
+							swiper.params.slidesPerGroup = slides_per_group;
+						}
+
+						swiper.params.slidesPerView = deltaSlidesNumber;
 					});
 
 					function widthLayoutChanger(){
@@ -103,7 +119,6 @@
 								break
 						}
 						if( swiper_effect == 'cube' ){ slidesPerView = 1; }
-
 						return slidesPerView;
 					}
 

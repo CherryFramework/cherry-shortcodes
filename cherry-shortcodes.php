@@ -3,7 +3,7 @@
  * Plugin Name: Cherry Shortcodes
  * Plugin URI:  http://www.cherryframework.com/
  * Description: A pack of WordPress shortcodes.
- * Version:     1.0.5
+ * Version:     1.0.6-beta
  * Author:      Cherry Team
  * Author URI:  http://www.cherryframework.com/
  * Text Domain: cherry-shortcodes
@@ -83,7 +83,7 @@ if ( !class_exists( 'Cherry_Shortcodes' ) ) {
 			 *
 			 * @since 1.0.0
 			 */
-			define( 'CHERRY_SHORTCODES_VERSION', '1.0.5' );
+			define( 'CHERRY_SHORTCODES_VERSION', '1.0.6-beta' );
 
 			/**
 			 * Set the slug of the plugin.
@@ -151,11 +151,11 @@ if ( !class_exists( 'Cherry_Shortcodes' ) ) {
 				require_once( CHERRY_SHORTCODES_DIR . 'admin/includes/class-cherry-update/class-cherry-plugin-update.php' );
 
 				$Cherry_Plugin_Update = new Cherry_Plugin_Update();
-				$Cherry_Plugin_Update -> init( array(
-						'version'			=> CHERRY_SHORTCODES_VERSION,
-						'slug'				=> CHERRY_SHORTCODES_SLUG,
-						'repository_name'	=> CHERRY_SHORTCODES_SLUG
-				));
+				$Cherry_Plugin_Update->init( array(
+						'version'         => CHERRY_SHORTCODES_VERSION,
+						'slug'            => CHERRY_SHORTCODES_SLUG,
+						'repository_name' => CHERRY_SHORTCODES_SLUG,
+				) );
 			}
 		}
 

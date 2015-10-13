@@ -178,6 +178,10 @@
 	padding: 1.5em 20px;
 	border: 1px solid #ccc;
 	background: #fff;
+	.wp-picker-container {
+		border-radius: 0;
+		vertical-align: top;
+	}
 }
 #cherry-generator-settings .cherry-generator-attr-left-container{
 	float: left;
@@ -248,13 +252,14 @@
 }
 
 /* Common attribute fields */
-#cherry-generator-settings input[type="text"],
+.cherry-generator-attr-container > input[type="text"],
 #cherry-generator-settings input[type="number"],
 #cherry-generator-settings textarea,
 #cherry-generator-settings select {
 	width: 100%;
 	height: auto;
 	padding: 10px;
+	margin: 0;
 }
 
 /* Upload fields */
@@ -309,7 +314,8 @@
 .cherry-generator-shadow-picker-field {
 	position: relative;
 	display: inline-block;
-	width: 22%;
+	vertical-align: top;
+	width: 13%;
 	padding-right: 3%;
 }
 .cherry-generator-shadow-picker-field small {
@@ -318,7 +324,7 @@
 }
 .cherry-generator-shadow-picker-field input { text-align: right; }
 .cherry-generator-shadow-picker-field.cherry-generator-shadow-picker-color {
-	width: 25%;
+	width: 52%;
 	padding-right: 0;
 }
 .cherry-generator-shadow-picker-field.cherry-generator-shadow-picker-color input { text-align: left; }
@@ -344,7 +350,7 @@
 .cherry-generator-border-picker-field {
 	position: relative;
 	display: inline-block;
-	width: 30%;
+	width: 21%;
 	padding-right: 3%;
 }
 .cherry-generator-border-picker-field small {
@@ -353,10 +359,10 @@
 }
 .cherry-generator-border-picker-field input { text-align: right; }
 .cherry-generator-border-picker-field.cherry-generator-border-picker-color {
-	width: 34%;
+	width: 52%;
 	padding-right: 0;
+	input { text-align: left; }
 }
-.cherry-generator-border-picker-field.cherry-generator-border-picker-color input { text-align: left; }
 .cherry-generator-border-picker-color { position: relative; }
 .cherry-generator-border-picker-color-wheel {
 	position: absolute;

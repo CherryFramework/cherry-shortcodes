@@ -288,6 +288,24 @@ class Cherry_Shortcodes_Data {
 							'name'    => __( 'Size', 'cherry-shortcodes' ),
 							'desc'    => __( 'Spacer height', 'cherry-shortcodes' ),
 						),
+						'size_sm'  => array(
+							'type'    => 'number',
+							'min'     => -100,
+							'max'     => 300,
+							'step'    => 1,
+							'default' => 20,
+							'name'    => __( 'Size for tablets', 'cherry-shortcodes' ),
+							'desc'    => __( 'Spacer height for tablets', 'cherry-shortcodes' ),
+						),
+						'size_xs'  => array(
+							'type'    => 'number',
+							'min'     => -100,
+							'max'     => 300,
+							'step'    => 1,
+							'default' => 20,
+							'name'    => __( 'Size for mobile devices', 'cherry-shortcodes' ),
+							'desc'    => __( 'Spacer height for mobile devices', 'cherry-shortcodes' ),
+						),
 						'class' => array(
 							'default' => '',
 							'name'    => __( 'Class', 'cherry-shortcodes' ),
@@ -334,6 +352,18 @@ class Cherry_Shortcodes_Data {
 							'default' => 20,
 							'name'    => __( 'Icon size', 'cherry-shortcodes' ),
 							'desc'    => __( 'Font size in px (only for font icons)', 'cherry-shortcodes' ),
+						),
+						'align' => array(
+							'type'   => 'select',
+							'values' => array(
+								'none'   => __( 'None', 'cherry-shortcodes' ),
+								'left'   => __( 'Left', 'cherry-shortcodes' ),
+								'center' => __( 'Center', 'cherry-shortcodes' ),
+								'right'  => __( 'Right', 'cherry-shortcodes' ),
+							),
+							'default' => 'no',
+							'name'    => __( 'Alignment', 'cherry-shortcodes' ),
+							'desc'    => __( 'Select icon alignment', 'cherry-shortcodes' ),
 						),
 						'color' => array(
 							'type'    => 'color',
@@ -1788,7 +1818,7 @@ class Cherry_Shortcodes_Data {
 						'custom_class' => array(
 							'type'    => 'text',
 							'default' => '',
-							'name'    => __( 'Custom class', 'cherry-shortcodes' ),
+							'name'    => __( 'Class', 'cherry-shortcodes' ),
 							'desc'    => __( 'Enter custom class', 'cherry-shortcodes' ),
 						),
 					),
@@ -1845,7 +1875,7 @@ class Cherry_Shortcodes_Data {
 						'custom_class' => array(
 							'type'    => 'text',
 							'default' => '',
-							'name'    => __( 'Custom class', 'cherry-shortcodes' ),
+							'name'    => __( 'Class', 'cherry-shortcodes' ),
 							'desc'    => __( 'Enter custom class', 'cherry-shortcodes' ),
 						),
 					),
@@ -1899,7 +1929,7 @@ class Cherry_Shortcodes_Data {
 						'custom_class' => array(
 							'type'    => 'text',
 							'default' => '',
-							'name'    => __( 'Custom class', 'cherry-shortcodes' ),
+							'name'    => __( 'Class', 'cherry-shortcodes' ),
 							'desc'    => __( 'Enter custom class', 'cherry-shortcodes' ),
 						),
 					),
@@ -2026,7 +2056,7 @@ class Cherry_Shortcodes_Data {
 						'custom_class' => array(
 							'type'    => 'text',
 							'default' => '',
-							'name'    => __( 'Custom class', 'cherry-shortcodes' ),
+							'name'    => __( 'Class', 'cherry-shortcodes' ),
 							'desc'    => __( 'Element custom class', 'cherry-shortcodes' ),
 						),
 					),
@@ -2036,66 +2066,61 @@ class Cherry_Shortcodes_Data {
 				// [video_preview][/video_preview]
 				'video_preview' => array(
 					'name'  => __( 'Video Preview', 'cherry-shortcodes' ),
-					'desc' => __( 'Video Preview', 'cherry-shortcodes' ),
-					'icon' => 'film',
+					'desc'  => __( 'Video Preview', 'cherry-shortcodes' ),
+					'icon'  => 'film',
 					'type'  => 'wrap',
 					'group' => 'media',
 					'atts'  => array(
 						'source' => array(
 							'type'    => 'upload',
 							'default' => '',
-							'name'    => __( 'URL or File.', 'cherry-shortcodes' ),
-							'desc'    => __( 'To use video from YouTube or Vimeo input video URL. You can also upload video file from media library.', 'cherry-shortcodes' ),
+							'name'    => __( 'URL or File', 'cherry-shortcodes' ),
+							'desc'    => __( 'To use video from YouTube or Vimeo input video URL. You can also upload video file from media library', 'cherry-shortcodes' ),
 						),
 						'poster' => array(
 							'type'    => 'upload',
 							'default' => '',
-							'name'    => __( 'Poster.', 'cherry-shortcodes' ),
-							'desc'    => __( 'Poster image url.', 'cherry-shortcodes' ),
+							'name'    => __( 'Poster', 'cherry-shortcodes' ),
+							'desc'    => __( 'Poster image URL', 'cherry-shortcodes' ),
 						),
 						'control' => array(
-							'type'		=> 'select',
-							'values'	=> array(
-								'hide'			=> __( 'Hide control buttons', 'cherry-shortcodes' ),
-								'show'			=> __( 'Show control buttons', 'cherry-shortcodes' ),
-								'show-on-hover'	=> __( 'Show control button on mouse hover', 'cherry-shortcodes' ),
-								'autoplay	'	=> __( 'Video Autoplay', 'cherry-shortcodes' ),
-								'play-on-hover'	=> __( 'Play video on mouse hover', 'cherry-shortcodes' ),
+							'type'   => 'select',
+							'values' => array(
+								'hide'          => __( 'Hide control buttons', 'cherry-shortcodes' ),
+								'show'          => __( 'Show control buttons', 'cherry-shortcodes' ),
+								'show-on-hover' => __( 'Show control button on mouse hover', 'cherry-shortcodes' ),
+								'autoplay'      => __( 'Video Autoplay', 'cherry-shortcodes' ),
+								'play-on-hover' => __( 'Play video on mouse hover', 'cherry-shortcodes' ),
 							),
-							'default'	=> 'show_content_on_hover',
-							'name'		=> __( 'Controls.', 'cherry-shortcodes' ),
-							// 'desc'		=> __( '', 'cherry-shortcodes' ),
+							'default' => 'show',
+							'name'    => __( 'Controls', 'cherry-shortcodes' ),
 						),
 						'show_content_on_hover' => array(
-							'type'		=> 'bool',
-							'default'	=> 'no',
-							'name'		=> __( 'Show content on mouse hover.', 'cherry-shortcodes' ),
-							// 'desc'		=> __( '', 'cherry-shortcodes' ),
+							'type'    => 'bool',
+							'default' => 'no',
+							'name'    => __( 'Show content on mouse hover?', 'cherry-shortcodes' ),
 						),
 						'muted' => array(
 							'type'    => 'bool',
 							'default' => 'no',
-							'name'    => __( 'Muted.', 'cherry-shortcodes' ),
-							// 'desc'    => __( '', 'cherry-shortcodes' ),
+							'name'    => __( 'Muted?', 'cherry-shortcodes' ),
 						),
 						'loop' => array(
 							'type'    => 'bool',
 							'default' => 'no',
-							'name'    => __( 'Loop.', 'cherry-shortcodes' ),
-							// 'desc'    => __( '', 'cherry-shortcodes' ),
+							'name'    => __( 'Loop?', 'cherry-shortcodes' ),
 						),
 						'preload' => array(
 							'type'    => 'bool',
 							'default' => 'no',
-							'name'    => __( 'Preload.', 'cherry-shortcodes' ),
-							// 'desc'    => __( '', 'cherry-shortcodes' ),
+							'name'    => __( 'Preload?', 'cherry-shortcodes' ),
 						),
 						'custom_class' => array(
 							'type'    => 'text',
 							'default' => '',
-							'name'    => __( 'Custom class', 'cherry-shortcodes' ),
+							'name'    => __( 'Class', 'cherry-shortcodes' ),
 							'desc'    => __( 'Element custom class. You can use "full-width" class for video', 'cherry-shortcodes' ),
-						)
+						),
 					)
 				)
 			)

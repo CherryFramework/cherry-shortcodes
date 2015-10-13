@@ -60,36 +60,36 @@ class Cherry_Shortcodes_Assets {
 
 		if ( !( wp_is_mobile() || $is_IE && preg_match( '/MSIE [56789]/', $_SERVER['HTTP_USER_AGENT'] ) ) ) {
 			// Lazy Load Effect.
-			wp_register_script( 'cherry-lazy-load-effect', plugins_url( 'assets/js/shotcodes/lazy-load-effect.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
+			wp_register_script( 'cherry-lazy-load-effect', plugins_url( 'assets/js/shotcodes/lazy-load-effect.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 		}
 
 		// Magnific Popup.
-		wp_register_script( 'magnific-popup', plugins_url( 'assets/js/magnific-popup.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
+		wp_register_script( 'magnific-popup', plugins_url( 'assets/js/jquery.magnific-popup.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 
 		// Google Maps.
 		wp_register_script( 'googlemapapis', '//maps.googleapis.com/maps/api/js?v=3.exp&signed_in=false', array(), false, true );
-		wp_register_script( 'cherry-google-map', plugins_url( 'assets/js/shotcodes/google-map.js', CHERRY_SHORTCODES_FILE ), array( 'jquery', 'googlemapapis' ), CHERRY_SHORTCODES_VERSION, true );
+		wp_register_script( 'cherry-google-map', plugins_url( 'assets/js/shotcodes/google-map.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery', 'googlemapapis' ), CHERRY_SHORTCODES_VERSION, true );
 
 		// Swiper.
-		wp_register_script( 'swiper', plugins_url( 'assets/js/shotcodes/swiper.jquery.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
+		wp_register_script( 'swiper', plugins_url( 'assets/js/shotcodes/swiper.jquery.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 
 		// Parallax.
 		wp_register_script( 'device', plugins_url( 'assets/js/shotcodes/device.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
-		wp_register_script( 'cherry-parallax', plugins_url( 'assets/js/shotcodes/parallax.js', CHERRY_SHORTCODES_FILE ), array( 'jquery', 'device' ), CHERRY_SHORTCODES_VERSION, true );
+		wp_register_script( 'cherry-parallax', plugins_url( 'assets/js/shotcodes/parallax.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery', 'device' ), CHERRY_SHORTCODES_VERSION, true );
 
 		// Counter.
 		wp_register_script( 'waypoints', plugins_url( 'assets/js/shotcodes/waypoints.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
-		wp_register_script( 'jquery-counterup', plugins_url( 'assets/js/shotcodes/jquery.counterup.js', CHERRY_SHORTCODES_FILE ), array( 'waypoints' ), CHERRY_SHORTCODES_VERSION, true );
+		wp_register_script( 'jquery-counterup', plugins_url( 'assets/js/shotcodes/jquery.counterup.min.js', CHERRY_SHORTCODES_FILE ), array( 'waypoints' ), CHERRY_SHORTCODES_VERSION, true );
 
 		// Video Preview.
-		wp_register_script( 'video-preview', plugins_url( 'assets/js/shotcodes/video-preview.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
-		wp_register_script( 'video-youtube','https://www.youtube.com/player_api/', array( 'jquery' , 'video-preview' ), null, true );
+		wp_register_script( 'video-preview', plugins_url( 'assets/js/shotcodes/video-preview.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
+		wp_register_script( 'video-youtube', 'https://www.youtube.com/player_api/', array( 'jquery' , 'video-preview' ), null, true );
+
+		// Page Anchor.
+		wp_register_script( 'page-anchor', plugins_url( 'assets/js/shotcodes/page-anchor.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 
 		// Shortcodes init.
-		wp_register_script( 'page-anchor', plugins_url( 'assets/js/shotcodes/page-anchor.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
-
-		// Shortcodes init.
-		wp_register_script( 'cherry-shortcodes-init', plugins_url( 'assets/js/shotcodes/init.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
+		wp_register_script( 'cherry-shortcodes-init', plugins_url( 'assets/js/shotcodes/init.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 
 		// Hook to deregister javascripts or add custom.
 		do_action( 'cherry_shortcodes/assets/register_scripts' );
@@ -130,15 +130,15 @@ class Cherry_Shortcodes_Assets {
 		wp_register_style( 'simple-slider', plugins_url( 'assets/css/simple-slider.css', CHERRY_SHORTCODES_FILE ), false, CHERRY_SHORTCODES_VERSION, 'all' );
 
 		// Magnific Popup.
-		wp_register_script( 'magnific-popup', plugins_url( 'assets/js/magnific-popup.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
+		wp_register_script( 'magnific-popup', plugins_url( 'assets/js/jquery.magnific-popup.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 		wp_register_style( 'magnific-popup', plugins_url( 'assets/css/magnific-popup.css', CHERRY_SHORTCODES_FILE ), false, CHERRY_SHORTCODES_VERSION, 'all' );
 
 		// Font Awesome.
 		wp_register_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', false, '4.4.0', 'all' );
 
-		// Generator.
-		wp_register_script( 'cherry-shortcodes-generator', plugins_url( 'assets/js/generator.js', CHERRY_SHORTCODES_FILE ), array( 'farbtastic', 'magnific-popup' ), CHERRY_SHORTCODES_VERSION, true );
-		wp_register_style( 'cherry-shortcodes-generator', plugins_url( 'assets/css/generator.css', CHERRY_SHORTCODES_FILE ), array( 'farbtastic', 'magnific-popup' ), CHERRY_SHORTCODES_VERSION, 'all' );
+		wp_register_script( 'cherry-shortcodes-generator', plugins_url( 'assets/js/generator.js', CHERRY_SHORTCODES_FILE ), array( 'wp-color-picker', 'magnific-popup' ), CHERRY_SHORTCODES_VERSION, true );
+		wp_register_style( 'cherry-shortcodes-generator', plugins_url( 'assets/css/generator.css', CHERRY_SHORTCODES_FILE ), array( 'wp-color-picker', 'magnific-popup' ), CHERRY_SHORTCODES_VERSION, 'all' );
+
 		wp_localize_script( 'cherry-shortcodes-generator', 'cherry_shortcodes_generator', array(
 				'upload_title'         => __( 'Choose file', 'cherry-shortcodes' ),
 				'upload_insert'        => __( 'Insert', 'cherry-shortcodes' ),
