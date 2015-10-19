@@ -80,8 +80,8 @@
 			if(self.do_animation){
 				self.do_animation = false;
 
-
 				scroll_to = self.get_target_offset( $( '[data-anchor][data-id="' + hash + '"]' ) );
+
 				if( scroll_to ){
 					current_position = self.$window.scrollTop();
 					coef = self.speed * ( Math.abs( scroll_to - current_position ) / self.window_height );
@@ -143,12 +143,12 @@
 
 		get_target_offset:function( target ){
 			var position = 0;
-
 			if( sticky_data.args.active ){
-				var fixed_header = $('header#header');
+				//var fixed_header = $('header#header');
+				var fixed_header = $( sticky_data.selector );
 				position = target[0] ? target.offset().top - fixed_header.outerHeight() - fixed_header.position().top  : false ;
 			}else{
-				position= target[0] ? target.offset().top : false ;
+				position = target[0] ? target.offset().top : false ;
 			}
 
 			return Math.round( position );
