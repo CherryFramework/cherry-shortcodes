@@ -50,7 +50,6 @@
                         newNum = newNum.toString().replace(/(\d+)(\d{3})/, '$1'+','+'$2');
                     }
                 }
-
                 nums.unshift(newNum);
             }
 
