@@ -295,7 +295,7 @@ class Cherry_Shortcodes_Template_Callbacks {
 
 		$content = sprintf(
 			'<span class="post-comments-link"><a href="%1$s">%2$s</a></span>',
-			esc_url( get_comments_link( $post->ID ) ),
+			$url,
 			$comments
 		);
 

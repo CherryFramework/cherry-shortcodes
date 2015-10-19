@@ -142,11 +142,12 @@ class Cherry_Shortcodes_Handler {
 		}
 
 		// Build icon.
-		$icon = $atts['icon'];
-		if ( ! empty( $atts['icon'] ) ) {
+		if ( ! empty( $atts['icon'] ) && 'none' !== $atts['icon'] ) {
 			$icon = Cherry_Shortcodes_Tools::get_icon_html(
 				$atts['icon'], $base . '-icon icon-position-' . esc_attr( $atts['icon_position'] )
 			);
+		} else {
+			$icon = '';
 		}
 
 		$btn_text = sanitize_text_field( $atts['text'] );
