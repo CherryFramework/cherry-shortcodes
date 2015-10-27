@@ -151,7 +151,7 @@ class Cherry_Shortcodes_Tools {
 	 */
 	public static function get_icon_html( $icon, $class = 'cherry-icon', $alt = null, $style = array() ) {
 
-		if ( ! $icon ) {
+		if ( ! $icon || 'none' == $icon ) {
 			return false;
 		}
 
