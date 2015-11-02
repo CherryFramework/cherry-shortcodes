@@ -1481,7 +1481,7 @@ class Cherry_Shortcodes_Data {
 							'type' => 'select',
 							'values' => array(
 								'part'    => __( 'Part of content', 'cherry-shortcodes' ),
-								'd'    => __( 'Full content', 'cherry-shortcodes' ),
+								'full'    => __( 'Full content', 'cherry-shortcodes' ),
 							),
 							'default' => 'part',
 							'name'    => __( 'Post content', 'cherry-shortcodes' ),
