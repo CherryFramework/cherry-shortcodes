@@ -1,0 +1,56 @@
+/*--------------------------
+## [countdown]
+--------------------------*/
+.countdown-wrapper {
+	text-align: center;
+}
+.countdown-content{
+	display: none;
+}
+.countdown-timer{
+	display: inline-block;
+	.countdown-item{
+		position: relative;
+		display: inline-block;
+		margin: 5px;
+		.countdown-info{
+			display: table;
+			width: 100%;
+			height: 100%;
+			.inner{
+				display: table-cell;
+				vertical-align: middle;
+			}
+		}
+		svg.circle-progress{
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			transform: rotate(-90deg);
+				circle.circle {
+					stroke-dashoffset: 0;
+					stroke-width: 3px;
+					stroke: #4DB6FD;
+					//transition: stroke-dashoffset 1s linear;
+				}
+				circle.border{
+					stroke-dashoffset: 0;
+					stroke-width: 3px;
+					stroke: rgba(255, 255, 255, 1);
+				}
+		}
+	}
+	span.value{
+		display: block;
+		font-size: 24px;
+		line-height: 24px;
+		text-align: center;
+	}
+	span.title{
+		display: block;
+		font-size: 16px;
+		line-height: 16px;
+		text-align: center;
+	}
+}

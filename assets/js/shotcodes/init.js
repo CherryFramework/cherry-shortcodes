@@ -156,6 +156,128 @@
 		}
 	}
 	CHERRY_API.shortcode.counter.init();
+	// shortcode.countdown
+	CHERRY_API.utilites.namespace('shortcode.countdown');
+	CHERRY_API.shortcode.countdown = {
+		init: function () {
+			if( CHERRY_API.status.is_ready ){
+				this.render.bind( this );
+			}else{
+				CHERRY_API.variable.$document.on('ready', this.render.bind( this ) );
+			}
+		},
+		render: function () {
+			// Countdown init
+			var
+				thisObject = this
+			;
+
+			Date.prototype.daysInMonth = function() {
+				return 33 - new Date(this.getFullYear(), this.getMonth(), 33).getDate();
+			};
+
+			jQuery('.countdown-wrapper').each(function(){
+				var
+					$this = $(this)
+				,	$timer = $('.countdown-timer', $this)
+				,	$countdownContent = $('.countdown-content', $this)
+				,	$itemList = $('.countdown-item', $timer)
+				,	$yearItem = $('div.year', $this)
+				,	$monthItem = $('div.month', $this)
+				,	$weekItem = $('div.week', $this)
+				,	$dayItem = $('div.day', $this)
+				,	$hourItem = $('div.hour', $this)
+				,	$minutesItem = $('div.minute', $this)
+				,	$secondsItem = $('div.second', $this)
+				,	startDate = $timer.data('start-date')
+				,	startDateArray = startDate.split('/')
+				,	finalDate = $timer.data('final-date')
+				,	finalDateArray = finalDate.split('/')
+				,	hourData = $timer.data('hour')
+				,	minutesData = $timer.data('minutes')
+				,	secondsData = $timer.data('seconds')
+				,	sizeData = $timer.data('size')
+				,	strokeWidth = $timer.data('stroke-width')
+				,	strokeColor = $timer.data('stroke-color')
+				,	finalDateString = finalDateArray[2] + '/' + finalDateArray[1] + '/' + finalDateArray[0] + ' ' + hourData + ':' + minutesData + ':' + secondsData
+				,	daysInMonth = new Date().daysInMonth()
+				;
+
+				$itemList.css({'width':sizeData, 'height':sizeData });
+				$('.circle-progress circle.circle', $itemList).css({ 'stroke-width':strokeWidth, 'stroke':strokeColor });
+				$('.circle-progress circle.border', $itemList).css({ 'stroke-width':strokeWidth - 1 });
+
+				$timer.countdown(finalDateString, function(event) {
+					var
+						year = event.strftime('%Y')
+					,	month = event.strftime('%m')
+					,	week = event.strftime('%w')
+					,	day = event.strftime('%d')
+					,	hour = event.strftime('%H')
+					,	minutes = event.strftime('%M')
+					,	seconds = event.strftime('%S')
+					,	yearDiff = parseInt(finalDateArray[2]) - parseInt(startDateArray[2])
+					;
+					yearDiff = ( 0 !== yearDiff ) ? yearDiff: 1;
+
+					if( $yearItem[0] ){
+						$('span.value', $yearItem).html( year );
+						( 's' == event.strftime('%!Y') ) ? $('span.title', $yearItem).html( $yearItem.data('plural') ) : $('span.title', $yearItem).html( $yearItem.data('solus') ) ;
+						var yearProgress = parseInt(year) / yearDiff;
+						thisObject.circle_render($yearItem, sizeData, yearProgress );
+					}
+					if( $monthItem[0] ){
+						$('span.value', $monthItem).html( month );
+						( 's' == event.strftime('%!m') ) ? $('span.title', $monthItem).html( $monthItem.data('plural') ) : $('span.title', $monthItem).html( $monthItem.data('solus') );
+						var monthProgress = parseInt(month) / ( yearDiff * 12 ) ;
+						thisObject.circle_render($monthItem, sizeData, monthProgress );
+					}
+					if( $weekItem[0] ){
+						$('span.value', $weekItem).html( week );
+						( 's' == event.strftime('%!w') ) ? $('span.title', $weekItem).html( $weekItem.data('plural') ) : $('span.title', $weekItem).html( $weekItem.data('solus') );
+						var weekProgress = parseInt(week) / ( yearDiff * 12 * 4 ) ;
+						thisObject.circle_render($weekItem, sizeData, weekProgress);
+					}
+					if( $dayItem[0] ){
+						$('span.value', $dayItem).html( day );
+						( 's' == event.strftime('%!d') ) ? $('span.title', $dayItem).html( $dayItem.data('plural') ) : $('span.title', $dayItem).html( $dayItem.data('solus') );
+						thisObject.circle_render($dayItem, sizeData, parseInt(day)/daysInMonth);
+					}
+					if( $hourItem[0] ){
+						$('span.value', $hourItem).html( hour );
+						( 's' == event.strftime('%!H') ) ? $('span.title', $hourItem).html( $hourItem.data('plural') ) : $('span.title', $hourItem).html( $hourItem.data('solus') );
+						thisObject.circle_render($hourItem, sizeData, parseInt(hour)/24);
+					}
+					if( $minutesItem[0] ){
+						$('span.value', $minutesItem).html( minutes );
+						( 's' == event.strftime('%!M') ) ? $('span.title', $minutesItem).html( $minutesItem.data('plural') ) : $('span.title', $minutesItem).html( $minutesItem.data('solus') );
+						thisObject.circle_render($minutesItem, sizeData, parseInt(minutes)/60);
+					}
+					if( $secondsItem[0] ){
+						$('span.value', $secondsItem).html( seconds );
+						( 's' == event.strftime('%!S') ) ? $('span.title', $secondsItem).html( $secondsItem.data('plural') ) : $('span.title', $secondsItem).html( $secondsItem.data('solus') );
+						thisObject.circle_render($secondsItem, sizeData, parseInt(seconds)/60);
+					}
+					if( 'finish' == event.type ){
+						$countdownContent.slideDown(500);
+						$this.addClass('finish');
+					}
+				})
+			})
+		},
+		circle_render: function ( item, size, progress ) {
+			var
+				$svgCircle = $('svg.circle-progress', item)
+			,	$circleBar = $('circle.circle', $svgCircle)
+			,	radius = parseInt( $circleBar.attr('r') )
+			,	circleLength = Math.PI * ( radius * 2 )
+			,	pct = 0
+			;
+			pct = circleLength - (progress * circleLength);
+			$circleBar.css({ 'stroke-dashoffset': - pct, 'stroke-dasharray': circleLength });
+		}
+	}
+	CHERRY_API.shortcode.countdown.init();
 
 	// shortcode.spoiler
 	CHERRY_API.utilites.namespace('shortcode.spoiler');

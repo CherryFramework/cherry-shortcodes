@@ -75,6 +75,12 @@ class Cherry_Shortcodes_Generator_Views {
 		return $return;
 	}
 
+	public static function date( $id, $field ) {
+		$return = '<span class="cherry-generator-select-date"> <input type="text" name="' . $id . '" value="' . $field['default'] . '" id="cherry-generator-attr-' . $id . '" class="cherry-generator-attr cherry-generator-select-date-value" /></span>';
+		//$return = '<span class="cherry-generator-select-color"><input type="text" name="' . $id . '" value="' . $field['default'] . '" id="cherry-generator-attr-' . $id . '" class="cherry-generator-attr cherry-generator-select-color-value" /></span>';
+		return $return;
+	}
+
 	public static function gallery( $id, $field ) {
 		$shult = shortcodes_ultimate();
 		// Prepare galleries list

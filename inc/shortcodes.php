@@ -2068,6 +2068,128 @@ class Cherry_Shortcodes_Handler {
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'video_preview' );
 	}
 
+	public static function countdown( $atts = null, $content = null ) {
+		$atts = shortcode_atts( array(
+			'start_date'          => date('d/n/Y'),
+			'countdown_date'      => '25/10/2020',
+			'countdown_hour'      => 0,
+			'countdown_minutes'   => 0,
+			'countdown_seconds'   => 0,
+			'show_year'           => 'yes',
+			'show_month'          => 'yes',
+			'show_week'           => 'yes',
+			'show_day'            => 'yes',
+			'show_hour'           => 'yes',
+			'show_minute'         => 'yes',
+			'show_second'         => 'yes',
+			'circle_mode'         => 'yes',
+			'item_size'           => 100,
+			'stroke_width'        => 3,
+			'stroke_color'        => 3,
+			'custom_class'        => '',
+		), $atts, 'counter' );
+
+		$start_date_array = explode('/', $atts['start_date']);
+		$final_date_array = explode('/', $atts['countdown_date']);
+
+		$countdown_hour = (string)$atts['countdown_hour'];
+		$countdown_minutes = (string)$atts['countdown_minutes'];
+		$countdown_seconds = (string)$atts['countdown_seconds'];
+
+		$show_year = ( bool ) ( 'yes' === $atts['show_year'] ) ? true : false;
+		$show_month = ( bool ) ( 'yes' === $atts['show_month'] ) ? true : false;
+		$show_week = ( bool ) ( 'yes' === $atts['show_week'] ) ? true : false;
+		$show_day = ( bool ) ( 'yes' === $atts['show_day'] ) ? true : false;
+		$show_hour = ( bool ) ( 'yes' === $atts['show_hour'] ) ? true : false;
+		$show_minute = ( bool ) ( 'yes' === $atts['show_minute'] ) ? true : false;
+		$show_second = ( bool ) ( 'yes' === $atts['show_second'] ) ? true : false;
+		$circle_mode = ( bool ) ( 'yes' === $atts['circle_mode'] ) ? true : false;
+		$item_size = ( int ) $atts['item_size'];
+		$stroke_width = ( int ) $atts['stroke_width'];
+		$stroke_color = esc_attr( $atts['stroke_color'] );
+		$countdown_content = do_shortcode( $content );
+
+		$custom_class = sanitize_text_field( $atts['custom_class'] );
+		$custom_class = ( !'' == $custom_class ) ? ' ' . $custom_class : $custom_class ;
+
+		$data_attr_line = '';
+		$data_attr_line .= 'data-final-date="' . $atts['countdown_date'] . '"';
+		$data_attr_line .= 'data-start-date="' . $atts['start_date'] . '"';
+		$data_attr_line .= 'data-hour="' . $countdown_hour . '"';
+		$data_attr_line .= 'data-minutes="' . $countdown_minutes . '"';
+		$data_attr_line .= 'data-seconds="' . $countdown_seconds . '"';
+		$data_attr_line .= 'data-size="' . $item_size . '"';
+		$data_attr_line .= 'data-stroke-width="' . $stroke_width . '"';
+		$data_attr_line .= 'data-stroke-color="' . $stroke_color . '"';
+
+		$countdown_settings = array(
+			'year' => array(
+				'solus_title'	=> __( 'Year', 'cherry-shortcodes' ),
+				'plural_title'	=> __( 'Years', 'cherry-shortcodes' ),
+				'show'			=> $show_year,
+			),
+			'month' => array(
+				'solus_title'	=> __( 'Month', 'cherry-shortcodes' ),
+				'plural_title'	=> __( 'Months', 'cherry-shortcodes' ),
+				'show'			=> $show_month,
+			),
+			'week' => array(
+				'solus_title'	=> __( 'Week', 'cherry-shortcodes' ),
+				'plural_title'	=> __( 'Weeks', 'cherry-shortcodes' ),
+				'show'			=> $show_week,
+			),
+			'day' => array(
+				'solus_title'	=> __( 'Day', 'cherry-shortcodes' ),
+				'plural_title'	=> __( 'Days', 'cherry-shortcodes' ),
+				'show'			=> $show_day,
+			),
+			'hour' => array(
+				'solus_title'	=> __( 'Hour', 'cherry-shortcodes' ),
+				'plural_title'	=> __( 'Hours', 'cherry-shortcodes' ),
+				'show'			=> $show_hour,
+			),
+			'minute' => array(
+				'solus_title'	=> __( 'Minute', 'cherry-shortcodes' ),
+				'plural_title'	=> __( 'Minutes', 'cherry-shortcodes' ),
+				'show'			=> $show_minute,
+			),
+			'second' => array(
+				'solus_title'	=> __( 'Second', 'cherry-shortcodes' ),
+				'plural_title'	=> __( 'Seconds', 'cherry-shortcodes' ),
+				'show'			=> $show_second,
+			),
+		);
+		$html = '<div class="countdown-wrapper">';
+			$html .= '<div class="countdown-timer" ' . $data_attr_line . '>';
+				foreach ( $countdown_settings as $item => $item_settings ) {
+					if( $item_settings['show'] ){
+						$html .= '<div class="countdown-item ' . $item . '" data-solus="' . $item_settings['solus_title'] . '" data-plural="' . $item_settings['plural_title'] . '">';
+							if( $circle_mode ){
+								$html .= '<svg class="circle-progress" width="' . $item_size . '" height="' . $item_size . '" viewPort="0 0 '. $item_size  .' ' . $item_size . '" version="1.1" xmlns="http://www.w3.org/2000/svg">';
+									$delta_radius = ( $item_size / 2 ) - ( $stroke_width / 2 );
+									$html .= '<circle class="border" r="' . $delta_radius . '" cx="' . $item_size / 2 . '" cy="' . $item_size / 2 . '" fill="transparent" ></circle>';
+									$html .= '<circle class="circle" r="' . $delta_radius . '" cx="' . $item_size / 2 . '" cy="' . $item_size / 2 . '" fill="transparent" ></circle>';
+								$html .= '</svg>';
+							}
+							$html .= '<div class="countdown-info">';
+								$html .= '<div class="inner">';
+									$html .= '<span class="value"></span>';
+									$html .= '<span class="title"></span>';
+								$html .= '</div>';
+							$html .= '</div>';
+						$html .= '</div>';
+					}
+				}
+			$html .= '</div>';
+			$html .= '<div class="countdown-content">';
+				$html .= $countdown_content;
+			$html .= '</div>';
+		$html .= '</div>';
+
+		cherry_query_asset( 'js', array( 'jquery-countdown', 'cherry-shortcodes-init' ) );
+
+		return apply_filters( 'cherry_shortcodes_output', $html, $atts, 'countdown' );
+	}
 	/**
 	 * Prepare template data to replace
 	 *
