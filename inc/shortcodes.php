@@ -518,7 +518,9 @@ class Cherry_Shortcodes_Handler {
 
 		$class = implode( ' ', array_filter( $classes ) );
 
-		$output = sprintf( $format['global'], $title, $subtitle, $icon, $class );
+		// Empty 5-th arguments for backward compatibility.
+		$depraceted = '';
+		$output     = sprintf( $format['global'], $title, $subtitle, $icon, $class, $depraceted );
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'title_box' );
 	}
