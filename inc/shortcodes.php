@@ -371,11 +371,19 @@ class Cherry_Shortcodes_Handler {
 			$styles['background-color'] = esc_attr( $atts['bg_color'] );
 		}
 
-		$style  = Cherry_Shortcodes_Tools::prepare_styles( $styles );
+		$style = Cherry_Shortcodes_Tools::prepare_styles( $styles );
 
 		Cherry_Shortcodes_Tools::print_styles( sprintf( '%s{%s}', $rand_class, $style ) );
 
-		$format = apply_filters( 'cherry_shortcode_box_format', '<div class="%s"><div class="%s" >%s</div></div>' );
+		/**
+		 * Filter a shortcode format for outputing.
+		 *
+		 * @since 1.0.0
+		 * @since 1.0.6.2 Added new additional variable for filter - $atts.
+		 * @param string $format Shortcode format.
+		 * @param array  $atts   Shortcode attributes.
+		 */
+		$format = apply_filters( 'cherry_shortcode_box_format', '<div class="%s"><div class="%s">%s</div></div>', $atts );
 		$output = sprintf( $format, $class, $preset_class, do_shortcode( $content ) );
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'box' );
