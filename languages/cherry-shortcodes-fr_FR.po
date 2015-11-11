@@ -1,1481 +1,1535 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Cherry Shortcodes\n"
+"Project-Id-Version: cherry-shortcodes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-30 17:18+0300\n"
-"PO-Revision-Date: 2015-07-30 17:18+0300\n"
-"Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
-"Language-Team: ETIC-Studio <nicolas.leclerc@etic-studio.fr>\n"
+"POT-Creation-Date: 2015-10-30 13:04+0200\n"
+"PO-Revision-Date: 2015-10-30 13:04+0200\n"
+"Last-Translator: J.L.Dokter <jldokter@gmail.com>\n"
+"Language-Team: Cherry Team <support@cherryframework.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.6\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.8.3\n"
-"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: _e;__;_n:1,2;_n_noop:1,2;_x:1,2c;_nx:1,2,4c;"
+"_nx_noop:1,2,3c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
 
-#: ../inc/assets.php:143 ../inc/vendor/sunrise.php:179
+#: inc/assets.php:143 inc/vendor/sunrise.php:179
 msgid "Choose file"
-msgstr ""
+msgstr "Choisir le fichier"
 
-#: ../inc/assets.php:144
+#: inc/assets.php:144
 msgid "Insert"
-msgstr ""
+msgstr "Insérer"
 
-#: ../inc/assets.php:145
+#: inc/assets.php:145
 msgid "Select images"
-msgstr ""
+msgstr "Sélectionner des images "
 
-#: ../inc/assets.php:146
+#: inc/assets.php:146
 msgid "Add selected images"
-msgstr ""
+msgstr "Ajouter les images sélectionnées"
 
-#: ../inc/assets.php:147
+#: inc/assets.php:147
 msgid "Please enter a name for new preset"
-msgstr ""
+msgstr "Veuiller entrer un nom pour le nouveau préréglage "
 
-#: ../inc/assets.php:148
+#: inc/assets.php:148
 msgid "New preset"
-msgstr ""
+msgstr "Nouveau préréglage"
 
-#: ../inc/assets.php:149
+#: inc/assets.php:149
 msgid "Last used settings"
-msgstr ""
+msgstr "Derniers paramètres utilisés"
 
-#: ../inc/data.php:30
+#: inc/data.php:30
 msgid "All"
-msgstr "Tout"
+msgstr "Tous"
 
-#: ../inc/data.php:31
+#: inc/data.php:31
 msgid "Grid"
-msgstr ""
+msgstr "Grille"
 
-#: ../inc/data.php:32
+#: inc/data.php:32
 msgid "Typography"
-msgstr ""
+msgstr "Typographie"
 
-#: ../inc/data.php:33 ../inc/generator.php:231
+#: inc/data.php:33 inc/generator.php:251
 msgid "Content"
 msgstr "Contenu"
 
-#: ../inc/data.php:34
+#: inc/data.php:34
 msgid "Media"
-msgstr "Media"
+msgstr "Médias "
 
-#: ../inc/data.php:35
+#: inc/data.php:35
 msgid "Components"
-msgstr ""
+msgstr "Composants"
 
-#: ../inc/data.php:36
+#: inc/data.php:36
 msgid "Other"
-msgstr "Autres"
+msgstr "Autre"
 
-#: ../inc/data.php:45 ../inc/data.php:1011 ../inc/data.php:1318
+#: inc/data.php:45 inc/data.php:1074 inc/data.php:1381
 msgid "None"
-msgstr "Rien"
+msgstr "Aucun"
 
-#: ../inc/data.php:46
+#: inc/data.php:46
 msgid "Solid"
-msgstr ""
+msgstr "Trait simple"
 
-#: ../inc/data.php:47
+#: inc/data.php:47
 msgid "Dotted"
-msgstr ""
+msgstr "Pointillé"
 
-#: ../inc/data.php:48
+#: inc/data.php:48
 msgid "Dashed"
-msgstr ""
+msgstr "Tirets"
 
-#: ../inc/data.php:49
+#: inc/data.php:49
 msgid "Double"
-msgstr ""
+msgstr "Double"
 
-#: ../inc/data.php:50
+#: inc/data.php:50
 msgid "Groove"
-msgstr ""
+msgstr "Rainurée"
 
-#: ../inc/data.php:51
+#: inc/data.php:51
 msgid "Ridge"
-msgstr ""
+msgstr "Relief"
 
-#: ../inc/data.php:70
+#: inc/data.php:70
 msgid "Row"
 msgstr "Ligne"
 
-#: ../inc/data.php:77 ../inc/data.php:109
+#: inc/data.php:77 inc/data.php:109
 msgid "Fixed Width"
-msgstr ""
+msgstr "Largeur Fixe"
 
-#: ../inc/data.php:78 ../inc/data.php:110
+#: inc/data.php:78 inc/data.php:110
 msgid "Full Width"
-msgstr ""
+msgstr "﻿Pleine Largeur:"
 
-#: ../inc/data.php:81 ../inc/data.php:113
+#: inc/data.php:81 inc/data.php:113
 msgid "Type"
-msgstr "Type"
+msgstr "Type "
 
-#: ../inc/data.php:82 ../inc/data.php:114
+#: inc/data.php:82 inc/data.php:114
 msgid "Type width"
-msgstr ""
+msgstr "Type de largeur"
 
-#: ../inc/data.php:86 ../inc/data.php:118 ../inc/data.php:174
-#: ../inc/data.php:226 ../inc/data.php:253 ../inc/data.php:269
-#: ../inc/data.php:307 ../inc/data.php:395 ../inc/data.php:485
-#: ../inc/data.php:532 ../inc/data.php:592 ../inc/data.php:654
-#: ../inc/data.php:728 ../inc/data.php:905 ../inc/data.php:927
-#: ../inc/data.php:1093 ../inc/data.php:1419 ../inc/data.php:1469
-#: ../inc/data.php:1518 ../inc/data.php:1563 ../inc/data.php:1582
+#: inc/data.php:86 inc/data.php:118 inc/data.php:194 inc/data.php:266
+#: inc/data.php:293 inc/data.php:309 inc/data.php:347 inc/data.php:446
+#: inc/data.php:547 inc/data.php:595 inc/data.php:655 inc/data.php:717
+#: inc/data.php:791 inc/data.php:968 inc/data.php:990 inc/data.php:1156
+#: inc/data.php:1487 inc/data.php:1537 inc/data.php:1586 inc/data.php:1631
+#: inc/data.php:1650 inc/data.php:1791 inc/data.php:1848 inc/data.php:1902
+#: inc/data.php:2029 inc/data.php:2091
 msgid "Class"
-msgstr "Class"
+msgstr "Classe"
 
-#: ../inc/data.php:87 ../inc/data.php:119 ../inc/data.php:175
-#: ../inc/data.php:227 ../inc/data.php:254 ../inc/data.php:270
-#: ../inc/data.php:308 ../inc/data.php:396 ../inc/data.php:486
-#: ../inc/data.php:533 ../inc/data.php:593 ../inc/data.php:655
-#: ../inc/data.php:729 ../inc/data.php:906 ../inc/data.php:928
-#: ../inc/data.php:1094 ../inc/data.php:1420 ../inc/data.php:1470
-#: ../inc/data.php:1519 ../inc/data.php:1564 ../inc/data.php:1583
+#: inc/data.php:87 inc/data.php:119 inc/data.php:195 inc/data.php:267
+#: inc/data.php:294 inc/data.php:310 inc/data.php:348 inc/data.php:447
+#: inc/data.php:548 inc/data.php:596 inc/data.php:656 inc/data.php:718
+#: inc/data.php:792 inc/data.php:969 inc/data.php:991 inc/data.php:1157
+#: inc/data.php:1488 inc/data.php:1538 inc/data.php:1587 inc/data.php:1632
+#: inc/data.php:1651
 msgid "Extra CSS class"
-msgstr "Class CSS"
+msgstr "Сlasse CSS Extra"
 
-#: ../inc/data.php:91 ../inc/data.php:123 ../inc/data.php:1498
-#: ../inc/data.php:1558
+#: inc/data.php:91 inc/data.php:123 inc/data.php:1566 inc/data.php:1626
 msgid "Anchor"
-msgstr ""
+msgstr "Ancre"
 
-#: ../inc/data.php:92 ../inc/data.php:124
+#: inc/data.php:92 inc/data.php:124
 msgid "This option defines menu item marker."
-msgstr ""
+msgstr "Cette option définit le marqueur d'élément de menu."
 
-#: ../inc/data.php:95
+#: inc/data.php:95
 msgid ""
 "[%prefix_col size_md=\"4\"]Column content[/%prefix_col]\n"
 "[%prefix_col size_md=\"4\"]Column content[/%prefix_col]\n"
 "[%prefix_col size_md=\"4\"]Column content[/%prefix_col]"
 msgstr ""
+"[%prefix_col size_md=\"4\"]Contenu de la colonne[/%prefix_col]\n"
+"[%prefix_col size_md=\"4\"]Contenu de la colonne[/%prefix_col]\n"
+"[%prefix_col size_md=\"4\"]Contenu de la colonne[/%prefix_col]"
 
-#: ../inc/data.php:96 ../inc/data.php:128
+#: inc/data.php:96 inc/data.php:128
 msgid "Row for flexible columns"
-msgstr "Ligne pour colonnes flexibles"
+msgstr "Ligne pour les colonnes flexibles"
 
-#: ../inc/data.php:102
+#: inc/data.php:102
 msgid "Row Inner"
-msgstr ""
+msgstr "Rangée intérieure"
 
-#: ../inc/data.php:127
+#: inc/data.php:127
 msgid ""
 "[%prefix_col_inner size_md=\"4\"]Column content[/%prefix_col_inner]\n"
 "[%prefix_col_inner size_md=\"4\"]Column content[/%prefix_col_inner]\n"
 "[%prefix_col_inner size_md=\"4\"]Column content[/%prefix_col_inner]"
 msgstr ""
+"[%prefix_col_inner size_md=\"4\"]Contenu de la colonne[/%prefix_col_inner]\n"
+"[%prefix_col_inner size_md=\"4\"]Contenu de la colonne[/%prefix_col_inner]\n"
+"[%prefix_col_inner size_md=\"4\"]Contenu de la colonne[/%prefix_col_inner]"
 
-#: ../inc/data.php:134
+#: inc/data.php:134
 msgid "Column"
-msgstr "Colonnes"
+msgstr "Colonne"
 
-#: ../inc/data.php:141 ../inc/data.php:193 ../inc/data.php:248
-#: ../inc/data.php:786
+#: inc/data.php:146 inc/data.php:218 inc/data.php:288 inc/data.php:849
 msgid "Size"
 msgstr "Taille"
 
-#: ../inc/data.php:142 ../inc/data.php:194
+#: inc/data.php:147 inc/data.php:219
 msgid "Select column width."
-msgstr ""
+msgstr "Sélectionnez la largeur de colonne."
 
-#: ../inc/data.php:147 ../inc/data.php:199 ../inc/data.php:995
-#: ../inc/data.php:1302
+#: inc/data.php:157 inc/data.php:229 inc/data.php:1058 inc/data.php:1365
 msgid "Offset"
 msgstr "Décalage"
 
-#: ../inc/data.php:148 ../inc/data.php:200
+#: inc/data.php:158 inc/data.php:230
 msgid "Select column offset."
-msgstr ""
+msgstr "Sélectionnez un décalage de colonne."
 
-#: ../inc/data.php:153 ../inc/data.php:205
+#: inc/data.php:168 inc/data.php:240
 msgid "Pull"
-msgstr ""
+msgstr "Pull"
 
-#: ../inc/data.php:154 ../inc/data.php:206
+#: inc/data.php:169 inc/data.php:241
 msgid "Select column pull."
-msgstr ""
+msgstr "Sélectionnez column pull."
 
-#: ../inc/data.php:159 ../inc/data.php:211
+#: inc/data.php:179 inc/data.php:251
 msgid "Push"
-msgstr ""
+msgstr "Push"
 
-#: ../inc/data.php:160 ../inc/data.php:212
+#: inc/data.php:180 inc/data.php:252
 msgid "Select column push."
-msgstr ""
+msgstr "Sélectionnez column push."
 
-#: ../inc/data.php:165 ../inc/data.php:217 ../inc/generator-views.php:58
+#: inc/data.php:185 inc/data.php:257 inc/generator-views.php:58
 msgid "No"
 msgstr "Non"
 
-#: ../inc/data.php:166 ../inc/data.php:218 ../inc/generator-views.php:58
+#: inc/data.php:186 inc/data.php:258 inc/generator-views.php:58
 msgid "Yes"
 msgstr "Oui"
 
-#: ../inc/data.php:169 ../inc/data.php:170 ../inc/data.php:221
-#: ../inc/data.php:222
+#: inc/data.php:189 inc/data.php:190 inc/data.php:261 inc/data.php:262
 msgid "Collapse column paddings"
-msgstr ""
+msgstr "Réduire paddings de colonne"
 
-#: ../inc/data.php:178 ../inc/data.php:230
+#: inc/data.php:198 inc/data.php:270
 msgid "Column content"
 msgstr "Contenu de la colonne"
 
-#: ../inc/data.php:179 ../inc/data.php:231
+#: inc/data.php:199 inc/data.php:271
 msgid "Flexible and responsive columns"
-msgstr "Colonne flexible et responsive"
+msgstr "Colonnes flexibles et responsives"
 
-#: ../inc/data.php:186
+#: inc/data.php:206
 msgid "Column Inner"
-msgstr ""
+msgstr "Column Inner"
 
-#: ../inc/data.php:238
+#: inc/data.php:278
 msgid "Spacer"
-msgstr "Spacer"
+msgstr "Espacement"
 
-#: ../inc/data.php:249
+#: inc/data.php:289
 msgid "Spacer height"
-msgstr ""
+msgstr "Hauteur de l'Espacement"
 
-#: ../inc/data.php:257
+#: inc/data.php:297
 msgid "Vertical spacer between blocks"
-msgstr ""
+msgstr "Espacement verticale entre blocs"
 
-#: ../inc/data.php:263
+#: inc/data.php:303
 msgid "Clear"
-msgstr ""
+msgstr "Clear"
 
-#: ../inc/data.php:273
+#: inc/data.php:313
 msgid "Clearing block"
-msgstr ""
+msgstr "Clearing block"
 
-#: ../inc/data.php:279 ../inc/data.php:286 ../inc/data.php:619
-#: ../inc/data.php:833 ../inc/data.php:922
+#: inc/data.php:319 inc/data.php:326 inc/data.php:682 inc/data.php:896
+#: inc/data.php:985
 msgid "Icon"
-msgstr "Icones"
+msgstr "Icône"
 
-#: ../inc/data.php:287 ../inc/data.php:620 ../inc/data.php:834
-#: ../inc/data.php:923
+#: inc/data.php:327 inc/data.php:683 inc/data.php:897 inc/data.php:986
 msgid "You can upload custom icon for this button or pick a built-in icon"
 msgstr ""
+"Vous pouvez charger une icône personnalisée pour ce bouton ou choisir une "
+"icône intégrée"
 
-#: ../inc/data.php:295 ../inc/data.php:628
+#: inc/data.php:335 inc/data.php:691
 msgid "Icon size"
 msgstr "Taille de l'icône"
 
-#: ../inc/data.php:296 ../inc/data.php:629
+#: inc/data.php:336 inc/data.php:692
 msgid "Font size in px (only for font icons)"
-msgstr ""
+msgstr "Taille de la police en px (pour les icônes de police seulement)"
 
-#: ../inc/data.php:302 ../inc/data.php:649
+#: inc/data.php:342 inc/data.php:712
 msgid "Icon Color"
-msgstr ""
+msgstr "Couleur de l'icône"
 
-#: ../inc/data.php:303 ../inc/data.php:650
+#: inc/data.php:343 inc/data.php:713
 msgid "Font icon color"
-msgstr ""
+msgstr "Couleur de l'icône de police"
 
-#: ../inc/data.php:311
+#: inc/data.php:351
 msgid "Insert custom icon"
-msgstr ""
+msgstr "Insérez une icône personnalisée"
 
-#: ../inc/data.php:317 ../inc/data.php:400
+#: inc/data.php:357 inc/data.php:451
 msgid "Box"
-msgstr "Zone"
+msgstr "Boîte"
 
-#: ../inc/data.php:324 ../inc/data.php:414 ../inc/data.php:758
+#: inc/data.php:364 inc/data.php:465 inc/data.php:821
 msgid "Primary"
-msgstr ""
+msgstr "Primaire"
 
-#: ../inc/data.php:325 ../inc/data.php:415
+#: inc/data.php:365 inc/data.php:466
 msgid "Secondary"
-msgstr ""
+msgstr "Secondaire"
 
-#: ../inc/data.php:326 ../inc/data.php:416 ../inc/data.php:761
+#: inc/data.php:366 inc/data.php:467 inc/data.php:824
 msgid "Gray"
-msgstr ""
+msgstr "Gris"
 
-#: ../inc/data.php:327 ../inc/data.php:417
+#: inc/data.php:367 inc/data.php:468
 msgid "Primary border"
-msgstr ""
+msgstr "Bordure primaire"
 
-#: ../inc/data.php:328 ../inc/data.php:418
+#: inc/data.php:368 inc/data.php:469
 msgid "Secondary border"
-msgstr ""
+msgstr "Bordure secondaire"
 
-#: ../inc/data.php:329 ../inc/data.php:419
+#: inc/data.php:369 inc/data.php:470
 msgid "Gray border"
-msgstr ""
+msgstr "Bordure grise"
 
-#: ../inc/data.php:332 ../inc/data.php:422
+#: inc/data.php:372 inc/data.php:473
 msgid "Box styling preset"
-msgstr ""
+msgstr "Modèle de style de boîte "
 
-#: ../inc/data.php:333 ../inc/data.php:423
+#: inc/data.php:373 inc/data.php:474
 msgid "Select box styling preset"
-msgstr ""
+msgstr "Sélectionner le modèle de style de boîte "
 
-#: ../inc/data.php:339 ../inc/data.php:429 ../inc/data.php:697
+#: inc/data.php:379 inc/data.php:480 inc/data.php:760
 msgid "Background Color"
-msgstr ""
+msgstr "Couleur d'Arrière-plan"
 
-#: ../inc/data.php:340 ../inc/data.php:430
+#: inc/data.php:380 inc/data.php:481
 msgid "Select box background color"
-msgstr ""
+msgstr "Sélectionner la couleur d'arrière-plan de boîte "
 
-#: ../inc/data.php:345 ../inc/data.php:435
+#: inc/data.php:385 inc/data.php:486
 msgid "Background Image"
-msgstr ""
+msgstr "Image d'Arrière-plan"
 
-#: ../inc/data.php:346 ../inc/data.php:436
+#: inc/data.php:386 inc/data.php:487
 msgid "Upload box background image"
-msgstr ""
+msgstr "Charger une image d'arrière-plan de boîte "
 
-#: ../inc/data.php:351 ../inc/data.php:441 ../inc/data.php:1891
+#: inc/data.php:391 inc/data.php:492 inc/data.php:1960
 msgid "Top Left"
-msgstr ""
+msgstr "En Haut à Gauche"
 
-#: ../inc/data.php:352 ../inc/data.php:442
+#: inc/data.php:392 inc/data.php:493
 msgid "Top Center"
-msgstr ""
+msgstr "En Haut au Centre"
 
-#: ../inc/data.php:353 ../inc/data.php:443 ../inc/data.php:1892
+#: inc/data.php:393 inc/data.php:494 inc/data.php:1961
 msgid "Top Right"
-msgstr ""
+msgstr "En Haut à Droite"
 
-#: ../inc/data.php:354 ../inc/data.php:444
+#: inc/data.php:394 inc/data.php:495
 msgid "Middle Left"
-msgstr ""
+msgstr "Au Milieu à Gauche"
 
-#: ../inc/data.php:355 ../inc/data.php:445
+#: inc/data.php:395 inc/data.php:496
 msgid "Middle Center"
-msgstr ""
+msgstr "Au Milieu au Centre"
 
-#: ../inc/data.php:356 ../inc/data.php:446
+#: inc/data.php:396 inc/data.php:497
 msgid "Middle Right"
-msgstr ""
+msgstr "Au Milieu à Droite"
 
-#: ../inc/data.php:357 ../inc/data.php:447 ../inc/data.php:1893
+#: inc/data.php:397 inc/data.php:498 inc/data.php:1962
 msgid "Bottom Left"
-msgstr ""
+msgstr "En Bas à Gauche"
 
-#: ../inc/data.php:358 ../inc/data.php:448
+#: inc/data.php:398 inc/data.php:499
 msgid "Bottom Center"
-msgstr ""
+msgstr "En Bas au Centre"
 
-#: ../inc/data.php:359 ../inc/data.php:449 ../inc/data.php:1894
+#: inc/data.php:399 inc/data.php:500 inc/data.php:1963
 msgid "Bottom Right"
-msgstr ""
+msgstr "En Bas à Droite"
 
-#: ../inc/data.php:362 ../inc/data.php:452
+#: inc/data.php:402 inc/data.php:503
 msgid "Background image position"
-msgstr ""
+msgstr "Position de l'image d'arrière-plan"
 
-#: ../inc/data.php:363 ../inc/data.php:453
+#: inc/data.php:403 inc/data.php:504
 msgid "Select background image position"
-msgstr ""
+msgstr "Choisir position de l'image d'arrière-plan"
 
-#: ../inc/data.php:368 ../inc/data.php:458
+#: inc/data.php:408 inc/data.php:509
 msgid "No Repeat"
-msgstr ""
+msgstr "Pas de répétition"
 
-#: ../inc/data.php:369 ../inc/data.php:459
+#: inc/data.php:409 inc/data.php:510
 msgid "Repeat All"
-msgstr ""
+msgstr "Répéter Tout"
 
-#: ../inc/data.php:370 ../inc/data.php:460
+#: inc/data.php:410 inc/data.php:511
 msgid "Repeat Horizontally"
-msgstr ""
+msgstr "Répétition Horizontale"
 
-#: ../inc/data.php:371 ../inc/data.php:461
+#: inc/data.php:411 inc/data.php:512
 msgid "Repeat Vertically"
-msgstr ""
+msgstr "Répétition Verticale"
 
-#: ../inc/data.php:374 ../inc/data.php:464
+#: inc/data.php:414 inc/data.php:515
 msgid "Background image repeat"
-msgstr ""
+msgstr "Répétition de l'image d'arrière-plan"
 
-#: ../inc/data.php:375 ../inc/data.php:465
+#: inc/data.php:415 inc/data.php:516
 msgid "Select background image repeat"
-msgstr ""
+msgstr "Choisir la répétition de l'image d'arrière-plan"
 
-#: ../inc/data.php:380 ../inc/data.php:470
+#: inc/data.php:420 inc/data.php:521
 msgid "Scroll normally"
-msgstr ""
+msgstr "Défiler normalement"
 
-#: ../inc/data.php:381 ../inc/data.php:471
+#: inc/data.php:421 inc/data.php:522
 msgid "Fixed in place"
-msgstr ""
+msgstr "Fixe"
 
-#: ../inc/data.php:384 ../inc/data.php:474
+#: inc/data.php:424 inc/data.php:525
 msgid "Background image attachment"
-msgstr ""
+msgstr "Attachement de l'image d'arrière-plan"
 
-#: ../inc/data.php:385 ../inc/data.php:475
+#: inc/data.php:425 inc/data.php:526
 msgid "Select background image attachment"
+msgstr "Choisir l'attachement de l'image d'arrière-plan"
+
+#: inc/data.php:430 inc/data.php:531
+msgid "Auto"
 msgstr ""
 
-#: ../inc/data.php:390 ../inc/data.php:480
+#: inc/data.php:431 inc/data.php:532
+msgid "Cover"
+msgstr ""
+
+#: inc/data.php:432 inc/data.php:533
+msgid "Contain"
+msgstr ""
+
+#: inc/data.php:435 inc/data.php:536
+msgid "Background image size"
+msgstr ""
+
+#: inc/data.php:436 inc/data.php:537
+msgid "Select background image size"
+msgstr ""
+
+#: inc/data.php:441 inc/data.php:542
 msgid "Fill"
-msgstr ""
+msgstr "Remplir"
 
-#: ../inc/data.php:391 ../inc/data.php:481
+#: inc/data.php:442 inc/data.php:543
 msgid "Fill a parent container?"
-msgstr ""
+msgstr "Remplir un conteneur parent?"
 
-#: ../inc/data.php:399 ../inc/data.php:489 ../inc/data.php:1726
-#: ../inc/data.php:1783
+#: inc/data.php:450 inc/data.php:551 inc/data.php:1795 inc/data.php:1852
 msgid "Your content goes here"
-msgstr ""
+msgstr "Votre contenu sera affiché ici"
 
-#: ../inc/data.php:406 ../inc/data.php:490
+#: inc/data.php:457 inc/data.php:552
 msgid "Box Inner"
-msgstr ""
+msgstr "Boîte intérieure"
 
-#: ../inc/data.php:413
+#: inc/data.php:464
 msgid "No preset"
-msgstr ""
+msgstr "Aucun modèle"
 
-#: ../inc/data.php:496 ../inc/data.php:546
+#: inc/data.php:558 inc/data.php:609
 msgid "Banner"
-msgstr ""
+msgstr "Bannière"
 
-#: ../inc/data.php:503
+#: inc/data.php:566
 msgid "Banner Image"
+msgstr "Image de Bannière"
+
+#: inc/data.php:567
+msgid "Select attachment banner image"
 msgstr ""
 
-#: ../inc/data.php:504
-msgid "Upload banner image"
-msgstr ""
-
-#: ../inc/data.php:508
+#: inc/data.php:571
 msgid "Banner Title"
-msgstr ""
+msgstr "Titre de la Bannière"
 
-#: ../inc/data.php:509
+#: inc/data.php:572
 msgid "Enter banner title"
-msgstr ""
+msgstr "Entrez le titre de la bannière "
 
-#: ../inc/data.php:513
+#: inc/data.php:576
 msgid "Banner URL"
-msgstr ""
+msgstr "URL de la bannière"
 
-#: ../inc/data.php:514 ../inc/filters.php:121
+#: inc/data.php:577 inc/filters.php:121
 msgid "Banner link URL"
-msgstr ""
+msgstr "URL du lien de la bannière"
 
-#: ../inc/data.php:520 ../inc/data.php:864
+#: inc/data.php:583 inc/data.php:927
 msgid "Text color"
 msgstr "Couleur du texte"
 
-#: ../inc/data.php:521
+#: inc/data.php:584
 msgid "Banner text color"
-msgstr ""
+msgstr "Couleur du texte de bannière"
 
-#: ../inc/data.php:527
+#: inc/data.php:590
 msgid "Background color"
-msgstr ""
+msgstr "Couleur d'Arrière-plan"
 
-#: ../inc/data.php:528 ../inc/filters.php:135
+#: inc/data.php:591 inc/filters.php:135
 msgid "Banner background color"
-msgstr ""
+msgstr "Couleur d'arrière-plan de la bannière"
 
-#: ../inc/data.php:541 ../inc/data.php:1102 ../inc/data.php:1428
+#: inc/data.php:604 inc/data.php:1165 inc/data.php:1496
 msgid "Template"
-msgstr "Template"
+msgstr "Modèle"
 
-#: ../inc/data.php:542 ../inc/data.php:1103 ../inc/data.php:1429
+#: inc/data.php:605 inc/data.php:1166 inc/data.php:1497
 msgid "Shortcode template"
-msgstr ""
+msgstr "Modèle de shortcode"
 
-#: ../inc/data.php:545
+#: inc/data.php:608
 msgid "Banner content goes here"
-msgstr ""
+msgstr "Contenu de la bannière sera affiché ici"
 
-#: ../inc/data.php:552 ../inc/data.php:596
+#: inc/data.php:615 inc/data.php:659
 msgid "Horizontal Rule"
-msgstr ""
+msgstr "Ligne horizontale"
 
-#: ../inc/data.php:562
+#: inc/data.php:625
 msgid "Line height"
-msgstr ""
+msgstr "Hauteur de ligne"
 
-#: ../inc/data.php:563
+#: inc/data.php:626
 msgid "Horizontal rule height"
-msgstr ""
+msgstr "Hauteur de Ligne horizontale"
 
-#: ../inc/data.php:569
+#: inc/data.php:632
 msgid "Line color"
-msgstr ""
+msgstr "Couleur de la ligne"
 
-#: ../inc/data.php:570
+#: inc/data.php:633
 msgid "Horizontal rule color"
-msgstr ""
+msgstr "Couleur de Ligne horizontale"
 
-#: ../inc/data.php:578
+#: inc/data.php:641
 msgid "Indent before"
-msgstr ""
+msgstr "Espace avant"
 
-#: ../inc/data.php:579
+#: inc/data.php:642
 msgid "Indent before horizontal rule"
-msgstr ""
+msgstr "Espace avant de Ligne horizontale"
 
-#: ../inc/data.php:587
+#: inc/data.php:650
 msgid "Indent after"
-msgstr ""
+msgstr "Espace après"
 
-#: ../inc/data.php:588
+#: inc/data.php:651
 msgid "Indent after horizontal rule"
-msgstr ""
+msgstr "Espace après de Ligne horizontale"
 
-#: ../inc/data.php:602
+#: inc/data.php:665
 msgid "Title Box"
-msgstr ""
+msgstr "Titre de boîte "
 
-#: ../inc/data.php:608 ../inc/data.php:1487 ../inc/data.php:1537
+#: inc/data.php:671 inc/data.php:1555 inc/data.php:1605
 msgid "Title"
 msgstr "Titre"
 
-#: ../inc/data.php:609
+#: inc/data.php:672
 msgid "Title text"
-msgstr ""
+msgstr "Texte de titre"
 
-#: ../inc/data.php:613
+#: inc/data.php:676
 msgid "Subtitle"
-msgstr ""
+msgstr "Sous-titre"
 
-#: ../inc/data.php:614
+#: inc/data.php:677
 msgid "Subtitle text"
-msgstr ""
+msgstr "Texte de sous-titre"
 
-#: ../inc/data.php:635
+#: inc/data.php:698
 msgid "Title Color"
-msgstr ""
+msgstr "Couleur de Titre"
 
-#: ../inc/data.php:636
+#: inc/data.php:699
 msgid "Title text color"
-msgstr "Couleur du texte du titre"
+msgstr "Couleur du texte de titre"
 
-#: ../inc/data.php:642
+#: inc/data.php:705
 msgid "Subtitle Color"
-msgstr ""
+msgstr "Couleur de Sous-titre"
 
-#: ../inc/data.php:643
+#: inc/data.php:706
 msgid "Subtitle text color"
-msgstr ""
+msgstr "Couleur de texte de sous-titre"
 
-#: ../inc/data.php:658
+#: inc/data.php:721
 msgid "Title box"
-msgstr ""
+msgstr "Titre de boîte "
 
-#: ../inc/data.php:664
+#: inc/data.php:727
 msgid "Dropcap"
-msgstr "Dropcap"
+msgstr "Lettrine"
 
-#: ../inc/data.php:674
+#: inc/data.php:737
 msgid "Text size"
-msgstr ""
+msgstr "Taille du texte"
 
-#: ../inc/data.php:675
+#: inc/data.php:738
 msgid "Text size in px"
-msgstr ""
+msgstr "Taille du texte en px"
 
-#: ../inc/data.php:683
+#: inc/data.php:746
 msgid "Canvas size"
-msgstr ""
+msgstr "Taille de la toile"
 
-#: ../inc/data.php:684
+#: inc/data.php:747
 msgid "Canvas size in px"
-msgstr ""
+msgstr "Taille de la toile en px"
 
-#: ../inc/data.php:690
+#: inc/data.php:753
 msgid "Text Color"
-msgstr ""
+msgstr "Couleur du Texte"
 
-#: ../inc/data.php:691
+#: inc/data.php:754
 msgid "Dropcap text color"
-msgstr ""
+msgstr "Couleur du texte de lettrine"
 
-#: ../inc/data.php:698
+#: inc/data.php:761
 msgid "Dropcap background color"
-msgstr ""
+msgstr "Couleur d’arrière-plan de lettrine"
 
-#: ../inc/data.php:703 ../inc/data.php:823 ../inc/data.php:839
-#: ../inc/data.php:1854
+#: inc/data.php:766 inc/data.php:886 inc/data.php:902 inc/data.php:1923
 msgid "Left"
 msgstr "Gauche"
 
-#: ../inc/data.php:704 ../inc/data.php:824 ../inc/data.php:841
-#: ../inc/data.php:1852
+#: inc/data.php:767 inc/data.php:887 inc/data.php:904 inc/data.php:1921
 msgid "Right"
 msgstr "Droite"
 
-#: ../inc/data.php:705 ../inc/data.php:1890
+#: inc/data.php:768 inc/data.php:1959
 msgid "Center"
-msgstr "Centrer"
+msgstr "Centre"
 
-#: ../inc/data.php:708
+#: inc/data.php:771
 msgid "Align"
 msgstr "Aligner"
 
-#: ../inc/data.php:709
+#: inc/data.php:772
 msgid "Dropcap alignment"
-msgstr ""
+msgstr "Alignement de lettrine"
 
-#: ../inc/data.php:717 ../inc/data.php:805
+#: inc/data.php:780 inc/data.php:868
 msgid "Border radius"
-msgstr ""
+msgstr "Radius de bordure"
 
-#: ../inc/data.php:718
+#: inc/data.php:781
 msgid "Border radius size in px"
-msgstr ""
+msgstr "Taille de radius de bordure en px"
 
-#: ../inc/data.php:723
+#: inc/data.php:786
 msgid "Border"
-msgstr ""
+msgstr "Bordure"
 
-#: ../inc/data.php:724
+#: inc/data.php:787
 msgid "Setup dropcap border"
-msgstr ""
+msgstr "Configurer la bordure de lettrine"
 
-#: ../inc/data.php:732
+#: inc/data.php:795
 msgid "A"
-msgstr ""
+msgstr "A"
 
-#: ../inc/data.php:733
+#: inc/data.php:796
 msgid "Dropcap box"
-msgstr ""
+msgstr "Boîte de lettrine"
 
-#: ../inc/data.php:739
+#: inc/data.php:802
 msgid "Button"
 msgstr "Bouton"
 
-#: ../inc/data.php:744
+#: inc/data.php:807
 msgid "Read more"
-msgstr ""
+msgstr "Lire la suite"
 
-#: ../inc/data.php:745
+#: inc/data.php:808
 msgid "Text"
-msgstr ""
+msgstr "Texte"
 
-#: ../inc/data.php:746 ../inc/data.php:1088 ../inc/data.php:1408
+#: inc/data.php:809 inc/data.php:1151 inc/data.php:1471
 msgid "Button text"
-msgstr "texte du bouton"
+msgstr "Texte du bouton"
 
-#: ../inc/data.php:750 ../inc/data.php:766
+#: inc/data.php:813 inc/data.php:829
 msgid "Link"
 msgstr "Lien"
 
-#: ../inc/data.php:751
+#: inc/data.php:814
 msgid "Button link"
 msgstr "Lien du bouton"
 
-#: ../inc/data.php:759
+#: inc/data.php:822
 msgid "Primary-light"
-msgstr ""
+msgstr "Primary-clair"
 
-#: ../inc/data.php:760 ../inc/data.php:1445 ../inc/data.php:1549
+#: inc/data.php:823 inc/data.php:1513 inc/data.php:1617
 msgid "Default"
-msgstr "Default"
+msgstr "Par défaut"
 
-#: ../inc/data.php:762
+#: inc/data.php:825
 msgid "Success"
 msgstr "Succès"
 
-#: ../inc/data.php:763
+#: inc/data.php:826
 msgid "Info"
-msgstr "Info"
+msgstr "Infos"
 
-#: ../inc/data.php:764
+#: inc/data.php:827
 msgid "Warning"
-msgstr "Attention"
+msgstr "Avertissement"
 
-#: ../inc/data.php:765
+#: inc/data.php:828
 msgid "Danger"
-msgstr ""
+msgstr "Danger"
 
-#: ../inc/data.php:770 ../inc/data.php:1449 ../inc/data.php:1553
+#: inc/data.php:833 inc/data.php:1517 inc/data.php:1621
 msgid "Style"
 msgstr "Style"
 
-#: ../inc/data.php:771
+#: inc/data.php:834
 msgid "Button style preset"
-msgstr ""
+msgstr "Modèle de style de bouton"
 
-#: ../inc/data.php:778
+#: inc/data.php:841
 msgid "Extra Small"
-msgstr ""
+msgstr "Très petit"
 
-#: ../inc/data.php:779
+#: inc/data.php:842
 msgid "Small"
 msgstr "Petit"
 
-#: ../inc/data.php:780
+#: inc/data.php:843
 msgid "Medium"
-msgstr ""
+msgstr "Moyen"
 
-#: ../inc/data.php:781
+#: inc/data.php:844
 msgid "Large"
-msgstr ""
+msgstr "Grande"
 
-#: ../inc/data.php:782
+#: inc/data.php:845
 msgid "Extra Large"
-msgstr ""
+msgstr "Très grand"
 
-#: ../inc/data.php:787
+#: inc/data.php:850
 msgid "Button size preset"
-msgstr ""
+msgstr "Modèle de taille de bouton"
 
-#: ../inc/data.php:792
+#: inc/data.php:855
 msgid "Inline"
-msgstr ""
+msgstr "En ligne"
 
-#: ../inc/data.php:793
+#: inc/data.php:856
 msgid "Wide"
-msgstr ""
+msgstr "Large"
 
-#: ../inc/data.php:796
+#: inc/data.php:859
 msgid "Display"
-msgstr ""
+msgstr "Afficher "
 
-#: ../inc/data.php:797
+#: inc/data.php:860
 msgid "Button display type"
-msgstr ""
+msgstr "Type d'affichage de bouton"
 
-#: ../inc/data.php:806
+#: inc/data.php:869
 msgid "Button border radius"
-msgstr ""
+msgstr "Radius de bordure de bouton"
 
-#: ../inc/data.php:811
+#: inc/data.php:874
 msgid "Centered"
-msgstr ""
+msgstr "Centré"
 
-#: ../inc/data.php:812
+#: inc/data.php:875
 msgid "Is button centered on the page"
-msgstr ""
+msgstr "Bouton est centré sur la page"
 
-#: ../inc/data.php:817
+#: inc/data.php:880
 msgid "Fluid"
 msgstr "Fluide"
 
-#: ../inc/data.php:818
+#: inc/data.php:881
 msgid "Is button fluid"
-msgstr ""
+msgstr "Bouton fluide "
 
-#: ../inc/data.php:827
+#: inc/data.php:890
 msgid "Fluid Position"
-msgstr ""
+msgstr "Position Fluide"
 
-#: ../inc/data.php:828
+#: inc/data.php:891
 msgid "Button fluid position"
-msgstr ""
+msgstr "Position fluide de bouton"
 
-#: ../inc/data.php:840 ../inc/data.php:1851
+#: inc/data.php:903 inc/data.php:1920
 msgid "Top"
 msgstr "Haut"
 
-#: ../inc/data.php:842 ../inc/data.php:1853
+#: inc/data.php:905 inc/data.php:1922
 msgid "Bottom"
 msgstr "Bas"
 
-#: ../inc/data.php:845
+#: inc/data.php:908
 msgid "Icon Position"
-msgstr ""
+msgstr "Position de l'icône "
 
-#: ../inc/data.php:846
+#: inc/data.php:909
 msgid "Button icon position"
-msgstr ""
+msgstr "Position de l'icône du bouton"
 
-#: ../inc/data.php:850
-#, fuzzy
+#: inc/data.php:913
 msgid "Description"
-msgstr "Description du service"
+msgstr "Description"
 
-#: ../inc/data.php:851
+#: inc/data.php:914
 msgid "Small description under button text."
-msgstr ""
+msgstr "Petite description sous le texte du bouton."
 
-#: ../inc/data.php:857
+#: inc/data.php:920
 msgid "Background"
-msgstr "Arrière plan"
+msgstr "Arrière-plan"
 
-#: ../inc/data.php:858
+#: inc/data.php:921
 msgid "Button background color"
-msgstr "Couleur de l'arrière plan du bouton"
+msgstr "Couleur d'arrière-plan du bouton"
 
-#: ../inc/data.php:865
+#: inc/data.php:928
 msgid "Button text color"
 msgstr "Couleur du texte du bouton"
 
-#: ../inc/data.php:873
+#: inc/data.php:936
 msgid "Min width"
-msgstr ""
+msgstr "Largeur minimale"
 
-#: ../inc/data.php:874
+#: inc/data.php:937
 msgid "Button minimal width"
-msgstr ""
+msgstr "Largeur minimale de bouton"
 
-#: ../inc/data.php:879
+#: inc/data.php:942
 msgid "Same tab"
-msgstr "Tab similaire"
+msgstr "Même onglet"
 
-#: ../inc/data.php:880
+#: inc/data.php:943
 msgid "New tab"
-msgstr "Nouvelle tab"
+msgstr "Nouvel onglet"
 
-#: ../inc/data.php:883
+#: inc/data.php:946
 msgid "Target"
 msgstr "Cible"
 
-#: ../inc/data.php:884
+#: inc/data.php:947
 msgid "Button link target"
-msgstr "Cible du lien du bouton"
+msgstr "Cible du lien de bouton"
 
-#: ../inc/data.php:888
+#: inc/data.php:951
 msgid "Rel attribute"
-msgstr ""
+msgstr "Attribut rel"
 
-#: ../inc/data.php:889
+#: inc/data.php:952
 msgid "Here you can add value for the rel attribute."
-msgstr ""
+msgstr "Ici vous pouvez ajouter la valeur pour l'attribut rel."
 
-#: ../inc/data.php:896
+#: inc/data.php:959
 msgid "Fade"
-msgstr ""
+msgstr "Fade"
 
-#: ../inc/data.php:900
+#: inc/data.php:963
 msgid "Hover animation"
-msgstr ""
+msgstr "Animation de hover"
 
-#: ../inc/data.php:901
+#: inc/data.php:964
 msgid "Button hover aniamtion type"
-msgstr ""
+msgstr "Type d'animation de hover"
 
-#: ../inc/data.php:909
+#: inc/data.php:972
 msgid "Styled button"
 msgstr "Bouton stylisé"
 
-#: ../inc/data.php:915 ../inc/data.php:932
+#: inc/data.php:978 inc/data.php:995
 msgid "List"
 msgstr "Liste"
 
-#: ../inc/data.php:931
+#: inc/data.php:994
 msgid "List Item"
-msgstr ""
+msgstr "Élément de liste"
 
-#: ../inc/data.php:939
+#: inc/data.php:1002
 msgid "Swiper carousel"
-msgstr ""
+msgstr "Swiper carousel"
 
-#: ../inc/data.php:942
+#: inc/data.php:1005
 msgid "Customizable post carousel"
-msgstr ""
+msgstr "Customizable post carousel"
 
-#: ../inc/data.php:951 ../inc/data.php:1258
+#: inc/data.php:1014 inc/data.php:1321
 msgid "Posts per page"
-msgstr "Nombre d'articles par page"
+msgstr "Articles par page"
 
-#: ../inc/data.php:952 ../inc/data.php:1259
+#: inc/data.php:1015 inc/data.php:1322
 msgid ""
 "Specify number of posts that you want to show. Enter -1 to get all posts"
 msgstr ""
-"Spécifier le nombres d'articles que vous souhaitez montrer. Mettez -1 pour "
-"tous les voir."
+"Précisez le nombre d'articles à afficher. Saisissez -1 pour obtenir tous les "
+"articles"
 
-#: ../inc/data.php:959 ../inc/data.php:1266
+#: inc/data.php:1022 inc/data.php:1329
 msgid "Post types"
-msgstr "Types d'article"
+msgstr "Types d'articles"
 
-#: ../inc/data.php:960 ../inc/data.php:1267
+#: inc/data.php:1023 inc/data.php:1330
 msgid "Select post types. Hold Ctrl key to select multiple post types"
 msgstr ""
-"Sélectionner les types d'article. Maintenez la touche Ctrl pour sélectionnez "
-"de multiples types d'article"
+"Sélectionnez les types d'articles. Maintenez la touche Ctrl pour "
+"sélectionner plusieurs types d'articles."
 
-#: ../inc/data.php:966 ../inc/data.php:1273 ../inc/generator-views.php:136
+#: inc/data.php:1029 inc/data.php:1336 inc/generator-views.php:137
 msgid "Taxonomy"
-msgstr "Taxonomies"
+msgstr "Taxonomie"
 
-#: ../inc/data.php:967 ../inc/data.php:1274
+#: inc/data.php:1030 inc/data.php:1337
 msgid "Select taxonomy to show posts from"
-msgstr "Sélectionnez la taxonomie de provenance des messages"
+msgstr "Sélectionnez la taxonomie d'articles à afficher"
 
-#: ../inc/data.php:974 ../inc/data.php:1281
+#: inc/data.php:1037 inc/data.php:1344
 msgid "Terms"
 msgstr "Termes"
 
-#: ../inc/data.php:975 ../inc/data.php:1282
+#: inc/data.php:1038 inc/data.php:1345
 msgid "Select terms to show posts from"
-msgstr "Selectionnez les termes de provenance des articles"
+msgstr "Sélectionnez les termes à afficher les articles"
 
-#: ../inc/data.php:981 ../inc/data.php:1288
+#: inc/data.php:1044 inc/data.php:1351
 msgid "Taxonomy term operator"
-msgstr "Opérateur des termes de la taxonomie"
+msgstr "Opérateur des termes de taxonomie"
 
-#: ../inc/data.php:982 ../inc/data.php:1289
+#: inc/data.php:1045 inc/data.php:1352
 msgid ""
 "IN - posts that have any of selected categories terms<br/>NOT IN - posts "
 "that  do not have any of selected terms<br/>AND - posts that have all "
 "selected terms"
 msgstr ""
+"IN - les articles qui respectent n'importe quel terme sélectionné<br/>NOT IN "
+"- les articles qui ne respectent aucun terme sélectionné<br/>AND - les "
+"articles qui respectent tous les termes sélectionnés"
 
-#: ../inc/data.php:986 ../inc/data.php:1293
+#: inc/data.php:1049 inc/data.php:1356
 msgid "Authors"
 msgstr "Auteurs"
 
-#: ../inc/data.php:987 ../inc/data.php:1294
+#: inc/data.php:1050 inc/data.php:1357
 msgid "Enter here comma-separated list of author's IDs. Example: 1,7,18"
 msgstr ""
+"Saisissez la liste d'ID's des auteurs en les séparant par des virgules. "
+"Exemple: 1,7,18"
 
-#: ../inc/data.php:996 ../inc/data.php:1303
+#: inc/data.php:1059 inc/data.php:1366
 msgid "Specify offset to start posts loop not from first post"
-msgstr "Spécifier le décalage de départs de la boucle des articles"
+msgstr ""
+"Indiquez le décalage pour ne pas commencer la boucle d'article par l'article "
+"premier"
 
-#: ../inc/data.php:1001 ../inc/data.php:1308
+#: inc/data.php:1064 inc/data.php:1371
 msgid "Descending"
 msgstr "Descendant"
 
-#: ../inc/data.php:1002 ../inc/data.php:1309
+#: inc/data.php:1065 inc/data.php:1372
 msgid "Ascending"
-msgstr "Ascendant"
+msgstr "Ascendant "
 
-#: ../inc/data.php:1005 ../inc/data.php:1312
+#: inc/data.php:1068 inc/data.php:1375
 msgid "Order"
 msgstr "Ordre"
 
-#: ../inc/data.php:1006 ../inc/data.php:1313
+#: inc/data.php:1069 inc/data.php:1376
 msgid "Posts order"
 msgstr "Ordre des articles"
 
-#: ../inc/data.php:1012 ../inc/data.php:1319
+#: inc/data.php:1075 inc/data.php:1382
 msgid "Post ID"
 msgstr "ID de l'article"
 
-#: ../inc/data.php:1013 ../inc/data.php:1320
+#: inc/data.php:1076 inc/data.php:1383
 msgid "Post author"
 msgstr "Auteur de l'article"
 
-#: ../inc/data.php:1014 ../inc/data.php:1321
+#: inc/data.php:1077 inc/data.php:1384
 msgid "Post title"
 msgstr "Titre de l'article"
 
-#: ../inc/data.php:1015 ../inc/data.php:1322
+#: inc/data.php:1078 inc/data.php:1385
 msgid "Post slug"
-msgstr "Slug de l'article"
+msgstr "Identifiant de l'article"
 
-#: ../inc/data.php:1016 ../inc/data.php:1323
+#: inc/data.php:1079 inc/data.php:1386
 msgid "Date"
 msgstr "Date"
 
-#: ../inc/data.php:1017 ../inc/data.php:1324
+#: inc/data.php:1080 inc/data.php:1387
 msgid "Last modified date"
-msgstr "Date de dernière modification"
+msgstr "Dernière date de modification"
 
-#: ../inc/data.php:1018 ../inc/data.php:1029 ../inc/data.php:1325
-#: ../inc/data.php:1336
+#: inc/data.php:1081 inc/data.php:1092 inc/data.php:1388 inc/data.php:1399
 msgid "Post parent"
 msgstr "Article parent"
 
-#: ../inc/data.php:1019 ../inc/data.php:1326
+#: inc/data.php:1082 inc/data.php:1389
 msgid "Random"
 msgstr "Aléatoire"
 
-#: ../inc/data.php:1020 ../inc/data.php:1327
+#: inc/data.php:1083 inc/data.php:1390
 msgid "Comments number"
 msgstr "Nombre de commentaires"
 
-#: ../inc/data.php:1021 ../inc/data.php:1328
+#: inc/data.php:1084 inc/data.php:1391
 msgid "Menu order"
 msgstr "Ordre du menu"
 
-#: ../inc/data.php:1024 ../inc/data.php:1331
+#: inc/data.php:1087 inc/data.php:1394
 msgid "Order by"
 msgstr "Trier par"
 
-#: ../inc/data.php:1025 ../inc/data.php:1332
+#: inc/data.php:1088 inc/data.php:1395
 msgid "Order posts by"
-msgstr "Trier les articles par"
+msgstr "Trier des articles par"
 
-#: ../inc/data.php:1030 ../inc/data.php:1337
+#: inc/data.php:1093 inc/data.php:1400
 msgid "Show children of entered post (enter post ID)"
-msgstr ""
+msgstr "Afficher les articles fils de l'article choisi (entrez ID d'article)"
 
-#: ../inc/data.php:1035 ../inc/data.php:1342
+#: inc/data.php:1098 inc/data.php:1405
 msgid "Published"
-msgstr "Publier"
+msgstr "Publié"
 
-#: ../inc/data.php:1036 ../inc/data.php:1343
+#: inc/data.php:1099 inc/data.php:1406
 msgid "Pending"
-msgstr "En attente"
+msgstr "En attendant"
 
-#: ../inc/data.php:1037 ../inc/data.php:1344
+#: inc/data.php:1100 inc/data.php:1407
 msgid "Draft"
 msgstr "Brouillon"
 
-#: ../inc/data.php:1038 ../inc/data.php:1345
+#: inc/data.php:1101 inc/data.php:1408
 msgid "Auto-draft"
-msgstr "Auto-brouillon"
+msgstr "Sauvegarde automatique en brouillon"
 
-#: ../inc/data.php:1039 ../inc/data.php:1346
+#: inc/data.php:1102 inc/data.php:1409
 msgid "Future post"
-msgstr "Article future"
+msgstr "Article différé"
 
-#: ../inc/data.php:1040 ../inc/data.php:1347
+#: inc/data.php:1103 inc/data.php:1410
 msgid "Private post"
 msgstr "Article privé"
 
-#: ../inc/data.php:1041 ../inc/data.php:1348
+#: inc/data.php:1104 inc/data.php:1411
 msgid "Inherit"
-msgstr "Hérité"
+msgstr "Hériter"
 
-#: ../inc/data.php:1042 ../inc/data.php:1349
+#: inc/data.php:1105 inc/data.php:1412
 msgid "Trashed"
-msgstr "Corbeille"
+msgstr "Supprimé"
 
-#: ../inc/data.php:1043 ../inc/data.php:1350
+#: inc/data.php:1106 inc/data.php:1413
 msgid "Any"
-msgstr "Tout"
+msgstr "N'importe quel"
 
-#: ../inc/data.php:1046 ../inc/data.php:1353
+#: inc/data.php:1109 inc/data.php:1416
 msgid "Post status"
-msgstr "Statut de l'article"
+msgstr "Statut d'article"
 
-#: ../inc/data.php:1047 ../inc/data.php:1354
+#: inc/data.php:1110 inc/data.php:1417
 msgid "Show only posts with selected status"
-msgstr "Montrer uniquement les articles possédant ce statut"
+msgstr "Afficher seulement les articles ayant le statut sélectionné"
 
-#: ../inc/data.php:1052 ../inc/data.php:1359
+#: inc/data.php:1115 inc/data.php:1422
 msgid "Ignore sticky"
-msgstr "Ignore sticky"
+msgstr "Ignorer collant"
 
-#: ../inc/data.php:1053 ../inc/data.php:1360
+#: inc/data.php:1116 inc/data.php:1423
 msgid "Select Yes to ignore posts that are sticked"
-msgstr ""
+msgstr "Sélectionnez Oui pour ignorer les articles collés"
 
-#: ../inc/data.php:1058 ../inc/data.php:1365
+#: inc/data.php:1121 inc/data.php:1428
 msgid "Linked title"
-msgstr ""
+msgstr "Titre-lien"
 
-#: ../inc/data.php:1059 ../inc/data.php:1366
+#: inc/data.php:1122 inc/data.php:1429
 msgid "Linked title description"
-msgstr ""
+msgstr "Description de titre-lien"
 
-#: ../inc/data.php:1064 ../inc/data.php:1371
+#: inc/data.php:1127 inc/data.php:1434
 msgid "Linked featured image"
-msgstr ""
+msgstr "Image à la Une avec le lien"
 
-#: ../inc/data.php:1065 ../inc/data.php:1372
+#: inc/data.php:1128 inc/data.php:1435
 msgid "Linked featured image description"
-msgstr ""
+msgstr "Description de l'Image à la Une avec le lien"
 
-#: ../inc/data.php:1070 ../inc/data.php:1390
+#: inc/data.php:1133 inc/data.php:1453
 msgid "Part of content"
-msgstr ""
+msgstr "Partie du contenu"
 
-#: ../inc/data.php:1071 ../inc/data.php:1391
+#: inc/data.php:1134 inc/data.php:1454
 msgid "Full content"
-msgstr ""
+msgstr "Contenu complet"
 
-#: ../inc/data.php:1074 ../inc/data.php:1394
+#: inc/data.php:1137 inc/data.php:1457
 msgid "Post content"
+msgstr "Contenu de l'article"
+
+#: inc/data.php:1138 inc/data.php:1458
+msgid "Choose to display a part or full content "
 msgstr ""
 
-#: ../inc/data.php:1075 ../inc/data.php:1395
-msgid "Choose to display a part or d content"
-msgstr ""
-
-#: ../inc/data.php:1083 ../inc/data.php:1403
+#: inc/data.php:1146 inc/data.php:1466
 msgid "Content Length"
-msgstr ""
+msgstr "Longueur du Contenu:"
 
-#: ../inc/data.php:1084 ../inc/data.php:1404
+#: inc/data.php:1147 inc/data.php:1467
 msgid "Insert the number of words you want to show in the post content."
 msgstr ""
+"Insérez le nombre de mots que vous voulez afficher dans le contenu "
+"d'articles."
 
-#: ../inc/data.php:1087 ../inc/data.php:1407 ../inc/shortcodes.php:664
-#: ../inc/shortcodes.php:1070
+#: inc/data.php:1150 inc/data.php:1470 inc/shortcodes.php:704
+#: inc/shortcodes.php:1117
 msgid "read more"
-msgstr ""
+msgstr "lire la suite"
 
-#: ../inc/data.php:1089 ../inc/data.php:1409
+#: inc/data.php:1152 inc/data.php:1472
 msgid "Button text description"
-msgstr ""
+msgstr "Description de texte du bouton"
 
-#: ../inc/data.php:1108
+#: inc/data.php:1171
 msgid "Using cropped image"
-msgstr ""
+msgstr "Utiliser une image recadrée"
 
-#: ../inc/data.php:1109 ../inc/data.php:1178
+#: inc/data.php:1172 inc/data.php:1241
 msgid "Slider Loop Mode"
-msgstr ""
+msgstr "Mode de boucle de diaporama"
 
-#: ../inc/data.php:1117
+#: inc/data.php:1180
 msgid "Cropping image width"
-msgstr ""
+msgstr "Largeur de l'image recadrée"
 
-#: ../inc/data.php:1118
+#: inc/data.php:1181
 msgid "Width value(px)"
-msgstr ""
+msgstr "Valeur de largeur(px)"
 
-#: ../inc/data.php:1126
+#: inc/data.php:1189
 msgid "Cropping image height"
-msgstr ""
+msgstr "Hauteur de l'image recadrée"
 
-#: ../inc/data.php:1127
+#: inc/data.php:1190
 msgid "Height value(px)"
-msgstr ""
+msgstr "Valeur d'hauteur(px)"
 
-#: ../inc/data.php:1135
+#: inc/data.php:1198
 msgid "Number of slides per view"
-msgstr ""
+msgstr "Nombre de diapositives à afficher"
 
-#: ../inc/data.php:1136
+#: inc/data.php:1199
 msgid "Specify number of slides per view"
-msgstr ""
+msgstr "Spécifier le nombre de diapositives à afficher"
 
-#: ../inc/data.php:1144
+#: inc/data.php:1207
 msgid "Number slides per group"
-msgstr ""
+msgstr "Nombre de diapositives dans un groupe"
 
-#: ../inc/data.php:1145
+#: inc/data.php:1208
 msgid ""
 "Set numbers of slides to define and enable group sliding. Useful to use with "
 "slidesPerView > 1"
 msgstr ""
+"Set numbers of slides to define and enable group sliding. Useful to use with "
+"slidesPerView > 1"
 
-#: ../inc/data.php:1153 ../inc/data.php:1154
+#: inc/data.php:1216 inc/data.php:1217
 msgid "Multi Row Slides Layout"
-msgstr ""
+msgstr "Multi Row Slides Layout"
 
-#: ../inc/data.php:1162
+#: inc/data.php:1225
 msgid "Space Between Slides"
-msgstr ""
+msgstr "Espace entre les diapositives"
 
-#: ../inc/data.php:1163
+#: inc/data.php:1226
 msgid "Width of the space between slides(px)"
-msgstr ""
+msgstr "Largeur de l'espace entre les diapositives (px)"
 
-#: ../inc/data.php:1171
+#: inc/data.php:1234
 msgid "Duration of transition"
-msgstr ""
+msgstr "Durée de transition"
 
-#: ../inc/data.php:1172
+#: inc/data.php:1235
 msgid "Duration of transition between slides (ms)"
-msgstr ""
+msgstr "Durée de la transition entre les diapositives (ms)"
 
-#: ../inc/data.php:1177
+#: inc/data.php:1240
 msgid "Slider Infinite Loop"
-msgstr ""
+msgstr "Boucle infini de diaporama"
 
-#: ../inc/data.php:1183
+#: inc/data.php:1246
 msgid "Free Mode sliding"
-msgstr ""
+msgstr "Free Mode sliding"
 
-#: ../inc/data.php:1184
+#: inc/data.php:1247
 msgid "No fixed positions for slides"
-msgstr ""
+msgstr "Positions non fixées pour les diapositives"
 
-#: ../inc/data.php:1189
+#: inc/data.php:1252
 msgid "Grab Cursor"
-msgstr ""
+msgstr "Grab Cursor"
 
-#: ../inc/data.php:1190
+#: inc/data.php:1253
 msgid "Using Grab Cursor for slider"
-msgstr ""
+msgstr "Using Grab Cursor for slider"
 
-#: ../inc/data.php:1195
+#: inc/data.php:1258
 msgid "Mousewheel Control"
-msgstr ""
+msgstr "Mousewheel Control"
 
-#: ../inc/data.php:1196
+#: inc/data.php:1259
 msgid "Mousewheel control mode"
-msgstr ""
+msgstr "Mousewheel control mode"
 
-#: ../inc/data.php:1201
+#: inc/data.php:1264
 msgid "Centered Slides"
-msgstr ""
+msgstr "Diapositives centrées"
 
-#: ../inc/data.php:1202
+#: inc/data.php:1265
 msgid "Centered slides mode"
-msgstr ""
+msgstr "Mode de diapositives centrées"
 
-#: ../inc/data.php:1207
+#: inc/data.php:1270
 msgid "Slide"
-msgstr ""
+msgstr "Slide"
 
-#: ../inc/data.php:1209
+#: inc/data.php:1272
 msgid "Cube"
-msgstr ""
+msgstr "Cube"
 
-#: ../inc/data.php:1210
+#: inc/data.php:1273
 msgid "Coverflow"
-msgstr ""
+msgstr "Coverflow"
 
-#: ../inc/data.php:1213
+#: inc/data.php:1276
 msgid "Effect Layout"
-msgstr ""
+msgstr "Effet"
 
-#: ../inc/data.php:1214
+#: inc/data.php:1277
 msgid "Could be \"slide\", \"fade\", \"cube\" or \"coverflow\" effect"
 msgstr ""
+"Il est possible d'utiliser les effets \"slide\", \"fade\", \"cube\", "
+"\"coverflow\" "
 
-#: ../inc/data.php:1219
+#: inc/data.php:1282
 msgid "Slider pagination"
-msgstr ""
+msgstr "Pagination de diapositives"
 
-#: ../inc/data.php:1220
+#: inc/data.php:1283
 msgid "Displaying slider pagination"
-msgstr ""
+msgstr "Afficher la pagination de diapositives"
 
-#: ../inc/data.php:1225
+#: inc/data.php:1288
 msgid "Slider navigation"
-msgstr ""
+msgstr "Navigation de diapositives"
 
-#: ../inc/data.php:1226
+#: inc/data.php:1289
 msgid "Displaying slider navigation"
-msgstr ""
+msgstr "Afficher la navigation de diapositives"
 
-#: ../inc/data.php:1231
+#: inc/data.php:1294
 msgid "Inner"
-msgstr ""
+msgstr "À l'intérieur"
 
-#: ../inc/data.php:1232
+#: inc/data.php:1295
 msgid "Outer"
-msgstr ""
+msgstr "À l'extérieure"
 
-#: ../inc/data.php:1235
+#: inc/data.php:1298
 msgid "Slider navigation position"
-msgstr ""
+msgstr "Position de navigation de diapositives"
 
-#: ../inc/data.php:1236
+#: inc/data.php:1299
 msgid "Choose slider navigation position"
-msgstr ""
+msgstr "Choisir la position de navigation de diapositives"
 
-#: ../inc/data.php:1243
+#: inc/data.php:1306
 msgid "Posts"
 msgstr "Articles"
 
-#: ../inc/data.php:1249
+#: inc/data.php:1312
 msgid "Post ID's"
-msgstr "ID des articles"
+msgstr "ID's des articles"
 
-#: ../inc/data.php:1250
+#: inc/data.php:1313
 msgid "Enter comma separated ID's of the posts that you want to show"
-msgstr ""
-"Entrez les ID des articles (séparés par un ';') que vous souhaitez montrés"
+msgstr "Entrez ID's d'articles à afficher séparés par des virgules"
 
-#: ../inc/data.php:1377 ../inc/data.php:1378
+#: inc/data.php:1440 inc/data.php:1441
 msgid "Open featured image in a lightbox?"
-msgstr ""
+msgstr "Ouvrir une omage à la une dans lightbox?"
 
-#: ../inc/data.php:1384
+#: inc/data.php:1447
 msgid "Featured image size"
-msgstr ""
+msgstr "Taille de l'Image à la Une"
 
-#: ../inc/data.php:1385
+#: inc/data.php:1448
 msgid "Select size for a Featured image"
-msgstr ""
+msgstr "Choisir la taille pour l'Image à la Une"
 
-#: ../inc/data.php:1414
+#: inc/data.php:1482
 msgid "Column class"
-msgstr ""
+msgstr "Classe de colonne"
 
-#: ../inc/data.php:1415
+#: inc/data.php:1483
 msgid "Column class for each item."
-msgstr ""
+msgstr "Classe de colonne pour chaque element."
 
-#: ../inc/data.php:1432
+#: inc/data.php:1500
 msgid "Custom posts query with customizable template"
 msgstr "Custom posts query with customizable template"
 
-#: ../inc/data.php:1438
+#: inc/data.php:1506
 msgid "Tabs"
-msgstr "Tabs"
+msgstr "Onglets"
 
-#: ../inc/data.php:1446 ../inc/data.php:1550
+#: inc/data.php:1514 inc/data.php:1618
 msgid "Simple"
 msgstr "Simple"
 
-#: ../inc/data.php:1450
+#: inc/data.php:1518
 msgid "Choose style for these tabs"
-msgstr ""
+msgstr "Choisissez le style de ces onglets"
 
-#: ../inc/data.php:1458
+#: inc/data.php:1526
 msgid "Active tab"
-msgstr ""
+msgstr "Onglet actif"
 
-#: ../inc/data.php:1459
+#: inc/data.php:1527
 msgid "Select which tab is open by default"
-msgstr ""
+msgstr "Sélectionnez l'onglet qui est ouvert par défaut"
 
-#: ../inc/data.php:1464
+#: inc/data.php:1532
 msgid "Vertical"
 msgstr "Vertical"
 
-#: ../inc/data.php:1465
+#: inc/data.php:1533
 msgid "Show tabs vertically"
-msgstr "Montrer les tabs verticalement"
+msgstr "Afficher les onglets verticalement"
 
-#: ../inc/data.php:1473
+#: inc/data.php:1541
 msgid ""
 "[%prefix_tab title=\"Title 1\"]Content 1[/%prefix_tab]\n"
 "[%prefix_tab title=\"Title 2\"]Content 2[/%prefix_tab]\n"
 "[%prefix_tab title=\"Title 3\"]Content 3[/%prefix_tab]"
 msgstr ""
+"[%prefix_tab title=\"Titre 1\"]Contenu 1[/%prefix_tab]\n"
+"[%prefix_tab title=\"Titre 2\"]Contenu 2[/%prefix_tab]\n"
+"[%prefix_tab title=\"Titre 3\"]Contenu 3[/%prefix_tab]"
 
-#: ../inc/data.php:1474
+#: inc/data.php:1542
 msgid "Tabs container"
-msgstr "Tabs container"
+msgstr "Conteneur des onglets"
 
-#: ../inc/data.php:1481
+#: inc/data.php:1549
 msgid "Tab"
-msgstr "Tab"
+msgstr "Onglet"
 
-#: ../inc/data.php:1486
+#: inc/data.php:1554
 msgid "Tab name"
-msgstr "Nom de la Tab"
+msgstr "Nom de l'onglet"
 
-#: ../inc/data.php:1488
+#: inc/data.php:1556
 msgid "Enter tab name"
-msgstr "Entrez le nom de la tab"
+msgstr "Entrez un nom de l'onglet"
 
-#: ../inc/data.php:1493
+#: inc/data.php:1561
 msgid "Disabled"
-msgstr ""
+msgstr "Désactivé"
 
-#: ../inc/data.php:1494
+#: inc/data.php:1562
 msgid "Is this tab disabled"
-msgstr ""
+msgstr "Cet onglet est désactivé"
 
-#: ../inc/data.php:1499
+#: inc/data.php:1567
 msgid ""
 "You can use unique anchor for this tab to access it with hash in page url. "
 "For example: type here <b%value>Hello</b> and then use url like http://"
 "example.com/page-url#Hello. This tab will be activated and scrolled in"
 msgstr ""
+"Pour fournir un accès immédiat à cet onglet à l'aide de  # dans URL de la "
+"page vous pouvez écrire, par exemple, <b%value>Hello</b> et utiliser le lien "
+"comme http://example.com/page-url#Hello. Page défile vers le bas et ouvre "
+"automatiquement cet onglet"
 
-#: ../inc/data.php:1503
+#: inc/data.php:1571
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
-#: ../inc/data.php:1504
+#: inc/data.php:1572
 msgid ""
 "You can link this tab to any webpage. Enter here d URL to switch this tab "
 "into link"
 msgstr ""
+"Pour cet onglet on peut indiquer le lien vers toute page web.  Saisissez ici "
+"d URL."
 
-#: ../inc/data.php:1509
+#: inc/data.php:1577
 msgid "Open link in the same window/tab"
-msgstr ""
+msgstr "Ouvrir le lien dans la même fenêtre/onglet"
 
-#: ../inc/data.php:1510
+#: inc/data.php:1578
 msgid "Open link in a new window/tab"
-msgstr ""
+msgstr "Ouvrir le lien dans une nouvelle fenêtre/onglet"
 
-#: ../inc/data.php:1513
+#: inc/data.php:1581
 msgid "Link target"
-msgstr ""
+msgstr "Cible du lien"
 
-#: ../inc/data.php:1514
+#: inc/data.php:1582
 msgid "Choose how to open the custom tab link"
-msgstr ""
+msgstr "Choisissez comment ouvrir le lien d'onglet personnalisé"
 
-#: ../inc/data.php:1522
+#: inc/data.php:1590
 msgid "Tab content"
-msgstr "Contenu de la Tab"
+msgstr "Contenu de l'onglet"
 
-#: ../inc/data.php:1523
+#: inc/data.php:1591
 msgid "Single tab"
-msgstr "Une seule tab"
+msgstr "Onglet simple"
 
-#: ../inc/data.php:1531
+#: inc/data.php:1599
 msgid "Spoiler"
 msgstr "Spoiler"
 
-#: ../inc/data.php:1536 ../inc/shortcodes.php:1475
+#: inc/data.php:1604 inc/shortcodes.php:1522
 msgid "Spoiler title"
-msgstr "Titre du spoiler"
+msgstr "Titre de spoiler"
 
-#: ../inc/data.php:1538
+#: inc/data.php:1606
 msgid "Text in spoiler title"
-msgstr "Texte du titre du spoiler"
+msgstr "Texte dans le titre de spoiler"
 
-#: ../inc/data.php:1543
+#: inc/data.php:1611
 msgid "Open"
-msgstr "Ouvert"
+msgstr "Ouvrir"
 
-#: ../inc/data.php:1544
+#: inc/data.php:1612
 msgid "Is spoiler content visible by default"
-msgstr "Le contenu de spoiler est visible par défaut"
+msgstr "Afficher le contenu de spoiler par défaut"
 
-#: ../inc/data.php:1554
+#: inc/data.php:1622
 msgid "Choose style for this spoiler"
-msgstr ""
+msgstr "Choisissez le style de ce spoiler"
 
-#: ../inc/data.php:1559
+#: inc/data.php:1627
 msgid ""
 "You can use unique anchor for this spoiler to access it with hash in page "
 "url. For example: type here <b%value>Hello</b> and then use url like http://"
 "example.com/page-url#Hello. This spoiler will be opened and scrolled in"
 msgstr ""
+"Pour fournir un accès à ce spoiler à l'aide de  # dans URL de la page vous "
+"pouvez écrire, par exemple, <b%value>Hello</b> et utiliser le lien comme "
+"http://example.com/page-url#Hello. Page défile vers le bas et ouvre "
+"automatiquement ce spoiler"
 
-#: ../inc/data.php:1567
+#: inc/data.php:1635
 msgid "Hidden content"
-msgstr "Contenu caché"
+msgstr "Contenu masqué"
 
-#: ../inc/data.php:1568
+#: inc/data.php:1636
 msgid "Spoiler with hidden content"
-msgstr "Spoiler avec contenu caché"
+msgstr "Spoiler avec le contenu masqué"
 
-#: ../inc/data.php:1576
+#: inc/data.php:1644
 msgid "Accordion"
 msgstr "Accordéon"
 
-#: ../inc/data.php:1586
+#: inc/data.php:1654
 msgid ""
 "[%prefix_spoiler title=\"Spoiler Title\"]Content[/%prefix_spoiler]\n"
 "[%prefix_spoiler title=\"Spoiler Title\"]Content[/%prefix_spoiler]\n"
 "[%prefix_spoiler title=\"Spoiler Title\"]Content[/%prefix_spoiler]"
 msgstr ""
+"[%prefix_spoiler title=\"Titre de Spoiler\"]Contenu[/%prefix_spoiler]\n"
+"[%prefix_spoiler title=\"Titre de Spoiler\"]Contenu[/%prefix_spoiler]\n"
+"[%prefix_spoiler title=\"Titre de Spoiler\"]Contenu[/%prefix_spoiler]"
 
-#: ../inc/data.php:1587
+#: inc/data.php:1655
 msgid "Accordion with spoilers"
 msgstr "Accordéon avec spoilers"
 
-#: ../inc/data.php:1595
+#: inc/data.php:1663
 msgid "Google map"
-msgstr ""
+msgstr "Carte Google"
 
-#: ../inc/data.php:1602
+#: inc/data.php:1670
 msgid "Address"
-msgstr ""
+msgstr "Adresse"
 
-#: ../inc/data.php:1603 ../inc/data.php:1658
+#: inc/data.php:1671 inc/data.php:1726
 msgid "The display options for the Pan control."
-msgstr ""
+msgstr "Les options d'affichage pour Pan control."
 
-#: ../inc/data.php:1611
+#: inc/data.php:1679
 msgid "Latitude  geographical coordinates"
-msgstr ""
+msgstr "Coordonnées géographiques de latitude"
 
-#: ../inc/data.php:1612
+#: inc/data.php:1680
 msgid ""
 "Latitude ranges between -90 and 90 degrees, inclusive. Values above or below "
 "this range will be clamped to the range [-90, 90]. This means that if the "
 "value specified is less than -90, it will be set to -90. And if the value is "
 "greater than 90, it will be set to 90."
 msgstr ""
+"La latitude varie entre -90 et 90 degrés, inclusivement. Les valeurs "
+"supérieures ou inférieures à cette gamme seront ramenées dans l'intervalle "
+"[-90, 90]. Cela signifie que si la valeur spécifiée est inférieure à -90, "
+"elle sera fixé à -90. Et si la valeur est supérieure à 90, elle sera fixée à "
+"90."
 
-#: ../inc/data.php:1620
+#: inc/data.php:1688
 msgid "Longitude geographical coordinates"
-msgstr ""
+msgstr "Les coordonnées géographiques de longitude"
 
-#: ../inc/data.php:1621
+#: inc/data.php:1689
 msgid ""
 "Longitude ranges between -180 and 180 degrees, inclusive. Values above or "
 "below this range will be wrapped so that they fall within the range. For "
@@ -1483,2031 +1537,799 @@ msgid ""
 "converted to -170. This reflects the fact that longitudes wrap around the "
 "globe."
 msgstr ""
+"Longitude varie entre -180 et 180 degrés inclus. Les valeurs supérieures ou "
+"inférieures à cette gamme seront changées de sorte qu'ils tombent dans la "
+"gamme. Par exemple, une valeur de -190 sera convertie en 170. Une valeur de "
+"190 sera converti en -170. "
 
-#: ../inc/data.php:1629
+#: inc/data.php:1697
 msgid "Map zoom level"
-msgstr ""
+msgstr "Niveau de zoom de carte"
 
-#: ../inc/data.php:1630
+#: inc/data.php:1698
 msgid "The initial Map zoom level. Required."
-msgstr ""
+msgstr "Le niveau de zoom de carte initial. Nécessaire."
 
-#: ../inc/data.php:1635
+#: inc/data.php:1703
 msgid "Scroll wheel"
-msgstr ""
+msgstr "Molette"
 
-#: ../inc/data.php:1636
+#: inc/data.php:1704
 msgid ""
 "If false, disables scrollwheel zooming on the map. The scrollwheel is "
 "enabled by default."
 msgstr ""
+"Si false, zoom de carte à l'aide de molette est désactivée. La molette de "
+"défilement est activée par défaut."
 
-#: ../inc/data.php:1642
+#: inc/data.php:1710
 msgid "Map Style"
-msgstr ""
+msgstr "Style de Carte"
 
-#: ../inc/data.php:1643
+#: inc/data.php:1711
 msgid ""
 "Styles to apply to each of the default map types. Note that for Satellite/"
 "Hybrid and Terrain modes, these styles will only apply to labels and "
 "geometry."
 msgstr ""
+"Styles à appliquer à chacun des types de carte par défaut. Notez que pour "
+"les modes Satellite/Hybrid/Terrain ces styles s'appliquera seulement aux "
+"labels et aux éléments géométriques."
 
-#: ../inc/data.php:1651
+#: inc/data.php:1719
 msgid "Map height"
-msgstr "Hauteur de la carte"
+msgstr "Hauteur de carte"
 
-#: ../inc/data.php:1652
+#: inc/data.php:1720
 msgid "Map height value(px)"
-msgstr ""
+msgstr "Valeur de la hauteur de la carte(px)"
 
-#: ../inc/data.php:1657
+#: inc/data.php:1725
 msgid "Pan control"
-msgstr ""
+msgstr "Pan control"
 
-#: ../inc/data.php:1663
+#: inc/data.php:1731
 msgid "Zoom control"
-msgstr ""
+msgstr "Contrôle du zoom"
 
-#: ../inc/data.php:1664
+#: inc/data.php:1732
 msgid "The enabled/disabled state of the Zoom control."
-msgstr ""
+msgstr "Activer/désactiver contrôle du Zoom."
 
-#: ../inc/data.php:1669
+#: inc/data.php:1737
 msgid "Draggable map"
-msgstr ""
+msgstr "Carte qu'on peut faire glisser"
 
-#: ../inc/data.php:1670
+#: inc/data.php:1738
 msgid ""
 "If false, prevents the map from being dragged. Dragging is enabled by "
 "default."
 msgstr ""
+"Activé par défaut. Si false, il est impossible de faire glisser la carte."
 
-#: ../inc/data.php:1675
+#: inc/data.php:1744
 msgid "Marker source"
+msgstr "Image de marqueur"
+
+#: inc/data.php:1745
+msgid "Select marker id attachment"
 msgstr ""
 
-#: ../inc/data.php:1676
-msgid "Upload marker source"
-msgstr ""
-
-#: ../inc/data.php:1679
+#: inc/data.php:1748
 msgid "Google Map"
-msgstr ""
+msgstr "Carte Google"
 
-#: ../inc/data.php:1685 ../inc/data.php:1692
+#: inc/data.php:1754 inc/data.php:1761
 msgid "Parallax image"
-msgstr ""
+msgstr "Image parallaxe"
 
-#: ../inc/data.php:1693
+#: inc/data.php:1762
 msgid "Upload parallax image url source"
-msgstr ""
+msgstr "Chargez source d'URL de l'image de parallaxe"
 
-#: ../inc/data.php:1701 ../inc/data.php:1767
+#: inc/data.php:1770 inc/data.php:1836
 msgid "Parallax speed"
-msgstr ""
+msgstr "Vitesse de parallaxe"
 
-#: ../inc/data.php:1702 ../inc/data.php:1768
+#: inc/data.php:1771 inc/data.php:1837
 msgid "Parallax speed value (s)"
-msgstr ""
+msgstr "Vitesse de parallaxe (s)"
 
-#: ../inc/data.php:1707 ../inc/data.php:1773
+#: inc/data.php:1776 inc/data.php:1842
 msgid "Parallax invert"
-msgstr ""
+msgstr "Inverser parallaxe"
 
-#: ../inc/data.php:1708 ../inc/data.php:1774
+#: inc/data.php:1777 inc/data.php:1843
 msgid "Parallax invert direction move"
-msgstr ""
+msgstr "Indiquer la direction dans laquelle inverser parallaxe"
 
-#: ../inc/data.php:1716
+#: inc/data.php:1785
 msgid "Parallax container min-height"
-msgstr ""
+msgstr "Hauteur minimale de conteneur de parallaxe"
 
-#: ../inc/data.php:1717
+#: inc/data.php:1786
 msgid "container min-height value (px)"
-msgstr ""
+msgstr "Valeur de la hauteur minimale de conteneur de parallaxe (px)"
 
-#: ../inc/data.php:1722 ../inc/data.php:1779 ../inc/data.php:1833
-#: ../inc/data.php:1960 ../inc/data.php:2027
-msgid "Custom class"
-msgstr ""
-
-#: ../inc/data.php:1723 ../inc/data.php:1780 ../inc/data.php:1834
+#: inc/data.php:1792 inc/data.php:1849 inc/data.php:1903
 msgid "Enter custom class"
-msgstr ""
+msgstr "Entrez classe CSS personalisée"
 
-#: ../inc/data.php:1727 ../inc/data.php:1784
+#: inc/data.php:1796 inc/data.php:1853
 msgid "Parallax block"
-msgstr ""
+msgstr "Bloc de parallaxe"
 
-#: ../inc/data.php:1733
+#: inc/data.php:1802
 msgid "Parallax html video"
-msgstr ""
+msgstr "Parallax html video"
 
-#: ../inc/data.php:1740
+#: inc/data.php:1809 inc/data.php:2053
 msgid "Poster"
 msgstr "Poster"
 
-#: ../inc/data.php:1741
+#: inc/data.php:1810
 msgid "Poster image url"
-msgstr ""
+msgstr "URL de l'image de poster"
 
-#: ../inc/data.php:1746
+#: inc/data.php:1815
 msgid "mp4 file"
-msgstr ""
+msgstr "fichier mp4"
 
-#: ../inc/data.php:1747
+#: inc/data.php:1816
 msgid "URL to mp4 video-file"
-msgstr ""
+msgstr "URL de fichier vidéo mp4"
 
-#: ../inc/data.php:1752
+#: inc/data.php:1821
 msgid "webm file"
-msgstr ""
+msgstr "fichier webm"
 
-#: ../inc/data.php:1753
+#: inc/data.php:1822
 msgid "URL to webm video-file"
-msgstr ""
+msgstr "URL de fichier webm"
 
-#: ../inc/data.php:1758
+#: inc/data.php:1827
 msgid "ogv file"
-msgstr ""
+msgstr "fichier ogv"
 
-#: ../inc/data.php:1759
+#: inc/data.php:1828
 msgid "URL to ogv video-file"
-msgstr ""
+msgstr "URL de fichier ogv"
 
-#: ../inc/data.php:1790 ../inc/data.php:1837
+#: inc/data.php:1859 inc/data.php:1906
 msgid "Counter"
-msgstr ""
+msgstr "Compteur"
 
-#: ../inc/data.php:1797
+#: inc/data.php:1866
 msgid "Value"
-msgstr ""
+msgstr "Valeur"
 
-#: ../inc/data.php:1798
+#: inc/data.php:1867
 msgid "Value for counter"
-msgstr ""
+msgstr "Valeur pour le compteur"
 
-#: ../inc/data.php:1806
+#: inc/data.php:1875
 msgid "Counter delay"
-msgstr ""
+msgstr "Retard de compteur"
 
-#: ../inc/data.php:1807
+#: inc/data.php:1876
 msgid "Counter delay (ms)"
-msgstr ""
+msgstr "Retard de compteur (ms)"
 
-#: ../inc/data.php:1815
+#: inc/data.php:1884
 msgid "Speed time"
-msgstr ""
+msgstr "Temps de Vitesse"
 
-#: ../inc/data.php:1816
+#: inc/data.php:1885
 msgid "Speed time (ms)"
-msgstr ""
+msgstr "Temps de Vitesse (ms)"
 
-#: ../inc/data.php:1821
+#: inc/data.php:1890
 msgid "Before content"
-msgstr ""
+msgstr "Contenu avant"
 
-#: ../inc/data.php:1822
+#: inc/data.php:1891
 msgid "Enter before custom content"
-msgstr ""
+msgstr "Entrer le contenu personnalisé qui s'affichera avant"
 
-#: ../inc/data.php:1827
+#: inc/data.php:1896
 msgid "After content"
-msgstr ""
+msgstr "Contenu après"
 
-#: ../inc/data.php:1828
+#: inc/data.php:1897
 msgid "Enter after custom content"
-msgstr ""
+msgstr "Entrer le contenu personnalisé qui s'affichera après"
 
-#: ../inc/data.php:1843
+#: inc/data.php:1912
 msgid "Lazy Load Effect"
-msgstr ""
+msgstr "Effet Lazy Load"
 
-#: ../inc/data.php:1850
+#: inc/data.php:1919
 msgid "Not changed"
-msgstr ""
+msgstr "Pas changé"
 
-#: ../inc/data.php:1857
+#: inc/data.php:1926
 msgid "Start Position"
-msgstr ""
+msgstr "Position de départ"
 
-#: ../inc/data.php:1858
+#: inc/data.php:1927
 msgid "Element position at the animation start."
-msgstr ""
+msgstr "La position d'élément au début de l'animation."
 
-#: ../inc/data.php:1866
+#: inc/data.php:1935
 msgid "Out rotation"
-msgstr ""
+msgstr "Rotation externe"
 
-#: ../inc/data.php:1867
+#: inc/data.php:1936
 msgid "Initial element angle (min - -360&#176; max 360&#176;)"
 msgstr ""
+"Angle initial de rotation de l'élément (min - -360&#176; max 360&#176;)"
 
-#: ../inc/data.php:1875
+#: inc/data.php:1944
 msgid "Flip X"
-msgstr ""
+msgstr "Flip X"
 
-#: ../inc/data.php:1876
+#: inc/data.php:1945
 msgid ""
 "Initial element angle Flip X (X-axis rotation min - -360&#176; max 360&#176;)"
 msgstr ""
+"Initial element angle Flip X (X-axis rotation min - -360&#176; max 360&#176;)"
 
-#: ../inc/data.php:1884
+#: inc/data.php:1953
 msgid "Flip Y"
-msgstr ""
+msgstr "Flip Y"
 
-#: ../inc/data.php:1885
+#: inc/data.php:1954
 msgid ""
 "Initial element angle Flip Y (Y-axis rotation min - -360&#176; max 360&#176;)"
 msgstr ""
+"Initial element angle Flip Y (Y-axis rotation min - -360&#176; max 360&#176;)"
 
-#: ../inc/data.php:1897
+#: inc/data.php:1966
 msgid "Pivot"
-msgstr ""
+msgstr "Point de rotation"
 
-#: ../inc/data.php:1898
+#: inc/data.php:1967
 msgid "Element rotation point."
-msgstr ""
+msgstr "Point de rotation de l'élément."
 
-#: ../inc/data.php:1906
+#: inc/data.php:1975
 msgid "Scale"
-msgstr ""
+msgstr "Mise en échelle"
 
-#: ../inc/data.php:1907
+#: inc/data.php:1976
 msgid "Element scale value (min - 0; max 10;)"
-msgstr ""
+msgstr "Valeur de mise en échelle de l'élément (min - 0; max 10;)"
 
-#: ../inc/data.php:1915
+#: inc/data.php:1984
 msgid "Opacity"
-msgstr ""
+msgstr "Opacité"
 
-#: ../inc/data.php:1916
+#: inc/data.php:1985
 msgid "Element opacity value (min - 0; max 1;)"
-msgstr ""
+msgstr "Valeur de l'opacité de l'élément (min - 0; max 10;)"
 
-#: ../inc/data.php:1921
+#: inc/data.php:1990
 msgid "Ease None"
-msgstr ""
+msgstr "Ease None"
 
-#: ../inc/data.php:1922
+#: inc/data.php:1991
 msgid "Ease In Cubic"
-msgstr ""
+msgstr "Ease In Cubic"
 
-#: ../inc/data.php:1923
+#: inc/data.php:1992
 msgid "Ease Out Cubic"
-msgstr ""
+msgstr "Ease Out Cubic"
 
-#: ../inc/data.php:1924
+#: inc/data.php:1993
 msgid "Ease In Out Cubic"
-msgstr ""
+msgstr "Ease In Out Cubic"
 
-#: ../inc/data.php:1925
+#: inc/data.php:1994
 msgid "Ease In Quart"
-msgstr ""
+msgstr "Ease In Quart"
 
-#: ../inc/data.php:1926
+#: inc/data.php:1995
 msgid "Ease Out Quart"
-msgstr ""
+msgstr "Ease Out Quart"
 
-#: ../inc/data.php:1927
+#: inc/data.php:1996
 msgid "Ease In Out Quart"
-msgstr ""
+msgstr "Ease In Out Quart"
 
-#: ../inc/data.php:1928
+#: inc/data.php:1997
 msgid "Ease In Expo"
-msgstr ""
+msgstr "Ease In Expo"
 
-#: ../inc/data.php:1929
+#: inc/data.php:1998
 msgid "Ease Out Expo"
-msgstr ""
+msgstr "Ease Out Expo"
 
-#: ../inc/data.php:1930
+#: inc/data.php:1999
 msgid "Ease In Out Expo"
-msgstr ""
+msgstr "Ease In Out Expo"
 
-#: ../inc/data.php:1931
+#: inc/data.php:2000
 msgid "Ease In Back"
-msgstr ""
+msgstr "Ease In Back"
 
-#: ../inc/data.php:1932
+#: inc/data.php:2001
 msgid "Ease Out Back"
-msgstr ""
+msgstr "Ease Out Back"
 
-#: ../inc/data.php:1933
+#: inc/data.php:2002
 msgid "Ease In Out Back"
-msgstr ""
+msgstr "Ease In Out Back"
 
-#: ../inc/data.php:1936
+#: inc/data.php:2005
 msgid "Easing"
-msgstr ""
+msgstr "Easing"
 
-#: ../inc/data.php:1937
+#: inc/data.php:2006
 msgid "Animation easing."
-msgstr ""
+msgstr "Animation easing."
 
-#: ../inc/data.php:1945
+#: inc/data.php:2014
 msgid "Animation Speed"
-msgstr ""
+msgstr "Vitesse d'animation"
 
-#: ../inc/data.php:1946
+#: inc/data.php:2015
 msgid "Animation speed in seconds.(Example: 0.2 or 1)"
-msgstr ""
+msgstr "Vitesse d'animation en secondes. (Exemple: 0,2 ou 1)"
 
-#: ../inc/data.php:1954
+#: inc/data.php:2023
 msgid "Animation Delay"
-msgstr ""
+msgstr "Retard d'Animation"
 
-#: ../inc/data.php:1955
+#: inc/data.php:2024
 msgid "Animation Delay in seconds"
-msgstr ""
+msgstr "Retard d'Animation en secondes"
 
-#: ../inc/data.php:1961
+#: inc/data.php:2030
 msgid "Element custom class"
-msgstr ""
+msgstr "Classe CSS personalisée de l'élément"
 
-#: ../inc/data.php:1964
+#: inc/data.php:2033
 msgid "This shortcode adds show animations on any page element."
 msgstr ""
+"À l'aide de ce shortcode  l'affichage de tout élément de la page sera animé."
 
-#: ../inc/data.php:1969 ../inc/data.php:1970
+#: inc/data.php:2038 inc/data.php:2039
 msgid "Video Preview"
+msgstr "Aperçu de vidéo"
+
+#: inc/data.php:2047
+msgid "URL or File"
 msgstr ""
 
-#: ../inc/data.php:1978
-msgid "URL or File."
-msgstr ""
-
-#: ../inc/data.php:1979
+#: inc/data.php:2048
 msgid ""
 "To use video from YouTube or Vimeo input video URL. You can also upload "
-"video file from media library."
+"video file from media library"
 msgstr ""
 
-#: ../inc/data.php:1984
-msgid "Poster."
+#: inc/data.php:2054
+msgid "Poster image URL"
 msgstr ""
 
-#: ../inc/data.php:1985
-msgid "Poster image url."
-msgstr ""
-
-#: ../inc/data.php:1990
+#: inc/data.php:2059
 msgid "Hide control buttons"
-msgstr ""
+msgstr "Masquer les boutons de contrôle"
 
-#: ../inc/data.php:1991
+#: inc/data.php:2060
 msgid "Show control buttons"
-msgstr ""
+msgstr "Afficher les boutons de contrôle"
 
-#: ../inc/data.php:1992
+#: inc/data.php:2061
 msgid "Show control button on mouse hover"
-msgstr ""
+msgstr "Afficher les boutons de contrôle au survol de souris"
 
-#: ../inc/data.php:1993
+#: inc/data.php:2062
 msgid "Video Autoplay"
-msgstr ""
+msgstr "Lecture automatique de vidéo"
 
-#: ../inc/data.php:1994
+#: inc/data.php:2063
 msgid "Play video on mouse hover"
+msgstr "Lecture de vidéo au survol de la souris"
+
+#: inc/data.php:2066
+msgid "Controls"
 msgstr ""
 
-#: ../inc/data.php:1997
-msgid "Controls."
+#: inc/data.php:2071
+msgid "Show content on mouse hover?"
 msgstr ""
 
-#: ../inc/data.php:2003
-msgid "Show content on mouse hover."
+#: inc/data.php:2076
+msgid "Muted?"
 msgstr ""
 
-#: ../inc/data.php:2009
-msgid "Muted."
+#: inc/data.php:2081
+msgid "Loop?"
 msgstr ""
 
-#: ../inc/data.php:2015
-msgid "Loop."
+#: inc/data.php:2086
+msgid "Preload?"
 msgstr ""
 
-#: ../inc/data.php:2021
-msgid "Preload."
-msgstr ""
-
-#: ../inc/data.php:2028
+#: inc/data.php:2092
 msgid "Element custom class. You can use \"full-width\" class for video"
 msgstr ""
+"Classe personnalisée de l'élément. Vous pouvez utiliser la classe \"full-"
+"width\" pour la vidéo"
 
-#: ../inc/filters.php:57
+#: inc/filters.php:57
 msgid "Image"
-msgstr ""
+msgstr "Image"
 
-#: ../inc/filters.php:107
+#: inc/filters.php:107
 msgid "Banner image URL"
-msgstr ""
+msgstr "URL de l'image de la bannière"
 
-#: ../inc/filters.php:114
+#: inc/filters.php:114
 msgid "Banner title"
-msgstr ""
+msgstr "Titre de la bannière"
 
-#: ../inc/filters.php:128
+#: inc/filters.php:128
 msgid "Banner default text color"
-msgstr ""
+msgstr "Couleur du texte de bannière par défaut"
 
-#: ../inc/filters.php:142
+#: inc/filters.php:142
 msgid "Banner content"
-msgstr ""
+msgstr "Contenu de bannière"
 
-#: ../inc/filters.php:149
+#: inc/filters.php:149
 msgid "Custom CSS class"
-msgstr ""
+msgstr "Classe CSS personalisée"
 
-#: ../inc/filters.php:167
+#: inc/filters.php:167
 msgid "Select a page:"
-msgstr ""
+msgstr "Sélectionner la page:"
 
-#: ../inc/filters.php:175
+#: inc/filters.php:175
 msgid "Landing page"
-msgstr ""
+msgstr "Landing page"
 
-#: ../inc/filters.php:176
+#: inc/filters.php:176
 msgid "Please select landing page. (Page with anchor navigation menu.)"
 msgstr ""
+"Veuillez sélectionner landing page. (Page avec le menu de navigation "
+"d'ancrage.)"
 
-#: ../inc/generator-views.php:63 ../inc/generator-views.php:68
-#: ../inc/vendor/sunrise.php:452
+#: inc/generator-views.php:64 inc/generator-views.php:69
+#: inc/vendor/sunrise.php:452
 msgid "Media manager"
-msgstr ""
+msgstr "Gestionnaire de médias "
 
-#: ../inc/generator-views.php:68
+#: inc/generator-views.php:69
 msgid "Icon picker"
-msgstr ""
+msgstr "Sélecteur de l'icône"
 
-#: ../inc/generator-views.php:68
+#: inc/generator-views.php:69
 msgid "Filter icons"
-msgstr ""
+msgstr "Filtrer les icônes"
 
-#: ../inc/generator-views.php:82
+#: inc/generator-views.php:83
 msgid "Please wait"
-msgstr ""
+msgstr "Veuillez attendre"
 
-#: ../inc/generator-views.php:89
+#: inc/generator-views.php:90
 msgid "Untitled gallery"
-msgstr "Galerie sans nom"
+msgstr "Galerie sans titre"
 
-#: ../inc/generator-views.php:95
+#: inc/generator-views.php:96
 msgid "Galleries not found"
-msgstr "Galerie introuvable"
+msgstr "Galeries non trouvées"
 
-#: ../inc/generator-views.php:96
+#: inc/generator-views.php:97
 msgid "Manage galleries"
 msgstr "Gérer les galeries"
 
-#: ../inc/generator-views.php:96
+#: inc/generator-views.php:97
 msgid "Reload galleries"
-msgstr ""
+msgstr "Recharger les galeries"
 
-#: ../inc/generator-views.php:112
+#: inc/generator-views.php:113
 msgid "Horizontal offset"
-msgstr ""
+msgstr "Décalage horizontal"
 
-#: ../inc/generator-views.php:112
+#: inc/generator-views.php:113
 msgid "Vertical offset"
-msgstr ""
+msgstr "Décalage vertical"
 
-#: ../inc/generator-views.php:112
+#: inc/generator-views.php:113
 msgid "Blur"
-msgstr ""
+msgstr "Blur"
 
-#: ../inc/generator-views.php:112
+#: inc/generator-views.php:113
 msgid "Color"
 msgstr "Couleur"
 
-#: ../inc/generator-views.php:123
+#: inc/generator-views.php:124
 msgid "Border width"
-msgstr ""
+msgstr "Largeur de la bordure"
 
-#: ../inc/generator-views.php:123
+#: inc/generator-views.php:124
 msgid "Border style"
-msgstr ""
+msgstr "Style de la bordure"
 
-#: ../inc/generator-views.php:123
+#: inc/generator-views.php:124
 msgid "Border color"
-msgstr ""
+msgstr "Couleur de la bordure"
 
-#: ../inc/generator-views.php:133
+#: inc/generator-views.php:134
 msgid "Media library"
-msgstr ""
+msgstr "Bibliothèque de médias"
 
-#: ../inc/generator-views.php:134
+#: inc/generator-views.php:135
 msgid "Recent posts"
-msgstr ""
+msgstr "Articles récents"
 
-#: ../inc/generator-views.php:135
+#: inc/generator-views.php:136
 msgid "Category"
-msgstr ""
+msgstr "Catégorie"
 
-#: ../inc/generator-views.php:139
+#: inc/generator-views.php:140
 msgid "Select images source"
-msgstr ""
+msgstr "Sélectionnez les images sources"
 
-#: ../inc/generator-views.php:150
+#: inc/generator-views.php:151
 msgid "Select taxonomy"
-msgstr ""
+msgstr "Sélectionnez la taxonomie"
 
-#: ../inc/generator-views.php:161
+#: inc/generator-views.php:162
 msgid "Add images"
-msgstr ""
+msgstr "Ajouter les images "
 
-#: ../inc/generator-views.php:161
+#: inc/generator-views.php:162
 msgid ""
 "Click the button above and select images.<br>You can select multimple images "
 "with Ctrl (Cmd) key"
 msgstr ""
+"Cliquez sur le bouton ci-dessus et sélectionnez des images. <br> Vous pouvez "
+"sélectionner des images multiples à l'aide de Ctrl (Cmd)"
 
-#: ../inc/generator-views.php:161
+#: inc/generator-views.php:162
 msgid ""
 "Select categories to retrieve posts from.<br>You can select multiple "
 "categories with Ctrl (Cmd) key"
 msgstr ""
+"Sélectionnez les catégories des articles à afficher. Vous pouvez "
+"sélectionner plusieurs catégories à l'aide de Ctrl (Cmd)"
 
-#: ../inc/generator-views.php:161
+#: inc/generator-views.php:162
 msgid ""
 "Select taxonomy and it's terms.<br>You can select multiple terms with Ctrl "
 "(Cmd) key"
 msgstr ""
+"Sélectionnez la taxonomie et ses termes.<br> Vous pouvez sélectionner "
+"plusieurs termes à l'aide de Ctrl (Cmd)"
 
-#: ../inc/generator-views.php:193 ../inc/generator-views.php:230
+#: inc/generator-views.php:192 inc/generator-views.php:229
 msgid "Extra small devices (Phones)"
-msgstr ""
+msgstr "Appareils très petits (Phones)"
 
-#: ../inc/generator-views.php:193 ../inc/generator-views.php:230
+#: inc/generator-views.php:192 inc/generator-views.php:229
 msgid "Small devices (Tablets)"
-msgstr ""
+msgstr "Petits appareils (Tablettes)"
 
-#: ../inc/generator-views.php:193 ../inc/generator-views.php:230
+#: inc/generator-views.php:192 inc/generator-views.php:229
 msgid "Medium devices (Desktops)"
-msgstr ""
+msgstr "Appareils de taille moyenne (Ordinateurs)"
 
-#: ../inc/generator-views.php:193 ../inc/generator-views.php:230
+#: inc/generator-views.php:192 inc/generator-views.php:229
 msgid "Large devices (Desktops)"
-msgstr ""
+msgstr "Grands appareils (Ordinateurs)"
 
-#: ../inc/generator.php:58 ../inc/generator.php:160
+#: inc/generator.php:58 inc/generator.php:160
 msgid "Insert shortcode"
 msgstr "Insérer le shortcode"
 
-#: ../inc/generator.php:115
+#: inc/generator.php:115
 msgid "Search for shortcodes"
-msgstr "Rechercher un shortcode"
+msgstr "Rechercher shortcodes"
 
-#: ../inc/generator.php:117
+#: inc/generator.php:117
 msgid "Filter by type"
 msgstr "Filtrer par type"
 
-#: ../inc/generator.php:150
+#: inc/generator.php:150
 msgid "Shortcode not specified"
-msgstr "Shortcode non spécifié"
+msgstr "Shortcode n'est pas spécifié"
 
-#: ../inc/generator.php:161
+#: inc/generator.php:161
 msgid "Live preview"
-msgstr "Prévisualisation en direct"
+msgstr "Aperçu"
 
-#: ../inc/generator.php:165
+#: inc/generator.php:165
 msgid "Click to return to the shortcodes list"
-msgstr "Retourner à la liste des shortcodes"
+msgstr "Cliquez pour revenir à la liste des shortcodes "
 
-#: ../inc/generator.php:165
+#: inc/generator.php:165
 msgid "All shortcodes"
-msgstr "Tout les shortcodes"
+msgstr "Tous les shortcodes"
 
-#: ../inc/generator.php:172
+#: inc/generator.php:172
 msgid "Examples of use"
-msgstr ""
+msgstr "Exemples d'utilisation"
 
-#: ../inc/generator.php:212
+#: inc/generator.php:228
 msgid "Click to set this value"
-msgstr "Cliquez sur pour définir cette valeur"
+msgstr "Cliquez pour définir cette valeur"
 
-#: ../inc/generator.php:249
+#: inc/generator.php:269
 msgid "Preview"
-msgstr "Prévisualisation"
+msgstr "Aperçu"
 
-#: ../inc/generator.php:258 ../inc/tools.php:230
+#: inc/generator.php:278 inc/tools.php:231
 msgid "Access denied"
-msgstr "Accès refusé"
+msgstr "Accès réfusé"
 
-#: ../inc/generator.php:293
+#: inc/generator.php:313
 msgid "Presets"
-msgstr ""
+msgstr "Préréglages"
 
-#: ../inc/generator.php:296
+#: inc/generator.php:316
 msgid "Save current settings as preset"
-msgstr ""
+msgstr "Enregistrer les paramètres actuels comme préréglage"
 
-#: ../inc/generator.php:325 ../inc/generator.php:328
+#: inc/generator.php:345 inc/generator.php:348
 msgid "Presets not found"
-msgstr ""
+msgstr "Préréglages non trouvés"
 
-#: ../inc/shortcodes.php:31
+#: inc/shortcodes.php:31
 msgid "Read More"
-msgstr ""
+msgstr "Lire la Suite"
 
-#: ../inc/shortcodes.php:262 ../inc/shortcodes.php:833
-#: ../inc/shortcodes.php:1263
+#: inc/shortcodes.php:264 inc/shortcodes.php:873 inc/shortcodes.php:1310
 msgid "Template file (*.tmpl) not found"
-msgstr ""
+msgstr "Fichier de modèle (*.tmpl) n'est pas trouvé"
 
-#: ../inc/shortcodes.php:1028 ../inc/shortcodes.php:1400
+#: inc/shortcodes.php:1075 inc/shortcodes.php:1447
 msgid "Posts not found"
-msgstr "Articles non trouvés"
+msgstr "Article non trouvés"
 
-#: ../inc/shortcodes.php:1449
+#: inc/shortcodes.php:1496
 msgid "Tab title"
-msgstr ""
+msgstr "Titre de l'onglet"
 
-#: ../inc/vendor/sunrise.php:90 ../inc/vendor/sunrise.php:91
-#: ../inc/vendor/sunrise.php:122 ../inc/vendor/sunrise.php:123
+#: inc/vendor/sunrise.php:90 inc/vendor/sunrise.php:91
+#: inc/vendor/sunrise.php:122 inc/vendor/sunrise.php:123
 msgid "Plugin Settings"
-msgstr ""
+msgstr "Paramètres de Plugin"
 
-#: ../inc/vendor/sunrise.php:180
+#: inc/vendor/sunrise.php:180
 msgid "Use selected file"
-msgstr ""
+msgstr "Utilisez le fichier sélectionné"
 
-#: ../inc/vendor/sunrise.php:372
+#: inc/vendor/sunrise.php:372
 msgid "Save changes"
-msgstr "Sauvegarder les changements"
+msgstr "Enregistrer les modifications"
 
-#: ../inc/vendor/sunrise.php:372
+#: inc/vendor/sunrise.php:372
 msgid "Saving"
-msgstr "Sauvegarde"
+msgstr "Enregistrement"
 
-#: ../inc/vendor/sunrise.php:372
+#: inc/vendor/sunrise.php:372
 msgid "Saved"
-msgstr "Sauvé"
+msgstr "Enregistré "
 
-#: ../inc/vendor/sunrise.php:372
+#: inc/vendor/sunrise.php:372
 msgid ""
 "This action will delete all your settings. Are you sure? This action cannot "
 "be undone!"
 msgstr ""
+"Cette action va supprimer tous vos réglages.  Êtes-vous sûr? Cette action ne "
+"peut pas être annulée!"
 
-#: ../inc/vendor/sunrise.php:372
+#: inc/vendor/sunrise.php:372
 msgid "Restore default settings"
 msgstr "Restaurer les paramètres par défaut"
 
-#: ../inc/vendor/sunrise.php:379 ../inc/vendor/sunrise.php:388
-#: ../inc/vendor/sunrise.php:397 ../inc/vendor/sunrise.php:447
+#: inc/vendor/sunrise.php:379 inc/vendor/sunrise.php:388
+#: inc/vendor/sunrise.php:397 inc/vendor/sunrise.php:447
 msgid "Text field"
-msgstr ""
+msgstr "Champ de texte"
 
-#: ../inc/vendor/sunrise.php:409
+#: inc/vendor/sunrise.php:409
 msgid "Textarea field"
-msgstr ""
+msgstr "Champ de texte (zone)"
 
-#: ../inc/vendor/sunrise.php:420 ../inc/vendor/sunrise.php:431
+#: inc/vendor/sunrise.php:420 inc/vendor/sunrise.php:431
 msgid "Checkbox"
-msgstr ""
+msgstr "Case à cocher"
 
-#: ../inc/vendor/sunrise.php:421
+#: inc/vendor/sunrise.php:421
 msgid "Label"
-msgstr "Label"
+msgstr "Label "
 
-#: ../inc/vendor/sunrise.php:457
+#: inc/vendor/sunrise.php:457
 msgid "Color picker"
-msgstr ""
+msgstr "Sélecteur de couleur."
 
-#: ../inc/vendor/sunrise.php:465
+#: inc/vendor/sunrise.php:465
 msgid "Pick a color"
-msgstr ""
+msgstr "Choisissez une couleur"
 
-#: ../inc/vendor/sunrise.php:489
+#: inc/vendor/sunrise.php:489
 msgid ""
 "For full functionality of this page it is reccomended to enable javascript."
 msgstr ""
-"Pour profiter de toutes les fonctionnalités de cette page, il est recommandé "
-"d'activer le javascript"
+"Pour toutes les fonctionnalités de cette page, il est recommandé d'activer "
+"le javascript."
 
-#: ../inc/vendor/sunrise.php:490
+#: inc/vendor/sunrise.php:490
 msgid "Settings saved successfully"
-msgstr "Réglages sauvegardés correctement"
+msgstr "Réglages enregistrés avec succès"
 
-#: ../inc/vendor/sunrise.php:491
+#: inc/vendor/sunrise.php:491
 msgid "Settings reseted successfully"
-msgstr "Réglages réinitialisés correctement"
+msgstr "Réglages réinitialisés avec succès"
 
-#: ../inc/vendor/sunrise.php:520
+#: inc/vendor/sunrise.php:520
 #, php-format
 msgid "option type %s is not callable"
-msgstr ""
+msgstr "option type %s is not callable"
 
-#: ../inc/widget.php:23
+#: inc/widget.php:23
 msgid "Special widget with Cherry Shortcodes."
-msgstr ""
+msgstr "Widget spécial avec Cherry Shortcodes."
 
-#: ../inc/widget.php:30
+#: inc/widget.php:30
 msgid "Cherry Shortcodes"
-msgstr ""
+msgstr "Cherry Shortcodes"
 
-#: ../inc/widget.php:62
+#: inc/widget.php:62
 msgid "Title:"
 msgstr "Titre:"
 
-#: ../templates/shortcodes/posts/default.tmpl:4
-#: ../templates/shortcodes/swiper_carousel/default.tmpl:4
-msgid "Posted on"
-msgstr ""
+#~ msgid "Upload banner image"
+#~ msgstr "Charger l'image de la bannière"
 
-#: ../templates/shortcodes/posts/default.tmpl:4
-#: ../templates/shortcodes/swiper_carousel/default.tmpl:4
-msgid "by"
-msgstr ""
+#~ msgid "Choose to display a part or d content"
+#~ msgstr ""
+#~ "Choisissez si vous voulez afficher une partie du contenu ou le contenu "
+#~ "complet"
+
+#~ msgid "Upload marker source"
+#~ msgstr "Charger image de marqueur"
+
+#~ msgid "Custom class"
+#~ msgstr "Classe personalisée"
+
+#~ msgid "URL or File."
+#~ msgstr "URL ou Fichier."
 
 #~ msgid ""
-#~ "IN - posts that have any of selected categories terms<br/>NOT IN - posts "
-#~ "that is does not have any of selected terms<br/>AND - posts that have all "
-#~ "selected terms"
+#~ "To use video from YouTube or Vimeo input video URL. You can also upload "
+#~ "video file from media library."
 #~ msgstr ""
-#~ "IN - Les articles qui possèdent certains des termes sélectionnés<br/>NOT "
-#~ "IN - Les articles ne possèdent pas les termes sélectionnés<br/>AND - Les "
-#~ "articles possédant tout les termes sélectionnés"
+#~ "Pour utiliser la vidéo de YouTube ou de Vimeo veuillez entrer URL de la "
+#~ "vidéo. Vous pouvez également charger des fichiers vidéo à partir de la "
+#~ "bibliothèque de médias."
 
-#~ msgid "Show childrens of entered post (enter post ID)"
-#~ msgstr ""
-#~ "Montrer les enfants de l'article sélectionné (Entrez l'ID de l'article)"
+#~ msgid "Poster."
+#~ msgstr "Poster."
 
-#~ msgid "Select Yes to ignore posts that is sticked"
-#~ msgstr "Select Yes to ignore posts that is sticked"
+#~ msgid "Poster image url."
+#~ msgstr "URL de l'image de poster."
 
-#~ msgid "Heading 2"
-#~ msgstr "Heading 2"
+#~ msgid "Controls."
+#~ msgstr "Contrôles."
 
-#~ msgid "Heading 2 style"
-#~ msgstr "Style Heading 2"
+#~ msgid "Show content on mouse hover."
+#~ msgstr "Afficher le contenu au survol de la souris."
 
-#~ msgid "Heading 2 text"
-#~ msgstr "Texte Heading 2"
+#~ msgid "Muted."
+#~ msgstr "Muted."
 
-#~ msgid "Styled heading 2"
-#~ msgstr "Heading 2 stylisé"
+#~ msgid "Loop."
+#~ msgstr "Boucle."
 
-#~ msgid "Gallery"
-#~ msgstr "Galerie"
+#~ msgid "Preload."
+#~ msgstr "Précharge."
 
-#~ msgid "Heading"
-#~ msgstr "Heading"
+#~ msgid "Posted on"
+#~ msgstr "Publié "
 
-#~ msgid "Select heading size"
-#~ msgstr "Taille du Heading 2 "
-
-#~ msgid "Heading text alignment"
-#~ msgstr "Alignement du texte du Heading"
-
-#~ msgid "Heading text"
-#~ msgstr "Heading text"
-
-#~ msgid "Styled heading"
-#~ msgstr "Styled heading"
-
-#~ msgid ""
-#~ "[tab title=\"Title 1\"]Content 1[/tab]\n"
-#~ "[tab title=\"Title 2\"]Content 2[/tab]\n"
-#~ "[tab title=\"Title 3\"]Content 3[/tab]"
-#~ msgstr ""
-#~ "[tab title=\"Title 1\"]Contenu 1[/tab]\n"
-#~ "[tab title=\"Title 2\"]Contenu 2[/tab]\n"
-#~ "[tab title=\"Title 3\"]Contenu 3[/tab]"
-
-#~ msgid ""
-#~ "[spoiler]Content[/spoiler]\n"
-#~ "[spoiler]Content[/spoiler]\n"
-#~ "[spoiler]Content[/spoiler]"
-#~ msgstr ""
-#~ "[spoiler]Contenu[/spoiler]\n"
-#~ "[spoiler]Contenu[/spoiler]\n"
-#~ "[spoiler]Contenu[/spoiler]"
-
-#~ msgid "Divider"
-#~ msgstr "Divider"
-
-#~ msgid "Show TOP link"
-#~ msgstr "Montrer le lien TOP"
-
-#~ msgid "Show link to top of the page or not"
-#~ msgstr "Montrer le lien de haut de page ou pas"
-
-#~ msgid "Go to top"
-#~ msgstr "Aller vers le haut"
-
-#~ msgid "Link text"
-#~ msgstr "lien texte"
-
-#~ msgid "Text for the GO TOP link"
-#~ msgstr "Texte pour le lien GO TOP"
-
-#~ msgid "Content divider with optional TOP link"
-#~ msgstr "Contenu du diviseur avec un lien TOP optionel"
-
-#~ msgid "Height"
-#~ msgstr "Hauteur"
-
-#~ msgid "Height of the spacer in pixels"
-#~ msgstr "Hauteur du spacer en pixels"
-
-#~ msgid "Empty space with adjustable height"
-#~ msgstr "Espace vide avec hauteur ajustable"
-
-#~ msgid "Highlight"
-#~ msgstr "Surlignage"
-
-#~ msgid "Highlighted text background color"
-#~ msgstr "Couleur du texte surligné d'arrière plan"
-
-#~ msgid "Highlighted text color"
-#~ msgstr "Couleur du texte surligné"
-
-#~ msgid "Highlighted text"
-#~ msgstr "Texte surligné"
-
-#~ msgid "Important"
-#~ msgstr "Important"
-
-#~ msgid "Black"
-#~ msgstr "Noir"
-
-#~ msgid "Style of the label"
-#~ msgstr "Style du label"
-
-#~ msgid "Styled label"
-#~ msgstr "Label stylisé"
-
-#~ msgid "Quote"
-#~ msgstr "Citation"
-
-#~ msgid "Cite"
-#~ msgstr "Cite"
-
-#~ msgid "Quote author name"
-#~ msgstr "Nom de l'auteur de la citation"
-
-#~ msgid "Cite url"
-#~ msgstr "URL de Cite"
-
-#~ msgid "Url of the quote author. Leave empty to disable link"
-#~ msgstr ""
-#~ "Url de la citation de l'auteur. Ne pas remplir pour désactiver le lien"
-
-#~ msgid "Blockquote alternative"
-#~ msgstr "Blockquote alternatif"
-
-#~ msgid "Pullquote"
-#~ msgstr "Pullquote"
-
-#~ msgid "Pullquote alignment (float)"
-#~ msgstr "Alignement de la Pullquote"
-
-#~ msgid "Flat"
-#~ msgstr "Flat"
-
-#~ msgid "Light"
-#~ msgstr "Léger"
-
-#~ msgid "Dropcap style preset"
-#~ msgstr "Style prédéfini de la dropcap"
-
-#~ msgid "Choose dropcap size"
-#~ msgstr "Choisir la taille de la dropcap"
-
-#~ msgid "D"
-#~ msgstr "D"
-
-#~ msgid ""
-#~ "[column size=\"1/3\"]Content[/column]\n"
-#~ "[column size=\"1/3\"]Content[/column]\n"
-#~ "[column size=\"1/3\"]Content[/column]"
-#~ msgstr ""
-#~ "[column size=\"1/3\"]Contenu[/column]\n"
-#~ "[column size=\"1/3\"]Contenu[/column]\n"
-#~ "[column size=\"1/3\"]Contenu[/column]"
-
-#~ msgid "Full width"
-#~ msgstr "Largeur pleine"
-
-#~ msgid "One half"
-#~ msgstr "Une moitié"
-
-#~ msgid "One third"
-#~ msgstr "Un tiers"
-
-#~ msgid "Two third"
-#~ msgstr "Deux tiers"
-
-#~ msgid "One fourth"
-#~ msgstr "Un quart"
-
-#~ msgid "Three fourth"
-#~ msgstr "Trois quart"
-
-#~ msgid "One fifth"
-#~ msgstr "Un cinquième"
-
-#~ msgid "Two fifth"
-#~ msgstr "Deux cinquième"
-
-#~ msgid "Three fifth"
-#~ msgstr "Trois cinquième"
-
-#~ msgid "Four fifth"
-#~ msgstr "Quatre cinquième"
-
-#~ msgid "One sixth"
-#~ msgstr "Un sixième"
-
-#~ msgid "Five sixth"
-#~ msgstr "Cinq cinquième"
-
-#~ msgid "Select column width. This width will be calculated depend page width"
-#~ msgstr ""
-#~ "Sélectionner la largeur de la colonne. La largeur sera calculé en "
-#~ "fonction de la largeur de la page"
-
-#~ msgid "Star"
-#~ msgstr "Etoile"
-
-#~ msgid "Arrow"
-#~ msgstr "Flèche"
-
-#~ msgid "Check"
-#~ msgstr "Cocher"
-
-#~ msgid "Cross"
-#~ msgstr "Cross"
-
-#~ msgid "Thumbs up"
-#~ msgstr "Thumbs up"
-
-#~ msgid "Gear"
-#~ msgstr "Équipement"
-
-#~ msgid "Time"
-#~ msgstr "Temps"
-
-#~ msgid "Note"
-#~ msgstr "Note"
-
-#~ msgid "Plus"
-#~ msgstr "Plus"
-
-#~ msgid "Guard"
-#~ msgstr "Gardien"
-
-#~ msgid "Event"
-#~ msgstr "Evénement"
-
-#~ msgid "Idea"
-#~ msgstr "Idée"
-
-#~ msgid "Settings"
-#~ msgstr "Réglages"
-
-#~ msgid "Twitter"
-#~ msgstr "Twitter"
-
-#~ msgid "List items style/icons"
-#~ msgstr "Liste d'objets style/icones"
-
-#~ msgid ""
-#~ "<ul>\n"
-#~ "<li>List item</li>\n"
-#~ "<li>List item</li>\n"
-#~ "<li>List item</li>\n"
-#~ "</ul>"
-#~ msgstr ""
-#~ "<ul>\n"
-#~ "<li>Contenu</li>\n"
-#~ "<li>Contenu</li>\n"
-#~ "<li>Contenu</li>\n"
-#~ "</ul>"
-
-#~ msgid "Styled unordered list"
-#~ msgstr "Liste non ordonnée stylisée"
-
-#~ msgid "Soft"
-#~ msgstr "Soft"
-
-#~ msgid "Glass"
-#~ msgstr "Lunettes"
-
-#~ msgid "Bubbles"
-#~ msgstr "Bulles"
-
-#~ msgid "Noise"
-#~ msgstr "Bruit"
-
-#~ msgid "Stroked"
-#~ msgstr "Stroked"
-
-#~ msgid "3D"
-#~ msgstr "3D"
-
-#~ msgid "Button background style preset"
-#~ msgstr "Style prédéfini de l'arrière plan du bouton"
-
-#~ msgid "Button size"
-#~ msgstr "Taille du bouton"
-
-#~ msgid "Fluid buttons has 100% width"
-#~ msgstr "Bouton fluide avec largeur de 100%"
-
-#~ msgid "Radius"
-#~ msgstr "Radius"
-
-#~ msgid ""
-#~ "Radius of button corners. Auto-radius calculation based on button size"
-#~ msgstr ""
-#~ "Radius des coins du bouton. Le calcul automatique du radius est basé sur "
-#~ "la taille du bouton"
-
-#~ msgid ""
-#~ "You can upload custom icon for this button. Try to begin with <a href="
-#~ "\"http://webdesign.tutsplus.com/freebies/icons-freebies/exclusive-"
-#~ "freebie-50-crisp-web-app-icons/\" target=\"_blank\">these free high-"
-#~ "quality icons</a>. Download archive, unpack icons and upload in this field"
-#~ msgstr ""
-#~ "Vous pouvez téléverser un icone personnalisé pour ce bouton. Essayer de "
-#~ "commencer avec <a href=\"http://webdesign.tutsplus.com/freebies/icons-"
-#~ "freebies/exclusive-freebie-50-crisp-web-app-icons/\" target=\"_blank\">Ce "
-#~ "sont des icones de grande qualité</a>. Télécharger l'archive, "
-#~ "décompresser là et télécharger là dans le champ."
-
-#~ msgid "Dark"
-#~ msgstr "Noir"
-
-#~ msgid "Text shadow color"
-#~ msgstr "Couleur de l'ombre du texte"
-
-#~ msgid "Color of button text shadow"
-#~ msgstr "Couleur du bouton (texte ombré)"
-
-#~ msgid "Top right"
-#~ msgstr "En haut à droite"
-
-#~ msgid "Top left"
-#~ msgstr "En haut à gauche"
-
-#~ msgid "Bottom right"
-#~ msgstr "En bas à droite"
-
-#~ msgid "Bottom left"
-#~ msgstr "En bas à gauche"
-
-#~ msgid "Text shadow position"
-#~ msgstr "Position du texte ombré"
-
-#~ msgid "Position of button text shadow"
-#~ msgstr "Position du bouton (texte ombré)"
-
-#~ msgid "Service"
-#~ msgstr "Service"
-
-#~ msgid "Service title"
-#~ msgstr "Titre du service"
-
-#~ msgid "Service name"
-#~ msgstr "Nom du service"
-
-#~ msgid "You can upload custom icon for this box"
-#~ msgstr "Vous pouvez téléversé un icone personnalisé ce champ"
-
-#~ msgid "Size of the uploaded icon in pixels"
-#~ msgstr "Taille de l'icone téléversé en pixels"
-
-#~ msgid "Service description"
-#~ msgstr "Description du service"
-
-#~ msgid "Service box with title"
-#~ msgstr "Zone de service avec"
-
-#~ msgid "Box title"
-#~ msgstr "Titre de la zone"
-
-#~ msgid "Text for the box title"
-#~ msgstr "Texte pour le titre de la zone"
-
-#~ msgid "Box style preset"
-#~ msgstr "Style prédéfini de la zone"
-
-#~ msgid "Color for the box title and borders"
-#~ msgstr "Couleur pour le titre de la zone et ses bordures"
-
-#~ msgid "Color for the box title text"
-#~ msgstr "Couleur pour le texte du titre de la zone"
-
-#~ msgid "Box corners radius"
-#~ msgstr "Coins arrondis de la zone"
-
-#~ msgid "Box content"
-#~ msgstr "Contenu de la zone"
-
-#~ msgid "Colored box with caption"
-#~ msgstr "Zone colorée avec légende"
-
-#~ msgid "Note background color"
-#~ msgstr "Couleur d'arrière plan de la note"
-
-#~ msgid "Note text color"
-#~ msgstr "Couleur du texte de la note"
-
-#~ msgid "Note corners radius"
-#~ msgstr "Coins arrondis de la note"
-
-#~ msgid "Note text"
-#~ msgstr "Texte de la note"
-
-#~ msgid "Colored box"
-#~ msgstr "Zone colorée"
-
-#, fuzzy
-#~ msgid "Lightbox"
-#~ msgstr "Léger"
-
-#, fuzzy
-#~ msgid "Content type"
-#~ msgstr "Contenu"
-
-#, fuzzy
-#~ msgid "Content source"
-#~ msgstr "Contenu pour les invités"
-
-#~ msgid "Private"
-#~ msgstr "Privé"
-
-#~ msgid "Private note text"
-#~ msgstr "Texte de la note privée"
-
-#~ msgid "Private note for post authors"
-#~ msgstr "Note privée pour les auteurs d'articles"
-
-#~ msgid "YouTube"
-#~ msgstr "YouTube"
-
-#~ msgid "Url"
-#~ msgstr "Url"
-
-#~ msgid ""
-#~ "Url of YouTube page with video. Ex: http://youtube.com/watch?v=XXXXXX"
-#~ msgstr ""
-#~ "Url de la page Youtube avec la vidéo. Ex: http://youtube.com/watch?"
-#~ "v=XXXXXX"
-
-#~ msgid "Width"
-#~ msgstr "Largeur"
-
-#~ msgid "Player width"
-#~ msgstr "Largeur du lecteur"
-
-#~ msgid "Player height"
-#~ msgstr "Hauteur du lecteur"
-
-#~ msgid "Responsive"
-#~ msgstr "Responsive"
-
-#~ msgid "Ignore width and height parameters and make player responsive"
-#~ msgstr ""
-#~ "Largeur du lecteur. Spécifiez la largeur en % et le lecteur sera "
-#~ "responsive"
-
-#~ msgid "Autoplay"
-#~ msgstr "Autoplay"
-
-#~ msgid "Play video automatically when page is loaded"
-#~ msgstr "Démarrer automatiquement la vidéo quand la page est chargée"
-
-#~ msgid "YouTube video"
-#~ msgstr "Vidéo YouTube"
-
-#~ msgid "Vimeo"
-#~ msgstr "Vimeo"
-
-#~ msgid "Url of Vimeo page with video"
-#~ msgstr "Url de la page Vimeo avec la vidéo"
-
-#~ msgid "Vimeo video"
-#~ msgstr "Vidéo"
-
-#~ msgid "Audio"
-#~ msgstr "Audio"
-
-#~ msgid "File"
-#~ msgstr "Fichier"
-
-#~ msgid "Audio file url. Supported formats: mp3, ogg"
-#~ msgstr "Lien du fichier audio. Formats supportés : mp3, ogg"
-
-#~ msgid ""
-#~ "Player width. You can specify width in percents and player will be "
-#~ "responsive. Example values: <b%value>200px</b>, <b%value>100&#37;</b>"
-#~ msgstr ""
-#~ "Largeur du lecteur. Spécifiez la largeur en % et le lecteur sera "
-#~ "responsive"
-
-#~ msgid "Play file automatically when page is loaded"
-#~ msgstr "Jouer automatiquement le son quand la page est chargée"
-
-#~ msgid "Loop"
-#~ msgstr "En boucle"
-
-#~ msgid "Repeat when playback is ended"
-#~ msgstr "Répéter quand la lecture est terminé"
-
-#~ msgid "Custom audio player"
-#~ msgstr "Lecteur audio personnalisé"
-
-#~ msgid "Video"
-#~ msgstr "Video"
-
-#~ msgid "Url to mp4/flv video-file"
-#~ msgstr "Lien vers le fichier mp4/flv"
-
-#~ msgid "Url to poster image, that will be shown before playback"
-#~ msgstr "Lien vers l'affiche, qui sera montré avant la lecture"
-
-#~ msgid "Player title"
-#~ msgstr "Titre du lecteur"
-
-#~ msgid "Controls"
-#~ msgstr "Actions"
-
-#~ msgid "Show player controls (play/pause etc.) or not"
-#~ msgstr "Montrer les boutons (play/pause etc.) ou pas"
-
-#~ msgid "Custom video player"
-#~ msgstr "Lecteur video personnalisé"
-
-#~ msgid "Table"
-#~ msgstr "Tableau"
-
-#~ msgid "CSV file"
-#~ msgstr "Fichier CSV"
-
-#~ msgid "Upload CSV file if you want to create HTML-table from file"
-#~ msgstr ""
-#~ "Téléversé le fichier CSV si tu veux créer un tableau HTML avec ce fichier"
-
-#~ msgid ""
-#~ "<table>\n"
-#~ "<tr>\n"
-#~ "\t<td>Table</td>\n"
-#~ "\t<td>Table</td>\n"
-#~ "</tr>\n"
-#~ "<tr>\n"
-#~ "\t<td>Table</td>\n"
-#~ "\t<td>Table</td>\n"
-#~ "</tr>\n"
-#~ "</table>"
-#~ msgstr ""
-#~ "<table>\n"
-#~ "<tr>\n"
-#~ "\t<td>Contenu</td>\n"
-#~ "\t<td>Contenu</td>\n"
-#~ "</tr>\n"
-#~ "<tr>\n"
-#~ "\t<td>Contenu</td>\n"
-#~ "\t<td>Contenu</td>\n"
-#~ "</tr>\n"
-#~ "</table>"
-
-#~ msgid "Styled table from HTML or CSV file"
-#~ msgstr "Tableau stylisé avec du HTML ou des fichiers CSV"
-
-#~ msgid "Permalink"
-#~ msgstr "Permaliens"
-
-#~ msgid "ID"
-#~ msgstr "ID"
-
-#~ msgid "Post or page ID"
-#~ msgstr "Article ou ID de la page"
-
-#~ msgid "Link target. blank - link will be opened in new window/tab"
-#~ msgstr "Cible du lien. Blank - Le lien ouvrira un nouvel onglet."
-
-#~ msgid "Permalink to specified post/page"
-#~ msgstr "Permalien pour article/page spécifié"
-
-#~ msgid "Members"
-#~ msgstr "Membres"
-
-#~ msgid "This content is for registered users only. Please %login%."
-#~ msgstr "Ce contenu est pour les membres uniquement"
-
-#~ msgid "Message"
-#~ msgstr "Message"
-
-#~ msgid "Message for not logged users"
-#~ msgstr "Message pour les utilisateurs non-membres"
-
-#~ msgid "login"
-#~ msgstr "Identifiant"
-
-#~ msgid "Login link text"
-#~ msgstr "Texte du lien d'identification"
-
-#~ msgid "Text for the login link"
-#~ msgstr "Texte pour le lien d'identification"
-
-#~ msgid "Content for logged members"
-#~ msgstr "Contenu pour les membres identifiés"
-
-#~ msgid "Content for logged in members only"
-#~ msgstr "Contenu pour les membres identifiés uniquement"
-
-#~ msgid "Guests"
-#~ msgstr "Invités"
-
-#~ msgid "Content for guests"
-#~ msgstr "Contenu pour les invités"
-
-#~ msgid "Content for guests only"
-#~ msgstr "Contenu pour les invités seulement"
-
-#~ msgid "RSS Feed"
-#~ msgstr "Flux RSS"
-
-#~ msgid "Url to RSS-feed"
-#~ msgstr "Lien pour le flux RSS"
-
-#~ msgid "Limit"
-#~ msgstr "Limite"
-
-#~ msgid "Number of items to show"
-#~ msgstr "Nombres d'objets à montrer"
-
-#~ msgid "Feed grabber"
-#~ msgstr "Feed grabber"
-
-#~ msgid "Menu"
-#~ msgstr "Menu"
-
-#~ msgid "Menu name"
-#~ msgstr "Nom du menu"
-
-#~ msgid "Custom menu name. Ex: Main menu"
-#~ msgstr "Nom du menu personnalisé. Ex: Menu personnalisé"
-
-#~ msgid "Custom menu by name"
-#~ msgstr "Menu personnalisé par nom"
-
-#~ msgid "Sub pages"
-#~ msgstr "Sous-pages"
-
-#~ msgid "Depth"
-#~ msgstr "Profondeur"
-
-#~ msgid "Max depth level of children pages"
-#~ msgstr "Niveau de profondeur maximale des pages enfants"
-
-#~ msgid "Parent ID"
-#~ msgstr "ID de la page parente"
-
-#~ msgid "ID of the parent page. Leave blank to use current page"
-#~ msgstr "ID de la page parente. Laissez vide pour utiliser la page courante"
-
-#~ msgid "List of sub pages"
-#~ msgstr "Liste des sous-pages"
-
-#~ msgid "Siblings"
-#~ msgstr "Soeurs"
-
-#~ msgid "Max depth level"
-#~ msgstr "Niveau de profondeur maximale"
-
-#~ msgid "List of cureent page siblings"
-#~ msgstr "List of cureent page siblings"
-
-#~ msgid "Document"
-#~ msgstr "Document"
-
-#~ msgid "Url to uploaded document. Supported formats: doc, xls, pdf etc."
-#~ msgstr "Lien du document téléversé. Formats supportés : doc, xls, pdf etc."
-
-#~ msgid "Viewer width"
-#~ msgstr "Largeur du visualisateur"
-
-#~ msgid "Viewer height"
-#~ msgstr "Hauteur du visualisateur"
-
-#~ msgid "Ignore width and height parameters and make viewer responsive"
-#~ msgstr ""
-#~ "Ignorer les paramètres de largeur et de hauteur pour un visualiseur "
-#~ "responsive"
-
-#~ msgid "Document viewer by Google"
-#~ msgstr "Visualisateur de document par Google"
-
-#~ msgid "Gmap"
-#~ msgstr "Gmap"
-
-#~ msgid "Map width"
-#~ msgstr "Largeur de la carte"
-
-#~ msgid "Ignore width and height parameters and make map responsive"
-#~ msgstr ""
-#~ "Ignorer les paramètres de largeur et de hauteur pour une carte responsive"
-
-#~ msgid "Marker"
-#~ msgstr "Marqueur"
-
-#~ msgid "Address for the marker. You can type it in any language"
-#~ msgstr "Adresse du marqueur. Supporte tous les langages"
-
-#~ msgid "Maps by Google"
-#~ msgstr "Carte par google"
-
-#~ msgid "Slider"
-#~ msgstr "Slider"
-
-#~ msgid "Choose source gallery, that will be used for this slider"
-#~ msgstr "Choisissez la galerie qui sera utilisé pour ce slider"
-
-#~ msgid "Slider width (in pixels)"
-#~ msgstr "Largeur du slider"
-
-#~ msgid "Slider height (in pixels)"
-#~ msgstr "Hauteur du slider"
-
-#~ msgid "Ignore width and height parameters and make slider responsive"
-#~ msgstr ""
-#~ "Ignorer les paramètres de largeur et de hauteur pour un slider responsive"
-
-#~ msgid "Show titles"
-#~ msgstr "Montrer les titres"
-
-#~ msgid "Display slide titles"
-#~ msgstr "Afficher les titres des slides"
-
-#~ msgid "Is slider centered on the page"
-#~ msgstr "Le slider sera centré sur la page"
-
-#~ msgid "Arrows"
-#~ msgstr "Flèches"
-
-#~ msgid "Show left and right arrows"
-#~ msgstr "Montrer les flèches"
-
-#~ msgid "Pagination"
-#~ msgstr "Pagination"
-
-#~ msgid "Show pagination"
-#~ msgstr "Montrer la pagination"
-
-#~ msgid "Mouse wheel control"
-#~ msgstr "Défilement de la souris"
-
-#~ msgid "Allow to change slides with mouse wheel"
-#~ msgstr "Permettre de changer la slide à la souris"
-
-#~ msgid ""
-#~ "Choose interval between slide animations. Set to 0 to disable autoplay"
-#~ msgstr ""
-#~ "Choisir l'intervalle entre l'animation de chaque slide. Laissez à 0 pour "
-#~ "désactiver le défilement automatique"
-
-#~ msgid "Speed"
-#~ msgstr "Vitesse"
-
-#~ msgid "Specify animation speed"
-#~ msgstr "Vitesse de l'animation"
-
-#~ msgid "Links target"
-#~ msgstr "Cible du lien"
-
-#~ msgid "Open slides links in new window/tab"
-#~ msgstr "Ouvrir le lien des slides dans une nouvelle fenêtre"
-
-#~ msgid "Customizable image slider"
-#~ msgstr "Slider personnalisé"
-
-#~ msgid "Carousel"
-#~ msgstr "Carousel"
-
-#~ msgid "Choose source gallery, that will be used for this carousel"
-#~ msgstr "Choisir la galerie qui sera utilisé pour ce carousel"
-
-#~ msgid "Carousel width (in pixels)"
-#~ msgstr "largeur du carousel (en pixels)"
-
-#~ msgid "Carousel height (in pixels)"
-#~ msgstr "Hauteur du carousel (en pixels)"
-
-#~ msgid "Ignore width and height parameters and make carousel responsive"
-#~ msgstr ""
-#~ "Ignorer les paramètres de largeur et de hauteur pour un carousel "
-#~ "responsive"
-
-#~ msgid "Items to show"
-#~ msgstr "Objets à montrer"
-
-#~ msgid "How much carousel items is visible"
-#~ msgstr "Combien d'objets du carousel seront visibles"
-
-#~ msgid "Scroll number"
-#~ msgstr "Nombre de scroll"
-
-#~ msgid "How much items are scrolled in one transition"
-#~ msgstr "Combien d'objets défileront dans une transition"
-
-#~ msgid "Display titles for each item"
-#~ msgstr "Afficher les titres de chaque objet"
-
-#~ msgid "Is carousel centered on the page"
-#~ msgstr "Le carousel sera centré dans la page"
-
-#~ msgid "Allow to rotate carousel with mouse wheel"
-#~ msgstr "Autoriser la rotation avec le défilement de la souris"
-
-#~ msgid ""
-#~ "Choose interval between auto animations. Set to 0 to disable autoplay"
-#~ msgstr ""
-#~ "Choisir l'interval entre chaque animation. Laissez à 0 pour désactiver le "
-#~ "défilement automatique"
-
-#~ msgid "Open carousel links in new window/tab"
-#~ msgstr "Ouvrez les liens du carousel dans une nouvelle fenêtre"
-
-#~ msgid "Customizable image carousel"
-#~ msgstr "Image personnalisable du carousel"
-
-#~ msgid "Choose source gallery, that will be used for this shortcode"
-#~ msgstr "Choisir la galerie qui sera utilisée pour ce shortcode"
-
-#~ msgid "Single item width (in pixels)"
-#~ msgstr "Largeur d'un objet (en pixels)"
-
-#~ msgid "Single item height (in pixels)"
-#~ msgstr "Hauteur d'un objet (en pixels)"
-
-#~ msgid "Never"
-#~ msgstr "Jamais"
-
-#~ msgid "On mouse over"
-#~ msgstr "Au passage de la souris"
-
-#~ msgid "Always"
-#~ msgstr "Toujours"
-
-#~ msgid "Title display mode"
-#~ msgstr "Mode d'affichage du titre"
-
-#~ msgid "Open links in new window/tab"
-#~ msgstr "Ouvrir les liens dans un nouvel onglet"
-
-#~ msgid "Customizable image gallery"
-#~ msgstr "Galerie d'images personnalisées"
-
-#~ msgid ""
-#~ "<b>Do not change this field value if you do not understand description "
-#~ "below.</b><br/>Relative path to the template file. Default templates is "
-#~ "placed under the plugin directory (templates folder). You can copy it "
-#~ "under your theme directory and modify as you want. You can use following "
-#~ "default templates that already available in the plugin directory:<br/><b"
-#~ "%value>templates/default-loop.php</b> - posts loop<br/><b%value>templates/"
-#~ "teaser-loop.php</b> - posts loop with thumbnail and title<br/><b"
-#~ "%value>templates/single-post.php</b> - single post template<br/><b"
-#~ "%value>templates/list-loop.php</b> - unordered list with posts titles"
-#~ msgstr ""
-#~ "<b>Ne changez pas la valeur de ce champ si vous ne comprenez pas la "
-#~ "description suivante.</b><br/>Chemin relatif ver le fichier de template. "
-#~ "Le template par défaut est placer le dossier du plugin (dossier "
-#~ "templates). Vous pouvez le copier dans le dossier de votre thème et le "
-#~ "modifier à votre convenance. Vous pouvez utiliser le template par défaut."
-#~ "<br/><b%value>templates/default-loop.php</b> - Boucle de posts<br/><b"
-#~ "%value>templates/teaser-loop.php</b> - Boucle d'articles avec miniatures "
-#~ "et titres<br/><b%value>templates/single-post.php</b> - Template article "
-#~ "unique<br/><b%value>templates/list-loop.php</b> - Liste non ordonnée avec "
-#~ "titres des articles."
-
-#~ msgid "Choose the authors whose posts you want to show"
-#~ msgstr "Choisissez les auteurs dont vous souhaitez affichez les articles"
-
-#~ msgid "Meta key"
-#~ msgstr "Mots clés"
-
-#~ msgid "Enter meta key name to show posts that have this key"
-#~ msgstr "Entrez les mots-clés pour montrer les articles similaires"
-
-#~ msgid "Meta key values"
-#~ msgstr "Valeur des mots-clés"
-
-#~ msgid "Plugin settings"
-#~ msgstr "Réglages du plugin"
-
-#~ msgid "Plugin homepage"
-#~ msgstr "Page d'accueil du plugin"
-
-#~ msgid "Support forums"
-#~ msgstr "Forum"
-
-#~ msgid "Close window"
-#~ msgstr "Fermer la fenêtre"
-
-#~ msgid "Max upload file size"
-#~ msgstr "Limte de téléversement de fichier"
-
-#~ msgid "Mb"
-#~ msgstr "Mb"
-
-#~ msgid "How to increase"
-#~ msgstr "Comment augmenter"
-
-#~ msgid "Shortcodes Ultimate"
-#~ msgstr "Shortcodes Ultimate"
-
-#~ msgid "Vladimir Anokhin"
-#~ msgstr "Vladimir Anokhin"
-
-#~ msgid "Supercharge your WordPress theme with mega pack of shortcodes"
-#~ msgstr "Ajoute à ton thème un nombre impressionnant de shortcode"
-
-#~ msgid ""
-#~ "<h1>Oops! Plugin not activated&hellip;</h1> <p>Shortcodes Ultimate is not "
-#~ "fully compatible with your version of WordPress (%s).<br />Reccomended "
-#~ "WordPress version &ndash; %s (or higher).</p><a href=\"%s\">&larr; Return "
-#~ "to the plugins screen</a> <a href=\"%s\"%s>Continue and activate anyway "
-#~ "&rarr;</a>"
-#~ msgstr ""
-#~ "<h1>Oops! Plugin non activé&hellip;</h1> <p>Shortcodes Ultimate n'est pas "
-#~ "totalement compatible avec cette version de WordPress (%s).<br />Version "
-#~ "de Wordpress recommandée &ndash; %s (ou plus).</p><a href=\"%s\">&larr; "
-#~ "Retour à l'écran des plugins</a> <a href=\"%s\"%s>Continuer et activer de "
-#~ "toute façon &rarr;</a>"
-
-#~ msgid ""
-#~ "<h1>Oops! Plugin not activated&hellip;</h1> <p>Shortcodes Ultimate is not "
-#~ "fully compatible with your PHP version (%s).<br />Reccomended PHP version "
-#~ "&ndash; %s (or higher).</p><a href=\"%s\">&larr; Return to the plugins "
-#~ "screen</a> <a href=\"%s\"%s>Continue and activate anyway &rarr;</a>"
-#~ msgstr ""
-#~ "<h1>Oops! Plugin non activé&hellip;</h1> <p>Shortcodes Ultimate n'est pas "
-#~ "totalement compatible avec cette version de PHP(%s).<br />Version de PHP "
-#~ "recommandée &ndash; %s (ou plus).</p><a href=\"%s\">&larr; Retour à "
-#~ "l'écran des plugins</a> <a href=\"%s\"%s>Continuer et activer de toute "
-#~ "façon &rarr;</a>"
-
-#~ msgid "Where to start?"
-#~ msgstr "Ou commencer"
-
-#~ msgid "Project homepage"
-#~ msgstr "Page d'accueil du projet"
-
-#~ msgid "Support forum"
-#~ msgstr "Forum de support"
-
-#~ msgid "Changelog"
-#~ msgstr "Changelog"
-
-#~ msgid "About"
-#~ msgstr "A propos"
-
-#~ msgid "Custom formatting"
-#~ msgstr "Mise en forme personnalisée"
-
-#~ msgid ""
-#~ "Disable this option if you have some problems with other plugins or "
-#~ "content formatting"
-#~ msgstr ""
-#~ "Désactiver cette option si vous avez des problèmes avec d'autres plugins "
-#~ "ou du contenu personnalisé"
-
-#~ msgid "Documentation article"
-#~ msgstr "Documentation article"
-
-#~ msgid "Enabled"
-#~ msgstr "Activé"
-
-#~ msgid "Compatibility mode"
-#~ msgstr "Mode de compatibilité"
-
-#~ msgid ""
-#~ "Enable this option if you have some problems with other plugins that uses "
-#~ "similar shortcode names"
-#~ msgstr ""
-#~ "Activer cette option si vous avez des problèmes avec d'autres plugins qui "
-#~ "utilisent des noms de shortcodes similaires"
-
-#~ msgid "etc."
-#~ msgstr "etc"
-
-#~ msgid "Skin"
-#~ msgstr "Skin"
-
-#~ msgid ""
-#~ "Choose skin for shortcodes.<br /><a href=\"%s\" target=\"_blank\">Learn "
-#~ "how to create custom skin</a><br /><a href=\"%s\" target=\"_blank"
-#~ "\"><b>Download more skins</b></a>"
-#~ msgstr ""
-#~ "Choisir les skins pour shortcodes.<br /><a href=\"%s\" target=\"_blank"
-#~ "\">Apprenez à faire des skins personnalisés</a><br /><a href=\"%s\" "
-#~ "target=\"_blank\"><b>Télécharger des skins</b></a>"
-
-#~ msgid "Custom CSS"
-#~ msgstr "CSS personnalisé"
-
-#~ msgid "Galleries"
-#~ msgstr "Galeries"
-
-#~ msgid "Cheatsheet"
-#~ msgstr "Pense-bête"
-
-#~ msgid "Special Shortcodes Ultimate widget"
-#~ msgstr "Widget Shortcodes Ultimate"
-
-#~ msgid "This is box title"
-#~ msgstr "C'est la zone de titre"
-
-#~ msgid "please specify correct url"
-#~ msgstr "Merci d'entrer une url"
-
-#~ msgid "This menu doesn't exists, or has no elements"
-#~ msgstr "Ce menu n'existe pas ou n'a pas d'éléments"
-
-#~ msgid "images not found"
-#~ msgstr "Pas d'images trouvées"
-
-#~ msgid "template not found"
-#~ msgstr "Template introuvable"
-
-#~ msgid "year"
-#~ msgstr "année"
-
-#~ msgid "month"
-#~ msgstr "mois"
-
-#~ msgid "week"
-#~ msgstr "semaine"
-
-#~ msgid "day"
-#~ msgstr "jour"
-
-#~ msgid "hour"
-#~ msgstr "heure"
-
-#~ msgid "minute"
-#~ msgstr "minute"
-
-#~ msgid "s"
-#~ msgstr "s"
-
-#~ msgid "username not specified"
-#~ msgstr "nom d'utilisateur non spécifié"
-
-#~ msgid "no public messages"
-#~ msgstr "pas de messages publiques"
-
-#~ msgid "Welcome to Shortcodes Ultimate"
-#~ msgstr "Bienvenue dans Shortcodes Ultimate"
-
-#~ msgid "A real swiss army knife for WordPress"
-#~ msgstr "Un véritable couteau suisse pour wordpress"
-
-#~ msgid "Add-ons"
-#~ msgstr "Add-ons"
-
-#~ msgid "Documentation"
-#~ msgstr "Documentation"
-
-#~ msgid "GitHub"
-#~ msgstr "GitHub"
-
-#~ msgid "Contact author"
-#~ msgstr "Contacter l'auteur"
-
-#~ msgid "Plugin features"
-#~ msgstr "Caractéristiques du Plugin"
-
-#~ msgid "30+ amazing shortcodes"
-#~ msgstr "+ de 30 shortcodes incroyables"
-
-#~ msgid "Power of CSS3 transitions"
-#~ msgstr "La puissance des transitions css3"
-
-#~ msgid "Handy shortcodes generator"
-#~ msgstr "Générateur rapide de shortcodes"
-
-#~ msgid "International"
-#~ msgstr "International"
-
-#~ msgid "Documented API"
-#~ msgstr "API documentée"
-
-#~ msgid "What is a shortcode?"
-#~ msgstr "Qu'est-ce qu'un shortcode ?"
-
-#~ msgid ""
-#~ "<strong>Shortcode</strong> is a WordPress-specific code that lets you do "
-#~ "nifty things with very little effort."
-#~ msgstr ""
-#~ "<strong>Shortcode</strong> est un code specifque pour Wordpress qui vous "
-#~ "permet de faire des choses sympathiques avec très peu d'effort."
-
-#~ msgid ""
-#~ "Shortcodes can embed files or create objects that would normally require "
-#~ "lots of complicated, ugly code in just one line. Shortcode = shortcut."
-#~ msgstr ""
-#~ "Les shortcodes peuvent incorporer des fichiers ou créer des objets "
-#~ "compliqués en une seule ligne. Shortcode = shortcut."
-
-#~ msgid "How it works"
-#~ msgstr "Comment ça fonctionne"
-
-#~ msgid "More videos"
-#~ msgstr "Plus de vidéos"
-
-#~ msgid "Shortcodes Ultimate Tutorial"
-#~ msgstr "Tutoriel Shortcodes Ultimate"
-
-#~ msgid "How to use special widget"
-#~ msgstr "Comment utiliser un widget spécial ?"
-
-#~ msgid "Shortcode"
-#~ msgstr "Shortcode"
-
-#~ msgid "Parameters"
-#~ msgstr "Paramètres"
-
-#~ msgid "Example"
-#~ msgstr "Exemple"
-
-#~ msgid "Demo"
-#~ msgstr "Démo"
-
-#~ msgid "Default value"
-#~ msgstr "Valeur par défaut"
-
-#~ msgid "-- no parameters --"
-#~ msgstr "-- pas de paramètres --"
-
-#~ msgid ""
-#~ "This action will remove all your custom CSS, galleries and settings. Are "
-#~ "you sure? This action cannot be undone!"
-#~ msgstr ""
-#~ "Restaurer les paramètres par défaut. Etes-vous sur ? Cette action ne peut-"
-#~ "être annulé !"
-
-#~ msgid "Insert code"
-#~ msgstr "Insérer le code"
-
-#~ msgid "You can see the original styles to override it"
-#~ msgstr "Vous pouvez voir les styles originaux écrasés"
-
-#~ msgid "You can use next variables in your custom CSS"
-#~ msgstr ""
-#~ "Vous pouvez utiliser les variables suivantes dans le css personnalisé"
-
-#~ msgid "home url"
-#~ msgstr "Url de la page d'accueil"
-
-#~ msgid "theme url"
-#~ msgstr "Url du theme"
-
-#~ msgid "plugin url"
-#~ msgstr "Url du plugin"
-
-#~ msgid ""
-#~ "Are you sure that you want to delete this gallery? This action can't be "
-#~ "undone!"
-#~ msgstr ""
-#~ "Etes-vous sur de vouloir effacer cette galerie ? Cette action est "
-#~ "définitive."
-
-#~ msgid ""
-#~ "Are you sure that you want to delete this image? This action can't be "
-#~ "undone!"
-#~ msgstr ""
-#~ "Etes-vous sur de vouloir effacer cette image ? Cette action est "
-#~ "définitive."
-
-#~ msgid "Create new gallery"
-#~ msgstr "Creér une nouvelle galerie"
-
-#~ msgid "Enter gallery name"
-#~ msgstr "Entrer le nom de la galerie"
-
-#~ msgid "Edit gallery"
-#~ msgstr "Editer la galerie"
-
-#~ msgid "Save &amp; close"
-#~ msgstr "Sauvegarder &amp; fermer"
-
-#~ msgid "Close"
-#~ msgstr "Fermer"
-
-#~ msgid "Delete"
-#~ msgstr "Effacer"
-
-#~ msgid "Add image"
-#~ msgstr "Ajouter une image"
-
-#~ msgid "Edit"
-#~ msgstr "Editer"
-
-#~ msgid "Instructions"
-#~ msgstr "Instructions"
-
-#~ msgid "Click to close"
-#~ msgstr "Cliquer pour fermet"
-
-#~ msgid "There is already default settings"
-#~ msgstr "C'est déjà le réglage par défaut"
-
-#~ msgid "Settings not saved, because there is no changes"
-#~ msgstr "Réglages non sauvegardés, parce qu'aucun changement"
-
-#~ msgid "Upload"
-#~ msgstr "Téléversement"
-
-#~ msgid "Posted"
-#~ msgstr "Publié"
-
-#~ msgid "0 comments"
-#~ msgstr "0 commentaires"
-
-#~ msgid "1 comment"
-#~ msgstr "0 commentaires"
-
-#~ msgid "%n comments"
-#~ msgstr "%ncommentaires"
-
-#~ msgid "No image URL has been entered."
-#~ msgstr "Aucune URL d'image n'a été entrée."
-
-#~ msgid "Failed to get $file_path information using getimagesize."
-#~ msgstr "Impossible d'obtenir des informations en utilisant file_path."
-
-#~ msgid "Resize path invalid (GIF)"
-#~ msgstr "Chemin de redimensionnement invalide(GIF)."
-
-#~ msgid "Resize path invalid (PNG)."
-#~ msgstr "Chemin de redimensionnement invalide(PNG)."
-
-#~ msgid "Resize path invalid (JPG)."
-#~ msgstr "Chemin de redimensionnement invalide(PNG)."
-
-#~ msgid "Failed to get $dest_file_name (resized image) info via @getimagesize"
-#~ msgstr ""
-#~ "Impossible d'obtenir les infos $dest_file_name (image recadrée) via @ "
-#~ "getimagesize"
-
-#~ msgid "Welcome"
-#~ msgstr "Bienvenue"
-
-#~ msgid "Metro"
-#~ msgstr "Metro"
-
-#~ msgid "Thin"
-#~ msgstr "Léger"
-
-#~ msgid "Choose heading style preset"
-#~ msgstr "Choisissez le style prédéfinie de Heading"
-
-#~ msgid "Choose tabs style preset"
-#~ msgstr "Choisissez le style prédéfinie de Tabs"
-
-#~ msgid "Select spoiler style preset"
-#~ msgstr "Sélectionner le style prédéfini du spoiler"
-
-#~ msgid "Select divider style preset"
-#~ msgstr "Sélectionner un style prédéfini de divider"
-
-#~ msgid "Quote style preset"
-#~ msgstr "Style de citation prédéfini"
-
-#~ msgid "Choose style preset for pullquote"
-#~ msgstr "Choisir un style prédéfini pour pullquote"
-
-#~ msgid "Align to left"
-#~ msgstr "Aligner à gauche"
-
-#~ msgid "Style preset for the inner columns"
-#~ msgstr "Style prédéfini de la colonne intérieur"
-
-#~ msgid "Extra CSS class for button"
-#~ msgstr "Classe spécifique pour ce bouton"
-
-#~ msgid "Hidden"
-#~ msgstr "Caché"
-
-#~ msgid "Player style preset"
-#~ msgstr "Style prédéfini du lecteur"
-
-#~ msgid "Minimal"
-#~ msgstr "Minimal"
-
-#~ msgid "Table style preset"
-#~ msgstr "Style prédéfini du tableau"
-
-#~ msgid "Box style preset. This box will be shown for not logged users only"
-#~ msgstr ""
-#~ "Style de zone prédéfini. Cette zone sera montré aux membres uniquement"
-
-#~ msgid "Toggle fullscreen"
-#~ msgstr "Passer en mode plein écran"
+#~ msgid "by"
+#~ msgstr "par"
