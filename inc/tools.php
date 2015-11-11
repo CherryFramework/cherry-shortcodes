@@ -151,18 +151,23 @@ class Cherry_Shortcodes_Tools {
 	 */
 	public static function get_icon_html( $icon, $class = 'cherry-icon', $alt = null, $style = array() ) {
 
-		if ( ! $icon ) {
+		if ( ! $icon || 'none' == $icon ) {
 			return false;
 		}
 
 		if ( false !== strpos( $icon, 'icon:' ) ) {
 
-			$icon  = trim( str_replace( 'icon:', '', $icon ) );
-			$style = sprintf( ' style="%s"', Cherry_Shortcodes_Tools::prepare_styles( $style ) );
+			$icon       = trim( str_replace( 'icon:', '', $icon ) );
+			$style      = Cherry_Shortcodes_Tools::prepare_styles( $style );
+			$rand_class = Cherry_Shortcodes_Tools::rand_class( 'icon' );
+			$style      = sprintf( '%s{%s}', $rand_class, $style );
+			$class     .= ' ' . Cherry_Shortcodes_Tools::esc_class( $rand_class );
+
+			Cherry_Shortcodes_Tools::print_styles( $style );
 
 			return sprintf(
-				'<span class="%1$s %2$s"%3$s></span>',
-				esc_attr( $icon ), esc_attr( $class ), $style
+				'<span class="%1$s %2$s"></span>',
+				esc_attr( $icon ), esc_attr( $class )
 			);
 
 		} else {
@@ -217,6 +222,55 @@ class Cherry_Shortcodes_Tools {
 
 		return $result;
 
+	}
+
+	/**
+	 * Grab all shortcode styles for current page into separate tag and iclude it in footer
+	 * or directly print style if grabbing logic not defined
+	 *
+	 * @since  1.0.7
+	 * @param  string $style CSS styles set.
+	 * @return void|bool
+	 */
+	public static function print_styles( $style = null ) {
+
+		if ( ! $style ) {
+			return false;
+		}
+
+		if ( ! function_exists( 'cherry_add_generated_style' ) ) {
+			printf( '<style>%s</style>', $style );
+			return true;
+		}
+
+		cherry_add_generated_style( $style );
+
+	}
+
+	/**
+	 * Get random CSS class for specific shortcode
+	 *
+	 * @since  1.0.7
+	 * @param  string $shortcode shortcode name.
+	 * @return string
+	 */
+	public static function rand_class( $shortcode = 'cherry' ) {
+
+		$num = rand( 100, 999 );
+
+		return esc_attr( sprintf( '.%s-%d', $shortcode, $num ) );
+
+	}
+
+	/**
+	 * Escape CSS class name to use in HTML string
+	 *
+	 * @since  1.0.7
+	 * @param  string $css_class CSS class name.
+	 * @return string
+	 */
+	public static function esc_class( $css_class = null ) {
+		return esc_attr( trim( $css_class, '.' ) );
 	}
 
 	public static function icons() {
@@ -367,6 +421,11 @@ class Cherry_Shortcodes_Tools {
 		$image = '';
 		//resize & crop img
 		$croped_image_url = aq_resize( $img_url, $width, $height, true );
+
+		if( !$croped_image_url ){
+			$croped_image_url = $img_url;
+		}
+
 		// get $pathinfo
 		$pathinfo = pathinfo( $croped_image_url );
 		//get $attachment metadata
@@ -385,6 +444,52 @@ class Cherry_Shortcodes_Tools {
 		$image .= '<img class="wp-post-image croped-image ' . $custom_class . '" data-ratio="' . $ratio_value . '" width="' . $width . '" height="' . $height .'" src="' . $croped_image_url . '" alt="'. $alt_value .'">';
 
 		return $image;
+	}
+
+	/**
+	 * Get CSS class name for shortcode by template name
+	 *
+	 * @since  1.0.6
+	 * @param  string $template template name
+	 * @return string|bool false
+	 */
+	public static function get_template_class( $template ) {
+
+		if ( ! $template ) {
+			return false;
+		}
+
+		$prefix = apply_filters( 'cherry_shortcodes_template_class_prefix', 'template' );
+		$class  = sprintf( '%s-%s', esc_attr( $prefix ), esc_attr( str_replace( '.tmpl', '', $template ) ) );
+
+		return $class;
+	}
+
+	/**
+	 * Get spacer div with specific CSS classes and tr
+	 *
+	 * @since  1.0.6
+	 * @param  string $size    spacer value.
+	 * @param  array  $classes spacer block CSS classes.
+	 * @return string
+	 */
+	public static function get_spacer_block( $size, $classes ) {
+
+		$size = intval( $size );
+
+		if ( 0 <= $size ) {
+			$prop = 'height';
+			$size = (string)$size . 'px';
+		} else {
+			$prop = 'margin-top';
+			$size = (string)$size . 'px';
+		}
+
+		return sprintf(
+			'<div class="%3$s" style="%1$s:%2$s;"></div>',
+			$prop, $size, esc_attr( implode( ' ', $classes ) )
+		);
+
 	}
 
 	/**

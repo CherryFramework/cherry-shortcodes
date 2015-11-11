@@ -247,6 +247,13 @@ jQuery(document).ready(function($) {
 						}
 					});
 				});
+				// Init date pickers
+				$('.cherry-generator-select-date').each(function(index) {
+					$(this).find('.cherry-generator-select-date-value').datepicker({
+						showAnim: 'fadeIn',
+						dateFormat: 'dd/mm/yy'
+					});
+				});
 				// Init image sourse pickers
 				$('.cherry-generator-isp').each(function() {
 					var $picker = $(this),

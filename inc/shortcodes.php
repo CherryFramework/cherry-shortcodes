@@ -87,12 +87,16 @@ class Cherry_Shortcodes_Handler {
 		}
 
 		if ( !empty( $inline_styles ) ) {
-			$attr_style = '';
+			$styles = '';
 			foreach ( $inline_styles as $property => $value ) {
-				$attr_style .= $property . ':' . $value . ';';
+				$styles .= $property . ':' . $value . ';';
 			}
 			unset( $property, $value );
-			$btn_atts['style'] = $attr_style;
+
+			$rand_class = Cherry_Shortcodes_Tools::rand_class( 'button' );
+			$classes[]  = Cherry_Shortcodes_Tools::esc_class( $rand_class );
+
+			Cherry_Shortcodes_Tools::print_styles( sprintf( '.cherry-btn%s{%s}', $rand_class, $styles ) );
 		}
 
 		$btn_atts['class'] = implode( ' ', $classes );
@@ -142,11 +146,12 @@ class Cherry_Shortcodes_Handler {
 		}
 
 		// Build icon.
-		$icon = $atts['icon'];
-		if ( ! empty( $atts['icon'] ) ) {
+		if ( ! empty( $atts['icon'] ) && 'none' !== $atts['icon'] ) {
 			$icon = Cherry_Shortcodes_Tools::get_icon_html(
 				$atts['icon'], $base . '-icon icon-position-' . esc_attr( $atts['icon_position'] )
 			);
+		} else {
+			$icon = '';
 		}
 
 		$btn_text = sanitize_text_field( $atts['text'] );
@@ -226,6 +231,7 @@ class Cherry_Shortcodes_Handler {
 		$atts = shortcode_atts( array(
 			'icon'  => '',
 			'size'  => 20,
+			'align' => 'none',
 			'color' => '',
 			'class' => '',
 		), $atts, 'icon' );
@@ -234,12 +240,18 @@ class Cherry_Shortcodes_Handler {
 			return;
 		}
 
+		$align = in_array( $atts['align'], array( 'none', 'left', 'center', 'right' ) ) ? $atts['align'] : 'none';
+
 		$style = array();
 		$style['font-size'] = ( 0 != absint( $atts['size'] ) ) ? absint( $atts['size'] ) . 'px' : false;
 		$style['color']     = ( !empty( $atts['color'] ) ) ? esc_attr( $atts['color'] ) : false;
 
 		$class  = esc_attr( $atts['class'] );
 		$output = Cherry_Shortcodes_Tools::get_icon_html( $atts['icon'], 'cherry-icon ' . $class, null, $style );
+
+		if ( 'none' !== $align ) {
+			$output = sprintf( '<div class="align%1$s">%2$s</div>', $align, $output );
+		}
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'icon' );
 	}
@@ -274,7 +286,15 @@ class Cherry_Shortcodes_Handler {
 		self::$post_data = array_merge( array( 'tag' => 'banner' ), self::$post_data );
 
 		$result = preg_replace_callback( self::$macros_pattern, array( 'self', 'replace_callback' ), $template );
-		$result = '<div class="cherry-banner ' . esc_attr( $atts['class'] ) . '">' . $result . '</div>';
+
+		$wrap_classes   = array();
+		$wrap_classes[] = 'cherry-banner';
+		$wrap_classes[] = Cherry_Shortcodes_Tools::get_template_class( $atts['template'] );
+		$wrap_classes[] = esc_attr( $atts['class'] );
+
+		$classes = implode( ' ', $wrap_classes );
+
+		$result = '<div class="' . $classes . '">' . $result . '</div>';
 
 		return apply_filters( 'cherry_shortcodes_output', $result, $atts, 'banner' );
 	}
@@ -306,6 +326,9 @@ class Cherry_Shortcodes_Handler {
 		} else {
 			$preset_classes[] = 'inner';
 		}
+
+		$rand_class = Cherry_Shortcodes_Tools::rand_class( 'box' );
+		$classes[]  = Cherry_Shortcodes_Tools::esc_class( $rand_class );
 
 		$classes = array_filter( $classes );
 		$class   = implode( ' ', $classes );
@@ -348,9 +371,20 @@ class Cherry_Shortcodes_Handler {
 			$styles['background-color'] = esc_attr( $atts['bg_color'] );
 		}
 
-		$style  = Cherry_Shortcodes_Tools::prepare_styles( $styles );
-		$format = apply_filters( 'cherry_shortcode_box_format', '<div class="%s"><div class="%s" style="%s">%s</div></div>' );
-		$output = sprintf( $format, $class, $preset_class, $style, do_shortcode( $content ) );
+		$style = Cherry_Shortcodes_Tools::prepare_styles( $styles );
+
+		Cherry_Shortcodes_Tools::print_styles( sprintf( '%s{%s}', $rand_class, $style ) );
+
+		/**
+		 * Filter a shortcode format for outputing.
+		 *
+		 * @since 1.0.0
+		 * @since 1.0.6.2 Added new additional variable for filter - $atts.
+		 * @param string $format Shortcode format.
+		 * @param array  $atts   Shortcode attributes.
+		 */
+		$format = apply_filters( 'cherry_shortcode_box_format', '<div class="%s"><div class="%s">%s</div></div>', $atts );
+		$output = sprintf( $format, $class, $preset_class, do_shortcode( $content ) );
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'box' );
 	}
@@ -410,11 +444,17 @@ class Cherry_Shortcodes_Handler {
 		$classes[] = esc_attr( $atts['class'] );
 		$classes[] = 'align-' . $atts['align'];
 
-		$format  = '<div class="%1$s" style="%2$s">%3$s</div>';
+		$rand_class = Cherry_Shortcodes_Tools::rand_class( 'dropcap' );
+		$classes[]  = Cherry_Shortcodes_Tools::esc_class( $rand_class );
+
+		$format  = '<div class="%1$s">%2$s</div>';
 		$classes = implode( ' ', $classes );
 		$style   = Cherry_Shortcodes_Tools::prepare_styles( $style );
+
+		Cherry_Shortcodes_Tools::print_styles( sprintf( '%s{%s}', $rand_class, $style ) );
+
 		$content = do_shortcode( $content );
-		$output  = sprintf( $format, $classes, $style, $content );
+		$output  = sprintf( $format, $classes, $content );
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'dropcap' );
 	}
@@ -438,7 +478,7 @@ class Cherry_Shortcodes_Handler {
 		$format = apply_filters(
 			'cherry_shortcodes_title_box_format',
 			array(
-				'global'   => '<div class="title-box %4$s">%3$s<div class="title-box_content"><h2 class="title-box_title">%1$s</h2>%2$s</div>%5$s</div>',
+				'global'   => '<div class="%4$s">%3$s<div class="title-box_content"><h2 class="title-box_title">%1$s</h2>%2$s</div></div>',
 				'subtitle' => '<h4 class="title-box_subtitle">%s</h4>'
 			),
 			$atts
@@ -451,48 +491,86 @@ class Cherry_Shortcodes_Handler {
 
 		$icon = Cherry_Shortcodes_Tools::get_icon_html( $atts['icon'], 'title-box_icon', $atts['title'], $style );
 
-		$uniq_class = 'title-box_' . rand(1000,9999);
+		$uniq_class = Cherry_Shortcodes_Tools::rand_class( 'title_box' );
 
 		$title_color    = esc_attr( $atts['title_color'] );
 		$subtitle_color = esc_attr( $atts['subtitle_color'] );
 
-		$title_style  = '<style>';
+		$title_style = '';
+
 		if ( $title_color ) {
-			$title_style .= '.' . $uniq_class . ' .title-box_title { color: ' . $title_color . '; }';
+			$title_style .= $uniq_class . ' .title-box_title { color: ' . $title_color . '; }';
 		}
 		if ( $subtitle_color ) {
-			$title_style .= '.' . $uniq_class . ' .title-box_subtitle { color: ' . $subtitle_color . '; }';
+			$title_style .= $uniq_class . ' .title-box_subtitle { color: ' . $subtitle_color . '; }';
 		}
-		$title_style .= '</style>';
+
+		Cherry_Shortcodes_Tools::print_styles( $title_style );
 
 		$title    = wp_kses( $atts['title'], 'default' );
 		$subtitle = ( ! empty( $atts['subtitle'] ) )
 						? sprintf( $format['subtitle'], wp_kses( $atts['subtitle'], 'default' ) )
 						: '';
-		$class    = esc_attr( $atts['class'] . ' ' . $uniq_class );
 
-		$output = sprintf( $format['global'], $title, $subtitle, $icon, $class, $title_style );
+		$classes[] = 'title-box';
+		$classes[] = $atts['class'];
+		$classes[] = Cherry_Shortcodes_Tools::esc_class( $uniq_class );
+
+		$class = implode( ' ', array_filter( $classes ) );
+
+		// Empty 5-th arguments for backward compatibility.
+		$depraceted = '';
+		$output     = sprintf( $format['global'], $title, $subtitle, $icon, $class, $depraceted );
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'title_box' );
 	}
 
 	public static function spacer( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
-			'size'  => '20',
-			'class' => '',
+			'size'    => '20',
+			'size_sm' => '',
+			'size_xs' => '',
+			'class'   => '',
 		), $atts, 'spacer' );
 
-		$size = intval( $atts['size'] );
+		$classes = array( 'cherry-spacer' );
 
-		if ( 0 <= $size ) {
-			$prop = 'height';
-			$size = (string)$size . 'px';
-		} else {
-			$prop = 'margin-top';
-			$size = (string)$size . 'px';
+		if ( ! empty( $atts['class'] ) ) {
+			$classes[] = esc_attr( $atts['class'] );
 		}
 
-		$output = '<div class="cherry-spacer' . cherry_esc_class_attr( $atts ) . '" style="' . $prop . ':' . $size . '"></div>';
+		if ( empty( $atts['size_sm'] ) && empty( $atts['size_xs'] ) ) {
+
+			$output = Cherry_Shortcodes_Tools::get_spacer_block( $atts['size'], $classes );
+			return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'spacer' );
+		}
+
+		$size_md = $atts['size'];
+		$size_sm = $atts['size_sm'];
+		$size_xs = $atts['size_xs'];
+
+		if ( ! $size_sm ) {
+			$size_sm = $size_md;
+		}
+
+		if ( ! $size_xs ) {
+			$size_xs = $size_sm;
+		}
+
+		$md_classes = $classes;
+		$sm_classes = $classes;
+		$xs_classes = $classes;
+
+		$md_classes[] = 'hidden-xs';
+		$md_classes[] = 'hidden-sm';
+
+		$sm_classes[] = 'visible-sm-block';
+
+		$xs_classes[] = 'visible-xs-block';
+
+		$output  = Cherry_Shortcodes_Tools::get_spacer_block( $size_md, $md_classes );
+		$output .= Cherry_Shortcodes_Tools::get_spacer_block( $size_sm, $sm_classes );
+		$output .= Cherry_Shortcodes_Tools::get_spacer_block( $size_xs, $xs_classes );
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'spacer' );
 	}
@@ -1030,8 +1108,9 @@ class Cherry_Shortcodes_Handler {
 			endwhile;
 
 			// Prepare the CSS classes for list.
-			$wrap_classes        = array();
-			$wrap_classes[]      = 'cherry-posts-list';
+			$wrap_classes   = array();
+			$wrap_classes[] = 'cherry-posts-list';
+			$wrap_classes[] = Cherry_Shortcodes_Tools::get_template_class( $atts['template'] );
 
 			if ( ( ! empty( $atts['col_xs'] ) && 'none' !== $atts['col_xs'] )
 				|| ( ! empty( $atts['col_sm'] ) && 'none' !== $atts['col_sm'] )
@@ -1393,6 +1472,7 @@ class Cherry_Shortcodes_Handler {
 			$wrap_classes   = array();
 			$wrap_classes[] = 'cherry-swiper-carousel';
 			$wrap_classes[] = 'swiper-container';
+			$wrap_classes[] = Cherry_Shortcodes_Tools::get_template_class( $atts['template'] );
 
 			if ( $atts['class'] ) {
 				$wrap_classes[] = esc_attr( $atts['class'] );
@@ -2021,6 +2101,128 @@ class Cherry_Shortcodes_Handler {
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'video_preview' );
 	}
 
+	public static function countdown( $atts = null, $content = null ) {
+		$atts = shortcode_atts( array(
+			'start_date'          => date('d/n/Y'),
+			'countdown_date'      => '25/10/2020',
+			'countdown_hour'      => 0,
+			'countdown_minutes'   => 0,
+			'countdown_seconds'   => 0,
+			'show_year'           => 'yes',
+			'show_month'          => 'yes',
+			'show_week'           => 'yes',
+			'show_day'            => 'yes',
+			'show_hour'           => 'yes',
+			'show_minute'         => 'yes',
+			'show_second'         => 'yes',
+			'circle_mode'         => 'yes',
+			'item_size'           => 100,
+			'stroke_width'        => 3,
+			'stroke_color'        => 3,
+			'custom_class'        => '',
+		), $atts, 'counter' );
+
+		$start_date_array = explode('/', $atts['start_date']);
+		$final_date_array = explode('/', $atts['countdown_date']);
+
+		$countdown_hour = (string)$atts['countdown_hour'];
+		$countdown_minutes = (string)$atts['countdown_minutes'];
+		$countdown_seconds = (string)$atts['countdown_seconds'];
+
+		$show_year = ( bool ) ( 'yes' === $atts['show_year'] ) ? true : false;
+		$show_month = ( bool ) ( 'yes' === $atts['show_month'] ) ? true : false;
+		$show_week = ( bool ) ( 'yes' === $atts['show_week'] ) ? true : false;
+		$show_day = ( bool ) ( 'yes' === $atts['show_day'] ) ? true : false;
+		$show_hour = ( bool ) ( 'yes' === $atts['show_hour'] ) ? true : false;
+		$show_minute = ( bool ) ( 'yes' === $atts['show_minute'] ) ? true : false;
+		$show_second = ( bool ) ( 'yes' === $atts['show_second'] ) ? true : false;
+		$circle_mode = ( bool ) ( 'yes' === $atts['circle_mode'] ) ? true : false;
+		$item_size = ( int ) $atts['item_size'];
+		$stroke_width = ( int ) $atts['stroke_width'];
+		$stroke_color = esc_attr( $atts['stroke_color'] );
+		$countdown_content = do_shortcode( $content );
+
+		$custom_class = sanitize_text_field( $atts['custom_class'] );
+		$custom_class = ( !'' == $custom_class ) ? ' ' . $custom_class : $custom_class ;
+
+		$data_attr_line = '';
+		$data_attr_line .= 'data-final-date="' . $atts['countdown_date'] . '"';
+		$data_attr_line .= 'data-start-date="' . $atts['start_date'] . '"';
+		$data_attr_line .= 'data-hour="' . $countdown_hour . '"';
+		$data_attr_line .= 'data-minutes="' . $countdown_minutes . '"';
+		$data_attr_line .= 'data-seconds="' . $countdown_seconds . '"';
+		$data_attr_line .= 'data-size="' . $item_size . '"';
+		$data_attr_line .= 'data-stroke-width="' . $stroke_width . '"';
+		$data_attr_line .= 'data-stroke-color="' . $stroke_color . '"';
+
+		$countdown_settings = array(
+			'year' => array(
+				'solus_title'	=> __( 'Year', 'cherry-shortcodes' ),
+				'plural_title'	=> __( 'Years', 'cherry-shortcodes' ),
+				'show'			=> $show_year,
+			),
+			'month' => array(
+				'solus_title'	=> __( 'Month', 'cherry-shortcodes' ),
+				'plural_title'	=> __( 'Months', 'cherry-shortcodes' ),
+				'show'			=> $show_month,
+			),
+			'week' => array(
+				'solus_title'	=> __( 'Week', 'cherry-shortcodes' ),
+				'plural_title'	=> __( 'Weeks', 'cherry-shortcodes' ),
+				'show'			=> $show_week,
+			),
+			'day' => array(
+				'solus_title'	=> __( 'Day', 'cherry-shortcodes' ),
+				'plural_title'	=> __( 'Days', 'cherry-shortcodes' ),
+				'show'			=> $show_day,
+			),
+			'hour' => array(
+				'solus_title'	=> __( 'Hour', 'cherry-shortcodes' ),
+				'plural_title'	=> __( 'Hours', 'cherry-shortcodes' ),
+				'show'			=> $show_hour,
+			),
+			'minute' => array(
+				'solus_title'	=> __( 'Minute', 'cherry-shortcodes' ),
+				'plural_title'	=> __( 'Minutes', 'cherry-shortcodes' ),
+				'show'			=> $show_minute,
+			),
+			'second' => array(
+				'solus_title'	=> __( 'Second', 'cherry-shortcodes' ),
+				'plural_title'	=> __( 'Seconds', 'cherry-shortcodes' ),
+				'show'			=> $show_second,
+			),
+		);
+		$html = '<div class="countdown-wrapper">';
+			$html .= '<div class="countdown-timer" ' . $data_attr_line . '>';
+				foreach ( $countdown_settings as $item => $item_settings ) {
+					if( $item_settings['show'] ){
+						$html .= '<div class="countdown-item ' . $item . '" data-solus="' . $item_settings['solus_title'] . '" data-plural="' . $item_settings['plural_title'] . '">';
+							if( $circle_mode ){
+								$html .= '<svg class="circle-progress" width="' . $item_size . '" height="' . $item_size . '" viewPort="0 0 '. $item_size  .' ' . $item_size . '" version="1.1" xmlns="http://www.w3.org/2000/svg">';
+									$delta_radius = ( $item_size / 2 ) - ( $stroke_width / 2 );
+									$html .= '<circle class="border" r="' . $delta_radius . '" cx="' . $item_size / 2 . '" cy="' . $item_size / 2 . '" fill="transparent" ></circle>';
+									$html .= '<circle class="circle" r="' . $delta_radius . '" cx="' . $item_size / 2 . '" cy="' . $item_size / 2 . '" fill="transparent" ></circle>';
+								$html .= '</svg>';
+							}
+							$html .= '<div class="countdown-info">';
+								$html .= '<div class="inner">';
+									$html .= '<span class="value"></span>';
+									$html .= '<span class="title"></span>';
+								$html .= '</div>';
+							$html .= '</div>';
+						$html .= '</div>';
+					}
+				}
+			$html .= '</div>';
+			$html .= '<div class="countdown-content">';
+				$html .= $countdown_content;
+			$html .= '</div>';
+		$html .= '</div>';
+
+		cherry_query_asset( 'js', array( 'jquery-countdown', 'cherry-shortcodes-init' ) );
+
+		return apply_filters( 'cherry_shortcodes_output', $html, $atts, 'countdown' );
+	}
 	/**
 	 * Prepare template data to replace
 	 *

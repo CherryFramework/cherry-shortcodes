@@ -85,6 +85,9 @@ class Cherry_Shortcodes_Assets {
 		wp_register_script( 'video-preview', plugins_url( 'assets/js/shotcodes/video-preview.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 		wp_register_script( 'video-youtube', 'https://www.youtube.com/player_api/', array( 'jquery' , 'video-preview' ), null, true );
 
+		// Countdown
+		wp_register_script( 'jquery-countdown', plugins_url( 'assets/js/shotcodes/jquery.countdown.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
+
 		// Page Anchor.
 		wp_register_script( 'page-anchor', plugins_url( 'assets/js/shotcodes/page-anchor.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 
@@ -136,7 +139,7 @@ class Cherry_Shortcodes_Assets {
 		// Font Awesome.
 		wp_register_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', false, '4.4.0', 'all' );
 
-		wp_register_script( 'cherry-shortcodes-generator', plugins_url( 'assets/js/generator.js', CHERRY_SHORTCODES_FILE ), array( 'wp-color-picker', 'magnific-popup' ), CHERRY_SHORTCODES_VERSION, true );
+		wp_register_script( 'cherry-shortcodes-generator', plugins_url( 'assets/js/generator.js', CHERRY_SHORTCODES_FILE ), array( 'wp-color-picker', 'magnific-popup', 'jquery-ui-datepicker' ), CHERRY_SHORTCODES_VERSION, true );
 		wp_register_style( 'cherry-shortcodes-generator', plugins_url( 'assets/css/generator.css', CHERRY_SHORTCODES_FILE ), array( 'wp-color-picker', 'magnific-popup' ), CHERRY_SHORTCODES_VERSION, 'all' );
 
 		wp_localize_script( 'cherry-shortcodes-generator', 'cherry_shortcodes_generator', array(
