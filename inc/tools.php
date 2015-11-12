@@ -239,7 +239,7 @@ class Cherry_Shortcodes_Tools {
 		}
 
 		if ( ! function_exists( 'cherry_add_generated_style' ) ) {
-			printf( '<style>%s</style>', $style );
+			printf( '<style scoped>%s</style>', $style );
 			return true;
 		}
 
