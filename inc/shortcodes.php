@@ -379,7 +379,7 @@ class Cherry_Shortcodes_Handler {
 		 * Filter a shortcode format for outputing.
 		 *
 		 * @since 1.0.0
-		 * @since 1.0.6.2 Added new additional variable for filter - $atts.
+		 * @since 1.0.7  Added new additional variable for filter - $atts.
 		 * @param string $format Shortcode format.
 		 * @param array  $atts   Shortcode attributes.
 		 */
@@ -1719,11 +1719,11 @@ class Cherry_Shortcodes_Handler {
 
 	public static function parallax_image( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
-			'bg_image'         => '',
-			'speed'            => '1.5',
-			'invert'           => 'no',
-			'min_height'       => '300',
-			'custom_class'     => '',
+			'bg_image'     => '',
+			'speed'        => '1.5',
+			'invert'       => 'no',
+			'min_height'   => '300',
+			'custom_class' => '',
 		), $atts, 'parallax_image' );
 
 		$bg_image     = sanitize_text_field( $atts['bg_image'] );
@@ -1732,7 +1732,7 @@ class Cherry_Shortcodes_Handler {
 		$min_height   = floatval( $atts['min_height'] );
 		$custom_class = sanitize_text_field( $atts['custom_class'] );
 
-		if ( !$bg_image ) {
+		if ( ! $bg_image ) {
 			return;
 		}
 
