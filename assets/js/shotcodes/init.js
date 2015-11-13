@@ -199,14 +199,20 @@
 				,	sizeData = $timer.data('size')
 				,	strokeWidth = $timer.data('stroke-width')
 				,	strokeColor = $timer.data('stroke-color')
-				,	finalDateString = finalDateArray[2] + '/' + finalDateArray[1] + '/' + finalDateArray[0] + ' ' + hourData + ':' + minutesData + ':' + secondsData
+				,	finalDateString = ''
 				,	daysInMonth = new Date().daysInMonth()
+				,	currDate = new Date()
+				,	currentTimeZoneOffset = -currDate.getTimezoneOffset()/60
+				,	finalDateObj = new Date(finalDateArray[2], finalDateArray[1], finalDateArray[0], hourData, minutesData, secondsData, 0 )
 				;
 
 				$itemList.css({'width':sizeData, 'height':sizeData });
 				$('.circle-progress circle.circle', $itemList).css({ 'stroke-width':strokeWidth, 'stroke':strokeColor });
 				$('.circle-progress circle.border', $itemList).css({ 'stroke-width':strokeWidth - 1 });
 
+				//finalDateObj.setHours(finalDateObj.getHours() + currentTimeZoneOffset);
+
+				finalDateString = finalDateArray[2] + '/' + finalDateArray[1] + '/' + finalDateArray[0] + ' ' + finalDateObj.getHours() + ':' + minutesData + ':' + secondsData;
 				$timer.countdown(finalDateString, function(event) {
 					var
 						year = event.strftime('%Y')

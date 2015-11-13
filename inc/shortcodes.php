@@ -2020,14 +2020,33 @@ class Cherry_Shortcodes_Handler {
 				$response = Cherry_Shortcodes_Tools::remote_query( 'https://player.vimeo.com/video/' . $video_id . '/config' );
 
 				if ( $response ) {
-					$file_codes = $response->request->files->codecs[0];
+					$file_codes = $response->request->files->progressive;
 
 					if ( strpos( $custom_class, 'full-width' ) !== false && ( $is_mobile === 'false' ) ) {
 						$poster_size = '1280';
-						$source = $response->request->files->$file_codes->hd->url;
+						$source = $response->request->files->progressive[0]->url;
+
+						foreach ( $file_codes as $code => $code_info ) {
+							if( '720p' == $code_info->quality ){
+								$source = $response->request->files->progressive[$code]->url;
+								break;
+							}
+							if( '1080p' == $code_info->quality ){
+								$source = $response->request->files->progressive[$code]->url;
+								break;
+							}
+						}
 					} else {
 						$poster_size = '640';
-						$source = $response->request->files->$file_codes->sd->url;
+						$source = $response->request->files->progressive[0]->url;
+
+						foreach ( $file_codes as $code => $code_info ) {
+							if( '360p' == $code_info->quality ){
+								$source = $response->request->files->progressive[$code]->url;
+								break;
+							}
+						}
+
 					}
 
 					if ( ! $poster ) {
@@ -2135,15 +2154,21 @@ class Cherry_Shortcodes_Handler {
 		$custom_class = sanitize_text_field( $atts['custom_class'] );
 		$custom_class = ( !'' == $custom_class ) ? ' ' . $custom_class : $custom_class ;
 
+
 		$data_attr_line = '';
-		$data_attr_line .= 'data-final-date="' . $atts['countdown_date'] . '"';
 		$data_attr_line .= 'data-start-date="' . $atts['start_date'] . '"';
+		$data_attr_line .= 'data-final-date="' . $atts['countdown_date'] . '"';
 		$data_attr_line .= 'data-hour="' . $countdown_hour . '"';
 		$data_attr_line .= 'data-minutes="' . $countdown_minutes . '"';
 		$data_attr_line .= 'data-seconds="' . $countdown_seconds . '"';
 		$data_attr_line .= 'data-size="' . $item_size . '"';
 		$data_attr_line .= 'data-stroke-width="' . $stroke_width . '"';
 		$data_attr_line .= 'data-stroke-color="' . $stroke_color . '"';
+
+		$utc_time = gmdate("d/n/Y H:i:s");
+		$data_attr_line .= 'data-stroke-color="' . $stroke_color . '"';
+		$data_attr_line .= 'data-utc-time="' . $utc_time . '"';
+
 
 		$countdown_settings = array(
 			'year' => array(
