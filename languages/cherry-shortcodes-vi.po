@@ -1,20 +1,23 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Cherry Shortcodes\n"
+"Project-Id-Version: cherry-shortcodes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-30 17:19+0300\n"
-"PO-Revision-Date: 2015-07-30 17:19+0300\n"
-"Last-Translator: \n"
-"Language-Team: Top1best's WP-based blog | http://top1best.com <trong."
-"dzang@gmail.com>\n"
+"POT-Creation-Date: 2015-10-30 13:04+0200\n"
+"PO-Revision-Date: 2015-10-30 13:04+0200\n"
+"Last-Translator: J.L.Dokter <jldokter@gmail.com>\n"
+"Language-Team: Cherry Team <support@cherryframework.com>\n"
 "Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: _e;__\n"
-"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.6\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.8.3\n"
+"X-Poedit-KeywordsList: _e;__;_n:1,2;_n_noop:1,2;_x:1,2c;_nx:1,2,4c;"
+"_nx_noop:1,2,3c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: inc/assets.php:143 inc/vendor/sunrise.php:179
@@ -57,7 +60,7 @@ msgstr ""
 msgid "Typography"
 msgstr ""
 
-#: inc/data.php:33 inc/generator.php:231
+#: inc/data.php:33 inc/generator.php:251
 msgid "Content"
 msgstr "Nội dung"
 
@@ -73,7 +76,7 @@ msgstr ""
 msgid "Other"
 msgstr "Khác"
 
-#: inc/data.php:45 inc/data.php:1011 inc/data.php:1318
+#: inc/data.php:45 inc/data.php:1074 inc/data.php:1381
 msgid "None"
 msgstr "Không có"
 
@@ -121,25 +124,26 @@ msgstr "Loại"
 msgid "Type width"
 msgstr ""
 
-#: inc/data.php:86 inc/data.php:118 inc/data.php:174 inc/data.php:226
-#: inc/data.php:253 inc/data.php:269 inc/data.php:307 inc/data.php:395
-#: inc/data.php:485 inc/data.php:532 inc/data.php:592 inc/data.php:654
-#: inc/data.php:728 inc/data.php:905 inc/data.php:927 inc/data.php:1093
-#: inc/data.php:1419 inc/data.php:1469 inc/data.php:1518 inc/data.php:1563
-#: inc/data.php:1582
+#: inc/data.php:86 inc/data.php:118 inc/data.php:194 inc/data.php:266
+#: inc/data.php:293 inc/data.php:309 inc/data.php:347 inc/data.php:446
+#: inc/data.php:547 inc/data.php:595 inc/data.php:655 inc/data.php:717
+#: inc/data.php:791 inc/data.php:968 inc/data.php:990 inc/data.php:1156
+#: inc/data.php:1487 inc/data.php:1537 inc/data.php:1586 inc/data.php:1631
+#: inc/data.php:1650 inc/data.php:1791 inc/data.php:1848 inc/data.php:1902
+#: inc/data.php:2029 inc/data.php:2091
 msgid "Class"
 msgstr "Lớp học"
 
-#: inc/data.php:87 inc/data.php:119 inc/data.php:175 inc/data.php:227
-#: inc/data.php:254 inc/data.php:270 inc/data.php:308 inc/data.php:396
-#: inc/data.php:486 inc/data.php:533 inc/data.php:593 inc/data.php:655
-#: inc/data.php:729 inc/data.php:906 inc/data.php:928 inc/data.php:1094
-#: inc/data.php:1420 inc/data.php:1470 inc/data.php:1519 inc/data.php:1564
-#: inc/data.php:1583
+#: inc/data.php:87 inc/data.php:119 inc/data.php:195 inc/data.php:267
+#: inc/data.php:294 inc/data.php:310 inc/data.php:348 inc/data.php:447
+#: inc/data.php:548 inc/data.php:596 inc/data.php:656 inc/data.php:718
+#: inc/data.php:792 inc/data.php:969 inc/data.php:991 inc/data.php:1157
+#: inc/data.php:1488 inc/data.php:1538 inc/data.php:1587 inc/data.php:1632
+#: inc/data.php:1651
 msgid "Extra CSS class"
 msgstr "Thêm lớp CSS"
 
-#: inc/data.php:91 inc/data.php:123 inc/data.php:1498 inc/data.php:1558
+#: inc/data.php:91 inc/data.php:123 inc/data.php:1566 inc/data.php:1626
 msgid "Anchor"
 msgstr "Neo"
 
@@ -173,1145 +177,1165 @@ msgstr ""
 msgid "Column"
 msgstr "Cột"
 
-#: inc/data.php:141 inc/data.php:193 inc/data.php:248 inc/data.php:786
+#: inc/data.php:146 inc/data.php:218 inc/data.php:288 inc/data.php:849
 msgid "Size"
 msgstr "Kích thước"
 
-#: inc/data.php:142 inc/data.php:194
+#: inc/data.php:147 inc/data.php:219
 msgid "Select column width."
 msgstr ""
 
-#: inc/data.php:147 inc/data.php:199 inc/data.php:995 inc/data.php:1302
+#: inc/data.php:157 inc/data.php:229 inc/data.php:1058 inc/data.php:1365
 msgid "Offset"
 msgstr "Bù đắp"
 
-#: inc/data.php:148 inc/data.php:200
+#: inc/data.php:158 inc/data.php:230
 msgid "Select column offset."
 msgstr ""
 
-#: inc/data.php:153 inc/data.php:205
+#: inc/data.php:168 inc/data.php:240
 msgid "Pull"
 msgstr ""
 
-#: inc/data.php:154 inc/data.php:206
+#: inc/data.php:169 inc/data.php:241
 msgid "Select column pull."
 msgstr ""
 
-#: inc/data.php:159 inc/data.php:211
+#: inc/data.php:179 inc/data.php:251
 msgid "Push"
 msgstr ""
 
-#: inc/data.php:160 inc/data.php:212
+#: inc/data.php:180 inc/data.php:252
 msgid "Select column push."
 msgstr ""
 
-#: inc/data.php:165 inc/data.php:217 inc/generator-views.php:58
+#: inc/data.php:185 inc/data.php:257 inc/generator-views.php:58
 msgid "No"
 msgstr "Không"
 
-#: inc/data.php:166 inc/data.php:218 inc/generator-views.php:58
+#: inc/data.php:186 inc/data.php:258 inc/generator-views.php:58
 msgid "Yes"
 msgstr "Có"
 
-#: inc/data.php:169 inc/data.php:170 inc/data.php:221 inc/data.php:222
+#: inc/data.php:189 inc/data.php:190 inc/data.php:261 inc/data.php:262
 msgid "Collapse column paddings"
 msgstr ""
 
-#: inc/data.php:178 inc/data.php:230
+#: inc/data.php:198 inc/data.php:270
 msgid "Column content"
 msgstr "Cột nội dung"
 
-#: inc/data.php:179 inc/data.php:231
+#: inc/data.php:199 inc/data.php:271
 msgid "Flexible and responsive columns"
 msgstr "Linh hoạt và đáp ứng cột"
 
-#: inc/data.php:186
+#: inc/data.php:206
 msgid "Column Inner"
 msgstr ""
 
-#: inc/data.php:238
+#: inc/data.php:278
 msgid "Spacer"
 msgstr "Spacer"
 
-#: inc/data.php:249
+#: inc/data.php:289
 msgid "Spacer height"
 msgstr ""
 
-#: inc/data.php:257
+#: inc/data.php:297
 msgid "Vertical spacer between blocks"
 msgstr ""
 
-#: inc/data.php:263
+#: inc/data.php:303
 msgid "Clear"
 msgstr ""
 
-#: inc/data.php:273
+#: inc/data.php:313
 msgid "Clearing block"
 msgstr ""
 
-#: inc/data.php:279 inc/data.php:286 inc/data.php:619 inc/data.php:833
-#: inc/data.php:922
+#: inc/data.php:319 inc/data.php:326 inc/data.php:682 inc/data.php:896
+#: inc/data.php:985
 msgid "Icon"
 msgstr "Biểu tượng"
 
-#: inc/data.php:287 inc/data.php:620 inc/data.php:834 inc/data.php:923
+#: inc/data.php:327 inc/data.php:683 inc/data.php:897 inc/data.php:986
 msgid "You can upload custom icon for this button or pick a built-in icon"
 msgstr ""
 "Bạn có thể tải lên biểu tượng tuỳ chỉnh cho nút này hoặc chọn một biểu tượng "
 "được xây dựng trong"
 
-#: inc/data.php:295 inc/data.php:628
+#: inc/data.php:335 inc/data.php:691
 msgid "Icon size"
 msgstr "Kích cỡ biểu tượng"
 
-#: inc/data.php:296 inc/data.php:629
+#: inc/data.php:336 inc/data.php:692
 msgid "Font size in px (only for font icons)"
 msgstr ""
 
-#: inc/data.php:302 inc/data.php:649
+#: inc/data.php:342 inc/data.php:712
 msgid "Icon Color"
 msgstr ""
 
-#: inc/data.php:303 inc/data.php:650
+#: inc/data.php:343 inc/data.php:713
 msgid "Font icon color"
 msgstr ""
 
-#: inc/data.php:311
+#: inc/data.php:351
 msgid "Insert custom icon"
 msgstr ""
 
-#: inc/data.php:317 inc/data.php:400
+#: inc/data.php:357 inc/data.php:451
 msgid "Box"
 msgstr "Hộp"
 
-#: inc/data.php:324 inc/data.php:414 inc/data.php:758
+#: inc/data.php:364 inc/data.php:465 inc/data.php:821
 msgid "Primary"
 msgstr ""
 
-#: inc/data.php:325 inc/data.php:415
+#: inc/data.php:365 inc/data.php:466
 msgid "Secondary"
 msgstr ""
 
-#: inc/data.php:326 inc/data.php:416 inc/data.php:761
+#: inc/data.php:366 inc/data.php:467 inc/data.php:824
 msgid "Gray"
 msgstr ""
 
-#: inc/data.php:327 inc/data.php:417
+#: inc/data.php:367 inc/data.php:468
 msgid "Primary border"
 msgstr ""
 
-#: inc/data.php:328 inc/data.php:418
+#: inc/data.php:368 inc/data.php:469
 msgid "Secondary border"
 msgstr ""
 
-#: inc/data.php:329 inc/data.php:419
+#: inc/data.php:369 inc/data.php:470
 msgid "Gray border"
 msgstr ""
 
-#: inc/data.php:332 inc/data.php:422
+#: inc/data.php:372 inc/data.php:473
 msgid "Box styling preset"
 msgstr ""
 
-#: inc/data.php:333 inc/data.php:423
+#: inc/data.php:373 inc/data.php:474
 msgid "Select box styling preset"
 msgstr ""
 
-#: inc/data.php:339 inc/data.php:429 inc/data.php:697
+#: inc/data.php:379 inc/data.php:480 inc/data.php:760
 msgid "Background Color"
 msgstr ""
 
-#: inc/data.php:340 inc/data.php:430
+#: inc/data.php:380 inc/data.php:481
 msgid "Select box background color"
 msgstr ""
 
-#: inc/data.php:345 inc/data.php:435
+#: inc/data.php:385 inc/data.php:486
 msgid "Background Image"
 msgstr ""
 
-#: inc/data.php:346 inc/data.php:436
+#: inc/data.php:386 inc/data.php:487
 msgid "Upload box background image"
 msgstr ""
 
-#: inc/data.php:351 inc/data.php:441 inc/data.php:1891
+#: inc/data.php:391 inc/data.php:492 inc/data.php:1960
 msgid "Top Left"
 msgstr ""
 
-#: inc/data.php:352 inc/data.php:442
+#: inc/data.php:392 inc/data.php:493
 msgid "Top Center"
 msgstr ""
 
-#: inc/data.php:353 inc/data.php:443 inc/data.php:1892
+#: inc/data.php:393 inc/data.php:494 inc/data.php:1961
 msgid "Top Right"
 msgstr ""
 
-#: inc/data.php:354 inc/data.php:444
+#: inc/data.php:394 inc/data.php:495
 msgid "Middle Left"
 msgstr ""
 
-#: inc/data.php:355 inc/data.php:445
+#: inc/data.php:395 inc/data.php:496
 msgid "Middle Center"
 msgstr ""
 
-#: inc/data.php:356 inc/data.php:446
+#: inc/data.php:396 inc/data.php:497
 msgid "Middle Right"
 msgstr ""
 
-#: inc/data.php:357 inc/data.php:447 inc/data.php:1893
+#: inc/data.php:397 inc/data.php:498 inc/data.php:1962
 msgid "Bottom Left"
 msgstr ""
 
-#: inc/data.php:358 inc/data.php:448
+#: inc/data.php:398 inc/data.php:499
 msgid "Bottom Center"
 msgstr ""
 
-#: inc/data.php:359 inc/data.php:449 inc/data.php:1894
+#: inc/data.php:399 inc/data.php:500 inc/data.php:1963
 msgid "Bottom Right"
 msgstr ""
 
-#: inc/data.php:362 inc/data.php:452
+#: inc/data.php:402 inc/data.php:503
 msgid "Background image position"
 msgstr ""
 
-#: inc/data.php:363 inc/data.php:453
+#: inc/data.php:403 inc/data.php:504
 msgid "Select background image position"
 msgstr ""
 
-#: inc/data.php:368 inc/data.php:458
+#: inc/data.php:408 inc/data.php:509
 msgid "No Repeat"
 msgstr ""
 
-#: inc/data.php:369 inc/data.php:459
+#: inc/data.php:409 inc/data.php:510
 msgid "Repeat All"
 msgstr ""
 
-#: inc/data.php:370 inc/data.php:460
+#: inc/data.php:410 inc/data.php:511
 msgid "Repeat Horizontally"
 msgstr ""
 
-#: inc/data.php:371 inc/data.php:461
+#: inc/data.php:411 inc/data.php:512
 msgid "Repeat Vertically"
 msgstr ""
 
-#: inc/data.php:374 inc/data.php:464
+#: inc/data.php:414 inc/data.php:515
 msgid "Background image repeat"
 msgstr ""
 
-#: inc/data.php:375 inc/data.php:465
+#: inc/data.php:415 inc/data.php:516
 msgid "Select background image repeat"
 msgstr ""
 
-#: inc/data.php:380 inc/data.php:470
+#: inc/data.php:420 inc/data.php:521
 msgid "Scroll normally"
 msgstr ""
 
-#: inc/data.php:381 inc/data.php:471
+#: inc/data.php:421 inc/data.php:522
 msgid "Fixed in place"
 msgstr ""
 
-#: inc/data.php:384 inc/data.php:474
+#: inc/data.php:424 inc/data.php:525
 msgid "Background image attachment"
 msgstr ""
 
-#: inc/data.php:385 inc/data.php:475
+#: inc/data.php:425 inc/data.php:526
 msgid "Select background image attachment"
 msgstr ""
 
-#: inc/data.php:390 inc/data.php:480
+#: inc/data.php:430 inc/data.php:531
+msgid "Auto"
+msgstr "Tự động"
+
+#: inc/data.php:431 inc/data.php:532
+msgid "Cover"
+msgstr ""
+
+#: inc/data.php:432 inc/data.php:533
+msgid "Contain"
+msgstr ""
+
+#: inc/data.php:435 inc/data.php:536
+msgid "Background image size"
+msgstr ""
+
+#: inc/data.php:436 inc/data.php:537
+msgid "Select background image size"
+msgstr ""
+
+#: inc/data.php:441 inc/data.php:542
 msgid "Fill"
 msgstr ""
 
-#: inc/data.php:391 inc/data.php:481
+#: inc/data.php:442 inc/data.php:543
 msgid "Fill a parent container?"
 msgstr ""
 
-#: inc/data.php:399 inc/data.php:489 inc/data.php:1726 inc/data.php:1783
+#: inc/data.php:450 inc/data.php:551 inc/data.php:1795 inc/data.php:1852
 msgid "Your content goes here"
 msgstr ""
 
-#: inc/data.php:406 inc/data.php:490
+#: inc/data.php:457 inc/data.php:552
 msgid "Box Inner"
 msgstr ""
 
-#: inc/data.php:413
+#: inc/data.php:464
 msgid "No preset"
 msgstr ""
 
-#: inc/data.php:496 inc/data.php:546
+#: inc/data.php:558 inc/data.php:609
 msgid "Banner"
 msgstr ""
 
-#: inc/data.php:503
+#: inc/data.php:566
 msgid "Banner Image"
 msgstr ""
 
-#: inc/data.php:504
-msgid "Upload banner image"
+#: inc/data.php:567
+msgid "Select attachment banner image"
 msgstr ""
 
-#: inc/data.php:508
+#: inc/data.php:571
 msgid "Banner Title"
 msgstr ""
 
-#: inc/data.php:509
+#: inc/data.php:572
 msgid "Enter banner title"
 msgstr ""
 
-#: inc/data.php:513
+#: inc/data.php:576
 msgid "Banner URL"
 msgstr ""
 
-#: inc/data.php:514 inc/filters.php:121
+#: inc/data.php:577 inc/filters.php:121
 msgid "Banner link URL"
 msgstr ""
 
-#: inc/data.php:520 inc/data.php:864
+#: inc/data.php:583 inc/data.php:927
 msgid "Text color"
 msgstr "Văn bản màu"
 
-#: inc/data.php:521
+#: inc/data.php:584
 msgid "Banner text color"
 msgstr ""
 
-#: inc/data.php:527
+#: inc/data.php:590
 msgid "Background color"
 msgstr ""
 
-#: inc/data.php:528 inc/filters.php:135
+#: inc/data.php:591 inc/filters.php:135
 msgid "Banner background color"
 msgstr ""
 
-#: inc/data.php:541 inc/data.php:1102 inc/data.php:1428
+#: inc/data.php:604 inc/data.php:1165 inc/data.php:1496
 msgid "Template"
 msgstr "Tiêu bản"
 
-#: inc/data.php:542 inc/data.php:1103 inc/data.php:1429
+#: inc/data.php:605 inc/data.php:1166 inc/data.php:1497
 msgid "Shortcode template"
 msgstr ""
 
-#: inc/data.php:545
+#: inc/data.php:608
 msgid "Banner content goes here"
 msgstr ""
 
-#: inc/data.php:552 inc/data.php:596
+#: inc/data.php:615 inc/data.php:659
 msgid "Horizontal Rule"
 msgstr ""
 
-#: inc/data.php:562
+#: inc/data.php:625
 msgid "Line height"
 msgstr ""
 
-#: inc/data.php:563
+#: inc/data.php:626
 msgid "Horizontal rule height"
 msgstr ""
 
-#: inc/data.php:569
+#: inc/data.php:632
 msgid "Line color"
 msgstr ""
 
-#: inc/data.php:570
+#: inc/data.php:633
 msgid "Horizontal rule color"
 msgstr ""
 
-#: inc/data.php:578
+#: inc/data.php:641
 msgid "Indent before"
 msgstr ""
 
-#: inc/data.php:579
+#: inc/data.php:642
 msgid "Indent before horizontal rule"
 msgstr ""
 
-#: inc/data.php:587
+#: inc/data.php:650
 msgid "Indent after"
 msgstr ""
 
-#: inc/data.php:588
+#: inc/data.php:651
 msgid "Indent after horizontal rule"
 msgstr ""
 
-#: inc/data.php:602
+#: inc/data.php:665
 msgid "Title Box"
 msgstr ""
 
-#: inc/data.php:608 inc/data.php:1487 inc/data.php:1537
+#: inc/data.php:671 inc/data.php:1555 inc/data.php:1605
 msgid "Title"
 msgstr "Tiêu đề"
 
-#: inc/data.php:609
+#: inc/data.php:672
 msgid "Title text"
 msgstr ""
 
-#: inc/data.php:613
+#: inc/data.php:676
 msgid "Subtitle"
 msgstr ""
 
-#: inc/data.php:614
+#: inc/data.php:677
 msgid "Subtitle text"
 msgstr ""
 
-#: inc/data.php:635
+#: inc/data.php:698
 msgid "Title Color"
 msgstr ""
 
-#: inc/data.php:636
+#: inc/data.php:699
 msgid "Title text color"
 msgstr "Tiêu đề văn bản màu"
 
-#: inc/data.php:642
+#: inc/data.php:705
 msgid "Subtitle Color"
 msgstr ""
 
-#: inc/data.php:643
+#: inc/data.php:706
 msgid "Subtitle text color"
 msgstr ""
 
-#: inc/data.php:658
+#: inc/data.php:721
 msgid "Title box"
 msgstr ""
 
-#: inc/data.php:664
+#: inc/data.php:727
 msgid "Dropcap"
 msgstr "Dropcap"
 
-#: inc/data.php:674
+#: inc/data.php:737
 msgid "Text size"
 msgstr ""
 
-#: inc/data.php:675
+#: inc/data.php:738
 msgid "Text size in px"
 msgstr ""
 
-#: inc/data.php:683
+#: inc/data.php:746
 msgid "Canvas size"
 msgstr ""
 
-#: inc/data.php:684
+#: inc/data.php:747
 msgid "Canvas size in px"
 msgstr ""
 
-#: inc/data.php:690
+#: inc/data.php:753
 msgid "Text Color"
 msgstr ""
 
-#: inc/data.php:691
+#: inc/data.php:754
 msgid "Dropcap text color"
 msgstr ""
 
-#: inc/data.php:698
+#: inc/data.php:761
 msgid "Dropcap background color"
 msgstr ""
 
-#: inc/data.php:703 inc/data.php:823 inc/data.php:839 inc/data.php:1854
+#: inc/data.php:766 inc/data.php:886 inc/data.php:902 inc/data.php:1923
 msgid "Left"
 msgstr "Trái"
 
-#: inc/data.php:704 inc/data.php:824 inc/data.php:841 inc/data.php:1852
+#: inc/data.php:767 inc/data.php:887 inc/data.php:904 inc/data.php:1921
 msgid "Right"
 msgstr "Đúng"
 
-#: inc/data.php:705 inc/data.php:1890
+#: inc/data.php:768 inc/data.php:1959
 msgid "Center"
 msgstr "Trung tâm"
 
-#: inc/data.php:708
+#: inc/data.php:771
 msgid "Align"
 msgstr "Sắp xếp"
 
-#: inc/data.php:709
+#: inc/data.php:772
 msgid "Dropcap alignment"
 msgstr ""
 
-#: inc/data.php:717 inc/data.php:805
+#: inc/data.php:780 inc/data.php:868
 msgid "Border radius"
 msgstr ""
 
-#: inc/data.php:718
+#: inc/data.php:781
 msgid "Border radius size in px"
 msgstr ""
 
-#: inc/data.php:723
+#: inc/data.php:786
 msgid "Border"
 msgstr ""
 
-#: inc/data.php:724
+#: inc/data.php:787
 msgid "Setup dropcap border"
 msgstr ""
 
-#: inc/data.php:732
+#: inc/data.php:795
 msgid "A"
 msgstr ""
 
-#: inc/data.php:733
+#: inc/data.php:796
 msgid "Dropcap box"
 msgstr ""
 
-#: inc/data.php:739
+#: inc/data.php:802
 msgid "Button"
 msgstr "Nút"
 
-#: inc/data.php:744
+#: inc/data.php:807
 msgid "Read more"
 msgstr ""
 
-#: inc/data.php:745
+#: inc/data.php:808
 msgid "Text"
 msgstr ""
 
-#: inc/data.php:746 inc/data.php:1088 inc/data.php:1408
+#: inc/data.php:809 inc/data.php:1151 inc/data.php:1471
 msgid "Button text"
 msgstr "Nút văn bản"
 
-#: inc/data.php:750 inc/data.php:766
+#: inc/data.php:813 inc/data.php:829
 msgid "Link"
 msgstr "Liên kết"
 
-#: inc/data.php:751
+#: inc/data.php:814
 msgid "Button link"
 msgstr "Nút liên kết"
 
-#: inc/data.php:759
+#: inc/data.php:822
 msgid "Primary-light"
 msgstr ""
 
-#: inc/data.php:760 inc/data.php:1445 inc/data.php:1549
+#: inc/data.php:823 inc/data.php:1513 inc/data.php:1617
 msgid "Default"
 msgstr "Mặc định"
 
-#: inc/data.php:762
+#: inc/data.php:825
 msgid "Success"
 msgstr "Thành công"
 
-#: inc/data.php:763
+#: inc/data.php:826
 msgid "Info"
 msgstr "Thông tin"
 
-#: inc/data.php:764
+#: inc/data.php:827
 msgid "Warning"
 msgstr "Cảnh báo"
 
-#: inc/data.php:765
+#: inc/data.php:828
 msgid "Danger"
 msgstr ""
 
-#: inc/data.php:770 inc/data.php:1449 inc/data.php:1553
+#: inc/data.php:833 inc/data.php:1517 inc/data.php:1621
 msgid "Style"
 msgstr "Phong cách"
 
-#: inc/data.php:771
+#: inc/data.php:834
 msgid "Button style preset"
 msgstr ""
 
-#: inc/data.php:778
+#: inc/data.php:841
 msgid "Extra Small"
 msgstr ""
 
-#: inc/data.php:779
+#: inc/data.php:842
 msgid "Small"
 msgstr ""
 
-#: inc/data.php:780
+#: inc/data.php:843
 msgid "Medium"
 msgstr ""
 
-#: inc/data.php:781
+#: inc/data.php:844
 msgid "Large"
 msgstr ""
 
-#: inc/data.php:782
+#: inc/data.php:845
 msgid "Extra Large"
 msgstr ""
 
-#: inc/data.php:787
+#: inc/data.php:850
 msgid "Button size preset"
 msgstr ""
 
-#: inc/data.php:792
+#: inc/data.php:855
 msgid "Inline"
 msgstr "Inline"
 
-#: inc/data.php:793
+#: inc/data.php:856
 msgid "Wide"
 msgstr ""
 
-#: inc/data.php:796
+#: inc/data.php:859
 msgid "Display"
 msgstr ""
 
-#: inc/data.php:797
+#: inc/data.php:860
 msgid "Button display type"
 msgstr ""
 
-#: inc/data.php:806
+#: inc/data.php:869
 msgid "Button border radius"
 msgstr ""
 
-#: inc/data.php:811
+#: inc/data.php:874
 msgid "Centered"
 msgstr "Trung tâm"
 
-#: inc/data.php:812
+#: inc/data.php:875
 msgid "Is button centered on the page"
 msgstr "Có nút trung tâm trên trang"
 
-#: inc/data.php:817
+#: inc/data.php:880
 msgid "Fluid"
 msgstr "Chất lỏng"
 
-#: inc/data.php:818
+#: inc/data.php:881
 msgid "Is button fluid"
 msgstr ""
 
-#: inc/data.php:827
+#: inc/data.php:890
 msgid "Fluid Position"
 msgstr ""
 
-#: inc/data.php:828
+#: inc/data.php:891
 msgid "Button fluid position"
 msgstr ""
 
-#: inc/data.php:840 inc/data.php:1851
+#: inc/data.php:903 inc/data.php:1920
 msgid "Top"
 msgstr "Đầu trang"
 
-#: inc/data.php:842 inc/data.php:1853
+#: inc/data.php:905 inc/data.php:1922
 msgid "Bottom"
 msgstr "Dưới cùng"
 
-#: inc/data.php:845
+#: inc/data.php:908
 msgid "Icon Position"
 msgstr ""
 
-#: inc/data.php:846
+#: inc/data.php:909
 msgid "Button icon position"
 msgstr ""
 
-#: inc/data.php:850
+#: inc/data.php:913
 msgid "Description"
 msgstr "Mô tả"
 
-#: inc/data.php:851
+#: inc/data.php:914
 msgid "Small description under button text."
 msgstr ""
 
-#: inc/data.php:857
+#: inc/data.php:920
 msgid "Background"
 msgstr "Nền"
 
-#: inc/data.php:858
+#: inc/data.php:921
 msgid "Button background color"
 msgstr "Nút màu nền"
 
-#: inc/data.php:865
+#: inc/data.php:928
 msgid "Button text color"
 msgstr "Nút màu chữ"
 
-#: inc/data.php:873
+#: inc/data.php:936
 msgid "Min width"
 msgstr ""
 
-#: inc/data.php:874
+#: inc/data.php:937
 msgid "Button minimal width"
 msgstr ""
 
-#: inc/data.php:879
+#: inc/data.php:942
 msgid "Same tab"
 msgstr "Cùng một thẻ"
 
-#: inc/data.php:880
+#: inc/data.php:943
 msgid "New tab"
 msgstr "Tab mới"
 
-#: inc/data.php:883
+#: inc/data.php:946
 msgid "Target"
 msgstr "Mục tiêu"
 
-#: inc/data.php:884
+#: inc/data.php:947
 msgid "Button link target"
 msgstr "Nút liên kết mục tiêu"
 
-#: inc/data.php:888
+#: inc/data.php:951
 msgid "Rel attribute"
 msgstr ""
 
-#: inc/data.php:889
+#: inc/data.php:952
 msgid "Here you can add value for the rel attribute."
 msgstr ""
 
-#: inc/data.php:896
+#: inc/data.php:959
 msgid "Fade"
 msgstr ""
 
-#: inc/data.php:900
+#: inc/data.php:963
 msgid "Hover animation"
 msgstr ""
 
-#: inc/data.php:901
+#: inc/data.php:964
 msgid "Button hover aniamtion type"
 msgstr ""
 
-#: inc/data.php:909
+#: inc/data.php:972
 msgid "Styled button"
 msgstr "Theo kiểu nút"
 
-#: inc/data.php:915 inc/data.php:932
+#: inc/data.php:978 inc/data.php:995
 msgid "List"
 msgstr "Danh sách"
 
-#: inc/data.php:931
+#: inc/data.php:994
 msgid "List Item"
 msgstr ""
 
-#: inc/data.php:939
+#: inc/data.php:1002
 msgid "Swiper carousel"
 msgstr ""
 
-#: inc/data.php:942
+#: inc/data.php:1005
 msgid "Customizable post carousel"
 msgstr ""
 
-#: inc/data.php:951 inc/data.php:1258
+#: inc/data.php:1014 inc/data.php:1321
 msgid "Posts per page"
 msgstr "Bài viết mỗi trang"
 
-#: inc/data.php:952 inc/data.php:1259
+#: inc/data.php:1015 inc/data.php:1322
 msgid ""
 "Specify number of posts that you want to show. Enter -1 to get all posts"
 msgstr ""
 "Chỉ định số lượng các bài viết mà bạn muốn hiển thị. Nhập -1 để có được tất "
 "cả các bài viết"
 
-#: inc/data.php:959 inc/data.php:1266
+#: inc/data.php:1022 inc/data.php:1329
 msgid "Post types"
 msgstr "Đăng loại"
 
-#: inc/data.php:960 inc/data.php:1267
+#: inc/data.php:1023 inc/data.php:1330
 msgid "Select post types. Hold Ctrl key to select multiple post types"
 msgstr "Chọn các loại bài viết. Giữ phím Ctrl để chọn nhiều bài đăng loại"
 
-#: inc/data.php:966 inc/data.php:1273 inc/generator-views.php:136
+#: inc/data.php:1029 inc/data.php:1336 inc/generator-views.php:137
 msgid "Taxonomy"
 msgstr "Phân loại"
 
-#: inc/data.php:967 inc/data.php:1274
+#: inc/data.php:1030 inc/data.php:1337
 msgid "Select taxonomy to show posts from"
 msgstr "Chọn phân loại để hiển thị bài viết từ"
 
-#: inc/data.php:974 inc/data.php:1281
+#: inc/data.php:1037 inc/data.php:1344
 msgid "Terms"
 msgstr "Điều khoản"
 
-#: inc/data.php:975 inc/data.php:1282
+#: inc/data.php:1038 inc/data.php:1345
 msgid "Select terms to show posts from"
 msgstr "Chọn các điều khoản cho bài viết từ"
 
-#: inc/data.php:981 inc/data.php:1288
+#: inc/data.php:1044 inc/data.php:1351
 msgid "Taxonomy term operator"
 msgstr "Phân loại hạn điều hành"
 
-#: inc/data.php:982 inc/data.php:1289
+#: inc/data.php:1045 inc/data.php:1352
 msgid ""
 "IN - posts that have any of selected categories terms<br/>NOT IN - posts "
 "that  do not have any of selected terms<br/>AND - posts that have all "
 "selected terms"
 msgstr ""
 
-#: inc/data.php:986 inc/data.php:1293
+#: inc/data.php:1049 inc/data.php:1356
 msgid "Authors"
 msgstr "Tác giả"
 
-#: inc/data.php:987 inc/data.php:1294
+#: inc/data.php:1050 inc/data.php:1357
 msgid "Enter here comma-separated list of author's IDs. Example: 1,7,18"
 msgstr ""
 
-#: inc/data.php:996 inc/data.php:1303
+#: inc/data.php:1059 inc/data.php:1366
 msgid "Specify offset to start posts loop not from first post"
 msgstr ""
 "Xác định đối tượng dời hình để bắt đầu bài viết vòng lặp không phải từ bài "
 "viết đầu tiên"
 
-#: inc/data.php:1001 inc/data.php:1308
+#: inc/data.php:1064 inc/data.php:1371
 msgid "Descending"
 msgstr "Giảm dần"
 
-#: inc/data.php:1002 inc/data.php:1309
+#: inc/data.php:1065 inc/data.php:1372
 msgid "Ascending"
 msgstr "Tăng dần"
 
-#: inc/data.php:1005 inc/data.php:1312
+#: inc/data.php:1068 inc/data.php:1375
 msgid "Order"
 msgstr "Đặt hàng"
 
-#: inc/data.php:1006 inc/data.php:1313
+#: inc/data.php:1069 inc/data.php:1376
 msgid "Posts order"
 msgstr "Thứ tự bài viết"
 
-#: inc/data.php:1012 inc/data.php:1319
+#: inc/data.php:1075 inc/data.php:1382
 msgid "Post ID"
 msgstr "Bài đăng ID"
 
-#: inc/data.php:1013 inc/data.php:1320
+#: inc/data.php:1076 inc/data.php:1383
 msgid "Post author"
 msgstr "Tác giả đăng bài"
 
-#: inc/data.php:1014 inc/data.php:1321
+#: inc/data.php:1077 inc/data.php:1384
 msgid "Post title"
 msgstr "Tiêu đề bài viết"
 
-#: inc/data.php:1015 inc/data.php:1322
+#: inc/data.php:1078 inc/data.php:1385
 msgid "Post slug"
 msgstr "Bài đăng slug"
 
-#: inc/data.php:1016 inc/data.php:1323
+#: inc/data.php:1079 inc/data.php:1386
 msgid "Date"
 msgstr "Ngày"
 
-#: inc/data.php:1017 inc/data.php:1324
+#: inc/data.php:1080 inc/data.php:1387
 msgid "Last modified date"
 msgstr "Sửa đổi lần cuối ngày"
 
-#: inc/data.php:1018 inc/data.php:1029 inc/data.php:1325 inc/data.php:1336
+#: inc/data.php:1081 inc/data.php:1092 inc/data.php:1388 inc/data.php:1399
 msgid "Post parent"
 msgstr "Phụ huynh Post"
 
-#: inc/data.php:1019 inc/data.php:1326
+#: inc/data.php:1082 inc/data.php:1389
 msgid "Random"
 msgstr "Ngẫu nhiên"
 
-#: inc/data.php:1020 inc/data.php:1327
+#: inc/data.php:1083 inc/data.php:1390
 msgid "Comments number"
 msgstr "Số ý kiến"
 
-#: inc/data.php:1021 inc/data.php:1328
+#: inc/data.php:1084 inc/data.php:1391
 msgid "Menu order"
 msgstr "Đơn đặt hàng"
 
-#: inc/data.php:1024 inc/data.php:1331
+#: inc/data.php:1087 inc/data.php:1394
 msgid "Order by"
 msgstr "Đặt hàng bởi"
 
-#: inc/data.php:1025 inc/data.php:1332
+#: inc/data.php:1088 inc/data.php:1395
 msgid "Order posts by"
 msgstr "Thứ tự các bài viết của"
 
-#: inc/data.php:1030 inc/data.php:1337
+#: inc/data.php:1093 inc/data.php:1400
 msgid "Show children of entered post (enter post ID)"
 msgstr ""
 
-#: inc/data.php:1035 inc/data.php:1342
+#: inc/data.php:1098 inc/data.php:1405
 msgid "Published"
 msgstr "Xuất bản"
 
-#: inc/data.php:1036 inc/data.php:1343
+#: inc/data.php:1099 inc/data.php:1406
 msgid "Pending"
 msgstr "Đang chờ giải quyết"
 
-#: inc/data.php:1037 inc/data.php:1344
+#: inc/data.php:1100 inc/data.php:1407
 msgid "Draft"
 msgstr "Dự thảo"
 
-#: inc/data.php:1038 inc/data.php:1345
+#: inc/data.php:1101 inc/data.php:1408
 msgid "Auto-draft"
 msgstr "Dự thảo tự động"
 
-#: inc/data.php:1039 inc/data.php:1346
+#: inc/data.php:1102 inc/data.php:1409
 msgid "Future post"
 msgstr "Đăng trong tương lai"
 
-#: inc/data.php:1040 inc/data.php:1347
+#: inc/data.php:1103 inc/data.php:1410
 msgid "Private post"
 msgstr "Riêng bài viết"
 
-#: inc/data.php:1041 inc/data.php:1348
+#: inc/data.php:1104 inc/data.php:1411
 msgid "Inherit"
 msgstr "Kế thừa"
 
-#: inc/data.php:1042 inc/data.php:1349
+#: inc/data.php:1105 inc/data.php:1412
 msgid "Trashed"
 msgstr "Vào thùng rác"
 
-#: inc/data.php:1043 inc/data.php:1350
+#: inc/data.php:1106 inc/data.php:1413
 msgid "Any"
 msgstr "Bất kỳ"
 
-#: inc/data.php:1046 inc/data.php:1353
+#: inc/data.php:1109 inc/data.php:1416
 msgid "Post status"
 msgstr "Đăng trạng thái"
 
-#: inc/data.php:1047 inc/data.php:1354
+#: inc/data.php:1110 inc/data.php:1417
 msgid "Show only posts with selected status"
 msgstr "Hiển thị bài viết chỉ với đã chọn trạng thái"
 
-#: inc/data.php:1052 inc/data.php:1359
+#: inc/data.php:1115 inc/data.php:1422
 msgid "Ignore sticky"
 msgstr "Bỏ qua dính"
 
-#: inc/data.php:1053 inc/data.php:1360
+#: inc/data.php:1116 inc/data.php:1423
 msgid "Select Yes to ignore posts that are sticked"
 msgstr ""
 
-#: inc/data.php:1058 inc/data.php:1365
+#: inc/data.php:1121 inc/data.php:1428
 msgid "Linked title"
 msgstr ""
 
-#: inc/data.php:1059 inc/data.php:1366
+#: inc/data.php:1122 inc/data.php:1429
 msgid "Linked title description"
 msgstr ""
 
-#: inc/data.php:1064 inc/data.php:1371
+#: inc/data.php:1127 inc/data.php:1434
 msgid "Linked featured image"
 msgstr ""
 
-#: inc/data.php:1065 inc/data.php:1372
+#: inc/data.php:1128 inc/data.php:1435
 msgid "Linked featured image description"
 msgstr ""
 
-#: inc/data.php:1070 inc/data.php:1390
+#: inc/data.php:1133 inc/data.php:1453
 msgid "Part of content"
 msgstr ""
 
-#: inc/data.php:1071 inc/data.php:1391
+#: inc/data.php:1134 inc/data.php:1454
 msgid "Full content"
 msgstr ""
 
-#: inc/data.php:1074 inc/data.php:1394
+#: inc/data.php:1137 inc/data.php:1457
 msgid "Post content"
 msgstr ""
 
-#: inc/data.php:1075 inc/data.php:1395
-msgid "Choose to display a part or d content"
+#: inc/data.php:1138 inc/data.php:1458
+msgid "Choose to display a part or full content "
 msgstr ""
 
-#: inc/data.php:1083 inc/data.php:1403
+#: inc/data.php:1146 inc/data.php:1466
 msgid "Content Length"
 msgstr ""
 
-#: inc/data.php:1084 inc/data.php:1404
+#: inc/data.php:1147 inc/data.php:1467
 msgid "Insert the number of words you want to show in the post content."
 msgstr ""
 
-#: inc/data.php:1087 inc/data.php:1407 inc/shortcodes.php:664
-#: inc/shortcodes.php:1070
+#: inc/data.php:1150 inc/data.php:1470 inc/shortcodes.php:704
+#: inc/shortcodes.php:1117
 msgid "read more"
 msgstr ""
 
-#: inc/data.php:1089 inc/data.php:1409
+#: inc/data.php:1152 inc/data.php:1472
 msgid "Button text description"
 msgstr ""
 
-#: inc/data.php:1108
+#: inc/data.php:1171
 msgid "Using cropped image"
 msgstr ""
 
-#: inc/data.php:1109 inc/data.php:1178
+#: inc/data.php:1172 inc/data.php:1241
 msgid "Slider Loop Mode"
 msgstr ""
 
-#: inc/data.php:1117
+#: inc/data.php:1180
 msgid "Cropping image width"
 msgstr ""
 
-#: inc/data.php:1118
+#: inc/data.php:1181
 msgid "Width value(px)"
 msgstr ""
 
-#: inc/data.php:1126
+#: inc/data.php:1189
 msgid "Cropping image height"
 msgstr ""
 
-#: inc/data.php:1127
+#: inc/data.php:1190
 msgid "Height value(px)"
 msgstr ""
 
-#: inc/data.php:1135
+#: inc/data.php:1198
 msgid "Number of slides per view"
 msgstr ""
 
-#: inc/data.php:1136
+#: inc/data.php:1199
 msgid "Specify number of slides per view"
 msgstr ""
 
-#: inc/data.php:1144
+#: inc/data.php:1207
 msgid "Number slides per group"
 msgstr ""
 
-#: inc/data.php:1145
+#: inc/data.php:1208
 msgid ""
 "Set numbers of slides to define and enable group sliding. Useful to use with "
 "slidesPerView > 1"
 msgstr ""
 
-#: inc/data.php:1153 inc/data.php:1154
+#: inc/data.php:1216 inc/data.php:1217
 msgid "Multi Row Slides Layout"
 msgstr ""
 
-#: inc/data.php:1162
+#: inc/data.php:1225
 msgid "Space Between Slides"
 msgstr ""
 
-#: inc/data.php:1163
+#: inc/data.php:1226
 msgid "Width of the space between slides(px)"
 msgstr ""
 
-#: inc/data.php:1171
+#: inc/data.php:1234
 msgid "Duration of transition"
 msgstr ""
 
-#: inc/data.php:1172
+#: inc/data.php:1235
 msgid "Duration of transition between slides (ms)"
 msgstr ""
 
-#: inc/data.php:1177
+#: inc/data.php:1240
 msgid "Slider Infinite Loop"
 msgstr ""
 
-#: inc/data.php:1183
+#: inc/data.php:1246
 msgid "Free Mode sliding"
 msgstr ""
 
-#: inc/data.php:1184
+#: inc/data.php:1247
 msgid "No fixed positions for slides"
 msgstr ""
 
-#: inc/data.php:1189
+#: inc/data.php:1252
 msgid "Grab Cursor"
 msgstr ""
 
-#: inc/data.php:1190
+#: inc/data.php:1253
 msgid "Using Grab Cursor for slider"
 msgstr ""
 
-#: inc/data.php:1195
+#: inc/data.php:1258
 msgid "Mousewheel Control"
 msgstr ""
 
-#: inc/data.php:1196
+#: inc/data.php:1259
 msgid "Mousewheel control mode"
 msgstr ""
 
-#: inc/data.php:1201
+#: inc/data.php:1264
 msgid "Centered Slides"
 msgstr ""
 
-#: inc/data.php:1202
+#: inc/data.php:1265
 msgid "Centered slides mode"
 msgstr ""
 
-#: inc/data.php:1207
+#: inc/data.php:1270
 msgid "Slide"
 msgstr ""
 
-#: inc/data.php:1209
+#: inc/data.php:1272
 msgid "Cube"
 msgstr ""
 
-#: inc/data.php:1210
+#: inc/data.php:1273
 msgid "Coverflow"
 msgstr ""
 
-#: inc/data.php:1213
+#: inc/data.php:1276
 msgid "Effect Layout"
 msgstr ""
 
-#: inc/data.php:1214
+#: inc/data.php:1277
 msgid "Could be \"slide\", \"fade\", \"cube\" or \"coverflow\" effect"
 msgstr ""
 
-#: inc/data.php:1219
+#: inc/data.php:1282
 msgid "Slider pagination"
 msgstr ""
 
-#: inc/data.php:1220
+#: inc/data.php:1283
 msgid "Displaying slider pagination"
 msgstr ""
 
-#: inc/data.php:1225
+#: inc/data.php:1288
 msgid "Slider navigation"
 msgstr ""
 
-#: inc/data.php:1226
+#: inc/data.php:1289
 msgid "Displaying slider navigation"
 msgstr ""
 
-#: inc/data.php:1231
+#: inc/data.php:1294
 msgid "Inner"
 msgstr ""
 
-#: inc/data.php:1232
+#: inc/data.php:1295
 msgid "Outer"
 msgstr ""
 
-#: inc/data.php:1235
+#: inc/data.php:1298
 msgid "Slider navigation position"
 msgstr ""
 
-#: inc/data.php:1236
+#: inc/data.php:1299
 msgid "Choose slider navigation position"
 msgstr ""
 
-#: inc/data.php:1243
+#: inc/data.php:1306
 msgid "Posts"
 msgstr "Bài viết"
 
-#: inc/data.php:1249
+#: inc/data.php:1312
 msgid "Post ID's"
 msgstr "Bài đăng ID"
 
-#: inc/data.php:1250
+#: inc/data.php:1313
 msgid "Enter comma separated ID's of the posts that you want to show"
 msgstr "Nhập dấu phẩy ngăn cách ID của các bài viết mà bạn muốn hiển thị"
 
-#: inc/data.php:1377 inc/data.php:1378
+#: inc/data.php:1440 inc/data.php:1441
 msgid "Open featured image in a lightbox?"
 msgstr ""
 
-#: inc/data.php:1384
+#: inc/data.php:1447
 msgid "Featured image size"
 msgstr ""
 
-#: inc/data.php:1385
+#: inc/data.php:1448
 msgid "Select size for a Featured image"
 msgstr ""
 
-#: inc/data.php:1414
+#: inc/data.php:1482
 msgid "Column class"
 msgstr ""
 
-#: inc/data.php:1415
+#: inc/data.php:1483
 msgid "Column class for each item."
 msgstr ""
 
-#: inc/data.php:1432
+#: inc/data.php:1500
 msgid "Custom posts query with customizable template"
 msgstr "Tùy chỉnh bài viết truy vấn với tùy biến mẫu"
 
-#: inc/data.php:1438
+#: inc/data.php:1506
 msgid "Tabs"
 msgstr "Tab"
 
-#: inc/data.php:1446 inc/data.php:1550
+#: inc/data.php:1514 inc/data.php:1618
 msgid "Simple"
 msgstr "Đơn giản"
 
-#: inc/data.php:1450
+#: inc/data.php:1518
 msgid "Choose style for these tabs"
 msgstr ""
 
-#: inc/data.php:1458
+#: inc/data.php:1526
 msgid "Active tab"
 msgstr "Tab hoạt động"
 
-#: inc/data.php:1459
+#: inc/data.php:1527
 msgid "Select which tab is open by default"
 msgstr "Chọn tab đó là mở theo mặc định"
 
-#: inc/data.php:1464
+#: inc/data.php:1532
 msgid "Vertical"
 msgstr "Thẳng đứng"
 
-#: inc/data.php:1465
+#: inc/data.php:1533
 msgid "Show tabs vertically"
 msgstr "Hiển thị tab theo chiều dọc"
 
-#: inc/data.php:1473
+#: inc/data.php:1541
 msgid ""
 "[%prefix_tab title=\"Title 1\"]Content 1[/%prefix_tab]\n"
 "[%prefix_tab title=\"Title 2\"]Content 2[/%prefix_tab]\n"
@@ -1321,31 +1345,31 @@ msgstr ""
 "[%prefix_tab tiêu đề =\"Tiêu đề 2\"] nội dung 2 [/%prefix_tab]\n"
 "[%prefix_tab tiêu đề =\"Tiêu đề 3\"] nội dung 3 [/%prefix_tab]"
 
-#: inc/data.php:1474
+#: inc/data.php:1542
 msgid "Tabs container"
 msgstr "Tab container"
 
-#: inc/data.php:1481
+#: inc/data.php:1549
 msgid "Tab"
 msgstr "Tab"
 
-#: inc/data.php:1486
+#: inc/data.php:1554
 msgid "Tab name"
 msgstr "Tab tên"
 
-#: inc/data.php:1488
+#: inc/data.php:1556
 msgid "Enter tab name"
 msgstr "Tên thẻ"
 
-#: inc/data.php:1493
+#: inc/data.php:1561
 msgid "Disabled"
 msgstr "Khuyết tật"
 
-#: inc/data.php:1494
+#: inc/data.php:1562
 msgid "Is this tab disabled"
 msgstr "Tab này vô hiệu hóa"
 
-#: inc/data.php:1499
+#: inc/data.php:1567
 msgid ""
 "You can use unique anchor for this tab to access it with hash in page url. "
 "For example: type here <b%value>Hello</b> and then use url like http://"
@@ -1355,111 +1379,111 @@ msgstr ""
 "trang. Ví dụ: gõ vào đây <b%giá trị> Xin chào </b> và sau đó sử dụng url như "
 "http://example.com/page-url#Hello. Tab này sẽ được kích hoạt và cuộn trong"
 
-#: inc/data.php:1503
+#: inc/data.php:1571
 msgid "URL"
 msgstr ""
 
-#: inc/data.php:1504
+#: inc/data.php:1572
 msgid ""
 "You can link this tab to any webpage. Enter here d URL to switch this tab "
 "into link"
 msgstr ""
 
-#: inc/data.php:1509
+#: inc/data.php:1577
 msgid "Open link in the same window/tab"
 msgstr ""
 
-#: inc/data.php:1510
+#: inc/data.php:1578
 msgid "Open link in a new window/tab"
 msgstr ""
 
-#: inc/data.php:1513
+#: inc/data.php:1581
 msgid "Link target"
 msgstr ""
 
-#: inc/data.php:1514
+#: inc/data.php:1582
 msgid "Choose how to open the custom tab link"
 msgstr ""
 
-#: inc/data.php:1522
+#: inc/data.php:1590
 msgid "Tab content"
 msgstr "Tab nội dung"
 
-#: inc/data.php:1523
+#: inc/data.php:1591
 msgid "Single tab"
 msgstr "Đơn tab"
 
-#: inc/data.php:1531
+#: inc/data.php:1599
 msgid "Spoiler"
 msgstr "Spoiler"
 
-#: inc/data.php:1536 inc/shortcodes.php:1475
+#: inc/data.php:1604 inc/shortcodes.php:1522
 msgid "Spoiler title"
 msgstr "Spoiler tiêu đề"
 
-#: inc/data.php:1538
+#: inc/data.php:1606
 msgid "Text in spoiler title"
 msgstr "Văn bản trong tiêu đề spoiler"
 
-#: inc/data.php:1543
+#: inc/data.php:1611
 msgid "Open"
 msgstr "Mở"
 
-#: inc/data.php:1544
+#: inc/data.php:1612
 msgid "Is spoiler content visible by default"
 msgstr "Là nội dung spoiler hiện hữu"
 
-#: inc/data.php:1554
+#: inc/data.php:1622
 msgid "Choose style for this spoiler"
 msgstr "Chọn phong cách cho spoiler này"
 
-#: inc/data.php:1559
+#: inc/data.php:1627
 msgid ""
 "You can use unique anchor for this spoiler to access it with hash in page "
 "url. For example: type here <b%value>Hello</b> and then use url like http://"
 "example.com/page-url#Hello. This spoiler will be opened and scrolled in"
 msgstr ""
 
-#: inc/data.php:1567
+#: inc/data.php:1635
 msgid "Hidden content"
 msgstr "Ẩn nội dung"
 
-#: inc/data.php:1568
+#: inc/data.php:1636
 msgid "Spoiler with hidden content"
 msgstr "Spoiler với nội dung ẩn"
 
-#: inc/data.php:1576
+#: inc/data.php:1644
 msgid "Accordion"
 msgstr "Accordion"
 
-#: inc/data.php:1586
+#: inc/data.php:1654
 msgid ""
 "[%prefix_spoiler title=\"Spoiler Title\"]Content[/%prefix_spoiler]\n"
 "[%prefix_spoiler title=\"Spoiler Title\"]Content[/%prefix_spoiler]\n"
 "[%prefix_spoiler title=\"Spoiler Title\"]Content[/%prefix_spoiler]"
 msgstr ""
 
-#: inc/data.php:1587
+#: inc/data.php:1655
 msgid "Accordion with spoilers"
 msgstr "Accordion với tấm lái ngang"
 
-#: inc/data.php:1595
+#: inc/data.php:1663
 msgid "Google map"
 msgstr ""
 
-#: inc/data.php:1602
+#: inc/data.php:1670
 msgid "Address"
 msgstr ""
 
-#: inc/data.php:1603 inc/data.php:1658
+#: inc/data.php:1671 inc/data.php:1726
 msgid "The display options for the Pan control."
 msgstr ""
 
-#: inc/data.php:1611
+#: inc/data.php:1679
 msgid "Latitude  geographical coordinates"
 msgstr ""
 
-#: inc/data.php:1612
+#: inc/data.php:1680
 msgid ""
 "Latitude ranges between -90 and 90 degrees, inclusive. Values above or below "
 "this range will be clamped to the range [-90, 90]. This means that if the "
@@ -1467,11 +1491,11 @@ msgid ""
 "greater than 90, it will be set to 90."
 msgstr ""
 
-#: inc/data.php:1620
+#: inc/data.php:1688
 msgid "Longitude geographical coordinates"
 msgstr ""
 
-#: inc/data.php:1621
+#: inc/data.php:1689
 msgid ""
 "Longitude ranges between -180 and 180 degrees, inclusive. Values above or "
 "below this range will be wrapped so that they fall within the range. For "
@@ -1480,415 +1504,406 @@ msgid ""
 "globe."
 msgstr ""
 
-#: inc/data.php:1629
+#: inc/data.php:1697
 msgid "Map zoom level"
 msgstr ""
 
-#: inc/data.php:1630
+#: inc/data.php:1698
 msgid "The initial Map zoom level. Required."
 msgstr ""
 
-#: inc/data.php:1635
+#: inc/data.php:1703
 msgid "Scroll wheel"
 msgstr ""
 
-#: inc/data.php:1636
+#: inc/data.php:1704
 msgid ""
 "If false, disables scrollwheel zooming on the map. The scrollwheel is "
 "enabled by default."
 msgstr ""
 
-#: inc/data.php:1642
+#: inc/data.php:1710
 msgid "Map Style"
 msgstr ""
 
-#: inc/data.php:1643
+#: inc/data.php:1711
 msgid ""
 "Styles to apply to each of the default map types. Note that for Satellite/"
 "Hybrid and Terrain modes, these styles will only apply to labels and "
 "geometry."
 msgstr ""
 
-#: inc/data.php:1651
+#: inc/data.php:1719
 msgid "Map height"
 msgstr "Ánh xạ độ cao"
 
-#: inc/data.php:1652
+#: inc/data.php:1720
 msgid "Map height value(px)"
 msgstr ""
 
-#: inc/data.php:1657
+#: inc/data.php:1725
 msgid "Pan control"
 msgstr ""
 
-#: inc/data.php:1663
+#: inc/data.php:1731
 msgid "Zoom control"
 msgstr ""
 
-#: inc/data.php:1664
+#: inc/data.php:1732
 msgid "The enabled/disabled state of the Zoom control."
 msgstr ""
 
-#: inc/data.php:1669
+#: inc/data.php:1737
 msgid "Draggable map"
 msgstr ""
 
-#: inc/data.php:1670
+#: inc/data.php:1738
 msgid ""
 "If false, prevents the map from being dragged. Dragging is enabled by "
 "default."
 msgstr ""
 
-#: inc/data.php:1675
+#: inc/data.php:1744
 msgid "Marker source"
 msgstr ""
 
-#: inc/data.php:1676
-msgid "Upload marker source"
+#: inc/data.php:1745
+msgid "Select marker id attachment"
 msgstr ""
 
-#: inc/data.php:1679
+#: inc/data.php:1748
 msgid "Google Map"
 msgstr ""
 
-#: inc/data.php:1685 inc/data.php:1692
+#: inc/data.php:1754 inc/data.php:1761
 msgid "Parallax image"
 msgstr ""
 
-#: inc/data.php:1693
+#: inc/data.php:1762
 msgid "Upload parallax image url source"
 msgstr ""
 
-#: inc/data.php:1701 inc/data.php:1767
+#: inc/data.php:1770 inc/data.php:1836
 msgid "Parallax speed"
 msgstr ""
 
-#: inc/data.php:1702 inc/data.php:1768
+#: inc/data.php:1771 inc/data.php:1837
 msgid "Parallax speed value (s)"
 msgstr ""
 
-#: inc/data.php:1707 inc/data.php:1773
+#: inc/data.php:1776 inc/data.php:1842
 msgid "Parallax invert"
 msgstr ""
 
-#: inc/data.php:1708 inc/data.php:1774
+#: inc/data.php:1777 inc/data.php:1843
 msgid "Parallax invert direction move"
 msgstr ""
 
-#: inc/data.php:1716
+#: inc/data.php:1785
 msgid "Parallax container min-height"
 msgstr ""
 
-#: inc/data.php:1717
+#: inc/data.php:1786
 msgid "container min-height value (px)"
 msgstr ""
 
-#: inc/data.php:1722 inc/data.php:1779 inc/data.php:1833 inc/data.php:1960
-#: inc/data.php:2027
-msgid "Custom class"
-msgstr ""
-
-#: inc/data.php:1723 inc/data.php:1780 inc/data.php:1834
+#: inc/data.php:1792 inc/data.php:1849 inc/data.php:1903
 msgid "Enter custom class"
 msgstr ""
 
-#: inc/data.php:1727 inc/data.php:1784
+#: inc/data.php:1796 inc/data.php:1853
 msgid "Parallax block"
 msgstr ""
 
-#: inc/data.php:1733
+#: inc/data.php:1802
 msgid "Parallax html video"
 msgstr ""
 
-#: inc/data.php:1740
+#: inc/data.php:1809 inc/data.php:2053
 msgid "Poster"
 msgstr "Áp phích"
 
-#: inc/data.php:1741
+#: inc/data.php:1810
 msgid "Poster image url"
 msgstr ""
 
-#: inc/data.php:1746
+#: inc/data.php:1815
 msgid "mp4 file"
 msgstr ""
 
-#: inc/data.php:1747
+#: inc/data.php:1816
 msgid "URL to mp4 video-file"
 msgstr ""
 
-#: inc/data.php:1752
+#: inc/data.php:1821
 msgid "webm file"
 msgstr ""
 
-#: inc/data.php:1753
+#: inc/data.php:1822
 msgid "URL to webm video-file"
 msgstr ""
 
-#: inc/data.php:1758
+#: inc/data.php:1827
 msgid "ogv file"
 msgstr ""
 
-#: inc/data.php:1759
+#: inc/data.php:1828
 msgid "URL to ogv video-file"
 msgstr ""
 
-#: inc/data.php:1790 inc/data.php:1837
+#: inc/data.php:1859 inc/data.php:1906
 msgid "Counter"
 msgstr ""
 
-#: inc/data.php:1797
+#: inc/data.php:1866
 msgid "Value"
 msgstr ""
 
-#: inc/data.php:1798
+#: inc/data.php:1867
 msgid "Value for counter"
 msgstr ""
 
-#: inc/data.php:1806
+#: inc/data.php:1875
 msgid "Counter delay"
 msgstr ""
 
-#: inc/data.php:1807
+#: inc/data.php:1876
 msgid "Counter delay (ms)"
 msgstr ""
 
-#: inc/data.php:1815
+#: inc/data.php:1884
 msgid "Speed time"
 msgstr ""
 
-#: inc/data.php:1816
+#: inc/data.php:1885
 msgid "Speed time (ms)"
 msgstr ""
 
-#: inc/data.php:1821
+#: inc/data.php:1890
 msgid "Before content"
 msgstr ""
 
-#: inc/data.php:1822
+#: inc/data.php:1891
 msgid "Enter before custom content"
 msgstr ""
 
-#: inc/data.php:1827
+#: inc/data.php:1896
 msgid "After content"
 msgstr ""
 
-#: inc/data.php:1828
+#: inc/data.php:1897
 msgid "Enter after custom content"
 msgstr ""
 
-#: inc/data.php:1843
+#: inc/data.php:1912
 msgid "Lazy Load Effect"
 msgstr ""
 
-#: inc/data.php:1850
+#: inc/data.php:1919
 msgid "Not changed"
 msgstr ""
 
-#: inc/data.php:1857
+#: inc/data.php:1926
 msgid "Start Position"
 msgstr ""
 
-#: inc/data.php:1858
+#: inc/data.php:1927
 msgid "Element position at the animation start."
 msgstr ""
 
-#: inc/data.php:1866
+#: inc/data.php:1935
 msgid "Out rotation"
 msgstr ""
 
-#: inc/data.php:1867
+#: inc/data.php:1936
 msgid "Initial element angle (min - -360&#176; max 360&#176;)"
 msgstr ""
 
-#: inc/data.php:1875
+#: inc/data.php:1944
 msgid "Flip X"
 msgstr ""
 
-#: inc/data.php:1876
+#: inc/data.php:1945
 msgid ""
 "Initial element angle Flip X (X-axis rotation min - -360&#176; max 360&#176;)"
 msgstr ""
 
-#: inc/data.php:1884
+#: inc/data.php:1953
 msgid "Flip Y"
 msgstr ""
 
-#: inc/data.php:1885
+#: inc/data.php:1954
 msgid ""
 "Initial element angle Flip Y (Y-axis rotation min - -360&#176; max 360&#176;)"
 msgstr ""
 
-#: inc/data.php:1897
+#: inc/data.php:1966
 msgid "Pivot"
 msgstr ""
 
-#: inc/data.php:1898
+#: inc/data.php:1967
 msgid "Element rotation point."
 msgstr ""
 
-#: inc/data.php:1906
+#: inc/data.php:1975
 msgid "Scale"
 msgstr ""
 
-#: inc/data.php:1907
+#: inc/data.php:1976
 msgid "Element scale value (min - 0; max 10;)"
 msgstr ""
 
-#: inc/data.php:1915
+#: inc/data.php:1984
 msgid "Opacity"
 msgstr ""
 
-#: inc/data.php:1916
+#: inc/data.php:1985
 msgid "Element opacity value (min - 0; max 1;)"
 msgstr ""
 
-#: inc/data.php:1921
+#: inc/data.php:1990
 msgid "Ease None"
 msgstr ""
 
-#: inc/data.php:1922
+#: inc/data.php:1991
 msgid "Ease In Cubic"
 msgstr ""
 
-#: inc/data.php:1923
+#: inc/data.php:1992
 msgid "Ease Out Cubic"
 msgstr ""
 
-#: inc/data.php:1924
+#: inc/data.php:1993
 msgid "Ease In Out Cubic"
 msgstr ""
 
-#: inc/data.php:1925
+#: inc/data.php:1994
 msgid "Ease In Quart"
 msgstr ""
 
-#: inc/data.php:1926
+#: inc/data.php:1995
 msgid "Ease Out Quart"
 msgstr ""
 
-#: inc/data.php:1927
+#: inc/data.php:1996
 msgid "Ease In Out Quart"
 msgstr ""
 
-#: inc/data.php:1928
+#: inc/data.php:1997
 msgid "Ease In Expo"
 msgstr ""
 
-#: inc/data.php:1929
+#: inc/data.php:1998
 msgid "Ease Out Expo"
 msgstr ""
 
-#: inc/data.php:1930
+#: inc/data.php:1999
 msgid "Ease In Out Expo"
 msgstr ""
 
-#: inc/data.php:1931
+#: inc/data.php:2000
 msgid "Ease In Back"
 msgstr ""
 
-#: inc/data.php:1932
+#: inc/data.php:2001
 msgid "Ease Out Back"
 msgstr ""
 
-#: inc/data.php:1933
+#: inc/data.php:2002
 msgid "Ease In Out Back"
 msgstr ""
 
-#: inc/data.php:1936
+#: inc/data.php:2005
 msgid "Easing"
 msgstr ""
 
-#: inc/data.php:1937
+#: inc/data.php:2006
 msgid "Animation easing."
 msgstr ""
 
-#: inc/data.php:1945
+#: inc/data.php:2014
 msgid "Animation Speed"
 msgstr ""
 
-#: inc/data.php:1946
+#: inc/data.php:2015
 msgid "Animation speed in seconds.(Example: 0.2 or 1)"
 msgstr ""
 
-#: inc/data.php:1954
+#: inc/data.php:2023
 msgid "Animation Delay"
 msgstr ""
 
-#: inc/data.php:1955
+#: inc/data.php:2024
 msgid "Animation Delay in seconds"
 msgstr ""
 
-#: inc/data.php:1961
+#: inc/data.php:2030
 msgid "Element custom class"
 msgstr ""
 
-#: inc/data.php:1964
+#: inc/data.php:2033
 msgid "This shortcode adds show animations on any page element."
 msgstr ""
 
-#: inc/data.php:1969 inc/data.php:1970
+#: inc/data.php:2038 inc/data.php:2039
 msgid "Video Preview"
 msgstr ""
 
-#: inc/data.php:1978
-msgid "URL or File."
+#: inc/data.php:2047
+msgid "URL or File"
 msgstr ""
 
-#: inc/data.php:1979
+#: inc/data.php:2048
 msgid ""
 "To use video from YouTube or Vimeo input video URL. You can also upload "
-"video file from media library."
+"video file from media library"
 msgstr ""
 
-#: inc/data.php:1984
-msgid "Poster."
+#: inc/data.php:2054
+msgid "Poster image URL"
 msgstr ""
 
-#: inc/data.php:1985
-msgid "Poster image url."
-msgstr ""
-
-#: inc/data.php:1990
+#: inc/data.php:2059
 msgid "Hide control buttons"
 msgstr ""
 
-#: inc/data.php:1991
+#: inc/data.php:2060
 msgid "Show control buttons"
 msgstr ""
 
-#: inc/data.php:1992
+#: inc/data.php:2061
 msgid "Show control button on mouse hover"
 msgstr ""
 
-#: inc/data.php:1993
+#: inc/data.php:2062
 msgid "Video Autoplay"
 msgstr ""
 
-#: inc/data.php:1994
+#: inc/data.php:2063
 msgid "Play video on mouse hover"
 msgstr ""
 
-#: inc/data.php:1997
-msgid "Controls."
+#: inc/data.php:2066
+msgid "Controls"
+msgstr "Điều khiển"
+
+#: inc/data.php:2071
+msgid "Show content on mouse hover?"
 msgstr ""
 
-#: inc/data.php:2003
-msgid "Show content on mouse hover."
+#: inc/data.php:2076
+msgid "Muted?"
 msgstr ""
 
-#: inc/data.php:2009
-msgid "Muted."
+#: inc/data.php:2081
+msgid "Loop?"
 msgstr ""
 
-#: inc/data.php:2015
-msgid "Loop."
+#: inc/data.php:2086
+msgid "Preload?"
 msgstr ""
 
-#: inc/data.php:2021
-msgid "Preload."
-msgstr ""
-
-#: inc/data.php:2028
+#: inc/data.php:2092
 msgid "Element custom class. You can use \"full-width\" class for video"
 msgstr ""
 
@@ -1928,92 +1943,92 @@ msgstr ""
 msgid "Please select landing page. (Page with anchor navigation menu.)"
 msgstr ""
 
-#: inc/generator-views.php:63 inc/generator-views.php:68
+#: inc/generator-views.php:64 inc/generator-views.php:69
 #: inc/vendor/sunrise.php:452
 msgid "Media manager"
 msgstr "Quản lý phương tiện truyền thông"
 
-#: inc/generator-views.php:68
+#: inc/generator-views.php:69
 msgid "Icon picker"
 msgstr "Chọn biểu tượng"
 
-#: inc/generator-views.php:68
+#: inc/generator-views.php:69
 msgid "Filter icons"
 msgstr "Lọc biểu tượng"
 
-#: inc/generator-views.php:82
+#: inc/generator-views.php:83
 msgid "Please wait"
 msgstr "Hãy chờ"
 
-#: inc/generator-views.php:89
+#: inc/generator-views.php:90
 msgid "Untitled gallery"
 msgstr "Chưa có tiêu đề thư viện ảnh"
 
-#: inc/generator-views.php:95
+#: inc/generator-views.php:96
 msgid "Galleries not found"
 msgstr "Phòng trưng bày không tìm thấy"
 
-#: inc/generator-views.php:96
+#: inc/generator-views.php:97
 msgid "Manage galleries"
 msgstr "Quản lý phòng trưng bày"
 
-#: inc/generator-views.php:96
+#: inc/generator-views.php:97
 msgid "Reload galleries"
 msgstr "Tải lại phòng trưng bày"
 
-#: inc/generator-views.php:112
+#: inc/generator-views.php:113
 msgid "Horizontal offset"
 msgstr "Đối tượng dời hình ngang"
 
-#: inc/generator-views.php:112
+#: inc/generator-views.php:113
 msgid "Vertical offset"
 msgstr "Đối tượng dời hình thẳng đứng"
 
-#: inc/generator-views.php:112
+#: inc/generator-views.php:113
 msgid "Blur"
 msgstr "Mờ"
 
-#: inc/generator-views.php:112
+#: inc/generator-views.php:113
 msgid "Color"
 msgstr "Màu sắc"
 
-#: inc/generator-views.php:123
+#: inc/generator-views.php:124
 msgid "Border width"
 msgstr "Chiều rộng biên giới"
 
-#: inc/generator-views.php:123
+#: inc/generator-views.php:124
 msgid "Border style"
 msgstr "Phong cách biên giới"
 
-#: inc/generator-views.php:123
+#: inc/generator-views.php:124
 msgid "Border color"
 msgstr "Biên giới màu sắc"
 
-#: inc/generator-views.php:133
+#: inc/generator-views.php:134
 msgid "Media library"
 msgstr "Thư viện phương tiện"
 
-#: inc/generator-views.php:134
+#: inc/generator-views.php:135
 msgid "Recent posts"
 msgstr "Bài viết mới nhất"
 
-#: inc/generator-views.php:135
+#: inc/generator-views.php:136
 msgid "Category"
 msgstr "Thể loại"
 
-#: inc/generator-views.php:139
+#: inc/generator-views.php:140
 msgid "Select images source"
 msgstr "Chọn hình ảnh nguồn"
 
-#: inc/generator-views.php:150
+#: inc/generator-views.php:151
 msgid "Select taxonomy"
 msgstr "Chọn phân loại"
 
-#: inc/generator-views.php:161
+#: inc/generator-views.php:162
 msgid "Add images"
 msgstr "Thêm hình ảnh"
 
-#: inc/generator-views.php:161
+#: inc/generator-views.php:162
 msgid ""
 "Click the button above and select images.<br>You can select multimple images "
 "with Ctrl (Cmd) key"
@@ -2021,7 +2036,7 @@ msgstr ""
 "Nhấp vào nút ở trên và chọn hình ảnh.<br>Bạn có thể chọn hình ảnh multimple "
 "với phím Ctrl (Cmd)"
 
-#: inc/generator-views.php:161
+#: inc/generator-views.php:162
 msgid ""
 "Select categories to retrieve posts from.<br>You can select multiple "
 "categories with Ctrl (Cmd) key"
@@ -2029,7 +2044,7 @@ msgstr ""
 "Chọn thể loại để lấy các bài viết từ. <b> Bạn có thể chọn nhiều chuyên mục "
 "với phím Ctrl (Cmd)"
 
-#: inc/generator-views.php:161
+#: inc/generator-views.php:162
 msgid ""
 "Select taxonomy and it's terms.<br>You can select multiple terms with Ctrl "
 "(Cmd) key"
@@ -2037,19 +2052,19 @@ msgstr ""
 "Chọn phân loại và điều khoản. <br> bạn có thể chọn nhiều cụm từ với phím "
 "Ctrl (Cmd)"
 
-#: inc/generator-views.php:193 inc/generator-views.php:230
+#: inc/generator-views.php:192 inc/generator-views.php:229
 msgid "Extra small devices (Phones)"
 msgstr ""
 
-#: inc/generator-views.php:193 inc/generator-views.php:230
+#: inc/generator-views.php:192 inc/generator-views.php:229
 msgid "Small devices (Tablets)"
 msgstr ""
 
-#: inc/generator-views.php:193 inc/generator-views.php:230
+#: inc/generator-views.php:192 inc/generator-views.php:229
 msgid "Medium devices (Desktops)"
 msgstr ""
 
-#: inc/generator-views.php:193 inc/generator-views.php:230
+#: inc/generator-views.php:192 inc/generator-views.php:229
 msgid "Large devices (Desktops)"
 msgstr ""
 
@@ -2085,27 +2100,27 @@ msgstr "Tất cả các Shortcodes"
 msgid "Examples of use"
 msgstr ""
 
-#: inc/generator.php:212
+#: inc/generator.php:228
 msgid "Click to set this value"
 msgstr "Nhấn vào đây để đặt giá trị này"
 
-#: inc/generator.php:249
+#: inc/generator.php:269
 msgid "Preview"
 msgstr "Xem trước"
 
-#: inc/generator.php:258 inc/tools.php:230
+#: inc/generator.php:278 inc/tools.php:231
 msgid "Access denied"
 msgstr "Truy cập bị từ chối"
 
-#: inc/generator.php:293
+#: inc/generator.php:313
 msgid "Presets"
 msgstr "Cài đặt trước"
 
-#: inc/generator.php:296
+#: inc/generator.php:316
 msgid "Save current settings as preset"
 msgstr "Lưu thiết lập hiện thời là cài sẵn"
 
-#: inc/generator.php:325 inc/generator.php:328
+#: inc/generator.php:345 inc/generator.php:348
 msgid "Presets not found"
 msgstr "Các cài đặt trước không tìm thấy"
 
@@ -2113,15 +2128,15 @@ msgstr "Các cài đặt trước không tìm thấy"
 msgid "Read More"
 msgstr ""
 
-#: inc/shortcodes.php:262 inc/shortcodes.php:833 inc/shortcodes.php:1263
+#: inc/shortcodes.php:264 inc/shortcodes.php:873 inc/shortcodes.php:1310
 msgid "Template file (*.tmpl) not found"
 msgstr ""
 
-#: inc/shortcodes.php:1028 inc/shortcodes.php:1400
+#: inc/shortcodes.php:1075 inc/shortcodes.php:1447
 msgid "Posts not found"
 msgstr "Bài viết không tìm thấy"
 
-#: inc/shortcodes.php:1449
+#: inc/shortcodes.php:1496
 msgid "Tab title"
 msgstr "Tab tiêu đề"
 
@@ -2213,16 +2228,6 @@ msgstr ""
 #: inc/widget.php:62
 msgid "Title:"
 msgstr "Tiêu đề:"
-
-#: templates/shortcodes/posts/default.tmpl:4
-#: templates/shortcodes/swiper_carousel/default.tmpl:4
-msgid "Posted on"
-msgstr ""
-
-#: templates/shortcodes/posts/default.tmpl:4
-#: templates/shortcodes/swiper_carousel/default.tmpl:4
-msgid "by"
-msgstr ""
 
 #~ msgid "Square"
 #~ msgstr "Vuông"
@@ -2729,9 +2734,6 @@ msgstr ""
 #~ msgid "Fluid buttons has 100% width"
 #~ msgstr "Chất lỏng nút có 100% chiều rộng"
 
-#~ msgid "Auto"
-#~ msgstr "Tự động"
-
 #~ msgid "Round"
 #~ msgstr "Vòng"
 
@@ -3053,9 +3055,6 @@ msgstr ""
 
 #~ msgid "2 - Show controls when playback is started"
 #~ msgstr "2 - Hiển thị điều khiển khi phát lại bắt đầu"
-
-#~ msgid "Controls"
-#~ msgstr "Điều khiển"
 
 #~ msgid ""
 #~ "This parameter indicates whether the video player controls will display"

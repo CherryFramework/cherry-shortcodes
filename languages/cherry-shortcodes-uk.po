@@ -6,7 +6,7 @@ msgstr ""
 "PO-Revision-Date: 2015-10-30 13:04+0200\n"
 "Last-Translator: J.L.Dokter <jldokter@gmail.com>\n"
 "Language-Team: Cherry Team <support@cherryframework.com>\n"
-"Language: es_ES\n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,107 +22,107 @@ msgstr ""
 
 #: inc/assets.php:143 inc/vendor/sunrise.php:179
 msgid "Choose file"
-msgstr "Elija archivo"
+msgstr "Оберіть файл"
 
 #: inc/assets.php:144
 msgid "Insert"
-msgstr "Insertar"
+msgstr "Вставити"
 
 #: inc/assets.php:145
 msgid "Select images"
-msgstr "Seleccionar imágenes"
+msgstr "Виберіть зображення"
 
 #: inc/assets.php:146
 msgid "Add selected images"
-msgstr "Añadir imágenes seleccionadas"
+msgstr "Додати вибрані зображення"
 
 #: inc/assets.php:147
 msgid "Please enter a name for new preset"
-msgstr "Por favor, introduzca un nombre para el nuevo preajuste"
+msgstr "Будь ласка, введіть назву нового шаблону"
 
 #: inc/assets.php:148
 msgid "New preset"
-msgstr "Nuevo preajuste"
+msgstr "Новий шаблон"
 
 #: inc/assets.php:149
 msgid "Last used settings"
-msgstr "Últimos ajustes usados"
+msgstr "Останні використовувані налаштування"
 
 #: inc/data.php:30
 msgid "All"
-msgstr "Todo"
+msgstr "Всі"
 
 #: inc/data.php:31
 msgid "Grid"
-msgstr "Rejilla"
+msgstr "Сітка"
 
 #: inc/data.php:32
 msgid "Typography"
-msgstr "Tipografía"
+msgstr "Оформлення"
 
 #: inc/data.php:33 inc/generator.php:251
 msgid "Content"
-msgstr "Contenido"
+msgstr "Вміст"
 
 #: inc/data.php:34
 msgid "Media"
-msgstr "Media"
+msgstr "Медіа"
 
 #: inc/data.php:35
 msgid "Components"
-msgstr "Сomponentes"
+msgstr "Компоненти"
 
 #: inc/data.php:36
 msgid "Other"
-msgstr "Otros"
+msgstr "Інше"
 
 #: inc/data.php:45 inc/data.php:1074 inc/data.php:1381
 msgid "None"
-msgstr "Ningún "
+msgstr "Жодного"
 
 #: inc/data.php:46
 msgid "Solid"
-msgstr "Sólido"
+msgstr "Суцільний"
 
 #: inc/data.php:47
 msgid "Dotted"
-msgstr "Punteado"
+msgstr "Крапкований"
 
 #: inc/data.php:48
 msgid "Dashed"
-msgstr "Discontinuo"
+msgstr "Пунктир"
 
 #: inc/data.php:49
 msgid "Double"
-msgstr "Doble"
+msgstr "Подвійний"
 
 #: inc/data.php:50
 msgid "Groove"
-msgstr "Hundimiento"
+msgstr "Радіальний"
 
 #: inc/data.php:51
 msgid "Ridge"
-msgstr "Saliente "
+msgstr "По краю"
 
 #: inc/data.php:70
 msgid "Row"
-msgstr "Fila"
+msgstr "Ряд"
 
 #: inc/data.php:77 inc/data.php:109
 msgid "Fixed Width"
-msgstr "Ancho Fijo"
+msgstr "Фіксована ширина"
 
 #: inc/data.php:78 inc/data.php:110
 msgid "Full Width"
-msgstr "Ancho completo"
+msgstr "На всю ширину"
 
 #: inc/data.php:81 inc/data.php:113
 msgid "Type"
-msgstr "Tipo"
+msgstr "Тип"
 
 #: inc/data.php:82 inc/data.php:114
 msgid "Type width"
-msgstr "Tipo de anchura"
+msgstr "Тип ширини"
 
 #: inc/data.php:86 inc/data.php:118 inc/data.php:194 inc/data.php:266
 #: inc/data.php:293 inc/data.php:309 inc/data.php:347 inc/data.php:446
@@ -132,7 +132,7 @@ msgstr "Tipo de anchura"
 #: inc/data.php:1650 inc/data.php:1791 inc/data.php:1848 inc/data.php:1902
 #: inc/data.php:2029 inc/data.php:2091
 msgid "Class"
-msgstr "Clase"
+msgstr "Клас"
 
 #: inc/data.php:87 inc/data.php:119 inc/data.php:195 inc/data.php:267
 #: inc/data.php:294 inc/data.php:310 inc/data.php:348 inc/data.php:447
@@ -141,15 +141,15 @@ msgstr "Clase"
 #: inc/data.php:1488 inc/data.php:1538 inc/data.php:1587 inc/data.php:1632
 #: inc/data.php:1651
 msgid "Extra CSS class"
-msgstr "Extra clase CSS "
+msgstr "Користувацький клас CSS"
 
 #: inc/data.php:91 inc/data.php:123 inc/data.php:1566 inc/data.php:1626
 msgid "Anchor"
-msgstr "Autor"
+msgstr "Якір"
 
 #: inc/data.php:92 inc/data.php:124
 msgid "This option defines menu item marker."
-msgstr "Esta opción define marcador de elemento de menú."
+msgstr "Цей параметр визначає позначку пункта меню."
 
 #: inc/data.php:95
 msgid ""
@@ -157,17 +157,17 @@ msgid ""
 "[%prefix_col size_md=\"4\"]Column content[/%prefix_col]\n"
 "[%prefix_col size_md=\"4\"]Column content[/%prefix_col]"
 msgstr ""
-"[%prefix_col size_md=\"4\"]Contenido de la columna[/%prefix_col]\n"
-"[%prefix_col size_md=\"4\"]Contenido de la columna[/%prefix_col]\n"
-"[%prefix_col size_md=\"4\"]Contenido de la columna[/%prefix_col]"
+"[%prefix_col size_md=\"4\"]Вміст стовпця[/%prefix_col]\n"
+"[%prefix_col size_md=\"4\"]Вміст стовпця[/%prefix_col]\n"
+"[%prefix_col size_md=\"4\"]Вміст стовпця[/%prefix_col]"
 
 #: inc/data.php:96 inc/data.php:128
 msgid "Row for flexible columns"
-msgstr "Fila de columnas flexibles"
+msgstr "Ряд стовпців змінної ширини"
 
 #: inc/data.php:102
 msgid "Row Inner"
-msgstr "Fila Interior"
+msgstr "Внутрішній ряд"
 
 #: inc/data.php:127
 msgid ""
@@ -175,258 +175,256 @@ msgid ""
 "[%prefix_col_inner size_md=\"4\"]Column content[/%prefix_col_inner]\n"
 "[%prefix_col_inner size_md=\"4\"]Column content[/%prefix_col_inner]"
 msgstr ""
-"[%prefix_col_inner size_md=\"4\"]Contenido de la columna[/"
-"%prefix_col_inner]\n"
-"[%prefix_col_inner size_md=\"4\"]Contenido de la columna[/"
-"%prefix_col_inner]\n"
-"[%prefix_col_inner size_md=\"4\"]Contenido de la columna[/%prefix_col_inner]"
+"[%prefix_col_inner size_md=\"4\"]Вміст стовпця[/%prefix_col_inner]\n"
+"[%prefix_col_inner size_md=\"4\"]Вміст стовпця[/%prefix_col_inner]\n"
+"[%prefix_col_inner size_md=\"4\"]Вміст стовпця[/%prefix_col_inner]"
 
 #: inc/data.php:134
 msgid "Column"
-msgstr "Columna"
+msgstr "Стовпець"
 
 #: inc/data.php:146 inc/data.php:218 inc/data.php:288 inc/data.php:849
 msgid "Size"
-msgstr "Tamaño"
+msgstr "Розмір"
 
 #: inc/data.php:147 inc/data.php:219
 msgid "Select column width."
-msgstr "Seleccione el ancho de columna."
+msgstr "Оберіть ширину стовпця"
 
 #: inc/data.php:157 inc/data.php:229 inc/data.php:1058 inc/data.php:1365
 msgid "Offset"
-msgstr "Desplazamiento"
+msgstr "Зміщення"
 
 #: inc/data.php:158 inc/data.php:230
 msgid "Select column offset."
-msgstr "Seleccione el desplazamiento de la columna."
+msgstr "Оберіть зміщення стовпця"
 
 #: inc/data.php:168 inc/data.php:240
 msgid "Pull"
-msgstr "Tirón"
+msgstr "Відступ зліва"
 
 #: inc/data.php:169 inc/data.php:241
 msgid "Select column pull."
-msgstr "Seleccione la columna de tirón."
+msgstr "Оберіть відступ до стовпця зліва"
 
 #: inc/data.php:179 inc/data.php:251
 msgid "Push"
-msgstr "Empujón"
+msgstr "Відступ справа"
 
 #: inc/data.php:180 inc/data.php:252
 msgid "Select column push."
-msgstr "Seleccione la columna de empujón."
+msgstr "Оберіть відступ до стовпця справа"
 
 #: inc/data.php:185 inc/data.php:257 inc/generator-views.php:58
 msgid "No"
-msgstr "No"
+msgstr "Ні"
 
 #: inc/data.php:186 inc/data.php:258 inc/generator-views.php:58
 msgid "Yes"
-msgstr "Si"
+msgstr "Так"
 
 #: inc/data.php:189 inc/data.php:190 inc/data.php:261 inc/data.php:262
 msgid "Collapse column paddings"
-msgstr "Reducir el relleno de columna"
+msgstr "Об'єднати внутрішні відступи стовпців"
 
 #: inc/data.php:198 inc/data.php:270
 msgid "Column content"
-msgstr "Contenido de columna"
+msgstr "Вміст стовпця"
 
 #: inc/data.php:199 inc/data.php:271
 msgid "Flexible and responsive columns"
-msgstr "Columnas flexibles y sensibles"
+msgstr "Стовпці змінної ширини"
 
 #: inc/data.php:206
 msgid "Column Inner"
-msgstr "Columna Interna"
+msgstr "Внутрішня область стовпця"
 
 #: inc/data.php:278
 msgid "Spacer"
-msgstr "Espacio"
+msgstr "Пропуск"
 
 #: inc/data.php:289
 msgid "Spacer height"
-msgstr "Altura del espaciador"
+msgstr "Висота пропуску"
 
 #: inc/data.php:297
 msgid "Vertical spacer between blocks"
-msgstr "Espaciador vertical entre bloques"
+msgstr "Вертикальний відступ між блоками"
 
 #: inc/data.php:303
 msgid "Clear"
-msgstr "Limpio"
+msgstr "Порожній ряд"
 
 #: inc/data.php:313
 msgid "Clearing block"
-msgstr "Bloque limpio"
+msgstr "Порожній блок"
 
 #: inc/data.php:319 inc/data.php:326 inc/data.php:682 inc/data.php:896
 #: inc/data.php:985
 msgid "Icon"
-msgstr "Icono"
+msgstr "Іконка"
 
 #: inc/data.php:327 inc/data.php:683 inc/data.php:897 inc/data.php:986
 msgid "You can upload custom icon for this button or pick a built-in icon"
 msgstr ""
-"Puedes subir un icono personalizado para este botón o elegir un icono "
-"incorporado"
+"Тут можна завантажити власну іконку для кнопки або вибрати одну з уже "
+"доступних."
 
 #: inc/data.php:335 inc/data.php:691
 msgid "Icon size"
-msgstr "Tamaño del icono "
+msgstr "Розмір іконки"
 
 #: inc/data.php:336 inc/data.php:692
 msgid "Font size in px (only for font icons)"
-msgstr "Tamaño de la fuente en px (sólo para los iconos de la fuente)"
+msgstr "Розмір шрифту в пікселях (лише для шрифтових іконок)"
 
 #: inc/data.php:342 inc/data.php:712
 msgid "Icon Color"
-msgstr "Color del icono"
+msgstr "Колір іконки"
 
 #: inc/data.php:343 inc/data.php:713
 msgid "Font icon color"
-msgstr "Color del icono de la fuente"
+msgstr "Колір шрифтової іконки"
 
 #: inc/data.php:351
 msgid "Insert custom icon"
-msgstr "Inserte icono personalizado"
+msgstr "Вставити власну іконку"
 
 #: inc/data.php:357 inc/data.php:451
 msgid "Box"
-msgstr "Caja"
+msgstr "Контейнер"
 
 #: inc/data.php:364 inc/data.php:465 inc/data.php:821
 msgid "Primary"
-msgstr "Primario"
+msgstr "Головний"
 
 #: inc/data.php:365 inc/data.php:466
 msgid "Secondary"
-msgstr "Secundario"
+msgstr "Другорядний"
 
 #: inc/data.php:366 inc/data.php:467 inc/data.php:824
 msgid "Gray"
-msgstr "Gris"
+msgstr "Сірий"
 
 #: inc/data.php:367 inc/data.php:468
 msgid "Primary border"
-msgstr "Borde primario"
+msgstr "Головна межа"
 
 #: inc/data.php:368 inc/data.php:469
 msgid "Secondary border"
-msgstr "Borde secundario"
+msgstr "Другорядна межа"
 
 #: inc/data.php:369 inc/data.php:470
 msgid "Gray border"
-msgstr "Borde gris"
+msgstr "Сіра межа"
 
 #: inc/data.php:372 inc/data.php:473
 msgid "Box styling preset"
-msgstr "Estilo preestablecido de la caja"
+msgstr "Шаблон оформлення контейнера"
 
 #: inc/data.php:373 inc/data.php:474
 msgid "Select box styling preset"
-msgstr "Seleccione el estilo preestablecido de la caja"
+msgstr "Оберіть шаблон оформлення контейнера"
 
 #: inc/data.php:379 inc/data.php:480 inc/data.php:760
 msgid "Background Color"
-msgstr "Color de Fondo"
+msgstr "Колір тла"
 
 #: inc/data.php:380 inc/data.php:481
 msgid "Select box background color"
-msgstr "Seleccione el color del fondo de la caja"
+msgstr "Оберіть колір тла контейнера"
 
 #: inc/data.php:385 inc/data.php:486
 msgid "Background Image"
-msgstr "Imagen de Fondo"
+msgstr "Зображення тла"
 
 #: inc/data.php:386 inc/data.php:487
 msgid "Upload box background image"
-msgstr "Suba la imagen de fondo de la caja"
+msgstr "Оберіть зображення тла контейнера"
 
 #: inc/data.php:391 inc/data.php:492 inc/data.php:1960
 msgid "Top Left"
-msgstr "Arriba a la Izquierda"
+msgstr "Угорі зліва"
 
 #: inc/data.php:392 inc/data.php:493
 msgid "Top Center"
-msgstr "Arriba al Centro"
+msgstr "Угорі посередині"
 
 #: inc/data.php:393 inc/data.php:494 inc/data.php:1961
 msgid "Top Right"
-msgstr "Arriba a la Rerecha"
+msgstr "Угорі справа"
 
 #: inc/data.php:394 inc/data.php:495
 msgid "Middle Left"
-msgstr "En Medio a la Izquierda"
+msgstr "Посередині зліва"
 
 #: inc/data.php:395 inc/data.php:496
 msgid "Middle Center"
-msgstr "En Medio al Centro"
+msgstr "Посередині"
 
 #: inc/data.php:396 inc/data.php:497
 msgid "Middle Right"
-msgstr "En Medio a la Derecha"
+msgstr "Посередині справа"
 
 #: inc/data.php:397 inc/data.php:498 inc/data.php:1962
 msgid "Bottom Left"
-msgstr "Abajo a la Izquierda"
+msgstr "Внизу зліва"
 
 #: inc/data.php:398 inc/data.php:499
 msgid "Bottom Center"
-msgstr "Abajo al Centro"
+msgstr "Внизу посередині"
 
 #: inc/data.php:399 inc/data.php:500 inc/data.php:1963
 msgid "Bottom Right"
-msgstr "Abajo a la Derecha"
+msgstr "Внизу справа"
 
 #: inc/data.php:402 inc/data.php:503
 msgid "Background image position"
-msgstr "Posición de la imagen de fondo"
+msgstr "Розташування фонового зображення"
 
 #: inc/data.php:403 inc/data.php:504
 msgid "Select background image position"
-msgstr "Seleccione la posición de la imagen de fondo"
+msgstr "Виберіть розташування фонового зображення"
 
 #: inc/data.php:408 inc/data.php:509
 msgid "No Repeat"
-msgstr "No repetir"
+msgstr "Не повторювати"
 
 #: inc/data.php:409 inc/data.php:510
 msgid "Repeat All"
-msgstr "Repetir Todo"
+msgstr "Повторювати усе"
 
 #: inc/data.php:410 inc/data.php:511
 msgid "Repeat Horizontally"
-msgstr "Repetir Horizontalmente"
+msgstr "Повторювати горизонтально"
 
 #: inc/data.php:411 inc/data.php:512
 msgid "Repeat Vertically"
-msgstr "Repetir Verticalmente"
+msgstr "Повторювати вертикально"
 
 #: inc/data.php:414 inc/data.php:515
 msgid "Background image repeat"
-msgstr "Repetir la imagen de fondo"
+msgstr "Повторення фонового зображення"
 
 #: inc/data.php:415 inc/data.php:516
 msgid "Select background image repeat"
-msgstr "Seleccione la imagen de fondo repetida"
+msgstr "Виберіть повторення фонового зображення"
 
 #: inc/data.php:420 inc/data.php:521
 msgid "Scroll normally"
-msgstr "Desplazar Normalmente"
+msgstr "Звичайне прокручування"
 
 #: inc/data.php:421 inc/data.php:522
 msgid "Fixed in place"
-msgstr "Fijado en Lugar"
+msgstr "Закріплено у позиції"
 
 #: inc/data.php:424 inc/data.php:525
 msgid "Background image attachment"
-msgstr "Imagen de fondo fijada"
+msgstr "Закріплення фонового зображення"
 
 #: inc/data.php:425 inc/data.php:526
 msgid "Select background image attachment"
-msgstr "Seleccione la imagen de fondo fijada"
+msgstr "Виберіть закріплення фонового зображення"
 
 #: inc/data.php:430 inc/data.php:531
 msgid "Auto"
@@ -450,31 +448,31 @@ msgstr ""
 
 #: inc/data.php:441 inc/data.php:542
 msgid "Fill"
-msgstr "Rellenar"
+msgstr "Заповнювати"
 
 #: inc/data.php:442 inc/data.php:543
 msgid "Fill a parent container?"
-msgstr "¿Rellenar el contenedor padre?"
+msgstr "Заповнювати батьківський контейнер?"
 
 #: inc/data.php:450 inc/data.php:551 inc/data.php:1795 inc/data.php:1852
 msgid "Your content goes here"
-msgstr "Su contenido está aquí"
+msgstr "Тут буде відображатися ваш текст"
 
 #: inc/data.php:457 inc/data.php:552
 msgid "Box Inner"
-msgstr "Caja interior"
+msgstr "Внутрішня область"
 
 #: inc/data.php:464
 msgid "No preset"
-msgstr "No está preestablecido"
+msgstr "Немає шаблону"
 
 #: inc/data.php:558 inc/data.php:609
 msgid "Banner"
-msgstr "Banner"
+msgstr "Банер"
 
 #: inc/data.php:566
 msgid "Banner Image"
-msgstr "Imagen del banner"
+msgstr "Зображення банера"
 
 #: inc/data.php:567
 msgid "Select attachment banner image"
@@ -482,464 +480,464 @@ msgstr ""
 
 #: inc/data.php:571
 msgid "Banner Title"
-msgstr "Título del banner"
+msgstr "Заголовок банера"
 
 #: inc/data.php:572
 msgid "Enter banner title"
-msgstr "Introduzca el título del banner"
+msgstr "Введіть заголовок банера"
 
 #: inc/data.php:576
 msgid "Banner URL"
-msgstr "Banner URL"
+msgstr "URL банера"
 
 #: inc/data.php:577 inc/filters.php:121
 msgid "Banner link URL"
-msgstr "Enlace URL de Banner"
+msgstr "URL посилання банера"
 
 #: inc/data.php:583 inc/data.php:927
 msgid "Text color"
-msgstr "Color del texto"
+msgstr "Колір тексту"
 
 #: inc/data.php:584
 msgid "Banner text color"
-msgstr "Color del texto de banner"
+msgstr "Колір тексту банера"
 
 #: inc/data.php:590
 msgid "Background color"
-msgstr "Color del fondo"
+msgstr "Колір тла"
 
 #: inc/data.php:591 inc/filters.php:135
 msgid "Banner background color"
-msgstr "Color del fondo de banner"
+msgstr "Колір тла банера"
 
 #: inc/data.php:604 inc/data.php:1165 inc/data.php:1496
 msgid "Template"
-msgstr "Plantilla"
+msgstr "Шаблон"
 
 #: inc/data.php:605 inc/data.php:1166 inc/data.php:1497
 msgid "Shortcode template"
-msgstr "Plantilla de shortcode"
+msgstr "Шаблон шорткоду"
 
 #: inc/data.php:608
 msgid "Banner content goes here"
-msgstr "Contenido del Banner está aquí"
+msgstr "Тут буде відображатися текст банера"
 
 #: inc/data.php:615 inc/data.php:659
 msgid "Horizontal Rule"
-msgstr "Regla Horizontal"
+msgstr "Горизонтальна лінія"
 
 #: inc/data.php:625
 msgid "Line height"
-msgstr "Altura de la línea"
+msgstr "Висота рядка"
 
 #: inc/data.php:626
 msgid "Horizontal rule height"
-msgstr "Regla Horizontal de la altura"
+msgstr "Висота горизонтальної лінії"
 
 #: inc/data.php:632
 msgid "Line color"
-msgstr "Línea de color "
+msgstr "Колір лінії"
 
 #: inc/data.php:633
 msgid "Horizontal rule color"
-msgstr "Regla Horizontal del color"
+msgstr "Колір горизонтальної лінії"
 
 #: inc/data.php:641
 msgid "Indent before"
-msgstr "Espacio de antes"
+msgstr "Відступ перед"
 
 #: inc/data.php:642
 msgid "Indent before horizontal rule"
-msgstr "Espacio de antes de la regla horizontal"
+msgstr "Відступ перед горизонтальною лінією"
 
 #: inc/data.php:650
 msgid "Indent after"
-msgstr "Espacio de después"
+msgstr "Відступ після"
 
 #: inc/data.php:651
 msgid "Indent after horizontal rule"
-msgstr "Espacio de después de la regla horizontal"
+msgstr "Відступ після горизонтальної лінії"
 
 #: inc/data.php:665
 msgid "Title Box"
-msgstr "Título de la Caja"
+msgstr "Заголовок коробки"
 
 #: inc/data.php:671 inc/data.php:1555 inc/data.php:1605
 msgid "Title"
-msgstr "Título"
+msgstr "Заголовок"
 
 #: inc/data.php:672
 msgid "Title text"
-msgstr "Título del texto"
+msgstr "Текст заголовка"
 
 #: inc/data.php:676
 msgid "Subtitle"
-msgstr "Subtítulo"
+msgstr "Підзаголовок"
 
 #: inc/data.php:677
 msgid "Subtitle text"
-msgstr "Texto de los subtítulos"
+msgstr "Текст підзаголовка"
 
 #: inc/data.php:698
 msgid "Title Color"
-msgstr "Color del Título"
+msgstr "Колір заголовка"
 
 #: inc/data.php:699
 msgid "Title text color"
-msgstr "Color del título del texto"
+msgstr "Колір тексту заголовка"
 
 #: inc/data.php:705
 msgid "Subtitle Color"
-msgstr "Color del subtítulo"
+msgstr "Колір Підзаголовка"
 
 #: inc/data.php:706
 msgid "Subtitle text color"
-msgstr "Color del texto de subtítulo"
+msgstr "Колір тексту підзаголовка"
 
 #: inc/data.php:721
 msgid "Title box"
-msgstr "Título de la Caja"
+msgstr "Заголовок коробки"
 
 #: inc/data.php:727
 msgid "Dropcap"
-msgstr "Dropcap"
+msgstr "Буквиця"
 
 #: inc/data.php:737
 msgid "Text size"
-msgstr "Tamaño del texto"
+msgstr "Розмір тексту"
 
 #: inc/data.php:738
 msgid "Text size in px"
-msgstr "Tamaño del texto en px"
+msgstr "Розмір тексту в пікселях"
 
 #: inc/data.php:746
 msgid "Canvas size"
-msgstr "Tamaño del lienzo"
+msgstr "Розмір полотна"
 
 #: inc/data.php:747
 msgid "Canvas size in px"
-msgstr "Tamaño del lienzo en px"
+msgstr "Розмір полотна у пікселях"
 
 #: inc/data.php:753
 msgid "Text Color"
-msgstr "Color del Texto"
+msgstr "Колір тексту"
 
 #: inc/data.php:754
 msgid "Dropcap text color"
-msgstr "Color del texto de Dropcap"
+msgstr "Колір тексту буквиці"
 
 #: inc/data.php:761
 msgid "Dropcap background color"
-msgstr "Color del fondo de Dropcap"
+msgstr "Колір тла буквиці"
 
 #: inc/data.php:766 inc/data.php:886 inc/data.php:902 inc/data.php:1923
 msgid "Left"
-msgstr "Izquierdo"
+msgstr "Зліва"
 
 #: inc/data.php:767 inc/data.php:887 inc/data.php:904 inc/data.php:1921
 msgid "Right"
-msgstr "Derecho"
+msgstr "Справа"
 
 #: inc/data.php:768 inc/data.php:1959
 msgid "Center"
-msgstr "Centro"
+msgstr "Посередині"
 
 #: inc/data.php:771
 msgid "Align"
-msgstr "Alinear"
+msgstr "Вирівнювання"
 
 #: inc/data.php:772
 msgid "Dropcap alignment"
-msgstr "Alineación de Dropcap"
+msgstr "Вирівнювання буквиці"
 
 #: inc/data.php:780 inc/data.php:868
 msgid "Border radius"
-msgstr "Radio del borde"
+msgstr "Радіус кривини краю"
 
 #: inc/data.php:781
 msgid "Border radius size in px"
-msgstr "Tamaño del radio del borde en px"
+msgstr "Радіус кривини краю в пікселях"
 
 #: inc/data.php:786
 msgid "Border"
-msgstr "Borde"
+msgstr "Край"
 
 #: inc/data.php:787
 msgid "Setup dropcap border"
-msgstr "Configuración del borde de dropcap "
+msgstr "Встановіть край буквиці"
 
 #: inc/data.php:795
 msgid "A"
-msgstr "A"
+msgstr "А"
 
 #: inc/data.php:796
 msgid "Dropcap box"
-msgstr "Caja Dropcap"
+msgstr "Область буквиці"
 
 #: inc/data.php:802
 msgid "Button"
-msgstr "Botón"
+msgstr "Кнопка"
 
 #: inc/data.php:807
 msgid "Read more"
-msgstr "Leer Más"
+msgstr "Детальніше"
 
 #: inc/data.php:808
 msgid "Text"
-msgstr "Texto"
+msgstr "Текст"
 
 #: inc/data.php:809 inc/data.php:1151 inc/data.php:1471
 msgid "Button text"
-msgstr "Texto del botón"
+msgstr "Підпис кнопки"
 
 #: inc/data.php:813 inc/data.php:829
 msgid "Link"
-msgstr "Enlace"
+msgstr "Посилання "
 
 #: inc/data.php:814
 msgid "Button link"
-msgstr "Enlace del Botón"
+msgstr "Посилання кнопки"
 
 #: inc/data.php:822
 msgid "Primary-light"
-msgstr "Primario-claro"
+msgstr "Основний світлий"
 
 #: inc/data.php:823 inc/data.php:1513 inc/data.php:1617
 msgid "Default"
-msgstr "Por defecto"
+msgstr "За замовчуванням"
 
 #: inc/data.php:825
 msgid "Success"
-msgstr "Éxito"
+msgstr "Успіх"
 
 #: inc/data.php:826
 msgid "Info"
-msgstr "Info"
+msgstr "Інформація"
 
 #: inc/data.php:827
 msgid "Warning"
-msgstr "Advertencia"
+msgstr "Застереження"
 
 #: inc/data.php:828
 msgid "Danger"
-msgstr "Peligro"
+msgstr "Небезпека"
 
 #: inc/data.php:833 inc/data.php:1517 inc/data.php:1621
 msgid "Style"
-msgstr "Estilo"
+msgstr "Стиль"
 
 #: inc/data.php:834
 msgid "Button style preset"
-msgstr "Estilo preestablecido del botón"
+msgstr "Шаблон стилю кнопки"
 
 #: inc/data.php:841
 msgid "Extra Small"
-msgstr "Extra pequeño"
+msgstr "Дуже малий"
 
 #: inc/data.php:842
 msgid "Small"
-msgstr "Pequeño"
+msgstr "Малий"
 
 #: inc/data.php:843
 msgid "Medium"
-msgstr "Mediano"
+msgstr "Середній"
 
 #: inc/data.php:844
 msgid "Large"
-msgstr "Grande"
+msgstr "Великий"
 
 #: inc/data.php:845
 msgid "Extra Large"
-msgstr "Extra Grande"
+msgstr "Дуже великий"
 
 #: inc/data.php:850
 msgid "Button size preset"
-msgstr "Tamaño preestablecido del Botón"
+msgstr "Шаблон розміру кнопки"
 
 #: inc/data.php:855
 msgid "Inline"
-msgstr "En línea"
+msgstr "В рядок"
 
 #: inc/data.php:856
 msgid "Wide"
-msgstr "Amplio"
+msgstr "Широкий"
 
 #: inc/data.php:859
 msgid "Display"
-msgstr "Mostrar"
+msgstr "Відображати"
 
 #: inc/data.php:860
 msgid "Button display type"
-msgstr "Mostrar el tipo del botón"
+msgstr "Тип відображення кнопки"
 
 #: inc/data.php:869
 msgid "Button border radius"
-msgstr "Botón del radio de borde"
+msgstr "Радіус кривини краю кнопки"
 
 #: inc/data.php:874
 msgid "Centered"
-msgstr "Centrado"
+msgstr "Відцентрований"
 
 #: inc/data.php:875
 msgid "Is button centered on the page"
-msgstr "El botón está centrado en la página"
+msgstr "Чи центрувати кнопку на сторінці"
 
 #: inc/data.php:880
 msgid "Fluid"
-msgstr "Fluido"
+msgstr "Рухомий"
 
 #: inc/data.php:881
 msgid "Is button fluid"
-msgstr "El botón fluido "
+msgstr "Визначає, чи кнопка рухома"
 
 #: inc/data.php:890
 msgid "Fluid Position"
-msgstr "Posición fluida"
+msgstr "Рухома позиція"
 
 #: inc/data.php:891
 msgid "Button fluid position"
-msgstr "Posición fluido del botón"
+msgstr "Рухома позиція кнопки"
 
 #: inc/data.php:903 inc/data.php:1920
 msgid "Top"
-msgstr "Parte superior"
+msgstr "Угорі"
 
 #: inc/data.php:905 inc/data.php:1922
 msgid "Bottom"
-msgstr "Baja"
+msgstr "Внизу"
 
 #: inc/data.php:908
 msgid "Icon Position"
-msgstr "Posición del Icono"
+msgstr "Розташування іконки"
 
 #: inc/data.php:909
 msgid "Button icon position"
-msgstr "Posición del Icono del botón"
+msgstr "Розташування іконки кнопки"
 
 #: inc/data.php:913
 msgid "Description"
-msgstr "Descripción"
+msgstr "Опис"
 
 #: inc/data.php:914
 msgid "Small description under button text."
-msgstr "Pequeña descripción bajo el texto del botón."
+msgstr "Стислий опис під підписом кнопки"
 
 #: inc/data.php:920
 msgid "Background"
-msgstr "Fondo"
+msgstr "Тло"
 
 #: inc/data.php:921
 msgid "Button background color"
-msgstr "El color de fondo del botón"
+msgstr "Колір тла кнопки"
 
 #: inc/data.php:928
 msgid "Button text color"
-msgstr "Color del texto del botón"
+msgstr "Колір тексту кнопки"
 
 #: inc/data.php:936
 msgid "Min width"
-msgstr "Anchura mínima"
+msgstr "Мінімальна ширина"
 
 #: inc/data.php:937
 msgid "Button minimal width"
-msgstr "Anchura mínima del botón"
+msgstr "Найменша ширина кнопки"
 
 #: inc/data.php:942
 msgid "Same tab"
-msgstr "Pestaña igual"
+msgstr "У тій же вкладці"
 
 #: inc/data.php:943
 msgid "New tab"
-msgstr "Pestaña nueva"
+msgstr "У новій вкладці"
 
 #: inc/data.php:946
 msgid "Target"
-msgstr "Target"
+msgstr "Призначення (target)"
 
 #: inc/data.php:947
 msgid "Button link target"
-msgstr "Destino del enlace del botón"
+msgstr "Призначення посилання кнопки"
 
 #: inc/data.php:951
 msgid "Rel attribute"
-msgstr "Atributo rel"
+msgstr "Атрибут rel"
 
 #: inc/data.php:952
 msgid "Here you can add value for the rel attribute."
-msgstr "Aquí puede añadir valor para el atributo rel."
+msgstr "Тут можна вказати значення атрибута rel."
 
 #: inc/data.php:959
 msgid "Fade"
-msgstr "Fundirse"
+msgstr "Поступово виділяти"
 
 #: inc/data.php:963
 msgid "Hover animation"
-msgstr "Animación al pasar el ratón"
+msgstr "Анімація при наведенні вказівника миші"
 
 #: inc/data.php:964
 msgid "Button hover aniamtion type"
-msgstr "Tipo de animación del botón al pasar el ratón"
+msgstr "Ефект анімації при наведенні вказівника миші"
 
 #: inc/data.php:972
 msgid "Styled button"
-msgstr "Estilo del botón"
+msgstr "Стилізована кнопка"
 
 #: inc/data.php:978 inc/data.php:995
 msgid "List"
-msgstr "Lista"
+msgstr "Список"
 
 #: inc/data.php:994
 msgid "List Item"
-msgstr "Lista de artículos"
+msgstr "Елемент списку"
 
 #: inc/data.php:1002
 msgid "Swiper carousel"
-msgstr "Swiper carrusel"
+msgstr "Карусель Swiper"
 
 #: inc/data.php:1005
 msgid "Customizable post carousel"
-msgstr "Personalizable carrusel del artículo"
+msgstr "Карусель публікацій з користувацькими налаштуваннями"
 
 #: inc/data.php:1014 inc/data.php:1321
 msgid "Posts per page"
-msgstr "Artículos por página"
+msgstr "Кількість публікацій на сторінці"
 
 #: inc/data.php:1015 inc/data.php:1322
 msgid ""
 "Specify number of posts that you want to show. Enter -1 to get all posts"
 msgstr ""
-"Especifique el número de elementos para mostrar. Introduzca -1 para obtener "
-"todos los artículos"
+"Вкажіть кількість публікацій, що відображатиметься на сторінці. Для "
+"відображення всіх публікацій використовуйте значення \"-1\""
 
 #: inc/data.php:1022 inc/data.php:1329
 msgid "Post types"
-msgstr "Tipo de artículos"
+msgstr "Типи публікацій"
 
 #: inc/data.php:1023 inc/data.php:1330
 msgid "Select post types. Hold Ctrl key to select multiple post types"
 msgstr ""
-"Seleccione los tipos de artículos. Sostenga la tecla Ctrl para seleccionar "
-"varios tipos de elementos."
+"Оберіть тип публікацій. Утримуйте натиснутою кнопку Ctrl для вибору кількох "
+"типів водночас."
 
 #: inc/data.php:1029 inc/data.php:1336 inc/generator-views.php:137
 msgid "Taxonomy"
-msgstr "Taxonomía"
+msgstr "Таксономія"
 
 #: inc/data.php:1030 inc/data.php:1337
 msgid "Select taxonomy to show posts from"
-msgstr "Seleccione la taxonomía de artículos para mostrar"
+msgstr "Оберіть таксономію публікацій, що будуть відображатись"
 
 #: inc/data.php:1037 inc/data.php:1344
 msgid "Terms"
-msgstr "Condiciones"
+msgstr "Вимоги"
 
 #: inc/data.php:1038 inc/data.php:1345
 msgid "Select terms to show posts from"
-msgstr "Seleccione los términos para mostrar artículos"
+msgstr "Виберіть вимоги, за виконання яких публікації відображатимуться."
 
 #: inc/data.php:1044 inc/data.php:1351
 msgid "Taxonomy term operator"
-msgstr "Términos de la taxonomía del operador"
+msgstr "Оператор вимог таксономії"
 
 #: inc/data.php:1045 inc/data.php:1352
 msgid ""
@@ -947,173 +945,170 @@ msgid ""
 "that  do not have any of selected terms<br/>AND - posts that have all "
 "selected terms"
 msgstr ""
-"IN - artículos que tienen todos los términos seleccionados <br/> NOT IN - "
-"artículos que no tienen ningún término seleccionado<br/>AND - elementos que "
-"tienen todos los términos seleccionados"
+"IN - публікації, що відповідають будь-яким з обраних вимог щодо категорії<br/"
+">NOT IN - публікації, що не відповідають жодній з вказаних вимог<br/> AND - "
+"публікації, що відповідають усім заданим вимогам"
 
 #: inc/data.php:1049 inc/data.php:1356
 msgid "Authors"
-msgstr "Autores"
+msgstr "Автори"
 
 #: inc/data.php:1050 inc/data.php:1357
 msgid "Enter here comma-separated list of author's IDs. Example: 1,7,18"
-msgstr ""
-"Introduzca la lista de autores con ID´s separados por comas. Ejemplo: 1,7,18"
+msgstr "Введіть список ID авторів, виділяючи їх комами. Приклад: 1,7,18."
 
 #: inc/data.php:1059 inc/data.php:1366
 msgid "Specify offset to start posts loop not from first post"
-msgstr ""
-"Especifique el desplazamiento para no iniciar el bucle de artículo por "
-"artículo"
+msgstr "Зазначте зміщення, коли публікації не відображаються від початку."
 
 #: inc/data.php:1064 inc/data.php:1371
 msgid "Descending"
-msgstr "Descendente"
+msgstr "Спадний"
 
 #: inc/data.php:1065 inc/data.php:1372
 msgid "Ascending"
-msgstr "Ascendente"
+msgstr "Висхідний"
 
 #: inc/data.php:1068 inc/data.php:1375
 msgid "Order"
-msgstr "Orden"
+msgstr "Порядок"
 
 #: inc/data.php:1069 inc/data.php:1376
 msgid "Posts order"
-msgstr "Orden de artículos "
+msgstr "Порядок публікацій"
 
 #: inc/data.php:1075 inc/data.php:1382
 msgid "Post ID"
-msgstr "ID del artículo"
+msgstr "ID публікації"
 
 #: inc/data.php:1076 inc/data.php:1383
 msgid "Post author"
-msgstr "Autor del artículo"
+msgstr "Автор публікації"
 
 #: inc/data.php:1077 inc/data.php:1384
 msgid "Post title"
-msgstr "Título del artículo"
+msgstr "Заголовок публікації"
 
 #: inc/data.php:1078 inc/data.php:1385
 msgid "Post slug"
-msgstr "Slug del artículo"
+msgstr "Скорочення (slug) публікації"
 
 #: inc/data.php:1079 inc/data.php:1386
 msgid "Date"
-msgstr "Fecha"
+msgstr "Дата"
 
 #: inc/data.php:1080 inc/data.php:1387
 msgid "Last modified date"
-msgstr "Última fecha de modificación"
+msgstr "Дата внесення останніх змін"
 
 #: inc/data.php:1081 inc/data.php:1092 inc/data.php:1388 inc/data.php:1399
 msgid "Post parent"
-msgstr "Artículo padres"
+msgstr "Батьківська публікація"
 
 #: inc/data.php:1082 inc/data.php:1389
 msgid "Random"
-msgstr "Aleatorio"
+msgstr "Випадковий"
 
 #: inc/data.php:1083 inc/data.php:1390
 msgid "Comments number"
-msgstr "Número de comentarios"
+msgstr "Кількість коментарів"
 
 #: inc/data.php:1084 inc/data.php:1391
 msgid "Menu order"
-msgstr "Orden del Menu"
+msgstr "Порядок меню"
 
 #: inc/data.php:1087 inc/data.php:1394
 msgid "Order by"
-msgstr "Ordenar por"
+msgstr "Упорядкувати за"
 
 #: inc/data.php:1088 inc/data.php:1395
 msgid "Order posts by"
-msgstr "Ordenar artículos por"
+msgstr "Упорядкувати публікації за"
 
 #: inc/data.php:1093 inc/data.php:1400
 msgid "Show children of entered post (enter post ID)"
 msgstr ""
-"Mostrar elementos hijo del elemento seleccionado (introducir ID del elemento)"
+"Відображати дочірні елементи вибраної публікації (введіть ID публікації)"
 
 #: inc/data.php:1098 inc/data.php:1405
 msgid "Published"
-msgstr "Publicado"
+msgstr "Опубліковано"
 
 #: inc/data.php:1099 inc/data.php:1406
 msgid "Pending"
-msgstr "A la espera de"
+msgstr "Очікує підтвердження"
 
 #: inc/data.php:1100 inc/data.php:1407
 msgid "Draft"
-msgstr "Borrador"
+msgstr "Чернетка"
 
 #: inc/data.php:1101 inc/data.php:1408
 msgid "Auto-draft"
-msgstr "Auto borrador"
+msgstr "Автоматично створена чернетка"
 
 #: inc/data.php:1102 inc/data.php:1409
 msgid "Future post"
-msgstr "El artículo futuro"
+msgstr "Відкладена публікація"
 
 #: inc/data.php:1103 inc/data.php:1410
 msgid "Private post"
-msgstr "Artículo privado"
+msgstr "Приватна публікація"
 
 #: inc/data.php:1104 inc/data.php:1411
 msgid "Inherit"
-msgstr "Heredar"
+msgstr "Успадковувати"
 
 #: inc/data.php:1105 inc/data.php:1412
 msgid "Trashed"
-msgstr "Suprimido"
+msgstr "Видалений"
 
 #: inc/data.php:1106 inc/data.php:1413
 msgid "Any"
-msgstr "Algun"
+msgstr "Будь-який"
 
 #: inc/data.php:1109 inc/data.php:1416
 msgid "Post status"
-msgstr "Estado del artículo"
+msgstr "Статус публікації"
 
 #: inc/data.php:1110 inc/data.php:1417
 msgid "Show only posts with selected status"
-msgstr "Mostrar solo artículos con el estado seleccionado"
+msgstr "Відображати публікації з визначеним статусом"
 
 #: inc/data.php:1115 inc/data.php:1422
 msgid "Ignore sticky"
-msgstr "Ignorar pegado"
+msgstr "Ігнорувати закріплені"
 
 #: inc/data.php:1116 inc/data.php:1423
 msgid "Select Yes to ignore posts that are sticked"
-msgstr "Seleccione Sí para omitir los artículos pegados"
+msgstr "Виберіть \"Так\", щоб пропустити закріплені публікації"
 
 #: inc/data.php:1121 inc/data.php:1428
 msgid "Linked title"
-msgstr "Título vinculado"
+msgstr "Заголовок-посилання"
 
 #: inc/data.php:1122 inc/data.php:1429
 msgid "Linked title description"
-msgstr "Descripción del título vinculado"
+msgstr "Опис заголовку-посилання"
 
 #: inc/data.php:1127 inc/data.php:1434
 msgid "Linked featured image"
-msgstr "Imagen destacada vinculada"
+msgstr "Головне зображення з посиланням"
 
 #: inc/data.php:1128 inc/data.php:1435
 msgid "Linked featured image description"
-msgstr "Descripción de imagen destacada vinculada"
+msgstr "Опис головного зображення з посиланням"
 
 #: inc/data.php:1133 inc/data.php:1453
 msgid "Part of content"
-msgstr "Parte del contenido"
+msgstr "Частина вмісту"
 
 #: inc/data.php:1134 inc/data.php:1454
 msgid "Full content"
-msgstr "Contenido completo"
+msgstr "Увесь вміст"
 
 #: inc/data.php:1137 inc/data.php:1457
 msgid "Post content"
-msgstr "Contenido del artículo"
+msgstr "Вміст публікації"
 
 #: inc/data.php:1138 inc/data.php:1458
 msgid "Choose to display a part or full content "
@@ -1121,238 +1116,241 @@ msgstr ""
 
 #: inc/data.php:1146 inc/data.php:1466
 msgid "Content Length"
-msgstr "Longitud del contenido"
+msgstr "Довжина вмісту"
 
 #: inc/data.php:1147 inc/data.php:1467
 msgid "Insert the number of words you want to show in the post content."
 msgstr ""
-"Inserte el número de palabras que desea mostrar en el contenido de los "
-"artículos."
+"Введіть максимальну кількість слів для вмісту публікації, що "
+"відображатиметься."
 
 #: inc/data.php:1150 inc/data.php:1470 inc/shortcodes.php:704
 #: inc/shortcodes.php:1117
 msgid "read more"
-msgstr "leer más"
+msgstr "переглянути детальніше"
 
 #: inc/data.php:1152 inc/data.php:1472
 msgid "Button text description"
-msgstr "Descripción del texto del botón"
+msgstr "Стислий опис підпису кнопки"
 
 #: inc/data.php:1171
 msgid "Using cropped image"
-msgstr "Use una imagen recortada"
+msgstr "Використовувати обрізані зображення"
 
 #: inc/data.php:1172 inc/data.php:1241
 msgid "Slider Loop Mode"
-msgstr "Bucle del modo de presentación"
+msgstr "Режим циклу слайдера"
 
 #: inc/data.php:1180
 msgid "Cropping image width"
-msgstr "Ancho de la imagen recortada"
+msgstr "Ширина обрізаного зображення"
 
 #: inc/data.php:1181
 msgid "Width value(px)"
-msgstr "Valor de la anchura (px)"
+msgstr "Значення ширини (у пікселях)"
 
 #: inc/data.php:1189
 msgid "Cropping image height"
-msgstr "Altura de la imagen recortada"
+msgstr "Висота обрізаного зображення"
 
 #: inc/data.php:1190
 msgid "Height value(px)"
-msgstr "Valor de la altura (px)"
+msgstr "Значення висоти (у пікселях)"
 
 #: inc/data.php:1198
 msgid "Number of slides per view"
-msgstr "Número de diapositivas para mostrar"
+msgstr "Кількість слайдів, що відображаються"
 
 #: inc/data.php:1199
 msgid "Specify number of slides per view"
-msgstr "Especifique el número de diapositivas para mostrar"
+msgstr "Вкажіть бажану кількість слайдів, що відображатимуться водночас."
 
 #: inc/data.php:1207
 msgid "Number slides per group"
-msgstr "Número de diapositivas en grupo"
+msgstr "Кількість слайдів у групі"
 
 #: inc/data.php:1208
 msgid ""
 "Set numbers of slides to define and enable group sliding. Useful to use with "
 "slidesPerView > 1"
 msgstr ""
-"Set numbers of slides to define and enable group sliding. Useful to use with "
-"slidesPerView > 1"
+"Вкажіть кількість слайдів, для яких визначатиметься і застосовуватиметься "
+"групування. Стане у нагоді, якщо кількість водночас відображуваних слайдів > "
+"1"
 
 #: inc/data.php:1216 inc/data.php:1217
 msgid "Multi Row Slides Layout"
-msgstr "Columna Múltiples de Diseño de Diapositivas "
+msgstr "Макет багаторядного слайдера"
 
 #: inc/data.php:1225
 msgid "Space Between Slides"
-msgstr "Espacio entre diapositivas"
+msgstr "Відступ між слайдами"
 
 #: inc/data.php:1226
 msgid "Width of the space between slides(px)"
-msgstr "Ancho del espacio entre las diapositivas (px)"
+msgstr "Ширина відступу між слайдами (у пікселях)"
 
 #: inc/data.php:1234
 msgid "Duration of transition"
-msgstr "Duración de la transición"
+msgstr "Тривалість переходу"
 
 #: inc/data.php:1235
 msgid "Duration of transition between slides (ms)"
-msgstr "Duración de la transición entre diapositivas (en ms)"
+msgstr "Тривалість переходу між слайдами (у мілісекундах)"
 
 #: inc/data.php:1240
 msgid "Slider Infinite Loop"
-msgstr "La repetición constante del slider"
+msgstr "Безперервний цикл слайдера"
 
 #: inc/data.php:1246
 msgid "Free Mode sliding"
-msgstr "Modo Libre de deslizamiento"
+msgstr "Довільний режим слайдера"
 
 #: inc/data.php:1247
 msgid "No fixed positions for slides"
-msgstr "No hay posiciones fijas para diapositivas"
+msgstr "Не закріплювати позицію слайдів"
 
 #: inc/data.php:1252
 msgid "Grab Cursor"
-msgstr "Agarrar el Cursor"
+msgstr "Захопити вказівник миші"
 
 #: inc/data.php:1253
 msgid "Using Grab Cursor for slider"
-msgstr "Usar Agarramiento del Cursor para el sldier"
+msgstr "Використовувати захоплення вказівника миші"
 
 #: inc/data.php:1258
 msgid "Mousewheel Control"
-msgstr "Control de la Rueda del ratón"
+msgstr "Керування коліщатком миші"
 
 #: inc/data.php:1259
 msgid "Mousewheel control mode"
-msgstr "El modo del control de la Rueda del ratón"
+msgstr "Режим керування коліщатком миші"
 
 #: inc/data.php:1264
 msgid "Centered Slides"
-msgstr "Diapositivas Centrales"
+msgstr "Відцентровані слайди"
 
 #: inc/data.php:1265
 msgid "Centered slides mode"
-msgstr "Modo de diapositivas"
+msgstr "Режим відцентрованих слайдів"
 
 #: inc/data.php:1270
 msgid "Slide"
-msgstr "Diapositiva"
+msgstr "Гортання"
 
 #: inc/data.php:1272
 msgid "Cube"
-msgstr "Cubo"
+msgstr "Куб"
 
 #: inc/data.php:1273
 msgid "Coverflow"
-msgstr "Coverflow"
+msgstr "Заповнювати і переходити"
 
 #: inc/data.php:1276
 msgid "Effect Layout"
-msgstr "Efecto de Layout"
+msgstr "Макет ефекту"
 
 #: inc/data.php:1277
 msgid "Could be \"slide\", \"fade\", \"cube\" or \"coverflow\" effect"
-msgstr "Podría ser \"slide\", \"fade\", \"cubo\" o efecto \"coverflow\""
+msgstr ""
+"Можна застосувати такі ефекти, як \"гортання\", \"куб\" або ж \"заповнювати "
+"і переходити\""
 
 #: inc/data.php:1282
 msgid "Slider pagination"
-msgstr "Paginación del slider"
+msgstr "Нумерація слайдів"
 
 #: inc/data.php:1283
 msgid "Displaying slider pagination"
-msgstr "Mostrando paginación del slider"
+msgstr "Відображати нумерацію слайдів"
 
 #: inc/data.php:1288
 msgid "Slider navigation"
-msgstr "Navigación del slider"
+msgstr "Навігація між слайдами"
 
 #: inc/data.php:1289
 msgid "Displaying slider navigation"
-msgstr "Mostrando navegación del slider"
+msgstr "Відображати навігацію між слайдами"
 
 #: inc/data.php:1294
 msgid "Inner"
-msgstr "En el interior"
+msgstr "Всередині"
 
 #: inc/data.php:1295
 msgid "Outer"
-msgstr "Exterior"
+msgstr "Зовні"
 
 #: inc/data.php:1298
 msgid "Slider navigation position"
-msgstr "Posición de navegación de diapositivas"
+msgstr "Розташування навігації слайдера"
 
 #: inc/data.php:1299
 msgid "Choose slider navigation position"
-msgstr "Elija la posición de navegación del slider"
+msgstr "Оберіть розташування навігації слайдера"
 
 #: inc/data.php:1306
 msgid "Posts"
-msgstr "Artículos"
+msgstr "Публікації "
 
 #: inc/data.php:1312
 msgid "Post ID's"
-msgstr "ID del Artículo"
+msgstr "ID публікацій"
 
 #: inc/data.php:1313
 msgid "Enter comma separated ID's of the posts that you want to show"
-msgstr "Introduzca separados por comas ID de los artículos que desea mostrar"
+msgstr "Введіть ID публікацій, що будуть відображатися, відділяючи їх комами"
 
 #: inc/data.php:1440 inc/data.php:1441
 msgid "Open featured image in a lightbox?"
-msgstr "Abrir la imagen destacada según el lightbox?"
+msgstr "Відкривати головне зображення в лайтбоксі?"
 
 #: inc/data.php:1447
 msgid "Featured image size"
-msgstr "Tamaño de la imagen Destacada"
+msgstr "Розміри Головного зображення"
 
 #: inc/data.php:1448
 msgid "Select size for a Featured image"
-msgstr "Seleccione el tamaño de la imagen Destacada"
+msgstr "Оберіть розміри головного зображення"
 
 #: inc/data.php:1482
 msgid "Column class"
-msgstr "Clase de columna"
+msgstr "Клас стовпця"
 
 #: inc/data.php:1483
 msgid "Column class for each item."
-msgstr "Clase de columna para cada elemento."
+msgstr "Клас стовпця кожного елемента"
 
 #: inc/data.php:1500
 msgid "Custom posts query with customizable template"
-msgstr "Artículos personalizados de consulta con plantilla personalizable"
+msgstr ""
 
 #: inc/data.php:1506
 msgid "Tabs"
-msgstr "Fichas"
+msgstr "Вкладки"
 
 #: inc/data.php:1514 inc/data.php:1618
 msgid "Simple"
-msgstr "Simple"
+msgstr "Простий"
 
 #: inc/data.php:1518
 msgid "Choose style for these tabs"
-msgstr "Elija el estilo de estas fichas"
+msgstr "Оберіть стилі вкладок"
 
 #: inc/data.php:1526
 msgid "Active tab"
-msgstr "Pestaña activa"
+msgstr "Активна вкладка"
 
 #: inc/data.php:1527
 msgid "Select which tab is open by default"
-msgstr "Seleccione la ficha que está abierta por defecto"
+msgstr "Виберіть, яка вкладка відкриватиметься за замовчуванням"
 
 #: inc/data.php:1532
 msgid "Vertical"
-msgstr "Vertical"
+msgstr "Вертикально"
 
 #: inc/data.php:1533
 msgid "Show tabs vertically"
-msgstr "Mostar fichas verticalmente"
+msgstr "Відображати вкладки вертикально"
 
 #: inc/data.php:1541
 msgid ""
@@ -1360,33 +1358,33 @@ msgid ""
 "[%prefix_tab title=\"Title 2\"]Content 2[/%prefix_tab]\n"
 "[%prefix_tab title=\"Title 3\"]Content 3[/%prefix_tab]"
 msgstr ""
-"[%prefix_tab title=\"Title 1\"]Contenido 1[/%prefix_tab]\n"
-"[%prefix_tab title=\"Title 2\"]Contenido 2[/%prefix_tab]\n"
-"[%prefix_tab title=\"Title 3\"]Contenido 3[/%prefix_tab]"
+"[%prefix_tab title=\"Заголовок 1\"]Вміст 1[/%prefix_tab]\n"
+"[%prefix_tab title=\"Заголовок 2\"]Вміст 2[/%prefix_tab]\n"
+"[%prefix_tab title=\"Заголовок 3\"]Вміст 3[/%prefix_tab]"
 
 #: inc/data.php:1542
 msgid "Tabs container"
-msgstr "Contenedor de pestañas"
+msgstr "Контейнер вкладок"
 
 #: inc/data.php:1549
 msgid "Tab"
-msgstr "Ficha"
+msgstr "Вкладка"
 
 #: inc/data.php:1554
 msgid "Tab name"
-msgstr "Nombre de la ficha"
+msgstr "Назва вкладки"
 
 #: inc/data.php:1556
 msgid "Enter tab name"
-msgstr "Introduzca nombre de la ficha"
+msgstr "Вкажіть назву вкладки"
 
 #: inc/data.php:1561
 msgid "Disabled"
-msgstr "Desactivado"
+msgstr "Вимкнено"
 
 #: inc/data.php:1562
 msgid "Is this tab disabled"
-msgstr "Esta ficha está desactivada"
+msgstr "Цю вкладку висмнено"
 
 #: inc/data.php:1567
 msgid ""
@@ -1394,70 +1392,71 @@ msgid ""
 "For example: type here <b%value>Hello</b> and then use url like http://"
 "example.com/page-url#Hello. This tab will be activated and scrolled in"
 msgstr ""
-"Para proporcionar acceso inmediato a esta ficha con # en la dirección URL de "
-"la página que puede escribir, por ejemplo, <b%value> Hello</b> y utilice el "
-"enlace como http://example.com/page -url # Hello. Página se desplaza hacia "
-"abajo y se abre automáticamente esta ficha"
+"Для надання безпосереднього доступу до цієї вкладки з допомогою # у "
+"посиланні сторінки можна використати унікальний якір. Наприклад, напишіть "
+"тут <b%value>Hello</b> , а потім перейдіть за посиланням виду http://example."
+"com/page-url#Hello. Сторінка прокрутиться донизу і автоматично відкриється "
+"саме ця вкладка"
 
 #: inc/data.php:1571
 msgid "URL"
-msgstr "URL"
+msgstr "Посилання "
 
 #: inc/data.php:1572
 msgid ""
 "You can link this tab to any webpage. Enter here d URL to switch this tab "
 "into link"
 msgstr ""
-"En esta ficha, puede proporcionar un enlace a cualquier página web. Pulse "
-"aquí para URL."
+"Для цієї вкладки можна вказати посилання будь-якої веб-сторінки. Вкажіть тут "
+"d веб-адресу, щоб вкладка стала посиланням"
 
 #: inc/data.php:1577
 msgid "Open link in the same window/tab"
-msgstr "Abra el enlace en la misma ventana/pestaña"
+msgstr "Відкривати посилання у тому ж вікні/вкладці"
 
 #: inc/data.php:1578
 msgid "Open link in a new window/tab"
-msgstr "Abrir enlace en una nueva ventana/pestaña"
+msgstr "Відкривати посилання в новому вікні/вкладці"
 
 #: inc/data.php:1581
 msgid "Link target"
-msgstr "Objetivo del enlace"
+msgstr "Призначення посилання"
 
 #: inc/data.php:1582
 msgid "Choose how to open the custom tab link"
-msgstr "Elija cómo abrir el enlace de pestaña personalizada"
+msgstr "Виберіть, як саме відкриватиметься посилання вкладки"
 
 #: inc/data.php:1590
 msgid "Tab content"
-msgstr "Contenido de la pestaña"
+msgstr "Вміст вкладки"
 
 #: inc/data.php:1591
 msgid "Single tab"
-msgstr "Pestaña simple"
+msgstr "Одна вкладка"
 
 #: inc/data.php:1599
 msgid "Spoiler"
-msgstr "Alerón"
+msgstr "Прихований текст"
 
 #: inc/data.php:1604 inc/shortcodes.php:1522
 msgid "Spoiler title"
-msgstr "Título de alerón"
+msgstr "Заголовок прихованого тексту"
 
 #: inc/data.php:1606
 msgid "Text in spoiler title"
-msgstr "Texto en el título de alerón"
+msgstr "Заголовок прихованого тексту"
 
 #: inc/data.php:1611
 msgid "Open"
-msgstr "Abierto"
+msgstr "Відкрити"
 
 #: inc/data.php:1612
 msgid "Is spoiler content visible by default"
-msgstr "Es el contenido alerón visible por defecto"
+msgstr "Відображати прихований текст за замовчуванням"
 
 #: inc/data.php:1622
 msgid "Choose style for this spoiler"
-msgstr "Elija el estilo de este alerón"
+msgstr "Оберіть оформлення цього прихованого тексту"
 
 #: inc/data.php:1627
 msgid ""
@@ -1465,22 +1464,23 @@ msgid ""
 "url. For example: type here <b%value>Hello</b> and then use url like http://"
 "example.com/page-url#Hello. This spoiler will be opened and scrolled in"
 msgstr ""
-"Para facilitar el acceso al alerón use # en el URL de la página que puede "
-"escribir, por ejemplo, <b%value>Hello</ b> y utilice el enlace como http://"
-"example.com/page-url#Hello. Página se desplaza hacia abajo y se abre "
-"automáticamente el alerón"
+"Цьому прихованому тексту можна присвоїти унікальний якір, тоді до нього "
+"можна буде повернутись, додавши № в адресу сайту. Наприклад, напишіть тут <b"
+"%value>Hello</b> та відкрийте посилання типу http://example.com/page-"
+"url#Hello. Сторінка прокрутиться до потрібного місця та відкриється саме цей "
+"прихований текст."
 
 #: inc/data.php:1635
 msgid "Hidden content"
-msgstr "El contenido ocultado"
+msgstr "Прихований вміст"
 
 #: inc/data.php:1636
 msgid "Spoiler with hidden content"
-msgstr "Alerón con el contenido ocultado"
+msgstr "Вміст прихованого тексту"
 
 #: inc/data.php:1644
 msgid "Accordion"
-msgstr "Acordeón"
+msgstr "Акордеон"
 
 #: inc/data.php:1654
 msgid ""
@@ -1488,29 +1488,32 @@ msgid ""
 "[%prefix_spoiler title=\"Spoiler Title\"]Content[/%prefix_spoiler]\n"
 "[%prefix_spoiler title=\"Spoiler Title\"]Content[/%prefix_spoiler]"
 msgstr ""
-"[%prefix_spoiler title=\"Título del Alerón\"]Contenido[/%prefix_spoiler]\n"
-"[%prefix_spoiler title=\"Título del Alerón\"]Contenido[/%prefix_spoiler]\n"
-"[%prefix_spoiler title=\"Título del Alerón\"]Contenido[/%prefix_spoiler]"
+"[%prefix_spoiler title=\"Заголовок прихованого тексту\"]Вміст[/"
+"%prefix_spoiler]\n"
+"[%prefix_spoiler title=\"Заголовок прихованого тексту\"]Вміст[/"
+"%prefix_spoiler]\n"
+"[%prefix_spoiler title=\"Заголовок прихованого тексту\"]Вміст[/"
+"%prefix_spoiler]"
 
 #: inc/data.php:1655
 msgid "Accordion with spoilers"
-msgstr "Acordeón con "
+msgstr "Акордеон прихованих текстів"
 
 #: inc/data.php:1663
 msgid "Google map"
-msgstr "Google map"
+msgstr "Карта Google"
 
 #: inc/data.php:1670
 msgid "Address"
-msgstr "Dirección"
+msgstr "Адреса"
 
 #: inc/data.php:1671 inc/data.php:1726
 msgid "The display options for the Pan control."
-msgstr "Las opciones de visualización para el control de Pan."
+msgstr "Відображати параметри контролю переміщення."
 
 #: inc/data.php:1679
 msgid "Latitude  geographical coordinates"
-msgstr "Las coordenadas geográficas de latitud"
+msgstr "Широта географічних координат"
 
 #: inc/data.php:1680
 msgid ""
@@ -1519,14 +1522,14 @@ msgid ""
 "value specified is less than -90, it will be set to -90. And if the value is "
 "greater than 90, it will be set to 90."
 msgstr ""
-"La latitud es de entre -90 y 90 grados inclusive. Los valores más altos o "
-"más bajos en este rango se reducirán en el intervalo [-90, 90]. Esto "
-"significa que si el valor especificado es inferior a -90, se fijó en -90. Y "
-"si el valor es superior a 90, se ha fijado en 90."
+"Широта змінюється від -90 до 90 градусів включно. Значення вище або нижче "
+"цього діапазону будуть перетворені в діапазон [-90, 90]. Наприклад, якщо "
+"вказане значення менше -90, то воно буде встановлено як -90. І, якщо "
+"значення більше 90, то воно буде встановлено як 90."
 
 #: inc/data.php:1688
 msgid "Longitude geographical coordinates"
-msgstr "Las coordenadas geográficas de longitud"
+msgstr "Довгота географічних координат"
 
 #: inc/data.php:1689
 msgid ""
@@ -1536,34 +1539,34 @@ msgid ""
 "converted to -170. This reflects the fact that longitudes wrap around the "
 "globe."
 msgstr ""
-"Longitud varía entre -180 y 180 grados incluido. Los valores más altos o más "
-"bajos en este rango serán cambiados para que caigan en el rango. Por "
-"ejemplo, un valor de -190 se convierte a 170. Un valor de 190 se convierte a "
-"-170."
+"Широта змінюється від -180 до 180 градусів включно. Значення вище або нижче "
+"цього діапазону будуть перетворені для потрапляння в діапазон. Наприклад, "
+"значення -190 буде встановлено як 170. А значення 190 буде встановлено як "
+"-170. Це відображає той факт, що довгота обгортає навколо земну кулю."
 
 #: inc/data.php:1697
 msgid "Map zoom level"
-msgstr "Nivel del zoom del mapa"
+msgstr "Рівень масштабування карти"
 
 #: inc/data.php:1698
 msgid "The initial Map zoom level. Required."
-msgstr "El nivel de zoom del mapa inicial. Necesario."
+msgstr "Початковий рівень масштабування карти. Необхідне значення."
 
 #: inc/data.php:1703
 msgid "Scroll wheel"
-msgstr "Rueda de desplazamiento"
+msgstr "Прокручування коліщатком."
 
 #: inc/data.php:1704
 msgid ""
 "If false, disables scrollwheel zooming on the map. The scrollwheel is "
 "enabled by default."
 msgstr ""
-"Si es falso, mediante zoom del mapa la marcación está desactivada. La rueda "
-"de desplazamiento está activada por defecto."
+"За замовчуванням активоване. При виставленні значення false, масштабування "
+"карти коліщатком вимикається."
 
 #: inc/data.php:1710
 msgid "Map Style"
-msgstr "Estilo del mapa"
+msgstr "Оформлення карти"
 
 #: inc/data.php:1711
 msgid ""
@@ -1571,43 +1574,45 @@ msgid ""
 "Hybrid and Terrain modes, these styles will only apply to labels and "
 "geometry."
 msgstr ""
-"Estilos para aplicar a cada uno de los tipos de mapas por defecto. Tenga en "
-"cuenta que para los modos de TV vía Satellite/Hybrid/Terrain esos estilos se "
-"aplicarán solamente a las etiquetas y los elementos geométricos."
+"Стилі, що будуть застосовані до початкових типів карти. Майте на увазі, що "
+"для режиму Супутник/Гібридний перегляд та Земля, стилі будуть застосовані "
+"тільки до міток і геометричних елементів."
 
 #: inc/data.php:1719
 msgid "Map height"
-msgstr "Altura del mapa"
+msgstr "Висота карти"
 
 #: inc/data.php:1720
 msgid "Map height value(px)"
-msgstr "Valor de la altura del mapa(px)"
+msgstr "Значення висоти карти (у пікселях)"
 
 #: inc/data.php:1725
 msgid "Pan control"
-msgstr "Pan control"
+msgstr "Контроль переміщення"
 
 #: inc/data.php:1731
 msgid "Zoom control"
-msgstr "Control de zoom"
+msgstr "Керування масштабуванням"
 
 #: inc/data.php:1732
 msgid "The enabled/disabled state of the Zoom control."
-msgstr "Activar / desactivar el control de zoom."
+msgstr "Увімкнути/вимкнути режим керування масштабуванням"
 
 #: inc/data.php:1737
 msgid "Draggable map"
-msgstr "El Mapa se puede arrastrar"
+msgstr "Карта, яку можна перетягувати"
 
 #: inc/data.php:1738
 msgid ""
 "If false, prevents the map from being dragged. Dragging is enabled by "
 "default."
-msgstr "Activado por defecto. Si es falso, no es posible arrastrar el mapa."
+msgstr ""
+"За замовчуванням увімкнено. При виставленні параметра false, карту не можна "
+"буде перетягувати."
 
 #: inc/data.php:1744
 msgid "Marker source"
-msgstr "Imagen del Marcador"
+msgstr "Зображення маркера"
 
 #: inc/data.php:1745
 msgid "Select marker id attachment"
@@ -1615,288 +1620,287 @@ msgstr ""
 
 #: inc/data.php:1748
 msgid "Google Map"
-msgstr "Google Map"
+msgstr "Карта Google"
 
 #: inc/data.php:1754 inc/data.php:1761
 msgid "Parallax image"
-msgstr "Imagen parallax"
+msgstr "Паралакс зображення"
 
 #: inc/data.php:1762
 msgid "Upload parallax image url source"
-msgstr "Suba imagen parallax de la fuente URL"
+msgstr "Вкажіть шлях/завантажте паралакс-зображення"
 
 #: inc/data.php:1770 inc/data.php:1836
 msgid "Parallax speed"
-msgstr "Velocidad de parallax"
+msgstr "Швидкість паралаксу"
 
 #: inc/data.php:1771 inc/data.php:1837
 msgid "Parallax speed value (s)"
-msgstr "Valor de la velocidad de parallax (s)"
+msgstr "Швидкість паралаксу (сек)"
 
 #: inc/data.php:1776 inc/data.php:1842
 msgid "Parallax invert"
-msgstr "Invertir parallax"
+msgstr "Інвертувати паралакс"
 
 #: inc/data.php:1777 inc/data.php:1843
 msgid "Parallax invert direction move"
-msgstr "Indique la dirección del movimiento de parallax invertido"
+msgstr "Напрям руху інвертування паралаксу"
 
 #: inc/data.php:1785
 msgid "Parallax container min-height"
-msgstr "Altura mínima de contenedor de parallax"
+msgstr "Мінімальна висота контейнера паралаксу"
 
 #: inc/data.php:1786
 msgid "container min-height value (px)"
-msgstr "Valor del contenedor de altura mínima del parallax  (px)"
+msgstr "Значення мінімальної висоти контейнера паралаксу (у пікселях)"
 
 #: inc/data.php:1792 inc/data.php:1849 inc/data.php:1903
 msgid "Enter custom class"
-msgstr "Introduzca clase personalizada"
+msgstr "Вкажіть користувацький клас CSS"
 
 #: inc/data.php:1796 inc/data.php:1853
 msgid "Parallax block"
-msgstr "Bloque parallax"
+msgstr "Блок паралаксу"
 
 #: inc/data.php:1802
 msgid "Parallax html video"
-msgstr "Vídeo html Parallax"
+msgstr "Html відео "
 
 #: inc/data.php:1809 inc/data.php:2053
 msgid "Poster"
-msgstr "Cartel"
+msgstr "Постер"
 
 #: inc/data.php:1810
 msgid "Poster image url"
-msgstr "URL de la imagen del cartel"
+msgstr "Шлях до зображення постера"
 
 #: inc/data.php:1815
 msgid "mp4 file"
-msgstr "archivo mp4"
+msgstr "файл у форматі mp4"
 
 #: inc/data.php:1816
 msgid "URL to mp4 video-file"
-msgstr "URL del archivo de vídeo mp4"
+msgstr "Шлях до відео у форматі mp4"
 
 #: inc/data.php:1821
 msgid "webm file"
-msgstr "archivo webm"
+msgstr "файл у форматі webm"
 
 #: inc/data.php:1822
 msgid "URL to webm video-file"
-msgstr "URL del archivo webm"
+msgstr "Шлях до відео у форматі webm"
 
 #: inc/data.php:1827
 msgid "ogv file"
-msgstr "archivo ogv"
+msgstr "файл у форматі ogv"
 
 #: inc/data.php:1828
 msgid "URL to ogv video-file"
-msgstr "URL del archivo ogv"
+msgstr "Шлях до відео у форматі ogv"
 
 #: inc/data.php:1859 inc/data.php:1906
 msgid "Counter"
-msgstr "Contador"
+msgstr "Лічильник"
 
 #: inc/data.php:1866
 msgid "Value"
-msgstr "Valor"
+msgstr "Значення"
 
 #: inc/data.php:1867
 msgid "Value for counter"
-msgstr "Valor del contador"
+msgstr "Значення лічильника"
 
 #: inc/data.php:1875
 msgid "Counter delay"
-msgstr "Retraso del contador"
+msgstr "Затримка лічильника"
 
 #: inc/data.php:1876
 msgid "Counter delay (ms)"
-msgstr "Retraso del contador (ms)"
+msgstr "Затримка лічильника (у мілісекундах)"
 
 #: inc/data.php:1884
 msgid "Speed time"
-msgstr "Tiempo de velocidad"
+msgstr "Тривалість переходу"
 
 #: inc/data.php:1885
 msgid "Speed time (ms)"
-msgstr "Tiempo de velocidad (ms)"
+msgstr "Тривалість переходу (у мілісекундах)"
 
 #: inc/data.php:1890
 msgid "Before content"
-msgstr "Contenido de antes"
+msgstr "Вміст до"
 
 #: inc/data.php:1891
 msgid "Enter before custom content"
-msgstr "Escriba el contenido personalizado que se muestra antes"
+msgstr "Введіть користувацький вміст, що буде відображатися до"
 
 #: inc/data.php:1896
 msgid "After content"
-msgstr "Contenido de después"
+msgstr "Вміст після"
 
 #: inc/data.php:1897
 msgid "Enter after custom content"
-msgstr "Introduzca el contenido personalizado después"
+msgstr "Введіть користувацький вміст, що буде відображатися після"
 
 #: inc/data.php:1912
 msgid "Lazy Load Effect"
-msgstr "Efecto Lazy Load"
+msgstr "Ефект повільної появи (Lazy Load)"
 
 #: inc/data.php:1919
 msgid "Not changed"
-msgstr "Sin cambios"
+msgstr "Без змін"
 
 #: inc/data.php:1926
 msgid "Start Position"
-msgstr "Posición inicial"
+msgstr "Початкове розташування"
 
 #: inc/data.php:1927
 msgid "Element position at the animation start."
-msgstr "La posición del elemento en el inicio de la animación."
+msgstr "Розташування елемента на початку анімації."
 
 #: inc/data.php:1935
 msgid "Out rotation"
-msgstr "Rotación externa"
+msgstr "Зовнішнє обертання"
 
 #: inc/data.php:1936
 msgid "Initial element angle (min - -360&#176; max 360&#176;)"
-msgstr ""
-"Ángulo de rotación inicial del element (min - -360&#176; max 360&#176;)"
+msgstr "Початковий кут повороту елемента (від - -360&#176; до 360&#176;)"
 
 #: inc/data.php:1944
 msgid "Flip X"
-msgstr "Flip X"
+msgstr "Відобразити горизонтально"
 
 #: inc/data.php:1945
 msgid ""
 "Initial element angle Flip X (X-axis rotation min - -360&#176; max 360&#176;)"
 msgstr ""
-"Elemento angular inicial Flip X (X-axis rotation min - -360&#176; max "
-"360&#176;)"
+"Початкове горизонтальне відображення кута повороту елемента (від повороту "
+"-360&#176; до 360&#176; по осі Х)"
 
 #: inc/data.php:1953
 msgid "Flip Y"
-msgstr "Flip Y"
+msgstr "Відобразити вертикально"
 
 #: inc/data.php:1954
 msgid ""
 "Initial element angle Flip Y (Y-axis rotation min - -360&#176; max 360&#176;)"
 msgstr ""
-"Elemento angular inicial Flip Y (Y-axis rotation min - -360&#176; max "
-"360&#176;)"
+"Початкове вертикальне відображення кута повороту елемента (від повороту "
+"-360&#176; до 360&#176; по осі Y)"
 
 #: inc/data.php:1966
 msgid "Pivot"
-msgstr "Pivote"
+msgstr "Точка обертання"
 
 #: inc/data.php:1967
 msgid "Element rotation point."
-msgstr "Punto de rotación del elemento."
+msgstr "Точка обертання елемента."
 
 #: inc/data.php:1975
 msgid "Scale"
-msgstr "Escala"
+msgstr "Масштаб"
 
 #: inc/data.php:1976
 msgid "Element scale value (min - 0; max 10;)"
-msgstr "Valor de escala del elemento (min - 0; max 10;)"
+msgstr "Значення масштабування елемента (від 0 до 10)"
 
 #: inc/data.php:1984
 msgid "Opacity"
-msgstr "Opacidad"
+msgstr "Прозорість"
 
 #: inc/data.php:1985
 msgid "Element opacity value (min - 0; max 1;)"
-msgstr "Valor de opacidad Elemento (min - 0; max 1;)"
+msgstr "Значення прозорості елемента (від 0 до 1)"
 
 #: inc/data.php:1990
 msgid "Ease None"
-msgstr "Ease None"
+msgstr "Без послаблення"
 
 #: inc/data.php:1991
 msgid "Ease In Cubic"
-msgstr "Ease In Cubic"
+msgstr "Кубічне послаблення всередину"
 
 #: inc/data.php:1992
 msgid "Ease Out Cubic"
-msgstr "Ease Out Cubic"
+msgstr "Кубічне послаблення назовні"
 
 #: inc/data.php:1993
 msgid "Ease In Out Cubic"
-msgstr "Ease In Out Cubic"
+msgstr "Кубічне послаблення назовні та всередину"
 
 #: inc/data.php:1994
 msgid "Ease In Quart"
-msgstr "Ease In Quart"
+msgstr "Квадратичне послаблення всередину"
 
 #: inc/data.php:1995
 msgid "Ease Out Quart"
-msgstr "Ease Out Quart"
+msgstr "Квадратичне послаблення назовні"
 
 #: inc/data.php:1996
 msgid "Ease In Out Quart"
-msgstr "Ease In Out Quart"
+msgstr "Квадратичне послаблення назовні та всередину"
 
 #: inc/data.php:1997
 msgid "Ease In Expo"
-msgstr "Ease In Expo"
+msgstr "Експо послаблення всередину"
 
 #: inc/data.php:1998
 msgid "Ease Out Expo"
-msgstr "Ease Out Expo"
+msgstr "Експо послаблення назовні"
 
 #: inc/data.php:1999
 msgid "Ease In Out Expo"
-msgstr "Ease In Out Expo"
+msgstr "Експо послаблення назовні та всередину"
 
 #: inc/data.php:2000
 msgid "Ease In Back"
-msgstr "Ease In Back"
+msgstr "Послаблення всередину назад"
 
 #: inc/data.php:2001
 msgid "Ease Out Back"
-msgstr "Ease Out Back"
+msgstr "Послаблення назовні назад"
 
 #: inc/data.php:2002
 msgid "Ease In Out Back"
-msgstr "Ease In Out Back"
+msgstr "Послаблення назовні та всередину назад"
 
 #: inc/data.php:2005
 msgid "Easing"
-msgstr "Ease In Out Back"
+msgstr "Послаблення"
 
 #: inc/data.php:2006
 msgid "Animation easing."
-msgstr "Animation easing."
+msgstr "Послаблення анімації."
 
 #: inc/data.php:2014
 msgid "Animation Speed"
-msgstr "Velocidad de Animación"
+msgstr "Швидкість анімації"
 
 #: inc/data.php:2015
 msgid "Animation speed in seconds.(Example: 0.2 or 1)"
-msgstr "Velocidad de Animación en segundos. (Por ejemplo: 0.2 or 1)"
+msgstr "Швидкість анімації в секундах (наприклад, 0.1 або 1)"
 
 #: inc/data.php:2023
 msgid "Animation Delay"
-msgstr "Retraso de Animación"
+msgstr "Затримка анімації"
 
 #: inc/data.php:2024
 msgid "Animation Delay in seconds"
-msgstr "Retraso de Animación en segundos"
+msgstr "Затримка анімації в секундах"
 
 #: inc/data.php:2030
 msgid "Element custom class"
-msgstr "Clase personalizada del elemento"
+msgstr "Користувацький клас CSS елемента"
 
 #: inc/data.php:2033
 msgid "This shortcode adds show animations on any page element."
 msgstr ""
-"Este shortcode se agrega para mostrar animaciones en cualquier elemento de "
-"la página."
+"З допомогою цього шорткода пова будь-якого елемента сторінки стане "
+"анімованою."
 
 #: inc/data.php:2038 inc/data.php:2039
 msgid "Video Preview"
-msgstr "Ver el vídeo"
+msgstr "Попередній перегляд відео"
 
 #: inc/data.php:2047
 msgid "URL or File"
@@ -1914,23 +1918,23 @@ msgstr ""
 
 #: inc/data.php:2059
 msgid "Hide control buttons"
-msgstr "Ocultar botones de control"
+msgstr "Приховати кнопки керування"
 
 #: inc/data.php:2060
 msgid "Show control buttons"
-msgstr "Mostrar botones de control"
+msgstr "Відображати кнопки керування"
 
 #: inc/data.php:2061
 msgid "Show control button on mouse hover"
-msgstr "Mostrar botones de control con el cursor del ratón"
+msgstr "Відображати кнопки керування при наведенні вказівника миші"
 
 #: inc/data.php:2062
 msgid "Video Autoplay"
-msgstr "Reproducción automática de vídeo "
+msgstr "Автоматичне відтворення відео"
 
 #: inc/data.php:2063
 msgid "Play video on mouse hover"
-msgstr "Reproducción del video al pasar el ratón"
+msgstr "Відтворювати відео при наведенні вказівника миші"
 
 #: inc/data.php:2066
 msgid "Controls"
@@ -1955,379 +1959,377 @@ msgstr ""
 #: inc/data.php:2092
 msgid "Element custom class. You can use \"full-width\" class for video"
 msgstr ""
-"Clase de elemento personalizado. Puede utilizar la clase \"full-width\" para "
-"el vídeo"
+"Користувацький клас елемента. Для відео можна вживати клас \"full-width\""
 
 #: inc/filters.php:57
 msgid "Image"
-msgstr "Imagen"
+msgstr "Зображення"
 
 #: inc/filters.php:107
 msgid "Banner image URL"
-msgstr "URL de la imagen del Banner"
+msgstr "Шлях до зображення банера"
 
 #: inc/filters.php:114
 msgid "Banner title"
-msgstr "Título del Banner"
+msgstr "Заголовок банера"
 
 #: inc/filters.php:128
 msgid "Banner default text color"
-msgstr "Color de texto del banner por defecto"
+msgstr "Стандартний колір тексту банера"
 
 #: inc/filters.php:142
 msgid "Banner content"
-msgstr "Contenido del banner"
+msgstr "Текст банера"
 
 #: inc/filters.php:149
 msgid "Custom CSS class"
-msgstr "Clase CSS personalizada"
+msgstr "Користувацький клас CSS"
 
 #: inc/filters.php:167
 msgid "Select a page:"
-msgstr "Seleccione la página:"
+msgstr "Оберіть сторінку"
 
 #: inc/filters.php:175
 msgid "Landing page"
-msgstr "Landing page"
+msgstr "Початкова сторінка"
 
 #: inc/filters.php:176
 msgid "Please select landing page. (Page with anchor navigation menu.)"
 msgstr ""
-"Por favor, seleccione la página de destino. (Página con menú de navegación "
-"del ancla.)"
+"Будь ласка, виберіть початкову сторінку. (Сторінка з якірним навігаційним "
+"меню)."
 
 #: inc/generator-views.php:64 inc/generator-views.php:69
 #: inc/vendor/sunrise.php:452
 msgid "Media manager"
-msgstr "Media manager"
+msgstr "Менеджер медіа"
 
 #: inc/generator-views.php:69
 msgid "Icon picker"
-msgstr "Icono de selector"
+msgstr "Засіб вибору іконки"
 
 #: inc/generator-views.php:69
 msgid "Filter icons"
-msgstr "Filtrar los iconos"
+msgstr "Фільтрувати іконки"
 
 #: inc/generator-views.php:83
 msgid "Please wait"
-msgstr "Espere por favor"
+msgstr "Будь ласка, зачекайте"
 
 #: inc/generator-views.php:90
 msgid "Untitled gallery"
-msgstr "Galería sin título"
+msgstr "Галерея без назви"
 
 #: inc/generator-views.php:96
 msgid "Galleries not found"
-msgstr "Galerías no encontradas"
+msgstr "Немає галерей"
 
 #: inc/generator-views.php:97
 msgid "Manage galleries"
-msgstr "Administrar galerías"
+msgstr "Керувати галереями"
 
 #: inc/generator-views.php:97
 msgid "Reload galleries"
-msgstr "Actualizar galerías"
+msgstr "Перезавантажити галереї"
 
 #: inc/generator-views.php:113
 msgid "Horizontal offset"
-msgstr "Desplazamiento horizontal"
+msgstr "Горизонтальне зміщення"
 
 #: inc/generator-views.php:113
 msgid "Vertical offset"
-msgstr "Desplazamiento vertical"
+msgstr "Вертикальне зміщення"
 
 #: inc/generator-views.php:113
 msgid "Blur"
-msgstr "Desenfoque"
+msgstr "Розмиття"
 
 #: inc/generator-views.php:113
 msgid "Color"
-msgstr "Color"
+msgstr "Колір"
 
 #: inc/generator-views.php:124
 msgid "Border width"
-msgstr "Ancho del borde"
+msgstr "Ширина краю"
 
 #: inc/generator-views.php:124
 msgid "Border style"
-msgstr "Estilo del borde"
+msgstr "Стиль краю"
 
 #: inc/generator-views.php:124
 msgid "Border color"
-msgstr "Color del borde"
+msgstr "Колір краю"
 
 #: inc/generator-views.php:134
 msgid "Media library"
-msgstr "Mediateca"
+msgstr "Бібліотека медіафайлів"
 
 #: inc/generator-views.php:135
 msgid "Recent posts"
-msgstr "Artículos recientes"
+msgstr "Нещодавні публікації"
 
 #: inc/generator-views.php:136
 msgid "Category"
-msgstr "Categoría"
+msgstr "Категорія"
 
 #: inc/generator-views.php:140
 msgid "Select images source"
-msgstr "Seleccione la fuente de las imágenes"
+msgstr "Виберіть зображення"
 
 #: inc/generator-views.php:151
 msgid "Select taxonomy"
-msgstr "Seleccione la taxonomía"
+msgstr "Оберіть таксономію"
 
 #: inc/generator-views.php:162
 msgid "Add images"
-msgstr "Añadir imágenes"
+msgstr "Додайте зображення"
 
 #: inc/generator-views.php:162
 msgid ""
 "Click the button above and select images.<br>You can select multimple images "
 "with Ctrl (Cmd) key"
 msgstr ""
-"Haga clic en el botón de arriba y elija las imágenes. <br> Puede seleccionar "
-"varias imágenes utilizando la tecla Ctrl (Cmd)"
+"Натисніть кнопку вгорі та виберіть зображення. <br>Кілька зображень можна "
+"вибрати, затиснувши клавішу Ctrl (Cmd)"
 
 #: inc/generator-views.php:162
 msgid ""
 "Select categories to retrieve posts from.<br>You can select multiple "
 "categories with Ctrl (Cmd) key"
 msgstr ""
-"Seleccione las categorías de datos para mostrar. Puede seleccionar varias "
-"categorías utilizando la tecla Ctrl (Cmd)"
+"Оберіть категорії відображуваних публікацій.<br>Кілька категорій можна "
+"вибрати, затиснувши клавішу Ctrl (Cmd)"
 
 #: inc/generator-views.php:162
 msgid ""
 "Select taxonomy and it's terms.<br>You can select multiple terms with Ctrl "
 "(Cmd) key"
 msgstr ""
-"Seleccione la taxonomía y sus términos.<br>Usted puede seleccionar varios "
-"términos utilizando la tecla Ctrl (Cmd)"
+"Оберіть таксономію та її вимоги. <br>Кілька таксономій можна вибрати, "
+"затиснувши клавішу Ctrl (Cmd)"
 
 #: inc/generator-views.php:192 inc/generator-views.php:229
 msgid "Extra small devices (Phones)"
-msgstr "Dispositivos muy pequeños (Móviles)"
+msgstr "Дуже малі пристрої (Телефони)"
 
 #: inc/generator-views.php:192 inc/generator-views.php:229
 msgid "Small devices (Tablets)"
-msgstr "Dispositivos pequeños (Tablets)"
+msgstr "Невеликі пристрої (Планшети)"
 
 #: inc/generator-views.php:192 inc/generator-views.php:229
 msgid "Medium devices (Desktops)"
-msgstr "Dispositivos medios (Ordenadores)"
+msgstr "Пристрої середнього розміру (ПК)"
 
 #: inc/generator-views.php:192 inc/generator-views.php:229
 msgid "Large devices (Desktops)"
-msgstr "Dispositivos grandes (Ordenadores)"
+msgstr "Великі пристрої (ПК)"
 
 #: inc/generator.php:58 inc/generator.php:160
 msgid "Insert shortcode"
-msgstr "Insertar el shortcode"
+msgstr "Вставити шорткод"
 
 #: inc/generator.php:115
 msgid "Search for shortcodes"
-msgstr "Buscador para  shortcodes"
+msgstr "Шукати шорткоди"
 
 #: inc/generator.php:117
 msgid "Filter by type"
-msgstr "Filtrar por tipo"
+msgstr "Фільтрування за типом"
 
 #: inc/generator.php:150
 msgid "Shortcode not specified"
-msgstr "Código corto no especificado"
+msgstr "Шорткод не зазначено"
 
 #: inc/generator.php:161
 msgid "Live preview"
-msgstr "Vista previa en vivo"
+msgstr "Попередній перегляд"
 
 #: inc/generator.php:165
 msgid "Click to return to the shortcodes list"
-msgstr "Haga clic para volver a la lista de shortcodes"
+msgstr "Натисніть для повернення до списку шорткодів"
 
 #: inc/generator.php:165
 msgid "All shortcodes"
-msgstr "Todos los shortcodes"
+msgstr "Всі шорткоди"
 
 #: inc/generator.php:172
 msgid "Examples of use"
-msgstr "Ejemplos de uso"
+msgstr "Приклади застосування"
 
 #: inc/generator.php:228
 msgid "Click to set this value"
-msgstr "Haga clic para establecer este valor"
+msgstr "Натисніть, щоб встановити таке значення"
 
 #: inc/generator.php:269
 msgid "Preview"
-msgstr "Vista previa"
+msgstr "Попередній перегляд"
 
 #: inc/generator.php:278 inc/tools.php:231
 msgid "Access denied"
-msgstr "Acceso denegado"
+msgstr "У доступі відмовлено"
 
 #: inc/generator.php:313
 msgid "Presets"
-msgstr "Presets"
+msgstr "Шаблони"
 
 #: inc/generator.php:316
 msgid "Save current settings as preset"
-msgstr "Guardar configuración actual como preset"
+msgstr "Зберегти поточні налаштування, як шаблон"
 
 #: inc/generator.php:345 inc/generator.php:348
 msgid "Presets not found"
-msgstr "Presets no se encontraron"
+msgstr "Немає шаблонів"
 
 #: inc/shortcodes.php:31
 msgid "Read More"
-msgstr "Leer Más"
+msgstr "Детальніше"
 
 #: inc/shortcodes.php:264 inc/shortcodes.php:873 inc/shortcodes.php:1310
 msgid "Template file (*.tmpl) not found"
-msgstr "Archivo de la plantilla (*.tmpl) que no se ha encontrado"
+msgstr "Немає файла шаблону (*.tmpl)"
 
 #: inc/shortcodes.php:1075 inc/shortcodes.php:1447
 msgid "Posts not found"
-msgstr "Artículos no se han encontrado"
+msgstr "Публікацій немає"
 
 #: inc/shortcodes.php:1496
 msgid "Tab title"
-msgstr "Título del botón"
+msgstr "Заголовок вкладки"
 
 #: inc/vendor/sunrise.php:90 inc/vendor/sunrise.php:91
 #: inc/vendor/sunrise.php:122 inc/vendor/sunrise.php:123
 msgid "Plugin Settings"
-msgstr "Ajustes del plugin"
+msgstr "Налаштування плагіна."
 
 #: inc/vendor/sunrise.php:180
 msgid "Use selected file"
-msgstr "Usar el archivo seleccionado"
+msgstr "Використати обраний файл"
 
 #: inc/vendor/sunrise.php:372
 msgid "Save changes"
-msgstr "Guardar cambios"
+msgstr "Зберегти зміни"
 
 #: inc/vendor/sunrise.php:372
 msgid "Saving"
-msgstr "Se está guardando"
+msgstr "Зберігаємо"
 
 #: inc/vendor/sunrise.php:372
 msgid "Saved"
-msgstr "Guardado"
+msgstr "Збережено"
 
 #: inc/vendor/sunrise.php:372
 msgid ""
 "This action will delete all your settings. Are you sure? This action cannot "
 "be undone!"
 msgstr ""
-"Esta acción eliminará todos los ajustes. ¿Está seguro? ¡Esta acción no se "
-"puede deshacer!"
+"Зараз усі ваші налаштування буде видалено. Ви впевнені, що хочете це "
+"зробити? Цю дію відмінити не вдасться!"
 
 #: inc/vendor/sunrise.php:372
 msgid "Restore default settings"
-msgstr "Restaurar la configuración predeterminada"
+msgstr "Відновити стандартні налаштування"
 
 #: inc/vendor/sunrise.php:379 inc/vendor/sunrise.php:388
 #: inc/vendor/sunrise.php:397 inc/vendor/sunrise.php:447
 msgid "Text field"
-msgstr "Campo de texto"
+msgstr "Текстове поле (рядок)"
 
 #: inc/vendor/sunrise.php:409
 msgid "Textarea field"
-msgstr "Campo de texto (zona)"
+msgstr "Текстове поле (область)"
 
 #: inc/vendor/sunrise.php:420 inc/vendor/sunrise.php:431
 msgid "Checkbox"
-msgstr "Casilla de verificación"
+msgstr "Прапорець"
 
 #: inc/vendor/sunrise.php:421
 msgid "Label"
-msgstr "Label"
+msgstr "Підпис"
 
 #: inc/vendor/sunrise.php:457
 msgid "Color picker"
-msgstr "Selector de color."
+msgstr "Інструмент вибору кольору"
 
 #: inc/vendor/sunrise.php:465
 msgid "Pick a color"
-msgstr "Elija un color"
+msgstr "Оберіть колір"
 
 #: inc/vendor/sunrise.php:489
 msgid ""
 "For full functionality of this page it is reccomended to enable javascript."
-msgstr ""
-"Para obtener funcionalidad completa de esta página está recomendado activar "
-"javascript."
+msgstr "Для повноцінної роботи сторінки радимо увімкнути javascript."
 
 #: inc/vendor/sunrise.php:490
 msgid "Settings saved successfully"
-msgstr "Ajustes han sido guardados correctamente"
+msgstr "Параметри успішно збережено"
 
 #: inc/vendor/sunrise.php:491
 msgid "Settings reseted successfully"
-msgstr "Ajustes han sido reseteados con éxito "
+msgstr "Параметри успішно скинуто"
 
 #: inc/vendor/sunrise.php:520
 #, php-format
 msgid "option type %s is not callable"
-msgstr "option type %s is not callable"
+msgstr "Пераметр типу %s не підтримується"
 
 #: inc/widget.php:23
 msgid "Special widget with Cherry Shortcodes."
-msgstr "Widget especial con Cherry Shortcodes."
+msgstr "Спеціальний віджет з шорткодами Cherry."
 
 #: inc/widget.php:30
 msgid "Cherry Shortcodes"
-msgstr "Cherry Shortcodes"
+msgstr "Шорткоди Cherry"
 
 #: inc/widget.php:62
 msgid "Title:"
-msgstr "Título:"
+msgstr "Заголовок:"
 
 #~ msgid "Upload banner image"
-#~ msgstr "Suba la imagen del banner"
+#~ msgstr "Завантажте зображення банера"
 
 #~ msgid "Choose to display a part or d content"
-#~ msgstr "Elija si desea mostrar algún contenido o todo el contenido"
+#~ msgstr ""
+#~ "Виберіть, скільки вмісту публікації відображати - частково чи повністю."
 
 #~ msgid "Upload marker source"
-#~ msgstr "Cargar imagen del marcador"
+#~ msgstr "Вкажіть шлях/завантажте зображення маркера"
 
 #~ msgid "Custom class"
-#~ msgstr "Clase de personalización"
+#~ msgstr "Користувацький клас"
 
 #~ msgid "URL or File."
-#~ msgstr "URL del Archivo."
+#~ msgstr "Посилання або файл"
 
 #~ msgid ""
 #~ "To use video from YouTube or Vimeo input video URL. You can also upload "
 #~ "video file from media library."
 #~ msgstr ""
-#~ "Para utilizar el vídeo de YouTube o Vimeo favor escriba la URL del video. "
-#~ "También puede cargar archivos de vídeo de la biblioteca multimedia."
+#~ "Введіть посилання відео для використання відео з YouTube або Vimeo. Ви "
+#~ "також можете завантажити відеофайл з медіа-бібліотеки."
 
 #~ msgid "Poster."
-#~ msgstr "Cartel."
+#~ msgstr "Постер"
 
 #~ msgid "Poster image url."
-#~ msgstr "URL de la imagen del cartel."
+#~ msgstr "Шлях до зображення постера"
 
 #~ msgid "Controls."
-#~ msgstr "Controles."
+#~ msgstr "Керування."
 
 #~ msgid "Show content on mouse hover."
-#~ msgstr "Mostrar el video al pasar el ratón."
+#~ msgstr "Відтворювати вміст при наведенні вказівника миші"
 
 #~ msgid "Muted."
-#~ msgstr "Silenciado."
+#~ msgstr "Вимкнути звук."
 
 #~ msgid "Loop."
-#~ msgstr "Loop."
+#~ msgstr "Повторювати відтворення."
 
 #~ msgid "Preload."
-#~ msgstr "Precarga."
+#~ msgstr "Попереднє завантаження."
 
 #~ msgid "Posted on"
-#~ msgstr "Publicado en "
+#~ msgstr "Опубліковано"
 
 #~ msgid "by"
-#~ msgstr "por"
+#~ msgstr "  "

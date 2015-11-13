@@ -371,11 +371,19 @@ class Cherry_Shortcodes_Handler {
 			$styles['background-color'] = esc_attr( $atts['bg_color'] );
 		}
 
-		$style  = Cherry_Shortcodes_Tools::prepare_styles( $styles );
+		$style = Cherry_Shortcodes_Tools::prepare_styles( $styles );
 
 		Cherry_Shortcodes_Tools::print_styles( sprintf( '%s{%s}', $rand_class, $style ) );
 
-		$format = apply_filters( 'cherry_shortcode_box_format', '<div class="%s"><div class="%s" >%s</div></div>' );
+		/**
+		 * Filter a shortcode format for outputing.
+		 *
+		 * @since 1.0.0
+		 * @since 1.0.7  Added new additional variable for filter - $atts.
+		 * @param string $format Shortcode format.
+		 * @param array  $atts   Shortcode attributes.
+		 */
+		$format = apply_filters( 'cherry_shortcode_box_format', '<div class="%s"><div class="%s">%s</div></div>', $atts );
 		$output = sprintf( $format, $class, $preset_class, do_shortcode( $content ) );
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'box' );
@@ -510,7 +518,9 @@ class Cherry_Shortcodes_Handler {
 
 		$class = implode( ' ', array_filter( $classes ) );
 
-		$output = sprintf( $format['global'], $title, $subtitle, $icon, $class );
+		// Empty 5-th arguments for backward compatibility.
+		$depraceted = '';
+		$output     = sprintf( $format['global'], $title, $subtitle, $icon, $class, $depraceted );
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'title_box' );
 	}
@@ -1709,11 +1719,11 @@ class Cherry_Shortcodes_Handler {
 
 	public static function parallax_image( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
-			'bg_image'         => '',
-			'speed'            => '1.5',
-			'invert'           => 'no',
-			'min_height'       => '300',
-			'custom_class'     => '',
+			'bg_image'     => '',
+			'speed'        => '1.5',
+			'invert'       => 'no',
+			'min_height'   => '300',
+			'custom_class' => '',
 		), $atts, 'parallax_image' );
 
 		$bg_image     = sanitize_text_field( $atts['bg_image'] );
@@ -1722,7 +1732,7 @@ class Cherry_Shortcodes_Handler {
 		$min_height   = floatval( $atts['min_height'] );
 		$custom_class = sanitize_text_field( $atts['custom_class'] );
 
-		if ( !$bg_image ) {
+		if ( ! $bg_image ) {
 			return;
 		}
 
