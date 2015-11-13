@@ -4,6 +4,21 @@ A pack of WordPress shortcodes.
 
 ##Change log##
 
+#### v1.0.7 ####
+
+* NEW: `[countdown]` shortcode
+* ADD: New shortcodes dynamic style management logic
+* ADD: New additional variable for filter `cherry_shortcode_box_format`
+* ADD: `scoped` attribute to the style tag
+* UPD: Localized files
+* FIX: `content_type` values in `[posts]` shortcode
+* FIX: Correctly process icon when `none` value passed
+* FIX: Backward compatibility for `[title_box]` shortcode
+
+#### v1.0.6.1 ####
+
+* FIX: Trouble with page anchor stickup selector
+
 #### v1.0.6 ####
 
 * UPD: Pass additional parameters into `cherry_shortcodes_comments_template_callbacks` filter
