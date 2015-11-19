@@ -1489,19 +1489,18 @@ class Cherry_Shortcodes_Handler {
 			$wrap_classes = array_unique( $wrap_classes );
 			$wrap_classes = array_map( 'sanitize_html_class', $wrap_classes );
 
-			$data_attr_line = '';
-			$data_attr_line .= 'data-slides-per-view="' . $slides_per_view . '"';
-			$data_attr_line .= 'data-slides-per-group="' . $slides_per_group . '"';
-			$data_attr_line .= 'data-slides-per-column="' . $slides_per_column . '"';
-			$data_attr_line .= 'data-space-between-slides="' . $space_between_slides . '"';
-			$data_attr_line .= 'data-duration-speed="' . $swiper_duration_speed . '"';
-			$data_attr_line .= 'data-swiper-loop="' . $swiper_loop . '"';
-			$data_attr_line .= 'data-free-mode="' . $swiper_free_mode . '"';
-			$data_attr_line .= 'data-grab-cursor="' . $swiper_grab_cursor . '"';
-			$data_attr_line .= 'data-mouse-wheel="' . $swiper_mouse_wheel . '"';
-			$data_attr_line .= 'data-centered-slide="' . $swiper_centered_slide . '"';
-			$data_attr_line .= 'data-swiper-effect="' . $swiper_effect . '"';
-			$data_attr_line .= 'data-uniq-id="swiper-carousel-' . $instance . '"';
+			$data_attr_line = 'data-slides-per-view="' . $slides_per_view . '"';
+			$data_attr_line .= ' data-slides-per-group="' . $slides_per_group . '"';
+			$data_attr_line .= ' data-slides-per-column="' . $slides_per_column . '"';
+			$data_attr_line .= ' data-space-between-slides="' . $space_between_slides . '"';
+			$data_attr_line .= ' data-duration-speed="' . $swiper_duration_speed . '"';
+			$data_attr_line .= ' data-swiper-loop="' . $swiper_loop . '"';
+			$data_attr_line .= ' data-free-mode="' . $swiper_free_mode . '"';
+			$data_attr_line .= ' data-grab-cursor="' . $swiper_grab_cursor . '"';
+			$data_attr_line .= ' data-mouse-wheel="' . $swiper_mouse_wheel . '"';
+			$data_attr_line .= ' data-centered-slide="' . $swiper_centered_slide . '"';
+			$data_attr_line .= ' data-swiper-effect="' . $swiper_effect . '"';
+			$data_attr_line .= ' data-uniq-id="swiper-carousel-' . $instance . '"';
 
 			( $swiper_navigation_position == 'outer' ) ? $outer_class = 'outer' : $outer_class = '';
 
@@ -1688,19 +1687,19 @@ class Cherry_Shortcodes_Handler {
 			$map_marker = 'default';
 		}
 
-		$data_attr_line = '';
-			$data_attr_line .= 'data-map-id="google-map-' . $random_id . '"';
-			$data_attr_line .= 'data-lat-value="' . $lat_value . '"';
-			$data_attr_line .= 'data-lng-value="' . $lng_value . '"';
-			$data_attr_line .= 'data-zoom-value="' . $zoom_value . '"';
-			$data_attr_line .= 'data-scroll-wheel="' . $scroll_wheel . '"';
-			$data_attr_line .= 'data-pan-control="' . $pan_control . '"';
-			$data_attr_line .= 'data-zoom-control="' . $zoom_control . '"';
-			$data_attr_line .= 'data-map-draggable="' . $map_draggable . '"';
-			$data_attr_line .= "data-map-marker='" . $map_marker . "'";
-			$data_attr_line .= "data-map-style='" . $style . "'";
+		$data_attr_line = 'data-map-id="google-map-' . $random_id . '"';
+		$data_attr_line .= ' data-lat-value="' . $lat_value . '"';
+		$data_attr_line .= ' data-lng-value="' . $lng_value . '"';
+		$data_attr_line .= ' data-zoom-value="' . $zoom_value . '"';
+		$data_attr_line .= ' data-scroll-wheel="' . $scroll_wheel . '"';
+		$data_attr_line .= ' data-pan-control="' . $pan_control . '"';
+		$data_attr_line .= ' data-zoom-control="' . $zoom_control . '"';
+		$data_attr_line .= ' data-map-draggable="' . $map_draggable . '"';
+		$data_attr_line .= " data-map-marker='" . $map_marker . "'";
+		$data_attr_line .= " data-map-style='" . $style . "'";
+
 			if( !empty( $addr_set ) ){
-				$data_attr_line .= "data-multi-marker='" . json_encode( $addr_set ) . "'";
+				$data_attr_line .= " data-multi-marker='" . json_encode( $addr_set ) . "'";
 			}
 
 		$html = '<div class="google-map-container ' . $custom_class.'" style="height:' . $map_height . 'px;" ' . $data_attr_line . '>';
@@ -1806,9 +1805,8 @@ class Cherry_Shortcodes_Handler {
 		$after_content  = sanitize_text_field( $atts['after_content'] );
 		$custom_class   = sanitize_text_field( $atts['custom_class'] );
 
-		$data_attr_line = '';
-			$data_attr_line .= 'data-delay="' . $delay . '" ';
-			$data_attr_line .= 'data-time="' . $time . '"';
+		$data_attr_line = 'data-delay="' . $delay . '" ';
+		$data_attr_line .= ' data-time="' . $time . '"';
 
 		$html = '<div class="cherry-counter ' . esc_attr( $custom_class ) . '" ' . $data_attr_line . '>';
 
@@ -2164,20 +2162,18 @@ class Cherry_Shortcodes_Handler {
 		$custom_class = sanitize_text_field( $atts['custom_class'] );
 		$custom_class = ( !'' == $custom_class ) ? ' ' . $custom_class : $custom_class ;
 
-
-		$data_attr_line = '';
-		$data_attr_line .= 'data-start-date="' . $atts['start_date'] . '"';
-		$data_attr_line .= 'data-final-date="' . $atts['countdown_date'] . '"';
-		$data_attr_line .= 'data-hour="' . $countdown_hour . '"';
-		$data_attr_line .= 'data-minutes="' . $countdown_minutes . '"';
-		$data_attr_line .= 'data-seconds="' . $countdown_seconds . '"';
-		$data_attr_line .= 'data-size="' . $item_size . '"';
-		$data_attr_line .= 'data-stroke-width="' . $stroke_width . '"';
-		$data_attr_line .= 'data-stroke-color="' . $stroke_color . '"';
+		$data_attr_line = 'data-start-date="' . $atts['start_date'] . '"';
+		$data_attr_line .= ' data-final-date="' . $atts['countdown_date'] . '"';
+		$data_attr_line .= ' data-hour="' . $countdown_hour . '"';
+		$data_attr_line .= ' data-minutes="' . $countdown_minutes . '"';
+		$data_attr_line .= ' data-seconds="' . $countdown_seconds . '"';
+		$data_attr_line .= ' data-size="' . $item_size . '"';
+		$data_attr_line .= ' data-stroke-width="' . $stroke_width . '"';
+		$data_attr_line .= ' data-stroke-color="' . $stroke_color . '"';
 
 		$utc_time = gmdate("d/n/Y H:i:s");
-		$data_attr_line .= 'data-stroke-color="' . $stroke_color . '"';
-		$data_attr_line .= 'data-utc-time="' . $utc_time . '"';
+		$data_attr_line .= ' data-stroke-color="' . $stroke_color . '"';
+		$data_attr_line .= ' data-utc-time="' . $utc_time . '"';
 
 
 		$countdown_settings = array(
