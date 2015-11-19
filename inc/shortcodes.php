@@ -373,7 +373,7 @@ class Cherry_Shortcodes_Handler {
 
 		$style = Cherry_Shortcodes_Tools::prepare_styles( $styles );
 
-		Cherry_Shortcodes_Tools::print_styles( sprintf( '%s{%s}', $rand_class, $style ) );
+		Cherry_Shortcodes_Tools::print_styles( sprintf( '%s .%s{%s}', $rand_class, $preset_classes[0], $style ) );
 
 		/**
 		 * Filter a shortcode format for outputing.
