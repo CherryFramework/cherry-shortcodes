@@ -1,6 +1,6 @@
 <?php
 /**
- * Class for managing plugin assets.
+ * Managing assets.
  *
  * @author    Vladimir Anokhin
  * @author    Cherry Team <support@cherryframework.com>
@@ -11,39 +11,48 @@
  */
 
 // If this file is called directly, abort.
-if ( !defined( 'WPINC' ) ) {
+if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+/**
+ * Class for managing plugin assets.
+ *
+ * @since 1.0.0
+ */
 class Cherry_Shortcodes_Assets {
 
 	/**
 	 * Set of queried assets.
 	 *
 	 * @since 1.0.0
-	 * @var   array
+	 * @access public
+	 * @var array $assets Array with assets.
 	 */
-	static $assets = array( 'css' => array(), 'js' => array() );
+	public static $assets = array(
+		'css' => array(),
+		'js'  => array(),
+	);
 
 	/**
-	 * Constructor
+	 * Constructor.
 	 *
 	 * @since 1.0.0
 	 */
 	function __construct() {
-		// Register
+		// Register.
 		add_action( 'wp_head',                                    array( __CLASS__, 'register_scripts' ) );
 		add_action( 'wp_enqueue_scripts',                         array( __CLASS__, 'register_styles' ) );
 		add_action( 'cherry_shortcodes/generator/preview/before', array( __CLASS__, 'register_scripts' ) );
 		add_action( 'cherry_shortcodes/generator/preview/before', array( __CLASS__, 'register_styles' ) );
 		add_action( 'admin_head',                                 array( __CLASS__, 'admin_register_assets' ) );
 
-		// Enqueue
+		// Enqueue.
 		add_action( 'wp_footer',          array( __CLASS__, 'enqueue_assets' ) );
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_styles' ) );
 		add_action( 'admin_footer',       array( __CLASS__, 'admin_enqueue_assets' ) );
 
-		// Print
+		// Print.
 		add_action( 'cherry_shortcodes/generator/preview/after', array( __CLASS__, 'prnt' ) );
 
 		// Pass style handle to CSS compiler.
@@ -53,12 +62,13 @@ class Cherry_Shortcodes_Assets {
 	/**
 	 * Register javascripts on front pages.
 	 *
-	 * @since 1.0.0
+	 * @since  1.0.0
+	 * @global bool $is_IE Is a Internet Explorer?
 	 */
 	public static function register_scripts() {
 		global $is_IE;
 
-		if ( !( wp_is_mobile() || $is_IE && preg_match( '/MSIE [56789]/', $_SERVER['HTTP_USER_AGENT'] ) ) ) {
+		if ( ! ( wp_is_mobile() || $is_IE && preg_match( '/MSIE [56789]/', $_SERVER['HTTP_USER_AGENT'] ) ) ) {
 			// Lazy Load Effect.
 			wp_register_script( 'cherry-lazy-load-effect', plugins_url( 'assets/js/shotcodes/lazy-load-effect.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 		}
@@ -85,7 +95,7 @@ class Cherry_Shortcodes_Assets {
 		wp_register_script( 'video-preview', plugins_url( 'assets/js/shotcodes/video-preview.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 		wp_register_script( 'video-youtube', 'https://www.youtube.com/player_api/', array( 'jquery' , 'video-preview' ), null, true );
 
-		// Countdown
+		// Countdown.
 		wp_register_script( 'jquery-countdown', plugins_url( 'assets/js/shotcodes/jquery.countdown.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 
 		// Page Anchor.
@@ -94,7 +104,11 @@ class Cherry_Shortcodes_Assets {
 		// Shortcodes init.
 		wp_register_script( 'cherry-shortcodes-init', plugins_url( 'assets/js/shotcodes/init.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 
-		// Hook to deregister javascripts or add custom.
+		/**
+		 * Hook to deregister javascripts or add custom.
+		 *
+		 * @since 1.0.0
+		 */
 		do_action( 'cherry_shortcodes/assets/register_scripts' );
 	}
 
@@ -105,7 +119,7 @@ class Cherry_Shortcodes_Assets {
 	 */
 	public static function register_styles() {
 
-		if ( !class_exists( 'Cherry_Framework' ) || ( doing_filter( 'cherry_shortcodes/generator/preview/before' ) ) ) {
+		if ( ! class_exists( 'Cherry_Framework' ) || ( doing_filter( 'cherry_shortcodes/generator/preview/before' ) ) ) {
 			wp_register_style( 'cherry-shortcodes-grid', plugins_url( 'assets/css/grid.css', CHERRY_SHORTCODES_FILE ), false, CHERRY_SHORTCODES_VERSION, 'all' );
 		}
 		// Magnific Popup.
@@ -117,7 +131,11 @@ class Cherry_Shortcodes_Assets {
 		// Shortcodes style.
 		wp_register_style( 'cherry-shortcodes-all', plugins_url( 'assets/css/shortcodes.css', CHERRY_SHORTCODES_FILE ), false, CHERRY_SHORTCODES_VERSION, 'all' );
 
-		// Hook to deregister stylesheets or add custom.
+		/**
+		 * Hook to deregister stylesheets or add custom.
+		 *
+		 * @since 1.0.0
+		 */
 		do_action( 'cherry_shortcodes/assets/register_styles' );
 	}
 
@@ -143,16 +161,20 @@ class Cherry_Shortcodes_Assets {
 		wp_register_style( 'cherry-shortcodes-generator', plugins_url( 'assets/css/generator.css', CHERRY_SHORTCODES_FILE ), array( 'wp-color-picker', 'magnific-popup' ), CHERRY_SHORTCODES_VERSION, 'all' );
 
 		wp_localize_script( 'cherry-shortcodes-generator', 'cherry_shortcodes_generator', array(
-				'upload_title'         => __( 'Choose file', 'cherry-shortcodes' ),
-				'upload_insert'        => __( 'Insert', 'cherry-shortcodes' ),
-				'isp_media_title'      => __( 'Select images', 'cherry-shortcodes' ),
-				'isp_media_insert'     => __( 'Add selected images', 'cherry-shortcodes' ),
-				'presets_prompt_msg'   => __( 'Please enter a name for new preset', 'cherry-shortcodes' ),
-				'presets_prompt_value' => __( 'New preset', 'cherry-shortcodes' ),
-				'last_used'            => __( 'Last used settings', 'cherry-shortcodes' )
-			) );
+			'upload_title'         => __( 'Choose file', 'cherry-shortcodes' ),
+			'upload_insert'        => __( 'Insert', 'cherry-shortcodes' ),
+			'isp_media_title'      => __( 'Select images', 'cherry-shortcodes' ),
+			'isp_media_insert'     => __( 'Add selected images', 'cherry-shortcodes' ),
+			'presets_prompt_msg'   => __( 'Please enter a name for new preset', 'cherry-shortcodes' ),
+			'presets_prompt_value' => __( 'New preset', 'cherry-shortcodes' ),
+			'last_used'            => __( 'Last used settings', 'cherry-shortcodes' ),
+		) );
 
-		// Hook to deregister assets or add custom.
+		/**
+		 * Hook to deregister assets or add custom on back-end.
+		 *
+		 * @since 1.0.0
+		 */
 		do_action( 'cherry_shortcodes/assets/admin_register_assets' );
 	}
 
@@ -174,7 +196,11 @@ class Cherry_Shortcodes_Assets {
 			wp_enqueue_script( $script );
 		}
 
-		// Hook to dequeue javascripts or add custom.
+		/**
+		 * Hook to dequeue javascripts or add custom.
+		 *
+		 * @since 1.0.0
+		 */
 		do_action( 'cherry_shortcodes/assets/enqueue_scripts' );
 	}
 
@@ -190,7 +216,11 @@ class Cherry_Shortcodes_Assets {
 		wp_enqueue_style( 'cherry-shortcodes-grid' );
 		wp_enqueue_style( 'cherry-shortcodes-all' );
 
-		// Hook to dequeue stylesheets or add custom.
+		/**
+		 * Hook to dequeue stylesheets or add custom.
+		 *
+		 * @since 1.0.0
+		 */
 		do_action( 'cherry_shortcodes/assets/enqueue_styles' );
 	}
 
@@ -208,6 +238,11 @@ class Cherry_Shortcodes_Assets {
 		$assets = self::assets();
 		wp_print_scripts( $assets['js'] );
 
+		/**
+		 * Hook to remove css/js or add custom without enqueuing.
+		 *
+		 * @since 1.0.0
+		 */
 		do_action( 'cherry_shortcodes/assets/print', $assets );
 	}
 
@@ -229,7 +264,11 @@ class Cherry_Shortcodes_Assets {
 			wp_enqueue_script( $script );
 		}
 
-		// Hook to dequeue assets or add custom.
+		/**
+		 * Hook to remove css/js or add custom (back-end).
+		 *
+		 * @since 1.0.0
+		 */
 		do_action( 'cherry_shortcodes/assets/admin_enqueue_assets' );
 	}
 
@@ -237,6 +276,8 @@ class Cherry_Shortcodes_Assets {
 	 * Add asset to the query.
 	 *
 	 * @since 1.0.0
+	 * @param string $type   Asset type (css|js).
+	 * @param mixed  $handle Asset handle or array with handles.
 	 */
 	public static function add( $type, $handle ) {
 
@@ -252,7 +293,8 @@ class Cherry_Shortcodes_Assets {
 	/**
 	 * Get queried assets.
 	 *
-	 * @since 1.0.0
+	 * @since  1.0.0
+	 * @return array Set of assets.
 	 */
 	public static function assets() {
 		// Get assets query.
@@ -268,11 +310,11 @@ class Cherry_Shortcodes_Assets {
 	/**
 	 * Pass style handle to CSS compiler.
 	 *
-	 * @since 1.0.0
-	 *
-	 * @param array $handles CSS handles to compile.
+	 * @since  1.0.0
+	 * @param  array $handles CSS handles to compile.
+	 * @return array
 	 */
-	public static  function add_style_to_compiler( $handles ) {
+	public static function add_style_to_compiler( $handles ) {
 		$handles = array_merge(
 			array( 'cherry-shortcodes-all' => plugins_url( 'assets/css/shortcodes.css', CHERRY_SHORTCODES_FILE ) ),
 			$handles
@@ -288,7 +330,6 @@ new Cherry_Shortcodes_Assets;
  * Helper function to add asset to the query.
  *
  * @since 1.0.0
- *
  * @param string $type   Asset type (css|js).
  * @param mixed  $handle Asset handle or array with handles.
  */
