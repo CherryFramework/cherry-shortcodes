@@ -39,7 +39,7 @@ class Cherry_Shortcodes_Assets {
 	 *
 	 * @since 1.0.0
 	 */
-	function __construct() {
+	public function __construct() {
 		// Register.
 		add_action( 'wp_head',                                    array( __CLASS__, 'register_scripts' ) );
 		add_action( 'wp_enqueue_scripts',                         array( __CLASS__, 'register_styles' ) );

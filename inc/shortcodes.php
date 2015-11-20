@@ -1,6 +1,6 @@
 <?php
 /**
- * Class for managing shortcodes callback-function.
+ * Managing shortcode callback-functions.
  *
  * @author    Vladimir Anokhin
  * @author    Cherry Team <support@cherryframework.com>
@@ -11,20 +11,68 @@
  */
 
 // If this file is called directly, abort.
-if ( !defined( 'WPINC' ) ) {
+if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+/**
+ * Class for managing shortcode callback-functions.
+ *
+ * @since 1.0.0
+ */
 class Cherry_Shortcodes_Handler {
 
-	public static $post_data      = array();
+	/**
+	 * Post data.
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 * @var array $post_data
+	 */
+	public static $post_data = array();
+
+	/**
+	 * Pattern for search macroses.
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 * @var array $macros_pattern
+	 */
 	public static $macros_pattern = '/%%([a-zA-Z]+[^%]{2})(=[\'\"]([a-zA-Z0-9-_,\/\s]+)[\'\"])?%%/';
 
+	/**
+	 * Tabs.
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 * @var array $tabs
+	 */
 	public static $tabs = array();
+
+	/**
+	 * Counter for `tab` shortcode.
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 * @var array $tab_count
+	 */
 	public static $tab_count = 0;
 
-	function __construct() {}
+	/**
+	 * Constructor.
+	 *
+	 * @since 1.0.0
+	 */
+	public function __construct() {}
 
+	/**
+	 * Builds the Button shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $atts    Attributes of the button shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the button.
+	 */
 	public static function button( $atts = null, $content = null ) {
 		$atts = shortcode_atts(
 			array(
@@ -200,6 +248,14 @@ class Cherry_Shortcodes_Handler {
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'button' );
 	}
 
+	/**
+	 * Builds the Horizontal Line shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $atts    Attributes of the horizontal line shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the horizontal line.
+	 */
 	public static function hr( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 			'height'        => 1,
@@ -227,6 +283,14 @@ class Cherry_Shortcodes_Handler {
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'hr' );
 	}
 
+	/**
+	 * Builds the Icon shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $atts    Attributes of the icon shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the icon.
+	 */
 	public static function icon( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 			'icon'  => '',
@@ -256,6 +320,14 @@ class Cherry_Shortcodes_Handler {
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'icon' );
 	}
 
+	/**
+	 * Builds the Banner shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $atts    Attributes of the banner shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the banner.
+	 */
 	public static function banner( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 			'image'    => '',
@@ -299,6 +371,14 @@ class Cherry_Shortcodes_Handler {
 		return apply_filters( 'cherry_shortcodes_output', $result, $atts, 'banner' );
 	}
 
+	/**
+	 * Builds the Box shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $atts    Attributes of the box shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the box.
+	 */
 	public static function box( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 			'preset'        => '',
@@ -389,6 +469,14 @@ class Cherry_Shortcodes_Handler {
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'box' );
 	}
 
+	/**
+	 * Builds the Box Inner shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $atts    Attributes of the box inner shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the box inner.
+	 */
 	public static function box_inner( $atts = null, $content = null ) {
 		$box_inner_class = apply_filters( 'cherry_box_inner_class', 'cherry-box-inner' );
 
@@ -401,6 +489,14 @@ class Cherry_Shortcodes_Handler {
 		return self::box( $atts, $content );
 	}
 
+	/**
+	 * Builds the Dropcap shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $atts    Attributes of the dropcap shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the dropcap.
+	 */
 	public static function dropcap( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 			'font_size'   => 20,
@@ -459,6 +555,14 @@ class Cherry_Shortcodes_Handler {
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'dropcap' );
 	}
 
+	/**
+	 * Builds the Title Box shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $atts    Attributes of the title box shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the title box.
+	 */
 	public static function title_box( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 			'title'          => '',
@@ -525,6 +629,14 @@ class Cherry_Shortcodes_Handler {
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'title_box' );
 	}
 
+	/**
+	 * Builds the Spacer shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $atts    Attributes of the spacer shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the spacer.
+	 */
 	public static function spacer( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 			'size'    => '20',
@@ -575,6 +687,14 @@ class Cherry_Shortcodes_Handler {
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'spacer' );
 	}
 
+	/**
+	 * Builds the Clear shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $atts    Attributes of the clear shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the clear.
+	 */
 	public static function clear( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 			'class' => '',
@@ -585,6 +705,14 @@ class Cherry_Shortcodes_Handler {
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'clear' );
 	}
 
+	/**
+	 * Builds the List shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $atts    Attributes of the list shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the list.
+	 */
 	public static function list_( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 			'icon'  => '',
@@ -616,6 +744,14 @@ class Cherry_Shortcodes_Handler {
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'list' );
 	}
 
+	/**
+	 * Builds the Row shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $atts    Attributes of the row shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the row.
+	 */
 	public static function row( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 			'type'   => 'full-width',
@@ -656,10 +792,26 @@ class Cherry_Shortcodes_Handler {
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'row' );
 	}
 
+	/**
+	 * Builds the Row Inner shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $atts    Attributes of the row inner shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the row inner.
+	 */
 	public static function row_inner( $atts = null, $content = null ) {
 		return self::row( $atts, $content );
 	}
 
+	/**
+	 * Builds the Column shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $atts    Attributes of the column shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the column.
+	 */
 	public static function col( $original_atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 			'size_xs'   => 'none',
@@ -750,10 +902,26 @@ class Cherry_Shortcodes_Handler {
 		return $output;
 	}
 
+	/**
+	 * Builds the Column Inner shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $atts    Attributes of the column inner shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the column inner.
+	 */
 	public static function col_inner( $atts = null, $content = null ) {
 		return self::col( $atts, $content );
 	}
 
+	/**
+	 * Builds the Posts shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $atts    Attributes of the posts shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the posts.
+	 */
 	public static function posts( $atts = null, $content = null ) {
 		static $instance = 0;
 		$instance++;
@@ -1170,6 +1338,14 @@ class Cherry_Shortcodes_Handler {
 		return $output;
 	}
 
+	/**
+	 * Builds the Swiper Carousel shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $atts    Attributes of the swiper carousel shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the swiper carousel.
+	 */
 	public static function swiper_carousel( $atts = null, $content = null ) {
 		static $instance = 0;
 		$instance++;
@@ -1536,6 +1712,14 @@ class Cherry_Shortcodes_Handler {
 		return $output;
 	}
 
+	/**
+	 * Builds the Tabs shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $atts    Attributes of the tabs shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the tabs.
+	 */
 	public static function tabs( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 				'active'   => 1,
@@ -1570,6 +1754,14 @@ class Cherry_Shortcodes_Handler {
 		return apply_filters( 'cherry_shortcodes_output', $return, $atts, 'tabs' );
 	}
 
+	/**
+	 * Builds the Tab shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $atts    Attributes of the tab shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the tab.
+	 */
 	public static function tab( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 				'title'    => __( 'Tab title', 'cherry-shortcodes' ),
@@ -1596,6 +1788,14 @@ class Cherry_Shortcodes_Handler {
 		do_action( 'cherry_shortcodes/shortcode/tab', $atts );
 	}
 
+	/**
+	 * Builds the Spoiler shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $atts    Attributes of the spoiler shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the spoiler.
+	 */
 	public static function spoiler( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 				'title'  => __( 'Spoiler title', 'cherry-shortcodes' ),
@@ -1617,6 +1817,14 @@ class Cherry_Shortcodes_Handler {
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'spoiler' );
 	}
 
+	/**
+	 * Builds the Accordion shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $atts    Attributes of the accordion shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the accordion.
+	 */
 	public static function accordion( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 				'class' => ''
@@ -1627,6 +1835,14 @@ class Cherry_Shortcodes_Handler {
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'accordion' );
 	}
 
+	/**
+	 * Builds the Google Map shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $atts    Attributes of the google map shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the google map.
+	 */
 	public static function google_map( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 			'geo_address'   => '',
@@ -1712,10 +1928,27 @@ class Cherry_Shortcodes_Handler {
 		return apply_filters( 'cherry_shortcodes_output', $html, $atts, 'google_map' );
 	}
 
+	/**
+	 * Depricated function for builds the Parallax Image shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @deprecated 1.0.2 Use parallax_image()
+	 * @param  array  $atts    Attributes of the parallax image shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the parallax image.
+	 */
 	public static function paralax_image( $atts = null, $content = null ) {
 		return self::parallax_image( $atts, $content );
 	}
 
+	/**
+	 * Builds the Parallax Image shortcode output.
+	 *
+	 * @since  1.0.2
+	 * @param  array  $atts    Attributes of the parallax image shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the parallax image.
+	 */
 	public static function parallax_image( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 			'bg_image'     => '',
@@ -1745,10 +1978,27 @@ class Cherry_Shortcodes_Handler {
 		return apply_filters( 'cherry_shortcodes_output', $html, $atts, 'parallax_image' );
 	}
 
+	/**
+	 * Depricated function for builds the Parallax Video shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @deprecated 1.0.2 Use parallax_html_video()
+	 * @param  array  $atts    Attributes of the parallax video shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the parallax video.
+	 */
 	public static function paralax_html_video( $atts = null, $content = null ) {
 		return self::parallax_html_video( $atts, $content );
 	}
 
+	/**
+	 * Builds the Parallax Video shortcode output.
+	 *
+	 * @since  1.0.2
+	 * @param  array  $atts    Attributes of the parallax video shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the parallax video.
+	 */
 	public static function parallax_html_video( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 			'poster'       => '',
@@ -1788,6 +2038,14 @@ class Cherry_Shortcodes_Handler {
 		return apply_filters( 'cherry_shortcodes_output', $html, $atts, 'parallax_html_video' );
 	}
 
+	/**
+	 * Builds the Counter shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $atts    Attributes of the counter shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the counter.
+	 */
 	public static function counter( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 			'counter_value'  => '100.00',
@@ -1827,6 +2085,14 @@ class Cherry_Shortcodes_Handler {
 		return apply_filters( 'cherry_shortcodes_output', $html, $atts, 'counter' );
 	}
 
+	/**
+	 * Builds the Lazy Load Effect shortcode output.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $atts    Attributes of the lazy load effect shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the lazy load effect.
+	 */
 	public static function lazy_load_effect( $atts = null, $content ) {
 		global $is_IE;
 
@@ -1959,6 +2225,14 @@ class Cherry_Shortcodes_Handler {
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'lazy_load_effect' );
 	}
 
+	/**
+	 * Builds the Video Preview shortcode output.
+	 *
+	 * @since  1.0.1
+	 * @param  array  $atts    Attributes of the video preview shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the video preview.
+	 */
 	public static function video_preview( $atts = null, $content ) {
 		$atts = shortcode_atts( array(
 			'poster'                => '',
@@ -2118,6 +2392,14 @@ class Cherry_Shortcodes_Handler {
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'video_preview' );
 	}
 
+	/**
+	 * Builds the Countdown shortcode output.
+	 *
+	 * @since  1.0.7
+	 * @param  array  $atts    Attributes of the countdown shortcode.
+	 * @param  string $content Shortcode content.
+	 * @return string          HTML content to display the countdown.
+	 */
 	public static function countdown( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 			'start_date'          => date('d/n/Y'),
@@ -2244,11 +2526,14 @@ class Cherry_Shortcodes_Handler {
 
 		return apply_filters( 'cherry_shortcodes_output', $html, $atts, 'countdown' );
 	}
+
 	/**
-	 * Prepare template data to replace
+	 * Prepare template data to replace.
 	 *
-	 * @since  1.0.0
-	 * @param  array  $atts output attributes
+	 * @since 1.0.0
+	 * @param array $data    Shortcode data.
+	 * @param array $atts    Shortcode attributes.
+	 * @param mixed $content Shortcode content
 	 */
 	public static function setup_template_data( $data, $atts, $content = null ) {
 		require_once( CHERRY_SHORTCODES_DIR . 'inc/template-callbacks.php' );
@@ -2281,6 +2566,13 @@ class Cherry_Shortcodes_Handler {
 		self::$post_data = apply_filters( 'cherry_shortcodes_data_callbacks', $_data, $atts );
 	}
 
+	/**
+	 * Callback-function for regular expression.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $matches Array of matched elements.
+	 * @return mixed           Call function or false.
+	 */
 	public static function replace_callback( $matches ) {
 
 		if ( ! is_array( $matches ) ) {
@@ -2340,6 +2632,12 @@ class Cherry_Shortcodes_Handler {
 		return $path;
 	}
 
+	/**
+	 * Retrieve a shortcode name.
+	 *
+	 * @since  1.0.0
+	 * @return string
+	 */
 	public static function get_shortcode_name() {
 		return ! empty( self::$post_data['tag'] ) ? self::$post_data['tag'] : '';
 	}
