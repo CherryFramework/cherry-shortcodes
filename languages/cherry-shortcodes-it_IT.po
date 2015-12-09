@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: cherry-shortcodes\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-10-30 13:04+0200\n"
-"PO-Revision-Date: 2015-10-30 13:04+0200\n"
+"PO-Revision-Date: 2015-11-15 12:01+0200\n"
 "Last-Translator: J.L.Dokter <jldokter@gmail.com>\n"
 "Language-Team: Cherry Team <support@cherryframework.com>\n"
 "Language: it_IT\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 1.8.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: _e;__;_n:1,2;_n_noop:1,2;_x:1,2c;_nx:1,2,4c;"
 "_nx_noop:1,2,3c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
@@ -428,23 +428,23 @@ msgstr "Seleziona immagine di sfondo attaccamento"
 
 #: inc/data.php:430 inc/data.php:531
 msgid "Auto"
-msgstr ""
+msgstr "Auto"
 
 #: inc/data.php:431 inc/data.php:532
 msgid "Cover"
-msgstr ""
+msgstr "Copertina"
 
 #: inc/data.php:432 inc/data.php:533
 msgid "Contain"
-msgstr ""
+msgstr "Contenitore"
 
 #: inc/data.php:435 inc/data.php:536
 msgid "Background image size"
-msgstr ""
+msgstr "Sfondo dimensioni dell'immagine"
 
 #: inc/data.php:436 inc/data.php:537
 msgid "Select background image size"
-msgstr ""
+msgstr "Selezionare la dimensione dell'immagine di sfondo"
 
 #: inc/data.php:441 inc/data.php:542
 msgid "Fill"
@@ -476,7 +476,7 @@ msgstr "Banner Immagine"
 
 #: inc/data.php:567
 msgid "Select attachment banner image"
-msgstr ""
+msgstr "Immagine del banner Selezionare attaccamento"
 
 #: inc/data.php:571
 msgid "Banner Title"
@@ -1115,7 +1115,7 @@ msgstr "Articolo contenuto"
 
 #: inc/data.php:1138 inc/data.php:1458
 msgid "Choose to display a part or full content "
-msgstr ""
+msgstr "Scegliere la visualizzazione una parte o contenuto completo"
 
 #: inc/data.php:1146 inc/data.php:1466
 msgid "Content Length"
@@ -1615,7 +1615,7 @@ msgstr "Fonte Marker"
 
 #: inc/data.php:1745
 msgid "Select marker id attachment"
-msgstr ""
+msgstr "Selezionare marcatore id attaccamento"
 
 #: inc/data.php:1748
 msgid "Google Map"
@@ -1903,17 +1903,19 @@ msgstr "Anteprima Video"
 
 #: inc/data.php:2047
 msgid "URL or File"
-msgstr ""
+msgstr "URL o file"
 
 #: inc/data.php:2048
 msgid ""
 "To use video from YouTube or Vimeo input video URL. You can also upload "
 "video file from media library"
 msgstr ""
+"Per utilizzare il video da YouTube o Vimeo inserisci URL del video di "
+"ingresso. È anche possibile caricare file video da mediateca"
 
 #: inc/data.php:2054
 msgid "Poster image URL"
-msgstr ""
+msgstr "Poster URL immagine"
 
 #: inc/data.php:2059
 msgid "Hide control buttons"
@@ -1937,23 +1939,23 @@ msgstr "Riprodurre video al passaggio del mouse"
 
 #: inc/data.php:2066
 msgid "Controls"
-msgstr ""
+msgstr "Controlli"
 
 #: inc/data.php:2071
 msgid "Show content on mouse hover?"
-msgstr ""
+msgstr "Mostra i contenuti al passaggio del mouse?"
 
 #: inc/data.php:2076
 msgid "Muted?"
-msgstr ""
+msgstr "Muto?"
 
 #: inc/data.php:2081
 msgid "Loop?"
-msgstr ""
+msgstr "Ciclo continuo?"
 
 #: inc/data.php:2086
 msgid "Preload?"
-msgstr ""
+msgstr "Precarica"
 
 #: inc/data.php:2092
 msgid "Element custom class. You can use \"full-width\" class for video"
