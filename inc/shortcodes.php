@@ -1537,7 +1537,7 @@ class Cherry_Shortcodes_Handler {
 		}
 
 		// Exclude current post/page (fix aborting).
-		if ( in_array( get_post_type(), (array) $post_type ) && ( 'full' === $content_type ) ) {
+		if ( in_array( get_post_type(), (array) $post_type ) && ( 'full' === $atts['content_type'] ) ) {
 			$args['post__not_in'] = array( get_the_ID() );
 		}
 
@@ -1665,18 +1665,20 @@ class Cherry_Shortcodes_Handler {
 			$wrap_classes = array_unique( $wrap_classes );
 			$wrap_classes = array_map( 'sanitize_html_class', $wrap_classes );
 
-			$data_attr_line = 'data-slides-per-view="' . $slides_per_view . '"';
-			$data_attr_line .= ' data-slides-per-group="' . $slides_per_group . '"';
-			$data_attr_line .= ' data-slides-per-column="' . $slides_per_column . '"';
-			$data_attr_line .= ' data-space-between-slides="' . $space_between_slides . '"';
-			$data_attr_line .= ' data-duration-speed="' . $swiper_duration_speed . '"';
-			$data_attr_line .= ' data-swiper-loop="' . $swiper_loop . '"';
-			$data_attr_line .= ' data-free-mode="' . $swiper_free_mode . '"';
-			$data_attr_line .= ' data-grab-cursor="' . $swiper_grab_cursor . '"';
-			$data_attr_line .= ' data-mouse-wheel="' . $swiper_mouse_wheel . '"';
-			$data_attr_line .= ' data-centered-slide="' . $swiper_centered_slide . '"';
-			$data_attr_line .= ' data-swiper-effect="' . $swiper_effect . '"';
-			$data_attr_line .= ' data-uniq-id="swiper-carousel-' . $instance . '"';
+			$data_attr_line = '';
+			$data_attr_line .= 'data-post-per-page="' . $posts_per_page . '"';
+			$data_attr_line .= 'data-slides-per-view="' . $slides_per_view . '"';
+			$data_attr_line .= 'data-slides-per-group="' . $slides_per_group . '"';
+			$data_attr_line .= 'data-slides-per-column="' . $slides_per_column . '"';
+			$data_attr_line .= 'data-space-between-slides="' . $space_between_slides . '"';
+			$data_attr_line .= 'data-duration-speed="' . $swiper_duration_speed . '"';
+			$data_attr_line .= 'data-swiper-loop="' . $swiper_loop . '"';
+			$data_attr_line .= 'data-free-mode="' . $swiper_free_mode . '"';
+			$data_attr_line .= 'data-grab-cursor="' . $swiper_grab_cursor . '"';
+			$data_attr_line .= 'data-mouse-wheel="' . $swiper_mouse_wheel . '"';
+			$data_attr_line .= 'data-centered-slide="' . $swiper_centered_slide . '"';
+			$data_attr_line .= 'data-swiper-effect="' . $swiper_effect . '"';
+			$data_attr_line .= 'data-uniq-id="swiper-carousel-' . $instance . '"';
 
 			( $swiper_navigation_position == 'outer' ) ? $outer_class = 'outer' : $outer_class = '';
 
