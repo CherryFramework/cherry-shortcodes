@@ -1,6 +1,6 @@
 <?php
 /**
- * Define callback functions for templater
+ * Define callback functions for macroses.
  *
  * @package   Cherry_Team
  * @author    Cherry Team
@@ -10,30 +10,54 @@
  */
 
 // If this file is called directly, abort.
-if ( !defined( 'WPINC' ) ) {
+if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
 /**
- * Callbcks for team shortcode templater
+ * Class for shortcode macroses callback.
  *
- * @since  1.0.0
+ * @since 1.0.0
  */
 class Cherry_Shortcodes_Template_Callbacks {
 
 	/**
-	 * Shortcode attributes array
-	 * @var array
+	 * Shortcode attributes array.
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 * @var array $atts Shortcode attributes.
 	 */
 	public $atts = array();
 
+	/**
+	 * Shortcode content.
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 * @var mixed $content Shortcode content.
+	 */
 	public $content = null;
 
-	function __construct( $atts, $content ) {
+	/**
+	 * Constructor.
+	 *
+	 * @since 1.0.0
+	 * @param array $atts    Shortcode attributes.
+	 * @param mixed $content Shortcode content.
+	 */
+	public function __construct( $atts, $content ) {
 		$this->atts    = $atts;
 		$this->content = $content;
 	}
 
+	/**
+	 * Retrieve a post title.
+	 *
+	 * @since  1.0.0
+	 * @global WP_Post $post WP_Post object.
+	 * @return string        Title with HTML-markup.
+	 */
 	public function title() {
 		global $post;
 
@@ -73,9 +97,25 @@ class Cherry_Shortcodes_Template_Callbacks {
 				break;
 		}
 
+		/**
+		 * Filter a title.
+		 *
+		 * @since 1.0.0
+		 * @param string $title     Title with HTML-markup.
+		 * @param array  $atts      Shortcode attributes.
+		 * @param string $shortcode Shortcode name.
+		 */
 		return apply_filters( 'cherry_shortcodes_title_template_callbacks', $title, $this->atts, $shortcode );
 	}
 
+	/**
+	 * Retrieve a post date.
+	 *
+	 * @since  1.0.0
+	 * @global WP_Post $post   WP_Post object.
+	 * @param  string  $format PHP date format.
+	 * @return string          Title with HTML-markup.
+	 */
 	public function date( $format = '' ) {
 		global $post;
 
@@ -91,9 +131,25 @@ class Cherry_Shortcodes_Template_Callbacks {
 			esc_attr( get_the_date( $format, $post->ID ) )
 		);
 
+		/**
+		 * Filter a date.
+		 *
+		 * @since 1.0.0
+		 * @param string $date      Date with HTML-markup.
+		 * @param array  $atts      Shortcode attributes.
+		 * @param string $shortcode Shortcode name.
+		 */
 		return apply_filters( 'cherry_shortcodes_date_template_callbacks', $date, $this->atts, $shortcode );
 	}
 
+	/**
+	 * Retrieve a post button.
+	 *
+	 * @since  1.0.0
+	 * @global WP_Post $post    WP_Post object.
+	 * @param  string  $classes CSS classes.
+	 * @return string           Button with HTML-markup.
+	 */
 	public function button( $classes = '' ) {
 		global $post;
 
@@ -111,9 +167,25 @@ class Cherry_Shortcodes_Template_Callbacks {
 			$button_text
 		);
 
+		/**
+		 * Filter a button.
+		 *
+		 * @since 1.0.0
+		 * @param string $date      Button with HTML-markup.
+		 * @param array  $atts      Shortcode attributes.
+		 * @param string $shortcode Shortcode name.
+		 */
 		return apply_filters( 'cherry_shortcodes_button_template_callbacks', $button, $this->atts, $shortcode );
 	}
 
+	/**
+	 * Retrieve a post image.
+	 *
+	 * @since  1.0.0
+	 * @global WP_Post $post WP_Post object.
+	 * @param  string  $size Image size.
+	 * @return string        Image tag.
+	 */
 	public function image( $size = '' ) {
 		global $post;
 
@@ -197,13 +269,23 @@ class Cherry_Shortcodes_Template_Callbacks {
 			join( ' ', $image_classes )
 		);
 
+		/**
+		 * Filter a image.
+		 *
+		 * @since 1.0.0
+		 * @param string $image     Image tag.
+		 * @param array  $atts      Shortcode attributes.
+		 * @param string $shortcode Shortcode name.
+		 */
 		return apply_filters( 'cherry_shortcodes_image_template_callbacks', $image, $this->atts, $shortcode );
 	}
 
 	/**
-	 * Get post exerpt.
+	 * Retrieve a post exerpt.
 	 *
-	 * @since 1.0.0
+	 * @since  1.0.0
+	 * @global WP_Post $post WP_Post object.
+	 * @return string        Excerpt.
 	 */
 	public function excerpt() {
 		global $post;
@@ -223,13 +305,23 @@ class Cherry_Shortcodes_Template_Callbacks {
 			apply_filters( 'the_excerpt', get_the_excerpt() )
 		);
 
+		/**
+		 * Filter a excerpt.
+		 *
+		 * @since 1.0.0
+		 * @param string $excerpt   Excerpt.
+		 * @param array  $atts      Shortcode attributes.
+		 * @param string $shortcode Shortcode name.
+		 */
 		return apply_filters( 'cherry_shortcodes_excerpt_template_callbacks', $excerpt, $this->atts, $shortcode );
 	}
 
 	/**
-	 * Get post content.
+	 * Retrieve a post content.
 	 *
 	 * @since  1.0.0
+	 * @global WP_Post $post WP_Post object.
+	 * @return string        Post content.
 	 */
 	public function content() {
 		$shortcode = Cherry_Shortcodes_Handler::get_shortcode_name();
@@ -258,8 +350,9 @@ class Cherry_Shortcodes_Template_Callbacks {
 					$content = apply_filters( 'the_content', $_content );
 					$class   .= ' full';
 				} elseif ( 'part' == $content_type ) {
-					/* wp_trim_excerpt analog */
 					$content = strip_shortcodes( $_content );
+
+					/** This filter is documented in wp-includes/post-template.php */
 					$content = apply_filters( 'the_content', $content );
 					$content = str_replace( ']]>', ']]&gt;', $content );
 					$content = wp_trim_words( $content, $content_length, apply_filters( 'cherry_shortcodes_content_callback_more', '', $this->atts, $shortcode ) );
@@ -274,9 +367,24 @@ class Cherry_Shortcodes_Template_Callbacks {
 				break;
 		}
 
+		/**
+		 * Filter a post content.
+		 *
+		 * @since 1.0.0
+		 * @param string $content   Post content.
+		 * @param array  $atts      Shortcode attributes.
+		 * @param string $shortcode Shortcode name.
+		 */
 		return apply_filters( 'cherry_shortcodes_content_template_callbacks', $content, $this->atts, $shortcode );
 	}
 
+	/**
+	 * Retrieve a post comments.
+	 *
+	 * @since  1.0.0
+	 * @global WP_Post $post WP_Post object.
+	 * @return string        Post comments with HTML-markup.
+	 */
 	public function comments() {
 		global $post;
 
@@ -299,9 +407,26 @@ class Cherry_Shortcodes_Template_Callbacks {
 			$comments
 		);
 
+		/**
+		 * Filter a comments.
+		 *
+		 * @since 1.0.0
+		 * @param string $content   Post comments with HTML-markup.
+		 * @param string $comments  Post number of comments.
+		 * @param string $url       The URL to the current post's comments.
+		 * @param array  $atts      Shortcode attributes.
+		 * @param string $shortcode Shortcode name.
+		 */
 		return apply_filters( 'cherry_shortcodes_comments_template_callbacks', $content, $comments, $url, $this->atts, $shortcode );
 	}
 
+	/**
+	 * Retrieve a post author.
+	 *
+	 * @since  1.0.0
+	 * @global WP_Post $post WP_Post object.
+	 * @return string        Post author with HTML-markup.
+	 */
 	public function author() {
 		global $post;
 
@@ -314,9 +439,25 @@ class Cherry_Shortcodes_Template_Callbacks {
 			get_the_author()
 		);
 
+		/**
+		 * Filter a post author.
+		 *
+		 * @since 1.0.0
+		 * @param string $author    Post author with HTML-markup.
+		 * @param array  $atts      Shortcode attributes.
+		 * @param string $shortcode Shortcode name.
+		 */
 		return apply_filters( 'cherry_shortcodes_author_template_callbacks', $author, $this->atts, $shortcode );
 	}
 
+	/**
+	 * Retrieve a post terms.
+	 *
+	 * @since  1.0.0
+	 * @global WP_Post $post WP_Post object.
+	 * @param  string  $tax  The taxonomy for which to retrieve terms.
+	 * @return string        Post author with HTML-markup.
+	 */
 	public function taxonomy( $tax = '' ) {
 		global $post;
 
@@ -346,9 +487,24 @@ class Cherry_Shortcodes_Template_Callbacks {
 			join( ' ', $tax_data )
 		);
 
+		/**
+		 * Filter a post terms.
+		 *
+		 * @since 1.0.0
+		 * @param string $taxonomy  Post terms with HTML-markup.
+		 * @param array  $atts      Shortcode attributes.
+		 * @param string $shortcode Shortcode name.
+		 */
 		return apply_filters( 'cherry_shortcodes_taxonomy_template_callbacks', $taxonomy, $this->atts, $shortcode );
 	}
 
+	/**
+	 * Retrieve a post permalink.
+	 *
+	 * @since  1.0.0
+	 * @global WP_Post $post WP_Post object.
+	 * @return string        Post permalink.
+	 */
 	public function permalink() {
 		global $post;
 
@@ -359,9 +515,24 @@ class Cherry_Shortcodes_Template_Callbacks {
 			return;
 		}
 
+		/**
+		 * Filter a post permalink.
+		 *
+		 * @since 1.0.0
+		 * @param string $permalink Post permalink.
+		 * @param array  $atts      Shortcode attributes.
+		 * @param string $shortcode Shortcode name.
+		 */
 		return apply_filters( 'cherry_shortcodes_permalink_template_callbacks', $permalink, $this->atts, $shortcode );
 	}
 
+	/**
+	 * Retrieve a color value for `banner` shortcode.
+	 *
+	 * @since  1.0.0
+	 * @global WP_Post $post WP_Post object.
+	 * @return string        Color value.
+	 */
 	public function banner_color() {
 		global $post;
 
@@ -369,9 +540,23 @@ class Cherry_Shortcodes_Template_Callbacks {
 			return;
 		}
 
+		/**
+		 * Filter a color value.
+		 *
+		 * @since 1.0.0
+		 * @param string $color Color value for `banner` shortcode.
+		 * @param array  $atts  Shortcode attributes.
+		 */
 		return apply_filters( 'cherry_shortcodes_banner_color_template_callbacks', esc_attr( $this->atts['color'] ), $this->atts );
 	}
 
+	/**
+	 * Retrieve a background-color value for `banner` shortcode.
+	 *
+	 * @since  1.0.0
+	 * @global WP_Post $post WP_Post object.
+	 * @return string        Background-color value.
+	 */
 	public function banner_bgcolor() {
 		global $post;
 
@@ -379,9 +564,23 @@ class Cherry_Shortcodes_Template_Callbacks {
 			return;
 		}
 
+		/**
+		 * Filter a background-color value.
+		 *
+		 * @since 1.0.0
+		 * @param string $bg_color Background-color value for `banner` shortcode.
+		 * @param array  $atts     Shortcode attributes.
+		 */
 		return apply_filters( 'cherry_shortcodes_banner_bgcolor_template_callbacks', esc_attr( $this->atts['bg_color'] ), $this->atts );
 	}
 
+	/**
+	 * Retrieve the URL for `banner` shortcode.
+	 *
+	 * @since  1.0.0
+	 * @global WP_Post $post WP_Post object.
+	 * @return string        The URL value.
+	 */
 	public function banner_url() {
 		global $post;
 
@@ -391,7 +590,13 @@ class Cherry_Shortcodes_Template_Callbacks {
 
 		$url = str_replace( '%home_url%', home_url(), $this->atts['url'] );
 
+		/**
+		 * Filter the URL.
+		 *
+		 * @since 1.0.0
+		 * @param string $url  The URL for `banner` shortcode.
+		 * @param array  $atts Shortcode attributes.
+		 */
 		return apply_filters( 'cherry_shortcodes_banner_url_template_callbacks', esc_url( $url ), $this->atts );
 	}
-
 }

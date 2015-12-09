@@ -28,6 +28,13 @@ function cherry_esc_class_attr( $atts ) {
 class Cherry_Shortcodes_Tools {
 	function __construct() {}
 
+	/**
+	 * Retrieve a select with data.
+	 *
+	 * @since  1.0.0
+	 * @param  array  $args Arguments.
+	 * @return string       HTML-markup for select tag with data.
+	 */
 	public static function select( $args ) {
 		$args = wp_parse_args( $args, array(
 				'id'       => '',
@@ -39,40 +46,82 @@ class Cherry_Shortcodes_Tools {
 				'selected' => '',
 				'none'     => '',
 				'options'  => array(),
-				'style' => '',
+				'style'    => '',
 				'format'   => 'keyval', // keyval/idtext
-				'noselect' => '' // return options without <select> tag
+				'noselect' => '', // return options without <select> tag
 			) );
+
 		$options = array();
-		if ( !is_array( $args['options'] ) ) $args['options'] = array();
-		if ( $args['id'] ) $args['id'] = ' id="' . $args['id'] . '"';
-		if ( $args['name'] ) $args['name'] = ' name="' . $args['name'] . '"';
-		if ( $args['class'] ) $args['class'] = ' class="' . $args['class'] . '"';
-		if ( $args['style'] ) $args['style'] = ' style="' . esc_attr( $args['style'] ) . '"';
-		if ( $args['multiple'] ) $args['multiple'] = ' multiple="multiple"';
-		if ( $args['disabled'] ) $args['disabled'] = ' disabled="disabled"';
-		if ( $args['size'] ) $args['size'] = ' size="' . $args['size'] . '"';
-		if ( $args['none'] && $args['format'] === 'keyval' ) $args['options'][0] = $args['none'];
-		if ( $args['none'] && $args['format'] === 'idtext' ) array_unshift( $args['options'], array( 'id' => '0', 'text' => $args['none'] ) );
-		// keyval loop
-		// $args['options'] = array(
-		//   id => text,
-		//   id => text
-		// );
-		if ( $args['format'] === 'keyval' ) foreach ( $args['options'] as $id => $text ) {
+
+		if ( ! is_array( $args['options'] ) ) {
+			$args['options'] = array();
+		}
+
+		if ( $args['id'] ) {
+			$args['id'] = ' id="' . $args['id'] . '"';
+		}
+
+		if ( $args['name'] ) {
+			$args['name'] = ' name="' . $args['name'] . '"';
+		}
+
+		if ( $args['class'] ) {
+			$args['class'] = ' class="' . $args['class'] . '"';
+		}
+
+		if ( $args['style'] ) {
+			$args['style'] = ' style="' . esc_attr( $args['style'] ) . '"';
+		}
+
+		if ( $args['multiple'] ) {
+			$args['multiple'] = ' multiple="multiple"';
+		}
+
+		if ( $args['disabled'] ) {
+			$args['disabled'] = ' disabled="disabled"';
+		}
+
+		if ( $args['size'] ) {
+			$args['size'] = ' size="' . $args['size'] . '"';
+		}
+
+		if ( $args['none'] && 'keyval' === $args['format'] ) {
+			$args['options'][0] = $args['none'];
+		}
+
+		if ( $args['none'] && 'idtext' === $args['format'] ) {
+			array_unshift( $args['options'], array( 'id' => '0', 'text' => $args['none'], ) );
+		}
+
+		/**
+		 * keyval loop
+		 * 	$args['options'] = array(
+		 * 		id => text,
+		 * 		id => text,
+		 * 	);
+		 */
+		if ( 'keyval' === $args['format'] ) {
+			foreach ( $args['options'] as $id => $text ) {
 				$options[] = '<option value="' . (string) $id . '">' . (string) $text . '</option>';
 			}
-		// idtext loop
-		// $args['options'] = array(
-		//   array( id => id, text => text ),
-		//   array( id => id, text => text )
-		// );
+		}
+
+		/**
+		 * idtext loop
+		 * 	$args['options'] = array(
+		 * 		array( id => id, text => text, ),
+		 * 		array( id => id, text => text, ),
+		 * 	);
+		 */
 		elseif ( $args['format'] === 'idtext' ) foreach ( $args['options'] as $option ) {
-				if ( isset( $option['id'] ) && isset( $option['text'] ) )
-					$options[] = '<option value="' . (string) $option['id'] . '">' . (string) $option['text'] . '</option>';
+			if ( isset( $option['id'] ) && isset( $option['text'] ) ) {
+				$options[] = '<option value="' . (string) $option['id'] . '">' . (string) $option['text'] . '</option>';
 			}
+		}
+
 		$options = implode( '', $options );
 		$options = str_replace( 'value="' . $args['selected'] . '"', 'value="' . $args['selected'] . '" selected="selected"', $options );
+
 		return ( $args['noselect'] ) ? $options : '<select' . $args['id'] . $args['name'] . $args['class'] . $args['multiple'] . $args['size'] . $args['disabled'] . $args['style'] . '>' . $options . '</select>';
 	}
 
@@ -88,17 +137,50 @@ class Cherry_Shortcodes_Tools {
 		return apply_filters( 'cherry_shortcodes_tools_get_types', $types );
 	}
 
+	/**
+	 * Retrieve a list of registered taxonomies.
+	 *
+	 * @since  1.0.0
+	 * @return array A list of taxonomy in format array( 'taxonomy_name' => 'taxonomy_label' ).
+	 */
 	public static function get_taxonomies() {
 		$taxes = array();
-		foreach ( (array) get_taxonomies( '', 'objects' ) as $tax ) $taxes[$tax->name] = $tax->label;
+
+		foreach ( (array) get_taxonomies( '', 'objects' ) as $tax ) {
+			$taxes[ $tax->name ] = $tax->label;
+		}
+
+		/**
+		 * Filter a list of registered taxonomies.
+		 *
+		 * @since 1.0.0
+		 * @param array $taxes Taxonomy names.
+		 */
 		return apply_filters( 'cherry_shortcodes_tools_get_taxonomies', $taxes );
 	}
 
+	/**
+	 * Retrieve the terms in a taxonomy.
+	 *
+	 * @since  1.0.0
+	 * @param  string $tax The taxonomies to retrieve terms from.
+	 * @param  string $key Key for array - `id` or `slug`.
+	 * @return array       Array with term names.
+	 */
 	public static function get_terms( $tax = 'category', $key = 'id' ) {
 		$terms = array();
-		if ( $key === 'id' ) foreach ( (array) get_terms( $tax, array( 'hide_empty' => false ) ) as $term ) $terms[$term->term_id] = $term->name;
-			elseif ( $key === 'slug' ) foreach ( (array) get_terms( $tax, array( 'hide_empty' => false ) ) as $term ) $terms[$term->slug] = $term->name;
-				return $terms;
+
+		if ( 'id' === $key ) {
+			foreach ( (array) get_terms( $tax, array( 'hide_empty' => false ) ) as $term ) {
+				$terms[ $term->term_id ] = $term->name;
+			}
+		} elseif ( 'slug' === $key ) {
+			foreach ( (array) get_terms( $tax, array( 'hide_empty' => false ) ) as $term ) {
+				$terms[ $term->slug ] = $term->name;
+			}
+		}
+
+		return $terms;
 	}
 
 	public static function icon( $src = 'file' ) {
@@ -273,11 +355,21 @@ class Cherry_Shortcodes_Tools {
 		return esc_attr( trim( $css_class, '.' ) );
 	}
 
+	/**
+	 * Retrieve a HTML-markup string with icons.
+	 *
+	 * @since  1.0.0
+	 * @return string Icons.
+	 */
 	public static function icons() {
 		$icons = array();
-		if ( is_callable( array( 'Cherry_Shortcodes_Data', 'icons' ) ) ) foreach ( (array) Cherry_Shortcodes_Data::icons() as $icon ) {
+
+		if ( is_callable( array( 'Cherry_Shortcodes_Data', 'icons' ) ) ) {
+			foreach ( (array) Cherry_Shortcodes_Data::icons() as $icon ) {
 				$icons[] = '<i class="' . $icon . '" title="' . $icon . '"></i>';
 			}
+		}
+
 		return implode( '', $icons );
 	}
 
