@@ -1361,7 +1361,7 @@ class Cherry_Shortcodes_Handler {
 		}
 
 		// Exclude current post/page (fix aborting).
-		if ( in_array( get_post_type(), (array) $post_type ) && ( 'full' === $content_type ) ) {
+		if ( in_array( get_post_type(), (array) $post_type ) && ( 'full' === $atts['content_type'] ) ) {
 			$args['post__not_in'] = array( get_the_ID() );
 		}
 
@@ -1490,6 +1490,7 @@ class Cherry_Shortcodes_Handler {
 			$wrap_classes = array_map( 'sanitize_html_class', $wrap_classes );
 
 			$data_attr_line = '';
+			$data_attr_line .= 'data-post-per-page="' . $posts_per_page . '"';
 			$data_attr_line .= 'data-slides-per-view="' . $slides_per_view . '"';
 			$data_attr_line .= 'data-slides-per-group="' . $slides_per_group . '"';
 			$data_attr_line .= 'data-slides-per-column="' . $slides_per_column . '"';
