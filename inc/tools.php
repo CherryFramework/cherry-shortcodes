@@ -237,6 +237,8 @@ class Cherry_Shortcodes_Tools {
 			return false;
 		}
 
+		$output = '';
+
 		if ( false !== strpos( $icon, 'icon:' ) ) {
 
 			$icon       = trim( str_replace( 'icon:', '', $icon ) );
@@ -245,21 +247,21 @@ class Cherry_Shortcodes_Tools {
 			$style      = sprintf( '%s{%s}', $rand_class, $style );
 			$class     .= ' ' . Cherry_Shortcodes_Tools::esc_class( $rand_class );
 
-			Cherry_Shortcodes_Tools::print_styles( $style );
-
-			return sprintf(
+			$output = Cherry_Shortcodes_Tools::print_styles( $style );
+			$output .= sprintf(
 				'<span class="%1$s %2$s"></span>',
 				esc_attr( $icon ), esc_attr( $class )
 			);
 
 		} else {
-			$icon = Cherry_Shortcodes_Tools::get_image_url( $icon );
-			return sprintf(
+			$icon   = Cherry_Shortcodes_Tools::get_image_url( $icon );
+			$output = sprintf(
 				'<span class="%2$s"><img src="%1$s" alt="%3$s"></span>',
 				esc_url( $icon ), esc_attr( $class ), esc_attr( $alt )
 			);
 		}
 
+		return $output;
 	}
 
 	public static function append_icons( $content = null, $icon = null ) {
@@ -311,22 +313,32 @@ class Cherry_Shortcodes_Tools {
 	 * or directly print style if grabbing logic not defined
 	 *
 	 * @since  1.0.7
+	 * @since  1.0.7.1 Added a filter `cherry_shortcodes_use_generated_style`.
 	 * @param  string $style CSS styles set.
-	 * @return void|bool
+	 * @return string
 	 */
 	public static function print_styles( $style = null ) {
 
 		if ( ! $style ) {
-			return false;
+			return '';
 		}
 
-		if ( ! function_exists( 'cherry_add_generated_style' ) ) {
-			printf( '<style scoped>%s</style>', $style );
-			return true;
+		/**
+		 * Filter a flag for using generated style feature.
+		 *
+		 * @since 1.0.7.1
+		 * @param bool $use_generated_style
+		 */
+		$use_generated_style = apply_filters( 'cherry_shortcodes_use_generated_style', true );
+
+		if ( $use_generated_style && function_exists( 'cherry_add_generated_style' ) ) {
+
+			cherry_add_generated_style( $style );
+
+			return '';
 		}
 
-		cherry_add_generated_style( $style );
-
+		return sprintf( '<style scoped>%s</style>', $style );
 	}
 
 	/**

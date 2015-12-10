@@ -110,6 +110,8 @@ class Cherry_Shortcodes_Handler {
 		$classes[] = $base . '-' . esc_attr( $atts['display'] );
 		$classes[] = $base . '-' . esc_attr( $atts['hover_animation'] );
 
+		$output = '';
+
 		if ( 'yes' == esc_attr( $atts['fluid'] ) ) {
 			$classes[] = $base . '-' . esc_attr( $atts['fluid_position'] );
 		}
@@ -144,7 +146,7 @@ class Cherry_Shortcodes_Handler {
 			$rand_class = Cherry_Shortcodes_Tools::rand_class( 'button' );
 			$classes[]  = Cherry_Shortcodes_Tools::esc_class( $rand_class );
 
-			Cherry_Shortcodes_Tools::print_styles( sprintf( '.cherry-btn%s{%s}', $rand_class, $styles ) );
+			$output .= Cherry_Shortcodes_Tools::print_styles( sprintf( '.cherry-btn%s{%s}', $rand_class, $styles ) );
 		}
 
 		$btn_atts['class'] = implode( ' ', $classes );
@@ -243,7 +245,7 @@ class Cherry_Shortcodes_Handler {
 		$close_el = '</a>' . $after;
 
 		// Build final output.
-		$output = $open_el . $btn_content . $close_el;
+		$output .= $open_el . $btn_content . $close_el;
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'button' );
 	}
@@ -269,7 +271,16 @@ class Cherry_Shortcodes_Handler {
 		$color         = esc_attr( $atts['color'] );
 		$indent_top    = absint( $atts['indent_top'] );
 		$indent_bottom = absint( $atts['indent_bottom'] );
-		$class         = esc_attr( $atts['class'] );
+
+		$classes    = array();
+		$rand_class = Cherry_Shortcodes_Tools::rand_class( 'hr' );
+
+		$classes[] = 'cherry-hr';
+		$classes[] = esc_attr( $atts['class'] );
+		$classes[] = Cherry_Shortcodes_Tools::esc_class( $rand_class );
+
+		$classes = array_filter( $classes );
+		$class   = implode( ' ', $classes );
 
 		$styles = array();
 		$styles['height']           = ( 0 != $height ) ? $height . 'px' : '1px';
@@ -278,7 +289,9 @@ class Cherry_Shortcodes_Handler {
 		$styles['background-color'] = $color;
 
 		$style  = Cherry_Shortcodes_Tools::prepare_styles( $styles );
-		$output = sprintf( '<div class="cherry-hr %s" style="%s"></div>', $class, $style );
+		$output = Cherry_Shortcodes_Tools::print_styles( sprintf( '%s{%s}', $rand_class, $style ) );
+
+		$output .= sprintf( '<div class="%s"></div>', $class );
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'hr' );
 	}
@@ -451,9 +464,8 @@ class Cherry_Shortcodes_Handler {
 			$styles['background-color'] = esc_attr( $atts['bg_color'] );
 		}
 
-		$style = Cherry_Shortcodes_Tools::prepare_styles( $styles );
-
-		Cherry_Shortcodes_Tools::print_styles( sprintf( '%s .%s{%s}', $rand_class, $preset_classes[0], $style ) );
+		$style  = Cherry_Shortcodes_Tools::prepare_styles( $styles );
+		$output = Cherry_Shortcodes_Tools::print_styles( sprintf( '%s .%s{%s}', $rand_class, $preset_classes[0], $style ) );
 
 		/**
 		 * Filter a shortcode format for outputing.
@@ -464,7 +476,7 @@ class Cherry_Shortcodes_Handler {
 		 * @param array  $atts   Shortcode attributes.
 		 */
 		$format = apply_filters( 'cherry_shortcode_box_format', '<div class="%s"><div class="%s">%s</div></div>', $atts );
-		$output = sprintf( $format, $class, $preset_class, do_shortcode( $content ) );
+		$output .= sprintf( $format, $class, $preset_class, do_shortcode( $content ) );
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'box' );
 	}
@@ -547,10 +559,10 @@ class Cherry_Shortcodes_Handler {
 		$classes = implode( ' ', $classes );
 		$style   = Cherry_Shortcodes_Tools::prepare_styles( $style );
 
-		Cherry_Shortcodes_Tools::print_styles( sprintf( '%s{%s}', $rand_class, $style ) );
+		$output = Cherry_Shortcodes_Tools::print_styles( sprintf( '%s{%s}', $rand_class, $style ) );
 
 		$content = do_shortcode( $content );
-		$output  = sprintf( $format, $classes, $content );
+		$output  .= sprintf( $format, $classes, $content );
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'dropcap' );
 	}
@@ -609,7 +621,7 @@ class Cherry_Shortcodes_Handler {
 			$title_style .= $uniq_class . ' .title-box_subtitle { color: ' . $subtitle_color . '; }';
 		}
 
-		Cherry_Shortcodes_Tools::print_styles( $title_style );
+		$output = Cherry_Shortcodes_Tools::print_styles( $title_style );
 
 		$title    = wp_kses( $atts['title'], 'default' );
 		$subtitle = ( ! empty( $atts['subtitle'] ) )
@@ -624,7 +636,7 @@ class Cherry_Shortcodes_Handler {
 
 		// Empty 5-th arguments for backward compatibility.
 		$depraceted = '';
-		$output     = sprintf( $format['global'], $title, $subtitle, $icon, $class, $depraceted );
+		$output     .= sprintf( $format['global'], $title, $subtitle, $icon, $class, $depraceted );
 
 		return apply_filters( 'cherry_shortcodes_output', $output, $atts, 'title_box' );
 	}
