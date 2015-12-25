@@ -99,7 +99,7 @@ class Cherry_Shortcodes_Assets {
 		wp_register_script( 'jquery-countdown', plugins_url( 'assets/js/shotcodes/jquery.countdown.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 
 		// Page Anchor.
-		wp_register_script( 'page-anchor', plugins_url( 'assets/js/shotcodes/page-anchor.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
+		wp_register_script( 'page-anchor', plugins_url( 'assets/js/shotcodes/page-anchor.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 
 		// Shortcodes init.
 		wp_register_script( 'cherry-shortcodes-init', plugins_url( 'assets/js/shotcodes/init.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
