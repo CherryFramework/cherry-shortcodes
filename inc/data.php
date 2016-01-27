@@ -1113,7 +1113,11 @@ class Cherry_Shortcodes_Data {
 						),
 						'tax_operator' => array(
 							'type'    => 'select',
-							'values'  => array( 'IN', 'NOT IN', 'AND' ),
+							'values'  => array(
+								'IN'     => 'IN',
+								'NOT IN' => 'NOT IN',
+								'AND'    => 'AND',
+							),
 							'default' => 'IN',
 							'name'    => __( 'Taxonomy term operator', 'cherry-shortcodes' ),
 							'desc'    => __( 'IN - posts that have any of selected categories terms<br/>NOT IN - posts that  do not have any of selected terms<br/>AND - posts that have all selected terms', 'cherry-shortcodes' ),
@@ -1420,7 +1424,11 @@ class Cherry_Shortcodes_Data {
 						),
 						'tax_operator' => array(
 							'type'    => 'select',
-							'values'  => array( 'IN', 'NOT IN', 'AND' ),
+							'values'  => array(
+								'IN'     => 'IN',
+								'NOT IN' => 'NOT IN',
+								'AND'    => 'AND',
+							),
 							'default' => 'IN',
 							'name'    => __( 'Taxonomy term operator', 'cherry-shortcodes' ),
 							'desc'    => __( 'IN - posts that have any of selected categories terms<br/>NOT IN - posts that  do not have any of selected terms<br/>AND - posts that have all selected terms', 'cherry-shortcodes' ),
