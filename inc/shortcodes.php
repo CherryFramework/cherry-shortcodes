@@ -1679,18 +1679,18 @@ class Cherry_Shortcodes_Handler {
 
 			$data_attr_line = '';
 			$data_attr_line .= 'data-post-per-page="' . $posts_per_page . '"';
-			$data_attr_line .= 'data-slides-per-view="' . $slides_per_view . '"';
-			$data_attr_line .= 'data-slides-per-group="' . $slides_per_group . '"';
-			$data_attr_line .= 'data-slides-per-column="' . $slides_per_column . '"';
-			$data_attr_line .= 'data-space-between-slides="' . $space_between_slides . '"';
-			$data_attr_line .= 'data-duration-speed="' . $swiper_duration_speed . '"';
-			$data_attr_line .= 'data-swiper-loop="' . $swiper_loop . '"';
-			$data_attr_line .= 'data-free-mode="' . $swiper_free_mode . '"';
-			$data_attr_line .= 'data-grab-cursor="' . $swiper_grab_cursor . '"';
-			$data_attr_line .= 'data-mouse-wheel="' . $swiper_mouse_wheel . '"';
-			$data_attr_line .= 'data-centered-slide="' . $swiper_centered_slide . '"';
-			$data_attr_line .= 'data-swiper-effect="' . $swiper_effect . '"';
-			$data_attr_line .= 'data-uniq-id="swiper-carousel-' . $instance . '"';
+			$data_attr_line .= ' data-slides-per-view="' . $slides_per_view . '"';
+			$data_attr_line .= ' data-slides-per-group="' . $slides_per_group . '"';
+			$data_attr_line .= ' data-slides-per-column="' . $slides_per_column . '"';
+			$data_attr_line .= ' data-space-between-slides="' . $space_between_slides . '"';
+			$data_attr_line .= ' data-duration-speed="' . $swiper_duration_speed . '"';
+			$data_attr_line .= ' data-swiper-loop="' . $swiper_loop . '"';
+			$data_attr_line .= ' data-free-mode="' . $swiper_free_mode . '"';
+			$data_attr_line .= ' data-grab-cursor="' . $swiper_grab_cursor . '"';
+			$data_attr_line .= ' data-mouse-wheel="' . $swiper_mouse_wheel . '"';
+			$data_attr_line .= ' data-centered-slide="' . $swiper_centered_slide . '"';
+			$data_attr_line .= ' data-swiper-effect="' . $swiper_effect . '"';
+			$data_attr_line .= ' data-uniq-id="swiper-carousel-' . $instance . '"';
 
 			( $swiper_navigation_position == 'outer' ) ? $outer_class = 'outer' : $outer_class = '';
 
