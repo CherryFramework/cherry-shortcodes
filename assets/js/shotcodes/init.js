@@ -16,7 +16,7 @@
 		render: function () {
 			// Google map
 			if( $('.google-map-container').length !== 0 ){
-				$('.google-map-container').cherryGoogleMap();
+				$('.google-map-container:not(.google-map-loaded)').cherryGoogleMap();
 			}
 		}
 	}
@@ -367,7 +367,7 @@
 					is_disabled = $tab.hasClass('cherry-tabs-disabled'),
 					$tabs = $tab.parent('.cherry-tabs-nav').children('span'),
 					$panes = $tab.parents('.cherry-tabs').find('.cherry-tabs-pane'),
-					$gmaps = $panes.eq(index).find('.cherry-gmap:not(.cherry-gmap-reloaded)');
+					$gmaps = $panes.eq(index).find('.google-map-container:not(.google-map-loaded)');
 				// Check tab is not disabled
 				if (is_disabled) return false;
 				// Hide all panes, show selected pane
@@ -375,11 +375,12 @@
 				// Disable all tabs, enable selected tab
 				$tabs.removeClass('cherry-tabs-current').eq(index).addClass('cherry-tabs-current');
 				// Reload gmaps
-				if ($gmaps.length > 0) $gmaps.each(function () {
-					var $iframe = $(this).find('iframe:first');
-					$(this).addClass('cherry-gmap-reloaded');
-					$iframe.attr('src', $iframe.attr('src'));
-				});
+				if ($gmaps.length > 0) {
+					$gmaps.each( function () {
+						$(this).addClass('google-map-loaded');
+						$(this).cherryGoogleMap();
+					});
+				}
 				// Set height for vertical tabs
 				tabs_height();
 				// Open specified url
