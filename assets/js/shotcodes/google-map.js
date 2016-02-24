@@ -59,7 +59,7 @@
 
 						map = new google.maps.Map( $('#'+mapId)[0], mapOptions);
 
-						if( mapMarkerImage !== 'default'){
+						if( mapMarkerImage !== 'false'){
 							var markerIcon = {
 								url: mapMarkerImage[0],
 								size: new google.maps.Size(mapMarkerImage[1], mapMarkerImage[2]),
@@ -75,8 +75,12 @@
 									draggable: false,
 									animation: google.maps.Animation.DROP,
 									position: multiMarker[prop],
-									icon: markerIcon
+									//icon: markerIcon
 								}
+								if( undefined !== markerIcon['url'] ){
+									markerSettings['icon'] = markerIcon;
+								}
+
 								marker = new google.maps.Marker( markerSettings );
 							};
 						}else{
@@ -85,12 +89,13 @@
 								draggable: false,
 								animation: google.maps.Animation.DROP,
 								position: coordData,
-								icon: markerIcon
+								//icon: markerIcon
 							}
-
+							if( undefined !== markerIcon['url'] ){
+								markerSettings['icon'] = markerIcon;
+							}
 							marker = new google.maps.Marker( markerSettings );
 						}
-
 
 						google.maps.event.addListener(marker, 'click', function() {
 							if( '' !== contentString){

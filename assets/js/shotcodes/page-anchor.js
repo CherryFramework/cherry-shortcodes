@@ -10,7 +10,7 @@
 	CHERRY_API.utilites.namespace( 'shortcode.row.page_anchor' );
 
 	CHERRY_API.shortcode.row.page_anchor = {
-		$window:CHERRY_API.variable.$window,
+		$window: CHERRY_API.variable.$window,
 		html_body: $('html, body'),
 		wp_menu: '.menu',
 		wp_menu_item: '.menu-item-type-custom',
@@ -20,7 +20,8 @@
 		items: $( '[data-anchor][data-id]' ),
 		window_height: 0,
 		do_animation: true,
-		timer:null,
+		timer: null,
+		temp_anchor: '',
 
 		//Window load handler
 		init: function () {
@@ -60,6 +61,7 @@
 		on_mousedown:function(){
 			this.do_animation = false;
 		},
+
 		on_mouseup:function(){
 			this.do_animation = true;
 		},
@@ -116,12 +118,17 @@
 
 		on_scroll:function(){
 			var salf = this,
-				anchor;
+				anchor,
+				do_animation = this.do_animation;
 
 			for (anchor in this.anchors) {
-				if ( this.anchors.hasOwnProperty(anchor) ){
-					if( salf.in_viewport( anchor ) ){
-						window.location.hash = anchor;
+				if ( this.anchors.hasOwnProperty( anchor ) ) {
+					if( salf.in_viewport( anchor ) ) {
+						if ( anchor !== this.temp_anchor ) {
+							this.temp_anchor = anchor;
+							//console.log(anchor);
+							window.location.hash = anchor;
+						}
 					};
 				};
 			};
