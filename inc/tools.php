@@ -254,6 +254,7 @@ class Cherry_Shortcodes_Tools {
 			);
 
 		} else {
+			$alt    = Cherry_Shortcodes_Tools::get_image_alt( $icon, $alt );
 			$icon   = Cherry_Shortcodes_Tools::get_image_url( $icon );
 			$output = sprintf(
 				'<span class="%2$s"><img src="%1$s" alt="%3$s"></span>',
@@ -262,6 +263,33 @@ class Cherry_Shortcodes_Tools {
 		}
 
 		return $output;
+	}
+
+	/**
+	 * Try to get alt attribute for passed image
+	 *
+	 * @param  mixed  $image    Image ID ot URL.
+	 * @param  string $user_alt User provided alt attribute (higher priority than default image alt).
+	 * @return string
+	 */
+	public static function get_image_alt( $image, $user_alt = null ) {
+
+		if ( null !== $user_alt ) {
+			return $user_alt;
+		}
+
+		if ( ! is_numeric( $image ) ) {
+			return $user_alt;
+		}
+
+		$data = wp_prepare_attachment_for_js( $image );
+
+		if ( ! empty( $data['alt'] ) ) {
+			return esc_attr( $data['alt'] );
+		}
+
+		return $user_alt;
+
 	}
 
 	public static function append_icons( $content = null, $icon = null ) {
