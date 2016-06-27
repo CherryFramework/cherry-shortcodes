@@ -77,7 +77,7 @@ class Cherry_Shortcodes_Assets {
 		wp_register_script( 'magnific-popup', plugins_url( 'assets/js/jquery.magnific-popup.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery' ), CHERRY_SHORTCODES_VERSION, true );
 
 		// Google Maps.
-		wp_register_script( 'googlemapapis', '//maps.googleapis.com/maps/api/js?v=3.exp&signed_in=false', array(), false, true );
+		wp_register_script( 'googlemapapis', Cherry_Shortcodes_Tools::get_google_map_url(), array(), false, true );
 		wp_register_script( 'cherry-google-map', plugins_url( 'assets/js/shotcodes/google-map.min.js', CHERRY_SHORTCODES_FILE ), array( 'jquery', 'googlemapapis' ), CHERRY_SHORTCODES_VERSION, true );
 
 		// Swiper.

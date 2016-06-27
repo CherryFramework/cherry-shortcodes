@@ -161,10 +161,10 @@ function cherry_shortcodes_macros_buttons( $macros_buttons, $shortcode ) {
 	return $macros_buttons;
 }
 
-function cherry_shortcodes_add_option_item($general_options){
+function cherry_shortcodes_add_option_item( $general_options ) {
 	$all_pages     = array();
 	$all_pages_obj = get_pages( 'sort_column=post_parent,menu_order' );
-	$all_pages[''] = __( 'Select a page:', 'cherry' );
+	$all_pages[''] = __( 'Select a page:', 'cherry-shortcodes' );
 
 	foreach ( $all_pages_obj as $page ) {
 		$all_pages[$page->ID] = $page->post_title;
@@ -178,6 +178,15 @@ function cherry_shortcodes_add_option_item($general_options){
 		'class'       => 'width-full',
 		'options'     => $all_pages,
 	);
+
+	$general_options['google-api-key'] = array(
+		'type'        => 'text',
+		'title'       => __( 'Google Maps API Key (required)', 'cherry-shortcodes' ),
+		'description' => sprintf( __( 'This API key can be obtained from the <a href="%s">Google Developers Console</a>.', 'cherry-shortcodes' ), 'https://console.developers.google.com/' ),
+		'value'       => '',
+		'class'       => 'width-full',
+	);
+
 	return $general_options;
 }
 
