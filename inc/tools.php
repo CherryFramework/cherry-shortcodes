@@ -514,6 +514,31 @@ class Cherry_Shortcodes_Tools {
 		return $return;
 	}
 
+	/**
+	 * Retrieve a URI for Google Maps API.
+	 *
+	 * @since 1.0.7.5
+	 * @return string
+	 */
+	public static function get_google_map_url() {
+		$url     = '//maps.googleapis.com/maps/api/js';
+		$api_key = '';
+
+		if ( function_exists( 'cherry_get_option' ) ) {
+			$api_key = cherry_get_option( 'google-api-key' );
+		}
+
+		$query = apply_filters( 'cherry_shortcodes_google_map_url_query', array(
+			'v'         => 3,
+			'signed_in' => 'false',
+			'key'       => $api_key,
+		) );
+
+		$url = add_query_arg( $query, $url );
+
+		return apply_filters( 'cherry_shortcodes_google_map_url', $url, $query );
+	}
+
 	public static function image_sizes() {
 		$_sizes = get_intermediate_image_sizes();
 
