@@ -1372,6 +1372,27 @@ class Cherry_Shortcodes_Data {
 							'name'    => __( 'Slider navigation position', 'cherry-shortcodes' ),
 							'desc'    => __( 'Choose slider navigation position', 'cherry-shortcodes' ),
 						),
+						'swiper_autoplay' => array(
+							'type'    => 'bool',
+							'default' => 'no',
+							'name'    => __( 'Autoplay', 'cherry-shortcodes' ),
+							'desc'    => __( 'Autoplay', 'cherry-shortcodes' ),
+						),
+						'swiper_autoplay_delay' => array(
+							'type'    => 'number',
+							'min'     => 0,
+							'max'     => 50000,
+							'step'    => 10,
+							'default' => 5000,
+							'name'    => __( 'Autoplay delay', 'cherry-shortcodes' ),
+							'desc'    => __( 'Delay between transitions (in ms)' ),
+						),
+						'swiper_stop_autoplay_on_interaction' => array(
+							'type'    => 'bool',
+							'default' => 'yes',
+							'name'    => __( 'Stop Autoplay on Interaction', 'cherry-shortcodes' ),
+							'desc'    => __( 'Set to false and autoplay will not be disabled after user interactions', 'cherry-shortcodes' ),
+						),
 					)
 				),
 

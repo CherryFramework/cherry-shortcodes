@@ -53,6 +53,8 @@
 					,	widthLayout = ''
 					,	delta_slides_per_view = 1
 					,	delta_slides_per_group = slides_per_group
+					,	swiper_autoplay = jQuery(this).data('swiper-autoplay')
+					,	swiper_stop_autoplay_on_interaction = jQuery(this).data('stop-autoplay-on-interaction')
 					;
 
 					delta_slides_per_view = widthLayoutChanger();
@@ -78,7 +80,9 @@
 							cube: {
 								shadow: false,
 								slideShadows: false,
-							}
+							},
+							autoplay: swiper_autoplay,
+							autoplayDisableOnInteraction: swiper_stop_autoplay_on_interaction
 						}
 					);
 
