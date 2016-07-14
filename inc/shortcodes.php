@@ -1364,77 +1364,83 @@ class Cherry_Shortcodes_Handler {
 
 		// Parse attributes.
 		$atts = shortcode_atts( array(
-			'id'                         => false,
-			'posts_per_page'             => get_option( 'posts_per_page' ),
-			'post_type'                  => 'post',
-			'taxonomy'                   => 'category',
-			'tax_term'                   => false,
-			'tax_operator'               => 'IN',
-			'author'                     => '',
-			'offset'                     => 0,
-			'order'                      => 'DESC',
-			'orderby'                    => 'date',
-			'post_parent'                => false,
-			'post_status'                => 'publish',
-			'ignore_sticky_posts'        => 'no',
-			'linked_title'               => 'yes',
-			'linked_image'               => 'yes',
-			'content_type'               => 'part',
-			'content_length'             => 55,
-			'button_text'                => __( 'read more', 'cherry-shortcodes' ),
-			'class'                      => '',
-			'template'                   => 'default.tmpl',
-			'crop_image'                 => 'no',
-			'crop_width'                 => 540,
-			'crop_height'                => 320,
-			'slides_per_view'            => 3,
-			'slides_per_group'           => 1,
-			'slides_per_column'          => 1,
-			'space_between_slides'       => 10,
-			'swiper_duration_speed'      => 300,
-			'swiper_loop'                => 'yes',
-			'swiper_free_mode'           => 'no',
-			'swiper_grab_cursor'         => 'yes',
-			'swiper_mouse_wheel'         => 'no',
-			'swiper_centered_slide'      => 'no',
-			'swiper_effect'              => 'slide',
-			'swiper_pagination'          => 'yes',
-			'swiper_navigation'          => 'yes',
-			'swiper_navigation_position' => 'inner',
+			'id'                                  => false,
+			'posts_per_page'                      => get_option( 'posts_per_page' ),
+			'post_type'                           => 'post',
+			'taxonomy'                            => 'category',
+			'tax_term'                            => false,
+			'tax_operator'                        => 'IN',
+			'author'                              => '',
+			'offset'                              => 0,
+			'order'                               => 'DESC',
+			'orderby'                             => 'date',
+			'post_parent'                         => false,
+			'post_status'                         => 'publish',
+			'ignore_sticky_posts'                 => 'no',
+			'linked_title'                        => 'yes',
+			'linked_image'                        => 'yes',
+			'content_type'                        => 'part',
+			'content_length'                      => 55,
+			'button_text'                         => __( 'read more', 'cherry-shortcodes' ),
+			'class'                               => '',
+			'template'                            => 'default.tmpl',
+			'crop_image'                          => 'no',
+			'crop_width'                          => 540,
+			'crop_height'                         => 320,
+			'slides_per_view'                     => 3,
+			'slides_per_group'                    => 1,
+			'slides_per_column'                   => 1,
+			'space_between_slides'                => 10,
+			'swiper_duration_speed'               => 300,
+			'swiper_loop'                         => 'yes',
+			'swiper_free_mode'                    => 'no',
+			'swiper_grab_cursor'                  => 'yes',
+			'swiper_mouse_wheel'                  => 'no',
+			'swiper_centered_slide'               => 'no',
+			'swiper_effect'                       => 'slide',
+			'swiper_pagination'                   => 'yes',
+			'swiper_navigation'                   => 'yes',
+			'swiper_navigation_position'          => 'inner',
+			'swiper_autoplay'                     => 'no',
+			'swiper_autoplay_delay'               => 5000,
+			'swiper_stop_autoplay_on_interaction' => 'yes',
 		), $atts, 'swiper_carousel' );
 
-		$id                         = $atts['id'];
-		$posts_per_page             = intval( $atts['posts_per_page'] );
-		$post_type                  = sanitize_text_field( $atts['post_type'] );
-		$post_type                  = explode( ',', $post_type );
-		$taxonomy                   = sanitize_key( $atts['taxonomy'] );
-		$tax_term                   = sanitize_text_field( $atts['tax_term'] );
-		$tax_operator               = $atts['tax_operator'];
-		$author                     = sanitize_text_field( $atts['author'] );
-		$offset                     = intval( $atts['offset'] );
-		$order                      = sanitize_key( $atts['order'] );
-		$orderby                    = sanitize_key( $atts['orderby'] );
-		$post_parent                = $atts['post_parent'];
-		$post_status                = $atts['post_status'];
-		$ignore_sticky_posts        = ( bool ) ( $atts['ignore_sticky_posts'] === 'yes' ) ? true : false;
-		$template_name              = sanitize_file_name( $atts['template'] );
-		$crop_image                 = ( bool ) ( $atts['crop_image'] === 'yes' ) ? true : false;
-		$crop_width                 = intval( $atts['crop_width'] );
-		$crop_height                = intval( $atts['crop_height'] );
-		$slides_per_view            = intval( $atts['slides_per_view'] );
-		$slides_per_group           = intval( $atts['slides_per_group'] );
-		$slides_per_column          = intval( $atts['slides_per_column'] );
-		$space_between_slides       = intval( $atts['space_between_slides'] );
-		$swiper_duration_speed      = intval( $atts['swiper_duration_speed'] );
-		$swiper_loop                = ( bool ) ( $atts['swiper_loop'] === 'yes' ) ? true : false;
-		$swiper_free_mode           = ( bool ) ( $atts['swiper_free_mode'] === 'yes' ) ? true : false;
-		$swiper_grab_cursor         = ( bool ) ( $atts['swiper_grab_cursor'] === 'yes' ) ? true : false;
-		$swiper_mouse_wheel         = ( bool ) ( $atts['swiper_mouse_wheel'] === 'yes' ) ? true : false;
-		$swiper_centered_slide      = ( bool ) ( $atts['swiper_centered_slide'] === 'yes' ) ? true : false;
-		$swiper_effect              = sanitize_text_field( $atts['swiper_effect'] );
-		$swiper_pagination          = ( bool ) ( $atts['swiper_pagination'] === 'yes' ) ? true : false;
-		$swiper_navigation          = ( bool ) ( $atts['swiper_navigation'] === 'yes' ) ? true : false;
-		$swiper_navigation_position = $atts['swiper_navigation_position'];
+		$id                                  = $atts['id'];
+		$posts_per_page                      = intval( $atts['posts_per_page'] );
+		$post_type                           = sanitize_text_field( $atts['post_type'] );
+		$post_type                           = explode( ',', $post_type );
+		$taxonomy                            = sanitize_key( $atts['taxonomy'] );
+		$tax_term                            = sanitize_text_field( $atts['tax_term'] );
+		$tax_operator                        = $atts['tax_operator'];
+		$author                              = sanitize_text_field( $atts['author'] );
+		$offset                              = intval( $atts['offset'] );
+		$order                               = sanitize_key( $atts['order'] );
+		$orderby                             = sanitize_key( $atts['orderby'] );
+		$post_parent                         = $atts['post_parent'];
+		$post_status                         = $atts['post_status'];
+		$ignore_sticky_posts                 = ( bool ) ( $atts['ignore_sticky_posts'] === 'yes' ) ? true : false;
+		$template_name                       = sanitize_file_name( $atts['template'] );
+		$crop_image                          = ( bool ) ( $atts['crop_image'] === 'yes' ) ? true : false;
+		$crop_width                          = intval( $atts['crop_width'] );
+		$crop_height                         = intval( $atts['crop_height'] );
+		$slides_per_view                     = intval( $atts['slides_per_view'] );
+		$slides_per_group                    = intval( $atts['slides_per_group'] );
+		$slides_per_column                   = intval( $atts['slides_per_column'] );
+		$space_between_slides                = intval( $atts['space_between_slides'] );
+		$swiper_duration_speed               = intval( $atts['swiper_duration_speed'] );
+		$swiper_loop                         = ( bool ) ( $atts['swiper_loop'] === 'yes' ) ? true : false;
+		$swiper_free_mode                    = ( bool ) ( $atts['swiper_free_mode'] === 'yes' ) ? true : false;
+		$swiper_grab_cursor                  = ( bool ) ( $atts['swiper_grab_cursor'] === 'yes' ) ? true : false;
+		$swiper_mouse_wheel                  = ( bool ) ( $atts['swiper_mouse_wheel'] === 'yes' ) ? true : false;
+		$swiper_centered_slide               = ( bool ) ( $atts['swiper_centered_slide'] === 'yes' ) ? true : false;
+		$swiper_effect                       = sanitize_text_field( $atts['swiper_effect'] );
+		$swiper_pagination                   = ( bool ) ( $atts['swiper_pagination'] === 'yes' ) ? true : false;
+		$swiper_navigation                   = ( bool ) ( $atts['swiper_navigation'] === 'yes' ) ? true : false;
+		$swiper_navigation_position          = $atts['swiper_navigation_position'];
+		$swiper_autoplay                     = ( bool ) ( $atts['swiper_autoplay'] === 'yes' ) ? true : false;
+		$swiper_autoplay_delay               = intval( $atts['swiper_autoplay_delay'] );
+		$swiper_stop_autoplay_on_interaction = ( bool ) ( $atts['swiper_stop_autoplay_on_interaction'] === 'yes' ) ? true : false;
 
 		// Set up initial query for post.
 		$args = array(
@@ -1691,6 +1697,11 @@ class Cherry_Shortcodes_Handler {
 			$data_attr_line .= ' data-centered-slide="' . $swiper_centered_slide . '"';
 			$data_attr_line .= ' data-swiper-effect="' . $swiper_effect . '"';
 			$data_attr_line .= ' data-uniq-id="swiper-carousel-' . $instance . '"';
+
+			if ( $swiper_autoplay ) {
+				$data_attr_line .= ' data-swiper-autoplay="' . $swiper_autoplay_delay . '"';
+				$data_attr_line .= ' data-stop-autoplay-on-interaction="' . $swiper_stop_autoplay_on_interaction . '"';
+			}
 
 			( $swiper_navigation_position == 'outer' ) ? $outer_class = 'outer' : $outer_class = '';
 
